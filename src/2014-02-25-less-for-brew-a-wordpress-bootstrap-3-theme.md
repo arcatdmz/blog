@@ -19,7 +19,9 @@ Bootstrap 2 のときは[WP-Bootstrap というテーマをダウンロードし
 
 Bootstrap をビルドする関係で MacPorts を使って Node.js をインストールしていたので、次のコマンドで lessc コマンドが使えるようになりました。ちなみに、--force フラグは、何かのはずみで古い lessc（バージョン 1.3.0）が既に入っていたので、それを上書きするためです。
 
-\[code lang="bash"\]npm install less --global --force \[/code\]
+```bash
+npm install less --global --force
+```
 
 本記事の内容は、こうしてインストールした lessc 1.6.3 (LESS Compiler) で動作確認しています。
 
@@ -39,7 +41,9 @@ style.less は中で様々な外部 less ファイルを読み込んでおり、
 
 そこで、この custom-variables.less の内容を元サイトの Bootstrap 3 用の variables.less を参考にしながら書き換えていき、次のコマンドで style.css を更新します。(WinLESS や LESS.app を使っている場合は、手動で style.css を library/css/にコピーして古い style.css を上書きします。)
 
-\[code lang="bash"\]lessc --compress style.less &gt; ../css/style.css \[/code\]
+```bash
+lessc --compress style.less > ../css/style.css
+```
 
 基本的には、これだけで BREW テーマを好きな見た目に調整できます。
 

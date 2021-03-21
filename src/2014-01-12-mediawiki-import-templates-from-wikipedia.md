@@ -29,27 +29,48 @@ Infobox は、インストール時のオプションによっては有効化さ
 
 ParserFunctions については、[Special:Version](http://www.mediawiki.org/wiki/Special:Version "Version - MediaWiki")(リンク先は MediaWiki のもの)の Installed extensions という項目に表示されていなければ LocalSettings.php の末尾に以下の行を足せば有効化されます。
 
-\[code lang="php"\]require_once "$IP/extensions/ParserFunctions/ParserFunctions.php";\[/code\]
+```php
+require_once "$IP/extensions/ParserFunctions/ParserFunctions.php";
+```
 
 Scribunto は、サーバ環境にインストールされたスクリプティング言語のインタプリタを呼び出すことで、PHP 以外の言語でスクリプトを記述できるようにする拡張機能です。Infobox の定義には同名の Lua モジュール([Module:Lua](http://en.wikipedia.org/wiki/Module:Infobox "Module:Infobox - Wikipedia"))が使われており、Scribunto に加えてサーバ環境に Lua のバイナリが必要です。
 
 まず、Lua をサーバにインストールします。[Lua download area](http://www.lua.org/ftp/)に **lua-5.\*.tar.gz** というようなファイル名のソースコードがあるので、これをダウンロードして make します。さくらインターネットのレンタルサーバにインストールするため、自分のホームディレクトリ以下に local というディレクトリを作って、そこにソース、ライブラリ、実行ファイルを置くようにしています。このあたりは[Trac をインストールしたときの記録](http://digitalmuseum.jp/text/replus/article/trac-on-sakura)に詳しく書きました。
 
-\[code lang="bash"\]cd ~/local/src/ wget http://www.lua.org/ftp/lua-5.\*.tar.gz tar -zxvf lua-5.\* cd lua-5.\* make freebsd make local cd bin ln -s lua lua-5.\*\[/code\]
+```bash
+cd ~/local/src/
+wget http://www.lua.org/ftp/lua-5.*.tar.gz
+tar -zxvf lua-5.*
+cd lua-5.*
+make freebsd
+make local
+cd bin
+ln -s lua lua-5.*
+```
 
 これで ~/local/src/lua-5.\*/bin の中に **lua-5.\*** というバイナリが生成されます。
 
 次に、Scribunto をインストールします。基本的には[MediaWiki 上の日本語の説明](http://www.mediawiki.org/wiki/Extension:Scribunto/ja#.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB "Extension:Scribunto - MediaWiki")に従っていけば大丈夫です。[Download MediaWiki extension - MediaWiki](http://www.mediawiki.org/wiki/Special:ExtensionDistributor/Scribunto)から自分の MediaWiki 環境に合ったバージョンを選択し、Continue ボタンをクリックすると  **wikimedia-mediawiki-extensions-Scribunto-\*.tar.gz** のような名前の圧縮ファイルがダウンロードできます。これを MediaWiki のインストールディレクトリに移動し、
 
-\[code lang="bash"\]tar zxf wikimedia-mediawiki-extensions-Scribunto-\*.tar.gz mv wikimedia-mediawiki-extensions-Scribunto-\* ~/www/wiki/extensions/Scribunto\[/code\]
+```bash
+tar zxf wikimedia-mediawiki-extensions-Scribunto-*.tar.gz
+mv wikimedia-mediawiki-extensions-Scribunto-* ~/www/wiki/extensions/Scribunto
+```
 
 LocalSettings.php の末尾で次のように呼び出してやればインストール完了です。(username, 5.\*は環境に合わせて変えてください。)
 
-\[code lang="php"\]require_once "$IP/extensions/Scribunto/Scribunto.php"; $wgScribuntoDefaultEngine = 'luastandalone'; $wgScribuntoEngineConf\['luastandalone'\]\['luaPath'\] = '/home/username/local/src/lua-5.\*/bin/lua5.\*';\[/code\]
+```php
+require_once "$IP/extensions/Scribunto/Scribunto.php";
+$wgScribuntoDefaultEngine = 'luastandalone';
+$wgScribuntoEngineConf['luastandalone']['luaPath'] = '/home/username/local/src/lua-5.*/bin/lua5.*';
+```
 
 僕の環境ではシンタックスハイライトのための拡張機能 GeSHi とコードエディタの拡張機能 CodeEditor をインストールしていたため、次の行を追加して連携させました。
 
-\[code lang="php"\]$wgScribuntoUseGeSHi = true; $wgScribuntoUseCodeEditor = true;\[/code\]
+```php
+$wgScribuntoUseGeSHi = true;
+$wgScribuntoUseCodeEditor = true;
+```
 
 これで、Template:Infobox がサーバエラーなく表示されるようになるはずです。しかし、テンプレートが依存している画像データがないため、当該箇所の表示が崩れます。
 
@@ -61,7 +82,9 @@ MediaWiki において、画像など存在しないファイルへのリンク�
 
 この記事によれば、MediaWiki では、画像ファイルは MD5 ハッシュの先頭 1 文字および 2 文字を名前に持つフォルダの中に格納されます。例えば、 **Lua-logo-nolabel.svg** なら
 
-\[shell\]% echo -n Lua-logo-nolabel.svg | md5 6a3ed151b18e5e08776de4449bdf8bbe\[/shell\]
+```bash
+% echo -n Lua-logo-nolabel.svg | md5 6a3ed151b18e5e08776de4449bdf8bbe
+```
 
 なので、 $MEDIAWIKI**/images/6/6a/Lua-logo-nolabel.svg** に保存されます。MD5 ハッシュの値は Wikipedia でもさくらインターネットのレンタルサーバでも一緒なので、これを使って Wikipedia の URL を推測できます。 Lua-logo-nolabel.svg は Wikimedia Commons にアップロードされたものなら [**http://upload.wikimedia.org/wikipedia/commons/6/6a/Lua-logo-nolabel.svg**](http://upload.wikimedia.org/wikipedia/commons/6/6a/Lua-logo-nolabel.svg) にあるはずです。
 
@@ -69,18 +92,47 @@ MediaWiki において、画像など存在しないファイルへのリンク�
 
 上述の記事に掲載されているシェルスクリプトを、さくらインターネットのレンタルサーバ用に味付けしたものを以下に示します。(コードの整理と、さくらインターネットのレンタルサーバでは md5 ハッシュを求めるコマンドが md5sum ではなく md5 なので、そこを変えたりしています。)
 
-\[code lang="bash"\]#!/bin/sh
+```bash
+#!/bin/sh
 
-SQL_HOST="mysql\*.db.sakura.ne.jp" SQL_USER="digitalmuseum" SQL_PWD="\*\*\*" SQL_TABLE="digitalmuseum" MEDIAWIKI_DIR="$HOME/www/wiki" IMAGE_DOWNLOAD_DIR="./images" REMOTE_PATH="http://upload.wikimedia.org/wikipedia/en"
+SQL_HOST="mysql*.db.sakura.ne.jp"
+SQL_USER="digitalmuseum"
+SQL_PWD="***"
+SQL_TABLE="digitalmuseum"
+MEDIAWIKI_DIR="$HOME/www/wiki"
+IMAGE_DOWNLOAD_DIR="./images"
+REMOTE_PATH="http://upload.wikimedia.org/wikipedia/en"
 
-SQL_CMD="SET NAMES utf8; SELECT distinct il_to FROM imagelinks;" IMAGE_DIR="$MEDIAWIKI_DIR/images" MD5="md5"
+SQL_CMD="SET NAMES utf8; SELECT distinct il_to FROM imagelinks;"
+IMAGE_DIR="$MEDIAWIKI_DIR/images"
+MD5="md5"
 
 mkdir -p $IMAGE_DOWNLOAD_DIR
 
-images=\`echo $SQL\_CMD | mysql -h $SQL\_HOST -u $SQL\_USER -p"$SQL_PWD" $SQL\_TABLE | grep -v '^il\_to$'\` for image in $images do md5=\`echo -n $image | $MD5\` first=\`echo $md5 | cut -c1-1\` second=\`echo $md5 | cut -c1-2\` target="$IMAGE_DIR"/"$first"/"$second"/"$image" if \[ -f $target \] then echo found $target else url="$REMOTE_PATH"/"$first"/"$second"/"$image" echo downloading $url wget -a ./getMediaWikiImages.log --restrict-file-names=nocontrol -P $IMAGE_DOWNLOAD_DIR $url fi done
+images=`echo $SQL_CMD | mysql -h $SQL_HOST -u $SQL_USER -p"$SQL_PWD" $SQL_TABLE | grep -v '^il_to$'`
+for image in $images
+do
+  md5=`echo -n $image | $MD5`
+  first=`echo $md5 | cut -c1-1`
+  second=`echo $md5 | cut -c1-2`
+  target="$IMAGE_DIR"/"$first"/"$second"/"$image"
+  if [ -f $target ]
+  then
+    echo found $target
+  else
+    url="$REMOTE_PATH"/"$first"/"$second"/"$image"
+    echo downloading $url
+    wget -a ./getMediaWikiImages.log --restrict-file-names=nocontrol -P $IMAGE_DOWNLOAD_DIR $url
+  fi
+done
 
-php $MEDIAWIKI/maintenance/importImages.php $IMAGE_DOWNLOAD_DIR\[/code\]
+php $MEDIAWIKI/maintenance/importImages.php $IMAGE_DOWNLOAD_DIR
+```
 
 これを実行すると、足りないファイルを Wikipedia からダウンロードして、自前の MediaWiki に登録してくれます。
 
 こうして、晴れて Wikipedia のテンプレートを画像も含めコピーすることができました！いやー長かった…。
+
+```
+
+```

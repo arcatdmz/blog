@@ -25,14 +25,33 @@ ReferenceError: self is not defined というようなエラーが出ます。</
 
 変更点は上の通り表層的な部分だけなので、実際の使い方は本家とほぼ同じです。ブラウザ用に `require('webmo-client')` と書いていた部分を `require('webmo-client-nodejs')` とすれば同じ JavaScript コードが動きます。サンプルコードを [webmo-example-nodejs](https://github.com/arcatdmz/webmo-example-nodejs) に置きましたが、めちゃくちゃ短いのでこちらにも貼っておきます。Webmo 便利ですね！
 
-\[code language="javascript"\]var WebmoWs = require('webmo-client-nodejs').ws var motor = new WebmoWs("webmo.local")
+```javascript
+var WebmoWs = require("webmo-client-nodejs").ws;
+var motor = new WebmoWs("webmo.local");
 
-motor.onopen = () => { motor.rotate(90) setTimeout(() => { motor.stop(); motor.close(); }, 2000) }\[/code\]
+motor.onopen = () => {
+  motor.rotate(90);
+  setTimeout(() => {
+    motor.stop();
+    motor.close();
+  }, 2000);
+};
+```
 
 上の例は WebSocket を使っていますが、HTTP もテスト済みです。
 
-\[code language="javascript"\]var WebmoHttp = require('webmo-client-nodejs').http var motor = new WebmoHttp("webmo.local") process.stdout.write('testing http client ...');
+```javascript
+var WebmoHttp = require("webmo-client-nodejs").http;
+var motor = new WebmoHttp("webmo.local");
+process.stdout.write("testing http client ...");
 
-motor.rotate(-90) .then(() => { setTimeout(() => { motor.stop() .then(() => { process.stdout.write(' ok\\n'); }); }, 2000); });\[/code\]
+motor.rotate(-90).then(() => {
+  setTimeout(() => {
+    motor.stop().then(() => {
+      process.stdout.write(" ok\n");
+    });
+  }, 2000);
+});
+```
 
 というわけで、Happy hacking with Webmo!

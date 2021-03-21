@@ -24,7 +24,15 @@ coverImage: "amazon-result.png"
 1. まず [https://www.amazon.co.jp/gp/css/order-history/](https://www.amazon.co.jp/gp/css/order-history/) にアクセスしてログインします。
 2. アドレスバーに以下の文字列をコピー&ペーストします。（最近のブラウザだと先頭の `javascript:` が消えるので書き足さないとダメみたいです。）
 
-   \[code lang="javascript"\]javascript:(function(){var d=document;var s=d.createElement('script');s.src='https://cdn.rawgit.com/arcatdmz/8500521/raw/555ad48b487e790c6079938e771dfa4a8384d10e/amazon-csv.js';d.body.appendChild(s)})();\[/code\]
+```javascript
+javascript: (function () {
+  var d = document;
+  var s = d.createElement("script");
+  s.src =
+    "https://cdn.rawgit.com/arcatdmz/8500521/raw/555ad48b487e790c6079938e771dfa4a8384d10e/amazon-csv.js";
+  d.body.appendChild(s);
+})();
+```
 
 3. Enter キーを押すと入力ダイアログが出ます。集計したい年を半角数字で入れるか、全部集計したい場合は all と入力して「OK」をクリックしましょう。
 4. 結果が出るまでしばし待ちましょう。すごくぷるぷるにゃん…

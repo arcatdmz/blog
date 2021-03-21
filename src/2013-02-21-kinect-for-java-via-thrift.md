@@ -31,11 +31,23 @@ Thrift は最初に拡張子.thrift のテキストファイルで RPC の仕様
 
 サーバ側は、自動生成されるインタフェース([KinectService.Iface](https://github.com/arcatdmz/kinect-thrift-server/blob/master/csharp/ConsoleKinectServer/KinectService.cs#L21))を実装するクラス([KinectServiceHandler](https://github.com/arcatdmz/kinect-thrift-server/blob/master/csharp/ConsoleKinectServer/KinectServiceHandler.cs))を作り、次のようなコードを書いてやればサーバが起動します。
 
-\[code language="csharp"\] KinectServiceHandler handler = new KinectServiceHandler(); KinectService.Processor processor = new KinectService.Processor(handler); TServerTransport serverTransport = new TServerSocket(10000); TServer server = new TSimpleServer(processor, serverTransport); handler.Shutdown = server.Stop; Console.WriteLine("Starting the server..."); server.Serve();\[/code\]
+```csharp
+KinectServiceHandler handler = new KinectServiceHandler();
+KinectService.Processor processor = new KinectService.Processor(handler);
+TServerTransport serverTransport = new TServerSocket(10000);
+TServer server = new TSimpleServer(processor, serverTransport);
+handler.Shutdown = server.Stop;
+Console.WriteLine("Starting the server...");
+server.Serve();
+```
 
 クライアント側はさらに簡単で、自動生成される Client クラス([KinectService.Client](https://github.com/arcatdmz/kinect-thrift-server/blob/master/java/src/jp/digitalmuseum/kinect/KinectService.java#L91))をインスタンス化すればサーバに接続でき、リモートの関数を呼び出せます。
 
-\[code language="java"\] TTransport transport = new TSocket("localhost", 10000); TProtocol protocol = new TBinaryProtocol(transport); KinectService.Client client = new KinectService.Client(protocol);\[/code\]
+```java
+TTransport transport = new TSocket("localhost", 10000);
+TProtocol protocol = new TBinaryProtocol(transport);
+KinectService.Client client = new KinectService.Client(protocol);
+```
 
 GitHub に C#の[サーバ](https://github.com/arcatdmz/kinect-thrift-server/blob/master/csharp/ConsoleKinectServer/Program.cs)と、Java の[簡単なクライアントのサンプル](https://github.com/arcatdmz/kinect-thrift-server/blob/master/java/src/jp/digitalmuseum/kinect/app/RawClientTest.java)、[GUI がついてちょっと複雑なクライアントのサンプル](https://github.com/arcatdmz/kinect-thrift-server/blob/master/java/src/jp/digitalmuseum/kinect/app/KinectClientFrame.java)を置いてあります。どちらも Git clone するとバイナリが置いてあってすぐ実行できるようになっています。実行の仕方について詳しくは[README.md](https://github.com/arcatdmz/kinect-thrift-server#readme)をどうぞ。
 
@@ -43,28 +55,60 @@ GitHub に C#の[サーバ](https://github.com/arcatdmz/kinect-thrift-server/blo
 
 #### Thrift の型システムとエンディアン
 
-上にさらっと書いた内容だけだとすごく簡単そうです（実際、通信部分のコードは全く気にせず済んだので、そこはよかったのです）が、Thrift の型システムにいただけないところがあって苦労しました。まず、int や long などの配列を作れません。list<i32>と書くと、配列ではなく List ができます。しかも、Java の場合はプリミティブ型の List が作れないので List<Integer>になります。[滅びればいいのに](https://twitter.com/arcatdmz/status/303885308754288640)。
+上にさらっと書いた内容だけだとすごく簡単そうです（実際、通信部分のコードは全く気にせず済んだので、そこはよかったのです）が、Thrift の型システムにいただけないところがあって苦労しました。まず、int や long などの配列を作れません。 list<i32\> と書くと、配列ではなく List ができます。しかも、Java の場合はプリミティブ型の List が作れないので List<Integer\> になります。[滅びればいいのに](https://twitter.com/arcatdmz/status/303885308754288640)。
 
 で、binary と書くと単なる byte 型配列ができるので、[short\[\]をクライアントに返すためにいったん byte\[\]に変換するコード(C#)](https://github.com/arcatdmz/kinect-thrift-server/blob/master/csharp/ConsoleKinectServer/KinectServiceHandler.cs#L496)を書いたのですが、[受け取った byte\[\]を short\[\]に戻すコード(Java)](https://github.com/arcatdmz/kinect-thrift-server/blob/master/java/src/jp/digitalmuseum/kinect/KinectServiceWrapper.java#L199)を素直に書いたらデータが壊れました。原因は Endian-ness の不整合でした。
 
 以下の C#側のコードは Windows 上で動くので、Little endian で short\[\]を byte\[\]に書き込みます。
 
-\[code language="csharp"\] // Depth image processing. if (depthImageFrame != null && depthEnabled) { depthImageFrame.CopyPixelDataTo(depthImageData); Buffer.BlockCopy(depthImageData, 0, depthImageRawData, 0, depthImageRawData.Length); frame.DepthImage = depthImageRawData; }\[/code\]
+```csharp
+// Depth image processing.
+if (depthImageFrame != null && depthEnabled)
+{
+    depthImageFrame.CopyPixelDataTo(depthImageData);
+    Buffer.BlockCopy(depthImageData, 0, depthImageRawData, 0, depthImageRawData.Length);
+    frame.DepthImage = depthImageRawData;
+}
+```
 
 一方、以下の Java 側のコードはデフォルトで Big endian を使うため、データが壊れたというわけです。
 
-\[code language="java"\] if (frame.isSetDepthImage()) { depthByteBuffer.put(frame.getDepthImage()); depthByteBuffer.rewind(); depthShortBuffer.put(depthByteBuffer.asShortBuffer()); depthShortBuffer.rewind(); depthImageData = depthShortBuffer.array(); }\[/code\]
+```java
+if (frame.isSetDepthImage()) {
+    depthByteBuffer.put(frame.getDepthImage());
+    depthByteBuffer.rewind();
+    depthShortBuffer.put(depthByteBuffer.asShortBuffer());
+    depthShortBuffer.rewind();
+    depthImageData = depthShortBuffer.array();
+}
+```
 
 けっきょく、[Java 側で Little endian を明示的に指定](https://github.com/arcatdmz/kinect-thrift-server/blob/master/java/src/jp/digitalmuseum/kinect/KinectServiceWrapper.java#L174)して復号することで対応しました。
 
-\[code language="java"\] // C# server running on Windows converts short\[\] to byte\[\] with little-endian. // Therefore, we need to specify the endian-ness here to reconstruct it correctly. depthByteBuffer.order(ByteOrder.LITTLE_ENDIAN);\[/code\]
+```java
+// C# server running on Windows converts short[] to byte[] with little-endian.
+// Therefore, we need to specify the endian-ness here to reconstruct it correctly.
+    depthByteBuffer.order(ByteOrder.LITTLE_ENDIAN);
+```
 
 #### Kinect のカラー画像の RGB オーダー
 
-Thrift は全く関係ないのですが、Kinect のカラー画像はなぜか BGR(null)の順で byte\[\]として取得できるようになっています……ふつう ARGB か(null)BGR、(null)RGB だと思うんですけど。この**Java 側で BGR(null)順になっていた理由は上記と同じ Endian-ness の問題でした。ともかく、こうして受信した**byte\[\]を Java の BufferedImage としてレンダリングしようと思うと、素直な実装では byte\[\]の要素数ループを回して RGB のオーダーを入れ替えなければなりません。それって何だかエレガントじゃない。
+~~Thrift は全く関係ないのですが、Kinect のカラー画像はなぜか BGR(null)の順で byte\[\]として取得できるようになっています……ふつう ARGB か(null)BGR、(null)RGB だと思うんですけど。この~~**Java 側で BGR(null)順になっていた理由は上記と同じ Endian-ness の問題でした。ともかく、こうして受信した**byte\[\]を Java の BufferedImage としてレンダリングしようと思うと、素直な実装では byte\[\]の要素数ループを回して RGB のオーダーを入れ替えなければなりません。それって何だかエレガントじゃない。
 
 この問題を解決するため、ByteBuffer を使い、先頭に 1 バイト(null)を足してお尻を 1 バイト短くしたうえで IntBuffer として読み出してやることにより、TYPE_INT_BGR な BufferedImage 用の int\[\]を練成しました。要は「BGR0BGR0BG……BGR**0**」となってるものを「**0**BGR0BGR0BG……BGR」にして int\[\]でラップしたわけです。実際のコードは[このあたり](https://github.com/arcatdmz/kinect-thrift-server/blob/master/java/src/jp/digitalmuseum/kinect/KinectServiceWrapper.java#L191)。
 
-\[code language="java"\] colorImageBuffer = (DataBufferInt) image.getRaster().getDataBuffer(); colorIntBuffer = IntBuffer.wrap(colorImageBuffer.getData()); // 中略 if (frame.isSetImage()) { byte\[\] imageData = frame.getImage(); colorByteBuffer.put((byte) 0); colorByteBuffer.put(imageData, 0, imageData.length - 1); colorByteBuffer.rewind(); colorIntBuffer.put(colorByteBuffer.asIntBuffer()); colorIntBuffer.rewind(); }\[/code\]
+```java
+colorImageBuffer = (DataBufferInt) image.getRaster().getDataBuffer();
+colorIntBuffer = IntBuffer.wrap(colorImageBuffer.getData());
+// 中略
+if (frame.isSetImage()) {
+    byte[] imageData = frame.getImage();
+    colorByteBuffer.put((byte) 0);
+    colorByteBuffer.put(imageData, 0, imageData.length - 1);
+    colorByteBuffer.rewind();
+    colorIntBuffer.put(colorByteBuffer.asIntBuffer());
+    colorIntBuffer.rewind();
+}
+```
 
 そんな努力の賜物の Kinect サーバ/クライアント、よかったら使ってみてください。それなりのパフォーマンスで動きます。Thrift のファイルも GitHub にあげてあるので、他の言語のクライアントも比較的簡単に書けると思います。

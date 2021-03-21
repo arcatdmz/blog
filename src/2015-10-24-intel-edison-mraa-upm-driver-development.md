@@ -20,11 +20,18 @@ mraa を使って upm を拡張するための手順は一応すべて GitHub �
 
 まずは Git をインストールするために、パッケージマネージャ opkg の参照先 URL を増やします。(情報元: [Edison opkg package repo created](https://communities.intel.com/thread/55692))
 
-\[code language="bash"\]echo "src/gz all http://repo.opkg.net/edison/repo/all" >> /etc/opkg/base-feeds.conf echo "src/gz edison http://repo.opkg.net/edison/repo/edison" >> /etc/opkg/base-feeds.conf echo "src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32" >> /etc/opkg/base-feeds.conf\[/code\]
+```bash
+echo "src/gz all http://repo.opkg.net/edison/repo/all" >> /etc/opkg/base-feeds.conf
+echo "src/gz edison http://repo.opkg.net/edison/repo/edison" >> /etc/opkg/base-feeds.conf
+echo "src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32" >> /etc/opkg/base-feeds.conf
+```
 
 そのうえで、Git をインストールします。お手軽。
 
-\[code language="bash"\]opkg update opkg install git\[/code\]
+```bash
+opkg update
+opkg install git
+```
 
 ## mraa を git clone, cmake, make install
 
@@ -32,15 +39,28 @@ mraa を使って upm を拡張するための手順は一応すべて GitHub �
 
 GitHub からソースコード一式を落としてきます。
 
-\[code language="bash"\]cd ~/ mkdir github cd github git clone https://github.com/intel-iot-devkit/mraa.git\[/code\]
+```bash
+cd ~/
+mkdir github
+cd github
+git clone https://github.com/intel-iot-devkit/mraa.git
+```
 
 cmake します。
 
-\[code language="bash"\]cd ~/github/mraa/ mkdir build cd build cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..\[/code\]
+```bash
+cd ~/github/mraa/
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+```
 
 make install します。
 
-\[code language="bash"\]cd ~/github/mraa/build/ make install\[/code\]
+```bash
+cd ~/github/mraa/build/
+make install
+```
 
 これで開発版の mraa がインストールされます。
 
@@ -48,7 +68,11 @@ make install します。
 
 upm のビルド時に参照される環境変数を設定します。
 
-\[code language="bash"\]echo "PKG_CONFIG_PATH=$PKG\_CONFIG\_PATH:/home/root/github/mraa/build/lib/pkgconfig" >> ~/.profile echo "CPLUS\_INCLUDE\_PATH=$CPLUS_INCLUDE_PATH:/home/root/github/mraa/build/include" >> ~/.profile echo "LIBRARY_PATH=$LIBRARY_PATH:/home/root/github/mraa/build/lib" >> ~/.profile\[/code\]
+```bash
+echo "PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/home/root/github/mraa/build/lib/pkgconfig" >> ~/.profile
+echo "CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/home/root/github/mraa/build/include" >> ~/.profile
+echo "LIBRARY_PATH=$LIBRARY_PATH:/home/root/github/mraa/build/lib" >> ~/.profile
+```
 
 このあとログインし直さない場合は`source ~/.profile`で読み込んでから作業を続けましょう。
 
@@ -58,19 +82,33 @@ upm のビルド時に参照される環境変数を設定します。
 
 **GitHub 上で本家 upm リポジトリを自分のアカウントに fork してから**ソースコード一式を落としてきます。fork しておかないと後々`git push`できないので要注意です。
 
-\[code language="bash"\]cd ~/github/ git clone https://github.com/arcatdmz/upm.git\[/code\]
+```bash
+cd ~/github/
+git clone https://github.com/arcatdmz/upm.git
+```
 
 `cmake`します。僕は Python を使わないので`-DBUILDSWIGPYTHON=OFF`オプションをつけています。
 
-\[code language="bash"\]cd ~/github/upm/ mkdir build cd build cmake -DBUILDSWIGPYTHON=OFF -DCMAKE_INSTALL_PREFIX:PATH=/usr ..\[/code\]
+```bash
+cd ~/github/upm/
+mkdir build
+cd build
+cmake -DBUILDSWIGPYTHON=OFF -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+```
 
 ここまでは mraa と一緒ですが、このあとそのまま`make install`するとけっこう時間がかかります。全ドライバをビルドするためです。
 
-\[code language="bash"\]cd ~/github/upm/build/ make install\[/code\]
+```bash
+cd ~/github/upm/build/
+make install
+```
 
 必要なドライバだけビルドするためには、そのサブフォルダに入って`make install`します。
 
-\[code language="bash"\]cd ~/github/upm/build/src/grovecircularled/ make install\[/code\]
+```bash
+cd ~/github/upm/build/src/grovecircularled/
+make install
+```
 
 ビルド方法が分かったので、あとはドライバを書くだけですね！
 
@@ -82,7 +120,12 @@ upm のビルド時に参照される環境変数を設定します。
 
 具体的には次のようにしてソースコードを書いていきます。
 
-\[code language="bash"\]cd ~/github/upm/build/src mkdir groveultrasonic cd groveultrasonic vi groveultrasonic.cxx\[/code\]
+```bash
+cd ~/github/upm/build/src
+mkdir groveultrasonic
+cd groveultrasonic
+vi groveultrasonic.cxx
+```
 
 使える API は[mraa のドキュメント](http://iotdk.intel.com/docs/master/mraa/)を見てみてください。
 

@@ -62,35 +62,56 @@ coverImage: "raspbian-on-qemu-windows.png"
 
 二つのファイルが揃ったフォルダの中で、コマンドプロンプトか PowerShell で以下のコマンドを実行します。うまくいけば、QEMU 上で bash が起動します。
 
-\[code language="shell"\]qemu-system-armw -kernel kernel-qemu -cpu arm1176 -m 256 -M versatilepb -no-reboot -serial stdio -append "root=/dev/sda2 panic=1 rootfstype=ext4 rw init=/bin/bash" -hda YYYY-MM-DD-wheezy-raspbian.img\[/code\]
+```shell
+qemu-system-armw -kernel kernel-qemu -cpu arm1176 -m 256 -M versatilepb -no-reboot -serial stdio -append "root=/dev/sda2 panic=1 rootfstype=ext4 rw init=/bin/bash" -hda YYYY-MM-DD-wheezy-raspbian.img
+```
 
 ここで、 `nano` などを使って  `/etc/ld.so.preload` の内容をコメントアウトします。
 
-\[code language="shell"\]nano /etc/ld.so.preload # このあとカーソルが一文字目に合っているはずなので "#" を入力します。 # "#" が挿入されたのを確認したら Ctrl+x を押します。 # ファイルを保存するか聞かれるので y と ENTER キーを順に押します。\[/code\]
+```shell
+nano /etc/ld.so.preload
+# このあとカーソルが一文字目に合っているはずなので "#" を入力します。
+# "#" が挿入されたのを確認したら Ctrl+x を押します。
+# ファイルを保存するか聞かれるので y とENTERキーを順に押します。
+```
 
 同様の手順で `/etc/udev/rules.d/90-qemu.rules` を作成します。起動時に、Raspberry Pi が通常アクセスするマウントポイント(例えば `/dev/root`)からカーネルが見ているマウントポイント(例えば `/dev/sda2`)へシンボリックリンクを張る内容です。
 
-\[code language="shell"\]KERNEL=="sda", SYMLINK+="mmcblk0" KERNEL=="sda?", SYMLINK+="mmcblk0p%n" KERNEL=="sda2", SYMLINK+="root"\[/code\]
+```shell
+KERNEL=="sda", SYMLINK+="mmcblk0"
+KERNEL=="sda?", SYMLINK+="mmcblk0p%n"
+KERNEL=="sda2", SYMLINK+="root"
+```
 
 最後にシステムをシャットダウンします。
 
-\[code language="shell"\]halt\[/code\]
+```shell
+halt
+```
 
 ## ディスク容量の拡張と Raspbian の起動
 
 Raspbian ディスクイメージは 200MB 程度しか空き容量がなく、いろいろなパッケージをインストールするには不足です。そこで、ディスクイメージの容量を拡張します。Linux などでは`dd`コマンドで容量を拡張する方法が一般的のようですが、Windows では`copy`コマンドを使って二つのディスクイメージを連結すれば同じ結果を得られます。 [Is it possible to resize a QEMU disk image?](http://superuser.com/questions/24838/is-it-possible-to-resize-a-qemu-disk-image)  を参考にしました。
 
-\[code language="shell"\]# 2GB 拡張する場合 qemu-img create -f raw temp.img 2G copy /b YYYY-MM-DD-wheezy-raspbian.img+temp.img raspbian.img\[/code\]
+```shell
+# 2GB拡張する場合
+qemu-img create -f raw temp.img 2G
+copy /b YYYY-MM-DD-wheezy-raspbian.img+temp.img raspbian.img
+```
 
 以降、QEMU では生成された `raspbian.img` を使います。 `YYYY-MM-DD-wheezy-raspbian.img` はごみ箱に捨てて構いません。 `temp.img` はあとでスワップ領域用に再利用します。
 
 先ほどの起動コマンドから `init=/bin/bash` を消し、 `-hda` オプションが `YYYY-MM-DD-wheezy-raspbian.img` でなく `raspbian.img` を指すようにします。
 
-\[code language="shell"\]qemu-system-armw -kernel kernel-qemu -cpu arm1176 -m 256 -M versatilepb -no-reboot -serial stdio -append "root=/dev/sda2 panic=1 rootfstype=ext4 rw" -hda raspbian.img\[/code\]
+```shell
+qemu-system-armw -kernel kernel-qemu -cpu arm1176 -m 256 -M versatilepb -no-reboot -serial stdio -append "root=/dev/sda2 panic=1 rootfstype=ext4 rw" -hda raspbian.img
+```
 
 Raspbian にユーザ名 `pi` パスワード `raspberry` でログインしたら、`fdisk`でパーティションテーブルを書き換え、Raspbian が使えるディスク容量を増やします。
 
-\[code language="shell"\]sudo fdisk /dev/sda\[/code\]
+```shell
+sudo fdisk /dev/sda
+```
 
 ここまで書いて気づいたんですが、ほぼ同じことをしている日本の方がいますね。 [Raspberry Pi のイメージファイルを拡張する](https://blog.ymyzk.com/2013/12/raspbian-image-resize/)  という記事です。
 
@@ -100,7 +121,9 @@ Raspbian にユーザ名 `pi` パスワード `raspberry` でログインした�
 
 なお、僕の環境では Raspbian 上で日本語がうまく表示できなかったのですが、 `jfbterm` をインストールし、その上で作業するようにしたら解決しました。
 
-\[code language="shell"\]sudo apt-get install jfbterm\[/code\]
+```shell
+sudo apt-get install jfbterm
+```
 
 ## スワップ領域の拡張
 
@@ -110,11 +133,16 @@ Raspbian にユーザ名 `pi` パスワード `raspberry` でログインした�
 
 そこで、[Raspberry Pi フォーラムの書き込み](http://www.raspberrypi.org/forums/viewtopic.php?f=53&t=8649)を参考に、先ほど作成した `temp.img` を QEMU に二つ目のディスクとして読み込ませ、全体をスワップ領域として使えるようにします。起動コマンドは次の通りです。
 
-\[code language="shell"\]qemu-system-armw -kernel kernel-qemu -cpu arm1176 -m 256 -M versatilepb -no-reboot -serial stdio -append "root=/dev/sda2 panic=1 rootfstype=ext4 rw" -hda raspbian.img -hdb temp.img\[/code\]
+```shell
+qemu-system-armw -kernel kernel-qemu -cpu arm1176 -m 256 -M versatilepb -no-reboot -serial stdio -append "root=/dev/sda2 panic=1 rootfstype=ext4 rw" -hda raspbian.img -hdb temp.img
+```
 
 Raspbian が起動したら、次のコマンドを実行するだけです。
 
-\[code language="shell"\]mkswap /dev/sdb swapon /dev/sdb\[/code\]
+```shell
+mkswap /dev/sdb
+swapon /dev/sdb
+```
 
 もし RAM ディスクを作成できるようなソフトウェアを持っていたら、 `temp.img` を RAM ディスク上に置いてやれば、アクセスが段違いに高速化すると思います。
 
@@ -124,6 +152,9 @@ QEMU 上の Raspbian とホストとなっている Windows の間でファイ�
 
 Raspbian はデフォルトで SSH サーバが起動するようになっているので、QEMU の起動コマンドに`-redir "tcp:10022::22"`と書き足して、次のようにすれば、Windows から SSH ログインできるようになります。
 
-\[code language="shell"\]qemu-system-armw -kernel kernel-qemu -cpu arm1176 -m 256 -M versatilepb -no-reboot -serial stdio -append "root=/dev/sda2 panic=1 rootfstype=ext4 rw" -redir "tcp:10022::22" -hda raspbian.img -hdb temp.img\[/code\]
+```shell
+qemu-system-armw -kernel kernel-qemu -cpu arm1176 -m 256 -M versatilepb -no-reboot -serial stdio -append
+"root=/dev/sda2 panic=1 rootfstype=ext4 rw" -redir "tcp:10022::22" -hda raspbian.img -hdb temp.img
+```
 
-あとは[ExpanDrive](http://www.expandrive.com/expandrive)で SFTP サーバ `127.0.0.1` のポート `10022` に接続すれば、Raspbian のホームディレクトリの中身が普通のフォルダのようにアクセスできるようになります。いつも使っている GUI ベースのテキストエディタで設定ファイルを編集することもできます。
+あとは[ExpanDrive](https://www.expandrive.com/expandrive)で SFTP サーバ `127.0.0.1` のポート `10022` に接続すれば、Raspbian のホームディレクトリの中身が普通のフォルダのようにアクセスできるようになります。いつも使っている GUI ベースのテキストエディタで設定ファイルを編集することもできます。
