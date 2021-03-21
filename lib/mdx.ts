@@ -24,23 +24,23 @@ const tokenClassNames = {
   comment: "text-gray-400 italic",
 };
 
-export async function getFiles(type) {
-  return fs.readdirSync(path.join(root, "data", type));
+export async function getFiles() {
+  return fs.readdirSync(path.join(root, "src"));
 }
 
-export function formatSlug(slug) {
+export function formatSlug(slug: string) {
   return slug.replace(/\.(mdx|md)/, "");
 }
 
-export function dateSortDesc(a, b) {
+export function dateSortDesc(a: number, b: number) {
   if (a > b) return -1;
   if (a < b) return 1;
   return 0;
 }
 
-export async function getFileBySlug(type, slug) {
-  const mdxPath = path.join(root, "data", type, `${slug}.mdx`);
-  const mdPath = path.join(root, "data", type, `${slug}.md`);
+export async function getFileBySlug(slug: string) {
+  const mdxPath = path.join(root, "src", `${slug}.mdx`);
+  const mdPath = path.join(root, "src", `${slug}.md`);
   const source = fs.existsSync(mdxPath)
     ? fs.readFileSync(mdxPath, "utf8")
     : fs.readFileSync(mdPath, "utf8");
@@ -87,13 +87,13 @@ export async function getFileBySlug(type, slug) {
   };
 }
 
-export async function getAllFilesFrontMatter(type) {
-  const files = fs.readdirSync(path.join(root, "data", type));
+export async function getAllFilesFrontMatter() {
+  const files = fs.readdirSync(path.join(root, "src"));
 
   const allFrontMatter = [];
 
   files.forEach((file) => {
-    const source = fs.readFileSync(path.join(root, "data", type, file), "utf8");
+    const source = fs.readFileSync(path.join(root, "src", file), "utf8");
     const { data } = matter(source);
     if (data.draft !== true) {
       allFrontMatter.push({ ...data, slug: formatSlug(file) });

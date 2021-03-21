@@ -12,7 +12,7 @@ export interface PageProps {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter("blog");
+  const posts = await getAllFilesFrontMatter();
   return { props: { posts } };
 }
 
