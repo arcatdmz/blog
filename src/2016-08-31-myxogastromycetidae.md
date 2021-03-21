@@ -71,11 +71,20 @@ tags:
 
 採取して運んでいるうちに黄色だったものがどんどん赤くなってきて、子実体になりそうな色になってきたので冷や冷やしましたが、しばらく静置したところ黄色に戻り、餌を探しにいく様子が観察できました。
 
-\[caption id="attachment_1317" align="alignleft" width="150"\][![](/images/20160712_090742389_iOS-1-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160712_090742389_iOS-1.jpg) 捕獲。（7 月 12 日）\[/caption\]
+<figure className="left">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160712_090742389_iOS-1.jpg"><img src="/images/20160712_090742389_iOS-1-150x150.jpg" alt="" /></a>
+  <figcaption>捕獲。（7 月 12 日）</figcaption>
+</figure>
 
-\[caption id="attachment_1318" align="alignleft" width="150"\][![](/images/20160712_173829256_iOS-1-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160712_173829256_iOS-1.jpg) 餌を探す変形体。\[/caption\]
+<figure className="left">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160712_173829256_iOS-1.jpg"><img src="/images/20160712_173829256_iOS-1-150x150.jpg" alt="" /></a>
+  <figcaption>餌を探す変形体。</figcaption>
+</figure>
 
-\[caption id="attachment_1319" align="alignleft" width="150"\][![](/images/20160713_060303579_iOS-1-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160713_060303579_iOS-1.jpg) すぐ子実体に。（13 日）\[/caption\]
+<figure className="left">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160713_060303579_iOS-1.jpg"><img src="/images/20160713_060303579_iOS-1-150x150.jpg" alt="" /></a>
+  <figcaption>すぐ子実体に。（13 日）</figcaption>
+</figure>
 
 ## ススホコリはオートミールを食べない
 
@@ -83,7 +92,10 @@ tags:
 
 それで、**モジホコリの育成にはオートミール**というにわか知識でオートミールを置いてみていたのですが、**全くダメ**。即死でした。（死ではなく子実体になっただけですが…）
 
-\[caption id="attachment_1320" align="alignright" width="150"\][![](/images/20160824_061506468_iOS-1-e1472660963675-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160824_061506468_iOS-1.jpg) 息を吹き返したススホコリ。（8 月 24 日）\[/caption\]
+<figure className="right">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160824_061506468_iOS-1.jpg"><img src="/images/20160824_061506468_iOS-1-e1472660963675-150x150.jpg" alt="" /></a>
+  <figcaption>息を吹き返したススホコリ。（8 月 24 日）</figcaption>
+</figure>
 
 ## カビ、戦争、復活 (7-8 月)
 
@@ -93,7 +105,10 @@ tags:
 
 どなたか詳しい人の解説が欲しいところですが、**ススホコリの餌はカビ**などであるということで、カビが生えたことでむしろ栄養源ができ、カビと戦って勝ったということのように見えます。**タッパーウェアの中の世界にドラマ**を見出して興奮したものです。
 
-\[caption id="attachment_1321" align="alignright" width="150"\][![](/images/20160825_121013160_iOS-1-e1472660994638-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160825_121013160_iOS-1.jpg) バナナは食べなかった。\[/caption\]
+<figure className="right">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160825_121013160_iOS-1.jpg"><img src="/images/20160825_121013160_iOS-1-e1472660994638-150x150.jpg" alt="" /></a>
+  <figcaption>バナナは食べなかった。</figcaption>
+</figure>
 
 ## 餌を与えてみた (8 月 25 日)
 

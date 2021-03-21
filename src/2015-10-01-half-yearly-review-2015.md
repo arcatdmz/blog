@@ -109,7 +109,10 @@ coverImage: "DSC00049_developed.jpg"
 - [第 48 回 情報科学若手の会](http://wakate.org/37) [若手特別講演](http://junkato.jp/ja/talks/people-are-programmers/?p=1) @ 熱海
 - WISS 2015 査読
 
-\[caption id="attachment_1082" align="aligncenter" width="1024"\][![](/images/SDIM9353-1024x683.jpg)](http://junkato.jp/ja/talks/people-are-programmers/?p=1) 情報科学若手の会で楽しく招待講演\[/caption\]
+<figure className="center">
+  <a href="http://junkato.jp/ja/talks/people-are-programmers/?p=1"><img src="/images/SDIM9353-1024x683.jpg" alt="" /></a>
+  <figcaption>情報科学若手の会で楽しく招待講演</figcaption>
+</figure>
 
 そういえば、学生の頃と違うもう一つの点は、ここに書けないこともいろいろある、というところですね。とりあえず最近は、学生実習生がいろいろ面白いものを作っているので、見ていてとても楽しいです。1 年に 2 回実習生を受け入れる時期があるので、一緒に研究したい学生さんは適宜お知らせください。
 
