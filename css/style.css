@@ -2,9 +2,16 @@ figure > figcaption,
 .remark-code-title {
   padding: 0.2em;
   background: #eee;
+}
+
+.remark-code-title {
   font-size: smaller;
 }
 
 .remark-code-title + pre {
   margin-top: 0;
+}
+
+article > header {
+  margin-bottom: 0.3em;
 }
