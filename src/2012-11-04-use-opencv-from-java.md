@@ -37,7 +37,7 @@ import javax.swing.JFrame;
 
 import com.googlecode.javacv.CanvasFrame;
 import com.googlecode.javacv.OpenCVFrameGrabber;
-import com.googlecode.javacv.cpp.opencv\_core.IplImage;
+import com.googlecode.javacv.cpp.opencv_core.IplImage;
 
 public class CaptureImage {
   public static void main(String[] args) {
