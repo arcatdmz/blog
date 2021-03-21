@@ -1,0 +1,38 @@
+name: Publish Web pages
+on:
+  push:
+    branches:
+      - main
+jobs:
+  publish:
+    name: publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+          registry-url: https://registry.npmjs.org/
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: |
+        npm ci --no-optional && \
+        npm run download && \
+        npm run build && \
+        npm run export
+      - name: Deploy pages
+        uses: burnett01/rsync-deployments@4.1
+        with:
+          switches: -avr --delete-after --exclude-from ${{ env.GITHUB_WORKSPACE }}/rsync-excludes.txt
+          path: out/
+          remote_path: /home/digitalmuseum/www/blog/
+          remote_host: junkato.jp
+          remote_user: digitalmuseum
+          remote_key: ${{ secrets.DEPLOY_KEY }}
