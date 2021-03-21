@@ -5,7 +5,8 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="alternate" type="application/rss+xml" href="/index.xml" />
-          <link rel="stylesheet" href="https://junkato.jp/stylesheets/main.css" />
+          <link rel="stylesheet" href="/stylesheets/main.css" />
+          <script type="text/javascript" src="//webfonts.sakura.ne.jp/js/sakurav3.js"></script>
         </Head>
         <Main />
         <NextScript />
