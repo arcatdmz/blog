@@ -1,25 +1,37 @@
 ---
 title: "粘菌の培養に失敗しました"
 date: "2016-08-31"
-tags: 
+tags:
   - "life"
 ---
 
 研究所の近辺にはきのこが生えます。
 
-\[caption id="attachment\_1292" align="aligncenter" width="1024"\][![つくばはきのこだらけ](/images/WP_20160627_09_52_24_Pro-e1472655851287-1024x576.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/WP_20160627_09_52_24_Pro-e1472655851287.jpg) つくばはきのこだらけ\[/caption\]
+<figure className="center">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2016/09/WP_20160627_09_52_24_Pro-e1472655851287.jpg"><img src="/images/WP_20160627_09_52_24_Pro-e1472655851287-1024x576.jpg" alt="つくばはきのこだらけ" /></a>
+  <figcaption>つくばはきのこだらけ</figcaption>
+</figure>
 
-こういう立派なきのこがたくさんいます。8月は暑すぎてひっそりしていましたが、台風一過でまた出てきました。
+こういう立派なきのこがたくさんいます。8 月は暑すぎてひっそりしていましたが、台風一過でまた出てきました。
 
-\[caption id="attachment\_1293" align="aligncenter" width="1024"\][![20160830_065228456_iOS](/images/20160830_065228456_iOS-e1472656517261-1024x601.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160830_065228456_iOS-e1472656023389.jpg) とにかくすごい数、わっと生えてくる\[/caption\]
+<figure className="center">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160830_065228456_iOS-e1472656023389.jpg"><img src="/images/20160830_065228456_iOS-e1472656517261-1024x601.jpg" alt="20160830_065228456_iOS" /></a>
+  <figcaption>とにかくすごい数、わっと生えてくる</figcaption>
+</figure>
 
 ただ、今回の主役はきのこじゃなくて、こっちです。
 
-\[caption id="attachment\_1294" align="aligncenter" width="1024"\][![ススホコリの移動体](/images/20160712_084843767_iOS-e1472656205296-1024x576.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160712_084843767_iOS-e1472656205296.jpg) ススホコリの変形体（7月12日）\[/caption\]
+<figure className="center">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160712_084843767_iOS-e1472656205296.jpg"><img src="/images/20160712_084843767_iOS-e1472656205296-1024x576.jpg" alt="ススホコリの移動体" /></a>
+  <figcaption>ススホコリの変形体（7月12日）</figcaption>
+</figure>
 
 最近この真性粘菌であるところの**真正粘菌亜綱モジホコリ目モジホコリ科キフシススホコリ**を育てようとして失敗したので記録を残しておきます。
 
-\[caption id="attachment\_1295" align="alignright" width="150"\][![最初の邂逅（6月29日）](/images/20160629_065345149_iOS-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160629_065345149_iOS.jpg) ススホコリの変形体と最初の邂逅。（6月29日）\[/caption\]
+<figure className="right">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160629_065345149_iOS.jpg"><img src="/images/20160629_065345149_iOS-150x150.jpg" alt="最初の邂逅（6月29日）" /></a>
+  <figcaption>ススホコリの変形体と最初の邂逅。（6月29日）</figcaption>
+</figure>
 
 ## 粘菌とは何ぞや
 
@@ -36,13 +48,16 @@ tags:
 
 一方の真性粘菌は、真核生物のうち菌界でも植物界でも動物界でもないもの（つまりその他大勢）が寄せ集められた**原生生物界**に属しています。
 
-\[caption id="attachment\_1296" align="alignleft" width="150"\][![ススホコリの子実体。指で触ったところは黄色い表面が剥がれて茶色の胞子が見えている。（7月6日）](/images/20160706_051951381_iOS-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160706_051951381_iOS.jpg) ススホコリの子実体。（7月6日）\[/caption\]
+<figure className="left">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160706_051951381_iOS.jpg"><img src="/images/20160706_051951381_iOS-150x150.jpg" alt="ススホコリの子実体。指で触ったところは黄色い表面が剥がれて茶色の胞子が見えている。（7月6日）" /></a>
+  <figcaption>ススホコリの子実体。（7月6日）</figcaption>
+</figure>
 
 **菌でも植物でも動物でもない生物ってすごい魑魅魍魎感**です。そんなやつを散歩中に偶然見かけたので、捕獲してみたのでした。
 
 ちなみに、細胞性粘菌のサブカテゴリであるアクラシス目とタマホコリカビ目は遺伝的にかなり離れていることが後から分かったらしく、細胞性粘菌というグルーピングそのものが無意味ということで解体されつつあるそうです。（モデル生物として有名なキイロタマホコリカビを含むタマホコリカビ目は、真性粘菌に近いほうで原生生物界にカテゴライズされるらしい。）
 
-## 初対面はスルー (6月29日)
+## 初対面はスルー (6 月 29 日)
 
 実は、最初に見つけたときは**すごい色のきのこ**だとしか思わずスルーしました。その後で菌友から粘菌のことを教わり、改めて探してみたものの、子実体になってしまった後のものばかり見つける日々が続きました。左の写真では、指で触ったところだけ黄色い表面が剥がれて茶色の胞子が見えています。
 
@@ -50,17 +65,17 @@ tags:
 
 胞子の状態から変形体になることもあるそうで、寒天培地に置いてみたりしたのですが一向に孵らず。
 
-## 捕獲 (7月12日)
+## 捕獲 (7 月 12 日)
 
 そうこうしているうちに、夕方の公園で変形体と相見えることができました。急いでビニール袋に採取して寒天培地上へ。
 
 採取して運んでいるうちに黄色だったものがどんどん赤くなってきて、子実体になりそうな色になってきたので冷や冷やしましたが、しばらく静置したところ黄色に戻り、餌を探しにいく様子が観察できました。
 
-\[caption id="attachment\_1317" align="alignleft" width="150"\][![](/images/20160712_090742389_iOS-1-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160712_090742389_iOS-1.jpg) 捕獲。（7月12日）\[/caption\]
+\[caption id="attachment_1317" align="alignleft" width="150"\][![](/images/20160712_090742389_iOS-1-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160712_090742389_iOS-1.jpg) 捕獲。（7 月 12 日）\[/caption\]
 
-\[caption id="attachment\_1318" align="alignleft" width="150"\][![](/images/20160712_173829256_iOS-1-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160712_173829256_iOS-1.jpg) 餌を探す変形体。\[/caption\]
+\[caption id="attachment_1318" align="alignleft" width="150"\][![](/images/20160712_173829256_iOS-1-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160712_173829256_iOS-1.jpg) 餌を探す変形体。\[/caption\]
 
-\[caption id="attachment\_1319" align="alignleft" width="150"\][![](/images/20160713_060303579_iOS-1-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160713_060303579_iOS-1.jpg) すぐ子実体に。（13日）\[/caption\]
+\[caption id="attachment_1319" align="alignleft" width="150"\][![](/images/20160713_060303579_iOS-1-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160713_060303579_iOS-1.jpg) すぐ子実体に。（13 日）\[/caption\]
 
 ## ススホコリはオートミールを食べない
 
@@ -68,9 +83,9 @@ tags:
 
 それで、**モジホコリの育成にはオートミール**というにわか知識でオートミールを置いてみていたのですが、**全くダメ**。即死でした。（死ではなく子実体になっただけですが…）
 
-\[caption id="attachment\_1320" align="alignright" width="150"\][![](/images/20160824_061506468_iOS-1-e1472660963675-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160824_061506468_iOS-1.jpg) 息を吹き返したススホコリ。（8月24日）\[/caption\]
+\[caption id="attachment_1320" align="alignright" width="150"\][![](/images/20160824_061506468_iOS-1-e1472660963675-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160824_061506468_iOS-1.jpg) 息を吹き返したススホコリ。（8 月 24 日）\[/caption\]
 
-## カビ、戦争、復活 (7-8月)
+## カビ、戦争、復活 (7-8 月)
 
 その後はほとんど諦めて放置していました。一週間ほどの間に寒天培地にも**ふさふさの白カビ**が生え、さらに時間が経つとカビすら姿が見えなくなり（正確には寒天培地の下にもぐったように見え）ました。
 
@@ -78,9 +93,9 @@ tags:
 
 どなたか詳しい人の解説が欲しいところですが、**ススホコリの餌はカビ**などであるということで、カビが生えたことでむしろ栄養源ができ、カビと戦って勝ったということのように見えます。**タッパーウェアの中の世界にドラマ**を見出して興奮したものです。
 
-\[caption id="attachment\_1321" align="alignright" width="150"\][![](/images/20160825_121013160_iOS-1-e1472660994638-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160825_121013160_iOS-1.jpg) バナナは食べなかった。\[/caption\]
+\[caption id="attachment_1321" align="alignright" width="150"\][![](/images/20160825_121013160_iOS-1-e1472660994638-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160825_121013160_iOS-1.jpg) バナナは食べなかった。\[/caption\]
 
-## 餌を与えてみた (8月25日)
+## 餌を与えてみた (8 月 25 日)
 
 こうしてどす黒いタッパーウェアの世界に**明るく黄色い希望**が生まれたので、そのまま元気に育ってくれることを願って次の手を考えました。
 
@@ -90,9 +105,12 @@ tags:
 
 そうこうするうち一週間が経ち、保湿のために入れていたティッシュに変形体がたくさん取りついたので、新しい培地に移すことにしました。
 
-\[caption id="attachment\_1323" align="alignright" width="150"\][![20160828_141257390_iOS](/images/20160828_141257390_iOS-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160828_141257390_iOS.jpg) 新しい培地。（8月28日）\[/caption\]
+<figure className="right">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160828_141257390_iOS.jpg"><img src="/images/20160828_141257390_iOS-150x150.jpg" alt="20160828_141257390_iOS" /></a>
+  <figcaption>新しい培地。（8月28日）</figcaption>
+</figure>
 
-## 新天地にて (8月28日)
+## 新天地にて (8 月 28 日)
 
 寒天培地を新しく作り、変形体をティッシュとカフェポッドごと新天地に移したところ、最初の一日はそれまで通り動き回る様子が観察できました。
 
@@ -102,14 +120,23 @@ tags:
 
 けっきょくカフェポッドを追加で入れても何にもならず、子実体が形成され、静かな時が訪れたのでした。
 
-\[caption id="attachment\_1324" align="alignleft" width="150"\][![ティッシュ上に集合、変色。（30日）](/images/20160830_131444090_iOS-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160830_131444090_iOS.jpg) 集合、変色。（8月30日）\[/caption\]
+<figure className="left">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160830_131444090_iOS.jpg"><img src="/images/20160830_131444090_iOS-150x150.jpg" alt="ティッシュ上に集合、変色。（30日）" /></a>
+  <figcaption>集合、変色。（8月30日）</figcaption>
+</figure>
 
-\[caption id="attachment\_1325" align="alignleft" width="150"\][![真っ黒に。](/images/20160831_051705688_iOS-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160831_051705688_iOS.jpg) 真っ黒に。（8月31日）\[/caption\]
+<figure className="left">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160831_051705688_iOS.jpg"><img src="/images/20160831_051705688_iOS-150x150.jpg" alt="真っ黒に。" /></a>
+  <figcaption>真っ黒に。（8月31日）</figcaption>
+</figure>
 
-\[caption id="attachment\_1339" align="alignleft" width="150"\][![動いてる？](/images/20160901_234155410_iOS-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160901_234155410_iOS.jpg) 動いてる？（9月2日）\[/caption\]
+<figure className="left">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2016/09/20160901_234155410_iOS.jpg"><img src="/images/20160901_234155410_iOS-150x150.jpg" alt="動いてる？" /></a>
+  <figcaption>動いてる？（9月2日）</figcaption>
+</figure>
 
 変色が始まってから餌となるカビを与えた（写真中、培地上の黒い塊）のですが間に合わず、こうして、紆余曲折を経た粘菌培養は失敗したのでした。
 
 といっても、またしばらく放置するつもりなので、いきなり変形体が現れるかもしれません。野生の粘菌を探しながら、その時を待ちます。
 
-**9月2日追記;** 黄色くないし、変形体には見えないのですが、何か黒いものが動いています。
+**9 月 2 日追記;** 黄色くないし、変形体には見えないのですが、何か黒いものが動いています。

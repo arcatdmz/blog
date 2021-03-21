@@ -1,7 +1,7 @@
 ---
 title: "望遠レンズ"
 date: "2014-07-22"
-tags: 
+tags:
   - "life"
 ---
 
@@ -9,8 +9,17 @@ tags:
 
 ズームレンズを普通に使うとすごいブレちゃって、扱いが難しい。でも、こんな写真、これまで持っていたレンズでは到底撮れなかった！というわけでとても満足して撮影技術の上達を誓うのでした。
 
-\[caption id="attachment\_738" align="aligncenter" width="1024"\][![DSC09952](/images/DSC09952-1024x680.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC09952.jpg) ダイサギ\[/caption\]
+<figure className="center">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC09952.jpg"><img src="/images/DSC09952-1024x680.jpg" alt="DSC09952" /></a>
+  <figcaption>ダイサギ</figcaption>
+</figure>
 
-\[caption id="attachment\_739" align="aligncenter" width="1024"\][![DSC09933](/images/DSC09933-1024x680.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC09933.jpg) カルガモ\[/caption\]
+<figure className="center">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC09933.jpg"><img src="/images/DSC09933-1024x680.jpg" alt="DSC09933" /></a>
+  <figcaption>カルガモ</figcaption>
+</figure>
 
-\[caption id="attachment\_737" align="aligncenter" width="1024"\][![DSC09944](/images/DSC09944-1024x680.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC09944.jpg) バリケン（名前分からなかったけど [@htomine](https://twitter.com/htomine) が教えてくれた、ありがとう！）\[/caption\]
+<figure className="center">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC09944.jpg) バリケン（名前分からなかったけど [@htomine](https://twitter.com/htomine"><img src="/images/DSC09944-1024x680.jpg" alt="DSC09944" /></a>
+  <figcaption>が教えてくれた、ありがとう！）</figcaption>
+</figure>

@@ -1,24 +1,27 @@
 ---
 title: "情報科学系 海外研究インターンのすすめ〔前編〕"
 date: "2015-06-29"
-tags: 
+tags:
   - "research"
   - "student"
   - "university"
 coverImage: "DSC04693.jpg"
 ---
 
-ACM CHI 2015全論文の概要を一日で把握する[CHI勉強会 2015](http://hci.tokyo/seminar/chi2015)へのご参加ありがとうございました。幹事団の一人として御礼申し上げます。東京会場では、メインプログラムのあと懇親会までの準備時間に企業紹介と海外インターン経験談紹介のセッションを開催しました。インターン経験の紹介セッションでは、僕と、Microsoft Research Asia/Redmond, Disney Research, ATRで研究インターンを経験した学生たちがプレゼンしました。
+ACM CHI 2015 全論文の概要を一日で把握する[CHI 勉強会 2015](http://hci.tokyo/seminar/chi2015)へのご参加ありがとうございました。幹事団の一人として御礼申し上げます。東京会場では、メインプログラムのあと懇親会までの準備時間に企業紹介と海外インターン経験談紹介のセッションを開催しました。インターン経験の紹介セッションでは、僕と、Microsoft Research Asia/Redmond, Disney Research, ATR で研究インターンを経験した学生たちがプレゼンしました。
 
 これまで、さまざまな機会に海外での研究インターン経験について紹介し、とくに博士課程の人たちにおすすめしてきました。より多くの人に参考にしていただけるよう、発表資料を改めて記事化しておきます。まずは〔前編〕として、概要と、どうやってインターンに参加するのか、また、いつ参加するといいのか紹介します。
 
-[インターン期間中・期間後に起きることを紹介した後編](http://junkato.jp/ja/blog/2015/06/30/cs-research-internship-abroad-2/)もよろしくお願いします。Microsoft Research Asiaに行ったときの経験については、[北京に4ヶ月住んだ話](http://junkato.jp/ja/blog/2014/12/12/4-months-in-beijing-microsoft-research-asia/)に詳しく書いてあります。
+[インターン期間中・期間後に起きることを紹介した後編](http://junkato.jp/ja/blog/2015/06/30/cs-research-internship-abroad-2/)もよろしくお願いします。Microsoft Research Asia に行ったときの経験については、[北京に 4 ヶ月住んだ話](http://junkato.jp/ja/blog/2014/12/12/4-months-in-beijing-microsoft-research-asia/)に詳しく書いてあります。
 
-\[caption id="attachment\_702" align="aligncenter" width="1024"\][![Microsoft Research Redmond (Building 99)](/images/DSC04693-1024x680.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC04693.jpg) Microsoft Research Redmond Building 99の吹き抜け\[/caption\]
+<figure className="center">
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC04693.jpg"><img src="/images/DSC04693-1024x680.jpg" alt="Microsoft Research Redmond (Building 99)" /></a>
+  <figcaption>Microsoft Research Redmond Building 99の吹き抜け</figcaption>
+</figure>
 
 [![cs-internship-abroad (1)](/images/cs-internship-abroad-1-1024x576.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2015/06/cs-internship-abroad-1.jpg)
 
-僕は、修士のとき[Microsoftのソフトウェアエンジニアインターン](http://d.hatena.ne.jp/arc_at_dmz/20090930/microsoft_internship)として、また、[学内ベンチャーキャピタルUTEC](http://www.ut-ec.co.jp)のサマーインターンとして働いたことがあります。その後、博士課程に進学し、[Microsoft Research Asia (北京)](http://research.microsoft.com/en-us/labs/asia/)と[Redmond (アメリカ本社)](http://research.microsoft.com/en-us/labs/redmond/)、[Adobe Creative Technologies Lab](http://www.adobe.com/technology.html)のSeattleキャンパスで研究インターンとして働きました。全ての経歴は[英文レジュメ](http://junkato.jp/resume.html)に書いてあります。この記事では、研究インターンに絞って概要を紹介します。
+僕は、修士のとき[Microsoft のソフトウェアエンジニアインターン](http://d.hatena.ne.jp/arc_at_dmz/20090930/microsoft_internship)として、また、[学内ベンチャーキャピタル UTEC](http://www.ut-ec.co.jp)のサマーインターンとして働いたことがあります。その後、博士課程に進学し、[Microsoft Research Asia (北京)](http://research.microsoft.com/en-us/labs/asia/)と[Redmond (アメリカ本社)](http://research.microsoft.com/en-us/labs/redmond/)、[Adobe Creative Technologies Lab](http://www.adobe.com/technology.html)の Seattle キャンパスで研究インターンとして働きました。全ての経歴は[英文レジュメ](http://junkato.jp/resume.html)に書いてあります。この記事では、研究インターンに絞って概要を紹介します。
 
 ## 海外大企業での研究インターン
 
@@ -42,12 +45,12 @@ ACM CHI 2015全論文の概要を一日で把握する[CHI勉強会 2015](http:/
 
 [![cs-internship-abroad (5)](/images/cs-internship-abroad-5-1024x576.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2015/06/cs-internship-abroad-5.jpg)
 
-Fellowshipとは、[Microsoft Research Asia Fellowship](http://junkato.jp/ja/blog/2014/05/16/microsoft-research-asia-fellowship/)のように、研究所が研究者を雇うときのような選考プロセスを経て授与する賞です。たとえ受賞を逃しても、その過程で研究者に気に入ってもらえれば、インターンできる可能性が大きく上昇します。指導教官や、[研究所の産学連携担当者](https://twitter.com/msraurjp)に紹介してもらうのも手ですね。あとは、国際会議に参加して、自分の研究を紹介して話を聞いてもらうとよいでしょう。このとき、何も発表がないときっかけをつかむのが難しいですが、ポスター・デモ・登壇発表があれば、その関係で話しかけることができます。[CHIで開催したシンポジウム](http://junkato.jp/ja/blog/2015/03/01/acm-chi2015-hci-tokyo/)は、そのためのきっかけに使ってもらうことが目的の一つでした。
+Fellowship とは、[Microsoft Research Asia Fellowship](http://junkato.jp/ja/blog/2014/05/16/microsoft-research-asia-fellowship/)のように、研究所が研究者を雇うときのような選考プロセスを経て授与する賞です。たとえ受賞を逃しても、その過程で研究者に気に入ってもらえれば、インターンできる可能性が大きく上昇します。指導教官や、[研究所の産学連携担当者](https://twitter.com/msraurjp)に紹介してもらうのも手ですね。あとは、国際会議に参加して、自分の研究を紹介して話を聞いてもらうとよいでしょう。このとき、何も発表がないときっかけをつかむのが難しいですが、ポスター・デモ・登壇発表があれば、その関係で話しかけることができます。[CHI で開催したシンポジウム](http://junkato.jp/ja/blog/2015/03/01/acm-chi2015-hci-tokyo/)は、そのためのきっかけに使ってもらうことが目的の一つでした。
 
-僕の場合、まずFellowship経由でMicrosoft Research Asiaに行けました。その過程でRedmondの研究者に知ってもらうことができ、Redmondインターンに行けました。さらに、国際会議でアピールした結果Adobeでインターンできました。これだけいろいろな場所へ行けたのは、相当運がよかったのだと思います。ただ、行きたいと思って機会を探し続けたことは、間違いなく、必要条件でした。
+僕の場合、まず Fellowship 経由で Microsoft Research Asia に行けました。その過程で Redmond の研究者に知ってもらうことができ、Redmond インターンに行けました。さらに、国際会議でアピールした結果 Adobe でインターンできました。これだけいろいろな場所へ行けたのは、相当運がよかったのだと思います。ただ、行きたいと思って機会を探し続けたことは、間違いなく、必要条件でした。
 
 [![cs-internship-abroad (6)](/images/cs-internship-abroad-6-1024x576.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2015/06/cs-internship-abroad-6.jpg)もう一つ大事な観点は、いつインターンに行くかということです。基本的にここに書いた通りですが、学士を取ってくれる研究インターンはとても少ないと思います。修士でも、よほど強いコネクションがないと国際会議で論文を出したことがないと難しいかもしれません。博士課程に入って成果が出始めた頃が最も一般的なようです。
 
-僕個人の反省として、博士課程3年目で博士論文を書いている期間にインターンに行くと地獄を見ます。Adobeの頃ですね。昼は企業に尽くし夜は論文執筆を…あっ思い出したら胃が痛くなってきた。
+僕個人の反省として、博士課程 3 年目で博士論文を書いている期間にインターンに行くと地獄を見ます。Adobe の頃ですね。昼は企業に尽くし夜は論文執筆を…あっ思い出したら胃が痛くなってきた。
 
 とりあえず前編はこの辺で。[後編](http://junkato.jp/ja/blog/2015/06/30/cs-research-internship-abroad-2/)に続きます。
