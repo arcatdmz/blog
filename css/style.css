@@ -1,0 +1,9 @@
+.remark-code-title {
+  padding: 0.2em;
+  background: #eee;
+  font-size: smaller;
+}
+
+.remark-code-title + pre {
+  margin-top: 0;
+}

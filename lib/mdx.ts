@@ -11,20 +11,6 @@ import { PostIface } from "./PostIface";
 
 const root = process.cwd();
 
-const tokenClassNames = {
-  tag: "text-code-red",
-  "attr-name": "text-code-yellow",
-  "attr-value": "text-code-green",
-  deleted: "text-code-red",
-  inserted: "text-code-green",
-  punctuation: "text-code-white",
-  keyword: "text-code-purple",
-  string: "text-code-green",
-  function: "text-code-blue",
-  boolean: "text-code-red",
-  comment: "text-gray-400 italic"
-};
-
 export async function getFiles() {
   return fs.readdirSync(path.join(root, "src"));
 }
@@ -55,20 +41,7 @@ export async function getFileBySlug(slug: string) {
         require("remark-autolink-headings"),
         require("remark-code-titles")
       ],
-      rehypePlugins: [
-        require("@mapbox/rehype-prism"),
-        () => {
-          return tree => {
-            visit(tree, "element", (node, _index, _parent) => {
-              const className = node.properties["className"] as string[];
-              let [token, type] = className || [];
-              if (token === "token") {
-                node.properties["className"] = [tokenClassNames[type]];
-              }
-            });
-          };
-        }
-      ]
+      rehypePlugins: [require("@mapbox/rehype-prism")]
     }
   });
 

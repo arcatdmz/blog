@@ -53,7 +53,7 @@ const PostLayout: FC<PostLayoutProps> = ({
         <header>
           <PageTitle>{title}</PageTitle>
         </header>
-        <List stackable horizontal divided>
+        <List horizontal divided>
           <List.Item>
             by <strong>{websiteJson.author}</strong>
           </List.Item>
