@@ -31,7 +31,7 @@ jobs:
       - name: Deploy pages
         uses: burnett01/rsync-deployments@4.1
         with:
-          switches: -avr --delete-after --exclude-from ${{ env.GITHUB_WORKSPACE }}/rsync-excludes.txt
+          switches: -avr --delete-after --exclude="/.htaccess"
           path: out/
           remote_path: /home/digitalmuseum/www/blog/
           remote_host: junkato.jp
