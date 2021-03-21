@@ -12,7 +12,7 @@ coverImage: "uist-svs.jpg"
 
 この記事では、Student Volunteer (SV)の概要、SV になる方法と、なった場合のスケジュールなどについて紹介します。なお、ACM（コンピュータ科学系の国際学会）主催の国際会議を前提に話しているので、別の分野や別の学会ではちょっと勝手が違うかもしれません。
 
-\[caption id="attachment_1361" align="aligncenter" width="1024"\][![](/images/uist-svs-1024x512.jpg)](https://junkato.jp/ja/blog/wp-content/uploads/2016/12/uist-svs.jpg) ACM UIST 2016 Student Volunteer と SV Chair の集合写真\[/caption\]
+<figure className="center"><a href="https://junkato.jp/ja/blog/wp-content/uploads/2016/12/uist-svs.jpg"><img src="/images/uist-svs-1024x512.jpg" alt="" /></a><figcaption>ACM UIST 2016 Student Volunteer と SV Chair の集合写真</figcaption></figure>
 
 ## Student Volunteer (SV)とは
 

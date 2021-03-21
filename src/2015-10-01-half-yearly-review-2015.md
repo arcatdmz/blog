@@ -19,7 +19,7 @@ coverImage: "DSC00049_developed.jpg"
 
 このうち、Sharedo は入所直後にがんばったものなので、一年間での進展はほぼありません。CrossSong は共著論文で、パズル自動生成の部分には全く関与しておらず（Jordan, Graham, 深山さん、後藤さんの貢献部分です）、HCI 研究者らしくパズルのインタラクション設計やデモ動画制作などを担当しました。f3.js はとても面白いトピックだと思っているのですが、準備に時間がかかったのと（理由は 11 月の UIST デモ発表の頃にはお分かりいただけると思います）、とにかく TextAlive に時間を割いたので、まだちゃんとしたかたちにはなっていません。
 
-\[caption id="attachment_1075" align="alignnone" width="1024"\][![](/images/DSC00049_developed-1024x681.jpg)](https://goo.gl/photos/Ho2gWe12RmdZPhdE7) 7 月、イギリス各所を訪問\[/caption\]
+<figure className="none"><a href="https://goo.gl/photos/Ho2gWe12RmdZPhdE7"><img src="/images/DSC00049_developed-1024x681.jpg" alt="" /></a><figcaption>7 月、イギリス各所を訪問</figcaption></figure>
 
 博士課程の頃は必死に目の前のテーマを消化して新しいアイデアを生み出していく日々でしたが、就職を機に、少し落ち着いて研究開発に取り組めるようになりました。TextAlive は、昨年 6 月に研究を始めてから数回実装を書き直しています。一番大きな変更が今年 1 月の Java ベースのアプリケーションから JavaScript ベースの Web アプリケーションへの転換で、これは一般公開を見据えた選択でした。
 
