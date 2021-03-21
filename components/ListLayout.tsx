@@ -1,6 +1,6 @@
 import Link from "./Link";
 import Tag from "./Tag";
-import siteMetdata from "../data/siteMetadata.json";
+import siteMetdata from "../website.json";
 import { useState } from "react";
 
 export default function ListLayout({ posts, title }) {

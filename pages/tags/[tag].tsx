@@ -3,7 +3,7 @@ import path from "path";
 import { kebabCase } from "../../lib/utils";
 import { getAllFilesFrontMatter } from "../../lib/mdx";
 import { getAllTags } from "../../lib/tags";
-import siteMetadata from "../../data/siteMetadata.json";
+import siteMetadata from "../../website.json";
 import ListLayout from "../../components/ListLayout";
 import { PageSeo } from "../../components/SEO";
 import generateRss from "../../lib/generate-rss";

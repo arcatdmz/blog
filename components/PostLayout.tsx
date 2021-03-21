@@ -3,7 +3,7 @@ import PageTitle from "./PageTitle";
 import SectionContainer from "./SectionContainer";
 import { BlogSeo } from "./SEO";
 import Tag from "./Tag";
-import siteMetdata from "../data/siteMetadata.json";
+import siteMetdata from "../website.json";
 
 // const editUrl = (fileName) =>
 //   `${siteMetdata.siteRepo}/blob/master/data/posts/${fileName}`;

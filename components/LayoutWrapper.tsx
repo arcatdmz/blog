@@ -1,4 +1,4 @@
-import siteMetadata from "../data/siteMetadata.json";
+import siteMetadata from "../website.json";
 import Link from "./Link";
 import SectionContainer from "./SectionContainer";
 // import MobileNav from "./MobileNav";

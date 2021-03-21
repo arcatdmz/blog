@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import Link from "../components/Link";
 import { PageSeo } from "../components/SEO";
 import Tag from "../components/Tag";
-import siteMetadata from "../data/siteMetadata.json";
+import siteMetadata from "../website.json";
 import { getAllFilesFrontMatter } from "../lib/mdx";
 
 const MAX_DISPLAY = 5;

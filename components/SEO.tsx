@@ -1,5 +1,5 @@
 import { NextSeo, ArticleJsonLd } from "next-seo";
-import siteMetadata from "../data/siteMetadata.json";
+import siteMetadata from "../website.json";
 
 export const SEO = {
   title: siteMetadata.title,
