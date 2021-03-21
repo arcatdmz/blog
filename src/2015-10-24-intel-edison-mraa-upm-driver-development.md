@@ -1,7 +1,7 @@
 ---
 title: "Intel Edisonで新しいセンサ・アクチュエータを使うためのドライバ開発"
 date: "2015-10-24"
-categories: 
+tags: 
   - "programming"
 coverImage: "DSC09957.jpg"
 ---
@@ -14,7 +14,7 @@ Intel EdisonやGalileoでは、GPIOなどを操作するために[mraa](https://
 
 mraaを使ってupmを拡張するための手順は一応すべてGitHubにあがっていますが、もう少し詳しく、日本語で解説してみます。なお、ホストPCでIntel Edison用にドライバをクロスコンパイルすることもできるかもしれませんが、とりあえず手軽に実機での開発方法を紹介します。今のところ、実機でも現実的な時間でコンパイルが終わってすぐ動作確認できるので、とくに問題を感じていません。
 
-[![Intel Edisonを使ったマイコンアプリケーション開発](images/DSC09957-1024x512.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2015/10/DSC09957.jpg)
+[![Intel Edisonを使ったマイコンアプリケーション開発](/images/DSC09957-1024x512.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2015/10/DSC09957.jpg)
 
 ## opkgでGitをインストール
 

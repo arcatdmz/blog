@@ -1,7 +1,7 @@
 ---
 title: "Digital Stars 2020 Onlineで技術が使われています"
 date: "2020-08-30"
-categories: 
+tags: 
   - "research"
 coverImage: "ogp.png"
 ---
@@ -10,7 +10,7 @@ coverImage: "ogp.png"
 
 例年はマジカルミライという幕張メッセで開催される初音ミク公式イベントとの同日開催で、会場全体をジャックするような演出をしていたのですが、今年はこれが完全オンラインイベントになり、24時間かけて6つのタイムゾーンで開催されます。詳細は以下のWebサイトに掲載されています。
 
-[![](images/ogp-1024x538.png)](https://events.ongaaccel.jp/mikusync2020/)
+[![](/images/ogp-1024x538.png)](https://events.ongaaccel.jp/mikusync2020/)
 
 Digital Stars presents 初音ミクバースデーメッセージ企画 － Songle Sync コラボ －
 

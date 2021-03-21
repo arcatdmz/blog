@@ -1,7 +1,7 @@
 ---
 title: "日本からでも応募できる情報科学系Fellowship"
 date: "2015-09-26"
-categories: 
+tags: 
   - "research"
   - "student"
   - "university"

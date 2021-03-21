@@ -1,7 +1,7 @@
 ---
 title: "第48回 情報科学若手の会に参加しました"
 date: "2015-09-23"
-categories: 
+tags: 
   - "life"
   - "research"
   - "travel"
@@ -10,7 +10,7 @@ coverImage: "DSC_0270.jpg"
 
 情報処理学会プログラミングシンポジウム委員会主催で第48回という、とても歴史のある会に参加して講演してきました。講演そのものは[Web記事「ぼくらのプログラミングから、みんなのプログラミングへ (From "programmers are people, too" to "people are programmers.")」](http://junkato.jp/ja/talks/people-are-programmers/?p=1)にしたので、ぜひそちらをご覧ください。
 
-\[caption id="attachment\_1039" align="aligncenter" width="1024"\][![DSC_0270](images/DSC_0270-1024x576.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2015/09/DSC_0270.jpg) 海の見える宿\[/caption\]
+\[caption id="attachment\_1039" align="aligncenter" width="1024"\][![DSC_0270](/images/DSC_0270-1024x576.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2015/09/DSC_0270.jpg) 海の見える宿\[/caption\]
 
 情報科学若手の会は、存在自体は何年か前から知っていて（[暦本研](http://lab.rekimoto.org/)の人が参加していたからかな？関連するつぶやきがタイムラインに流れてきていました。）、ようやくの参加となりました。[Togetterまとめ](http://togetter.com/li/875554)を見ても分かるように、とても活発な議論があって、しかも毎夜（2泊3日の合宿形式です）夜遅くまでみんなで語るという、大変濃い内容でした。オフレコ話も聞けてとても勉強になりました。
 

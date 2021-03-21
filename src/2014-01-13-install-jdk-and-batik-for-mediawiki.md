@@ -1,7 +1,7 @@
 ---
 title: "レンタルサーバのMediaWikiにJava製SVGレンダラを設定した"
 date: "2014-01-13"
-categories: 
+tags: 
   - "programming"
   - "server"
 ---

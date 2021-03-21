@@ -1,7 +1,7 @@
 ---
 title: "開発環境研究をしているラボ一覧"
 date: "2013-09-27"
-categories: 
+tags: 
   - "research"
   - "sigpx"
 ---

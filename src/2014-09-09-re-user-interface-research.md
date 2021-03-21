@@ -1,7 +1,7 @@
 ---
 title: "Re: ユーザインタフェース研究の意義"
 date: "2014-09-09"
-categories: 
+tags: 
   - "life"
   - "research"
 ---

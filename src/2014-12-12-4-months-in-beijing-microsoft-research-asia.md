@@ -1,7 +1,7 @@
 ---
 title: "北京に4ヶ月住んだ話（Microsoft Research Asia）"
 date: "2014-12-12"
-categories: 
+tags: 
   - "life"
   - "research"
   - "sigpx"
@@ -13,7 +13,7 @@ categories:
 
 2年前のことで過去形になって恐縮ですが、北京のMicrosoft Research Asiaに滞在したときの記録を掘り返してみます。山のように写真を撮ったので、興味のある方は[Webアルバム](https://plus.google.com/photos/+JunKato/albums/5695905596193280753)をご覧ください。なお、僕と同じ立場（インターン）で北京に行った人の記録がMicrosoftの中の人の[ブログ](http://msraurjp.wordpress.com/)にたくさん掲載されています。そちらもあわせてどうぞ。
 
-\[caption id="" align="alignright" width="288"\][![](images/DSC01010.JPG)](https://picasaweb.google.com/lh/photo/EE4f45APabIuo2sngoU2U9MTjNZETYmyPJy0liipFm0?feat=directlink) 氷漬けの都\[/caption\]
+\[caption id="" align="alignright" width="288"\][![](/images/DSC01010.JPG)](https://picasaweb.google.com/lh/photo/EE4f45APabIuo2sngoU2U9MTjNZETYmyPJy0liipFm0?feat=directlink) 氷漬けの都\[/caption\]
 
 ## 北京
 
@@ -23,7 +23,7 @@ categories:
 
 とはいえ、日本の綺麗な空気になれていると気になるのが大気汚染。空気が悪い日は空気に色がついており、また、まぶしいはずの太陽がぼんやりとしか見えず容易に直視できたのが印象的でした。空気が最も悪かったのは大気汚染と黄砂が重なった日で、マスクをしないと息がしづらく、マスクをしても自転車で帰宅すると服に砂塵が積もって白くなっていました。
 
-\[caption id="" align="alignright" width="288"\][![](images/DSC02542.JPG)](https://picasaweb.google.com/lh/photo/mikJm0jWL563xgw2qlXffdMTjNZETYmyPJy0liipFm0?feat=directlink) 本当に美味しかった\[/caption\]
+\[caption id="" align="alignright" width="288"\][![](/images/DSC02542.JPG)](https://picasaweb.google.com/lh/photo/mikJm0jWL563xgw2qlXffdMTjNZETYmyPJy0liipFm0?feat=directlink) 本当に美味しかった\[/caption\]
 
 ## 食生活
 
@@ -39,7 +39,7 @@ Microsoft社内は英語が公用語ですが、中国人同士では中国語�
 
 実は、日本人であれば、どうしても通じないときには漢字を書き下してみる手が使えます。渡航してすぐの頃、生活必需品を買い揃える際には、メモ帳と鉛筆を手に店員に話しかけ、何とかやり取りをしたのをよく覚えています。
 
-\[caption id="" align="alignright" width="288"\][![](images/DSC00267.JPG)](https://picasaweb.google.com/lh/photo/XA3xQVgY1GwMW_akoK9SRtMTjNZETYmyPJy0liipFm0?feat=directlink) 北京の旧正月\[/caption\]
+\[caption id="" align="alignright" width="288"\][![](/images/DSC00267.JPG)](https://picasaweb.google.com/lh/photo/XA3xQVgY1GwMW_akoK9SRtMTjNZETYmyPJy0liipFm0?feat=directlink) 北京の旧正月\[/caption\]
 
 ## 治安
 

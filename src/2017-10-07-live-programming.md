@@ -1,7 +1,7 @@
 ---
 title: "Live Programmingについて (LIVE 2017で基調講演します)"
 date: "2017-10-07"
-categories: 
+tags: 
   - "research"
   - "sigpx"
 coverImage: "inventing-on-principle.png"
@@ -15,7 +15,7 @@ Live Programmingに関する国際ワークショップLIVE 2017で基調講演�
 
 Live Programmingとは、簡単に言うと**プログラム実行時の情報を参照しながらプログラムを編集できるようにする「プログラマ向けのインタラクションデザイン」**で、近年プログラミング言語・ソフトウェア工学・Human-Computer Interaction (HCI)の研究者の間で盛んに研究されています。実行中の様子を想像しながらソースコードを編集→コンパイル→実行しながらどうソースコードを直せばいいか考える、という開発サイクルを過去のものにしようという目論見です。
 
-\[caption id="attachment\_1460" align="aligncenter" width="1280"\][![](images/inventing-on-principle.png)](https://vimeo.com/36579366) Bret Victor - Inventing on Principle\[/caption\]
+\[caption id="attachment\_1460" align="aligncenter" width="1280"\][![](/images/inventing-on-principle.png)](https://vimeo.com/36579366) Bret Victor - Inventing on Principle\[/caption\]
 
 > プログラマの人は、今使っている開発環境と、このデモを見比べてみてください。前にも紹介したかもしれないけれど、もう一度。この動画に触発されたプロジェクトが、今、世界各地で複数動き始めています。 / “Bret Victor - Inve…” [http://t.co/6cjfJCaP](http://t.co/6cjfJCaP)
 > 
@@ -31,7 +31,7 @@ Live Programmingというインタラクションデザインは、このBret Vi
 
 また、もう一つ──このほうが本質的だと思うのですが──**Live Programmingが、技術ではなくインタラクションデザインであり、ひいてはプログラマの体験を軸に考えた設計思想である**、という面があります。
 
-\[caption id="attachment\_1472" align="aligncenter" width="1024"\][![](images/fig6-timeline-1024x332.png)](https://junkato.jp/ja/dejavu/) DejaVu Timeline\[/caption\]
+\[caption id="attachment\_1472" align="aligncenter" width="1024"\][![](/images/fig6-timeline-1024x332.png)](https://junkato.jp/ja/dejavu/) DejaVu Timeline\[/caption\]
 
 ### Live ⇔ Dead Programming
 

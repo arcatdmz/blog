@@ -1,7 +1,7 @@
 ---
 title: "ACM Student Research Competition参加のすすめ (続き)"
 date: "2014-05-04"
-categories: 
+tags: 
   - "research"
   - "university"
 ---
@@ -17,7 +17,7 @@ categories:
 
 第2ラウンドからは**実際に国際会議の現場に行って競う**ため、Travel Grantが$500を上限に出ます。ACMの会議はだいたいアメリカで開催されるため、全く足りないのですが…そこは大学の先生と相談しましょう。
 
-\[caption id="attachment\_633" align="aligncenter" width="1024"\][![PLDI 2013 SRC第2ラウンドの様子](images/DSC08291-1024x480.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC08291.jpg) PLDI 2013 SRC第2ラウンドの様子\[/caption\]
+\[caption id="attachment\_633" align="aligncenter" width="1024"\][![PLDI 2013 SRC第2ラウンドの様子](/images/DSC08291-1024x480.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC08291.jpg) PLDI 2013 SRC第2ラウンドの様子\[/caption\]
 
 ### 第2ラウンド: ポスター発表
 
@@ -27,7 +27,7 @@ categories:
 
 SRC参加者の全ポスター発表を回り終えると、ちょっと離れた場所ですぐに審査が始まります。CHI、PLDIとも声が聞こえそうで聞こえないくらいの距離にあるテーブルで議論をしていたように記憶しています。発表した側としては気が気ではありませんが、一般の会議参加者がまだポスターを見にくるので、近くに行くわけにもいかず…もどかしい時間を過ごすことになります。CHIはしばらくしたら結論を伝えにきてくれましたが、PLDIの場合は議論が紛糾したようで、翌日の昼にようやく第3ラウンドへ進んだ人が発表されました。
 
-\[caption id="attachment\_623" align="alignright" width="150"\][![PLDI SRC Finalistの賞状](images/DSC08307-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC08307.jpg) PLDI SRC Finalistの賞状\[/caption\]
+\[caption id="attachment\_623" align="alignright" width="150"\][![PLDI SRC Finalistの賞状](/images/DSC08307-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC08307.jpg) PLDI SRC Finalistの賞状\[/caption\]
 
 ### 第3(最終)ラウンド: 登壇発表
 

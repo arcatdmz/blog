@@ -1,7 +1,7 @@
 ---
 title: "[2014年版] Amazonでいくら使った？"
 date: "2014-11-12"
-categories: 
+tags: 
   - "life"
   - "programming"
 coverImage: "amazon-result.png"
@@ -11,7 +11,7 @@ coverImage: "amazon-result.png"
 
 そろそろ今年はいくら使ったか集計してみましょう^^
 
-[![amazon](images/amazon-1024x437.png)](https://www.amazon.co.jp/gp/css/order-history/)
+[![amazon](/images/amazon-1024x437.png)](https://www.amazon.co.jp/gp/css/order-history/)
 
 もともと[もろや](http://moroya.hatenablog.jp/entry/2013/06/03/225935)さんの書いたコードをちょっといじって使っていたんですが、GistがMIMEタイプを正しく返さなくなったりAmazonの注文履歴ページのレイアウトが変わったりで、うまく動かなくなっていたのを直しました。
 
@@ -29,7 +29,7 @@ coverImage: "amazon-result.png"
 3. Enterキーを押すと入力ダイアログが出ます。集計したい年を半角数字で入れるか、全部集計したい場合はallと入力して「OK」をクリックしましょう。
 4. 結果が出るまでしばし待ちましょう。すごくぷるぷるにゃん…
 
-\[caption id="attachment\_847" align="aligncenter" width="718"\][![うわぁ](images/amazon-result.png)](http://junkato.jp/ja/blog/wp-content/uploads/2014/11/amazon-result.png) うわぁ\[/caption\]
+\[caption id="attachment\_847" align="aligncenter" width="718"\][![うわぁ](/images/amazon-result.png)](http://junkato.jp/ja/blog/wp-content/uploads/2014/11/amazon-result.png) うわぁ\[/caption\]
 
 ## ソースコードなど
 

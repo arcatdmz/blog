@@ -1,7 +1,7 @@
 ---
 title: "情報処理が科学を更新する（IPSJ-ONEに登壇しました）"
 date: "2016-03-16"
-categories: 
+tags: 
   - "research"
   - "sigpx"
   - "student"
@@ -14,13 +14,13 @@ coverImage: "IMGP7944trim.jpg"
 
 この記事では、発表をざっと振り返ってから、さらに進んで**[情報処理の産業とアカデミアが今後科学全般に対して果たす役割](http://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service/#iscs)（本題）**について考えてみます。これは常々感じてきたことですが、人文科学（後藤さん）、物理（楽さん）、生物情報科学（清水さん）のようにさまざまな分野と関わって研究を進めている登壇者と議論したり、[企業に所属しながら研究している松本さんのブログ記事](http://hb.matsumoto-r.jp/entry/2016/03/15/163320)を読むなかで確信を深めました。
 
-[![IPSJ-ONE「コンピュータを変幻自在の道具にするためのプログラミング環境技術」](images/IMGP7944trim-1024x576.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/03/IMGP7944trim.jpg)
+[![IPSJ-ONE「コンピュータを変幻自在の道具にするためのプログラミング環境技術」](/images/IMGP7944trim-1024x576.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/03/IMGP7944trim.jpg)
 
 * * *
 
 ## コンピュータを変幻自在の道具にするためのプログラミング環境技術
 
-[![IPSJ-ONE スライド](images/160312-ipsjone-kato-pet-slides-150x150.jpg)](http://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service/#refs)私の発表は「**今やどこにでもある変幻自在の道具──コンピュータを駆動しているプログラムを作るためには、さまざまな工夫が凝らされたプログラミング環境が必要だ**」というメッセージを主軸に、以下3点を副次的なメッセージとして含めました。
+[![IPSJ-ONE スライド](/images/160312-ipsjone-kato-pet-slides-150x150.jpg)](http://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service/#refs)私の発表は「**今やどこにでもある変幻自在の道具──コンピュータを駆動しているプログラムを作るためには、さまざまな工夫が凝らされたプログラミング環境が必要だ**」というメッセージを主軸に、以下3点を副次的なメッセージとして含めました。
 
 1. ビッグデータ・実時間処理・実世界系アプリが重視されるようになって、昔ながらのプログラミング環境では限界がきている
 2. プログラミング環境もまたプログラムの一種だから、変幻自在な道具としてプログラミングすることで限界を突破できる

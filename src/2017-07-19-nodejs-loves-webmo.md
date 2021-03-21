@@ -1,7 +1,7 @@
 ---
 title: "WebmoをNode.jsから使う"
 date: "2017-07-19"
-categories: 
+tags: 
   - "programming"
 coverImage: "webmo.jpg"
 ---
@@ -10,7 +10,7 @@ coverImage: "webmo.jpg"
 
 エラーを直して本家にpull requestを送ろうと思っていたのですが、そう簡単ではなかったので、Node.js用に移植した新しいnpmパッケージ [webmo-client-nodejs](https://www.npmjs.com/package/webmo-client-nodejs) を作って公開しました。
 
-\[caption id="attachment\_1422" align="aligncenter" width="579"\][![](images/webmo-client-error.png)](https://junkato.jp/ja/blog/wp-content/uploads/2017/07/webmo-client-error.png) 依存ライブラリがブラウザ前提に設計されているため、[サンプルコード](https://github.com/arcatdmz/webmo-example-nodejs/blob/master/index.orig.js)を実行すると  
+\[caption id="attachment\_1422" align="aligncenter" width="579"\][![](/images/webmo-client-error.png)](https://junkato.jp/ja/blog/wp-content/uploads/2017/07/webmo-client-error.png) 依存ライブラリがブラウザ前提に設計されているため、[サンプルコード](https://github.com/arcatdmz/webmo-example-nodejs/blob/master/index.orig.js)を実行すると  
 ReferenceError: self is not defined というようなエラーが出ます。\[/caption\]
 
 ## 変更点

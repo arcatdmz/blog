@@ -1,7 +1,7 @@
 ---
 title: "半年を振り返る"
 date: "2014-09-24"
-categories: 
+tags: 
   - "life"
   - "lookback"
 ---

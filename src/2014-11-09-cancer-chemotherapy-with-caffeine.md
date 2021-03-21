@@ -1,7 +1,7 @@
 ---
 title: "骨と軟部組織のがんに対するカフェイン併用化学療法"
 date: "2014-11-09"
-categories: 
+tags: 
   - "discussion"
   - "life"
 ---

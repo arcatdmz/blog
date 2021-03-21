@@ -1,7 +1,7 @@
 ---
 title: "プログラミング支援からプログラミング教育へ"
 date: "2016-06-11"
-categories: 
+tags: 
   - "discussion"
   - "research"
   - "sigpx"
@@ -12,7 +12,7 @@ coverImage: "IMG_9046.jpg"
 
 これに呼応するように、プログラミング支援に関する研究を引っ張ってきたアメリカの大学教授たちが、研究トピックを教育方面にシフトしてきています。政策とアカデミアの研究開発とがタイムリーに連携していて大変興味深く、日本でも参考にできるところがあるように思います。
 
-\[caption id="attachment\_1272" align="aligncenter" width="1024"\][![日本科学未来館でのPicode Workshopの様子](images/IMG_9046-1024x683.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/06/IMG_9046.jpg) 日本科学未来館での[Picode Workshop](http://blog.miraikan.jst.go.jp/event/20130517post-347.html)の様子\[/caption\]
+\[caption id="attachment\_1272" align="aligncenter" width="1024"\][![日本科学未来館でのPicode Workshopの様子](/images/IMG_9046-1024x683.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/06/IMG_9046.jpg) 日本科学未来館での[Picode Workshop](http://blog.miraikan.jst.go.jp/event/20130517post-347.html)の様子\[/caption\]
 
 私自身は教育も[ちょっとだけ（日本科学未来館）](http://blog.miraikan.jst.go.jp/event/20130517post-347.html)、[手伝ったり（CANVAS）](http://canvas.ws/workshop/9548)してきましたが、基本的にはプログラミング環境の研究開発を主軸に据えています。[先日立ち上げた勉強会（SIGPX）](http://sigpx.org)も、教育に限らずプログラミング体験に関する研究開発の情報交換が主目的です。ただ、国際的な研究コミュニティがざわついて見えたので、知っている範囲で事例を共有しておこうと考え、本記事を書いています。ちなみに、きっかけになったのは[Viscuit開発者である原田さんのFacebookポスト](https://www.facebook.com/yasunori.harada.7/posts/10209444809020255)です。
 

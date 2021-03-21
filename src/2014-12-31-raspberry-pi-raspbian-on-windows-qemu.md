@@ -1,7 +1,7 @@
 ---
 title: "Windows+QEMUでRaspberry Piをエミュレートする"
 date: "2014-12-31"
-categories: 
+tags: 
   - "programming"
 coverImage: "raspbian-on-qemu-windows.png"
 ---
@@ -25,7 +25,7 @@ coverImage: "raspbian-on-qemu-windows.png"
 - 256MBしかメモリを割り当てられないQEMUの制限に対し、スワップ領域を用意することで対処し、わりと多めのメモリを必要とする処理が可能になる
 - ExpanDriveを使うことで、QEMU上のRaspbian OSとホストマシンであるWindows間で簡単にファイルのやり取りができるようになる
 
-\[caption id="attachment\_884" align="aligncenter" width="656"\][![raspbian-on-qemu-windows](images/raspbian-on-qemu-windows.png)](http://junkato.jp/ja/blog/wp-content/uploads/2014/12/raspbian-on-qemu-windows.png) WindowsでRaspbianが動いてる！\[/caption\]
+\[caption id="attachment\_884" align="aligncenter" width="656"\][![raspbian-on-qemu-windows](/images/raspbian-on-qemu-windows.png)](http://junkato.jp/ja/blog/wp-content/uploads/2014/12/raspbian-on-qemu-windows.png) WindowsでRaspbianが動いてる！\[/caption\]
 
 **2015年1月4日追記;** あけましておめでとうございます！
 

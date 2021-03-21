@@ -1,7 +1,7 @@
 ---
 title: "ACM CHI2015 参加のすすめ"
 date: "2015-03-01"
-categories: 
+tags: 
   - "research"
 coverImage: "chi2015-japan-postcard.jpg"
 ---
@@ -26,7 +26,7 @@ ACM CHIの主なコンテンツは、複数の登壇発表が並列で進行す�
 
 単に話を聴くだけでなく、実際に動いているシステムに触れるデモのセッション([Interactivity](http://chi2015.acm.org/program/interactivity/))もあります。また、僕は参加したことがありませんが、HCIのいろいろなテーマに関する講義([Courses](http://chi2015.acm.org/program/courses/))も開講されるようです。開催日が近づいてきて、ヒュンダイやサムスンなどインタラクションデザインに力を入れている企業のツアー([Industry tour](https://chi2015seoul.wordpress.com/2015/02/28/industry-tour-courses-and-link-to-register/))もアナウンスされました。
 
-\[caption id="attachment\_921" align="alignright" width="300"\][![](images/chi2015-japan-postcard-300x202.jpg)](http://hci.tokyo/) ACM CHI 2015 Symposium on Emerging Japanese HCI Research Collection\[/caption\]
+\[caption id="attachment\_921" align="alignright" width="300"\][![](/images/chi2015-japan-postcard-300x202.jpg)](http://hci.tokyo/) ACM CHI 2015 Symposium on Emerging Japanese HCI Research Collection\[/caption\]
 
 ## Asian CHI Symposia
 

@@ -1,7 +1,7 @@
 ---
 title: "機械学習開発支援のためのインタラクション研究 論文紹介"
 date: "2018-12-18"
-categories: 
+tags: 
   - "discussion"
   - "research"
   - "sigpx"
@@ -10,7 +10,7 @@ coverImage: "mlse1-kato-slides.png"
 
 この記事は[「機械学習工学 / MLSE Advent Calendar 2018」](https://qiita.com/advent-calendar/2018/mlse)12日目の記事です。先日開催された、機械学習工学関連の論文を紹介し合う[「XX for ML 論文読み会」](https://mlxse.connpass.com/event/102563/)初回で発表した資料の内容を抜粋で紹介します。論文読み会に参加できなかった方も、当ブログ記事をPDFのお供にどうぞ。
 
-[![](images/mlse1-kato-slides-1024x576.png)](https://junkato.jp/publications/mlse1-kato-hci-slides.pdf)
+[![](/images/mlse1-kato-slides-1024x576.png)](https://junkato.jp/publications/mlse1-kato-hci-slides.pdf)
 
 **[発表資料PDF](https://junkato.jp/publications/mlse1-kato-hci-slides.pdf)**
 
@@ -26,19 +26,19 @@ Qian Yang, Jina Suh, Nan-Chen Chen, and Gonzalo Ramos. 2018. Grounding Interacti
 
 論文読み会では最後に紹介したのですが、一番盛り上がっていたのでこの記事では最初に持ってきました。ACM DISという、インタラクティブなシステムのデザイン手法を取り扱う（要はHuman-Computer Interaction全般に関する）学会で発表されたもので、インタラクティブな機械学習のためのツール設計において気にすべきポイントをまとめた調査研究です。
 
-![](images/mlse-sigpx-dis2018-table1-1024x395.png)
+![](/images/mlse-sigpx-dis2018-table1-1024x395.png)
 
 対面での調査対象は上記のとおり素人14名（Non-Experts; データサイエンスや統計などの学位を持たず必要に応じて機械学習を利用した問題解決を行っている人）と、雇われてその人たちを助けているプロ10名（Supporting Experts）です。さらに、オンラインで素人98名のデータを集めています。ここで気をつけたいのは、**素人といってもプログラミングができないわけではない**というところです。ふつうにコードは書けるけど、機械学習の専門的教育は受けていない人たちですね。
 
 論文では、例えば次のように、素人とプロの考え方の違いをいろいろと比較検討しています。
 
-![](images/mlse-sigpx-dis2018-fig2.png)
+![](/images/mlse-sigpx-dis2018-fig2.png)
 
 面白かったのは「素人向けツールはGUIのものを用意すればいいとナイーブに思っているのは大間違いだ」というメッセージが明確に書かれていたところでした。**素人はコピペが大好き**なので、意外とテキストベースのコーディングをするそうです。確かに、今はJupyter Notebookなんかもあるし、Visual Programmingと違ってテキストコードのコピペは必ずできますよね。
 
 いろいろ書いてあるのでぜひ[発表資料](https://junkato.jp/publications/mlse1-kato-hci-slides.pdf)を見ていただき、できれば論文原著を読んでいただきたいのですが、最後の結論としては、Test-Driven Machine Teachingというフローを支援するツールを作りましょう、ということでした。
 
-![](images/mlse-sigpx-dis2018-fig4.png)
+![](/images/mlse-sigpx-dis2018-fig4.png)
 
 個々のツール（例えばデバッガやコードエディタ）開発に専念するのでなく、ワークフローをよく観察してその全体を支援できるツールの組み合わせを整備することが重要なのだ、というのは近年のプログラミング支援研究のトレンドと言えると思います。
 
@@ -56,7 +56,7 @@ https://www.youtube.com/watch?v=TKO9tLxytGA
 
 基本的なアイデアは、機械学習アルゴリズムの開発では実装と分析を行ったり来たりするので、その各ステップに適したユーザインタフェースのセットを定義し、それが全部入った統合開発環境があればいいでしょう、というものです。
 
-![](images/mlse-sigpx-gestalt-fig-1024x268.png)
+![](/images/mlse-sigpx-gestalt-fig-1024x268.png)
 
 筆頭著者のKayur Patelはこの論文を含む一連の研究でUniversity of Washingtonの博士号を取得し、GoogleでColaboratoryプロジェクトを率いました。Colaboratoryは、Google Drive上にJupyter Notebookを保存でき、かつGoogleの計算資源や指定したJupyter Kernelを使って実行もできるというもので、遊んでみた方も多いのではないでしょうか。
 

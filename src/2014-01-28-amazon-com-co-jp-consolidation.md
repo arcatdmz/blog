@@ -1,7 +1,7 @@
 ---
 title: "Amazon.comのKindleライブラリをAmazon.co.jpに統合した"
 date: "2014-01-28"
-categories: 
+tags: 
   - "life"
 ---
 

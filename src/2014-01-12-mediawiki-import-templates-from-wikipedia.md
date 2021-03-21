@@ -1,13 +1,13 @@
 ---
 title: "Wikipediaのテンプレートを自前のMediaWikiに追加した"
 date: "2014-01-12"
-categories: 
+tags: 
   - "programming"
   - "server"
 coverImage: "infobox.png"
 ---
 
-[前日](http://junkato.jp/ja/blog/2014/01/12/mediawiki/ "MediaWikiの多言語対応を調べた | junkato.jp")に引き続き[MediaWiki](http://www.mediawiki.org/wiki/MediaWiki "MediaWiki")に関する記事です。 [![(Wikipedia Infobox)](images/infobox-300x180.png)](http://junkato.jp/ja/blog/wp-content/uploads/2014/01/infobox.png)
+[前日](http://junkato.jp/ja/blog/2014/01/12/mediawiki/ "MediaWikiの多言語対応を調べた | junkato.jp")に引き続き[MediaWiki](http://www.mediawiki.org/wiki/MediaWiki "MediaWiki")に関する記事です。 [![(Wikipedia Infobox)](/images/infobox-300x180.png)](http://junkato.jp/ja/blog/wp-content/uploads/2014/01/infobox.png)
 
 素のMediaWikiは、記事を全てWiki記法でべた書きしなくてはなりません。Wikipediaの記事では、右の図の情報ボックス([Infobox](http://ja.wikipedia.org/wiki/Template:Infobox "Template:Infobox - Wikipedia"))のように、記事の種類ごとに[テンプレート](http://ja.wikipedia.org/wiki/Help:%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88 "Help:テンプレート - Wikipedia")があって、同じようなレイアウトのWikiデータを何度もコピー＆ペーストしないで済むようになっています。
 

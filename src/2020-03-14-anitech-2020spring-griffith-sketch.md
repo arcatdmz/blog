@@ -1,7 +1,7 @@
 ---
 title: "技術書典 応援祭で「アニメ技術 2020春」頒布中 / Griffith Sketchリリース"
 date: "2020-03-14"
-categories: 
+tags: 
   - "anime"
   - "research"
 coverImage: "techbook8_shoei_02.png"
@@ -13,7 +13,7 @@ coverImage: "techbook8_shoei_02.png"
 
 この記事ではその内容と、同時リリースしたアイデアスケッチのための無償アプリ（Webサービス）「[Griffith Sketch](https://research.archinc.jp/griffith/sketch/)」について紹介します。
 
-[![](images/techbook8_shoei_02-1024x1024.png)](https://techbookfest.org/product/5748798303240192)
+[![](/images/techbook8_shoei_02-1024x1024.png)](https://techbookfest.org/product/5748798303240192)
 
 アニメ技術 2020春 脚本特集
 
@@ -35,7 +35,7 @@ coverImage: "techbook8_shoei_02.png"
 
 力作の記事揃いですので、ぜひ[技術書典 応援祭のWebサイト](https://techbookfest.org/product/5748798303240192)から入手してください。
 
-[![](images/techbook8_shoei_04-1024x1024.png)](https://techbookfest.org/product/5748798303240192)
+[![](/images/techbook8_shoei_04-1024x1024.png)](https://techbookfest.org/product/5748798303240192)
 
 アイデアスケッチのためのWebアプリ「Griffith Sketch」のご紹介
 
@@ -49,7 +49,7 @@ https://twitter.com/arcatdmz/status/1233697311345135617
 
 どんな狙いがあってこのアプリをリリースしたかについては[アニメ技術 2020春](https://techbookfest.org/product/5748798303240192)の記事をご覧ください。また、機能の概要については[Arch Researchの紹介ページ](https://research.archinc.jp/griffith/sketch/)をご覧ください。
 
-![](images/griffith-sketch-fig1-1024x576.png)
+![](/images/griffith-sketch-fig1-1024x576.png)
 
 Griffith Sketch v1.0.0 スクリーンショット
 

@@ -1,7 +1,7 @@
 ---
 title: "Alan Kayの研究所が転籍する節目に立ち会う (SAP CDG→YCR HARC)"
 date: "2016-05-17"
-categories: 
+tags: 
   - "discussion"
   - "research"
   - "sigpx"
@@ -13,7 +13,7 @@ coverImage: "DSC00614.jpg"
 
 ご招待くださった[大島さん](http://d.hatena.ne.jp/squeaker/)には大変感謝しています。Alan氏は不在でしたが、みんな忙しいなか、主要メンバーほぼ全員とみっちり議論する時間をいただくことができました。
 
-\[caption id="attachment\_1230" align="aligncenter" width="1024"\][![Communication Design Group, Los Angelesオフィスのエントランス](images/20160429_154234115_iOS-1024x577.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/05/20160429_154234115_iOS.jpg) Communication Design Group, Los Angelesオフィスのエントランス\[/caption\]
+\[caption id="attachment\_1230" align="aligncenter" width="1024"\][![Communication Design Group, Los Angelesオフィスのエントランス](/images/20160429_154234115_iOS-1024x577.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/05/20160429_154234115_iOS.jpg) Communication Design Group, Los Angelesオフィスのエントランス\[/caption\]
 
 ## Y Combinator Research HARC
 
@@ -35,4 +35,4 @@ HARCは、PARCが一文字変わっただけのように見えますが、実際
 
 **追伸;** 僕も混ぜてくださいね！ ;)
 
-\[caption id="attachment\_1231" align="aligncenter" width="1024"\][![Communication Design Group, Los Angelesオフィス (HARC移籍に伴いobsoleteに…)](images/DSC00614-1024x576.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/05/DSC00614.jpg) Communication Design Group, Los Angelesオフィス (HARC移籍に伴いobsoleteに…)\[/caption\]
+\[caption id="attachment\_1231" align="aligncenter" width="1024"\][![Communication Design Group, Los Angelesオフィス (HARC移籍に伴いobsoleteに…)](/images/DSC00614-1024x576.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2016/05/DSC00614.jpg) Communication Design Group, Los Angelesオフィス (HARC移籍に伴いobsoleteに…)\[/caption\]

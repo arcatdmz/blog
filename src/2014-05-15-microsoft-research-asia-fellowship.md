@@ -1,12 +1,12 @@
 ---
 title: "Microsoft Research Asia Fellowship応募のすすめ"
 date: "2014-05-15"
-categories: 
+tags: 
   - "research"
   - "university"
 ---
 
-\[caption id="attachment\_648" align="alignright" width="300"\][![MSRA Fellowship 2012 award ceremony](images/msra-fellowship-2012-300x136.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/msra-fellowship-2012.jpg) MSRA Fellowship 2012 授賞式\[/caption\]
+\[caption id="attachment\_648" align="alignright" width="300"\][![MSRA Fellowship 2012 award ceremony](/images/msra-fellowship-2012-300x136.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/msra-fellowship-2012.jpg) MSRA Fellowship 2012 授賞式\[/caption\]
 
 アメリカの情報系企業で研究インターンをして印象的だったことの一つに、**企業による博士課程の学生向けFellowshipの充実**が挙げられます。これは、優秀な学生に研究費を給付し、業績やポテンシャルの高さを評価する仕組みです。Fellowshipを受賞した学生は、自由に使える研究費を獲得できるだけでなく、Fellowship自体が受賞歴として認められるため業績リストに書くことができます。
 
@@ -16,7 +16,7 @@ categories:
 
 ちなみに現在、[公式ブログ記事](http://msraurjp.wordpress.com/2014/05/02/microsoft-research-asia-fellowship%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e3%81%ae%e3%81%94%e6%a1%88%e5%86%85/ "Microsoft Research Asia Fellowshipプログラムのご案内")によれば今年度のFellowshipへの応募を受け付けているようです。[公式サイト](http://research.microsoft.com/en-us/collaboration/global/asia-pacific/talent/fellowship.aspx "Fellowships at Microsoft Research Asia - Microsoft Research")には[過去の受賞者一覧](http://research.microsoft.com/en-us/collaboration/global/asia-pacific/talent/fellows.aspx)が掲載されています。このあとを読むまでもなく応募したいという人は、まずリンク先に目を通してみましょう。
 
-\[caption id="attachment\_656" align="alignright" width="300"\][![Microsoft Research Asia, Beijing](images/DSC00143-300x199.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC00143.jpg) MSRA所内の様子\[/caption\]
+\[caption id="attachment\_656" align="alignright" width="300"\][![Microsoft Research Asia, Beijing](/images/DSC00143-300x199.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC00143.jpg) MSRA所内の様子\[/caption\]
 
 ## MSRA Fellowshipに採択されると嬉しい理由
 
@@ -46,7 +46,7 @@ categories:
 
 また、選考プロセスのなかに北京のMicrosoft Research Asiaを訪問してプレゼンするフェーズがあります。遠隔参加でプレゼンしている人もいたので必ずしも訪問することを強いられるわけではないですが、僕としては一度くらい訪問することを強く薦めます。オブラートに包まずに言うなら、大気汚染でインターンを思いとどまっている人も、一日滞在するくらいならいいのではないでしょうか:-) **日本人研究者も増えてきていますし、非常に恵まれた研究環境**なので、実際に見てみたら考えが変わるかもしれません。
 
-\[caption id="attachment\_661" align="alignright" width="300"\][![Tools for Programming in the Real World](images/Tools-for-Programming-in-the-Real-World-300x225.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/Tools-for-Programming-in-the-Real-World.pptx) Tools for Programming in the Real World (第一ステップで用いたPowerPointファイル)\[/caption\]
+\[caption id="attachment\_661" align="alignright" width="300"\][![Tools for Programming in the Real World](/images/Tools-for-Programming-in-the-Real-World-300x225.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/Tools-for-Programming-in-the-Real-World.pptx) Tools for Programming in the Real World (第一ステップで用いたPowerPointファイル)\[/caption\]
 
 ## MSRA Fellowshipの選考プロセス
 
@@ -80,4 +80,4 @@ categories:
 
 長々書いてきましたが、**応募にかかる労力は最初のナレーション入りPowerPointスライド作りがピーク**で、あとは大したことありません。これで$10,000とその他いろいろな特典が手に入ると考えれば**コストパフォーマンスは決して悪くない**と思うので、みなさんもぜひ挑戦してみてください！
 
-\[caption id="attachment\_666" align="aligncenter" width="300"\][![天津の有名なレストラン、狗不里でのFellowship受賞者ディナー](images/DSC06767-300x199.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC06767.jpg) 天津の有名なレストラン、狗不里でのFellowship受賞者ディナー\[/caption\]
+\[caption id="attachment\_666" align="aligncenter" width="300"\][![天津の有名なレストラン、狗不里でのFellowship受賞者ディナー](/images/DSC06767-300x199.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC06767.jpg) 天津の有名なレストラン、狗不里でのFellowship受賞者ディナー\[/caption\]

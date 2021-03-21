@@ -1,7 +1,7 @@
 ---
 title: "科学研究の再現性について"
 date: "2017-07-05"
-categories: 
+tags: 
   - "discussion"
 ---
 

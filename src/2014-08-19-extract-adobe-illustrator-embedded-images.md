@@ -1,12 +1,12 @@
 ---
 title: "Adobe Illustratorのaiファイルに埋め込まれた画像を抽出する"
 date: "2014-08-19"
-categories: 
+tags: 
   - "design"
 coverImage: "adobe-illustrator-link-panel.png"
 ---
 
-\[caption id="attachment\_780" align="aligncenter" width="900"\][![](images/adobe-illustrator-embedded.png)](http://junkato.jp/ja/blog/wp-content/uploads/2014/08/adobe-illustrator-embedded.png) Adobe Illustratorに埋め込まれた画像\[/caption\]
+\[caption id="attachment\_780" align="aligncenter" width="900"\][![](/images/adobe-illustrator-embedded.png)](http://junkato.jp/ja/blog/wp-content/uploads/2014/08/adobe-illustrator-embedded.png) Adobe Illustratorに埋め込まれた画像\[/caption\]
 
 aiファイルに貼り付けた画像がいつの間にか移動していて、aiファイルがちゃんと開けなくなっている…そんな悲劇を避けるために、画像を「埋め込む」ことがあります。さらに、一度埋め込んだファイルをPowerPointスライドで使いまわしたい等の理由でなるべく綺麗に取り出したいことがあります。
 
@@ -14,7 +14,7 @@ Illustratorのヘルプにはそのものずばり「[Illustrator ヘルプ / �
 
 試しに[Google検索](https://www.google.co.jp/webhp#q=extract+embed+images+illustrator)してみると、大量に困っている人がいるようです。そこで、aiファイルに埋め込まれた画像を簡単に取り出す方法を調べました。
 
-\[caption id="attachment\_781" align="alignright" width="300"\][![](images/adobe-illustrator-link-panel-300x193.png)](http://junkato.jp/ja/blog/wp-content/uploads/2014/08/adobe-illustrator-link-panel.png) Adobe Illustratorの「リンク」パネル（右側に印がついている項目は埋め込まれている。ついていない項目は外部ファイルへのリンク。）\[/caption\]
+\[caption id="attachment\_781" align="alignright" width="300"\][![](/images/adobe-illustrator-link-panel-300x193.png)](http://junkato.jp/ja/blog/wp-content/uploads/2014/08/adobe-illustrator-link-panel.png) Adobe Illustratorの「リンク」パネル（右側に印がついている項目は埋め込まれている。ついていない項目は外部ファイルへのリンク。）\[/caption\]
 
 ## プラグインを使う
 
@@ -26,7 +26,7 @@ Illustratorのヘルプにはそのものずばり「[Illustrator ヘルプ / �
 
 日本語で探してもあまり情報がなかったので英語に範囲を広げたところ、[Extract/Export embedded images out of Illustrator](http://www.andrewbrettwatson.com/index.php/86-design/166-extract-export-embedded-images-out-of-illustrator)というブログ記事がとても簡単な方法を紹介していました。（リンク先の1: the SVG method）ほとんどの場合はこの方法で問題ないと思います。
 
-\[caption id="attachment\_782" align="alignright" width="300"\][![](images/adobe-illustrator-svg-options-300x242.png)](http://junkato.jp/ja/blog/wp-content/uploads/2014/08/adobe-illustrator-svg-options.png) SVGファイルの保存オプション\[/caption\]
+\[caption id="attachment\_782" align="alignright" width="300"\][![](/images/adobe-illustrator-svg-options-300x242.png)](http://junkato.jp/ja/blog/wp-content/uploads/2014/08/adobe-illustrator-svg-options.png) SVGファイルの保存オプション\[/caption\]
 
 日本語版だと次のような流れです。
 
@@ -39,4 +39,4 @@ Illustratorのヘルプにはそのものずばり「[Illustrator ヘルプ / �
 
 ファイル名は埋め込んだときのものから勝手に変えられてしまっていますが、ともかくこれですべての画像を収集できるので便利です。
 
-\[caption id="attachment\_785" align="aligncenter" width="640"\][![](images/adobe-illustrator-exported-images.png)](http://junkato.jp/ja/blog/wp-content/uploads/2014/08/adobe-illustrator-exported-images.png) Adobe Illustratorから書き出されたSVG+画像ファイル\[/caption\]
+\[caption id="attachment\_785" align="aligncenter" width="640"\][![](/images/adobe-illustrator-exported-images.png)](http://junkato.jp/ja/blog/wp-content/uploads/2014/08/adobe-illustrator-exported-images.png) Adobe Illustratorから書き出されたSVG+画像ファイル\[/caption\]

@@ -1,7 +1,7 @@
 ---
 title: "Bootstrap 3ベースのWordPressテーマをLESSで編集する"
 date: "2014-02-25"
-categories: 
+tags: 
   - "design"
   - "programming"
   - "server"

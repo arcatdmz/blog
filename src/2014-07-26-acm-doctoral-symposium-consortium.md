@@ -1,13 +1,13 @@
 ---
 title: "ACM Doctoral Symposium (Consortium) 参加のすすめ"
 date: "2014-07-26"
-categories: 
+tags: 
   - "research"
   - "student"
   - "university"
 ---
 
-\[caption id="attachment\_753" align="alignright" width="300"\][![UIST 2013 Doctoral Symposium - 小部屋に一日缶詰](images/DSC09058-300x168.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC09058.jpg) UIST 2013 Doctoral Symposium - 小部屋に一日缶詰\[/caption\]
+\[caption id="attachment\_753" align="alignright" width="300"\][![UIST 2013 Doctoral Symposium - 小部屋に一日缶詰](/images/DSC09058-300x168.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC09058.jpg) UIST 2013 Doctoral Symposium - 小部屋に一日缶詰\[/caption\]
 
 博士号の価値がいろいろ取り沙汰されているので、どう博士号を取ったか個人的な記録を書こうと思った…のですが、[ACM UIST 2013](http://www.acm.org/uist/uist2013/ "UIST 2013 - 26th Symposium on User Interface Software and Technology (October 8-11, 2013 St Andrews, UK)")のDoctoral Symposiumに参加した話が先ですね。
 
@@ -57,4 +57,4 @@ Doctoral Symposiumが終わると、翌日から会議本体が始まります�
 
 [Student Research Competition](http://junkato.jp/ja/blog/2014/05/04/acm-student-research-competition/ "ACM Student Research Competition参加のすすめ")もそうですが、学会が学生向けに用意してくれている様々な機会は、研究室から少し離れて**研究者として独り立ちするための練習**になることが多いです。ちょっとでも興味を惹かれたら、遠慮なく突っ込んでみるのがおすすめです！
 
-\[caption id="attachment\_762" align="aligncenter" width="640"\][![大学生の溜まり場になっているカフェで博論の疲れを癒しました。](images/DSC09168.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC09168.jpg) Doctoral Symposiumのあとは、偶然見つけた[大学生の溜まり場になっているカフェ](https://plus.google.com/104025028898671281343/about "Cafe Taste")で博論疲れを癒したのでした。\[/caption\]
+\[caption id="attachment\_762" align="aligncenter" width="640"\][![大学生の溜まり場になっているカフェで博論の疲れを癒しました。](/images/DSC09168.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC09168.jpg) Doctoral Symposiumのあとは、偶然見つけた[大学生の溜まり場になっているカフェ](https://plus.google.com/104025028898671281343/about "Cafe Taste")で博論疲れを癒したのでした。\[/caption\]

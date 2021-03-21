@@ -1,7 +1,7 @@
 ---
 title: "“開発環境の研究”とは？ / HCI編"
 date: "2012-11-20"
-categories: 
+tags: 
   - "research"
   - "sigpx"
 coverImage: "uist2012-kato-dejavu.png"
@@ -11,7 +11,7 @@ ITが生活のいろんな部分に入り込んでくるにつれ、プログラ
 
 ただ、僕はこの研究分野はすごく重要だし、今後どんどん成長すると思っています。現に、ここ一年でWebベースの開発環境[Cloud9](https://c9.io/)や教育目的の[KhanAcademy](http://www.khanacademy.org/cs)に組み込まれたインタプリタ、ライブコーディングが可能な開発環境[LightTable](http://www.chris-granger.com/2012/04/12/light-table---a-new-ide-concept/)など、プログラミング体験を全く別のものにする試みがたくさん走り始めています。これらはプロダクトの例ですが、研究としては2つの分野の学際領域にあるので、まずは隣接分野との比較を通して輪郭をなぞってみます。さらに、これからの開発環境のあるべき姿（研究が進む方向）について考えてみます。
 
-![](images/hci-pl-devenv-300x206.png "Human-Computer Interaction / 開発環境の研究 / Programming Language")
+![](/images/hci-pl-devenv-300x206.png "Human-Computer Interaction / 開発環境の研究 / Programming Language")
 
 ちょっと長くなりそうなので、このページでは最初の3分の1だけ書くことにしますね。プロダクトでも研究でも、もし紹介から漏れている興味深いプロジェクトがあったらぜひ教えてください。
 
@@ -36,7 +36,7 @@ ITが生活のいろんな部分に入り込んでくるにつれ、プログラ
 
 ツールキットと開発環境比較の具体例として、インタラクティブな画像処理のプログラムをプロトタイピングするためのツール[Eyepatch](http://hci.stanford.edu/research/eyepatch/ "Eyepatch: Prototyping Camera-based Interaction through Examples")\[[Monzy](http://www.monzy.org/) et al., 2007\]と、同様のプログラミング全般を支援する開発環境[DejaVu](http://junkato.jp/ja/dejavu/ "DejaVu: Integrated Support for Developing Interactive Camera-Based Programs")\[Kato et al., 2012\]を簡単に紹介します。
 
-[![](images/uist2007-monzy-eyepatch-300x225.png "Eyepatch")](http://junkato.jp/ja/blog/wp-content/uploads/2012/11/uist2007-monzy-eyepatch.png) [![](images/uist2012-kato-dejavu-300x224.png "DejaVu")](http://junkato.jp/ja/blog/wp-content/uploads/2012/11/uist2012-kato-dejavu.png)
+[![](/images/uist2007-monzy-eyepatch-300x225.png "Eyepatch")](http://junkato.jp/ja/blog/wp-content/uploads/2012/11/uist2007-monzy-eyepatch.png) [![](/images/uist2012-kato-dejavu-300x224.png "DejaVu")](http://junkato.jp/ja/blog/wp-content/uploads/2012/11/uist2012-kato-dejavu.png)
 
 左がEyepatchです。GUIの画面上で画像処理のサンプルをたくさん記録して、機械学習などのアルゴリズムを使って物体認識などをさせることができます。認識結果はネットワーク経由で送出されるので、他のプログラムから自由に利用できます。要は、画像認識を使ったインタラクティブなアプリケーションを作りたいときに、その部分のコードを書く手間を省いてくれるのです。ただし、アプリケーションを書くには別に立ち上げた開発環境とEyepatchの間を往復しなくてはなりません。
 

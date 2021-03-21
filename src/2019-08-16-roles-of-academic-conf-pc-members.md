@@ -1,7 +1,7 @@
 ---
 title: "国際会議プログラム委員のお仕事"
 date: "2019-08-16"
-categories: 
+tags: 
   - "research"
 coverImage: "IMG_20190620_084432_1.jpg"
 ---
@@ -16,7 +16,7 @@ coverImage: "IMG_20190620_084432_1.jpg"
 
 ちなみに、プログラム委員会以外の会議全体の運営の流れについては[お茶の水女子大学伊藤先生の国際会議運営記](https://www.slideshare.net/iTooooooooooooT/ss-95092188/)が大変参考になります。
 
-![](images/IMG_20190620_084432_1-1024x576.jpg)
+![](/images/IMG_20190620_084432_1-1024x576.jpg)
 
 ACM UIST 2019 Program Committee meeting
 

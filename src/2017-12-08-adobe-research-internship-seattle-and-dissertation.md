@@ -1,7 +1,7 @@
 ---
 title: "Adobe Research Internship─または博論執筆の記録"
 date: "2017-12-08"
-categories: 
+tags: 
   - "life"
   - "research"
   - "student"
@@ -12,7 +12,7 @@ categories:
 
 というわけで、[研究留学Advent Calendar 2017](https://adventar.org/calendars/2562)にかこつけて、よかったこと…だけでなく、こういうのはやめたほうがいいよ！という失敗談を提供したいと思います。下の写真はAdobe Research Seattleの中庭です。橋のたもとで水と緑、日差しに恵まれたすばらしい景色ですね。うらやましいですか？…最後まで読んでみてから、ご判断ください。
 
-\[caption id="attachment\_1506" align="aligncenter" width="1024"\][![](images/DSC_0024-1024x576.jpg)](https://junkato.jp/ja/blog/wp-content/uploads/2017/12/DSC_0024.jpg) Adobe Research Seattle\[/caption\]
+\[caption id="attachment\_1506" align="aligncenter" width="1024"\][![](/images/DSC_0024-1024x576.jpg)](https://junkato.jp/ja/blog/wp-content/uploads/2017/12/DSC_0024.jpg) Adobe Research Seattle\[/caption\]
 
 ## 私「ファンです」
 
@@ -52,13 +52,13 @@ UISTは10月頭から一週間なので、そこから3か月だと、博士論�
 
 ## インターン期間の進捗
 
-\[caption id="attachment\_1502" align="aligncenter" width="1024"\][![](images/DSC08969-1024x681.jpg)](https://junkato.jp/ja/blog/wp-content/uploads/2017/12/DSC08969.jpg) シアトルの夏\[/caption\]
+\[caption id="attachment\_1502" align="aligncenter" width="1024"\][![](/images/DSC08969-1024x681.jpg)](https://junkato.jp/ja/blog/wp-content/uploads/2017/12/DSC08969.jpg) シアトルの夏\[/caption\]
 
 正直言ってあまり覚えてないのですが、8月、シアトルに行きたての頃はまだ多少余裕があったような気がします。気候もよく、さわやかな日々が続いていました。[気が向いたら撮っていた写真](https://photos.google.com/album/AF1QipMapd-iQVFW6-Af6_VWNQJ80H3_i3hJD3-dlbkF)も明るいです。
 
 9月になってくるとAdobeインターンのほうは方針が固まってきました。興味があり、なおかつ勉強したいと思っていた分野のテーマになり、とてもいい滑り出しでした。一方で、博論ページ数の伸び悩みに苦しむようになります。博論の章立てなど骨組みは決まっていたので、進捗を可視化するために以下のようなグラフを半自動で生成できるようにしていました。
 
-\[caption id="attachment\_1501" align="alignright" width="475"\][![](images/chart.png)](https://junkato.jp/ja/blog/wp-content/uploads/2017/12/chart.png) 博士論文ページ数の推移\[/caption\]
+\[caption id="attachment\_1501" align="alignright" width="475"\][![](/images/chart.png)](https://junkato.jp/ja/blog/wp-content/uploads/2017/12/chart.png) 博士論文ページ数の推移\[/caption\]
 
 10月、インターンでは、進捗はありつつも今一つブレークスルーがないといった感じでした。また、一週間弱エジンバラへ出張してUIST 2013 [Doctoral Symposium](https://junkato.jp/ja/blog/2014/07/27/acm-doctoral-symposium-consortium/)で博論の概要を話し、概ね方針としては大丈夫そうだというお墨付きを得ますが、やはり進捗が芳しくない…この頃からもう完全にインターンより博論のほうが重大事になってきました。
 
@@ -70,7 +70,7 @@ UISTは10月頭から一週間なので、そこから3か月だと、博士論�
 
 ちなみに、ビザの手配をどれくらいサポートしてくれるか、住む場所まで手配してくれるかどうか、などの対応は企業によってまちまちです。前年に行ったMicrosoft Research Redmondはどちらもとても手厚く、ほぼ何も考えなくてもアメリカでの生活を始めることができました。一方Adobeは、ビザの手配を外部の団体に委託しており、多少手間が多かったです。また、住む場所は自身で見繕う必要がありました。そのために、日本からの出国前、博論執筆のための貴重な時間を、事務的なことでけっこう削られてしまいました。
 
-\[caption id="attachment\_1505" align="aligncenter" width="1024"\][![](images/DSC09213-1024x681.jpg)](https://junkato.jp/ja/blog/wp-content/uploads/2017/12/DSC09213.jpg) シアトルの秋\[/caption\]
+\[caption id="attachment\_1505" align="aligncenter" width="1024"\][![](/images/DSC09213-1024x681.jpg)](https://junkato.jp/ja/blog/wp-content/uploads/2017/12/DSC09213.jpg) シアトルの秋\[/caption\]
 
 ## まとめ
 

@@ -1,13 +1,13 @@
 ---
 title: "Realmoteで家のリモコンを一つにまとめる"
 date: "2012-12-24"
-categories: 
+tags: 
   - "phybots"
   - "programming"
 coverImage: "realmote.jpg"
 ---
 
-[![](images/realmote-138x300.jpg "Realmote")](http://junkato.jp/ja/blog/wp-content/uploads/2012/12/realmote.jpg)最近、[Pluto ステーション](http://www.amazon.co.jp/gp/product/B00A2H5HZY/ref=as_li_ss_tl?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B00A2H5HZY)![](http://www.assoc-amazon.jp/e/ir?t=dmjp07-22&l=as2&o=9&a=B00A2H5HZY)とか[iRemocon(アイリモコン) IRM-01L](http://www.amazon.co.jp/gp/product/B0053BXBVG/ref=as_li_ss_tl?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B0053BXBVG)![](http://www.assoc-amazon.jp/e/ir?t=dmjp07-22&l=as2&o=9&a=B0053BXBVG)といった、スマートフォンが赤外線リモコンの代わりになる製品をよく見るようになりました。確かにスマートフォンしか持ってない人には便利かもしれません。が、プログラマなら常時起動してるPC・Macが家に一台くらいはありますよね。それをリモコンにしたらいいと思いませんか。
+[![](/images/realmote-138x300.jpg "Realmote")](http://junkato.jp/ja/blog/wp-content/uploads/2012/12/realmote.jpg)最近、[Pluto ステーション](http://www.amazon.co.jp/gp/product/B00A2H5HZY/ref=as_li_ss_tl?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B00A2H5HZY)![](http://www.assoc-amazon.jp/e/ir?t=dmjp07-22&l=as2&o=9&a=B00A2H5HZY)とか[iRemocon(アイリモコン) IRM-01L](http://www.amazon.co.jp/gp/product/B0053BXBVG/ref=as_li_ss_tl?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B0053BXBVG)![](http://www.assoc-amazon.jp/e/ir?t=dmjp07-22&l=as2&o=9&a=B0053BXBVG)といった、スマートフォンが赤外線リモコンの代わりになる製品をよく見るようになりました。確かにスマートフォンしか持ってない人には便利かもしれません。が、プログラマなら常時起動してるPC・Macが家に一台くらいはありますよね。それをリモコンにしたらいいと思いませんか。
 
 というわけで、我が家で一年以上稼働している、Webインタフェースから家電製品やルンバが遠隔操作できちゃうリモコンアプリRealmoteを紹介します。
 
@@ -15,7 +15,7 @@ coverImage: "realmote.jpg"
 
 Realmoteは、右のスクリーンキャプチャのように、かなりシンプルなWebインタフェースを持っています。PC・Macで起動する際のオプションを変えることで、赤外線リモコン機能、ルンバのリモコン機能をON/OFFできます。（もう一つなめこカメラ機能というのもありますが、これは俺得機能なので普通は使わないと思います。）
 
-### [![](images/41D58M0CK9L._SL110_.jpg "RemoteStation")](http://www.amazon.co.jp/gp/product/B000I0RDJI/ref=as_li_ss_il?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B000I0RDJI)ハードウェア![](http://www.assoc-amazon.jp/e/ir?t=dmjp07-22&l=as2&o=9&a=B000I0RDJI)
+### [![](/images/41D58M0CK9L._SL110_.jpg "RemoteStation")](http://www.amazon.co.jp/gp/product/B000I0RDJI/ref=as_li_ss_il?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B000I0RDJI)ハードウェア![](http://www.assoc-amazon.jp/e/ir?t=dmjp07-22&l=as2&o=9&a=B000I0RDJI)
 
 Realmoteを使うのに必要なハードウェアは、次のとおりです。
 

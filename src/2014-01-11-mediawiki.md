@@ -1,7 +1,7 @@
 ---
 title: "MediaWikiの多言語対応を調べた"
 date: "2014-01-11"
-categories: 
+tags: 
   - "programming"
   - "server"
 ---

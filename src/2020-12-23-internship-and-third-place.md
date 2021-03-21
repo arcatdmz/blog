@@ -1,7 +1,7 @@
 ---
 title: "インターンは居場所作り"
 date: "2020-12-23"
-categories: 
+tags: 
   - "discussion"
   - "life"
   - "research"
@@ -19,7 +19,7 @@ coverImage: "DSC01972-scaled.jpg"
 
 今年はMicrosoft Research Asia Fellowship 20周年にあたるそうで、[20周年記念の記事](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/articles/a-story-that-has-lasted-twenty-years-a-fellowship-that-has-changed-a-group-of-people-2/)に載せていただいています。幸せそうですね…。ここに写っている [Jessica](https://apps4cloud.bgu.ac.il/cauchard/) とは、今年のACM CHI 2021プログラム委員会 [Engineering Interactive Systems and Technologies (EIST)](https://chi2021.acm.org/for-authors/presenting/papers/selecting-a-subcommittee#Engineering-Interactive-Systems-and-Technologies) でご一緒しています。インターンのとき無邪気に遊んでいた同期と今こうして一緒に仕事できるのは、なかなか感慨深いものがあります。
 
-[![](images/DSC01972-1024x680.jpg)](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/articles/a-story-that-has-lasted-twenty-years-a-fellowship-that-has-changed-a-group-of-people-2/)
+[![](/images/DSC01972-1024x680.jpg)](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/articles/a-story-that-has-lasted-twenty-years-a-fellowship-that-has-changed-a-group-of-people-2/)
 
 Microsoft Research Asia インターン中に誕生日を迎えた
 
@@ -39,7 +39,7 @@ Microsoft Research Asia インターン中に誕生日を迎えた
 
 まず、[ACM CHI 2021 Student Research Competition](https://chi2021.acm.org/for-authors/students/student-research-competition)。来年1月投稿〆切です。Chairを務めさせていただいています。**HCI分野の学生のみなさま、ぜひ投稿をご検討ください。**
 
-[![](images/uxtalk-kato-chi2021src-1024x576.png)](https://chi2021.acm.org/for-authors/students/student-research-competition)
+[![](/images/uxtalk-kato-chi2021src-1024x576.png)](https://chi2021.acm.org/for-authors/students/student-research-competition)
 
 インドネシアの学生に頼まれてCompetitionを紹介したときのスライド（日本でも同様のトークの機会をいただける場合はご連絡ください）
 
@@ -57,7 +57,7 @@ https://www.youtube.com/watch?v=Yz4Ucrw95bQ
 
 そして、[Arch Research](https://research.archinc.jp/)。アニメ制作会社アーチの技術顧問として研究開発をリードしています。具体的には、絵コンテを描けるWebベースのツール「[Griffith](https://research.archinc.jp/griffith/)」を作ったり、絵コンテの制作プロセスなどアニメ作りの技術を紹介する小冊子「[アニメ技術](https://research.archinc.jp/anitech/)」を発刊したりしています。[Arch Researchのメンバー](https://research.archinc.jp/members/)は極めて少ないのですが、じつはその外縁にアニメの監督さんやアニメ作りに興味を持つ情報技術系の人たちなどを加えた「アーチ技術部」というコミュニティがあり、アニメ技術は[放課後R&D](https://research.archinc.jp/anitech/2019spring/research-club/)を楽しんでいる技術部メンバーの刊行物という位置付けになっています。
 
-[![](images/arch-research-twitter-hero-1024x341.jpg)](https://arch-research.booth.pm/)
+[![](/images/arch-research-twitter-hero-1024x341.jpg)](https://arch-research.booth.pm/)
 
 「[アニメ技術](https://research.archinc.jp/anitech/)」表紙は近未来のアニメ作りをイメージして設定を作り、[典樹](https://tenju.jp/)さんに描いてもらっている
 

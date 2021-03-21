@@ -1,13 +1,13 @@
 ---
 title: "ACM Student Research Competition参加のすすめ"
 date: "2014-05-04"
-categories: 
+tags: 
   - "research"
   - "student"
   - "university"
 ---
 
-\[caption id="attachment\_604" align="alignright" width="150"\][![CHI 2009 Closing Plenary - 参加者全員に向けてSRC勝者がアナウンスされた](images/DSC03539-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC03539.jpg) CHI 2009 Closing Plenary - 参加者全員に向けてSRC勝者がアナウンスされた\[/caption\]
+\[caption id="attachment\_604" align="alignright" width="150"\][![CHI 2009 Closing Plenary - 参加者全員に向けてSRC勝者がアナウンスされた](/images/DSC03539-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC03539.jpg) CHI 2009 Closing Plenary - 参加者全員に向けてSRC勝者がアナウンスされた\[/caption\]
 
 ACMの国際会議には、通常の登壇発表やポスター発表とは別に、[Student Research Competition (SRC)](http://src.acm.org/ "SRC Homepage")という**学生対象の研究コンペ**が用意されていることがあります。Microsoftがスポンサーとなって2003年から続いており、会議ごとに毎年、複数のシニアな研究者が審査員として任命されています。なお、会議によってはSRCがない場合もあります。自分の参加してみたい会議のWebページをチェックしてみましょう。
 
@@ -51,7 +51,7 @@ SRCは**学部生部門**と**大学院生部門**があり、それぞれ別枠
 
 以降、この順番に内容を説明していきます。
 
-\[caption id="attachment\_601" align="alignright" width="150"\][![CHI 2009 SRC第2ラウンドの様子](images/DSC03237-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC03237.jpg) CHI 2009 SRC第2ラウンドの様子\[/caption\]
+\[caption id="attachment\_601" align="alignright" width="150"\][![CHI 2009 SRC第2ラウンドの様子](/images/DSC03237-150x150.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC03237.jpg) CHI 2009 SRC第2ラウンドの様子\[/caption\]
 
 ### 第1ラウンド: Extended Abstractの提出
 

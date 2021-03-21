@@ -1,7 +1,7 @@
 ---
 title: "プログラミング環境としてのExcel"
 date: "2013-08-07"
-categories: 
+tags: 
   - "research"
   - "sigpx"
 ---

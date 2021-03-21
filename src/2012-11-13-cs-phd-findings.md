@@ -1,7 +1,7 @@
 ---
 title: "コンピュータ科学の博士課程にきて初めて分かったこと4つ"
 date: "2012-11-13"
-categories: 
+tags: 
   - "discussion"
   - "life"
   - "research"

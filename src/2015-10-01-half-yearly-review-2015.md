@@ -1,7 +1,7 @@
 ---
 title: "一年半を振り返る"
 date: "2015-10-01"
-categories: 
+tags: 
   - "life"
   - "lookback"
   - "travel"
@@ -19,7 +19,7 @@ coverImage: "DSC00049_developed.jpg"
 
 このうち、Sharedoは入所直後にがんばったものなので、一年間での進展はほぼありません。CrossSongは共著論文で、パズル自動生成の部分には全く関与しておらず（Jordan, Graham, 深山さん、後藤さんの貢献部分です）、HCI研究者らしくパズルのインタラクション設計やデモ動画制作などを担当しました。f3.jsはとても面白いトピックだと思っているのですが、準備に時間がかかったのと（理由は11月のUISTデモ発表の頃にはお分かりいただけると思います）、とにかくTextAliveに時間を割いたので、まだちゃんとしたかたちにはなっていません。
 
-\[caption id="attachment\_1075" align="alignnone" width="1024"\][![](images/DSC00049_developed-1024x681.jpg)](https://goo.gl/photos/Ho2gWe12RmdZPhdE7) 7月、イギリス各所を訪問\[/caption\]
+\[caption id="attachment\_1075" align="alignnone" width="1024"\][![](/images/DSC00049_developed-1024x681.jpg)](https://goo.gl/photos/Ho2gWe12RmdZPhdE7) 7月、イギリス各所を訪問\[/caption\]
 
 博士課程の頃は必死に目の前のテーマを消化して新しいアイデアを生み出していく日々でしたが、就職を機に、少し落ち着いて研究開発に取り組めるようになりました。TextAliveは、昨年6月に研究を始めてから数回実装を書き直しています。一番大きな変更が今年1月のJavaベースのアプリケーションからJavaScriptベースのWebアプリケーションへの転換で、これは一般公開を見据えた選択でした。
 
@@ -71,14 +71,14 @@ coverImage: "DSC00049_developed.jpg"
 - **f3.js**: UIST 2015投稿 (不採録)
 - UIST 2015査読
 
-\[caption id="attachment\_957" align="aligncenter" width="1024"\][![ACM CHI Symposium on Emerging Japanese HCI Research Collection参加者一同](images/DSC00573-1024x682.jpg)](http://hci.tokyo/) ACM CHI Symposium on Emerging Japanese HCI Research Collection\[/caption\]
+\[caption id="attachment\_957" align="aligncenter" width="1024"\][![ACM CHI Symposium on Emerging Japanese HCI Research Collection参加者一同](/images/DSC00573-1024x682.jpg)](http://hci.tokyo/) ACM CHI Symposium on Emerging Japanese HCI Research Collection\[/caption\]
 
 ## 5月
 
 - **TextAlive**: ICLC 2015採録、[カメラレディ原稿](http://dx.doi.org/10.5281/zenodo.19355)作成
 - 免許合宿
 
-\[caption id="attachment\_1000" align="aligncenter" width="1024"\][![日々](images/DSC00698-1024x682.jpg)](https://goo.gl/photos/RBzDVXF7g6YT2YNY8) 長野県で免許合宿に参加\[/caption\]
+\[caption id="attachment\_1000" align="aligncenter" width="1024"\][![日々](/images/DSC00698-1024x682.jpg)](https://goo.gl/photos/RBzDVXF7g6YT2YNY8) 長野県で免許合宿に参加\[/caption\]
 
 ## 6月
 
@@ -103,7 +103,7 @@ coverImage: "DSC00049_developed.jpg"
 - [第48回 情報科学若手の会](http://wakate.org/37) [若手特別講演](http://junkato.jp/ja/talks/people-are-programmers/?p=1) @ 熱海
 - WISS 2015査読
 
-\[caption id="attachment\_1082" align="aligncenter" width="1024"\][![](images/SDIM9353-1024x683.jpg)](http://junkato.jp/ja/talks/people-are-programmers/?p=1) 情報科学若手の会で楽しく招待講演\[/caption\]
+\[caption id="attachment\_1082" align="aligncenter" width="1024"\][![](/images/SDIM9353-1024x683.jpg)](http://junkato.jp/ja/talks/people-are-programmers/?p=1) 情報科学若手の会で楽しく招待講演\[/caption\]
 
 そういえば、学生の頃と違うもう一つの点は、ここに書けないこともいろいろある、というところですね。とりあえず最近は、学生実習生がいろいろ面白いものを作っているので、見ていてとても楽しいです。1年に2回実習生を受け入れる時期があるので、一緒に研究したい学生さんは適宜お知らせください。
 

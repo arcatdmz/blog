@@ -1,7 +1,7 @@
 ---
 title: "Hello world!"
 date: "2012-10-30"
-categories: 
+tags: 
   - "design"
   - "research"
   - "server"
@@ -19,7 +19,7 @@ categories:
 
 そこで、Programmer's experience (PX)をロゴの中心に据えて、下に補足する文を足しました。タイポグラフィだけのロゴにしたのは、自分が言葉（文字言語）が好きだから、あと非常にミーハーですがWindows 8 UIに影響されたからです:)
 
-![P(x)](images/px-junkato.jp.400.png "People are programmers. ロゴ画像")
+![P(x)](/images/px-junkato.jp.400.png "People are programmers. ロゴ画像")
 
 ## WordPressのインストール
 

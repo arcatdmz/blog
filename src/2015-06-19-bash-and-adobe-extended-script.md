@@ -1,7 +1,7 @@
 ---
 title: "久しぶりにシェルスクリプト・Adobe ExtendedScript"
 date: "2015-06-19"
-categories: 
+tags: 
   - "life"
   - "programming"
 coverImage: "DSC00698.jpg"
@@ -13,7 +13,7 @@ coverImage: "DSC00698.jpg"
 - Gitのログを整形して出力
 - フォルダ内のデジタル一眼RAWを全部現像
 
-[![日々](images/DSC00698-1024x682.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2015/06/DSC00698.jpg) 
+[![日々](/images/DSC00698-1024x682.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2015/06/DSC00698.jpg) 
 
 ## bashで行ごとに処理
 

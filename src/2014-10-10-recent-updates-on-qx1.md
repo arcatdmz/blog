@@ -1,7 +1,7 @@
 ---
 title: "近況（Sony ILCE-QX1予約の記録）"
 date: "2014-10-10"
-categories: 
+tags: 
   - "life"
 ---
 

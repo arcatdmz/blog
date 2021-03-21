@@ -1,13 +1,13 @@
 ---
 title: "Mac OS Xでスクリプトを定期実行する"
 date: "2012-12-17"
-categories: 
+tags: 
   - "programming"
   - "server"
 coverImage: "fungus-camera.jpg"
 ---
 
-![](images/fungus-camera.jpg "なめこカメラ")
+![](/images/fungus-camera.jpg "なめこカメラ")
 
 最近、照明をON/OFFする機能を備えたArduinoベースのネットワークカメラを開発したのですが、そこから定期的に画像を取ってきて保存したくなりました。自宅サーバとしてMac mini Mid 2010 (Mac OS X Snow Leopard)を使っているので、Mac miniで定期的にwgetを走らせることができればよいはずです。言ってしまえば簡単なことですが、意外と設定に手間取ったので手順を書いておきます。
 

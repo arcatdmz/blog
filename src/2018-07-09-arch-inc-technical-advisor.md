@@ -1,7 +1,7 @@
 ---
 title: "ARCH Inc.技術顧問になりました"
 date: "2018-07-09"
-categories: 
+tags: 
   - "anime"
   - "life"
   - "research"
@@ -12,7 +12,7 @@ coverImage: "archinc.jpg"
 
 研究者がアカデミアだけでなく産業界でも必要としてもらえる実例として、研究者、企業人双方の参考になるといいなと思って、技術顧問の狙いや役割、経緯などを書いてみることにしました。あとは、自分の考えの整理も兼ねています。研究者仲間には驚かれるかもしれないので（転職と勘違いされたり…）その予防措置的な意味合いもあります:)
 
-[![](images/archinc-1024x512.jpg)](http://archinc.jp/member/)
+[![](/images/archinc-1024x512.jpg)](http://archinc.jp/member/)
 
 ## アニメとプログラミングの未来
 

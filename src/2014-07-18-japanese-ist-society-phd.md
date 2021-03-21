@@ -1,7 +1,7 @@
 ---
 title: "情報理工学系の産業界とアカデミアは今後どうしたらいいの？"
 date: "2014-07-18"
-categories: 
+tags: 
   - "discussion"
   - "research"
   - "student"
@@ -14,7 +14,7 @@ categories:
 
 **7月24日追記;** これを読んでいる修士～博士課程の学生の方には「[コンピュータ科学の博士課程にきて初めて分かったこと4つ](http://junkato.jp/ja/blog/2012/11/13/cs-phd-findings/)」もおすすめです。
 
-\[caption id="attachment\_702" align="aligncenter" width="1024"\][![Microsoft Research Redmond (Building 99)](images/DSC04693-1024x680.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC04693.jpg) Microsoft Research Redmond (Building 99)\[/caption\]
+\[caption id="attachment\_702" align="aligncenter" width="1024"\][![Microsoft Research Redmond (Building 99)](/images/DSC04693-1024x680.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC04693.jpg) Microsoft Research Redmond (Building 99)\[/caption\]
 
 # 記事を読んだ感想
 

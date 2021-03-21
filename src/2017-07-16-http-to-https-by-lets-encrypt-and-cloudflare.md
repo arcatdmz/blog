@@ -1,7 +1,7 @@
 ---
 title: "CloudflareとLet's EncryptでWebサイトをHTTPS化した"
 date: "2017-07-16"
-categories: 
+tags: 
   - "server"
 ---
 
@@ -19,13 +19,13 @@ Cloudflareを使った具体的なSSL化の方法については[すでに日本
 
 そして、以下のように、CloudflareがリバースプロキシとなってブラウザとGitHub Pagesサーバ間の接続を仲介することで、もともとのGitHub Pagesと同じコンテンツへのアクセスが可能となっています。
 
-\[caption id="attachment\_1402" align="aligncenter" width="307"\][![](images/cfssl_full.png)](https://junkato.jp/ja/blog/wp-content/uploads/2017/07/cfssl_full.png) [What do the SSL options mean? - Cloudflare Support](https://support.cloudflare.com/hc/en-us/articles/200170416)\[/caption\]
+\[caption id="attachment\_1402" align="aligncenter" width="307"\][![](/images/cfssl_full.png)](https://junkato.jp/ja/blog/wp-content/uploads/2017/07/cfssl_full.png) [What do the SSL options mean? - Cloudflare Support](https://support.cloudflare.com/hc/en-us/articles/200170416)\[/caption\]
 
 設定の途中で、独自ドメイン契約先でネームサーバの設定を変更する作業が必要です。[お名前.com](https://www.onamae.com/)の場合は、「ドメイン設定」「ネームサーバーの設定」「ネームサーバーの変更」からネームサーバーをCloudFlareに指定されたものに変更します。
 
 最終的にCloudflare上のDNSに関する設定は次のようになります。
 
-[![](images/cloudflare-configurations.png)](https://junkato.jp/ja/blog/wp-content/uploads/2017/07/cloudflare-configurations.png)
+[![](/images/cloudflare-configurations.png)](https://junkato.jp/ja/blog/wp-content/uploads/2017/07/cloudflare-configurations.png)
 
 あとはサイト上で参照しているすべてのリソースがHTTPSで統一されていることを確認します。（そうしないとブラウザのアドレスバーに[「安全でない通信路」の情報](http://www.atmarkit.co.jp/ait/articles/1609/23/news023.html)が出続けます。）
 

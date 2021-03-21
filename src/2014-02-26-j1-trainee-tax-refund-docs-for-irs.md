@@ -1,7 +1,7 @@
 ---
 title: "J-1ビザで渡米した研究インターンの所得税還付手続き"
 date: "2014-02-26"
-categories: 
+tags: 
   - "life"
   - "research"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "OpenCVをJavaから使う"
 date: "2012-11-04"
-categories: 
+tags: 
   - "programming"
 ---
 
