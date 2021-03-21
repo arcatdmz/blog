@@ -1,4 +1,7 @@
 .next/
 node_modules/
 out/
+public/fonts/
+public/semantic/
+public/stylesheets/
 public/**/index.xml

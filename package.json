@@ -7,7 +7,8 @@
     "start": "next-remote-watch ./data",
     "dev": "next dev",
     "build": "next build",
-    "export": "next export"
+    "export": "next export",
+    "download": "cd public && fetch-github-release arcatdmz arcatdmz.github.io"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "semantic-ui-react": "^2.0.3"
   },
   "devDependencies": {
+    "@terascope/fetch-github-release": "^0.7.6",
     "@types/node": "^14.14.35",
     "@types/react": "^17.0.3",
     "next-remote-watch": "^0.3.0",
