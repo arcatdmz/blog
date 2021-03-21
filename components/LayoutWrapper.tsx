@@ -1,4 +1,5 @@
-import { MouseEventHandler, useCallback, useState } from "react";
+import Router from "next/router";
+import { MouseEventHandler, useCallback, useEffect, useState } from "react";
 import { Menu, Sidebar } from "semantic-ui-react";
 
 import { Footer } from "./Footer";
@@ -21,6 +22,26 @@ const LayoutWrapper = ({ children }) => {
     },
     [visible]
   );
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+    const onComplete = () => {
+      // Re-validate web fonts
+      if (
+        typeof window["TypeSquareJS"] &&
+        ["localhost", "127.0.0.1"].indexOf(location.hostname.toLowerCase()) < 0
+      ) {
+        const TypeSquareJS = window["TypeSquareJS"];
+        TypeSquareJS.loadFont && TypeSquareJS.loadFont();
+      }
+    };
+    Router.events.on("routeChangeComplete", onComplete);
+    return () => {
+      Router.events.off("routeChangeComplete", onComplete);
+    };
+  }, []);
 
   return (
     <>
