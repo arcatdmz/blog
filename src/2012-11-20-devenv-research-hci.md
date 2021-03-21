@@ -36,7 +36,7 @@ IT が生活のいろんな部分に入り込んでくるにつれ、プログ�
 
 ツールキットと開発環境比較の具体例として、インタラクティブな画像処理のプログラムをプロトタイピングするためのツール[Eyepatch](http://hci.stanford.edu/research/eyepatch/ "Eyepatch: Prototyping Camera-based Interaction through Examples") [[Monzy](http://www.monzy.org/) et al., 2007]と、同様のプログラミング全般を支援する開発環境[DejaVu](http://junkato.jp/ja/dejavu/ "DejaVu: Integrated Support for Developing Interactive Camera-Based Programs") [Kato et al., 2012]を簡単に紹介します。
 
-[![](/images/uist2007-monzy-eyepatch-300x225.png "Eyepatch")](http://junkato.jp/ja/blog/wp-content/uploads/2012/11/uist2007-monzy-eyepatch.png) [![](/images/uist2012-kato-dejavu-300x224.png "DejaVu")](http://junkato.jp/ja/blog/wp-content/uploads/2012/11/uist2012-kato-dejavu.png)
+[![](/images/uist2007-monzy-eyepatch-300x225.png "Eyepatch")](https://junkato.jp/ja/blog/wp-content/uploads/2012/11/uist2007-monzy-eyepatch.png) [![](/images/uist2012-kato-dejavu-300x224.png "DejaVu")](https://junkato.jp/ja/blog/wp-content/uploads/2012/11/uist2012-kato-dejavu.png)
 
 左が Eyepatch です。GUI の画面上で画像処理のサンプルをたくさん記録して、機械学習などのアルゴリズムを使って物体認識などをさせることができます。認識結果はネットワーク経由で送出されるので、他のプログラムから自由に利用できます。要は、画像認識を使ったインタラクティブなアプリケーションを作りたいときに、その部分のコードを書く手間を省いてくれるのです。ただし、アプリケーションを書くには別に立ち上げた開発環境と Eyepatch の間を往復しなくてはなりません。
 

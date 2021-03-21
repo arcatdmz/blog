@@ -1,7 +1,7 @@
 ---
 title: "久しぶりにシェルスクリプト・Adobe ExtendedScript"
 date: "2015-06-19"
-tags: 
+tags:
   - "life"
   - "programming"
 coverImage: "DSC00698.jpg"
@@ -9,27 +9,27 @@ coverImage: "DSC00698.jpg"
 
 最近書いたものをメモがてら。
 
-- bashで行ごとに処理
-- Gitのログを整形して出力
-- フォルダ内のデジタル一眼RAWを全部現像
+- bash で行ごとに処理
+- Git のログを整形して出力
+- フォルダ内のデジタル一眼 RAW を全部現像
 
-[![日々](/images/DSC00698-1024x682.jpg)](http://junkato.jp/ja/blog/wp-content/uploads/2015/06/DSC00698.jpg) 
+[![日々](/images/DSC00698-1024x682.jpg)](https://junkato.jp/ja/blog/wp-content/uploads/2015/06/DSC00698.jpg)
 
-## bashで行ごとに処理
+## bash で行ごとに処理
 
 さくらインターネットのレンタルサーバで、メーリングリストにメンバーをたくさん追加したかった。
 
 \[code language="bash"\]#!/usr/local/bin/bash while read p; do echo $p ~/fml/makefml add2actives chi2015j-ml $p done <users.txt\[/code\]
 
-## Gitのログを整形して出力
+## Git のログを整形して出力
 
-開発の進捗をMarkdownの書式でまとめるために、指定した日付以降のGitのコミットログを適当なフォーマットで並べたかった。
+開発の進捗を Markdown の書式でまとめるために、指定した日付以降の Git のコミットログを適当なフォーマットで並べたかった。
 
 \[code language="bash"\]git log --pretty=format:" \* %ad: %s (%h)" --after "2015-04-01" > gitlog.txt\[/code\]
 
-## フォルダ内のデジタル一眼RAWを全部現像
+## フォルダ内のデジタル一眼 RAW を全部現像
 
-2015-05-で始まる名前のフォルダに入っていて、Photoshopで現像したことのある（現像設定が \*.xmp として保存されている）RAWファイル全てを今一度、指定した解像度でJPEGとして出力したかった。（[出力結果](http://goo.gl/photos/RBzDVXF7g6YT2YNY8)）
+2015-05-で始まる名前のフォルダに入っていて、Photoshop で現像したことのある（現像設定が \*.xmp として保存されている）RAW ファイル全てを今一度、指定した解像度で JPEG として出力したかった。（[出力結果](http://goo.gl/photos/RBzDVXF7g6YT2YNY8)）
 
 \[code language="javascript"\] app.preferences.rulerUnits = Units.PIXELS; app.preferences.typeUnits = TypeUnits.PIXELS; app.displayDialogs = DialogModes.NO;
 

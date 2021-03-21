@@ -13,7 +13,7 @@ coverImage: "javacv-raspberry-pi.png"
 これまでは Windows, Mac OS X, Android, x86 と x64 の Linux でしか動いていなかった OpenCV の Java ラッパーが、ARM Linux でちゃんと動いたということです。
 
 <figure className="center">
-  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2015/01/javacv-raspberry-pi.png"><img src="/images/javacv-raspberry-pi.png" alt="javacv-raspberry-pi" /></a>
+  <a href="https://junkato.jp/ja/blog/wp-content/uploads/2015/01/javacv-raspberry-pi.png"><img src="/images/javacv-raspberry-pi.png" alt="javacv-raspberry-pi" /></a>
   <figcaption>RaspbianでJavaCVのサンプルが動いた！</figcaption>
 </figure>
 

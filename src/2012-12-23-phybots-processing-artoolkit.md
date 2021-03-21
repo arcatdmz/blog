@@ -7,7 +7,7 @@ tags:
   - "research"
 ---
 
-[![](/images/phybots-overview-300x211.jpg "Phybotsのハードウェアセットアップ")](http://junkato.jp/ja/blog/wp-content/uploads/2012/12/phybots-overview.jpg)Java/Processing で小型ロボットを簡単に動かせるツールキット Phybots は、オープンソースで公開されてしばらく経ちますが、正直なところ忙しくてあまり管理に手が回っておらず、すぐ使える配布ファイルもありませんでした。
+[![](/images/phybots-overview-300x211.jpg "Phybotsのハードウェアセットアップ")](https://junkato.jp/ja/blog/wp-content/uploads/2012/12/phybots-overview.jpg)Java/Processing で小型ロボットを簡単に動かせるツールキット Phybots は、オープンソースで公開されてしばらく経ちますが、正直なところ忙しくてあまり管理に手が回っておらず、すぐ使える配布ファイルもありませんでした。
 
 [#五十嵐 ERATO](http://togetter.com/li/425443)のポスターセッションでさまざまな方に興味を示していただけたので、ようやく意を決して[Processing ですぐ使えるライブラリ](https://github.com/arcatdmz/phybots/blob/master/dist/PhybotsP5.zip "Phybots 1.0.0 for Processing")の配布を始めました。
 
@@ -19,7 +19,7 @@ Phybots は、右上の写真のようなセットアップで使われること
 
 この記事では、Processing+Phybots の組み合わせで、カメラ画像からマーカーを検出して、その位置にテキストを表示するコードを紹介します。
 
-[![](/images/phybots-marker-detection-300x214.jpg "マーカー検出時の様子")](http://junkato.jp/ja/blog/wp-content/uploads/2012/12/phybots-marker-detection.jpg)
+[![](/images/phybots-marker-detection-300x214.jpg "マーカー検出時の様子")](https://junkato.jp/ja/blog/wp-content/uploads/2012/12/phybots-marker-detection.jpg)
 
 ## Phybots のインストール
 
@@ -104,7 +104,7 @@ void draw()
 
 「Run」ボタンをクリックすればスケッチがコンパイルされ、プログラムが起動するはずです。32bit 版、64bit 版、それぞれの Windows と Mac で動作確認が取れています。Windows で UnsatisfiedLinkError が出た場合は、DirectShow Java Wrapper の DLL の bit を確かめてください。その他、起動しない場合は[@arcatdmz](http://twitter.com/arcatdmz)に聞いてください。
 
-[![](/images/phybots-marker-detection-300x214.jpg "マーカー検出時の様子")](http://junkato.jp/ja/blog/wp-content/uploads/2012/12/phybots-marker-detection.jpg)
+[![](/images/phybots-marker-detection-300x214.jpg "マーカー検出時の様子")](https://junkato.jp/ja/blog/wp-content/uploads/2012/12/phybots-marker-detection.jpg)
 
 プログラムが起動したら、この画面のように、ふつうの Processing のウィンドウのほかにもう一つウィンドウが開くはずです。これがランタイムデバッグツールで、Phybots の API の利用状況が分かるようになっています。「サービス」タブで Phybots > Marker Detector を選ぶと、マーカー検出のためのパラメタを調整できます。照明条件によってうまくマーカーが検出されない場合は、ここで二値化の閾値を調整してみてください。
 

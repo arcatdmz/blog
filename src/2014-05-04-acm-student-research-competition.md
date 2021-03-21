@@ -8,7 +8,7 @@ tags:
 ---
 
 <figure className="right">
-  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC03539.jpg"><img src="/images/DSC03539-150x150.jpg" alt="CHI 2009 Closing Plenary - 参加者全員に向けてSRC勝者がアナウンスされた" /></a>
+  <a href="https://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC03539.jpg"><img src="/images/DSC03539-150x150.jpg" alt="CHI 2009 Closing Plenary - 参加者全員に向けてSRC勝者がアナウンスされた" /></a>
   <figcaption>CHI 2009 Closing Plenary - 参加者全員に向けてSRC勝者がアナウンスされた</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ SRC は**学部生部門**と**大学院生部門**があり、それぞれ別�
 以降、この順番に内容を説明していきます。
 
 <figure className="right">
-  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC03237.jpg"><img src="/images/DSC03237-150x150.jpg" alt="CHI 2009 SRC第2ラウンドの様子" /></a>
+  <a href="https://junkato.jp/ja/blog/wp-content/uploads/2014/05/DSC03237.jpg"><img src="/images/DSC03237-150x150.jpg" alt="CHI 2009 SRC第2ラウンドの様子" /></a>
   <figcaption>CHI 2009 SRC第2ラウンドの様子</figcaption>
 </figure>
 

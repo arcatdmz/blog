@@ -30,7 +30,7 @@ coverImage: "amazon-result.png"
 4. 結果が出るまでしばし待ちましょう。すごくぷるぷるにゃん…
 
 <figure className="center">
-  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2014/11/amazon-result.png"><img src="/images/amazon-result.png" alt="うわぁ" /></a>
+  <a href="https://junkato.jp/ja/blog/wp-content/uploads/2014/11/amazon-result.png"><img src="/images/amazon-result.png" alt="うわぁ" /></a>
   <figcaption>うわぁ</figcaption>
 </figure>
 
