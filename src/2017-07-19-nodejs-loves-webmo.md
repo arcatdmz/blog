@@ -10,7 +10,7 @@ coverImage: "webmo.jpg"
 
 エラーを直して本家に pull request を送ろうと思っていたのですが、そう簡単ではなかったので、Node.js 用に移植した新しい npm パッケージ [webmo-client-nodejs](https://www.npmjs.com/package/webmo-client-nodejs) を作って公開しました。
 
-<figure className="center"><a href="https://junkato.jp/ja/blog/wp-content/uploads/2017/07/webmo-client-error.png"><img src="/images/webmo-client-error.png" alt="" /></a><figcaption>依存ライブラリがブラウザ前提に設計されているため、<a href="https://github.com/arcatdmz/webmo-example-nodejs/blob/master/index.orig.js">サンプルコード</a>を実行すると  
+<figure className="center"><a href="/images/webmo-client-error.png"><img src="/images/webmo-client-error.png" alt="" /></a><figcaption>依存ライブラリがブラウザ前提に設計されているため、<a href="https://github.com/arcatdmz/webmo-example-nodejs/blob/master/index.orig.js">サンプルコード</a>を実行すると  
 ReferenceError: self is not defined というようなエラーが出ます。</figcaption></figure>
 
 ## 変更点

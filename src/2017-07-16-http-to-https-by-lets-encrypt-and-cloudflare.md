@@ -20,7 +20,7 @@ Cloudflare を使った具体的な SSL 化の方法については[すでに日
 そして、以下のように、Cloudflare がリバースプロキシとなってブラウザと GitHub Pages サーバ間の接続を仲介することで、もともとの GitHub Pages と同じコンテンツへのアクセスが可能となっています。
 
 <figure className="center">
-  <a href="https://junkato.jp/ja/blog/wp-content/uploads/2017/07/cfssl_full.png"><img src="/images/cfssl_full.png" alt="" /></a>
+  <a href="/images/cfssl_full.png"><img src="/images/cfssl_full.png" alt="" /></a>
   <figcaption>[What do the SSL options mean? - Cloudflare Support](https://support.cloudflare.com/hc/en-us/articles/200170416)</figcaption>
 </figure>
 
@@ -28,7 +28,7 @@ Cloudflare を使った具体的な SSL 化の方法については[すでに日
 
 最終的に Cloudflare 上の DNS に関する設定は次のようになります。
 
-[![](/images/cloudflare-configurations.png)](https://junkato.jp/ja/blog/wp-content/uploads/2017/07/cloudflare-configurations.png)
+[![](/images/cloudflare-configurations.png)](/images/cloudflare-configurations.png)
 
 あとはサイト上で参照しているすべてのリソースが HTTPS で統一されていることを確認します。（そうしないとブラウザのアドレスバーに[「安全でない通信路」の情報](http://www.atmarkit.co.jp/ait/articles/1609/23/news023.html)が出続けます。）
 

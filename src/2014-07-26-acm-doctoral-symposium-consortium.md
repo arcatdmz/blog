@@ -8,7 +8,7 @@ tags:
 ---
 
 <figure className="right">
-  <a href="https://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC09058.jpg"><img src="/images/DSC09058-300x168.jpg" alt="UIST 2013 Doctoral Symposium - 小部屋に一日缶詰" /></a>
+  <a href="/images/DSC09058.jpg"><img src="/images/DSC09058-300x168.jpg" alt="UIST 2013 Doctoral Symposium - 小部屋に一日缶詰" /></a>
   <figcaption>UIST 2013 Doctoral Symposium - 小部屋に一日缶詰</figcaption>
 </figure>
 
@@ -61,6 +61,6 @@ Doctoral Symposium が終わると、翌日から会議本体が始まります�
 [Student Research Competition](http://junkato.jp/ja/blog/2014/05/04/acm-student-research-competition/ "ACM Student Research Competition参加のすすめ")もそうですが、学会が学生向けに用意してくれている様々な機会は、研究室から少し離れて**研究者として独り立ちするための練習**になることが多いです。ちょっとでも興味を惹かれたら、遠慮なく突っ込んでみるのがおすすめです！
 
 <figure className="center">
-  <a href="https://junkato.jp/ja/blog/wp-content/uploads/2014/07/DSC09168.jpg"><img src="/images/DSC09168.jpg" alt="大学生の溜まり場になっているカフェで博論の疲れを癒しました。" /></a>
+  <a href="/images/DSC09168.jpg"><img src="/images/DSC09168.jpg" alt="大学生の溜まり場になっているカフェで博論の疲れを癒しました。" /></a>
   <figcaption>Doctoral Symposiumのあとは、偶然見つけた<a href="https://plus.google.com/104025028898671281343/about" title="Cafe Taste">大学生の溜まり場になっているカフェ</a>で博論疲れを癒したのでした。</figcaption>
 </figure>

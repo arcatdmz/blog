@@ -8,21 +8,21 @@ coverImage: "DSC_0789.jpg"
 
 誘惑に負けて Xperia Z1 から乗り換えました。一週間ほど使ってみて、Windows 10 Mobile (NuAns NEO)のいいところ、悪いところなど見えてきたのでまとめておきます。
 
-[![NuAns NEOパッケージ](/images/DSC_0785-1024x576.jpg)](https://junkato.jp/ja/blog/wp-content/uploads/2016/02/DSC_0785.jpg)
+[![NuAns NEOパッケージ](/images/DSC_0785-1024x576.jpg)](/images/DSC_0785.jpg)
 
 ## 見た目と初回起動
 
 まず NuAns NEO の見た目。すごく気に入ってます。各社金属質のスマートフォンをこぞって出してくるなかで、カバーの質感がとても暖かくていいです。冬は実際に手に持っても冷たくなくていい。重量バランスにこだわったというだけあって、手に持ったときの感触、感覚はとてもいいです。
 
-[![DSC_0789](/images/DSC_0789-1024x576.jpg)](https://junkato.jp/ja/blog/wp-content/uploads/2016/02/DSC_0789.jpg)
+[![DSC_0789](/images/DSC_0789-1024x576.jpg)](/images/DSC_0789.jpg)
 
 裏側に Suica 入れるところがあるのは別に要らんだろうと思ってましたが、実際に入れて使ってみると定期入れ出さなくて済むのが便利でした。付属の USB ケーブルがロゴ付きで丈夫そうなのもポイント高かった。
 
-[![DSC_0788](/images/DSC_0788-1024x576.jpg)](https://junkato.jp/ja/blog/wp-content/uploads/2016/02/DSC_0788.jpg)
+[![DSC_0788](/images/DSC_0788-1024x576.jpg)](/images/DSC_0788.jpg)
 
 で、Windows 10 Mobile ですが
 
-[![「デバイスの準備をしています…」](/images/DSC_0790-1024x576.jpg)](https://junkato.jp/ja/blog/wp-content/uploads/2016/02/DSC_0790.jpg)
+[![「デバイスの準備をしています…」](/images/DSC_0790-1024x576.jpg)](/images/DSC_0790.jpg)
 
 SIM カードと microSD を挿入してから起動したらこのまま 30 分くらい固まってどうしようかと思いました。[1 時間以上かかることもある](http://neo.nuans.jp/support/faq/115/)らしいですが、僕は我慢できず電源ボタン長押しして強制終了したあと SIM カードを抜いて起動し直してみました。そうしたらすぐ起動したので、終了して、SIM カードを挿し直したらふつうに起動しました。何に時間がかかってたんでしょうね。
 

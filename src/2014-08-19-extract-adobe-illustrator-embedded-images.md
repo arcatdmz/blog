@@ -7,7 +7,7 @@ coverImage: "adobe-illustrator-link-panel.png"
 ---
 
 <figure className="center">
-  <a href="https://junkato.jp/ja/blog/wp-content/uploads/2014/08/adobe-illustrator-embedded.png"><img src="/images/adobe-illustrator-embedded.png" alt="" /></a>
+  <a href="/images/adobe-illustrator-embedded.png"><img src="/images/adobe-illustrator-embedded.png" alt="" /></a>
   <figcaption>Adobe Illustratorに埋め込まれた画像</figcaption>
 </figure>
 
@@ -18,7 +18,7 @@ Illustrator のヘルプにはそのものずばり「[Illustrator ヘルプ / �
 試しに[Google 検索](https://www.google.co.jp/webhp#q=extract+embed+images+illustrator)してみると、大量に困っている人がいるようです。そこで、ai ファイルに埋め込まれた画像を簡単に取り出す方法を調べました。
 
 <figure className="right">
-  <a href="https://junkato.jp/ja/blog/wp-content/uploads/2014/08/adobe-illustrator-link-panel.png"><img src="/images/adobe-illustrator-link-panel-300x193.png" alt="" /></a>
+  <a href="/images/adobe-illustrator-link-panel.png"><img src="/images/adobe-illustrator-link-panel-300x193.png" alt="" /></a>
   <figcaption>Adobe Illustratorの「リンク」パネル（右側に印がついている項目は埋め込まれている。ついていない項目は外部ファイルへのリンク。）</figcaption>
 </figure>
 
@@ -33,7 +33,7 @@ Illustrator のヘルプにはそのものずばり「[Illustrator ヘルプ / �
 日本語で探してもあまり情報がなかったので英語に範囲を広げたところ、[Extract/Export embedded images out of Illustrator](http://www.andrewbrettwatson.com/index.php/86-design/166-extract-export-embedded-images-out-of-illustrator)というブログ記事がとても簡単な方法を紹介していました。（リンク先の 1: the SVG method）ほとんどの場合はこの方法で問題ないと思います。
 
 <figure className="right">
-  <a href="https://junkato.jp/ja/blog/wp-content/uploads/2014/08/adobe-illustrator-svg-options.png"><img src="/images/adobe-illustrator-svg-options-300x242.png" alt="" /></a>
+  <a href="/images/adobe-illustrator-svg-options.png"><img src="/images/adobe-illustrator-svg-options-300x242.png" alt="" /></a>
   <figcaption>SVGファイルの保存オプション</figcaption>
 </figure>
 
@@ -49,6 +49,6 @@ Illustrator のヘルプにはそのものずばり「[Illustrator ヘルプ / �
 ファイル名は埋め込んだときのものから勝手に変えられてしまっていますが、ともかくこれですべての画像を収集できるので便利です。
 
 <figure className="center">
-  <a href="https://junkato.jp/ja/blog/wp-content/uploads/2014/08/adobe-illustrator-exported-images.png"><img src="/images/adobe-illustrator-exported-images.png" alt="" /></a>
+  <a href="/images/adobe-illustrator-exported-images.png"><img src="/images/adobe-illustrator-exported-images.png" alt="" /></a>
   <figcaption>Adobe Illustratorから書き出されたSVG+画像ファイル</figcaption>
 </figure>

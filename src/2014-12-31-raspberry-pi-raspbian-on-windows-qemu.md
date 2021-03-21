@@ -26,7 +26,7 @@ coverImage: "raspbian-on-qemu-windows.png"
 - ExpanDrive を使うことで、QEMU 上の Raspbian OS とホストマシンである Windows 間で簡単にファイルのやり取りができるようになる
 
 <figure className="center">
-  <a href="https://junkato.jp/ja/blog/wp-content/uploads/2014/12/raspbian-on-qemu-windows.png"><img src="/images/raspbian-on-qemu-windows.png" alt="raspbian-on-qemu-windows" /></a>
+  <a href="/images/raspbian-on-qemu-windows.png"><img src="/images/raspbian-on-qemu-windows.png" alt="raspbian-on-qemu-windows" /></a>
   <figcaption>WindowsでRaspbianが動いてる！</figcaption>
 </figure>
 

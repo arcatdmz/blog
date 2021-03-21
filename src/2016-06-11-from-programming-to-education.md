@@ -13,7 +13,7 @@ coverImage: "IMG_9046.jpg"
 これに呼応するように、プログラミング支援に関する研究を引っ張ってきたアメリカの大学教授たちが、研究トピックを教育方面にシフトしてきています。政策とアカデミアの研究開発とがタイムリーに連携していて大変興味深く、日本でも参考にできるところがあるように思います。
 
 <figure className="center">
-  <a href="https://junkato.jp/ja/blog/wp-content/uploads/2016/06/IMG_9046.jpg) 日本科学未来館での[Picode Workshop](http://blog.miraikan.jst.go.jp/event/20130517post-347.html"><img src="/images/IMG_9046-1024x683.jpg" alt="日本科学未来館でのPicode Workshopの様子" /></a>
+  <a href="/images/IMG_9046.jpg) 日本科学未来館での[Picode Workshop](http://blog.miraikan.jst.go.jp/event/20130517post-347.html"><img src="/images/IMG_9046-1024x683.jpg" alt="日本科学未来館でのPicode Workshopの様子" /></a>
   <figcaption>の様子</figcaption>
 </figure>
 

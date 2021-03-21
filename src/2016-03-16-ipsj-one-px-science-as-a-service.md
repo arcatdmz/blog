@@ -14,7 +14,7 @@ coverImage: "IMGP7944trim.jpg"
 
 この記事では、発表をざっと振り返ってから、さらに進んで**[情報処理の産業とアカデミアが今後科学全般に対して果たす役割](http://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service/#iscs)（本題）**について考えてみます。これは常々感じてきたことですが、人文科学（後藤さん）、物理（楽さん）、生物情報科学（清水さん）のようにさまざまな分野と関わって研究を進めている登壇者と議論したり、[企業に所属しながら研究している松本さんのブログ記事](http://hb.matsumoto-r.jp/entry/2016/03/15/163320)を読むなかで確信を深めました。
 
-[![IPSJ-ONE「コンピュータを変幻自在の道具にするためのプログラミング環境技術」](/images/IMGP7944trim-1024x576.jpg)](https://junkato.jp/ja/blog/wp-content/uploads/2016/03/IMGP7944trim.jpg)
+[![IPSJ-ONE「コンピュータを変幻自在の道具にするためのプログラミング環境技術」](/images/IMGP7944trim-1024x576.jpg)](/images/IMGP7944trim.jpg)
 
 ---
 

@@ -13,7 +13,7 @@ coverImage: "DSC00698.jpg"
 - Git のログを整形して出力
 - フォルダ内のデジタル一眼 RAW を全部現像
 
-[![日々](/images/DSC00698-1024x682.jpg)](https://junkato.jp/ja/blog/wp-content/uploads/2015/06/DSC00698.jpg)
+[![日々](/images/DSC00698-1024x682.jpg)](/images/DSC00698.jpg)
 
 ## bash で行ごとに処理
 
