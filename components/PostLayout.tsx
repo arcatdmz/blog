@@ -43,7 +43,7 @@ const PostLayout: FC<PostLayoutProps> = ({
       );
     });
     elems.pop();
-    return <List.Item>{elems}</List.Item>;
+    return <List.Item>filed under {elems}</List.Item>;
   }, [tags]);
 
   return (
