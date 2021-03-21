@@ -1,53 +1,61 @@
 import { NextSeo, ArticleJsonLd } from "next-seo";
-import siteMetadata from "../website.json";
+import { FC } from "react";
+
+import websiteJson from "../website.json";
+import { PostIface } from "../lib/PostIface";
 
 export const SEO = {
-  title: siteMetadata.title,
-  description: siteMetadata.description,
+  title: websiteJson.title,
+  description: websiteJson.description,
   openGraph: {
     type: "website",
-    locale: siteMetadata.language,
-    url: siteMetadata.siteUrl,
-    title: siteMetadata.title,
-    description: siteMetadata.description,
+    locale: websiteJson.language,
+    url: websiteJson.siteUrl,
+    title: websiteJson.title,
+    description: websiteJson.description,
     images: [
       {
-        url: `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`,
-        alt: siteMetadata.title,
+        url: `${websiteJson.siteUrl}${websiteJson.socialBanner}`,
+        alt: websiteJson.title,
         width: 1200,
-        height: 600,
-      },
-    ],
+        height: 600
+      }
+    ]
   },
-//   twitter: {
-//     handle: siteMetadata.twitter,
-//     site: siteMetadata.twitter,
-//     cardType: "summary_large_image",
-//   },
+  //   twitter: {
+  //     handle: websiteJson.twitter,
+  //     site: websiteJson.twitter,
+  //     cardType: "summary_large_image",
+  //   },
   additionalMetaTags: [
     {
       name: "author",
-      content: siteMetadata.author,
-    },
-  ],
+      content: websiteJson.author
+    }
+  ]
 };
 
 export const PageSeo = ({ title, description, url }) => {
   return (
     <NextSeo
-      title={`${title} – ${siteMetadata.title}`}
+      title={title}
       description={description}
       canonical={url}
       openGraph={{
         url,
         title,
-        description,
+        description
       }}
     />
   );
 };
 
-export const BlogSeo = ({
+interface BlogSeoProps extends PostIface {
+  url?: string;
+  images?: string | string[];
+}
+
+export const BlogSeo: FC<BlogSeoProps> = ({
   title,
   summary,
   date,
@@ -55,27 +63,34 @@ export const BlogSeo = ({
   url,
   tags,
   images = [],
+  coverImage
 }) => {
   const publishedAt = new Date(date).toISOString();
   const modifiedAt = new Date(lastmod || date).toISOString();
   let imagesArr =
     images.length === 0
-      ? [siteMetadata.socialBanner]
+      ? [websiteJson.socialBanner]
       : typeof images === "string"
       ? [images]
       : images;
 
-  const featuredImages = imagesArr.map((img) => {
+  const featuredImages = imagesArr.map(img => {
     return {
-      url: `${siteMetadata.siteUrl}${img}`,
-      alt: title,
+      url: `${websiteJson.siteUrl}${img}`,
+      alt: title
     };
   });
+  if (coverImage) {
+    featuredImages.unshift({
+      url: `${websiteJson.siteUrl}/images/${coverImage}`,
+      alt: title
+    });
+  }
 
   return (
     <>
       <NextSeo
-        title={`${title} – ${siteMetadata.title}`}
+        title={`${title} – ${websiteJson.title}`}
         description={summary}
         canonical={url}
         openGraph={{
@@ -83,28 +98,30 @@ export const BlogSeo = ({
           article: {
             publishedTime: publishedAt,
             modifiedTime: modifiedAt,
-            authors: [`${siteMetadata.siteUrl}/about`],
-            tags,
+            authors: [`${websiteJson.siteUrl}/about`],
+            tags
           },
           url,
           title,
           description: summary,
-          images: featuredImages,
+          images: featuredImages
         }}
         additionalMetaTags={[
           {
             name: "twitter:image",
-            content: featuredImages[0].url,
-          },
+            content: featuredImages[0].url
+          }
         ]}
       />
       <ArticleJsonLd
-        authorName={siteMetadata.author}
+        authorName={websiteJson.author}
         dateModified={publishedAt}
         datePublished={modifiedAt}
         description={summary}
-        images={featuredImages && featuredImages.map(image => image.url) || null}
-        publisherName={siteMetadata.author}
+        images={
+          (featuredImages && featuredImages.map(image => image.url)) || null
+        }
+        publisherName={websiteJson.author}
         publisherLogo={null}
         title={title}
         url={url}

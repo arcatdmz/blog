@@ -2,9 +2,9 @@ import { MDXProvider } from "@mdx-js/react";
 import { DefaultSeo } from "next-seo";
 import Head from "next/head";
 
+import { LayoutWrapper } from "../components/LayoutWrapper";
+import { MDXComponents } from "../components/MDXComponents";
 import { SEO } from "../components/SEO";
-import LayoutWrapper from "../components/LayoutWrapper";
-import MDXComponents from "../components/MDXComponents";
 
 export default function App({ Component, pageProps }) {
   return (

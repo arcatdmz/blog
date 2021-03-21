@@ -1,13 +1,27 @@
-import { ChangeEvent, useCallback, useMemo, useState } from "react";
-import { Container, Form, Header, List, Segment } from "semantic-ui-react";
-import ListItem from "./ListItem";
+import { ChangeEvent, FC, useCallback, useMemo, useState } from "react";
+import { Container, Form, Header, Segment } from "semantic-ui-react";
 
-export default function ListLayout({ posts, title }) {
+import { PostIface } from "../lib/PostIface";
+
+import { ListItem } from "./ListItem";
+
+interface ListLayoutProps {
+  posts: PostIface[];
+  title: string;
+  searchEnabled?: boolean;
+}
+
+const ListLayout: FC<ListLayoutProps> = ({
+  posts,
+  title,
+  searchEnabled = true,
+  children
+}) => {
   const [searchValue, setSearchValue] = useState("");
 
-  const filteredBlogPosts = useMemo(() => {
+  const filteredPosts = useMemo<PostIface[]>(() => {
     const value = searchValue.toLowerCase();
-    return posts.filter((frontMatter) =>
+    return posts.filter(frontMatter =>
       (frontMatter.title + frontMatter.summary + frontMatter.tags.join(" "))
         .toLowerCase()
         .includes(value)
@@ -21,19 +35,20 @@ export default function ListLayout({ posts, title }) {
   return (
     <Container id="main">
       <Header as="h1">{title}</Header>
-      <Form>
-        <Form.Input type="text" onChange={handleChange} icon="search" />
-      </Form>
-      <Segment>
-      <List divided relaxed>
-        {!filteredBlogPosts.length && <List.Item content="No posts found." />}
-        {filteredBlogPosts.map((frontMatter) => {
-          return (
-            <ListItem {...frontMatter} key={frontMatter.slug} />
-          );
-        })}
-      </List>
-      </Segment>
+      {searchEnabled && (
+        <Form>
+          <Form.Input type="text" onChange={handleChange} icon="search" />
+        </Form>
+      )}
+      {!filteredPosts.length && (
+        <Segment content="記事が見つかりませんでした。" />
+      )}
+      {filteredPosts.map(frontMatter => {
+        return <ListItem {...frontMatter} key={frontMatter.slug} />;
+      })}
+      {children}
     </Container>
   );
-}
+};
+
+export { ListLayout };

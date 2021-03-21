@@ -1,108 +1,59 @@
-import { NextPage } from "next";
-import Link from "../components/Link";
+import { GetStaticProps, NextPage } from "next";
+import Link from "next/link";
+import { Divider, Icon, Menu } from "semantic-ui-react";
+
+import { ListLayout } from "../components/ListLayout";
 import { PageSeo } from "../components/SEO";
-import Tag from "../components/Tag";
-import siteMetadata from "../website.json";
 import { getAllFilesFrontMatter } from "../lib/mdx";
+import { PostIface } from "../lib/PostIface";
+
+import websiteJson from "../website.json";
 
 const MAX_DISPLAY = 5;
 
-export interface PageProps {
-    posts: any[];
+interface PageProps {
+  posts: PostIface[];
 }
 
-export async function getStaticProps() {
+const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   const posts = await getAllFilesFrontMatter();
   return { props: { posts } };
-}
+};
 
 const Home: NextPage<PageProps> = ({ posts }) => {
+  const filteredPosts = posts && posts.slice(0, MAX_DISPLAY);
+
   return (
     <>
       <PageSeo
-        title={siteMetadata.title}
-        description={siteMetadata.description}
-        url={siteMetadata.siteUrl}
+        title={websiteJson.title}
+        description={websiteJson.description}
+        url={websiteJson.siteUrl}
       />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
-        </div>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && "No posts found."}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter;
-            return (
-              <li key={slug} className="py-12">
-                <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
-                    <dl>
-                      <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>
-                          {new Date(date).toLocaleDateString(
-                            siteMetadata.locale,
-                            { year: "numeric", month: "long", day: "numeric" }
-                          )}
-                        </time>
-                      </dd>
-                    </dl>
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-6">
-                        <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link
-                              href={`/posts/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
-                            >
-                              {title}
-                            </Link>
-                          </h2>
-                          <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
-                        </div>
-                        <div className="prose text-gray-500 max-w-none dark:text-gray-400">
-                          {summary}
-                        </div>
-                      </div>
-                      <div className="text-base font-medium leading-6">
-                        <Link
-                          href={`/posts/${slug}`}
-                          className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
-                          aria-label={`Read "${title}"`}
-                        >
-                          Read more &rarr;
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base font-medium leading-6">
-          <Link
-            href="/"
-            className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
-            aria-label="all posts"
-          >
-            All Posts &rarr;
-          </Link>
-        </div>
-      )}
+      <ListLayout
+        posts={filteredPosts}
+        title={`最新の投稿 ${MAX_DISPLAY} 件`}
+        searchEnabled={false}
+      >
+        {posts.length > MAX_DISPLAY && (
+          <>
+            <Divider />
+            <footer>
+              <Menu stackable>
+                <Link href="/posts">
+                  <Menu.Item as="a" href="/posts" position="right">
+                    <Icon name="angle down" />
+                    すべての投稿を見る
+                  </Menu.Item>
+                </Link>
+              </Menu>
+            </footer>
+          </>
+        )}
+      </ListLayout>
     </>
   );
-}
+};
 
+export { getStaticProps };
 export default Home;

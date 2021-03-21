@@ -1,34 +1,37 @@
-import siteMetadata from "../website.json";
+import websiteJson from "../website.json";
 
-const generateRssItem = (post) => `
+import { PostIface } from "./PostIface";
+
+const generateRssItem = (post: PostIface) => `
   <item>
-    <guid>${siteMetadata.siteUrl}/posts/${post.slug}</guid>
+    <guid>${websiteJson.siteUrl}/posts/${post.slug}</guid>
     <title>${post.title}</title>
-    <link>${siteMetadata.siteUrl}/posts/${post.slug}</link>
+    <link>${websiteJson.siteUrl}/posts/${post.slug}</link>
     <description>${post.summary}</description>
     <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-    <author>${siteMetadata.email} (${siteMetadata.author})</author>
-    ${post.tags.map((t) => `<category>${t}</category>`).join("")}
+    <author>${websiteJson.email} (${websiteJson.author})</author>
+    ${post.tags.map(t => `<category>${t}</category>`).join("")}
   </item>
 `;
 
-const generateRss = (posts, page = "index.xml") => `
+const generateRss = (posts: PostIface[], page = "index.xml") => `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>${siteMetadata.title}</title>
-      <link>${siteMetadata.siteUrl}</link>
-      <description>${siteMetadata.description}</description>
-      <language>${siteMetadata.language}</language>
-      <managingEditor>${siteMetadata.email} (${
-  siteMetadata.author
+      <title>${websiteJson.title}</title>
+      <link>${websiteJson.siteUrl}</link>
+      <description>${websiteJson.description}</description>
+      <language>${websiteJson.language}</language>
+      <managingEditor>${websiteJson.email} (${
+  websiteJson.author
 })</managingEditor>
-      <webMaster>${siteMetadata.email} (${siteMetadata.author})</webMaster>
+      <webMaster>${websiteJson.email} (${websiteJson.author})</webMaster>
       <lastBuildDate>${new Date(posts[0].date).toUTCString()}</lastBuildDate>
       <atom:link href="${
-        siteMetadata.siteUrl
+        websiteJson.siteUrl
       }/${page}" rel="self" type="application/rss+xml"/>
       ${posts.map(generateRssItem).join("")}
     </channel>
   </rss>
 `;
-export default generateRss;
+
+export { generateRss };

@@ -1,9 +1,12 @@
-// import Image from 'next/image'
-import CustomLink from './Link';
+import { FC } from "react";
+import { Divider, Image } from "semantic-ui-react";
+
+import { CustomLink } from "./CustomLink";
 
 const MDXComponents = {
-  // Image,
+  img: (props => <Image {...props} fluid />) as FC<HTMLImageElement>,
   a: CustomLink,
-}
+  hr: Divider
+};
 
-export default MDXComponents
+export { MDXComponents };

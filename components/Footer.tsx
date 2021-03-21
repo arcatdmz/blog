@@ -7,25 +7,18 @@ const Footer: FC = () => (
       <Divider />
       <List horizontal divided>
         <List.Item>
-          ©{" "}
-          <a href="/#contact" className="typesquare_tags">
-            Jun Kato
-          </a>
+          © <a href="//junkato.jp/ja/#contact">加藤 淳</a>
         </List.Item>
         <List.Item>2012-{new Date().getFullYear()}</List.Item>
-        <List.Item>
-          <a href="/privacy" className="typesquare_tags">
-            <i className="envelope open outline icon"></i> Privacy Policy
-          </a>
+        <List.Item as="a" href="//junkato.jp/ja/privacy">
+          <i className="envelope open outline icon"></i> プライバシーポリシー
         </List.Item>
-        <List.Item>
-          <a className="item typesquare_tags" href="/ja/">
-            <i className="translate icon"></i> 日本語
-          </a>
+        <List.Item as="a" href="//junkato.jp">
+          <i className="translate icon"></i> English
         </List.Item>
       </List>
     </Container>
   </Segment>
 );
 
-export default Footer;
+export { Footer };

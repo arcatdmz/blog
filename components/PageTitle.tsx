@@ -1,9 +1,6 @@
+import { FC } from "react";
 import { Header } from "semantic-ui-react";
 
-export default function PageTitle({ children }) {
-  return (
-    <Header as="h1">
-      {children}
-    </Header>
-  );
-}
+const PageTitle: FC = ({ children }) => <Header as="h1">{children}</Header>;
+
+export { PageTitle };

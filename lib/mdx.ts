@@ -1,12 +1,13 @@
 import fs from "fs";
 import matter from "gray-matter";
-import visit from "unist-util-visit";
-import path from "path";
-// import readingTime from "reading-time";
 import renderToString from "next-mdx-remote/render-to-string";
+import path from "path";
+import visit from "unist-util-visit";
 
-import MDXComponents from "../components/MDXComponents";
-// import imgToJsx from "./img-to-jsx";
+import { MDXComponents } from "../components/MDXComponents";
+
+import { FrontMatterIface } from "./FrontMatterIface";
+import { PostIface } from "./PostIface";
 
 const root = process.cwd();
 
@@ -21,7 +22,7 @@ const tokenClassNames = {
   string: "text-code-green",
   function: "text-code-blue",
   boolean: "text-code-red",
-  comment: "text-gray-400 italic",
+  comment: "text-gray-400 italic"
 };
 
 export async function getFiles() {
@@ -32,7 +33,7 @@ export function formatSlug(slug: string) {
   return slug.replace(/\.(mdx|md)/, "");
 }
 
-export function dateSortDesc(a: number, b: number) {
+export function dateSortDesc(a: number | string, b: number | string) {
   if (a > b) return -1;
   if (a < b) return 1;
   return 0;
@@ -52,16 +53,12 @@ export async function getFileBySlug(slug: string) {
       remarkPlugins: [
         require("remark-slug"),
         require("remark-autolink-headings"),
-        require("remark-code-titles"),
-        // require("remark-math"),
-        // imgToJsx,
+        require("remark-code-titles")
       ],
-      //   inlineNotes: true,
       rehypePlugins: [
-        // require("rehype-katex"),
         require("@mapbox/rehype-prism"),
         () => {
-          return (tree) => {
+          return tree => {
             visit(tree, "element", (node, _index, _parent) => {
               const className = node.properties["className"] as string[];
               let [token, type] = className || [];
@@ -70,31 +67,30 @@ export async function getFileBySlug(slug: string) {
               }
             });
           };
-        },
-      ],
-    },
+        }
+      ]
+    }
   });
 
   return {
     mdxSource,
     frontMatter: {
       wordCount: content.split(/\s+/gu).length,
-      // readingTime: readingTime(content),
       slug: slug || null,
       fileName: fs.existsSync(mdxPath) ? `${slug}.mdx` : `${slug}.md`,
-      ...data,
-    },
+      ...data
+    } as PostIface
   };
 }
 
 export async function getAllFilesFrontMatter() {
   const files = fs.readdirSync(path.join(root, "src"));
 
-  const allFrontMatter = [];
+  const allFrontMatter: PostIface[] = [];
 
-  files.forEach((file) => {
+  files.forEach(file => {
     const source = fs.readFileSync(path.join(root, "src", file), "utf8");
-    const { data } = matter(source);
+    const data = matter(source).data as FrontMatterIface;
     if (data.draft !== true) {
       allFrontMatter.push({ ...data, slug: formatSlug(file) });
     }
