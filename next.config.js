@@ -1,7 +1,8 @@
 module.exports = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+  trailingSlash: true,
   experimental: {
-    modern: true,
+    modern: true
   },
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
@@ -11,15 +12,10 @@ module.exports = {
           loader: "file-loader",
           options: {
             publicPath: "/_next",
-            name: "static/media/[name].[hash].[ext]",
-          },
-        },
-      ],
-    });
-
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"],
+            name: "static/media/[name].[hash].[ext]"
+          }
+        }
+      ]
     });
 
     if (!dev && !isServer) {
@@ -27,10 +23,10 @@ module.exports = {
       Object.assign(config.resolve.alias, {
         react: "preact/compat",
         "react-dom/test-utils": "preact/test-utils",
-        "react-dom": "preact/compat",
+        "react-dom": "preact/compat"
       });
     }
 
     return config;
-  },
+  }
 };
