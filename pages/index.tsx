@@ -57,7 +57,7 @@ const Home: NextPage<PageProps> = ({ posts }) => {
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
-                              href={`/blog/${slug}`}
+                              href={`/posts/${slug}`}
                               className="text-gray-900 dark:text-gray-100"
                             >
                               {title}
@@ -75,7 +75,7 @@ const Home: NextPage<PageProps> = ({ posts }) => {
                       </div>
                       <div className="text-base font-medium leading-6">
                         <Link
-                          href={`/blog/${slug}`}
+                          href={`/posts/${slug}`}
                           className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
                           aria-label={`Read "${title}"`}
                         >
@@ -93,7 +93,7 @@ const Home: NextPage<PageProps> = ({ posts }) => {
       {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
-            href="/blog"
+            href="/"
             className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
             aria-label="all posts"
           >
