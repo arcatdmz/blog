@@ -1,10 +1,7 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import hydrate from "next-mdx-remote/hydrate";
 import { MdxRemote } from "next-mdx-remote/types";
 
-import { MDXComponents } from "../../components/MDXComponents";
-import { NotFoundLayout } from "../../components/layouts/NotFoundLayout";
-import { PostLayout } from "../../components/layouts/PostLayout";
+import { Post } from "../../components/pages/Post";
 import {
   getFiles,
   getFileBySlug,
@@ -44,19 +41,7 @@ const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   return { props: { post, prev, next } };
 };
 
-const Post: NextPage<PageProps> = ({ post, prev, next }) => {
-  const { mdxSource, frontMatter } = post;
-  const content = hydrate(mdxSource, {
-    components: MDXComponents
-  });
-  return frontMatter.draft !== true ? (
-    <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
-      {content}
-    </PostLayout>
-  ) : (
-    <NotFoundLayout />
-  );
-};
+const PostPage: NextPage<PageProps> = Post;
 
 export { getStaticPaths, getStaticProps };
-export default Post;
+export default PostPage;
