@@ -10,7 +10,9 @@
     "export": "next export",
     "download": "cd public && fetch-github-release arcatdmz arcatdmz.github.io",
     "prettify": "prettier --write ./{components,lib,pages}/**/*.{ts,tsx}",
-    "src:summarize": "node scripts/add-summary.mjs"
+    "posts": "npm run posts:summarize && npm run posts:prettify",
+    "posts:prettify": "prettier --write ./src/**/*.{md,mdx}",
+    "posts:summarize": "node scripts/add-summary.mjs"
   },
   "repository": {
     "type": "git",
