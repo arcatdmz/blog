@@ -10,10 +10,9 @@ summary_generated: >-
 
 博士課程を修了し、就職してから半年ほど経ちました。いろいろと変わったようであり、あまり変わっていないようでもあり、よく分かりません。分かりませんが、研究のサイクルが一巡して、ひとまず暮らしが落ち着いてきた感じはします。新居がどういうところかというと…
 
-<blockquote className="twitter-tweet" lang="ja">初筑波チャレンジだが、クーゴーマップによると山を三つ超えた先の荒廃した石炭採掘場の果てにあり、修験道者が利用するほこらだと言う — ketsumedo_yarou (@ketsumedo_yarou) <a href="https://twitter.com/ketsumedo_yarou/status/506206471256674304">2014, 8月 31</a></blockquote>
+https://twitter.com/ketsumedo_yarou/status/506206471256674304
 
-<blockquote className="twitter-tweet" lang="ja">精神と時の街、つくば。 — arc@dmz (@arcatdmz) <a href="https://twitter.com/arcatdmz/status/510370985791332353">2014, 9月 12</a></blockquote>
-<script src="//platform.twitter.com/widgets.js" async charSet="utf-8"></script>
+https://twitter.com/arcatdmz/status/510370985791332353
 
 まぁこんな感じです。
 

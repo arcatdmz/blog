@@ -119,5 +119,4 @@ summary_generated: >-
 
 そういえば、学生の頃と違うもう一つの点は、ここに書けないこともいろいろある、というところですね。とりあえず最近は、学生実習生がいろいろ面白いものを作っているので、見ていてとても楽しいです。1 年に 2 回実習生を受け入れる時期があるので、一緒に研究したい学生さんは適宜お知らせください。
 
-<blockquote className="twitter-tweet" lang="en"><p dir="ltr" lang="ja">Contact us for future collaboration opportunities! cc: <a href="https://twitter.com/Yuta_Sugiura">@Yuta_Sugiura</a> というわけでHCI分野の学生にはいろいろ選択肢があるよという宣伝でした。 <a href="http://t.co/AIhOrXc0Bz">pic.twitter.com/AIhOrXc0Bz</a></p>— arc@dmz (@arcatdmz) <a href="https://twitter.com/arcatdmz/status/594048249574502401">May 1, 2015</a></blockquote>
-<script src="//platform.twitter.com/widgets.js" async charSet="utf-8"></script>
+https://twitter.com/arcatdmz/status/594048249574502401

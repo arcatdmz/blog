@@ -45,7 +45,7 @@ Realmote 起動用のバッチファイルでは、 -remote に続けて Remote 
 
 あとは、PC・Mac のブラウザで http://127.0.0.1:8000/ にアクセスして動作を確認してください。うまくいったら、PC・Mac の LAN 側 IP アドレスを調べて、スマートフォンから http://そのアドレス:8000/ にアクセスしてみてください。
 
-<iframe className="embed-responsive-item" src="https://www.youtube.com/embed/bhbW39zoxyg" width="640" height="360" frameBorder="0" allowFullScreen="allowfullscreen"></iframe>
+https://www.youtube.com/watch?v=bhbW39zoxyg
 
 ### 実装
 
