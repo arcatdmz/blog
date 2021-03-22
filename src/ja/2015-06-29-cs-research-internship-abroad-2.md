@@ -1,6 +1,6 @@
 ---
 title: 情報科学系 海外研究インターンのすすめ〔後編〕
-date: '2015-06-29'
+date: "2015-06-29"
 tags:
   - research
   - student
@@ -67,7 +67,7 @@ Adobe Creative Technologies Lab Seattle には、MSRA HCI Group と近い規模�
 
 海外企業での研究インターン、ぜひ行きましょう！
 
-<blockquote class="twitter-tweet" lang="en"><p dir="ltr" lang="ja">Contact us for future collaboration opportunities! cc: <a href="https://twitter.com/Yuta_Sugiura">@Yuta_Sugiura</a> というわけでHCI分野の学生にはいろいろ選択肢があるよという宣伝でした。 <a href="http://t.co/AIhOrXc0Bz">pic.twitter.com/AIhOrXc0Bz</a></p>— arc@dmz (@arcatdmz) <a href="https://twitter.com/arcatdmz/status/594048249574502401">May 1, 2015</a></blockquote>
-<script src="//platform.twitter.com/widgets.js" async charset="utf-8"></script>
+<blockquote className="twitter-tweet" lang="en"><p dir="ltr" lang="ja">Contact us for future collaboration opportunities! cc: <a href="https://twitter.com/Yuta_Sugiura">@Yuta_Sugiura</a> というわけでHCI分野の学生にはいろいろ選択肢があるよという宣伝でした。 <a href="http://t.co/AIhOrXc0Bz">pic.twitter.com/AIhOrXc0Bz</a></p>— arc@dmz (@arcatdmz) <a href="https://twitter.com/arcatdmz/status/594048249574502401">May 1, 2015</a></blockquote>
+<script src="//platform.twitter.com/widgets.js" async charSet="utf-8"></script>
 
 海外に行く前に、まず国内というのもアリですね!!

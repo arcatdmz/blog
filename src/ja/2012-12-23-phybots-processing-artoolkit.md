@@ -1,6 +1,6 @@
 ---
 title: ProcessingとPhybotsでARToolKitマーカーを検出する
-date: '2012-12-23'
+date: "2012-12-23"
 tags:
   - phybots
   - programming
@@ -17,7 +17,7 @@ summary_generated: >-
 
 ## Phybots はいろいろ便利だという話
 
-Phybots は、右上の写真のようなセットアップで使われることを想定したツールキットです。床や机の上を見下ろすカメラと、ARToolKit マーカーをつけた小型ロボットを、PC や Mac に接続して、ロボットを好きな場所に移動させたり、物を押させたりできます。作例は YouTube のプレイリスト[Phybots Applications](http://www.youtube.com/playlist?list=PL5EC9CECDDBEA183A)に載っています。
+Phybots は、右上の写真のようなセットアップで使われることを想定したツールキットです。床や机の上を見下ろすカメラと、ARToolKit マーカーをつけた小型ロボットを、PC や Mac に接続して、ロボットを好きな場所に移動させたり、物を押させたりできます。作例は YouTube のプレイリスト[Phybots Applications](https://www.youtube.com/playlist?list=PL5EC9CECDDBEA183A)に載っています。
 
 ただし、僕は[マーカーをつけていない単なる LEGO ベースのロボットに特定の動きをさせるプログラムを書く](http://junkato.jp/ja/picode/ "Picode: ソースコードに写真を貼り込める統合開発環境 ")のに使っていますし、3DCG の重畳表示をしないのであれば、マーカーの位置を検出するのもかなり簡単です。Phybots は 2008 年の年末に開発が始まり、けっこうな年月をかけて API が作りこまれたライブラリなので、用意された機能のサブセットだけでもいろいろ便利なのです。
 

@@ -1,6 +1,6 @@
 ---
 title: Realmoteで家のリモコンを一つにまとめる
-date: '2012-12-24'
+date: "2012-12-24"
 tags:
   - phybots
   - programming
@@ -45,7 +45,7 @@ Realmote 起動用のバッチファイルでは、 -remote に続けて Remote 
 
 あとは、PC・Mac のブラウザで http://127.0.0.1:8000/ にアクセスして動作を確認してください。うまくいったら、PC・Mac の LAN 側 IP アドレスを調べて、スマートフォンから http://そのアドレス:8000/ にアクセスしてみてください。
 
-<iframe src="http://www.youtube.com/embed/bhbW39zoxyg" frameborder="0" width="640" height="360"></iframe>
+<iframe className="embed-responsive-item" src="https://www.youtube.com/embed/bhbW39zoxyg" width="640" height="360" frameBorder="0" allowFullScreen="allowfullscreen"></iframe>
 
 ### 実装
 

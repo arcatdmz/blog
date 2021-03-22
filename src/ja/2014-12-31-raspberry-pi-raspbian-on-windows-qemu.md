@@ -1,6 +1,6 @@
 ---
 title: Windows+QEMUでRaspberry Piをエミュレートする
-date: '2014-12-31'
+date: "2014-12-31"
 tags:
   - programming
 coverImage: raspbian-on-qemu-windows.png
@@ -35,8 +35,8 @@ summary_generated: >-
 
 **2015 年 1 月 4 日追記;** あけましておめでとうございます！
 
-<blockquote class="twitter-tweet" lang="en">？？？？なんでクロスビルドしないんだ…？？？？：Windows+QEMUでRaspberry Piをエミュレートする | junkato.jp<div></div>— しゅううさん (@syuu1228) <a href="https://twitter.com/syuu1228/status/550374910468440066">December 31, 2014</a></blockquote>
-<script src="//platform.twitter.com/widgets.js" async charset="utf-8"></script>
+<blockquote className="twitter-tweet" lang="en">？？？？なんでクロスビルドしないんだ…？？？？：Windows+QEMUでRaspberry Piをエミュレートする | junkato.jp<div></div>— しゅううさん (@syuu1228) <a href="https://twitter.com/syuu1228/status/550374910468440066">December 31, 2014</a></blockquote>
+<script src="//platform.twitter.com/widgets.js" async charSet="utf-8"></script>
 
 そういうのもあるのか！しかし、Windows で ARM Linux 用のクロスビルド環境を簡単に作れる方法ってあるんでしょうか？とりあえず Linux の方は[こちら](http://www.sadaji.net/Firmware/eclipse/index.htm)をどうぞ。Windows + Visual Studio でそれっぽいことをしてる人も[海外にはいる](http://www.hassang.com/visual-studio-2012-template-and-the-raspberry-pi-toolchain-c)ようですね。
 
