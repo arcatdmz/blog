@@ -1,10 +1,14 @@
 ---
-title: "Realmoteで家のリモコンを一つにまとめる"
-date: "2012-12-24"
+title: Realmoteで家のリモコンを一つにまとめる
+date: '2012-12-24'
 tags:
-  - "phybots"
-  - "programming"
-coverImage: "realmote.jpg"
+  - phybots
+  - programming
+coverImage: realmote.jpg
+summary_generated: >-
+  最近、Pluto ステーションとかiRemocon(アイリモコン)
+  IRM-01Lといった、スマートフォンが赤外線リモコンの代わりになる製品をよく見るようになりました。確かにスマートフォンしか持ってない人には便利かもしれません。が、プログラマなら常時起動してる
+  PC・Mac...
 ---
 
 [![](/images/realmote-138x300.jpg "Realmote")](/images/realmote.jpg)最近、[Pluto ステーション](http://www.amazon.co.jp/gp/product/B00A2H5HZY/ref=as_li_ss_tl?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B00A2H5HZY)![](http://www.assoc-amazon.jp/e/ir?t=dmjp07-22&l=as2&o=9&a=B00A2H5HZY)とか[iRemocon(アイリモコン) IRM-01L](http://www.amazon.co.jp/gp/product/B0053BXBVG/ref=as_li_ss_tl?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B0053BXBVG)![](http://www.assoc-amazon.jp/e/ir?t=dmjp07-22&l=as2&o=9&a=B0053BXBVG)といった、スマートフォンが赤外線リモコンの代わりになる製品をよく見るようになりました。確かにスマートフォンしか持ってない人には便利かもしれません。が、プログラマなら常時起動してる PC・Mac が家に一台くらいはありますよね。それをリモコンにしたらいいと思いませんか。

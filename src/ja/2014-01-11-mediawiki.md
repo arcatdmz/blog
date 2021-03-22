@@ -1,9 +1,12 @@
 ---
-title: "MediaWikiの多言語対応を調べた"
-date: "2014-01-11"
+title: MediaWikiの多言語対応を調べた
+date: '2014-01-11'
 tags:
-  - "programming"
-  - "server"
+  - programming
+  - server
+summary_generated: >-
+  多言語対応できてそれなりにしっかりした Wiki
+  エンジンを探していたらMediaWikiにたどり着いたのだけど、どうもやり方がよく分からない。ドキュメントも日本語ではあまり見つからなかった。というわけで、基礎知識と、多言語対応の方法について調べたことを書いておきます。Me...
 ---
 
 多言語対応できてそれなりにしっかりした Wiki エンジンを探していたら[MediaWiki](http://www.mediawiki.org/wiki/MediaWiki)にたどり着いたのだけど、どうもやり方がよく分からない。ドキュメントも日本語ではあまり見つからなかった。

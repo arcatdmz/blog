@@ -1,10 +1,14 @@
 ---
-title: "Mac OS Xでスクリプトを定期実行する"
-date: "2012-12-17"
+title: Mac OS Xでスクリプトを定期実行する
+date: '2012-12-17'
 tags:
-  - "programming"
-  - "server"
-coverImage: "fungus-camera.jpg"
+  - programming
+  - server
+coverImage: fungus-camera.jpg
+summary_generated: >-
+  最近、照明を ON/OFF する機能を備えた Arduino
+  ベースのネットワークカメラを開発したのですが、そこから定期的に画像を取ってきて保存したくなりました。自宅サーバとして Mac mini Mid 2010
+  (Mac OS X Snow Leopard)を使っている...
 ---
 
 ![](/images/fungus-camera.jpg "なめこカメラ")

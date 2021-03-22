@@ -1,10 +1,14 @@
 ---
-title: "Bootstrap 3ベースのWordPressテーマをLESSで編集する"
-date: "2014-02-25"
+title: Bootstrap 3ベースのWordPressテーマをLESSで編集する
+date: '2014-02-25'
 tags:
-  - "design"
-  - "programming"
-  - "server"
+  - design
+  - programming
+  - server
+summary_generated: >-
+  自分のポートフォリオサイトで使っている Bootstrap のバージョンを 2 から 3
+  にあげたので、このブログ(WordPress)のテーマも同時に更新しました。ポートフォリオサイトではBootstrap 3 の variables.less
+  を編集したうえで grun...
 ---
 
 自分のポートフォリオサイトで使っている Bootstrap のバージョンを 2 から 3 にあげたので、このブログ(WordPress)のテーマも同時に更新しました。ポートフォリオサイトでは[Bootstrap 3 の variables.less を編集](http://www.find-job.net/startup/twitter-bootstrap-3)したうえで grunt を使ってビルドして使っているため、見た目に統一感を持たせるためには、WordPress 用テーマのほうでもカスタムビルドした Bootstrap を素直に使える必要があります。

@@ -1,9 +1,12 @@
 ---
-title: "Microsoft Research Asia Fellowship応募のすすめ"
-date: "2014-05-15"
+title: Microsoft Research Asia Fellowship応募のすすめ
+date: '2014-05-15'
 tags:
-  - "research"
-  - "university"
+  - research
+  - university
+summary_generated: >-
+  MSRA Fellowship 2012 授賞式アメリカの情報系企業で研究インターンをして印象的だったことの一つに、企業による博士課程の学生向け
+  Fellowship の充実が挙げられます。これは、優秀な学生に研究費を給付し、業績やポテンシャルの高さを評価する仕組みです。F...
 ---
 
 <figure className="right">

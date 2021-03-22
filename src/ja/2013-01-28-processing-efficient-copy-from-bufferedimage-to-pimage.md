@@ -1,10 +1,14 @@
 ---
-title: "Processingでメモリ消費を抑えてBufferedImageの内容をPImageにコピーする"
-date: "2013-01-28"
+title: Processingでメモリ消費を抑えてBufferedImageの内容をPImageにコピーする
+date: '2013-01-28'
 tags:
-  - "java"
-  - "processing"
-  - "programming"
+  - java
+  - processing
+  - programming
+summary_generated: >-
+  最近 Processing 用のライブラリを Java で実装していて、Java 界の BufferedImage を何度も PImage
+  として渡す必要がありました。最初は素直に次のようなコードを書いていたのですが…void draw() {
+    BufferedImag...
 ---
 
 最近 Processing 用のライブラリを Java で実装していて、Java 界の BufferedImage を何度も PImage として渡す必要がありました。最初は素直に次のようなコードを書いていたのですが…

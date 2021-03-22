@@ -1,9 +1,11 @@
 ---
-title: "プログラミング環境としてのExcel"
-date: "2013-08-07"
-tags: 
-  - "research"
-  - "sigpx"
+title: プログラミング環境としてのExcel
+date: '2013-08-07'
+tags:
+  - research
+  - sigpx
+summary_generated: >-
+  萩谷先生の「Excelでプログラムを書く」という原稿が話題に挙がっていたので、僕の知る範囲で、研究の文脈をちょっとご紹介します。プログラミング環境としてのExcelという考え方は、文字列ベースの開発環境に慣れた人にはちょっと頓狂に聞こえるかもしれませんが、Microsoft...
 ---
 
 萩谷先生の[「Excelでプログラムを書く」](http://lecture.ecc.u-tokyo.ac.jp/~shagiya/excel.pdf)という原稿が話題に挙がっていたので、僕の知る範囲で、研究の文脈をちょっとご紹介します。

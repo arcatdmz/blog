@@ -1,10 +1,13 @@
 ---
-title: "技術書典 応援祭で「アニメ技術 2020春」頒布中 / Griffith Sketchリリース"
-date: "2020-03-14"
-tags: 
-  - "anime"
-  - "research"
-coverImage: "techbook8_shoei_02.png"
+title: 技術書典 応援祭で「アニメ技術 2020春」頒布中 / Griffith Sketchリリース
+date: '2020-03-14'
+tags:
+  - anime
+  - research
+coverImage: techbook8_shoei_02.png
+summary_generated: >-
+  アーチで技術顧問の仕事を始めて早1年半が過ぎました。表に出ている仕事としては、研究開発チーム Arch Research
+  を作り、絵コンテ制作支援ツール「Griffith」を開発しています。2018年秋からは半年に一度の技術書の祭典「技術書典」をスポンサーしつつ、2019年...
 ---
 
 [アーチで技術顧問の仕事を始めて](https://junkato.jp/ja/blog/2018/07/09/arch-inc-technical-advisor/)早1年半が過ぎました。表に出ている仕事としては、研究開発チーム [Arch Research](https://research.archinc.jp/) を作り、絵コンテ制作支援ツール「[Griffith](https://research.archinc.jp/griffith/)」を開発しています。2018年秋からは半年に一度の技術書の祭典「[技術書典](https://techbookfest.org/)」をスポンサーしつつ、2019年春からは毎回「[アニメ技術](https://research.archinc.jp/anitech/)」を刊行しています。

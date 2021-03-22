@@ -1,10 +1,14 @@
 ---
-title: "Wikipediaのテンプレートを自前のMediaWikiに追加した"
-date: "2014-01-12"
+title: Wikipediaのテンプレートを自前のMediaWikiに追加した
+date: '2014-01-12'
 tags:
-  - "programming"
-  - "server"
-coverImage: "infobox.png"
+  - programming
+  - server
+coverImage: infobox.png
+summary_generated: >-
+  前日に引き続きMediaWikiに関する記事です。 素の MediaWiki は、記事を全て Wiki
+  記法でべた書きしなくてはなりません。Wikipedia
+  の記事では、右の図の情報ボックス(Infobox)のように、記事の種類ごとにテンプレートがあって、同じようなレイア...
 ---
 
 [前日](http://junkato.jp/ja/blog/2014/01/12/mediawiki/ "MediaWikiの多言語対応を調べた | junkato.jp")に引き続き[MediaWiki](http://www.mediawiki.org/wiki/MediaWiki "MediaWiki")に関する記事です。 [![(Wikipedia Infobox)](/images/infobox-300x180.png)](/images/infobox.png)

@@ -1,10 +1,13 @@
 ---
-title: "Live Programmingについて (LIVE 2017で基調講演します)"
-date: "2017-10-07"
+title: Live Programmingについて (LIVE 2017で基調講演します)
+date: '2017-10-07'
 tags:
-  - "research"
-  - "sigpx"
-coverImage: "inventing-on-principle.png"
+  - research
+  - sigpx
+coverImage: inventing-on-principle.png
+summary_generated: >-
+  無事、基調講演を終えて帰国しました。フォローアップ記事とスライドをどうぞ。Live Programming に関する国際ワークショップ LIVE 2017
+  で基調講演を任されることになり、いろいろ考えた末「User Interfaces for Live Programmi...
 ---
 
 無事、基調講演を終えて帰国しました。[フォローアップ記事](https://junkato.jp/ja/live-programming/)と[スライド](https://junkato.jp/publications/live2017-kato-keynote-slides.pdf)をどうぞ。

@@ -1,11 +1,14 @@
 ---
-title: "情報科学系 海外研究インターンのすすめ〔前編〕"
-date: "2015-06-29"
+title: 情報科学系 海外研究インターンのすすめ〔前編〕
+date: '2015-06-29'
 tags:
-  - "research"
-  - "student"
-  - "university"
-coverImage: "DSC04693.jpg"
+  - research
+  - student
+  - university
+coverImage: DSC04693.jpg
+summary_generated: >-
+  ACM CHI 2015 全論文の概要を一日で把握するCHI 勉強会
+  2015へのご参加ありがとうございました。幹事団の一人として御礼申し上げます。東京会場では、メインプログラムのあと懇親会までの準備時間に企業紹介と海外インターン経験談紹介のセッションを開催しました。インタ...
 ---
 
 ACM CHI 2015 全論文の概要を一日で把握する[CHI 勉強会 2015](http://hci.tokyo/seminar/chi2015)へのご参加ありがとうございました。幹事団の一人として御礼申し上げます。東京会場では、メインプログラムのあと懇親会までの準備時間に企業紹介と海外インターン経験談紹介のセッションを開催しました。インターン経験の紹介セッションでは、僕と、Microsoft Research Asia/Redmond, Disney Research, ATR で研究インターンを経験した学生たちがプレゼンしました。

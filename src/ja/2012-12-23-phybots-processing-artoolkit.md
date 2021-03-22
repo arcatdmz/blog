@@ -1,10 +1,14 @@
 ---
-title: "ProcessingとPhybotsでARToolKitマーカーを検出する"
-date: "2012-12-23"
+title: ProcessingとPhybotsでARToolKitマーカーを検出する
+date: '2012-12-23'
 tags:
-  - "phybots"
-  - "programming"
-  - "research"
+  - phybots
+  - programming
+  - research
+summary_generated: >-
+  Java/Processing で小型ロボットを簡単に動かせるツールキット Phybots
+  は、オープンソースで公開されてしばらく経ちますが、正直なところ忙しくてあまり管理に手が回っておらず、すぐ使える配布ファイルもありませんでした。#五十嵐
+  ERATOのポスターセッション...
 ---
 
 [![](/images/phybots-overview-300x211.jpg "Phybotsのハードウェアセットアップ")](/images/phybots-overview.jpg)Java/Processing で小型ロボットを簡単に動かせるツールキット Phybots は、オープンソースで公開されてしばらく経ちますが、正直なところ忙しくてあまり管理に手が回っておらず、すぐ使える配布ファイルもありませんでした。

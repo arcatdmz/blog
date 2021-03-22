@@ -1,9 +1,13 @@
 ---
-title: "Intel Edisonで新しいセンサ・アクチュエータを使うためのドライバ開発"
-date: "2015-10-24"
+title: Intel Edisonで新しいセンサ・アクチュエータを使うためのドライバ開発
+date: '2015-10-24'
 tags:
-  - "programming"
-coverImage: "DSC09957.jpg"
+  - programming
+coverImage: DSC09957.jpg
+summary_generated: >-
+  最近 Intel Edison のお世話になっています。JavaScript で（ホスト PC
+  なしに）センサ・アクチュエータが動くのって本当に素敵ですね！Intel Edison や Galileo では、GPIO
+  などを操作するためにmraaという低レイヤーな通信用ライ...
 ---
 
 最近 Intel Edison のお世話になっています。JavaScript で（ホスト PC なしに）センサ・アクチュエータが動くのって本当に素敵ですね！

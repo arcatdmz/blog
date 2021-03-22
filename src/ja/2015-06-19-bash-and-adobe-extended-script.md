@@ -1,10 +1,13 @@
 ---
-title: "久しぶりにシェルスクリプト・Adobe ExtendedScript"
-date: "2015-06-19"
+title: 久しぶりにシェルスクリプト・Adobe ExtendedScript
+date: '2015-06-19'
 tags:
-  - "life"
-  - "programming"
-coverImage: "DSC00698.jpg"
+  - life
+  - programming
+coverImage: DSC00698.jpg
+summary_generated: >-
+  最近書いたものをメモがてら。bash で行ごとに処理Git のログを整形して出力フォルダ内のデジタル一眼 RAW を全部現像bash
+  で行ごとに処理さくらインターネットのレンタルサーバで、メーリングリストにメンバーをたくさん追加したかった。#!/usr/local/bin/...
 ---
 
 最近書いたものをメモがてら。

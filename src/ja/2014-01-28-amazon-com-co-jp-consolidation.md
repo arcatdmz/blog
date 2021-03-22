@@ -1,8 +1,10 @@
 ---
-title: "Amazon.comのKindleライブラリをAmazon.co.jpに統合した"
-date: "2014-01-28"
-tags: 
-  - "life"
+title: Amazon.comのKindleライブラリをAmazon.co.jpに統合した
+date: '2014-01-28'
+tags:
+  - life
+summary_generated: >-
+  僕はAmazon.comのアカウントで洋書を何冊も購入済みだったので、これまでiPadやAndroidのKindleアプリは全てAmazon.comに紐づけて使っていました。ただ、そろそろAmazon.co.jpのKindleストアでも本を買いたくなってきました。問題は、一...
 ---
 
 僕はAmazon.comのアカウントで洋書を何冊も購入済みだったので、これまでiPadやAndroidのKindleアプリは全てAmazon.comに紐づけて使っていました。ただ、そろそろAmazon.co.jpのKindleストアでも本を買いたくなってきました。

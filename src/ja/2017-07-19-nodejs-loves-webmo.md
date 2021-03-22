@@ -1,9 +1,13 @@
 ---
-title: "WebmoをNode.jsから使う"
-date: "2017-07-19"
+title: WebmoをNode.jsから使う
+date: '2017-07-19'
 tags:
-  - "programming"
-coverImage: "webmo.jpg"
+  - programming
+coverImage: webmo.jpg
+summary_generated: >-
+  昨日の記事でも紹介したWebmoは JavaScript
+  で簡単に操作できることがウリですが、現状用意されているライブラリはブラウザ上で動作することを前提に設計されており、Node.js
+  で実行するとエラーが起きます。エラーを直して本家に pull request を送ろう...
 ---
 
 [昨日の記事](https://junkato.jp/ja/blog/2017/07/19/webmo/)でも紹介した[Webmo](http://webmo.io/)は JavaScript で簡単に操作できることがウリですが、現状用意されているライブラリはブラウザ上で動作することを前提に設計されており、Node.js で実行するとエラーが起きます。

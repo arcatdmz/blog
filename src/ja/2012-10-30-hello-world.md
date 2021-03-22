@@ -1,10 +1,11 @@
 ---
-title: "Hello world!"
-date: "2012-10-30"
-tags: 
-  - "design"
-  - "research"
-  - "server"
+title: Hello world!
+date: '2012-10-30'
+tags:
+  - design
+  - research
+  - server
+summary_generated: ブログを始める準備をしています。考えたこと、やったことを一覧にしておきます。
 ---
 
 ブログを始める準備をしています。考えたこと、やったことを一覧にしておきます。

@@ -1,10 +1,13 @@
 ---
-title: "ThriftでJavaからC#サーバのKinectを使う"
-date: "2013-02-21"
+title: ThriftでJavaからC#サーバのKinectを使う
+date: '2013-02-21'
 tags:
-  - "java"
-  - "programming"
-coverImage: "kinect-thrift-server.jpg"
+  - java
+  - programming
+coverImage: kinect-thrift-server.jpg
+summary_generated: >-
+  最近、Kinect を使う開発環境Picodeの実装を手直ししています。この開発環境は Java で書かれているのですが、Kinect for
+  Windows SDK の API を使う必要があります。Kinect for Windows SDK は C++と C#向けの ...
 ---
 
 [![kinect-thrift-server](/images/kinect-thrift-server-300x225.jpg "C#サーバとJavaクライアントがThriftで通信")](/images/kinect-thrift-server.jpg)

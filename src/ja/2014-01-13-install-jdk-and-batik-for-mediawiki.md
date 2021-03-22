@@ -1,9 +1,12 @@
 ---
-title: "レンタルサーバのMediaWikiにJava製SVGレンダラを設定した"
-date: "2014-01-13"
+title: レンタルサーバのMediaWikiにJava製SVGレンダラを設定した
+date: '2014-01-13'
 tags:
-  - "programming"
-  - "server"
+  - programming
+  - server
+summary_generated: >-
+  MediaWiki に画像をアップロードすると、その縮小版を ImageMagick で作ってくれます。デフォルトでは$wgFileExtensionsに
+  jpg/jpeg/png/gif の拡張子が登録されており、JPEG/PNG/GIF 画像しかアップロードできないよう...
 ---
 
 MediaWiki に画像をアップロードすると、その縮小版を ImageMagick で作ってくれます。デフォルトでは[$wgFileExtensions](http://www.mediawiki.org/wiki/Manual:$wgFileExtensions "Manual:$wgFileExtensions - MediaWiki")に jpg/jpeg/png/gif の拡張子が登録されており、JPEG/PNG/GIF 画像しかアップロードできないようになっていますが、Wikipedia ではグラフなども含め最近ベクター形式の SVG フォーマットの画像がたくさん見られるようになっています。[SVG を可読性のある XML として記述しておけば翻訳が簡単だから](http://en.wikipedia.org/wiki/Wikipedia:Collaboration_to_convert_graphs_to_SVG "Wikipedia:Collaboration to convert graphs to SVG - Wikipedia")、という理由もあるようです。

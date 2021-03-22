@@ -1,8 +1,9 @@
 ---
-title: "CloudflareとLet's EncryptでWebサイトをHTTPS化した"
-date: "2017-07-16"
+title: CloudflareとLet's EncryptでWebサイトをHTTPS化した
+date: '2017-07-16'
 tags:
-  - "server"
+  - server
+summary_generated: "これまで HTTP でホストしていた研究会サイト sigpx.org\_ と個人サイト junkato.jp を HTTPS 化しました。前者は Cloudflare、後者は Let&#x27;s Encrypt を使いました。どちらも無料でした。できれば Cloudflar..."
 ---
 
 これまで HTTP でホストしていた研究会サイト [sigpx.org](https://sigpx.org)  と個人サイト [junkato.jp](https://junkato.jp/ja) を HTTPS 化しました。前者は Cloudflare、後者は Let's Encrypt を使いました。どちらも無料でした。

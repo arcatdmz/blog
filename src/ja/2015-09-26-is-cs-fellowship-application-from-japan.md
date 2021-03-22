@@ -1,10 +1,14 @@
 ---
-title: "日本からでも応募できる情報科学系Fellowship"
-date: "2015-09-26"
-tags: 
-  - "research"
-  - "student"
-  - "university"
+title: 日本からでも応募できる情報科学系Fellowship
+date: '2015-09-26'
+tags:
+  - research
+  - student
+  - university
+summary_generated: >-
+  僕の在学時はMicrosoft Research Asia
+  Fellowshipしかなかったですが、だんだん増えてきたようなので知っているものをリストアップしました。他にもあったら @arcatdmz
+  までお知らせください。これを投稿した時点で今年度まだ応募できるのはAdo...
 ---
 
 僕の在学時は[Microsoft Research Asia Fellowship](http://junkato.jp/ja/blog/2014/05/16/microsoft-research-asia-fellowship/)しかなかったですが、だんだん増えてきたようなので知っているものをリストアップしました。他にもあったら [@arcatdmz](https://twitter.com/arcatdmz) までお知らせください。
