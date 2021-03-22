@@ -49,9 +49,7 @@ const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   return { props: { posts, tag } };
 };
 
-const Tag: NextPage<PageProps> = ({ posts, tag }) => (
-  <TaggedPosts posts={posts} tag={tag} />
-);
+const Tag: NextPage<PageProps> = TaggedPosts;
 
 export { getStaticPaths, getStaticProps };
 export default Tag;
