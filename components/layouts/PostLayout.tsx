@@ -29,7 +29,9 @@ const PostLayout: FC<PostLayoutProps> = ({
   next,
   prev
 }) => {
-  const { language, siteUrl, sitePath, author } = useContext(BlogContext);
+  const { language, rootPath, siteUrl, sitePath, author } = useContext(
+    BlogContext
+  );
   const { slug, date, title, tags } = frontMatter;
 
   const tagComponents = useMemo(() => {
@@ -72,22 +74,22 @@ const PostLayout: FC<PostLayoutProps> = ({
           <Menu stackable>
             {prev && (
               <Link href={`${sitePath}posts/${prev.slug}`}>
-                <Menu.Item as="a" href={`/posts/${prev.slug}`}>
+                <Menu.Item as="a" href={`${sitePath}posts/${prev.slug}`}>
                   <Icon name="angle left" />
                   {prev.title}
                 </Menu.Item>
               </Link>
             )}
             {next && (
-              <Link href={`/posts/${next.slug}`}>
-                <Menu.Item as="a" href={`/posts/${next.slug}`}>
+              <Link href={`${sitePath}posts/${next.slug}`}>
+                <Menu.Item as="a" href={`${sitePath}posts/${next.slug}`}>
                   <Icon name="angle right" />
                   {next.title}
                 </Menu.Item>
               </Link>
             )}
-            <Link href="/">
-              <Menu.Item as="a" href="/" position="right">
+            <Link href={rootPath}>
+              <Menu.Item as="a" href={rootPath} position="right">
                 <Icon name="angle up" />
                 {language === "ja" ? "ブログのトップへ" : "Blog top page"}
               </Menu.Item>
