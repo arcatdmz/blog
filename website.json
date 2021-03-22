@@ -1,4 +1,5 @@
 {
+  "rootPath": "/",
   "imageRoot": "https://blog.junkato.jp/images/",
   "maxPosts": 5,
   "languages": {

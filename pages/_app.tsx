@@ -15,6 +15,7 @@ export default function App({ Component, pageProps }) {
       <BlogContext.Provider
         value={{
           language: "default",
+          rootPath: websiteJson.rootPath,
           imageRoot: websiteJson.imageRoot,
           maxPosts: websiteJson.maxPosts,
           ...websiteJson.languages.default
