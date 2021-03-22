@@ -3,8 +3,8 @@ import hydrate from "next-mdx-remote/hydrate";
 import { MdxRemote } from "next-mdx-remote/types";
 
 import { MDXComponents } from "../../components/MDXComponents";
-import { NotFoundLayout } from "../../components/NotFoundLayout";
-import { PostLayout } from "../../components/PostLayout";
+import { NotFoundLayout } from "../../components/layouts/NotFoundLayout";
+import { PostLayout } from "../../components/layouts/PostLayout";
 import {
   getFiles,
   getFileBySlug,

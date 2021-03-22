@@ -6,4 +6,5 @@ export interface FrontMatterIface {
   tags: string[];
   coverImage?: string;
   draft?: boolean;
+  language?: "ja" | "en";
 }

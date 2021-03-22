@@ -2,13 +2,10 @@ import fs from "fs";
 import path from "path";
 import { GetStaticProps, NextPage } from "next";
 
-import { ListLayout } from "../components/ListLayout";
-import { PageSeo } from "../components/SEO";
+import { Posts } from "../components/pages/Posts";
 import { generateRss } from "../lib/generate-rss";
 import { getAllFilesFrontMatter } from "../lib/mdx";
 import { PostIface } from "../lib/PostIface";
-
-import websiteJson from "../website.json";
 
 const root = process.cwd();
 
@@ -27,18 +24,9 @@ const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   return { props: { posts } };
 };
 
-const Posts: NextPage<PageProps> = ({ posts }) => {
-  return (
-    <>
-      <PageSeo
-        title={`すべての投稿 - ${websiteJson.title}`}
-        description={`すべての投稿 - ${websiteJson.title}`}
-        url={websiteJson.siteUrl}
-      />
-      <ListLayout posts={posts} title="すべての投稿" />
-    </>
-  );
+const PostsPage: NextPage<PageProps> = ({ posts }) => {
+  return <Posts posts={posts} />;
 };
 
 export { getStaticProps };
-export default Posts;
+export default PostsPage;

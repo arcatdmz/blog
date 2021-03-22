@@ -1,9 +1,9 @@
 import { ChangeEvent, FC, useCallback, useMemo, useState } from "react";
 import { Container, Form, Header, Segment } from "semantic-ui-react";
 
-import { PostIface } from "../lib/PostIface";
+import { PostIface } from "../../lib/PostIface";
 
-import { ListItem } from "./ListItem";
+import { ListItem } from "../ListItem";
 
 interface ListLayoutProps {
   posts: PostIface[];

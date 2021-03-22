@@ -4,20 +4,28 @@ import Head from "next/head";
 import "../css/style.css";
 import "prism-themes/themes/prism-vsc-dark-plus.css";
 
-import { LayoutWrapper } from "../components/LayoutWrapper";
+import websiteJson from "../website.json";
 import { MDXComponents } from "../components/MDXComponents";
-import { SEO } from "../components/SEO";
+import { DefaultSEOProps } from "../components/SEO";
+import { BlogContext } from "../lib/BlogContext";
 
 export default function App({ Component, pageProps }) {
   return (
     <MDXProvider components={MDXComponents}>
-      <Head>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-      </Head>
-      <DefaultSeo {...SEO} />
-      <LayoutWrapper>
+      <BlogContext.Provider
+        value={{
+          language: "default",
+          imageRoot: websiteJson.imageRoot,
+          maxPosts: websiteJson.maxPosts,
+          ...websiteJson.languages.default
+        }}
+      >
+        <Head>
+          <meta content="width=device-width, initial-scale=1" name="viewport" />
+        </Head>
+        <DefaultSeo {...DefaultSEOProps} />
         <Component {...pageProps} />
-      </LayoutWrapper>
+      </BlogContext.Provider>
     </MDXProvider>
   );
 }

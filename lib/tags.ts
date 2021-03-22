@@ -11,13 +11,16 @@ interface TagCountIface {
   [key: string]: number;
 }
 
-export async function getAllTags() {
-  const files = fs.readdirSync(path.join(root, "src"));
+export async function getAllTags(language: string = "default") {
+  const files = fs.readdirSync(path.join(root, "src", language));
 
   let tagCount: TagCountIface = {};
   // Iterate through each post, putting all found tags into `tags`
   files.forEach(file => {
-    const source = fs.readFileSync(path.join(root, "src", file), "utf8");
+    const source = fs.readFileSync(
+      path.join(root, "src", language, file),
+      "utf8"
+    );
     const data = matter(source).data as FrontMatterIface;
     if (data.tags && data.draft !== true) {
       data.tags.forEach(tag => {

@@ -2,8 +2,8 @@ import Router from "next/router";
 import { MouseEventHandler, useCallback, useEffect, useState } from "react";
 import { Menu, Sidebar } from "semantic-ui-react";
 
-import { Footer } from "./Footer";
-import { Header } from "./Header";
+import { Footer } from "../Footer";
+import { Header } from "../Header";
 
 const LayoutWrapper = ({ children }) => {
   const [visible, setVisible] = useState<boolean>(false);

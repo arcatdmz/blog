@@ -1,22 +1,32 @@
 import { NextSeo, ArticleJsonLd } from "next-seo";
-import { FC } from "react";
+import { FC, useContext } from "react";
 
 import websiteJson from "../website.json";
+import { BlogContext } from "../lib/BlogContext";
 import { PostIface } from "../lib/PostIface";
 
-export const SEO = {
-  title: websiteJson.title,
-  description: websiteJson.description,
+const {
+  locale,
+  title,
+  description,
+  siteUrl,
+  bannerUrl,
+  author
+} = websiteJson.languages.default;
+
+export const DefaultSEOProps = {
+  title,
+  description,
   openGraph: {
     type: "website",
-    locale: websiteJson.language,
-    url: websiteJson.siteUrl,
-    title: websiteJson.title,
-    description: websiteJson.description,
+    locale,
+    url: siteUrl,
+    title,
+    description,
     images: [
       {
-        url: `${websiteJson.siteUrl}${websiteJson.socialBanner}`,
-        alt: websiteJson.title,
+        url: bannerUrl,
+        alt: title,
         width: 1200,
         height: 600
       }
@@ -30,7 +40,7 @@ export const SEO = {
   additionalMetaTags: [
     {
       name: "author",
-      content: websiteJson.author
+      content: author
     }
   ]
 };
@@ -65,24 +75,33 @@ export const BlogSeo: FC<BlogSeoProps> = ({
   images = [],
   coverImage
 }) => {
+  const {
+    imageRoot,
+    bannerUrl,
+    siteUrl,
+    title: siteTitle,
+    author,
+    authorUrl
+  } = useContext(BlogContext);
+
   const publishedAt = new Date(date).toISOString();
   const modifiedAt = new Date(lastmod || date).toISOString();
   let imagesArr =
     images.length === 0
-      ? [websiteJson.socialBanner]
+      ? [bannerUrl]
       : typeof images === "string"
       ? [images]
       : images;
 
   const featuredImages = imagesArr.map(img => {
     return {
-      url: `${websiteJson.siteUrl}${img}`,
+      url: `${siteUrl}${img}`,
       alt: title
     };
   });
   if (coverImage) {
     featuredImages.unshift({
-      url: `${websiteJson.siteUrl}/images/${coverImage}`,
+      url: `${imageRoot}${coverImage}`,
       alt: title
     });
   }
@@ -90,7 +109,7 @@ export const BlogSeo: FC<BlogSeoProps> = ({
   return (
     <>
       <NextSeo
-        title={`${title} – ${websiteJson.title}`}
+        title={`${title} – ${siteTitle}`}
         description={summary}
         canonical={url}
         openGraph={{
@@ -98,7 +117,7 @@ export const BlogSeo: FC<BlogSeoProps> = ({
           article: {
             publishedTime: publishedAt,
             modifiedTime: modifiedAt,
-            authors: [`${websiteJson.siteUrl}/about`],
+            authors: [authorUrl],
             tags
           },
           url,
@@ -114,14 +133,14 @@ export const BlogSeo: FC<BlogSeoProps> = ({
         ]}
       />
       <ArticleJsonLd
-        authorName={websiteJson.author}
+        authorName={author}
         dateModified={publishedAt}
         datePublished={modifiedAt}
         description={summary}
         images={
           (featuredImages && featuredImages.map(image => image.url)) || null
         }
-        publisherName={websiteJson.author}
+        publisherName={author}
         publisherLogo={null}
         title={title}
         url={url}

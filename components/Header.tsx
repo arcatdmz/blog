@@ -1,14 +1,16 @@
 import Link from "next/link";
-import { FC, MouseEventHandler, useCallback } from "react";
+import { FC, MouseEventHandler, useCallback, useContext } from "react";
 import { Icon, Menu } from "semantic-ui-react";
 
-import websiteJson from "../website.json";
+import { BlogContext } from "../lib/BlogContext";
 
 interface HeaderProps {
   onMenuClick?(): void;
 }
 
 const Header: FC<HeaderProps> = ({ onMenuClick }) => {
+  const { language, sitePath, title, authorUrl } = useContext(BlogContext);
+
   const handleMenuClick = useCallback<MouseEventHandler<HTMLAnchorElement>>(
     e => {
       e.preventDefault();
@@ -19,17 +21,19 @@ const Header: FC<HeaderProps> = ({ onMenuClick }) => {
 
   return (
     <Menu fixed="top" id="fixed-menu">
-      <Link href="/">
-        <Menu.Item as="a" href="/">
-          <span className="mobile hidden">{websiteJson.title}</span>
+      <Link href={sitePath}>
+        <Menu.Item as="a" href={sitePath}>
+          <span className="mobile hidden">{title}</span>
           <span className="print-hidden mobile only">
             <Icon name="pencil" />
           </span>
         </Menu.Item>
       </Link>
       <Menu.Menu position="right">
-        <Menu.Item as="a" href="//junkato.jp/ja">
-          <span className="mobile hidden">自己紹介</span>
+        <Menu.Item as="a" href={authorUrl}>
+          <span className="mobile hidden">
+            {language === "ja" ? "自己紹介" : "Portfolio"}
+          </span>
           <span className="print-hidden mobile only">
             <Icon name="user" />
           </span>
@@ -39,7 +43,9 @@ const Header: FC<HeaderProps> = ({ onMenuClick }) => {
           onClick={handleMenuClick}
         >
           <Icon name="sidebar" />
-          <span className="widescreen monitor only">メニュー</span>
+          <span className="widescreen monitor only">
+            {language === "ja" ? "メニュー" : "Menu"}
+          </span>
         </Menu.Item>
       </Menu.Menu>
     </Menu>

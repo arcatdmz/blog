@@ -1,20 +1,23 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 
-import websiteJson from "../website.json";
+import { BlogContext } from "../lib/BlogContext";
 
 interface DateProps {
   value: string | number;
 }
 
-const DateComponent: FC<DateProps> = ({ value }) => (
-  <time dateTime={String(value)}>
-    {new Date(value).toLocaleDateString(websiteJson.locale, {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric"
-    })}
-  </time>
-);
+const DateComponent: FC<DateProps> = ({ value }) => {
+  const { locale } = useContext(BlogContext);
+  return (
+    <time dateTime={String(value)}>
+      {new Date(value).toLocaleDateString(locale, {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      })}
+    </time>
+  );
+};
 
 export { DateComponent as Date };

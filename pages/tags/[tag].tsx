@@ -2,15 +2,12 @@ import fs from "fs";
 import path from "path";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
-import { ListLayout } from "../../components/ListLayout";
-import { PageSeo } from "../../components/SEO";
+import { TaggedPosts } from "../../components/pages/TaggedPosts";
 import { generateRss } from "../../lib/generate-rss";
 import { getAllFilesFrontMatter } from "../../lib/mdx";
 import { PostIface } from "../../lib/PostIface";
 import { getAllTags } from "../../lib/tags";
 import { kebabCase } from "../../lib/utils";
-
-import websiteJson from "../../website.json";
 
 const root = process.cwd();
 
@@ -42,7 +39,9 @@ const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   );
 
   // Write RSS file
-  const rss = generateRss(posts, `tags/${params.tag}/index.xml`);
+  const rss = generateRss(posts, {
+    path: `tags/${params.tag}/index.xml`
+  });
   const rssPath = path.join(root, "public", "tags", tag);
   fs.mkdirSync(rssPath, { recursive: true });
   fs.writeFileSync(path.join(rssPath, "index.xml"), rss);
@@ -50,21 +49,9 @@ const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   return { props: { posts, tag } };
 };
 
-const Tag: NextPage<PageProps> = ({ posts, tag }) => {
-  // Capitalize first letter and convert space to dash
-  const title = tag[0].toUpperCase() + tag.split(" ").join("-").slice(1);
-
-  return (
-    <>
-      <PageSeo
-        title={`${title} - ${websiteJson.title}`}
-        description={`Posts tagged with ${tag} - ${websiteJson.title}`}
-        url={`${websiteJson.siteUrl}/tags/${tag}`}
-      />
-      <ListLayout posts={posts} title={title} />
-    </>
-  );
-};
+const Tag: NextPage<PageProps> = ({ posts, tag }) => (
+  <TaggedPosts posts={posts} tag={tag} />
+);
 
 export { getStaticPaths, getStaticProps };
 export default Tag;

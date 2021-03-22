@@ -2,36 +2,56 @@ import websiteJson from "../website.json";
 
 import { PostIface } from "./PostIface";
 
-const generateRssItem = (post: PostIface) => `
+const generateRssItem = (post: PostIface, language: string) => `
   <item>
-    <guid>${websiteJson.siteUrl}/posts/${post.slug}</guid>
+    <guid>${websiteJson.languages[language].siteUrl}posts/${post.slug}</guid>
     <title>${post.title}</title>
-    <link>${websiteJson.siteUrl}/posts/${post.slug}</link>
+    <link>${websiteJson.languages[language].siteUrl}posts/${post.slug}</link>
     <description>${post.summary}</description>
     <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-    <author>${websiteJson.email} (${websiteJson.author})</author>
+    <author>${websiteJson.languages[language].email} (${
+  websiteJson.languages[language].author
+})</author>
     ${post.tags.map(t => `<category>${t}</category>`).join("")}
   </item>
 `;
 
-const generateRss = (posts: PostIface[], page = "index.xml") => `
+interface RssOptions {
+  path?: string;
+  language?: string;
+}
+
+const generateRss = (
+  posts: PostIface[],
+  { path, language }: RssOptions = {}
+) => {
+  if (!path) {
+    path = "index.xml";
+  }
+  if (!language) {
+    language = "default";
+  }
+  return `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>${websiteJson.title}</title>
-      <link>${websiteJson.siteUrl}</link>
-      <description>${websiteJson.description}</description>
-      <language>${websiteJson.language}</language>
-      <managingEditor>${websiteJson.email} (${
-  websiteJson.author
-})</managingEditor>
-      <webMaster>${websiteJson.email} (${websiteJson.author})</webMaster>
+      <title>${websiteJson.languages[language].title}</title>
+      <link>${websiteJson.languages[language].siteUrl}</link>
+      <description>${websiteJson.languages[language].description}</description>
+      <language>${websiteJson.languages[language]}</language>
+      <managingEditor>${websiteJson.languages[language].email} (${
+    websiteJson.languages[language].author
+  })</managingEditor>
+      <webMaster>${websiteJson.languages[language].email} (${
+    websiteJson.languages[language].author
+  })</webMaster>
       <lastBuildDate>${new Date(posts[0].date).toUTCString()}</lastBuildDate>
       <atom:link href="${
-        websiteJson.siteUrl
-      }/${page}" rel="self" type="application/rss+xml"/>
-      ${posts.map(generateRssItem).join("")}
+        websiteJson.languages[language].siteUrl
+      }${path}" rel="self" type="application/rss+xml"/>
+      ${posts.map(post => generateRssItem(post, language)).join("")}
     </channel>
   </rss>
 `;
+};
 
 export { generateRss };

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FC, Fragment, useMemo } from "react";
+import { FC, Fragment, useContext, useMemo } from "react";
 import {
   Container,
   Divider,
@@ -9,13 +9,13 @@ import {
   Segment
 } from "semantic-ui-react";
 
-import websiteJson from "../website.json";
-import { PostIface } from "../lib/PostIface";
+import { BlogContext } from "../../lib/BlogContext";
+import { PostIface } from "../../lib/PostIface";
 
-import { Date } from "./Date";
-import { PageTitle } from "./PageTitle";
-import { BlogSeo } from "./SEO";
-import { Tag } from "./Tag";
+import { Date } from "../Date";
+import { PageTitle } from "../PageTitle";
+import { BlogSeo } from "../SEO";
+import { Tag } from "../Tag";
 
 interface PostLayoutProps {
   frontMatter: PostIface;
@@ -29,6 +29,7 @@ const PostLayout: FC<PostLayoutProps> = ({
   next,
   prev
 }) => {
+  const { language, siteUrl, sitePath, author } = useContext(BlogContext);
   const { slug, date, title, tags } = frontMatter;
 
   const tagComponents = useMemo(() => {
@@ -36,7 +37,7 @@ const PostLayout: FC<PostLayoutProps> = ({
       return null;
     }
     const elems: JSX.Element[] = [];
-    tags.forEach((tag, i) => {
+    tags.forEach((tag: string, i: number) => {
       elems.push(
         <Tag key={tag} text={tag} />,
         <Fragment key={i}>{", "}</Fragment>
@@ -48,14 +49,14 @@ const PostLayout: FC<PostLayoutProps> = ({
 
   return (
     <Container id="main">
-      <BlogSeo url={`${websiteJson.siteUrl}/posts/${slug}`} {...frontMatter} />
+      <BlogSeo url={`${siteUrl}posts/${slug}`} {...frontMatter} />
       <article>
         <header>
           <PageTitle>{title}</PageTitle>
         </header>
         <List horizontal divided>
           <List.Item>
-            by <strong>{websiteJson.author}</strong>
+            by <strong>{author}</strong>
           </List.Item>
           <List.Item>
             posted on{" "}
@@ -70,7 +71,7 @@ const PostLayout: FC<PostLayoutProps> = ({
         <footer>
           <Menu stackable>
             {prev && (
-              <Link href={`/posts/${prev.slug}`}>
+              <Link href={`${sitePath}posts/${prev.slug}`}>
                 <Menu.Item as="a" href={`/posts/${prev.slug}`}>
                   <Icon name="angle left" />
                   {prev.title}
@@ -88,7 +89,7 @@ const PostLayout: FC<PostLayoutProps> = ({
             <Link href="/">
               <Menu.Item as="a" href="/" position="right">
                 <Icon name="angle up" />
-                ブログのトップへ
+                {language === "ja" ? "ブログのトップへ" : "Blog top page"}
               </Menu.Item>
             </Link>
           </Menu>

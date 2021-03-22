@@ -2,7 +2,6 @@ import fs from "fs";
 import matter from "gray-matter";
 import renderToString from "next-mdx-remote/render-to-string";
 import path from "path";
-import visit from "unist-util-visit";
 
 import { MDXComponents } from "../components/MDXComponents";
 
@@ -11,8 +10,8 @@ import { PostIface } from "./PostIface";
 
 const root = process.cwd();
 
-export async function getFiles() {
-  return fs.readdirSync(path.join(root, "src"));
+export async function getFiles(language: string = "default") {
+  return fs.readdirSync(path.join(root, "src", language));
 }
 
 export function formatSlug(slug: string) {
@@ -25,9 +24,12 @@ export function dateSortDesc(a: number | string, b: number | string) {
   return 0;
 }
 
-export async function getFileBySlug(slug: string) {
-  const mdxPath = path.join(root, "src", `${slug}.mdx`);
-  const mdPath = path.join(root, "src", `${slug}.md`);
+export async function getFileBySlug(
+  slug: string,
+  language: string = "default"
+) {
+  const mdxPath = path.join(root, "src", language, `${slug}.mdx`);
+  const mdPath = path.join(root, "src", language, `${slug}.md`);
   const source = fs.existsSync(mdxPath)
     ? fs.readFileSync(mdxPath, "utf8")
     : fs.readFileSync(mdPath, "utf8");
@@ -56,13 +58,16 @@ export async function getFileBySlug(slug: string) {
   };
 }
 
-export async function getAllFilesFrontMatter() {
-  const files = fs.readdirSync(path.join(root, "src"));
+export async function getAllFilesFrontMatter(language: string = "default") {
+  const files = fs.readdirSync(path.join(root, "src", language));
 
   const allFrontMatter: PostIface[] = [];
 
   files.forEach(file => {
-    const source = fs.readFileSync(path.join(root, "src", file), "utf8");
+    const source = fs.readFileSync(
+      path.join(root, "src", language, file),
+      "utf8"
+    );
     const data = matter(source).data as FrontMatterIface;
     if (data.draft !== true) {
       allFrontMatter.push({ ...data, slug: formatSlug(file) });

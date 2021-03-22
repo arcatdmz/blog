@@ -1,10 +1,28 @@
 {
-  "title": "People are Programmers",
-  "author": "Jun Kato",
-  "email": "i@junkato.jp",
-  "language": "en-US",
-  "locale": "en-US",
-  "description": "hello",
-  "siteUrl": "https://blog.junkato.jp",
-  "socialBanner": null
+  "imageRoot": "https://blog.junkato.jp/images/",
+  "maxPosts": 5,
+  "languages": {
+    "default": {
+      "bannerUrl": null,
+      "siteUrl": "https://blog.junkato.jp/",
+      "sitePath": "/",
+      "locale": "en-US",
+      "title": "People are Programmers",
+      "author": "Jun Kato",
+      "authorUrl": "https://junkato.jp/",
+      "email": "i@junkato.jp",
+      "description": "Dr. Jun Kato's blog on creativity support and programming experience."
+    },
+    "ja": {
+      "bannerUrl": null,
+      "siteUrl": "https://blog.junkato.jp/ja/",
+      "sitePath": "/ja/",
+      "locale": "ja-JP",
+      "title": "People are Programmers",
+      "author": "加藤 淳",
+      "authorUrl": "https://junkato.jp/ja/",
+      "email": "i@junkato.jp",
+      "description": "創作支援、プログラミング体験、そのほか研究開発のことをいろいろ書くブログです。"
+    }
+  }
 }
