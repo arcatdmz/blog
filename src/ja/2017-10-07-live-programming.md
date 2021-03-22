@@ -72,4 +72,4 @@ LIVE に深くかかわる人たちのなかで、明らかに HCI 寄りの研�
 
 ここまで紹介してきたように、Live Programming とそれを取り巻くトピックは研究者の間で年々盛り上がってきていますが、それだけでなく産業界にもインパクトを与えてきています。一研究者としては、今後の盛り上がりにぜひ注目していただければ幸いです。
 
-この他にもより幅広く PX 関係の研究をしているラボなどが知りたい場合は[過去の記事](https://junkato.jp/ja/blog/2013/09/27/devenv-research-labs/)や[Google Docs](https://docs.google.com/document/d/176yfANBFr0txgYJSROFPEdGkPwXhicrP9YZu_bJlgyg/edit)を見てみてください。（私と研究してみたい場合は[こちら](https://junkato.jp/ja/collaborations/)をご参照ください。）
+この他にもより幅広く PX 関係の研究をしているラボなどが知りたい場合は[過去の記事](/ja/posts/2013-09-27-devenv-research-labs)や[Google Docs](https://docs.google.com/document/d/176yfANBFr0txgYJSROFPEdGkPwXhicrP9YZu_bJlgyg/edit)を見てみてください。（私と研究してみたい場合は[こちら](https://junkato.jp/ja/collaborations/)をご参照ください。）

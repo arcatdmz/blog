@@ -16,7 +16,7 @@ summary_generated: >-
 
 今回はフリーテーマということで、つらつらと書いてみたところ、居場所を探す、見つける、新しく作るといったような内容になりました。ご笑覧ください。
 
-インターン当時の詳細な話は「[北京に 4 ヶ月住んだ話（Microsoft Research Asia）](https://junkato.jp/ja/blog/2014/12/12/4-months-in-beijing-microsoft-research-asia/)」「[情報科学系 海外研究インターンのすすめ〔前](https://junkato.jp/ja/blog/2015/06/29/cs-research-internship-abroad/)[・後編〕](https://junkato.jp/ja/blog/2015/06/30/cs-research-internship-abroad-2/)」に詳しく載っているのでそちらにゆずります。あと、ちょうど[樋口さん](https://keihigu.github.io/)、[牛久さん](https://yoshitakaushiku.net/index_ja.html)、[徳田さん](https://ytokuda.github.io/)、[穐山さん](https://www.soramichi.jp/index_j.html)などが Redmond に行っていたのと同じ時期に Adobe に行っています。そのときの苦しみは「[Adobe Research Internship─ または博論執筆の記録](https://junkato.jp/ja/blog/2017/12/08/adobe-research-internship-seattle-and-dissertation/)」に書いてあります。
+インターン当時の詳細な話は「[北京に 4 ヶ月住んだ話（Microsoft Research Asia）](/ja/posts/2014-12-12-4-months-in-beijing-microsoft-research-asia)」「[情報科学系 海外研究インターンのすすめ〔前](/ja/posts/2015-06-29-cs-research-internship-abroad)[・後編〕](/ja/posts/2015-06-30-cs-research-internship-abroad-2)」に詳しく載っているのでそちらにゆずります。あと、ちょうど[樋口さん](https://keihigu.github.io/)、[牛久さん](https://yoshitakaushiku.net/index_ja.html)、[徳田さん](https://ytokuda.github.io/)、[穐山さん](https://www.soramichi.jp/index_j.html)などが Redmond に行っていたのと同じ時期に Adobe に行っています。そのときの苦しみは「[Adobe Research Internship─ または博論執筆の記録](/ja/posts/2017-12-08-adobe-research-internship-seattle-and-dissertation)」に書いてあります。
 
 ## 居場所を探す、見つける
 
@@ -30,7 +30,7 @@ Microsoft Research Asia インターン中に誕生日を迎えた
 
 修士、博士課程の学生にとって、第一の居場所は大学の研究室だと思います。インターンに出ることによって、精神的にも物理的にも第二、第三の居場所ができる、ということが、自分にとっては非常に大きかったと今になって思います。研究室とインターン先は、きわめて対照的でした。アカデミアとインダストリー、HCI/CG と PL/SE、国内と国外、いろいろな軸で異なる文化を体験するなかで、自分の目指す道を探ることができました。
 
-このブログではこれまでにも学生向けに [Student Volunteer](https://junkato.jp/ja/blog/2016/12/22/acm-student-volunteers/), [Student Research Competition](https://junkato.jp/ja/blog/2014/05/04/acm-student-research-competition/), [Doctoral Symposium](https://junkato.jp/ja/blog/2014/07/27/acm-doctoral-symposium-consortium/) などを紹介してきていますが、すべて、国際的な研究コミュニティに参加して居場所を作る切符の入手方法を見せてきているつもりです。これらはきっかけにすぎません。そのあとやっぱりインダストリーに行くとか、国内に留まるといった決断をすることもあるかもしれません。それでも、これを体験せずに修了するにはなかなかに惜しいものと思っておすすめしています。
+このブログではこれまでにも学生向けに [Student Volunteer](/ja/posts/2016-12-22-acm-student-volunteers), [Student Research Competition](/ja/posts/2014-05-04-acm-student-research-competition), [Doctoral Symposium](/ja/posts/2014-07-27-acm-doctoral-symposium-consortium) などを紹介してきていますが、すべて、国際的な研究コミュニティに参加して居場所を作る切符の入手方法を見せてきているつもりです。これらはきっかけにすぎません。そのあとやっぱりインダストリーに行くとか、国内に留まるといった決断をすることもあるかもしれません。それでも、これを体験せずに修了するにはなかなかに惜しいものと思っておすすめしています。
 
 ## 居場所を新しく作る
 

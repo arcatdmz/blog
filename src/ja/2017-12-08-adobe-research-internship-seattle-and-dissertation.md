@@ -11,7 +11,7 @@ summary_generated: >-
   Asia）などを書いてきましたが、シアトルに 3 ヶ月住んだ話（Adobe Research）は書けていませんでした。なぜなら、端的に言うと...
 ---
 
-これまでにも[情報科学系 海外研究インターンのすすめ〔前編〕](https://junkato.jp/ja/blog/2015/06/29/cs-research-internship-abroad/)・[〔後編〕](https://junkato.jp/ja/blog/2015/06/30/cs-research-internship-abroad-2/)や[北京に 4 ヶ月住んだ話（Microsoft Research Asia）](https://junkato.jp/ja/blog/2014/12/12/4-months-in-beijing-microsoft-research-asia/)などを書いてきましたが、シアトルに 3 ヶ月住んだ話（Adobe Research）は書けていませんでした。なぜなら、端的に言うと、この研究インターンは失敗だったためです。もう今更のことだし楽しかったし後悔はしてないのですが、客観的に見て明らかに失敗でした。
+これまでにも[情報科学系 海外研究インターンのすすめ〔前編〕](/ja/posts/2015-06-29-cs-research-internship-abroad)・[〔後編〕](/ja/posts/2015-06-30-cs-research-internship-abroad-2)や[北京に 4 ヶ月住んだ話（Microsoft Research Asia）](/ja/posts/2014-12-12-4-months-in-beijing-microsoft-research-asia)などを書いてきましたが、シアトルに 3 ヶ月住んだ話（Adobe Research）は書けていませんでした。なぜなら、端的に言うと、この研究インターンは失敗だったためです。もう今更のことだし楽しかったし後悔はしてないのですが、客観的に見て明らかに失敗でした。
 
 というわけで、[研究留学 Advent Calendar 2017](https://adventar.org/calendars/2562)にかこつけて、よかったこと…だけでなく、こういうのはやめたほうがいいよ！という失敗談を提供したいと思います。下の写真は Adobe Research Seattle の中庭です。橋のたもとで水と緑、日差しに恵まれたすばらしい景色ですね。うらやましいですか？…最後まで読んでみてから、ご判断ください。
 
@@ -22,7 +22,7 @@ summary_generated: >-
 
 ## 私「ファンです」
 
-どんな失敗も始まりの時点ではどうなるか分からないものです。この研究インターンも例に漏れず、むしろきっかけ作りのところは最もうまくいったと思っています。[海外研究インターンのすすめ](https://junkato.jp/ja/blog/2015/06/29/cs-research-internship-abroad/)でも触れていますが、インターンのきっかけは人づてにお願いして作ってもらうのが最も多い…気がします。一方、この Adobe Research に行くきっかけは自分で作ることができました。それは、[DejaVu](https://junkato.jp/ja/dejavu/)という統合開発環境（IDE）の研究を発表した Human-Computer Interaction 分野のトップ国際会議[ACM UIST 2012](https://uist.acm.org/uist2012/)でのことでした。2012 年 10 月ですね。
+どんな失敗も始まりの時点ではどうなるか分からないものです。この研究インターンも例に漏れず、むしろきっかけ作りのところは最もうまくいったと思っています。[海外研究インターンのすすめ](/ja/posts/2015-06-29-cs-research-internship-abroad)でも触れていますが、インターンのきっかけは人づてにお願いして作ってもらうのが最も多い…気がします。一方、この Adobe Research に行くきっかけは自分で作ることができました。それは、[DejaVu](https://junkato.jp/ja/dejavu/)という統合開発環境（IDE）の研究を発表した Human-Computer Interaction 分野のトップ国際会議[ACM UIST 2012](https://uist.acm.org/uist2012/)でのことでした。2012 年 10 月ですね。
 
 [Joel Brandt](http://joelbrandt.com/cv/)という、Stanford 大の[Scott Klemmer](https://d.ucsd.edu/srk/)（現 UCSD）の下で博士号を取って Adobe Research に就職し、Adobe の[Brackets](http://brackets.io/)という IDE に実装された[Blueprint](http://www.joelbrandt.org/publications/brandt_chi2010_example_centric_programming.pdf) [CHI '10]や[Theseus](http://www.joelbrandt.org/publications/lieber_chi2014_always-on_programming_visualizations.pdf) [CHI '14]などの機能を研究開発した研究者がいます。Joel のことは DejaVu の研究をするときに色々調べて知っていたので、UIST で会えたらいいなと思っていました。
 
@@ -40,7 +40,7 @@ summary_generated: >-
 
 7 月、インターン直前にインターン期間についての議論がありました。実は私は、2013 年度が博士の最終年度（見込み）でした。当時、2013 年の夏は博士論文執筆のハイシーズンだったのです。この記事を書いている私は、2014 年 3 月に博士号を無事取得できたことが確定している世界線にいるので、文章も落ち着いてタイピングできています。それでも冷や汗がにじむような緊張感があります。
 
-米企業のよくある研究インターンは、アメリカの大学院の夏季休暇に合わせて 7-9 月ですが、これが論文執筆期間ともろにかぶっていたわけです。さらに、10 月の UIST 2013 で[Doctoral Symposium](https://junkato.jp/ja/blog/2014/07/27/acm-doctoral-symposium-consortium/)に参加することが決まっていました。そこで、Adobe 研究者と指導教官と相談して以下のオプションを検討しました。
+米企業のよくある研究インターンは、アメリカの大学院の夏季休暇に合わせて 7-9 月ですが、これが論文執筆期間ともろにかぶっていたわけです。さらに、10 月の UIST 2013 で[Doctoral Symposium](/ja/posts/2014-07-27-acm-doctoral-symposium-consortium)に参加することが決まっていました。そこで、Adobe 研究者と指導教官と相談して以下のオプションを検討しました。
 
 **Option (a)** 博論執筆終了させて UIST 2013 後にインターン
 
@@ -72,7 +72,7 @@ UIST は 10 月頭から一週間なので、そこから 3 か月だと、博�
   <figcaption>博士論文ページ数の推移</figcaption>
 </figure>
 
-10 月、インターンでは、進捗はありつつも今一つブレークスルーがないといった感じでした。また、一週間弱エジンバラへ出張して UIST 2013 [Doctoral Symposium](https://junkato.jp/ja/blog/2014/07/27/acm-doctoral-symposium-consortium/)で博論の概要を話し、概ね方針としては大丈夫そうだというお墨付きを得ますが、やはり進捗が芳しくない…この頃からもう完全にインターンより博論のほうが重大事になってきました。
+10 月、インターンでは、進捗はありつつも今一つブレークスルーがないといった感じでした。また、一週間弱エジンバラへ出張して UIST 2013 [Doctoral Symposium](/ja/posts/2014-07-27-acm-doctoral-symposium-consortium)で博論の概要を話し、概ね方針としては大丈夫そうだというお墨付きを得ますが、やはり進捗が芳しくない…この頃からもう完全にインターンより博論のほうが重大事になってきました。
 
 ただ、そんな中でもちょっと無理をして Human-Computer Interaction 分野の名門 University of Washington (UW)の DUB (Design, Use, Build) Seminar で発表をさせてもらったのは非常によい経験でした。ちょっと記憶があいまいですが、UW の[Andy Ko](http://faculty.washington.edu/ajko/)という非常に尊敬している教授に連絡を取ったら機会をくれたような覚えがあります。このときの動画は[多少編集が荒いですが Vimeo に上がっていて、今でも見ることができます](https://vimeo.com/77669396)。（ちなみに、私の研究に興味のある方はぜひ[今秋 CMU で講演した際の最新の動画のほうをご覧ください](https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fd1c36b4-c0ad-49ef-b50c-aab0e5fa36b7)。）
 

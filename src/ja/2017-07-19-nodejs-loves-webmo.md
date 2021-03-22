@@ -10,7 +10,7 @@ summary_generated: >-
   で実行するとエラーが起きます。エラーを直して本家に pull request を送ろう...
 ---
 
-[昨日の記事](https://junkato.jp/ja/blog/2017/07/19/webmo/)でも紹介した[Webmo](http://webmo.io/)は JavaScript で簡単に操作できることがウリですが、現状用意されているライブラリはブラウザ上で動作することを前提に設計されており、Node.js で実行するとエラーが起きます。
+[昨日の記事](/ja/posts/2017-07-19-webmo)でも紹介した[Webmo](http://webmo.io/)は JavaScript で簡単に操作できることがウリですが、現状用意されているライブラリはブラウザ上で動作することを前提に設計されており、Node.js で実行するとエラーが起きます。
 
 エラーを直して本家に pull request を送ろうと思っていたのですが、そう簡単ではなかったので、Node.js 用に移植した新しい npm パッケージ [webmo-client-nodejs](https://www.npmjs.com/package/webmo-client-nodejs) を作って公開しました。
 

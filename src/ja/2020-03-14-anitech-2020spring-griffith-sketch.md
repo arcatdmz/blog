@@ -10,7 +10,7 @@ summary_generated: >-
   を作り、絵コンテ制作支援ツール「Griffith」を開発しています。2018 年秋からは半年に一度の技術書の祭典「技術書典」をスポンサーしつつ、20...
 ---
 
-[アーチで技術顧問の仕事を始めて](https://junkato.jp/ja/blog/2018/07/09/arch-inc-technical-advisor/)早 1 年半が過ぎました。表に出ている仕事としては、研究開発チーム [Arch Research](https://research.archinc.jp/) を作り、絵コンテ制作支援ツール「[Griffith](https://research.archinc.jp/griffith/)」を開発しています。2018 年秋からは半年に一度の技術書の祭典「[技術書典](https://techbookfest.org/)」をスポンサーしつつ、2019 年春からは毎回「[アニメ技術](https://research.archinc.jp/anitech/)」を刊行しています。
+[アーチで技術顧問の仕事を始めて](/ja/posts/2018-07-09-arch-inc-technical-advisor)早 1 年半が過ぎました。表に出ている仕事としては、研究開発チーム [Arch Research](https://research.archinc.jp/) を作り、絵コンテ制作支援ツール「[Griffith](https://research.archinc.jp/griffith/)」を開発しています。2018 年秋からは半年に一度の技術書の祭典「[技術書典](https://techbookfest.org/)」をスポンサーしつつ、2019 年春からは毎回「[アニメ技術](https://research.archinc.jp/anitech/)」を刊行しています。
 
 3 月 1 日には[技術書典 8](https://techbookfest.org/event/tbf08/circle/5768522244292608)で新刊「アニメ技術 2020 春」を頒布する予定だったのですが、COVID-19 の影響で中止になってしまいました。新刊は、その代わり急遽 3 月 7 日から 4 月 5 日までオンライン開催となった技術書典 応援祭で頒布しています。ぜひ[技術書典 Web サイトから入手](https://techbookfest.org/product/5748798303240192)してください!!（品切れしていた既刊も[同サイトから頒布](https://techbookfest.org/market/search?q=%22%E3%82%A2%E3%83%BC%E3%83%81%E6%8A%80%E8%A1%93%E9%83%A8%22)しています）
 
