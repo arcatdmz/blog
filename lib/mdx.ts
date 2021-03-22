@@ -41,7 +41,8 @@ export async function getFileBySlug(
       remarkPlugins: [
         require("remark-slug"),
         require("remark-autolink-headings"),
-        require("remark-code-titles")
+        require("remark-code-titles"),
+        [require("remark-oembed"), { syncWidget: true }]
       ],
       rehypePlugins: [require("@mapbox/rehype-prism")]
     }
