@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { useContext } from "react";
 
 import websiteJson from "../../website.json";
 import { IndexPosts } from "../../components/pages/IndexPosts";
@@ -32,11 +33,13 @@ const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
 };
 
 const Home: NextPage<PageProps> = ({ posts, language }) => {
+  const currentContext = useContext(BlogContext);
   const filteredPosts = posts && posts.slice(0, websiteJson.maxPosts);
 
   return (
     <BlogContext.Provider
       value={{
+        ...currentContext,
         language,
         ...websiteJson.languages[language]
       }}

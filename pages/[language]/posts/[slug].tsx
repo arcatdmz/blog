@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { useContext } from "react";
 
 import websiteJson from "../../../website.json";
 import { Post, PostProps } from "../../../components/pages/Post";
@@ -56,9 +57,12 @@ const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
 };
 
 const PostPage: NextPage<PageProps> = ({ post, prev, next, language }) => {
+  const currentContext = useContext(BlogContext);
+
   return (
     <BlogContext.Provider
       value={{
+        ...currentContext,
         language,
         ...websiteJson.languages[language]
       }}
