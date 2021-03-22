@@ -14,7 +14,7 @@ interface IndexPostsPageProps {
 }
 
 const IndexPosts: FC<IndexPostsPageProps> = ({ posts }) => {
-  const { title, description, siteUrl, language, maxPosts } = useContext(
+  const { title, description, siteUrl, sitePath, language } = useContext(
     BlogContext
   );
   return (
@@ -25,21 +25,17 @@ const IndexPosts: FC<IndexPostsPageProps> = ({ posts }) => {
         title={language === "ja" ? "最新の投稿 5 件" : "Latest 5 posts"}
         searchEnabled={false}
       >
-        {posts.length > maxPosts && (
-          <>
-            <Divider />
-            <footer>
-              <Menu stackable>
-                <Link href="/posts">
-                  <Menu.Item as="a" href="/posts" position="right">
-                    <Icon name="angle down" />
-                    {language === "ja" ? "すべての投稿を見る" : "See all posts"}
-                  </Menu.Item>
-                </Link>
-              </Menu>
-            </footer>
-          </>
-        )}
+        <Divider />
+        <footer>
+          <Menu stackable>
+            <Link href={`${sitePath}posts`}>
+              <Menu.Item as="a" href={`${sitePath}posts`} position="right">
+                <Icon name="angle down" />
+                {language === "ja" ? "すべての投稿を見る" : "See all posts"}
+              </Menu.Item>
+            </Link>
+          </Menu>
+        </footer>
       </ListLayout>
     </BaseLayout>
   );
