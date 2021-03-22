@@ -4,18 +4,7 @@ import matter from "gray-matter";
 import renderToString from "next-mdx-remote/render-to-string.js";
 import HTML from "html-parse-stringify";
 
-const root = process.cwd();
-
-const config = [
-  {
-    dir: path.join(root, "src", "ja"),
-    summaryLength: 140
-  },
-  {
-    dir: path.join(root, "src", "default"),
-    summaryLength: 70
-  }
-];
+import config from "./config.mjs";
 
 const toString = node => {
   if (node.type === "text") {
