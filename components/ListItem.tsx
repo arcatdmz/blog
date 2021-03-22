@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FC, useContext } from "react";
-import { List, Segment } from "semantic-ui-react";
+import { Grid, Image, List, Segment } from "semantic-ui-react";
 
 import { BlogContext } from "../lib/BlogContext";
 import { PostIface } from "../lib/PostIface";
@@ -14,12 +14,13 @@ const ListItem: FC<PostIface> = ({
   title,
   summary,
   summary_generated,
-  tags
+  tags,
+  coverImage
 }) => {
-  const { sitePath } = useContext(BlogContext);
+  const { sitePath, imageRoot } = useContext(BlogContext);
   const body = summary || summary_generated;
-  return (
-    <Segment as="article">
+  const main = (
+    <>
       <List.Header as="h2">
         <Link href={`${sitePath}posts/${slug}`}>
           <a>{title}</a>
@@ -34,6 +35,20 @@ const ListItem: FC<PostIface> = ({
           <List.Item key={tag}>{<Tag text={tag} />}</List.Item>
         ))}
       </List>
+    </>
+  );
+  return (
+    <Segment as="article">
+      {coverImage ? (
+        <Grid stackable columns={2}>
+          <Grid.Column width={11}>{main}</Grid.Column>
+          <Grid.Column width={5}>
+            <Image src={`${imageRoot}${coverImage}`} fluid rounded bordered />
+          </Grid.Column>
+        </Grid>
+      ) : (
+        main
+      )}
     </Segment>
   );
 };

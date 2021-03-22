@@ -44,22 +44,36 @@ const PostLayout: FC<PostLayoutProps> = ({
       );
     });
     elems.pop();
-    return <List.Item>filed under {elems}</List.Item>;
+    return (
+      <List.Item>
+        {language === "ja" ? "カテゴリ: " : "filed under "}
+        {elems}
+      </List.Item>
+    );
   }, [tags]);
+
+  const url = `${siteUrl}posts/${slug}`;
 
   return (
     <Container id="main">
-      <BlogSeo url={`${siteUrl}posts/${slug}`} {...frontMatter} />
+      <BlogSeo url={url} {...frontMatter} />
       <article>
         <header>
           <PageTitle>{title}</PageTitle>
+          <p>
+            <small>
+              {language === "ja" ? "パーマリンク: " : "Permalink: "}
+              <a href={url}>{url}</a>
+            </small>
+          </p>
         </header>
         <List horizontal divided>
           <List.Item>
-            by <strong>{author}</strong>
+            {language === "ja" ? "投稿者: " : "by "}
+            <strong>{author}</strong>
           </List.Item>
           <List.Item>
-            posted on{" "}
+            {language === "ja" ? "投稿日: " : "posted on "}
             <strong>
               <Date value={date} />
             </strong>
