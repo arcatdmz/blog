@@ -9,7 +9,8 @@
     "build": "next build",
     "export": "next export",
     "download": "cd public && fetch-github-release arcatdmz arcatdmz.github.io",
-    "prettify": "prettier --write ./{components,lib,pages}/**/*.{ts,tsx}"
+    "prettify": "prettier --write ./{components,lib,pages}/**/*.{ts,tsx}",
+    "src:summarize": "node scripts/add-summary.mjs"
   },
   "repository": {
     "type": "git",
@@ -45,6 +46,7 @@
     "@terascope/fetch-github-release": "^0.7.6",
     "@types/node": "^14.14.35",
     "@types/react": "^17.0.3",
+    "html-parse-stringify": "^2.0.3",
     "next-remote-watch": "^0.3.0",
     "prettier": "^2.2.1",
     "typescript": "^4.2.3"
