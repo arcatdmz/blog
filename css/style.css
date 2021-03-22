@@ -74,3 +74,11 @@ article.post-item > header {
 article.post-item > .meta > .item {
   line-height: 1.2em !important;
 }
+article.post-item > footer > .menu > .item {
+  max-width: 35%;
+}
+@media only screen and (max-width: 767.98px) {
+  article.post-item > footer > .menu > .item {
+    max-width: initial;
+  }
+}
