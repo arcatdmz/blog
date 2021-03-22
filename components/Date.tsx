@@ -11,7 +11,7 @@ const DateComponent: FC<DateProps> = ({ value }) => {
   return (
     <time dateTime={String(value)}>
       {new Date(value).toLocaleDateString(locale, {
-        weekday: "long",
+        weekday: "short",
         year: "numeric",
         month: "long",
         day: "numeric"
