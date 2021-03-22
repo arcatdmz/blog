@@ -8,8 +8,10 @@ import websiteJson from "../website.json";
 import { MDXComponents } from "../components/MDXComponents";
 import { DefaultSEOProps } from "../components/SEO";
 import { BlogContext } from "../lib/BlogContext";
+import { useTypeSquareJS } from "../lib/useTypeSquareJS";
 
 export default function App({ Component, pageProps }) {
+  useTypeSquareJS();
   return (
     <MDXProvider components={MDXComponents}>
       <BlogContext.Provider
