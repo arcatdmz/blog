@@ -5,7 +5,7 @@ import { FC } from "react";
 import { PostIface } from "../../lib/PostIface";
 
 import { MDXComponents } from "../MDXComponents";
-import { LayoutWrapper } from "../layouts/LayoutWrapper";
+import { BaseLayout } from "../layouts/BaseLayout";
 import { NotFoundLayout } from "../layouts/NotFoundLayout";
 import { PostLayout } from "../layouts/PostLayout";
 
@@ -24,7 +24,7 @@ export const Post: FC<PostProps> = ({ post, prev, next }) => {
     components: MDXComponents
   });
   return (
-    <LayoutWrapper>
+    <BaseLayout>
       {frontMatter.draft !== true ? (
         <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
           {content}
@@ -32,6 +32,6 @@ export const Post: FC<PostProps> = ({ post, prev, next }) => {
       ) : (
         <NotFoundLayout />
       )}
-    </LayoutWrapper>
+    </BaseLayout>
   );
 };

@@ -5,7 +5,7 @@ import { Divider, Icon, Menu } from "semantic-ui-react";
 import { BlogContext } from "../../lib/BlogContext";
 import { PostIface } from "../../lib/PostIface";
 
-import { LayoutWrapper } from "../layouts/LayoutWrapper";
+import { BaseLayout } from "../layouts/BaseLayout";
 import { ListLayout } from "../layouts/ListLayout";
 import { PageSeo } from "../SEO";
 
@@ -18,7 +18,7 @@ const IndexPosts: FC<IndexPostsPageProps> = ({ posts }) => {
     BlogContext
   );
   return (
-    <LayoutWrapper>
+    <BaseLayout>
       <PageSeo title={title} description={description} url={siteUrl} />
       <ListLayout
         posts={posts}
@@ -41,7 +41,7 @@ const IndexPosts: FC<IndexPostsPageProps> = ({ posts }) => {
           </>
         )}
       </ListLayout>
-    </LayoutWrapper>
+    </BaseLayout>
   );
 };
 

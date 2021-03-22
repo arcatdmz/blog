@@ -4,7 +4,7 @@ import { BlogContext } from "../../lib/BlogContext";
 import { PostIface } from "../../lib/PostIface";
 
 import { PageSeo } from "../SEO";
-import { LayoutWrapper } from "../layouts/LayoutWrapper";
+import { BaseLayout } from "../layouts/BaseLayout";
 import { ListLayout } from "../layouts/ListLayout";
 
 interface PostsProps {
@@ -21,14 +21,14 @@ const TaggedPosts: FC<PostsProps> = ({ posts, tag }) => {
   const title = tag[0].toUpperCase() + tag.split(" ").join("-").slice(1);
 
   return (
-    <LayoutWrapper>
+    <BaseLayout>
       <PageSeo
         title={`${text}"${tag}" - ${blog.title}`}
         description={blog.description}
         url={blog.siteUrl}
       />
       <ListLayout posts={posts} title={`${text}"${tag}"`} />
-    </LayoutWrapper>
+    </BaseLayout>
   );
 };
 
