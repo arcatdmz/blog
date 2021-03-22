@@ -1,3 +1,26 @@
+body {
+  background: #1b1c1d !important;
+}
+
+body .pushable > .pusher > main {
+  background: #fff;
+  padding-bottom: 1.5rem;
+}
+
+.pushable,
+.pushable > .pusher {
+  min-height: 100vh;
+}
+
+body .pushable > .pusher > footer {
+  margin-top: 0;
+  padding: 1.5rem 0 5rem 0;
+}
+
+body .pushable > .pusher > footer .ui.horizontal.list > .item {
+  line-height: 1.2em !important;
+}
+
 figure > figcaption,
 .remark-code-title {
   padding: 0.2em;
@@ -23,14 +46,5 @@ article.post-item > header {
   margin-bottom: 0.3em;
 }
 article.post-item > .meta > .item {
-  line-height: 1.2em !important;
-}
-
-.pushable,
-.pushable > .pusher {
-  min-height: 100vh;
-}
-
-footer .ui.horizontal.list > .item {
   line-height: 1.2em !important;
 }

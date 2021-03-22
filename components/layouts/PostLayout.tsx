@@ -75,8 +75,8 @@ const PostLayout: FC<PostLayoutProps> = ({
           {tagComponents}
         </List>
         <Segment.Group>
-          <Segment attached="top">{children}</Segment>
-          <Segment secondary attached="bottom" size="small">
+          <Segment>{children}</Segment>
+          <Segment secondary size="small">
             <p>
               {language === "ja" ? "パーマリンク: " : "Permalink: "}
               <a href={url}>{url}</a>

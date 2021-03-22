@@ -1,9 +1,19 @@
 import Link from "next/link";
 import { FC, useContext } from "react";
-import { Divider, Icon, Menu } from "semantic-ui-react";
+import {
+  Divider,
+  Grid,
+  Header,
+  Icon,
+  List,
+  Menu,
+  Segment
+} from "semantic-ui-react";
 
 import { BlogContext } from "../../lib/BlogContext";
 import { PostIface } from "../../lib/PostIface";
+import { About } from "../contents/About";
+import { PostsForStudents } from "../contents/PostsForStudents";
 
 import { BaseLayout } from "../layouts/BaseLayout";
 import { ListLayout } from "../layouts/ListLayout";
@@ -18,11 +28,38 @@ const IndexPosts: FC<IndexPostsPageProps> = ({ posts }) => {
     BlogContext
   );
   return (
-    <BaseLayout>
+    <BaseLayout showFooterMeta={false}>
       <PageSeo title={title} description={description} url={siteUrl} />
       <ListLayout
         posts={posts}
-        title={language === "ja" ? "最新の投稿 5 件" : "Latest 5 posts"}
+        header={
+          language === "ja" ? (
+            <>
+              <Grid columns={2}>
+                <Grid.Column width={10}>
+                  <Header as="h1">{title}</Header>
+                  <About />
+                </Grid.Column>
+                <Grid.Column width={6}>
+                  <Segment>
+                    <PostsForStudents size="mini" />
+                  </Segment>
+                </Grid.Column>
+              </Grid>
+              <Header as="h2" dividing>
+                最新の投稿 5 件
+              </Header>
+            </>
+          ) : (
+            <>
+              <Header as="h1">{title}</Header>
+              <About />
+              <Header as="h2" dividing>
+                Latest 5 posts
+              </Header>
+            </>
+          )
+        }
         searchEnabled={false}
       >
         <Divider />

@@ -1,11 +1,17 @@
-import Router from "next/router";
-import { MouseEventHandler, useCallback, useEffect, useState } from "react";
+import { FC, MouseEventHandler, useCallback, useState } from "react";
 import { Menu, Sidebar } from "semantic-ui-react";
 
 import { Footer } from "../Footer";
 import { Header } from "../Header";
 
-const BaseLayout = ({ children }) => {
+interface BaseLayoutProps {
+  showFooterMeta?: boolean;
+}
+
+const BaseLayout: FC<BaseLayoutProps> = ({
+  showFooterMeta = true,
+  children
+}) => {
   const [visible, setVisible] = useState<boolean>(false);
 
   const handleMenuClick = useCallback(() => {
@@ -40,7 +46,7 @@ const BaseLayout = ({ children }) => {
           onClick={handlePusherClick}
         >
           <main id="body">{children}</main>
-          <Footer />
+          <Footer showMeta={showFooterMeta} />
         </Sidebar.Pusher>
       </Sidebar.Pushable>
     </>

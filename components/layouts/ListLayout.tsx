@@ -1,22 +1,33 @@
-import { ChangeEvent, FC, useCallback, useMemo, useState } from "react";
+import {
+  ChangeEvent,
+  FC,
+  useCallback,
+  useContext,
+  useMemo,
+  useState
+} from "react";
 import { Container, Form, Header, Segment } from "semantic-ui-react";
 
+import { BlogContext } from "../../lib/BlogContext";
 import { PostIface } from "../../lib/PostIface";
 
 import { ListItem } from "../ListItem";
 
 interface ListLayoutProps {
   posts: PostIface[];
-  title: string;
+  title?: string;
+  header?: JSX.Element | JSX.Element[];
   searchEnabled?: boolean;
 }
 
 const ListLayout: FC<ListLayoutProps> = ({
   posts,
   title,
+  header,
   searchEnabled = true,
   children
 }) => {
+  const { language } = useContext(BlogContext);
   const [searchValue, setSearchValue] = useState("");
 
   const filteredPosts = useMemo<PostIface[]>(() => {
@@ -39,14 +50,29 @@ const ListLayout: FC<ListLayoutProps> = ({
 
   return (
     <Container id="main">
-      <Header as="h1">{title}</Header>
+      {header || <Header as="h1">{title}</Header>}
       {searchEnabled && (
         <Form>
-          <Form.Input type="text" onChange={handleChange} icon="search" />
+          <Form.Input
+            type="text"
+            onChange={handleChange}
+            icon="search"
+            placeholder={
+              language === "ja"
+                ? "検索キーワードを入力"
+                : "Input search keywords"
+            }
+          />
         </Form>
       )}
       {!filteredPosts.length && (
-        <Segment content="記事が見つかりませんでした。" />
+        <Segment
+          content={
+            language === "ja"
+              ? "記事が見つかりませんでした。"
+              : "No posts found."
+          }
+        />
       )}
       {filteredPosts.map(frontMatter => {
         return <ListItem {...frontMatter} key={frontMatter.slug} />;
