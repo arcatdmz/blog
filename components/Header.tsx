@@ -38,6 +38,12 @@ const Header: FC<HeaderProps> = ({ onMenuClick }) => {
             <Icon name="user" />
           </span>
         </Menu.Item>
+        <Menu.Item as="a" href={language === "ja" ? "/" : "/ja"}>
+          <Icon name="translate" />
+          <span className="mobile hidden">
+            {language === "ja" ? "English" : "日本語"}
+          </span>
+        </Menu.Item>
         <Menu.Item
           className="print-hidden sidebar-button"
           onClick={handleMenuClick}
