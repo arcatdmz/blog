@@ -30,3 +30,7 @@ article.post-item > .meta > .item {
 .pushable > .pusher {
   min-height: 100vh;
 }
+
+footer .ui.horizontal.list > .item {
+  line-height: 1.2em !important;
+}
