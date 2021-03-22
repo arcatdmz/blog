@@ -1,6 +1,6 @@
 ---
 title: Intel Edisonで新しいセンサ・アクチュエータを使うためのドライバ開発
-date: '2015-10-24'
+date: "2015-10-24"
 tags:
   - programming
 coverImage: DSC09957.jpg

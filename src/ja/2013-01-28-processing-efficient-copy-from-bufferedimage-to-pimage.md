@@ -1,6 +1,6 @@
 ---
 title: Processingでメモリ消費を抑えてBufferedImageの内容をPImageにコピーする
-date: '2013-01-28'
+date: "2013-01-28"
 tags:
   - java
   - processing

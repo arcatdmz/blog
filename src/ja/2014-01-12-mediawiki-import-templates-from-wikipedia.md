@@ -1,6 +1,6 @@
 ---
 title: Wikipediaのテンプレートを自前のMediaWikiに追加した
-date: '2014-01-12'
+date: "2014-01-12"
 tags:
   - programming
   - server

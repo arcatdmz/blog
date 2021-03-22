@@ -1,6 +1,6 @@
 ---
 title: つくば横の会に登壇しました
-date: '2016-06-20'
+date: "2016-06-20"
 tags:
   - discussion
   - research

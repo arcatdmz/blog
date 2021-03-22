@@ -1,6 +1,6 @@
 ---
 title: ACM CHI2015 参加のすすめ
-date: '2015-03-01'
+date: "2015-03-01"
 tags:
   - research
 coverImage: chi2015-japan-postcard.jpg

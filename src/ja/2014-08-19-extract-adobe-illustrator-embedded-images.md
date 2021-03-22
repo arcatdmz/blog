@@ -1,6 +1,6 @@
 ---
 title: Adobe Illustratorのaiファイルに埋め込まれた画像を抽出する
-date: '2014-08-19'
+date: "2014-08-19"
 tags:
   - design
 coverImage: adobe-illustrator-link-panel.png

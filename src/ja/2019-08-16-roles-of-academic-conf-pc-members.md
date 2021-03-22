@@ -1,6 +1,6 @@
 ---
 title: 国際会議プログラム委員のお仕事
-date: '2019-08-16'
+date: "2019-08-16"
 tags:
   - research
 coverImage: IMG_20190620_084432_1.jpg

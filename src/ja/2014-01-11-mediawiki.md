@@ -1,6 +1,6 @@
 ---
 title: MediaWikiの多言語対応を調べた
-date: '2014-01-11'
+date: "2014-01-11"
 tags:
   - programming
   - server

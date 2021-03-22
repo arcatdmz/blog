@@ -1,6 +1,6 @@
 ---
 title: Windows 10 Mobile端末(NuAns NEO)を買った
-date: '2016-02-11'
+date: "2016-02-11"
 tags:
   - life
 coverImage: DSC_0789.jpg

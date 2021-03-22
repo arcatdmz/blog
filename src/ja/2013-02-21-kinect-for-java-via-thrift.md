@@ -1,6 +1,6 @@
 ---
 title: ThriftでJavaからC#サーバのKinectを使う
-date: '2013-02-21'
+date: "2013-02-21"
 tags:
   - java
   - programming

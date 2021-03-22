@@ -1,6 +1,6 @@
 ---
 title: Adobe Research Internship─または博論執筆の記録
-date: '2017-12-08'
+date: "2017-12-08"
 tags:
   - life
   - research

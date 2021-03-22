@@ -1,6 +1,6 @@
 ---
 title: Alan Kayの研究所が転籍する節目に立ち会う (SAP CDG→YCR HARC)
-date: '2016-05-17'
+date: "2016-05-17"
 tags:
   - discussion
   - research

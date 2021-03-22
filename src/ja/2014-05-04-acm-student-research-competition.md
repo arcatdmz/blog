@@ -1,6 +1,6 @@
 ---
 title: ACM Student Research Competition参加のすすめ
-date: '2014-05-04'
+date: "2014-05-04"
 tags:
   - research
   - student

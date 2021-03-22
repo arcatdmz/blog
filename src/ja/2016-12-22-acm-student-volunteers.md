@@ -1,6 +1,6 @@
 ---
 title: 国際会議Student Volunteerのすすめ
-date: '2016-12-22'
+date: "2016-12-22"
 tags:
   - research
   - student

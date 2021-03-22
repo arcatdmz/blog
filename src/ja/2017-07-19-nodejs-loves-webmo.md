@@ -1,6 +1,6 @@
 ---
 title: WebmoをNode.jsから使う
-date: '2017-07-19'
+date: "2017-07-19"
 tags:
   - programming
 coverImage: webmo.jpg

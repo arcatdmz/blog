@@ -1,6 +1,6 @@
 ---
 title: Live Programmingについて (LIVE 2017で基調講演します)
-date: '2017-10-07'
+date: "2017-10-07"
 tags:
   - research
   - sigpx

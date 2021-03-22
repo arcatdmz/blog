@@ -1,6 +1,6 @@
 ---
 title: OpenCVをJavaから使う
-date: '2012-11-04'
+date: "2012-11-04"
 tags:
   - programming
 summary_generated: >-

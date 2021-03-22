@@ -1,6 +1,6 @@
 ---
 title: Bootstrap 3ベースのWordPressテーマをLESSで編集する
-date: '2014-02-25'
+date: "2014-02-25"
 tags:
   - design
   - programming

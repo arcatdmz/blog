@@ -1,6 +1,6 @@
 ---
-title: '[2014年版] Amazonでいくら使った？'
-date: '2014-11-12'
+title: "[2014年版] Amazonでいくら使った？"
+date: "2014-11-12"
 tags:
   - life
   - programming

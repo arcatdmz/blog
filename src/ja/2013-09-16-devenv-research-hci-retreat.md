@@ -1,6 +1,6 @@
 ---
 title: “開発環境の研究”とは？ / HCI編 補遺
-date: '2013-09-16'
+date: "2013-09-16"
 tags:
   - research
   - sigpx

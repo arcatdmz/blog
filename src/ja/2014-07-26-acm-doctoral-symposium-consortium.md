@@ -1,6 +1,6 @@
 ---
 title: ACM Doctoral Symposium (Consortium) 参加のすすめ
-date: '2014-07-26'
+date: "2014-07-26"
 tags:
   - research
   - student

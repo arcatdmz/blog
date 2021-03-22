@@ -1,6 +1,6 @@
 ---
 title: 北京に4ヶ月住んだ話（Microsoft Research Asia）
-date: '2014-12-12'
+date: "2014-12-12"
 tags:
   - life
   - research
