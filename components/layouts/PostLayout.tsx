@@ -29,9 +29,7 @@ const PostLayout: FC<PostLayoutProps> = ({
   next,
   prev
 }) => {
-  const { language, rootPath, siteUrl, sitePath, author } = useContext(
-    BlogContext
-  );
+  const { language, siteUrl, sitePath, author } = useContext(BlogContext);
   const { slug, date, title, tags } = frontMatter;
 
   const tagComponents = useMemo(() => {
@@ -88,8 +86,8 @@ const PostLayout: FC<PostLayoutProps> = ({
                 </Menu.Item>
               </Link>
             )}
-            <Link href={rootPath}>
-              <Menu.Item as="a" href={rootPath} position="right">
+            <Link href={sitePath}>
+              <Menu.Item as="a" href={sitePath} position="right">
                 <Icon name="angle up" />
                 {language === "ja" ? "ブログのトップへ" : "Blog top page"}
               </Menu.Item>
