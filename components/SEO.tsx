@@ -68,6 +68,7 @@ interface BlogSeoProps extends PostIface {
 export const BlogSeo: FC<BlogSeoProps> = ({
   title,
   summary,
+  summary_generated,
   date,
   lastmod,
   url,
@@ -110,7 +111,7 @@ export const BlogSeo: FC<BlogSeoProps> = ({
     <>
       <NextSeo
         title={`${title} | ${siteTitle}`}
-        description={summary}
+        description={summary || summary_generated}
         canonical={url}
         openGraph={{
           type: "article",
@@ -122,7 +123,7 @@ export const BlogSeo: FC<BlogSeoProps> = ({
           },
           url,
           title,
-          description: summary,
+          description: summary || summary_generated,
           images: featuredImages
         }}
         additionalMetaTags={[
@@ -136,7 +137,7 @@ export const BlogSeo: FC<BlogSeoProps> = ({
         authorName={author}
         dateModified={publishedAt}
         datePublished={modifiedAt}
-        description={summary}
+        description={summary || summary_generated}
         images={
           (featuredImages && featuredImages.map(image => image.url)) || null
         }

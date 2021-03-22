@@ -7,7 +7,7 @@ const generateRssItem = (post: PostIface, language: string) => `
     <guid>${websiteJson.languages[language].siteUrl}posts/${post.slug}</guid>
     <title>${post.title}</title>
     <link>${websiteJson.languages[language].siteUrl}posts/${post.slug}</link>
-    <description>${post.summary}</description>
+    <description>${post.summary || post.summary_generated}</description>
     <pubDate>${new Date(post.date).toUTCString()}</pubDate>
     <author>${websiteJson.languages[language].email} (${
   websiteJson.languages[language].author

@@ -3,19 +3,20 @@ import { FC, useContext } from "react";
 import { List, Segment } from "semantic-ui-react";
 
 import { BlogContext } from "../lib/BlogContext";
+import { PostIface } from "../lib/PostIface";
 
 import { Tag } from "./Tag";
 
-interface ListItemProps {
-  slug: string;
-  date: string;
-  title: string;
-  summary?: string;
-  tags: string[];
-}
-
-const ListItem: FC<ListItemProps> = ({ slug, date, title, summary, tags }) => {
+const ListItem: FC<PostIface> = ({
+  slug,
+  date,
+  title,
+  summary,
+  summary_generated,
+  tags
+}) => {
   const { sitePath, locale } = useContext(BlogContext);
+  const body = summary || summary_generated;
   return (
     <Segment as="article">
       <List.Header as="h2">
@@ -23,7 +24,7 @@ const ListItem: FC<ListItemProps> = ({ slug, date, title, summary, tags }) => {
           <a>{title}</a>
         </Link>
       </List.Header>
-      {summary && <p>{summary}</p>}
+      {body && <p>{body}</p>}
       <List horizontal divided size="small">
         <List.Item>
           {new Date(date).toLocaleDateString(locale, {

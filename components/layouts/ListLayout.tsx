@@ -22,7 +22,12 @@ const ListLayout: FC<ListLayoutProps> = ({
   const filteredPosts = useMemo<PostIface[]>(() => {
     const value = searchValue.toLowerCase();
     return posts.filter(frontMatter =>
-      (frontMatter.title + frontMatter.summary + frontMatter.tags.join(" "))
+      (
+        frontMatter.title +
+        (frontMatter.summary || "") +
+        frontMatter.summary_generated +
+        frontMatter.tags.join(" ")
+      )
         .toLowerCase()
         .includes(value)
     );
