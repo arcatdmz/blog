@@ -4,7 +4,8 @@ date: "2014-01-28"
 tags:
   - life
 summary_generated: >-
-  僕はAmazon.comのアカウントで洋書を何冊も購入済みだったので、これまでiPadやAndroidのKindleアプリは全てAmazon.comに紐づけて使っていました。ただ、そろそろAmazon.co.jpのKindleストアでも本を買いたくなってきました。問題は、一...
+  僕は Amazon.com のアカウントで洋書を何冊も購入済みだったので、これまで iPad や Android の Kindle アプリは全て
+  Amazon.com に紐づけて使っていました。ただ、そろそろ Amazon.co.jp の Kindle ストアでも本を買いた...
 ---
 
 僕は Amazon.com のアカウントで洋書を何冊も購入済みだったので、これまで iPad や Android の Kindle アプリは全て Amazon.com に紐づけて使っていました。ただ、そろそろ Amazon.co.jp の Kindle ストアでも本を買いたくなってきました。

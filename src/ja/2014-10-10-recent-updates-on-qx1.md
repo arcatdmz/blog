@@ -3,9 +3,12 @@ title: 近況（Sony ILCE-QX1予約の記録）
 date: "2014-10-10"
 tags:
   - life
-summary_generated: >-
+summary: >-
   Eマウント対応でαマウントのコンバータ対応してたら買いそう。 / “ソニーのレンズスタイルカメラにEマウント対応の『QX1』？中国でフライング掲載 -
   Engadget Japanese” / で、対応してたわけです。
+summary_generated: >-
+  https://twitter.com/arcatdmz/status/506652712113422336で、対応してたわけです。https://twitter.com/arcatdmz/status/517025583000473600先行予約開始当日の早朝、午前
+  3 ...
 ---
 
 https://twitter.com/arcatdmz/status/506652712113422336
