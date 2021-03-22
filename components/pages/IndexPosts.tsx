@@ -35,7 +35,7 @@ const IndexPosts: FC<IndexPostsPageProps> = ({ posts }) => {
         header={
           language === "ja" ? (
             <>
-              <Grid columns={2}>
+              <Grid stackable columns={2}>
                 <Grid.Column width={10}>
                   <article>
                     <Header as="h1">{title}</Header>
