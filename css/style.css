@@ -21,6 +21,11 @@ body .pushable > .pusher > footer .ui.horizontal.list > .item {
   line-height: 1.2em !important;
 }
 
+.embed-responsive-item {
+  display: block;
+  margin: 1rem auto;
+}
+
 figure > figcaption,
 .remark-code-title {
   padding: 0.2em;

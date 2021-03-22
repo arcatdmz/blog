@@ -37,11 +37,13 @@ const IndexPosts: FC<IndexPostsPageProps> = ({ posts }) => {
             <>
               <Grid columns={2}>
                 <Grid.Column width={10}>
-                  <Header as="h1">{title}</Header>
-                  <About />
+                  <article>
+                    <Header as="h1">{title}</Header>
+                    <About />
+                  </article>
                 </Grid.Column>
                 <Grid.Column width={6}>
-                  <Segment>
+                  <Segment as="article">
                     <PostsForStudents size="mini" />
                   </Segment>
                 </Grid.Column>
@@ -52,8 +54,10 @@ const IndexPosts: FC<IndexPostsPageProps> = ({ posts }) => {
             </>
           ) : (
             <>
-              <Header as="h1">{title}</Header>
-              <About />
+              <article>
+                <Header as="h1">{title}</Header>
+                <About />
+              </article>
               <Header as="h2" dividing>
                 Latest 5 posts
               </Header>
