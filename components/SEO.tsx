@@ -109,7 +109,7 @@ export const BlogSeo: FC<BlogSeoProps> = ({
   return (
     <>
       <NextSeo
-        title={`${title} – ${siteTitle}`}
+        title={`${title} | ${siteTitle}`}
         description={summary}
         canonical={url}
         openGraph={{

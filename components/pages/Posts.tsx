@@ -17,7 +17,7 @@ const Posts: FC<PostsProps> = ({ posts }) => {
   return (
     <BaseLayout>
       <PageSeo
-        title={`${text} - ${blog.title}`}
+        title={`${text} | ${blog.title}`}
         description={blog.description}
         url={blog.siteUrl}
       />

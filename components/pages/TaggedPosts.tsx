@@ -23,7 +23,7 @@ const TaggedPosts: FC<PostsProps> = ({ posts, tag }) => {
   return (
     <BaseLayout>
       <PageSeo
-        title={`${text}"${tag}" - ${blog.title}`}
+        title={`${text}"${tag}" | ${blog.title}`}
         description={blog.description}
         url={blog.siteUrl}
       />
