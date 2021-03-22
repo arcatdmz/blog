@@ -38,16 +38,20 @@ const ListItem: FC<PostIface> = ({
     </>
   );
   return (
-    <Segment as="article">
+    <Segment as="article" className="list-item">
       {coverImage ? (
         <Grid stackable columns={2}>
           <Grid.Column width={11}>{main}</Grid.Column>
           <Grid.Column width={5}>
-            <Image src={`${imageRoot}${coverImage}`} fluid rounded bordered />
+            <Link href={`${sitePath}posts/${slug}`}>
+              <Image src={`${imageRoot}${coverImage}`} fluid rounded bordered />
+            </Link>
           </Grid.Column>
         </Grid>
       ) : (
-        main
+        <Grid stackable columns={1}>
+          <Grid.Column>{main}</Grid.Column>
+        </Grid>
       )}
     </Segment>
   );

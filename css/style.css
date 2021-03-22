@@ -12,8 +12,18 @@ figure > figcaption,
   margin-top: 0;
 }
 
-article > header {
+@media only screen and (max-width: 767.98px) {
+  article.list-item > .ui.stackable.grid {
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+  }
+}
+
+article.post-item > header {
   margin-bottom: 0.3em;
+}
+article.post-item > .meta > .item {
+  line-height: 1.2em !important;
 }
 
 .pushable,

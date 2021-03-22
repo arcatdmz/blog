@@ -57,17 +57,11 @@ const PostLayout: FC<PostLayoutProps> = ({
   return (
     <Container id="main">
       <BlogSeo url={url} {...frontMatter} />
-      <article>
+      <article className="post-item">
         <header>
           <PageTitle>{title}</PageTitle>
-          <p>
-            <small>
-              {language === "ja" ? "パーマリンク: " : "Permalink: "}
-              <a href={url}>{url}</a>
-            </small>
-          </p>
         </header>
-        <List horizontal divided>
+        <List horizontal divided className="meta">
           <List.Item>
             {language === "ja" ? "投稿者: " : "by "}
             <strong>{author}</strong>
@@ -80,7 +74,15 @@ const PostLayout: FC<PostLayoutProps> = ({
           </List.Item>
           {tagComponents}
         </List>
-        <Segment>{children}</Segment>
+        <Segment.Group>
+          <Segment attached="top">{children}</Segment>
+          <Segment secondary attached="bottom" size="small">
+            <p>
+              {language === "ja" ? "パーマリンク: " : "Permalink: "}
+              <a href={url}>{url}</a>
+            </p>
+          </Segment>
+        </Segment.Group>
         <Divider />
         <footer>
           <Menu stackable>
