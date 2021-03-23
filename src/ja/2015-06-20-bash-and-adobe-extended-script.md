@@ -8,6 +8,7 @@ coverImage: DSC00698.jpg
 summary_generated: >-
   最近書いたものをメモがてら。bash で行ごとに処理Git のログを整形して出力フォルダ内のデジタル一眼 RAW を全部現像bash
   で行ごとに処理さくらインターネットのレンタルサーバで、メーリングリストにメンバーをたくさん追加したかった。#!/usr/local/bin/...
+altUrl: "https://junkato.jp/ja/blog/2015/06/20/bash-and-adobe-extended-script"
 ---
 
 最近書いたものをメモがてら。

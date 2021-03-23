@@ -9,6 +9,8 @@ tags:
 summary_generated: >-
   これまでにも情報科学系 海外研究インターンのすすめ〔前編〕・〔後編〕や北京に 4 ヶ月住んだ話（Microsoft Research
   Asia）などを書いてきましたが、シアトルに 3 ヶ月住んだ話（Adobe Research）は書けていませんでした。なぜなら、端的に言うと...
+altUrl: >-
+  https://junkato.jp/ja/blog/2017/12/08/adobe-research-internship-seattle-and-dissertation
 ---
 
 これまでにも[情報科学系 海外研究インターンのすすめ〔前編〕](/ja/posts/2015-06-29-cs-research-internship-abroad)・[〔後編〕](/ja/posts/2015-06-30-cs-research-internship-abroad-2)や[北京に 4 ヶ月住んだ話（Microsoft Research Asia）](/ja/posts/2014-12-12-4-months-in-beijing-microsoft-research-asia)などを書いてきましたが、シアトルに 3 ヶ月住んだ話（Adobe Research）は書けていませんでした。なぜなら、端的に言うと、この研究インターンは失敗だったためです。もう今更のことだし楽しかったし後悔はしてないのですが、客観的に見て明らかに失敗でした。

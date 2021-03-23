@@ -8,6 +8,7 @@ summary_generated: >-
   2016 年 3 月 25 日追記;SIGPXという勉強会を立ち上げたのを機に、似た内容を Google Docs
   にまとめ直しました。どなたでも編集できます。また、この記事を書いた当時よりも論文を投稿できる学会・ワークショップが激増しています。関連イベントの一覧が
   SIG...
+altUrl: "https://junkato.jp/ja/blog/2013/09/27/devenv-research-labs"
 ---
 
 **2016 年 3 月 25 日追記;** [SIGPX](http://sigpx.org)という勉強会を立ち上げたのを機に、[似た内容を Google Docs にまとめ直しました](https://docs.google.com/document/d/176yfANBFr0txgYJSROFPEdGkPwXhicrP9YZu_bJlgyg/edit)。どなたでも編集できます。また、この記事を書いた当時よりも論文を投稿できる学会・ワークショップが激増しています。[関連イベントの一覧が SIGPX 公式サイト下部にあります](http://sigpx.org/#related-events)。

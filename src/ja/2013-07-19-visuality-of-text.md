@@ -6,6 +6,7 @@ tags:
 summary_generated: >-
   最近、プログラミングのための文字列表現ベースの統合開発環境(Eclipse とか VisualStudio、Xcode
   みたいなもの)に視覚表現を統合する手法について、自分がやってきたこと、考えてきたことをまとめる作業をしている。僕にとって、文字列表現というのは視覚的なもの...
+altUrl: "https://junkato.jp/ja/blog/2013/07/19/visuality-of-text"
 ---
 
 最近、プログラミングのための文字列表現ベースの統合開発環境(Eclipse とか VisualStudio、Xcode みたいなもの)に視覚表現を統合する手法について、自分がやってきたこと、考えてきたことをまとめる作業をしている。僕にとって、文字列表現というのは視覚的なものとは対極にある存在だった。例えば、先に挙げたような統合開発環境と Visual Programming Language(LabVIEW や PureData)の違いを考えてみてほしい。

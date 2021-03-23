@@ -9,6 +9,7 @@ summary_generated: >-
   最近、照明を ON/OFF する機能を備えた Arduino
   ベースのネットワークカメラを開発したのですが、そこから定期的に画像を取ってきて保存したくなりました。自宅サーバとして Mac mini Mid 2010
   (Mac OS X Snow Leopard)を使っている...
+altUrl: "https://junkato.jp/ja/blog/2012/12/18/mac-os-x-launchd"
 ---
 
 ![](/images/fungus-camera.jpg "なめこカメラ")

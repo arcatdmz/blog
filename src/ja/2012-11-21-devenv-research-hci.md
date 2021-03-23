@@ -9,6 +9,7 @@ summary_generated: >-
   IT が生活のいろんな部分に入り込んでくるにつれ、プログラミングの重要性がどんどん増しています。しかし、Visual
   StudioやEclipseに代表されるような開発環境の使い勝手を向上させる研究は、意外といっていいほど見当たりません。その中でも著名な研究は、Last
   a...
+altUrl: "https://junkato.jp/ja/blog/2012/11/21/devenv-research-hci"
 ---
 
 IT が生活のいろんな部分に入り込んでくるにつれ、プログラミングの重要性がどんどん増しています。しかし、[Visual Studio](http://www.microsoft.com/visualstudio/)や[Eclipse](http://eclipse.org)に代表されるような開発環境の使い勝手を向上させる研究は、意外といっていいほど見当たりません。その中でも著名な研究は、Last author をたどるとたいてい 2 人の研究者に行き着きます。ユーザインタフェース（UI）・Human-Computer Interaction（HCI）という研究分野はありとあらゆる人が使う情報機器を対象とします。プログラマ向け UI である開発環境だってもちろん研究対象となるはずなんですが、関連研究の少なさ、関わってきた人の少なさから、これまでは世界的にもマイナーな研究分野だったと言えると思います。

@@ -8,6 +8,7 @@ summary_generated: >-
   昨日の記事でも紹介したWebmoは JavaScript
   で簡単に操作できることがウリですが、現状用意されているライブラリはブラウザ上で動作することを前提に設計されており、Node.js
   で実行するとエラーが起きます。エラーを直して本家に pull request を送ろう...
+altUrl: "https://junkato.jp/ja/blog/2017/07/20/nodejs-loves-webmo"
 ---
 
 [昨日の記事](/ja/posts/2017-07-19-webmo)でも紹介した[Webmo](http://webmo.io/)は JavaScript で簡単に操作できることがウリですが、現状用意されているライブラリはブラウザ上で動作することを前提に設計されており、Node.js で実行するとエラーが起きます。

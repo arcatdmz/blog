@@ -7,6 +7,7 @@ coverImage: DSC_0789.jpg
 summary_generated: >-
   誘惑に負けて Xperia Z1 から乗り換えました。一週間ほど使ってみて、Windows 10 Mobile (NuAns
   NEO)のいいところ、悪いところなど見えてきたのでまとめておきます。
+altUrl: "https://junkato.jp/ja/blog/2016/02/11/windows-10-mobile-nuans-neo"
 ---
 
 誘惑に負けて Xperia Z1 から乗り換えました。一週間ほど使ってみて、Windows 10 Mobile (NuAns NEO)のいいところ、悪いところなど見えてきたのでまとめておきます。

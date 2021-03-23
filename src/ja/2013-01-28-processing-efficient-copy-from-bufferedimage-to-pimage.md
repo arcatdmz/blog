@@ -9,6 +9,8 @@ summary_generated: >-
   最近 Processing 用のライブラリを Java で実装していて、Java 界の BufferedImage を何度も PImage
   として渡す必要がありました。最初は素直に次のようなコードを書いていたのですが…void draw() {
     BufferedImag...
+altUrl: >-
+  https://junkato.jp/ja/blog/2013/01/28/processing-efficient-copy-from-bufferedimage-to-pimage
 ---
 
 最近 Processing 用のライブラリを Java で実装していて、Java 界の BufferedImage を何度も PImage として渡す必要がありました。最初は素直に次のようなコードを書いていたのですが…

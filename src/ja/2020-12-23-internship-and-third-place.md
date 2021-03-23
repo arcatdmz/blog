@@ -10,6 +10,7 @@ coverImage: DSC01972-scaled.jpg
 summary_generated: >-
   この記事は Microsoft Research Internship アルムナイ Advent Calendar の 23
   日目です。自分は今、産業技術総合研究所に主任研究員として勤める傍ら、アニメ制作会社アーチの技術顧問を兼業しています。どちらもやっていることの根っこは...
+altUrl: "https://junkato.jp/ja/blog/2020/12/23/internship-and-third-place"
 ---
 
 この記事は [Microsoft Research Internship アルムナイ Advent Calendar](https://adventar.org/calendars/5107) の 23 日目です。自分は今、産業技術総合研究所に主任研究員として勤める傍ら、アニメ制作会社アーチの技術顧問を兼業しています。どちらもやっていることの根っこは同じで、 Human-Computer Interaction (HCI) とくに [Programming Experience (PX)](https://sigpx.org/) の向上を通じて人々の創造的な活動を支援する Creativity Support の研究を専門にしています。

@@ -9,6 +9,7 @@ summary_generated: >-
   Java/Processing で小型ロボットを簡単に動かせるツールキット Phybots
   は、オープンソースで公開されてしばらく経ちますが、正直なところ忙しくてあまり管理に手が回っておらず、すぐ使える配布ファイルもありませんでした。#五十嵐
   ERATOのポスターセッション...
+altUrl: "https://junkato.jp/ja/blog/2012/12/23/phybots-processing-artoolkit"
 ---
 
 [![](/images/phybots-overview-300x211.jpg "Phybotsのハードウェアセットアップ")](/images/phybots-overview.jpg)Java/Processing で小型ロボットを簡単に動かせるツールキット Phybots は、オープンソースで公開されてしばらく経ちますが、正直なところ忙しくてあまり管理に手が回っておらず、すぐ使える配布ファイルもありませんでした。

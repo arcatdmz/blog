@@ -11,6 +11,7 @@ summary: >-
 summary_generated: >-
   これまで WordPress を使っていたのですが、デザインが古いまま（Bootstrap テーマ）で、ポートフォリオサイトの Semantic UI
   にマッチしたテーマがなかなか見つからず、動作もそんなに軽くないということで移行先を探していました。仕事で普段から使っている...
+altUrl: "https://junkato.jp/ja/blog/2021/03/22/nextjs-mdx-blog"
 ---
 
 これまで WordPress を使っていたのですが、デザインが古いまま（Bootstrap テーマ）で、ポートフォリオサイトの Semantic UI にマッチしたテーマがなかなか見つからず、動作もそんなに軽くないということで移行先を探していました。

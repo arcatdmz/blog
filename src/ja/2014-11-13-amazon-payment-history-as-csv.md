@@ -6,6 +6,7 @@ tags:
   - programming
 coverImage: amazon-result.png
 summary_generated: "12/25 更新; \_Amazon の実装が変わって Chrome 最新版との組み合わせで動かなくなっていたものを修正しました。技術解説は最後に。そろそろ今年はいくら使ったか集計してみましょう^^もともともろやさんの書いたコードをちょっといじって使っていたんですが、Gist..."
+altUrl: "https://junkato.jp/ja/blog/2014/11/13/amazon-payment-history-as-csv"
 ---
 
 **12/25 更新;**  Amazon の実装が変わって Chrome 最新版との組み合わせで動かなくなっていたものを修正しました。技術解説は最後に。

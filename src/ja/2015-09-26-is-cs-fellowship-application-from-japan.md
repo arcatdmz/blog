@@ -9,6 +9,7 @@ summary_generated: >-
   僕の在学時はMicrosoft Research Asia
   Fellowshipしかなかったですが、だんだん増えてきたようなので知っているものをリストアップしました。他にもあったら @arcatdmz
   までお知らせください。これを投稿した時点で今年度まだ応募できるのはAdo...
+altUrl: "https://junkato.jp/ja/blog/2015/09/26/is-cs-fellowship-application-from-japan"
 ---
 
 僕の在学時は[Microsoft Research Asia Fellowship](/ja/posts/2014-05-16-microsoft-research-asia-fellowship/)しかなかったですが、だんだん増えてきたようなので知っているものをリストアップしました。他にもあったら [@arcatdmz](https://twitter.com/arcatdmz) までお知らせください。

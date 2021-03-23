@@ -6,6 +6,7 @@ tags:
   - research
   - server
 summary_generated: ブログを始める準備をしています。考えたこと、やったことを一覧にしておきます。
+altUrl: "https://junkato.jp/ja/blog/2012/10/30/hello-world"
 ---
 
 ブログを始める準備をしています。考えたこと、やったことを一覧にしておきます。

@@ -7,6 +7,7 @@ tags:
 summary_generated: >-
   多言語対応できてそれなりにしっかりした Wiki
   エンジンを探していたらMediaWikiにたどり着いたのだけど、どうもやり方がよく分からない。ドキュメントも日本語ではあまり見つからなかった。というわけで、基礎知識と、多言語対応の方法について調べたことを書いておきます。Me...
+altUrl: "https://junkato.jp/ja/blog/2014/01/12/mediawiki"
 ---
 
 多言語対応できてそれなりにしっかりした Wiki エンジンを探していたら[MediaWiki](http://www.mediawiki.org/wiki/MediaWiki)にたどり着いたのだけど、どうもやり方がよく分からない。ドキュメントも日本語ではあまり見つからなかった。
