@@ -6,9 +6,10 @@ import { kebabCase } from "../lib/utils";
 
 const Tag = ({ text }) => {
   const { sitePath } = useContext(BlogContext);
+  const href = `${sitePath}tags/${kebabCase(text)}`;
   return (
-    <Link href={`${sitePath}tags/${kebabCase(text)}`}>
-      {text.split(" ").join("-")}
+    <Link href={href}>
+      <a href={href}>{text.split(" ").join("-")}</a>
     </Link>
   );
 };

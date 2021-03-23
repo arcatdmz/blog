@@ -32,15 +32,15 @@ const Posts: FC<PostsProps> = ({ posts }) => {
               <p>
                 これまでの全投稿です。{" "}
                 <Link href="/posts">
-                  <a>Follow this link</a>
+                  <a href="/posts">Follow this link</a>
                 </Link>{" "}
                 to read English posts.
               </p>
             ) : (
               <p>
                 This page shows all posts in English. 日本語の投稿は
-                <Link href="/posts">
-                  <a>こちら</a>
+                <Link href="/ja/posts">
+                  <a href="/ja/posts">こちら</a>
                 </Link>
                 です。
               </p>

@@ -23,7 +23,7 @@ const ListItem: FC<PostIface> = ({
     <>
       <List.Header as="h2">
         <Link href={`${sitePath}posts/${slug}`}>
-          <a>{title}</a>
+          <a href={`${sitePath}posts/${slug}`}>{title}</a>
         </Link>
       </List.Header>
       {body && <p>{body}</p>}
