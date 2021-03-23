@@ -13,7 +13,7 @@ summary_generated: >-
 
 インストールおよび実行までの道のりが果てしなく遠い…かと思いきや、意外とすんなりできました。
 
-**2014/1/26 追記;** JavaCV のバージョンがあがって、使い方がもっとシンプルになりました。詳しくは[新しい記事](https://junkato.jp/ja/blog/2014/01/26/use-opencv-from-java-rev2/ "OpenCVをJavaから使う (改訂版)")をご覧ください。
+**2014/1/26 追記;** JavaCV のバージョンがあがって、使い方がもっとシンプルになりました。詳しくは[新しい記事](/ja/posts/2014-01-26-use-opencv-from-java-rev2/ "OpenCVをJavaから使う (改訂版)")をご覧ください。
 
 ## 64-bit Windows で JavaCV
 

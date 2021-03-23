@@ -11,7 +11,7 @@ summary_generated: >-
 
 **忙しい人のための要約:** 韓国ソウルで開催される ACM CHI2015 で、情報処理学会と Microsoft Research のスポンサードで日本発シンポジウムやります。参加登録〆切は CHI の Early Registration 〆切と同日の**3 月 6 日**です。 [http://hci.tokyo/chi2015/register](http://hci.tokyo/chi2015/register) から登録よろしくお願いします！[宣伝用ポストカード](https://junkato.jp/publications/chi2015-japan-postcard.pdf)もあります。
 
-**5 月 11 日追記:** シンポジウムの開催報告代わりに[ACM CHI2015 における日本](https://junkato.jp/ja/blog/2015/05/03/acm-chi2015-japan/)という記事を書きました。
+**5 月 11 日追記:** シンポジウムの開催報告代わりに[ACM CHI2015 における日本](/ja/posts/2015-05-03-acm-chi2015-japan/)という記事を書きました。
 
 今年の 4 月、韓国ソウルで Human-Computer Interaction に関する世界最大の国際会議 ACM CHI 2015 が開催されます。HCI は、コンピュータを使いやすくするユーザインタフェース(UI)の設計手法、インタラクションデザインの提案や評価手法など、機械と人間の関係を考える研究分野です。HCI に関する様々な国際会議のなかでも ACM CHI は 30 年以上の歴史があり、年々、発表者・参加者が増加しています。2013 年には 3300 人以上の参加者を数えたそうです。
 

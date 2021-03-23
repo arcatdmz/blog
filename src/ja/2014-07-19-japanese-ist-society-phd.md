@@ -13,9 +13,9 @@ summary_generated: >-
 
 研究分野が近く、大学が同じで、Microsoft 本社（Redmond）での研究インターン経験があり、…と共通点の多い落合君が「[日本の IT が永久にアメリカに勝てない理由](http://bulk.co.jp/bloghomme/ochyai/070913467 "日本のITが永久にアメリカに勝てない理由 | BLOG HOMME")」という興味深い記事を書いていました。アメリカの IT 業界の先進性、日本の IT 業界が抱える構造的な問題、博士号取得者の活用、その他諸々のキーワードに反応する方々の心を広範囲に鷲掴みにして話題をさらっておりました。あと、「[エリート情報系の諸君．今すぐ内定を蹴ってシリコンバレーに来なさい](http://anond.hatelabo.jp/20140709171128 "エリート情報系の諸君．今すぐ内定を蹴ってシリコンバレーに来なさい．")」というはてな匿名ダイアリーの記事もだいぶブックマークを集めてましたね。
 
-この二つを読んでどうもモヤッとしたので考えをまとめておきます。とくにこのエントリでは[感想](https://junkato.jp/ja/blog/2014/07/19/japanese-ist-society-phd/#jisp-comment)に続き「[IT 業界はどうしたらいいの？](https://junkato.jp/ja/blog/2014/07/19/japanese-ist-society-phd/#jisp-industry)」「[アカデミアはどうしたらいいの？](https://junkato.jp/ja/blog/2014/07/19/japanese-ist-society-phd/#jisp-academia)」について書きます。アメリカという国、あるいは Microsoft の研究部門の特殊性についても一言あるのですが、それはまたいずれ。
+この二つを読んでどうもモヤッとしたので考えをまとめておきます。とくにこのエントリでは[感想](/ja/posts/2014-07-19-japanese-ist-society-phd/#jisp-comment)に続き「[IT 業界はどうしたらいいの？](/ja/posts/2014-07-19-japanese-ist-society-phd/#jisp-industry)」「[アカデミアはどうしたらいいの？](/ja/posts/2014-07-19-japanese-ist-society-phd/#jisp-academia)」について書きます。アメリカという国、あるいは Microsoft の研究部門の特殊性についても一言あるのですが、それはまたいずれ。
 
-**7 月 24 日追記;**  これを読んでいる修士～博士課程の学生の方には「[コンピュータ科学の博士課程にきて初めて分かったこと 4 つ](https://junkato.jp/ja/blog/2012/11/13/cs-phd-findings/)」もおすすめです。
+**7 月 24 日追記;**  これを読んでいる修士～博士課程の学生の方には「[コンピュータ科学の博士課程にきて初めて分かったこと 4 つ](/ja/posts/2012-11-13-cs-phd-findings/)」もおすすめです。
 
 <figure className="center">
   <a href="/images/DSC04693.jpg"><img src="/images/DSC04693-1024x680.jpg" alt="Microsoft Research Redmond (Building 99)" /></a>

@@ -11,7 +11,7 @@ summary_generated: >-
   4 つに取り組み...
 ---
 
-博士課程を修了し、就職してから早一年半が経ちました。[前回、半年を振り返って](https://junkato.jp/ja/blog/2014/09/25/half-yearly-review/)からの一年を振り返ってみようと思います。最近は研究者として何ができるか、何をしたいか考えて行動できるようになってきた気がします。
+博士課程を修了し、就職してから早一年半が経ちました。[前回、半年を振り返って](/ja/posts/2014-09-25-half-yearly-review/)からの一年を振り返ってみようと思います。最近は研究者として何ができるか、何をしたいか考えて行動できるようになってきた気がします。
 
 時系列は下に載せましたが、研究トピックとしては主に次の 4 つに取り組みました。
 
@@ -34,7 +34,7 @@ summary_generated: >-
 
 ## 10 月
 
-- CHI 2015 [Japan CHI Symposium](https://junkato.jp/ja/blog/2015/03/01/acm-chi2015-hci-tokyo/):  開催決定
+- CHI 2015 [Japan CHI Symposium](/ja/posts/2015-03-01-acm-chi2015-hci-tokyo/):  開催決定
 - CHI 2015 査読
 - **TextAlive**: [WISS 2014 カメラレディ原稿](https://junkato.jp/publications/wiss2014-kato-textalive.pdf)作成
 - **Sharedo**: [HAI 2014 登壇発表](https://junkato.jp/publications/hai2014-kato-sharedo-slides.pdf) @ つくば  (HAI 2014 Best Paper Nominee)

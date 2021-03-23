@@ -62,7 +62,7 @@ Doctoral Symposium が終わると、翌日から会議本体が始まります�
 
 会期中、ポスターセッションでは、Doctoral Symposium で発表した内容をまとめたポスターを掲示して一般参加者と議論をします。他のポスター発表者と全く区別なく配置されたため、Doctoral Symposium のことを知らない参加者には「何でこれいくつもプロジェクトが載ってるの？」というところから説明しなくてはならず面倒でした。**博論の内容を 30 秒で説明する練習として役立てる**のがいいと思います。
 
-[Student Research Competition](https://junkato.jp/ja/blog/2014/05/04/acm-student-research-competition/ "ACM Student Research Competition参加のすすめ")もそうですが、学会が学生向けに用意してくれている様々な機会は、研究室から少し離れて**研究者として独り立ちするための練習**になることが多いです。ちょっとでも興味を惹かれたら、遠慮なく突っ込んでみるのがおすすめです！
+[Student Research Competition](/ja/posts/2014-05-04-acm-student-research-competition/ "ACM Student Research Competition参加のすすめ")もそうですが、学会が学生向けに用意してくれている様々な機会は、研究室から少し離れて**研究者として独り立ちするための練習**になることが多いです。ちょっとでも興味を惹かれたら、遠慮なく突っ込んでみるのがおすすめです！
 
 <figure className="center">
   <a href="/images/DSC09168.jpg"><img src="/images/DSC09168.jpg" alt="大学生の溜まり場になっているカフェで博論の疲れを癒しました。" /></a>

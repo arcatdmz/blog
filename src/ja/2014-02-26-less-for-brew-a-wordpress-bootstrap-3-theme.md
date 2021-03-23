@@ -13,7 +13,7 @@ summary_generated: >-
 
 自分のポートフォリオサイトで使っている Bootstrap のバージョンを 2 から 3 にあげたので、このブログ(WordPress)のテーマも同時に更新しました。ポートフォリオサイトでは[Bootstrap 3 の variables.less を編集](http://www.find-job.net/startup/twitter-bootstrap-3)したうえで grunt を使ってビルドして使っているため、見た目に統一感を持たせるためには、WordPress 用テーマのほうでもカスタムビルドした Bootstrap を素直に使える必要があります。
 
-Bootstrap 2 のときは[WP-Bootstrap というテーマをダウンロードしてきて Bootstrap の CSS を全部置換するだけ](https://junkato.jp/ja/blog/2012/10/30/hello-world/ "Hello world!")で割とうまくいっていたのですが、Bootstrap 3 に対応した WP-Bootstrap の最新版はイマイチまだ作りかけ感があり、前と同じように簡単にはいかなさそうだったので、違う人が作ったテーマを探すことにしました。最終的には、探すだけでなくちょっと PHP のソースをいじることになりました。その記録を書いておきます。
+Bootstrap 2 のときは[WP-Bootstrap というテーマをダウンロードしてきて Bootstrap の CSS を全部置換するだけ](/ja/posts/2012-10-30-hello-world/ "Hello world!")で割とうまくいっていたのですが、Bootstrap 3 に対応した WP-Bootstrap の最新版はイマイチまだ作りかけ感があり、前と同じように簡単にはいかなさそうだったので、違う人が作ったテーマを探すことにしました。最終的には、探すだけでなくちょっと PHP のソースをいじることになりました。その記録を書いておきます。
 
 さて、僕が求めている WordPress 用テーマの条件は、Bootstrap 3 を使っていて簡素なつくりである(したがって、カスタムビルドした Bootstrap を素直に導入して自分の Web サイトと統一感のある見た目にできる)こと。必然的に、あれこれ揃っている有償のテーマでなく無償配布されているオープンソースのテーマが候補になりました。[Shoestrap](http://shoestrap.org/ "shoestrap.org")はビルドに失敗し、[Roots](http://roots.io/ "Roots")は開発フローが複雑ですぐに使える感じではなく、最終的に行き着いたのは[BREW for Wordpress](http://danvswild.com/brew/)でした。
 
