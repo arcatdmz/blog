@@ -14,9 +14,10 @@ altUrl: "https://junkato.jp/ja/blog/2020/08/30/digital-stars-2020-online"
 
 例年はマジカルミライという幕張メッセで開催される初音ミク公式イベントとの同日開催で、会場全体をジャックするような演出をしていたのですが、今年はこれが完全オンラインイベントになり、24 時間かけて 6 つのタイムゾーンで開催されます。詳細は以下の Web サイトに掲載されています。
 
-[![](/images/ogp-1024x538.png)](https://events.ongaaccel.jp/mikusync2020/)
-
-Digital Stars presents 初音ミクバースデーメッセージ企画 － Songle Sync コラボ －
+<figure>
+  <a href="https://events.ongaaccel.jp/mikusync2020/"><img src="/images/ogp-1024x538.png" alt="" /></a>
+  <figcaption>Digital Stars presents 初音ミクバースデーメッセージ企画 － Songle Sync コラボ －</figcaption>
+</figure>
 
 マジカルミライは延期になったのですが、これまで海外で 7 都市で開催されてきた Digital Stars というクラブイベントのオンライン版[「Digital Stars 2020 Online」](https://piapro.net/digitalstars2020/)が今、まさに開催されています。そちらでは ACM CHI 2015 で発表した [TextAlive](https://junkato.jp/ja/textalive/) というリリックビデオ制作支援サービスを活用した動画が VJ で使われています。
 

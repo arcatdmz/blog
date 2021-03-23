@@ -17,7 +17,7 @@ altUrl: >-
 
 というわけで、[研究留学 Advent Calendar 2017](https://adventar.org/calendars/2562)にかこつけて、よかったこと…だけでなく、こういうのはやめたほうがいいよ！という失敗談を提供したいと思います。下の写真は Adobe Research Seattle の中庭です。橋のたもとで水と緑、日差しに恵まれたすばらしい景色ですね。うらやましいですか？…最後まで読んでみてから、ご判断ください。
 
-<figure className="center">
+<figure>
   <a href="/images/DSC_0024.jpg"><img src="/images/DSC_0024-1024x576.jpg" alt="" /></a>
   <figcaption>Adobe Research Seattle</figcaption>
 </figure>
@@ -60,7 +60,7 @@ UIST は 10 月頭から一週間なので、そこから 3 か月だと、博�
 
 ## インターン期間の進捗
 
-<figure className="center">
+<figure>
   <a href="/images/DSC08969.jpg"><img src="/images/DSC08969-1024x681.jpg" alt="" /></a>
   <figcaption>シアトルの夏</figcaption>
 </figure>
@@ -84,7 +84,7 @@ UIST は 10 月頭から一週間なので、そこから 3 か月だと、博�
 
 ちなみに、ビザの手配をどれくらいサポートしてくれるか、住む場所まで手配してくれるかどうか、などの対応は企業によってまちまちです。前年に行った Microsoft Research Redmond はどちらもとても手厚く、ほぼ何も考えなくてもアメリカでの生活を始めることができました。一方 Adobe は、ビザの手配を外部の団体に委託しており、多少手間が多かったです。また、住む場所は自身で見繕う必要がありました。そのために、日本からの出国前、博論執筆のための貴重な時間を、事務的なことでけっこう削られてしまいました。
 
-<figure className="center">
+<figure>
   <a href="/images/DSC09213.jpg"><img src="/images/DSC09213-1024x681.jpg" alt="" /></a>
   <figcaption>シアトルの秋</figcaption>
 </figure>

@@ -17,9 +17,10 @@ altUrl: "https://junkato.jp/ja/blog/2020/03/15/anitech-2020spring-griffith-sketc
 
 この記事ではその内容と、同時リリースしたアイデアスケッチのための無償アプリ（Web サービス）「[Griffith Sketch](https://research.archinc.jp/griffith/sketch/)」について紹介します。
 
-[![](/images/techbook8_shoei_02-1024x1024.png)](https://techbookfest.org/product/5748798303240192)
-
-アニメ技術 2020 春 脚本特集
+<figure>
+  <a href="https://techbookfest.org/product/5748798303240192"><img src="/images/techbook8_shoei_02-1024x1024.png" alt="" /></a>
+  <figcaption>アニメ技術 2020 春 脚本特集</figcaption>
+</figure>
 
 ## アニメ技術 2020 春
 
@@ -39,9 +40,10 @@ altUrl: "https://junkato.jp/ja/blog/2020/03/15/anitech-2020spring-griffith-sketc
 
 力作の記事揃いですので、ぜひ[技術書典 応援祭の Web サイト](https://techbookfest.org/product/5748798303240192)から入手してください。
 
-[![](/images/techbook8_shoei_04-1024x1024.png)](https://techbookfest.org/product/5748798303240192)
-
-アイデアスケッチのための Web アプリ「Griffith Sketch」のご紹介
+<figure>
+  <a href="https://techbookfest.org/product/5748798303240192"><img src="/images/techbook8_shoei_04-1024x1024.png" alt="" /></a>
+  <figcaption>アイデアスケッチのための Web アプリ「Griffith Sketch」のご紹介</figcaption>
+</figure>
 
 ## Griffith Sketch
 
@@ -53,9 +55,10 @@ https://twitter.com/arcatdmz/status/1233697311345135617
 
 どんな狙いがあってこのアプリをリリースしたかについては[アニメ技術 2020 春](https://techbookfest.org/product/5748798303240192)の記事をご覧ください。また、機能の概要については[Arch Research の紹介ページ](https://research.archinc.jp/griffith/sketch/)をご覧ください。
 
-![](/images/griffith-sketch-fig1-1024x576.png)
-
-Griffith Sketch v1.0.0 スクリーンショット
+<figure>
+  <img src="/images/griffith-sketch-fig1-1024x576.png" alt="" />
+  <figcaption>Griffith Sketch v1.0.0 スクリーンショット</figcaption>
+</figure>
 
 先々週 v1.0.0 を公開してから、すでに早速さまざまなフィードバックをいただいています。先週末は、ショートカットキーなどの機能を追加した v1.1.0 をリリースしました。
 

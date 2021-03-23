@@ -15,9 +15,10 @@ altUrl: "https://junkato.jp/ja/blog/2018/12/19/hci-for-machine-learning"
 
 この記事は[「機械学習工学 / MLSE Advent Calendar 2018」](https://qiita.com/advent-calendar/2018/mlse)12 日目の記事です。先日開催された、機械学習工学関連の論文を紹介し合う[「XX for ML 論文読み会」](https://mlxse.connpass.com/event/102563/)初回で発表した資料の内容を抜粋で紹介します。論文読み会に参加できなかった方も、当ブログ記事を PDF のお供にどうぞ。
 
-[![](/images/mlse1-kato-slides-1024x576.png)](https://junkato.jp/publications/mlse1-kato-hci-slides.pdf)
-
-**[発表資料 PDF](https://junkato.jp/publications/mlse1-kato-hci-slides.pdf)**
+<figure>
+  <a href="https://junkato.jp/publications/mlse1-kato-hci-slides.pdf"><img src="/images/mlse1-kato-slides-1024x576.png" alt="" /></a>
+  <figcaption><a href="https://junkato.jp/publications/mlse1-kato-hci-slides.pdf">発表資料 PDF</a></figcaption>
+</figure>
 
 なお、書いている人は Human-Computer Interaction (HCI)と呼ばれるユーザインタフェースやインタラクションを研究するコンピュータ科学の応用分野の研究者です。とくに Programming Language の研究分野との隣接領域[「Programming Experience (PX)」](https://sigpx.org)で、ツールキットや API の設計、統合開発環境の研究開発を行ってきました。詳しい研究内容は[ポートフォリオサイト](https://junkato.jp/ja)をご覧ください。PX 全般については[情報処理学会学会誌で組まれた小特集](https://sigpx.org/ipsj2017/)が参考になると思います。
 

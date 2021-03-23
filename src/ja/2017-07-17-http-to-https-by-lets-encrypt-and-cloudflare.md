@@ -24,7 +24,7 @@ Cloudflare を使った具体的な SSL 化の方法については[すでに日
 
 <figure className="center">
   <a href="/images/cfssl_full.png"><img src="/images/cfssl_full.png" alt="" /></a>
-  <figcaption>[What do the SSL options mean? - Cloudflare Support](https://support.cloudflare.com/hc/en-us/articles/200170416)</figcaption>
+  <figcaption><a href="https://support.cloudflare.com/hc/en-us/articles/200170416">What do the SSL options mean? - Cloudflare Support</a></figcaption>
 </figure>
 
 設定の途中で、独自ドメイン契約先でネームサーバの設定を変更する作業が必要です。[お名前.com](https://www.onamae.com/)の場合は、「ドメイン設定」「ネームサーバーの設定」「ネームサーバーの変更」からネームサーバーを CloudFlare に指定されたものに変更します。

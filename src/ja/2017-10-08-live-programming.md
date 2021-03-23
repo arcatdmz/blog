@@ -19,7 +19,7 @@ Live Programming に関する国際ワークショップ LIVE 2017 で基調講�
 
 Live Programming とは、簡単に言うと**プログラム実行時の情報を参照しながらプログラムを編集できるようにする「プログラマ向けのインタラクションデザイン」**で、近年プログラミング言語・ソフトウェア工学・Human-Computer Interaction (HCI)の研究者の間で盛んに研究されています。実行中の様子を想像しながらソースコードを編集 → コンパイル → 実行しながらどうソースコードを直せばいいか考える、という開発サイクルを過去のものにしようという目論見です。
 
-<figure className="center">
+<figure>
   <a href="https://vimeo.com/36579366"><img src="/images/inventing-on-principle.png" alt="" /></a>
   <figcaption>Bret Victor - Inventing on Principle</figcaption>
 </figure>
@@ -36,7 +36,7 @@ Live Programming というインタラクションデザインは、この Bret 
 
 また、もう一つ ── このほうが本質的だと思うのですが ──**Live Programming が、技術ではなくインタラクションデザインであり、ひいてはプログラマの体験を軸に考えた設計思想である**、という面があります。
 
-<figure className="center">
+<figure>
   <a href="https://junkato.jp/ja/dejavu/"><img src="/images/fig6-timeline-1024x332.png" alt="" /></a>
   <figcaption>DejaVu Timeline</figcaption>
 </figure>

@@ -23,9 +23,10 @@ altUrl: "https://junkato.jp/ja/blog/2020/12/23/internship-and-third-place"
 
 今年は Microsoft Research Asia Fellowship 20 周年にあたるそうで、[20 周年記念の記事](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/articles/a-story-that-has-lasted-twenty-years-a-fellowship-that-has-changed-a-group-of-people-2/)に載せていただいています。幸せそうですね…。ここに写っている [Jessica](https://apps4cloud.bgu.ac.il/cauchard/) とは、今年の ACM CHI 2021 プログラム委員会 [Engineering Interactive Systems and Technologies (EIST)](https://chi2021.acm.org/for-authors/presenting/papers/selecting-a-subcommittee#Engineering-Interactive-Systems-and-Technologies) でご一緒しています。インターンのとき無邪気に遊んでいた同期と今こうして一緒に仕事できるのは、なかなか感慨深いものがあります。
 
-[![](/images/DSC01972-1024x680.jpg)](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/articles/a-story-that-has-lasted-twenty-years-a-fellowship-that-has-changed-a-group-of-people-2/)
-
-Microsoft Research Asia インターン中に誕生日を迎えた
+<figure>
+  <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/articles/a-story-that-has-lasted-twenty-years-a-fellowship-that-has-changed-a-group-of-people-2/"><img src="/images/DSC01972-1024x680.jpg" alt="" /></a>
+  <figcaption>Microsoft Research Asia インターン中に誕生日を迎えた</figcaption>
+</figure>
 
 インターンでは、同期はもちろん、メンターとも数か月苦楽を共にするので、指導被指導の関係を越えて仲間意識が芽生えます。メンターからしてもインターンは一年あたり取れてせいぜい数名ですから、学生を忘れるということはまずありえません。また、住めば都とはよく言ったもので、数か月経つとそれなりに土地勘もできて街に愛着が沸いてきます。シアトルの近くで国際会議などがあると、今でも、できるだけ古巣 (Microsoft Research Redmond, Adobe Research) に寄って当時のメンターに会いに行くようにしています。アメリカは職の流動性がすごいので、所属企業が変わっていることはあるのですが、住む場所に関しては、家族の関係もあるのかそれほど動いていないようです。
 
@@ -55,15 +56,16 @@ Microsoft Research Asia インターン中に誕生日を迎えた
 
 https://www.youtube.com/watch?v=Yz4Ucrw95bQ
 
-初音ミク「マジカルミライ 2020」企画展ステージの模様
+<p className="caption">初音ミク「マジカルミライ 2020」企画展ステージの模様</p>
 
 ### Arch Research
 
 そして、[Arch Research](https://research.archinc.jp/)。アニメ制作会社アーチの技術顧問として研究開発をリードしています。具体的には、絵コンテを描ける Web ベースのツール「[Griffith](https://research.archinc.jp/griffith/)」を作ったり、絵コンテの制作プロセスなどアニメ作りの技術を紹介する小冊子「[アニメ技術](https://research.archinc.jp/anitech/)」を発刊したりしています。[Arch Research のメンバー](https://research.archinc.jp/members/)は極めて少ないのですが、じつはその外縁にアニメの監督さんやアニメ作りに興味を持つ情報技術系の人たちなどを加えた「アーチ技術部」というコミュニティがあり、アニメ技術は[放課後 R&D](https://research.archinc.jp/anitech/2019spring/research-club/)を楽しんでいる技術部メンバーの刊行物という位置付けになっています。
 
-[![](/images/arch-research-twitter-hero-1024x341.jpg)](https://arch-research.booth.pm/)
-
-「[アニメ技術](https://research.archinc.jp/anitech/)」表紙は近未来のアニメ作りをイメージして設定を作り、[典樹](https://tenju.jp/)さんに描いてもらっている
+<figure>
+  <a href="https://arch-research.booth.pm/"><img src="/images/arch-research-twitter-hero-1024x341.jpg" alt="" /></a>
+  <figcaption>「<a href="https://research.archinc.jp/anitech/">アニメ技術</a>」表紙は近未来のアニメ作りをイメージして設定を作り、<a href="https://tenju.jp/">典樹</a>さんに描いてもらっている</figcaption>
+</figure>
 
 この Arch Research を作るときに定めた 3 つのテーマが「Human-Computer Interaction」「Global Research」「Third Place」でした。 Third Place とは家庭と仕事場に次ぐ社会的な居場所を指す言葉で、大学至近の [Lab-Cafe](http://lab-cafe.net/page/about) 設立に首を突っ込んでいた時分に知ったものです。アニメ作りと情報技術の両方に興味のある方のご連絡をお待ちしています。
 
