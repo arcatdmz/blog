@@ -36,9 +36,57 @@ body {
   margin: 1rem auto;
 }
 
-figure > figcaption,
+article.post-item figure {
+  border: 1px solid #eee;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+}
+
+article.post-item figure:last-child {
+  margin-bottom: 0;
+}
+
+article.post-item figure > figcaption {
+  margin: 0.5em -0.5em -0.5em -0.5em;
+}
+
+article.post-item figure.left,
+article.post-item figure.right {
+  max-width: 320px;
+}
+
+article.post-item figure.left {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+article.post-item figure.right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+article.post-item figure.center img {
+  max-width: max-content !important;
+  margin: auto;
+}
+
+@media only screen and (max-width: 767.98px) {
+  article.post-item figure.left,
+  article.post-item figure.right,
+  article.post-item figure.center {
+    margin: 0 0 1em 0;
+    float: none;
+    max-width: none;
+  }
+
+  article.post-item figure:last-child {
+    margin-bottom: 0;
+  }
+}
+
+article.post-item figure > figcaption,
 .remark-code-title {
-  padding: 0.2em;
+  padding: 0.3em 0.5em;
   background: #eee;
 }
 

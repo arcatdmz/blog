@@ -66,5 +66,5 @@ Doctoral Symposium が終わると、翌日から会議本体が始まります�
 
 <figure className="center">
   <a href="/images/DSC09168.jpg"><img src="/images/DSC09168.jpg" alt="大学生の溜まり場になっているカフェで博論の疲れを癒しました。" /></a>
-  <figcaption>Doctoral Symposiumのあとは、偶然見つけた<a href="https://plus.google.com/104025028898671281343/about" title="Cafe Taste">大学生の溜まり場になっているカフェ</a>で博論疲れを癒したのでした。</figcaption>
+  <figcaption>Doctoral Symposiumのあとは、偶然見つけた<a href="https://www.tripadvisor.com/Restaurant_Review-g186533-d2103001-Reviews-Taste-St_Andrews_Fife_Scotland.html" title="Cafe Taste">大学生の溜まり場になっているカフェ</a>で博論疲れを癒したのでした。</figcaption>
 </figure>
