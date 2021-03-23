@@ -1,6 +1,8 @@
 import { FC, MouseEventHandler, useCallback, useState } from "react";
 import { Menu, Sidebar } from "semantic-ui-react";
 
+import { SidebarMenuItems } from "../contents/SidebarMenuItems";
+
 import { Footer } from "../Footer";
 import { Header } from "../Header";
 
@@ -37,7 +39,10 @@ const BaseLayout: FC<BaseLayoutProps> = ({
         direction="right"
         visible={visible}
         inverted
-      ></Sidebar>
+        vertical
+      >
+        <SidebarMenuItems />
+      </Sidebar>
       <Header onMenuClick={handleMenuClick} />
       <Sidebar.Pusher id="pusher" dimmed={visible} onClick={handlePusherClick}>
         <main id="body">{children}</main>
