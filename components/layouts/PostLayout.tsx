@@ -15,6 +15,7 @@ import { PostIface } from "../../lib/PostIface";
 import { Date } from "../Date";
 import { PageTitle } from "../PageTitle";
 import { BlogSeo } from "../SEO";
+import { ShareButtons } from "../ShareButtons";
 import { Tag } from "../Tag";
 
 interface PostLayoutProps {
@@ -58,6 +59,40 @@ const PostLayout: FC<PostLayoutProps> = ({
     <Container id="main">
       <BlogSeo url={url} {...frontMatter} />
       <article className="post-item">
+        <Menu className="top nav" fluid secondary>
+          <Link href={sitePath}>
+            <Menu.Item
+              as="a"
+              href={sitePath}
+              icon={<Icon circular name="home" />}
+              title={language === "ja" ? "ブログのトップへ" : "Blog top page"}
+            />
+          </Link>
+          {prev && (
+            <Link href={`${sitePath}posts/${prev.slug}`}>
+              <Menu.Item
+                as="a"
+                href={`${sitePath}posts/${prev.slug}`}
+                icon={<Icon circular name="angle left" />}
+                title={prev.title}
+              />
+            </Link>
+          )}
+          {next && (
+            <Link href={`${sitePath}posts/${next.slug}`}>
+              <Menu.Item
+                as="a"
+                href={`${sitePath}posts/${next.slug}`}
+                icon={<Icon circular name="angle right" title={next.title} />}
+                title={next.title}
+              />
+            </Link>
+          )}
+          <Menu.Menu position="right" className="share-buttons">
+            <ShareButtons url={url} title={title} />
+          </Menu.Menu>
+        </Menu>
+        <Divider />
         <header>
           <PageTitle>{title}</PageTitle>
         </header>
@@ -76,8 +111,11 @@ const PostLayout: FC<PostLayoutProps> = ({
         </List>
         <Segment.Group>
           <Segment>{children}</Segment>
-          <Segment secondary size="small">
-            <p>
+          <Segment className="bottom nav" secondary size="small">
+            <Menu className="share-buttons" secondary floated="right">
+              <ShareButtons url={url} title={title} />
+            </Menu>
+            <p className="permalink">
               {language === "ja" ? "パーマリンク: " : "Permalink: "}
               <a href={url}>{url}</a>
             </p>
@@ -102,12 +140,26 @@ const PostLayout: FC<PostLayoutProps> = ({
                 </Menu.Item>
               </Link>
             )}
-            <Link href={sitePath}>
-              <Menu.Item as="a" href={sitePath} position="right">
-                <Icon name="angle up" />
-                {language === "ja" ? "ブログのトップへ" : "Blog top page"}
-              </Menu.Item>
-            </Link>
+            <Menu.Menu position="right">
+              <Menu.Item
+                as="a"
+                href="#"
+                icon="angle up"
+                title={
+                  language === "ja" ? "ページのトップへ" : "Top of this page"
+                }
+              />
+              <Link href={sitePath}>
+                <Menu.Item
+                  as="a"
+                  href={sitePath}
+                  icon="home"
+                  title={
+                    language === "ja" ? "ブログのトップへ" : "Blog top page"
+                  }
+                />
+              </Link>
+            </Menu.Menu>
           </Menu>
         </footer>
       </article>

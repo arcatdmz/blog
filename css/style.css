@@ -130,18 +130,6 @@ article.post-item figure > figcaption,
   margin: 0 auto !important;
 }
 
-/* share buttons */
-
-p.share {
-  text-align: right;
-}
-p.share > div.ui.basic.label {
-  vertical-align: 120%;
-}
-p.share > button {
-  margin-left: 5px;
-}
-
 /* list of posts */
 
 @media only screen and (max-width: 767.98px) {
@@ -154,11 +142,32 @@ p.share > button {
 /* post */
 
 article.post-item > header {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.7em;
+}
+article.post-item > .top.nav.menu {
+  margin-top: -0.5rem;
+}
+article.post-item .nav .item {
+  padding: 0 !important;
+}
+article.post-item .share-buttons .item {
+  line-height: 0;
+}
+article.post-item .bottom.nav .share-buttons {
+  min-height: initial;
+  padding-left: 0.333333em;
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+}
+article.post-item .bottom.nav .share-buttons .item:last-child {
+  margin-right: 0;
+}
+article.post-item .bottom.nav .permalink {
+  clear: both;
 }
 article.post-item > .meta > .item {
   line-height: 1.2em !important;
 }
+
 article.post-item > footer > .menu > .item {
   max-width: 35%;
 }
