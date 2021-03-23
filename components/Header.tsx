@@ -40,9 +40,7 @@ const Header: FC<HeaderProps> = ({ onMenuClick }) => {
         </Menu.Item>
         <Menu.Item as="a" href={language === "ja" ? "/" : "/ja"}>
           <Icon name="translate" />
-          <span className="mobile hidden">
-            {language === "ja" ? "English" : "日本語"}
-          </span>
+          {language === "ja" ? "English" : "日本語"}
         </Menu.Item>
         <Menu.Item
           className="print-hidden sidebar-button"
