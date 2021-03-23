@@ -54,7 +54,7 @@ Illustrator のヘルプにはそのものずばり「[Illustrator ヘルプ / �
 
 ファイル名は埋め込んだときのものから勝手に変えられてしまっていますが、ともかくこれですべての画像を収集できるので便利です。
 
-<figure className="center">
+<figure className="center" style={{ clear: "both" }}>
   <a href="/images/adobe-illustrator-exported-images.png"><img src="/images/adobe-illustrator-exported-images.png" alt="" /></a>
   <figcaption>Adobe Illustratorから書き出されたSVG+画像ファイル</figcaption>
 </figure>

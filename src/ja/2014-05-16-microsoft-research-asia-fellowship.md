@@ -57,7 +57,7 @@ altUrl: "https://junkato.jp/ja/blog/2014/05/16/microsoft-research-asia-fellowshi
 また、選考プロセスのなかに北京の Microsoft Research Asia を訪問してプレゼンするフェーズがあります。遠隔参加でプレゼンしている人もいたので必ずしも訪問することを強いられるわけではないですが、僕としては一度くらい訪問することを強く薦めます。オブラートに包まずに言うなら、大気汚染でインターンを思いとどまっている人も、一日滞在するくらいならいいのではないでしょうか:-) **日本人研究者も増えてきていますし、非常に恵まれた研究環境**なので、実際に見てみたら考えが変わるかもしれません。
 
 <figure className="right">
-  <a href="/images/Tools-for-Programming-in-the-Real-World.pptx"><img src="/images/Tools-for-Programming-in-the-Real-World-300x225.jpg" alt="Tools for Programming in the Real World" /></a>
+  <a href="http://junkato.jp/ja/blog/wp-content/uploads/2014/05/Tools-for-Programming-in-the-Real-World.pptx"><img src="/images/Tools-for-Programming-in-the-Real-World-300x225.jpg" alt="Tools for Programming in the Real World" /></a>
   <figcaption>Tools for Programming in the Real World (第一ステップで用いたPowerPointファイル)</figcaption>
 </figure>
 

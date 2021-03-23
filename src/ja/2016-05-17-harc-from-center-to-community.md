@@ -18,7 +18,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/05/17/harc-from-center-to-community"
 
 ご招待くださった[大島さん](http://d.hatena.ne.jp/squeaker/)には大変感謝しています。Alan 氏は不在でしたが、みんな忙しいなか、主要メンバーほぼ全員とみっちり議論する時間をいただくことができました。
 
-<figure className="center">
+<figure>
   <a href="/images/20160429_154234115_iOS.jpg"><img src="/images/20160429_154234115_iOS-1024x577.jpg" alt="Communication Design Group, Los Angelesオフィスのエントランス" /></a>
   <figcaption>Communication Design Group, Los Angelesオフィスのエントランス</figcaption>
 </figure>
@@ -43,7 +43,7 @@ HARC は、PARC が一文字変わっただけのように見えますが、実�
 
 **追伸;** 僕も混ぜてくださいね！ ;)
 
-<figure className="center">
+<figure>
   <a href="/images/DSC00614.jpg"><img src="/images/DSC00614-1024x576.jpg" alt="Communication Design Group, Los Angelesオフィス (HARC移籍に伴いobsoleteに…)" /></a>
   <figcaption>Communication Design Group, Los Angelesオフィス (HARC移籍に伴いobsoleteに…)</figcaption>
 </figure>

@@ -18,7 +18,7 @@ ACM CHI 2015 全論文の概要を一日で把握する[CHI 勉強会 2015](http
 
 [インターン期間中・期間後に起きることを紹介した後編](/ja/posts/2015-06-30-cs-research-internship-abroad-2/)もよろしくお願いします。Microsoft Research Asia に行ったときの経験については、[北京に 4 ヶ月住んだ話](/ja/posts/2014-12-12-4-months-in-beijing-microsoft-research-asia/)に詳しく書いてあります。
 
-<figure className="center">
+<figure>
   <a href="/images/DSC04693.jpg"><img src="/images/DSC04693-1024x680.jpg" alt="Microsoft Research Redmond (Building 99)" /></a>
   <figcaption>Microsoft Research Redmond Building 99の吹き抜け</figcaption>
 </figure>
@@ -53,7 +53,9 @@ Fellowship とは、[Microsoft Research Asia Fellowship](/ja/posts/2014-05-16-mi
 
 僕の場合、まず Fellowship 経由で Microsoft Research Asia に行けました。その過程で Redmond の研究者に知ってもらうことができ、Redmond インターンに行けました。さらに、国際会議でアピールした結果 Adobe でインターンできました。これだけいろいろな場所へ行けたのは、相当運がよかったのだと思います。ただ、行きたいと思って機会を探し続けたことは、間違いなく、必要条件でした。
 
-[![cs-internship-abroad (6)](/images/cs-internship-abroad-6-1024x576.jpg)](/images/cs-internship-abroad-6.jpg)もう一つ大事な観点は、いつインターンに行くかということです。基本的にここに書いた通りですが、学士を取ってくれる研究インターンはとても少ないと思います。修士でも、よほど強いコネクションがないと国際会議で論文を出したことがないと難しいかもしれません。博士課程に入って成果が出始めた頃が最も一般的なようです。
+[![cs-internship-abroad (6)](/images/cs-internship-abroad-6-1024x576.jpg)](/images/cs-internship-abroad-6.jpg)
+
+もう一つ大事な観点は、いつインターンに行くかということです。基本的にここに書いた通りですが、学士を取ってくれる研究インターンはとても少ないと思います。修士でも、よほど強いコネクションがないと国際会議で論文を出したことがないと難しいかもしれません。博士課程に入って成果が出始めた頃が最も一般的なようです。
 
 僕個人の反省として、博士課程 3 年目で博士論文を書いている期間にインターンに行くと地獄を見ます。Adobe の頃ですね。昼は企業に尽くし夜は論文執筆を…あっ思い出したら胃が痛くなってきた。
 

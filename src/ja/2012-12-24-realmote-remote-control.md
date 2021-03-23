@@ -5,14 +5,17 @@ tags:
   - phybots
   - programming
 coverImage: realmote.jpg
-summary_generated: >-
-  最近、Pluto ステーションとかiRemocon(アイリモコン)
-  IRM-01Lといった、スマートフォンが赤外線リモコンの代わりになる製品をよく見るようになりました。確かにスマートフォンしか持ってない人には便利かもしれません。が、プログラマなら常時起動してる
-  PC・Mac...
+summary: >-
+  最近、スマートフォンが赤外線リモコンの代わりになる製品をよく見るようになりました。この記事ではその私家版、 Web インタフェースから家電製品やルンバが遠隔操作できちゃうリモコンアプリ Realmote を紹介します。
 altUrl: "https://junkato.jp/ja/blog/2012/12/24/realmote-remote-control"
 ---
 
-[![](/images/realmote-138x300.jpg "Realmote")](/images/realmote.jpg)最近、[Pluto ステーション](http://www.amazon.co.jp/gp/product/B00A2H5HZY/ref=as_li_ss_tl?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B00A2H5HZY)![](http://www.assoc-amazon.jp/e/ir?t=dmjp07-22&l=as2&o=9&a=B00A2H5HZY)とか[iRemocon(アイリモコン) IRM-01L](http://www.amazon.co.jp/gp/product/B0053BXBVG/ref=as_li_ss_tl?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B0053BXBVG)![](http://www.assoc-amazon.jp/e/ir?t=dmjp07-22&l=as2&o=9&a=B0053BXBVG)といった、スマートフォンが赤外線リモコンの代わりになる製品をよく見るようになりました。確かにスマートフォンしか持ってない人には便利かもしれません。が、プログラマなら常時起動してる PC・Mac が家に一台くらいはありますよね。それをリモコンにしたらいいと思いませんか。
+<figure className="right">
+  <a href="/images/realmote.jpg"><img src="/images/realmote-138x300.jpg" alt="" /></a>
+  <figcaption>Realmote</figcaption>
+</figure>
+
+最近、[Pluto ステーション](http://www.amazon.co.jp/gp/product/B00A2H5HZY/ref=as_li_ss_tl?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B00A2H5HZY)とか[iRemocon(アイリモコン) IRM-01L](http://www.amazon.co.jp/gp/product/B0053BXBVG/ref=as_li_ss_tl?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B0053BXBVG)といった、スマートフォンが赤外線リモコンの代わりになる製品をよく見るようになりました。確かにスマートフォンしか持ってない人には便利かもしれません。が、プログラマなら常時起動してる PC・Mac が家に一台くらいはありますよね。それをリモコンにしたらいいと思いませんか。
 
 というわけで、我が家で一年以上稼働している、Web インタフェースから家電製品やルンバが遠隔操作できちゃうリモコンアプリ Realmote を紹介します。
 
@@ -20,13 +23,18 @@ altUrl: "https://junkato.jp/ja/blog/2012/12/24/realmote-remote-control"
 
 Realmote は、右のスクリーンキャプチャのように、かなりシンプルな Web インタフェースを持っています。PC・Mac で起動する際のオプションを変えることで、赤外線リモコン機能、ルンバのリモコン機能を ON/OFF できます。（もう一つなめこカメラ機能というのもありますが、これは俺得機能なので普通は使わないと思います。）
 
-### [![](/images/41D58M0CK9L._SL110_.jpg "RemoteStation")](http://www.amazon.co.jp/gp/product/B000I0RDJI/ref=as_li_ss_il?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B000I0RDJI)ハードウェア![](http://www.assoc-amazon.jp/e/ir?t=dmjp07-22&l=as2&o=9&a=B000I0RDJI)
+### ハードウェア
 
 Realmote を使うのに必要なハードウェアは、次のとおりです。
 
 - 常時起動している PC・Mac
-- 赤外線リモコン機能を使うなら: [Remote Station](http://www.amazon.co.jp/gp/product/B000I0RDJI/ref=as_li_ss_tl?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B000I0RDJI)![](http://www.assoc-amazon.jp/e/ir?t=dmjp07-22&l=as2&o=9&a=B000I0RDJI)
+- 赤外線リモコン機能を使うなら: [Remote Station](http://www.amazon.co.jp/gp/product/B000I0RDJI/ref=as_li_ss_tl?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B000I0RDJI)
 - ルンバのリモコン機能を使うなら: ルンバ本体と[RooTooth](https://www.sparkfun.com/products/684)
+
+<figure className="right">
+  <a href="http://www.amazon.co.jp/gp/product/B000I0RDJI/ref=as_li_ss_il?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B000I0RDJI"><img src="/images/41D58M0CK9L._SL110_.jpg" alt="" /></a>
+  <figcaption>RemoteStation</figcaption>
+</figure>
 
 Remote Station は BUFFALO の「[パソコン用学習リモコン](http://buffalo.jp/products/catalog/item/p/pc-op-rs1/)」で、その実態は赤外線 LED と赤外線センサーが USB 接続できるようになっている便利デバイスです。赤外線の出力がそれなりの長さのケーブルで 4 つに分岐しているのもポイントで、このおかげで複数の機器にしっかり信号を送れます。
 

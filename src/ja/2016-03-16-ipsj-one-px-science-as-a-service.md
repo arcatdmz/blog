@@ -25,7 +25,9 @@ altUrl: "https://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service"
 
 ## コンピュータを変幻自在の道具にするためのプログラミング環境技術
 
-[![IPSJ-ONE スライド](/images/160312-ipsjone-kato-pet-slides-150x150.jpg)](/ja/posts/2016-03-16-ipsj-one-px-science-as-a-service/#refs)
+<figure className="small fixed-size right">
+  <a href="/ja/posts/2016-03-16-ipsj-one-px-science-as-a-service/#refs"><img src="/images/160312-ipsjone-kato-pet-slides-150x150.jpg" alt="IPSJ-ONE スライド" /></a>
+</figure>
 
 私の発表は「**今やどこにでもある変幻自在の道具 ── コンピュータを駆動しているプログラムを作るためには、さまざまな工夫が凝らされたプログラミング環境が必要だ**」というメッセージを主軸に、以下 3 点を副次的なメッセージとして含めました。
 

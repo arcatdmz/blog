@@ -136,27 +136,27 @@ vi groveultrasonic.cxx
 
 また、Python や Node.js 用のモジュールを作るため、C++のソースコード以外にもいくつかファイルが必要になります。初めは似た処理をしているドライバのディレクトリをコピーして、それを改変していくのがいいと思います。なお、ディレクトリ名はそのままドライバ名になります。(cf. [命名規則](http://iotdk.intel.com/docs/master/upm/naming.html))
 
-examples/c++/CMakeList.txt
+> `examples/c++/CMakeList.txt`
 
 C++用のサンプルコードをビルドするための情報が書いてある。
 
-examples/c++/{modname}.cxx
+> `examples/c++/{modname}.cxx`
 
 C++用のサンプルコードを書く。MIT ライセンスの文面を忘れないように。`//! [Interesting]`で囲んだ範囲はサンプルコードとして API リファレンスに転載される。
 
-examples/{langname}/{modname}.py
+> `examples/{langname}/{modname}.py`
 
 {JavaScript,Python,Java}用のサンプルコードを書く。MIT ライセンスの文面を忘れないように。
 
-src/{modname}/CmakeLists.txt
+> `src/{modname}/CmakeLists.txt`
 
 cmake 用の設定を書く。ほぼコピペでよい。
 
-src/{modname}/{modname}.{cxx,h}
+> `src/{modname}/{modname}.{cxx,h}`
 
 C++でドライバを書く。本体。MIT ライセンスの文面を忘れないように。
 
-src/{modname}/{js,py}upm\_{modname}.i
+> `src/{modname}/{js,py}upm\_{modname}.i`
 
 JavaScript, Python バインディングのための設定ファイル。ほぼコピペでよい。
 

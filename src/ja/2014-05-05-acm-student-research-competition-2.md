@@ -21,7 +21,7 @@ altUrl: "https://junkato.jp/ja/blog/2014/05/05/acm-student-research-competition-
 
 第 2 ラウンドからは**実際に国際会議の現場に行って競う**ため、Travel Grant が$500 を上限に出ます。ACM の会議はだいたいアメリカで開催されるため、全く足りないのですが…そこは大学の先生と相談しましょう。
 
-<figure className="center">
+<figure>
   <a href="/images/DSC08291.jpg"><img src="/images/DSC08291-1024x480.jpg" alt="PLDI 2013 SRC第2ラウンドの様子" /></a>
   <figcaption>PLDI 2013 SRC第2ラウンドの様子</figcaption>
 </figure>

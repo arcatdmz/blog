@@ -23,7 +23,10 @@ altUrl: "https://junkato.jp/ja/blog/2015/10/01/half-yearly-review-2015"
 
 このうち、Sharedo は入所直後にがんばったものなので、一年間での進展はほぼありません。CrossSong は共著論文で、パズル自動生成の部分には全く関与しておらず（Jordan, Graham, 深山さん、後藤さんの貢献部分です）、HCI 研究者らしくパズルのインタラクション設計やデモ動画制作などを担当しました。f3.js はとても面白いトピックだと思っているのですが、準備に時間がかかったのと（理由は 11 月の UIST デモ発表の頃にはお分かりいただけると思います）、とにかく TextAlive に時間を割いたので、まだちゃんとしたかたちにはなっていません。
 
-<figure className="none"><a href="https://goo.gl/photos/Ho2gWe12RmdZPhdE7"><img src="/images/DSC00049_developed-1024x681.jpg" alt="" /></a><figcaption>7 月、イギリス各所を訪問</figcaption></figure>
+<figure>
+  <a href="https://goo.gl/photos/Ho2gWe12RmdZPhdE7"><img src="/images/DSC00049_developed-1024x681.jpg" alt="" /></a>
+  <figcaption>7 月、イギリス各所を訪問</figcaption>
+</figure>
 
 博士課程の頃は必死に目の前のテーマを消化して新しいアイデアを生み出していく日々でしたが、就職を機に、少し落ち着いて研究開発に取り組めるようになりました。TextAlive は、昨年 6 月に研究を始めてから数回実装を書き直しています。一番大きな変更が今年 1 月の Java ベースのアプリケーションから JavaScript ベースの Web アプリケーションへの転換で、これは一般公開を見据えた選択でした。
 
@@ -75,7 +78,7 @@ altUrl: "https://junkato.jp/ja/blog/2015/10/01/half-yearly-review-2015"
 - **f3.js**: UIST 2015 投稿 (不採録)
 - UIST 2015 査読
 
-<figure className="center">
+<figure>
   <a href="http://hci.tokyo/"><img src="/images/DSC00573-1024x682.jpg" alt="ACM CHI Symposium on Emerging Japanese HCI Research Collection参加者一同" /></a>
   <figcaption>ACM CHI Symposium on Emerging Japanese HCI Research Collection</figcaption>
 </figure>
@@ -85,7 +88,7 @@ altUrl: "https://junkato.jp/ja/blog/2015/10/01/half-yearly-review-2015"
 - **TextAlive**: ICLC 2015 採録、[カメラレディ原稿](http://dx.doi.org/10.5281/zenodo.19355)作成
 - 免許合宿
 
-<figure className="center">
+<figure>
   <a href="https://goo.gl/photos/RBzDVXF7g6YT2YNY8"><img src="/images/DSC00698-1024x682.jpg" alt="日々" /></a>
   <figcaption>長野県で免許合宿に参加</figcaption>
 </figure>
@@ -113,7 +116,7 @@ altUrl: "https://junkato.jp/ja/blog/2015/10/01/half-yearly-review-2015"
 - [第 48 回 情報科学若手の会](http://wakate.org/37) [若手特別講演](https://junkato.jp/ja/talks/people-are-programmers/?p=1) @ 熱海
 - WISS 2015 査読
 
-<figure className="center">
+<figure>
   <a href="https://junkato.jp/ja/talks/people-are-programmers/?p=1"><img src="/images/SDIM9353-1024x683.jpg" alt="" /></a>
   <figcaption>情報科学若手の会で楽しく招待講演</figcaption>
 </figure>

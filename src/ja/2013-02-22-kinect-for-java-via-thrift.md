@@ -11,7 +11,10 @@ summary_generated: >-
 altUrl: "https://junkato.jp/ja/blog/2013/02/22/kinect-for-java-via-thrift"
 ---
 
-[![kinect-thrift-server](/images/kinect-thrift-server-300x225.jpg "C#サーバとJavaクライアントがThriftで通信")](/images/kinect-thrift-server.jpg)
+<figure className="right">
+  <a href="/images/kinect-thrift-server.jpg"><img src="/images/kinect-thrift-server-300x225.jpg" alt="" /></a>
+  <figcaption>C#サーバとJavaクライアントがThriftで通信</figcaption>
+</figure>
 
 最近、Kinect を使う開発環境[Picode](https://junkato.jp/ja/picode/)の実装を手直ししています。この開発環境は Java で書かれているのですが、Kinect for Windows SDK の API を使う必要があります。
 

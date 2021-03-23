@@ -18,7 +18,7 @@ altUrl: "https://junkato.jp/ja/blog/2014/07/19/japanese-ist-society-phd"
 
 **7 月 24 日追記;**  これを読んでいる修士～博士課程の学生の方には「[コンピュータ科学の博士課程にきて初めて分かったこと 4 つ](/ja/posts/2012-11-13-cs-phd-findings/)」もおすすめです。
 
-<figure className="center">
+<figure>
   <a href="/images/DSC04693.jpg"><img src="/images/DSC04693-1024x680.jpg" alt="Microsoft Research Redmond (Building 99)" /></a>
   <figcaption>Microsoft Research Redmond (Building 99)</figcaption>
 </figure>
