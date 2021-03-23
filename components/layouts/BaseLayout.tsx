@@ -22,7 +22,7 @@ const BaseLayout: FC<BaseLayoutProps> = ({
   showFooterMeta = true,
   children
 }) => {
-  const { language } = useContext(BlogContext);
+  const { language, sitePath } = useContext(BlogContext);
   const [visible, setVisible] = useState<boolean>(false);
 
   const handleMenuClick = useCallback(() => {
@@ -47,7 +47,7 @@ const BaseLayout: FC<BaseLayoutProps> = ({
           key="rss"
           rel="alternate"
           type="application/rss+xml"
-          href={language === "default" ? "/index.xml" : `${language}/index.xml`}
+          href={`${sitePath}index.xml`}
         />
       </Head>
       <Sidebar

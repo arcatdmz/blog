@@ -28,9 +28,7 @@ const TaggedPosts: FC<PostsProps> = ({ posts, tag }) => {
           key="rss"
           rel="alternate"
           type="application/rss+xml"
-          href={`${
-            blog.language === "default" ? "" : blog.language
-          }/tags/${tag}/index.xml`}
+          href={`${blog.sitePath}tags/${tag}/index.xml`}
         />
       </Head>
       <PageSeo
