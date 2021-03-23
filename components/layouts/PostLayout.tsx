@@ -31,7 +31,7 @@ const PostLayout: FC<PostLayoutProps> = ({
   prev
 }) => {
   const { language, siteUrl, sitePath, author } = useContext(BlogContext);
-  const { slug, date, title, tags } = frontMatter;
+  const { slug, date, title, tags, altUrl } = frontMatter;
 
   const tagComponents = useMemo(() => {
     if (!tags) {
@@ -115,10 +115,18 @@ const PostLayout: FC<PostLayoutProps> = ({
             <Menu className="share-buttons" secondary floated="right">
               <ShareButtons url={url} title={title} />
             </Menu>
-            <p className="permalink">
-              {language === "ja" ? "パーマリンク: " : "Permalink: "}
-              <a href={url}>{url}</a>
-            </p>
+            <List className="links">
+              <List.Item className="permalink">
+                {language === "ja" ? "パーマリンク: " : "Permalink: "}
+                <a href={url}>{url}</a>
+              </List.Item>
+              {altUrl && (
+                <List.Item className="altlink">
+                  {language === "ja" ? "旧ブログページ: " : "Old page: "}
+                  <a href={altUrl}>{altUrl}</a>
+                </List.Item>
+              )}
+            </List>
           </Segment>
         </Segment.Group>
         <Divider />

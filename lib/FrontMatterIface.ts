@@ -6,6 +6,7 @@ export interface FrontMatterIface {
   lastmod: string;
   tags: string[];
   coverImage?: string;
+  altUrl?: string;
   draft?: boolean;
   language?: "ja" | "en";
 }

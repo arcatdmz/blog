@@ -1,11 +1,10 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import renderToString from "next-mdx-remote/render-to-string.js";
 
 import config from "./config.mjs";
 
-const readFiles = async ({ dir, summaryLength }) => {
+const readFiles = async ({ dir }) => {
   const files = fs.readdirSync(dir);
   return Promise.all(
     files.map(async file => {
