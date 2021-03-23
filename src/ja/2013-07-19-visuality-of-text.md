@@ -1,6 +1,6 @@
 ---
 title: 文字列表現の視覚的側面について
-date: "2013-07-18"
+date: "2013-07-19"
 tags:
   - discussion
 summary_generated: >-

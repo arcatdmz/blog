@@ -1,6 +1,6 @@
 ---
 title: 第48回 情報科学若手の会に参加しました
-date: "2015-09-23"
+date: "2015-09-24"
 tags:
   - life
   - research

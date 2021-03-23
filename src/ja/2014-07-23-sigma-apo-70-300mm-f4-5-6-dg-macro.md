@@ -1,6 +1,6 @@
 ---
 title: 望遠レンズ
-date: "2014-07-22"
+date: "2014-07-23"
 tags:
   - life
 summary_generated: >-

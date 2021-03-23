@@ -1,6 +1,6 @@
 ---
 title: 粘菌の培養に失敗しました
-date: "2016-08-31"
+date: "2016-09-01"
 tags:
   - life
 summary_generated: >-

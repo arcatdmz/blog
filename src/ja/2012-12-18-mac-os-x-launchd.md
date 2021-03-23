@@ -1,6 +1,6 @@
 ---
 title: Mac OS Xでスクリプトを定期実行する
-date: "2012-12-17"
+date: "2012-12-18"
 tags:
   - programming
   - server

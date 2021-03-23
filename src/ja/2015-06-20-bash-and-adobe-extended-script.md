@@ -1,6 +1,6 @@
 ---
 title: 久しぶりにシェルスクリプト・Adobe ExtendedScript
-date: "2015-06-19"
+date: "2015-06-20"
 tags:
   - life
   - programming

@@ -1,6 +1,6 @@
 ---
 title: Microsoft Research Asia Fellowship応募のすすめ
-date: "2014-05-15"
+date: "2014-05-16"
 tags:
   - research
   - university

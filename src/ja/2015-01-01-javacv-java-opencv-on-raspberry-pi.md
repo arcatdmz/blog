@@ -1,6 +1,6 @@
 ---
 title: Raspberry PiでJavaCV (Java + OpenCV)
-date: "2014-12-31"
+date: "2015-01-01"
 tags:
   - programming
 coverImage: javacv-raspberry-pi.png

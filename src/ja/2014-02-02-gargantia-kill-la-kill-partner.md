@@ -1,6 +1,6 @@
 ---
 title: ガルガンティアとキルラキルに見る優秀な相棒の話
-date: "2014-02-01"
+date: "2014-02-02"
 tags:
   - anime
   - discussion

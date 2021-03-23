@@ -1,6 +1,6 @@
 ---
 title: 技術書典 応援祭で「アニメ技術 2020春」頒布中 / Griffith Sketchリリース
-date: "2020-03-14"
+date: "2020-03-15"
 tags:
   - anime
   - research

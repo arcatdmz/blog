@@ -1,6 +1,6 @@
 ---
 title: 情報理工学系の産業界とアカデミアは今後どうしたらいいの？
-date: "2014-07-18"
+date: "2014-07-19"
 tags:
   - discussion
   - research

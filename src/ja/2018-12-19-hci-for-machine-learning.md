@@ -1,6 +1,6 @@
 ---
 title: 機械学習開発支援のためのインタラクション研究 論文紹介
-date: "2018-12-18"
+date: "2018-12-19"
 tags:
   - discussion
   - research

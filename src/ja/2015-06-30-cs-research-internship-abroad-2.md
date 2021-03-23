@@ -1,6 +1,6 @@
 ---
 title: 情報科学系 海外研究インターンのすすめ〔後編〕
-date: "2015-06-29"
+date: "2015-06-30"
 tags:
   - research
   - student
