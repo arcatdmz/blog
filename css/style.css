@@ -2,22 +2,32 @@ body {
   background: #1b1c1d !important;
 }
 
-body .pushable > .pusher > main {
+.pushable:not(body) {
+  transform: none;
+}
+
+.pushable:not(body) > .ui.sidebar,
+.pushable:not(body) > .fixed,
+.pushable:not(body) > .pusher:after {
+  position: fixed;
+}
+
+.pushable:not(body),
+.pushable:not(body) > .pusher {
+  min-height: 100vh;
+}
+
+.pushable:not(body) > .pusher > main {
   background: #fff;
   padding-bottom: 1.5rem;
 }
 
-.pushable,
-.pushable > .pusher {
-  min-height: 100vh;
-}
-
-body .pushable > .pusher > footer {
+.pushable:not(body) > .pusher > footer {
   margin-top: 0;
   padding: 1.5rem 0 5rem 0;
 }
 
-body .pushable > .pusher > footer .ui.horizontal.list > .item {
+.pushable:not(body) > .pusher > footer .ui.horizontal.list > .item {
   line-height: 1.2em !important;
 }
 

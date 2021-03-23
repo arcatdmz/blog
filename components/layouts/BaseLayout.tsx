@@ -30,26 +30,20 @@ const BaseLayout: FC<BaseLayoutProps> = ({
   );
 
   return (
-    <>
-      <Sidebar.Pushable>
-        <Sidebar
-          as={Menu}
-          animation="push"
-          direction="right"
-          visible={visible}
-          inverted
-        ></Sidebar>
-        <Header onMenuClick={handleMenuClick} />
-        <Sidebar.Pusher
-          id="pusher"
-          dimmed={visible}
-          onClick={handlePusherClick}
-        >
-          <main id="body">{children}</main>
-          <Footer showMeta={showFooterMeta} />
-        </Sidebar.Pusher>
-      </Sidebar.Pushable>
-    </>
+    <Sidebar.Pushable>
+      <Sidebar
+        as={Menu}
+        animation="push"
+        direction="right"
+        visible={visible}
+        inverted
+      ></Sidebar>
+      <Header onMenuClick={handleMenuClick} />
+      <Sidebar.Pusher id="pusher" dimmed={visible} onClick={handlePusherClick}>
+        <main id="body">{children}</main>
+        <Footer showMeta={showFooterMeta} />
+      </Sidebar.Pusher>
+    </Sidebar.Pushable>
   );
 };
 
