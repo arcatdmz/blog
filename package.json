@@ -1,7 +1,8 @@
 {
-  "name": "blog",
+  "name": "blog.junkato.jp",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
+  "description": "Source code of https://blog.junkato.jp",
   "main": "index.js",
   "scripts": {
     "start": "next-remote-watch ./data",
