@@ -1,7 +1,8 @@
 import hydrate from "next-mdx-remote/hydrate";
 import { MdxRemote } from "next-mdx-remote/types";
-import { FC } from "react";
+import { FC, useContext } from "react";
 
+import { BlogContext } from "../../lib/BlogContext";
 import { PostIface } from "../../lib/PostIface";
 
 import { MDXComponents } from "../MDXComponents";
@@ -19,12 +20,14 @@ export interface PostProps {
 }
 
 export const Post: FC<PostProps> = ({ post, prev, next }) => {
+  const { language } = useContext(BlogContext);
   const { mdxSource, frontMatter } = post;
   const content = hydrate(mdxSource, {
     components: MDXComponents
   });
+  const sourceUrl = `https://github.com/arcatdmz/blog/blob/main/src/${language}/${frontMatter.slug}.md`;
   return (
-    <BaseLayout>
+    <BaseLayout sourceUrl={sourceUrl}>
       {frontMatter.draft !== true ? (
         <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
           {content}

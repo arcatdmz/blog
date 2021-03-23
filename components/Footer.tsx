@@ -1,14 +1,15 @@
 import { FC, useContext } from "react";
-import { Container, Divider, Grid, List, Segment } from "semantic-ui-react";
+import { Container, Divider, List, Segment } from "semantic-ui-react";
 
 import { BlogContext } from "../lib/BlogContext";
 import { Meta } from "./contents/Meta";
 
 interface FooterProps {
   showMeta?: boolean;
+  sourceUrl?: string;
 }
 
-const Footer: FC<FooterProps> = ({ showMeta = true }) => {
+const Footer: FC<FooterProps> = ({ showMeta = true, sourceUrl }) => {
   const { language, author, authorUrl } = useContext(BlogContext);
   return (
     <footer>
@@ -24,6 +25,12 @@ const Footer: FC<FooterProps> = ({ showMeta = true }) => {
             <List.Item as="a" href={`${authorUrl}privacy`}>
               <i className="envelope open outline icon"></i>{" "}
               {language === "ja" ? "プライバシーポリシー" : "Privacy Policy"}
+            </List.Item>
+            <List.Item
+              as="a"
+              href={sourceUrl || "https://github.com/arcatdmz/blog"}
+            >
+              <i className="github icon"></i> GitHub
             </List.Item>
             <List.Item as="a" href={language === "ja" ? "/" : "/ja"}>
               <i className="translate icon"></i>{" "}

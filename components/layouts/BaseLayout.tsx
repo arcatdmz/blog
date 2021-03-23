@@ -16,13 +16,15 @@ import { Header } from "../Header";
 
 interface BaseLayoutProps {
   showFooterMeta?: boolean;
+  sourceUrl?: string;
 }
 
 const BaseLayout: FC<BaseLayoutProps> = ({
   showFooterMeta = true,
+  sourceUrl,
   children
 }) => {
-  const { language, sitePath } = useContext(BlogContext);
+  const { sitePath } = useContext(BlogContext);
   const [visible, setVisible] = useState<boolean>(false);
 
   const handleMenuClick = useCallback(() => {
@@ -63,7 +65,7 @@ const BaseLayout: FC<BaseLayoutProps> = ({
       <Header onMenuClick={handleMenuClick} />
       <Sidebar.Pusher id="pusher" dimmed={visible} onClick={handlePusherClick}>
         <main id="body">{children}</main>
-        <Footer showMeta={showFooterMeta} />
+        <Footer showMeta={showFooterMeta} sourceUrl={sourceUrl} />
       </Sidebar.Pusher>
     </Sidebar.Pushable>
   );
