@@ -38,13 +38,13 @@ IT が生活のいろんな部分に入り込んでくるにつれ、プログ�
 
 これらのサーベイで触れられている UI ツールキットは開発環境の外部ツールやソフトウェアのライブラリとして提供され、アプリケーション開発工程の一部だけを支援するものがほとんどです。一方で開発環境の研究は、ふつう、コーディングとデバッグなど、プログラミングのワークフロー全体を支援してくれます。
 
-ツールキットと開発環境比較の具体例として、インタラクティブな画像処理のプログラムをプロトタイピングするためのツール[Eyepatch](http://hci.stanford.edu/research/eyepatch/ "Eyepatch: Prototyping Camera-based Interaction through Examples") [[Monzy](http://www.monzy.org/) et al., 2007]と、同様のプログラミング全般を支援する開発環境[DejaVu](http://junkato.jp/ja/dejavu/ "DejaVu: Integrated Support for Developing Interactive Camera-Based Programs") [Kato et al., 2012]を簡単に紹介します。
+ツールキットと開発環境比較の具体例として、インタラクティブな画像処理のプログラムをプロトタイピングするためのツール[Eyepatch](http://hci.stanford.edu/research/eyepatch/ "Eyepatch: Prototyping Camera-based Interaction through Examples") [[Monzy](http://www.monzy.org/) et al., 2007]と、同様のプログラミング全般を支援する開発環境[DejaVu](https://junkato.jp/ja/dejavu/ "DejaVu: Integrated Support for Developing Interactive Camera-Based Programs") [Kato et al., 2012]を簡単に紹介します。
 
 [![](/images/uist2007-monzy-eyepatch-300x225.png "Eyepatch")](/images/uist2007-monzy-eyepatch.png) [![](/images/uist2012-kato-dejavu-300x224.png "DejaVu")](https://junkato.jp/ja/blog/wp-content/uploads/2012/11/uist2012-kato-dejavu.png)
 
 左が Eyepatch です。GUI の画面上で画像処理のサンプルをたくさん記録して、機械学習などのアルゴリズムを使って物体認識などをさせることができます。認識結果はネットワーク経由で送出されるので、他のプログラムから自由に利用できます。要は、画像認識を使ったインタラクティブなアプリケーションを作りたいときに、その部分のコードを書く手間を省いてくれるのです。ただし、アプリケーションを書くには別に立ち上げた開発環境と Eyepatch の間を往復しなくてはなりません。
 
-一方、右が拙作の DejaVu です。通常のコーディングに使われる統合開発環境をベースに、Canvas と Timeline というインタフェースを追加しています。（これらのインタフェースの使い勝手については[公式サイト](http://junkato.jp/ja/dejavu/)に詳しく書いてあります。）DejaVu は開発環境そのものであり、一般的な画像処理のプログラミング体験全体を支援することを目指して作られているため、単体でアプリケーションを作ることができます。
+一方、右が拙作の DejaVu です。通常のコーディングに使われる統合開発環境をベースに、Canvas と Timeline というインタフェースを追加しています。（これらのインタフェースの使い勝手については[公式サイト](https://junkato.jp/ja/dejavu/)に詳しく書いてあります。）DejaVu は開発環境そのものであり、一般的な画像処理のプログラミング体験全体を支援することを目指して作られているため、単体でアプリケーションを作ることができます。
 
 つまり、ツールキット研究はプログラマが使える道具を提案しますが、開発環境の研究はプログラマのプログラミング体験（PX）を向上させることを目指します。ここで、UI と HCI という言葉の違いを思い出してみてください。開発環境の研究は、単なる UI の改善に留まらない、ユーザ体験（User experience, UX）を重視する HCI の研究なのです。僕を含む何人かの研究者は、UX にあやかって Programmer's experience, PX という言葉を作り、積極的に使っています。開発環境を作りこんで PX を改善すれば、プログラマの生産性は必ず向上します。PX という考え方をより多くの人に知ってもらうことは、このブログを立ち上げた大きな理由の一つです。
 

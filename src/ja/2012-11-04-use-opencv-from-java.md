@@ -9,11 +9,11 @@ summary_generated: >-
   からOpenCVの各機能が呼べるラッパーJavaCVを使って...
 ---
 
-これまで、[自前のライブラリ](http://code.google.com/p/matereal/ "Materealの一部、captureプロジェクト")で Web カメラから画像をとってきて、[ARToolKit](http://nyatla.jp/nyartoolkit/ "Java版ARToolKit、NyARToolkit")に渡してマーカー検出したりしていたのですが、[画像処理関連の研究](http://junkato.jp/ja/dejavu/ "DejaVu")を始めたりして、そろそろ限界を感じるようになってきたので、Java から[OpenCV](http://opencv.willowgarage.com/wiki/)の各機能が呼べるラッパー[JavaCV](http://code.google.com/p/javacv/)を使ってみることにしました。
+これまで、[自前のライブラリ](http://code.google.com/p/matereal/ "Materealの一部、captureプロジェクト")で Web カメラから画像をとってきて、[ARToolKit](http://nyatla.jp/nyartoolkit/ "Java版ARToolKit、NyARToolkit")に渡してマーカー検出したりしていたのですが、[画像処理関連の研究](https://junkato.jp/ja/dejavu/ "DejaVu")を始めたりして、そろそろ限界を感じるようになってきたので、Java から[OpenCV](http://opencv.willowgarage.com/wiki/)の各機能が呼べるラッパー[JavaCV](http://code.google.com/p/javacv/)を使ってみることにしました。
 
 インストールおよび実行までの道のりが果てしなく遠い…かと思いきや、意外とすんなりできました。
 
-**2014/1/26 追記;** JavaCV のバージョンがあがって、使い方がもっとシンプルになりました。詳しくは[新しい記事](http://junkato.jp/ja/blog/2014/01/26/use-opencv-from-java-rev2/ "OpenCVをJavaから使う (改訂版)")をご覧ください。
+**2014/1/26 追記;** JavaCV のバージョンがあがって、使い方がもっとシンプルになりました。詳しくは[新しい記事](https://junkato.jp/ja/blog/2014/01/26/use-opencv-from-java-rev2/ "OpenCVをJavaから使う (改訂版)")をご覧ください。
 
 ## 64-bit Windows で JavaCV
 

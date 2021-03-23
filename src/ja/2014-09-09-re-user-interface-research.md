@@ -19,15 +19,15 @@ summary_generated: >-
 
 先日[おうちハック発表会](http://kadecot.net/ouch-hack/ "Kadecot おうちハック発表会")でキーノートスピーチした際の[発表資料](https://www.slideshare.net/arcatdmz/home-hack "もっとおうちハックできるおうち開発環境に向けて─おうちハック事例集─")で喋った範囲でも
 
-- 家電製品やルンバの遠隔操作に、Java 用のツールキット[Phybots](http://junkato.jp/ja/phybots/ "Phybots: 日用品にモビリティを付与するプロトタイピング用ツールキット")
-- Kinect で家電製品を操作するプログラミングに、写真でプログラムを書ける[Picode](http://junkato.jp/ja/picode/ "Picode: ソースコードに写真を貼り込める統合開発環境")
-- ルンバのエラー通知やメディアの閲覧管理に[Sharedo](http://junkato.jp/ja/sharedo/ "Sharedo: To-doリストによる人-エージェント間のタスク共有")
-- なめこの生育状況を観察したりホワイトボードの最新情報を Dropbox に投げるのに[VisionSketch](http://junkato.jp/ja/visionsketch/ "VisionSketch: Integrated Support for Example-Centric Programming of Image Processing Applications")
+- 家電製品やルンバの遠隔操作に、Java 用のツールキット[Phybots](https://junkato.jp/ja/phybots/ "Phybots: 日用品にモビリティを付与するプロトタイピング用ツールキット")
+- Kinect で家電製品を操作するプログラミングに、写真でプログラムを書ける[Picode](https://junkato.jp/ja/picode/ "Picode: ソースコードに写真を貼り込める統合開発環境")
+- ルンバのエラー通知やメディアの閲覧管理に[Sharedo](https://junkato.jp/ja/sharedo/ "Sharedo: To-doリストによる人-エージェント間のタスク共有")
+- なめこの生育状況を観察したりホワイトボードの最新情報を Dropbox に投げるのに[VisionSketch](https://junkato.jp/ja/visionsketch/ "VisionSketch: Integrated Support for Example-Centric Programming of Image Processing Applications")
 
 といった具合だし、
 
-- Microsoft Research でインターンしたときの成果なのでバイナリを持ち出せず使えないけど、本当なら Kinect 関連のプログラム書くときは常用したいと思っている[DejaVu](http://junkato.jp/ja/dejavu/ "DejaVu: Integrated Support for Developing Interactive Camera-Based Programs")
-- 同じく MSR でインターンしたときの成果だけど TouchDevelop という Web 用の開発環境に統合されていて、常用しているプログラミング言語や環境には用意されていない機能だけどあったら便利だろうなと思っている[GUI の Live Programming](http://junkato.jp/ja/touchdevelop/ " It's Alive! Continuous Feedback in UI Programming")
+- Microsoft Research でインターンしたときの成果なのでバイナリを持ち出せず使えないけど、本当なら Kinect 関連のプログラム書くときは常用したいと思っている[DejaVu](https://junkato.jp/ja/dejavu/ "DejaVu: Integrated Support for Developing Interactive Camera-Based Programs")
+- 同じく MSR でインターンしたときの成果だけど TouchDevelop という Web 用の開発環境に統合されていて、常用しているプログラミング言語や環境には用意されていない機能だけどあったら便利だろうなと思っている[GUI の Live Programming](https://junkato.jp/ja/touchdevelop/ " It's Alive! Continuous Feedback in UI Programming")
 - 動画制作のための既存ツールの使い方がよく分からず自分で作ってしまった[TextAlive](https://staff.aist.go.jp/jun.kato/TextAlive/ "TextAlive: 音楽に同期した歌詞アニメーションのKinetic Typography制作環境")
 
 のように、常用したくないものは基本的に作っていません。

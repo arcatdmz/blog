@@ -11,7 +11,7 @@ summary_generated: >-
   記事「ぼくらのプログラミングから、みんなのプログラミングへ (From &quot;programmers are people, to...
 ---
 
-情報処理学会プログラミングシンポジウム委員会主催で第 48 回という、とても歴史のある会に参加して講演してきました。講演そのものは[Web 記事「ぼくらのプログラミングから、みんなのプログラミングへ (From "programmers are people, too" to "people are programmers.")」](http://junkato.jp/ja/talks/people-are-programmers/?p=1)にしたので、ぜひそちらをご覧ください。
+情報処理学会プログラミングシンポジウム委員会主催で第 48 回という、とても歴史のある会に参加して講演してきました。講演そのものは[Web 記事「ぼくらのプログラミングから、みんなのプログラミングへ (From "programmers are people, too" to "people are programmers.")」](https://junkato.jp/ja/talks/people-are-programmers/?p=1)にしたので、ぜひそちらをご覧ください。
 
 <figure className="center">
   <a href="/images/DSC_0270.jpg"><img src="/images/DSC_0270-1024x576.jpg" alt="DSC_0270" /></a>

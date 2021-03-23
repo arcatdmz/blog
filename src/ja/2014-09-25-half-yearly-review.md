@@ -24,9 +24,9 @@ https://twitter.com/arcatdmz/status/510370985791332353
 
 ## 5 月
 
-[Graphics Interface 2014](http://www.cs.mcgill.ca/~kry/gi2014/ "Graphics Interface 2014")で画像処理用の統合開発環境[VisionSketch](http://junkato.jp/ja/visionsketch/)を登壇発表するため、カナダのモントリオールに出張しました。モントリオールは英語とフランス語が半々の都市。世界的なサーカス団 Cirque du Soleil の本拠地でもあり、ちょうど最新作「[KURIOS - Cabinet of Curiosities](http://www.cirquedusoleil.com/en/shows/kurios/default.aspx)」を公演中だったので見てきました。大変素晴らしかったです。日本でもそのうちやるんでしょうか。
+[Graphics Interface 2014](http://www.cs.mcgill.ca/~kry/gi2014/ "Graphics Interface 2014")で画像処理用の統合開発環境[VisionSketch](https://junkato.jp/ja/visionsketch/)を登壇発表するため、カナダのモントリオールに出張しました。モントリオールは英語とフランス語が半々の都市。世界的なサーカス団 Cirque du Soleil の本拠地でもあり、ちょうど最新作「[KURIOS - Cabinet of Curiosities](http://www.cirquedusoleil.com/en/shows/kurios/default.aspx)」を公演中だったので見てきました。大変素晴らしかったです。日本でもそのうちやるんでしょうか。
 
-月の後半には、今年から ACM との共催になった国際会議[HAI 2014](http://hai-conference.net/hai2014/)へ[Sharedo](http://junkato.jp/ja/sharedo/)というシステムに関する論文を投稿しました。Sharedo は、もともと国内会議で発表したときは人とロボットで To-do リストを共有するというコンセプトの研究でしたが、実体を持たないエージェントにも対応できるよう実装を拡張して投稿しました。
+月の後半には、今年から ACM との共催になった国際会議[HAI 2014](http://hai-conference.net/hai2014/)へ[Sharedo](https://junkato.jp/ja/sharedo/)というシステムに関する論文を投稿しました。Sharedo は、もともと国内会議で発表したときは人とロボットで To-do リストを共有するというコンセプトの研究でしたが、実体を持たないエージェントにも対応できるよう実装を拡張して投稿しました。
 
 ## 6 月
 

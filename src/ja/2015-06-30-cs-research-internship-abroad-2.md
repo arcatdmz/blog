@@ -11,7 +11,7 @@ summary_generated: >-
   Creative Technologies Lab Sea...
 ---
 
-[前編](http://junkato.jp/ja/blog/2015/06/29/cs-research-internship-abroad/)では海外研究インターンの概要と、インターンに参加する方法・時期について紹介しました。後編は、もう少し具体的にインターン期間がどのように過ぎていくのか、そしてインターン期間後に何が起きるのか紹介します。
+[前編](https://junkato.jp/ja/blog/2015/06/29/cs-research-internship-abroad/)では海外研究インターンの概要と、インターンに参加する方法・時期について紹介しました。後編は、もう少し具体的にインターン期間がどのように過ぎていくのか、そしてインターン期間後に何が起きるのか紹介します。
 
 <figure className="center">
   <a href="/images/20131029_055924_Android.jpg"><img src="/images/20131029_055924_Android-1024x576.jpg" alt="Adobe Creative Technologies Lab Seattle" /></a>
@@ -57,7 +57,7 @@ Adobe Creative Technologies Lab Seattle には、MSRA HCI Group と近い規模�
 
 [![cs-internship-abroad (11)](/images/cs-internship-abroad-11-1024x576.jpg)](/images/cs-internship-abroad-11.jpg)
 
-インターン期間が終わったらメンター研究者との関係もすぱっと切れるかというとそんなことはありません。たいてい何かやり残したことがあるので、それを何とかします。例えば、論文執筆、特許出願、技術移転などがあるでしょう。アメリカで研究インターンをした場合、年度末には税金の還付手続きなどがあります。詳しくは[J-1 ビザで渡米した研究インターンの所得税還付手続き](http://junkato.jp/ja/blog/2014/02/27/j1-trainee-tax-refund-docs-for-irs/)にまとめました。
+インターン期間が終わったらメンター研究者との関係もすぱっと切れるかというとそんなことはありません。たいてい何かやり残したことがあるので、それを何とかします。例えば、論文執筆、特許出願、技術移転などがあるでしょう。アメリカで研究インターンをした場合、年度末には税金の還付手続きなどがあります。詳しくは[J-1 ビザで渡米した研究インターンの所得税還付手続き](https://junkato.jp/ja/blog/2014/02/27/j1-trainee-tax-refund-docs-for-irs/)にまとめました。
 
 メンター研究者とは、その後も国際会議などで何度も顔合わせすることになると思います。良好な関係を保てるといいですね。
 

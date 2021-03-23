@@ -20,7 +20,7 @@ ACM の国際会議には、通常の登壇発表やポスター発表とは別�
 
 学生が発案し、主導的に行っている研究について発表するとてもよい機会であり、僕自身は学部のときと博士課程のとき、あわせて 2 度参加しています。タイミングによって、学部の卒業論文を発表する場([CHI 2009](http://www.chi2009.org/Authors/CallForPapers/StudentResearchCompetition.html "Student Research Competition - CHI 2009"))として、また、異分野に参入するきっかけ([PLDI 2013](http://www.cs.wm.edu/~idillig/pldi13-src/ "PLDI 2013 Student Research Competition"))として活用しました。
 
-今学生の皆さんにはぜひ挑戦してみてほしいと思うので、実例も交えつつ、コンペの概要を紹介します。ちょっと長くなりそうなので、この記事では概要と論文投稿までの流れを説明します。[次の記事](http://junkato.jp/ja/blog/2014/05/05/encouragement-on-student-research-compeititon-2/ "Student Research Competitionのすすめ (続き)")とセットでどうぞ。
+今学生の皆さんにはぜひ挑戦してみてほしいと思うので、実例も交えつつ、コンペの概要を紹介します。ちょっと長くなりそうなので、この記事では概要と論文投稿までの流れを説明します。[次の記事](https://junkato.jp/ja/blog/2014/05/05/encouragement-on-student-research-compeititon-2/ "Student Research Competitionのすすめ (続き)")とセットでどうぞ。
 
 ## SRC に挑戦すべき理由
 
@@ -43,7 +43,7 @@ SRC の狙いは、[公式サイト](http://src.acm.org/ "SRC Homepage")では�
 
 ここまで SRC の狙いに沿って挑戦すべき理由ばかりを書いてきましたが、では逆に挑戦すべきでない理由はあるのでしょうか。
 
-例えば、**SRC への論文投稿が Archival なのか、それとも Non-archival なのか**ということは少し気にしておいたほうがよいかもしれません。いったん論文が Archival 扱いされると、新規な内容を追加しない限り、同じトピックの論文を別のセッションや会議に出せなくなります。ただ、Extended Abstract が正式に Archival 扱いされるという話は聞いたことがありません。CHI の場合は Semi-archival といって、Archival と Non-archival の中間として扱われます。これは CHI のポスター発表でも同じです。僕の場合、[CHI の SRC に出した内容](http://junkato.jp/multirobot/ "Multi-touch Interface for Controlling Multiple Mobile Robots | junkato.jp")を同じ年の[UIST](http://www.acm.org/uist/uist2009/ "ACM 22nd Symposium on User Interface Software and Technology")という会議に出したところ、「SRC で見た」「もっと差分を出してから投稿しなさい」と批判されて、けっきょくフルペーパーとしてはどの会議にも出さずに終わりました。[Google Scholar](http://scholar.google.co.jp/scholar?oi=bibs&hl=ja&cites=8380341699200760611 "Kato: Multi-touch interface for controlling multiple mobile robots - Google Scholar")で見ると Semi-archival の論文がどんどん参照されているので、Semi-archival は Archival に近い扱いだと考えたほうがいいのかもしれません。PLDI の SRC 論文は完全に Non-archival でした。ただ、同じトピックでも実装を一から書き直し、全く書き方を変えてグラフィクス系の学会に出し直しています。
+例えば、**SRC への論文投稿が Archival なのか、それとも Non-archival なのか**ということは少し気にしておいたほうがよいかもしれません。いったん論文が Archival 扱いされると、新規な内容を追加しない限り、同じトピックの論文を別のセッションや会議に出せなくなります。ただ、Extended Abstract が正式に Archival 扱いされるという話は聞いたことがありません。CHI の場合は Semi-archival といって、Archival と Non-archival の中間として扱われます。これは CHI のポスター発表でも同じです。僕の場合、[CHI の SRC に出した内容](https://junkato.jp/multirobot/ "Multi-touch Interface for Controlling Multiple Mobile Robots | junkato.jp")を同じ年の[UIST](http://www.acm.org/uist/uist2009/ "ACM 22nd Symposium on User Interface Software and Technology")という会議に出したところ、「SRC で見た」「もっと差分を出してから投稿しなさい」と批判されて、けっきょくフルペーパーとしてはどの会議にも出さずに終わりました。[Google Scholar](http://scholar.google.co.jp/scholar?oi=bibs&hl=ja&cites=8380341699200760611 "Kato: Multi-touch interface for controlling multiple mobile robots - Google Scholar")で見ると Semi-archival の論文がどんどん参照されているので、Semi-archival は Archival に近い扱いだと考えたほうがいいのかもしれません。PLDI の SRC 論文は完全に Non-archival でした。ただ、同じトピックでも実装を一から書き直し、全く書き方を変えてグラフィクス系の学会に出し直しています。
 
 まとめると、グレーゾーンではありますが、**SRC に出した研究内容は、そのままの状態で同じ学会の別のセッションや別の会議には投稿しないほうがよい**でしょう。これは、SRC への挑戦をためらう理由になりえます。逆に言えば、**今している研究が、まだ途上であり今後もっと発展させる気があるのであれば、出さない理由はない**と思います。また、自分の専門分野とは少し離れた学会の SRC に自分のテーマを引き付けて投稿することができれば、研究の幅を広げることにも繋がります。僕の専門は Human-Computer Interaction であり、プログラミング言語ではなかったのですが、あえてプログラミング言語分野の学会 PLDI の SRC に出てみたのはそういう訳です。今ではプログラミング言語系の研究論文も抵抗なく読めるようになりました。(ちゃんと理解できるかどうかは別として…)
 
@@ -71,4 +71,4 @@ SRC に参加するには、Extended Abstract という**ポスター発表以�
 
 ### 第 2 ラウンド以降
 
-第 2 ラウンドからはいよいよ会議に参加して、ポスター発表や登壇発表を行います。詳しくは[次の記事](http://junkato.jp/ja/blog/2014/05/05/encouragement-on-student-research-compeititon-2/ "Student Research Competitionのすすめ (続き)")をご覧ください:)
+第 2 ラウンドからはいよいよ会議に参加して、ポスター発表や登壇発表を行います。詳しくは[次の記事](https://junkato.jp/ja/blog/2014/05/05/encouragement-on-student-research-compeititon-2/ "Student Research Competitionのすすめ (続き)")をご覧ください:)

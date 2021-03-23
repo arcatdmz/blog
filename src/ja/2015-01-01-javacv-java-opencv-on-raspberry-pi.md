@@ -7,7 +7,7 @@ coverImage: javacv-raspberry-pi.png
 summary_generated: "日本のみなさん、あけましておめでとうございます！PDT(太平洋標準時)ということにして、先の記事でセットアップした QEMU上で \_#大晦日ハッカソン を続けておりました。けっきょくビルド時間などがネックになって実機での動作は間に合いませんでしたが、JavaCVを Rasp..."
 ---
 
-日本のみなさん、あけましておめでとうございます！PDT(太平洋標準時)ということにして、[先の記事でセットアップした QEMU](http://junkato.jp/ja/blog/2014/12/31/raspberry-pi-raspbian-on-windows-qemu/ "Windows+QEMUでRaspberry Piをエミュレートする")上で  [#大晦日ハッカソン](http://togetter.com/li/764484) を続けておりました。
+日本のみなさん、あけましておめでとうございます！PDT(太平洋標準時)ということにして、[先の記事でセットアップした QEMU](https://junkato.jp/ja/blog/2014/12/31/raspberry-pi-raspbian-on-windows-qemu/ "Windows+QEMUでRaspberry Piをエミュレートする")上で  [#大晦日ハッカソン](http://togetter.com/li/764484) を続けておりました。
 
 けっきょくビルド時間などがネックになって実機での動作は間に合いませんでしたが、[JavaCV](https://github.com/bytedeco/javacv)を Raspbian (linux-arm)上で使えるようになったことだけご報告いたします。
 

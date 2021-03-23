@@ -8,7 +8,7 @@ summary_generated: >-
   ラッパーが公開されたり、JavaCVのバージョンが上がったりして、色々と状況が変わっています。OpenCV の公式な ...
 ---
 
-1 年以上前に[OpenCV の非公式な Java ラッパー JavaCV を使う方法](http://junkato.jp/ja/blog/2012/11/04/use-opencv-from-java/ "OpenCVをJavaから使う")について記事を書いたのですが、その後、[OpenCV の公式な Java ラッパー](http://docs.opencv.org/doc/tutorials/introduction/desktop_java/java_dev_intro.html "Introduction to Java Development - OpenCV documentation")が公開されたり、[JavaCV](https://code.google.com/p/javacv/ "javacv - Java interface to OpenCV and more - Google Project Hosting")のバージョンが上がったりして、色々と状況が変わっています。
+1 年以上前に[OpenCV の非公式な Java ラッパー JavaCV を使う方法](https://junkato.jp/ja/blog/2012/11/04/use-opencv-from-java/ "OpenCVをJavaから使う")について記事を書いたのですが、その後、[OpenCV の公式な Java ラッパー](http://docs.opencv.org/doc/tutorials/introduction/desktop_java/java_dev_intro.html "Introduction to Java Development - OpenCV documentation")が公開されたり、[JavaCV](https://code.google.com/p/javacv/ "javacv - Java interface to OpenCV and more - Google Project Hosting")のバージョンが上がったりして、色々と状況が変わっています。
 
 OpenCV の公式な Java ラッパーは最新の API が使えるという利点がありますが、OpenCV のバイナリを別途インストールする必要があります。
 
@@ -25,7 +25,7 @@ OpenCV を利用した Java アプリケーションを一般ユーザに配布�
    - javacv-{platform}.jar
    - opencv-\*-{platform}.jar
 
-これだけです。[前の記事](http://junkato.jp/ja/blog/2012/11/04/use-opencv-from-java/ "OpenCVをJavaから使う")に比べて、OpenCV のインストール作業がなくなったので本当にシンプルになりました。
+これだけです。[前の記事](https://junkato.jp/ja/blog/2012/11/04/use-opencv-from-java/ "OpenCVをJavaから使う")に比べて、OpenCV のインストール作業がなくなったので本当にシンプルになりました。
 
 {platform}は、バージョン 0.7 現在で OpenCV と FFmpeg どちらにも次の 5 通りが用意されていて、たいていの環境に対応できるはずです。
 

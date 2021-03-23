@@ -11,11 +11,11 @@ summary_generated: >-
   4 つに取り組み...
 ---
 
-博士課程を修了し、就職してから早一年半が経ちました。[前回、半年を振り返って](http://junkato.jp/ja/blog/2014/09/25/half-yearly-review/)からの一年を振り返ってみようと思います。最近は研究者として何ができるか、何をしたいか考えて行動できるようになってきた気がします。
+博士課程を修了し、就職してから早一年半が経ちました。[前回、半年を振り返って](https://junkato.jp/ja/blog/2014/09/25/half-yearly-review/)からの一年を振り返ってみようと思います。最近は研究者として何ができるか、何をしたいか考えて行動できるようになってきた気がします。
 
 時系列は下に載せましたが、研究トピックとしては主に次の 4 つに取り組みました。
 
-- [Sharedo](http://junkato.jp/ja/sharedo/): 人とエージェントでタスクを共有するための To-do リストインタフェース
+- [Sharedo](https://junkato.jp/ja/sharedo/): 人とエージェントでタスクを共有するための To-do リストインタフェース
 - [TextAlive](https://staff.aist.go.jp/jun.kato/TextAlive/): 歌詞アニメーションのための Integrated Design Environment
 - [CrossSong Puzzle](https://staff.aist.go.jp/jun.kato/CrossSong/): 楽曲をマッシュアップしてインタラクティブに遊べるパズルを自動生成
 - f3.js (UIST 2015 デモ予定)
@@ -34,21 +34,21 @@ summary_generated: >-
 
 ## 10 月
 
-- CHI 2015 [Japan CHI Symposium](http://junkato.jp/ja/blog/2015/03/01/acm-chi2015-hci-tokyo/):  開催決定
+- CHI 2015 [Japan CHI Symposium](https://junkato.jp/ja/blog/2015/03/01/acm-chi2015-hci-tokyo/):  開催決定
 - CHI 2015 査読
-- **TextAlive**: [WISS 2014 カメラレディ原稿](http://junkato.jp/publications/wiss2014-kato-textalive.pdf)作成
-- **Sharedo**: [HAI 2014 登壇発表](http://junkato.jp/publications/hai2014-kato-sharedo-slides.pdf) @ つくば  (HAI 2014 Best Paper Nominee)
+- **TextAlive**: [WISS 2014 カメラレディ原稿](https://junkato.jp/publications/wiss2014-kato-textalive.pdf)作成
+- **Sharedo**: [HAI 2014 登壇発表](https://junkato.jp/publications/hai2014-kato-sharedo-slides.pdf) @ つくば  (HAI 2014 Best Paper Nominee)
 
 ## 11 月
 
 - 金沢・京都旅行
 - CHI 2015 査読〆切
-- **TextAlive**: CHI 2015 リバッタル、Java アプレット化、[WISS 2014 登壇発表](http://junkato.jp/publications/chi2015-kato-textalive-slides.pdf) @ 浜松  (WISS 2014 Best Paper Award)
+- **TextAlive**: CHI 2015 リバッタル、Java アプレット化、[WISS 2014 登壇発表](https://junkato.jp/publications/chi2015-kato-textalive-slides.pdf) @ 浜松  (WISS 2014 Best Paper Award)
 
 ## 12 月
 
 - Japan CHI Symposium: 運営準備
-- **TextAlive**: [CHI 2015 カメラレディ原稿](http://junkato.jp/publications/chi2015-kato-textalive.pdf)作成
+- **TextAlive**: [CHI 2015 カメラレディ原稿](https://junkato.jp/publications/chi2015-kato-textalive.pdf)作成
 - [sigpx.org](http://sigpx.org/) 取得
 
 ## 1 月
@@ -70,7 +70,7 @@ summary_generated: >-
 
 ## 4 月
 
-- **TextAlive**: [CHI 2015 登壇発表](http://junkato.jp/publications/chi2015-kato-textalive-slides.pdf) @ 韓国 ソウル、JavaScript 版の試験公開開始 (CHI 2015 Best Paper Honorable Mention Award)
+- **TextAlive**: [CHI 2015 登壇発表](https://junkato.jp/publications/chi2015-kato-textalive-slides.pdf) @ 韓国 ソウル、JavaScript 版の試験公開開始 (CHI 2015 Best Paper Honorable Mention Award)
 - **f3.js**: UIST 2015 投稿 (不採録)
 - UIST 2015 査読
 
@@ -109,11 +109,11 @@ summary_generated: >-
 
 - **TextAlive**: 実装、[プレスリリース](http://www.aist.go.jp/aist_j/press_release/pr2015/pr20150908/pr20150908.html)
 - 実習生と共同研究
-- [第 48 回 情報科学若手の会](http://wakate.org/37) [若手特別講演](http://junkato.jp/ja/talks/people-are-programmers/?p=1) @ 熱海
+- [第 48 回 情報科学若手の会](http://wakate.org/37) [若手特別講演](https://junkato.jp/ja/talks/people-are-programmers/?p=1) @ 熱海
 - WISS 2015 査読
 
 <figure className="center">
-  <a href="http://junkato.jp/ja/talks/people-are-programmers/?p=1"><img src="/images/SDIM9353-1024x683.jpg" alt="" /></a>
+  <a href="https://junkato.jp/ja/talks/people-are-programmers/?p=1"><img src="/images/SDIM9353-1024x683.jpg" alt="" /></a>
   <figcaption>情報科学若手の会で楽しく招待講演</figcaption>
 </figure>
 

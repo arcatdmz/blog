@@ -13,7 +13,7 @@ MediaWiki に画像をアップロードすると、その縮小版を ImageMagi
 
 ただし、僕が MediaWiki を設置しているさくらのレンタルサーバで SVG をアップロードできるようにするには、$wgFileExtensions に svg を足すだけでは不十分でした。レンタルサーバにインストールされている ImageMagick が、SVG の他フォーマットへの変換をサポートしていなかったのです。
 
-そこで、この記事では、SVG 画像のレンダリングに使うエンジンを ImageMagick から Apache Batik という Java で動作するものに差し替えた手順を紹介します。(これで、[前日](http://junkato.jp/ja/blog/2014/01/13/mediawiki-import-templates-from-wikipedia/ "Wikipediaのテンプレートを自前のMediaWikiに追加した")、[前々日](http://junkato.jp/ja/blog/2014/01/12/mediawiki/ "MediaWikiの多言語対応を調べた")から続いた MediaWiki のセットアップ記録は終わりです。)
+そこで、この記事では、SVG 画像のレンダリングに使うエンジンを ImageMagick から Apache Batik という Java で動作するものに差し替えた手順を紹介します。(これで、[前日](https://junkato.jp/ja/blog/2014/01/13/mediawiki-import-templates-from-wikipedia/ "Wikipediaのテンプレートを自前のMediaWikiに追加した")、[前々日](https://junkato.jp/ja/blog/2014/01/12/mediawiki/ "MediaWikiの多言語対応を調べた")から続いた MediaWiki のセットアップ記録は終わりです。)
 
 ## ImageMagick と librsvg の関係
 

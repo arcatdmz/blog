@@ -12,7 +12,7 @@ summary_generated: >-
 
 [![kinect-thrift-server](/images/kinect-thrift-server-300x225.jpg "C#サーバとJavaクライアントがThriftで通信")](/images/kinect-thrift-server.jpg)
 
-最近、Kinect を使う開発環境[Picode](http://junkato.jp/ja/picode/)の実装を手直ししています。この開発環境は Java で書かれているのですが、Kinect for Windows SDK の API を使う必要があります。
+最近、Kinect を使う開発環境[Picode](https://junkato.jp/ja/picode/)の実装を手直ししています。この開発環境は Java で書かれているのですが、Kinect for Windows SDK の API を使う必要があります。
 
 Kinect for Windows SDK は C++と C#向けの API しか提供していないため、Java から使うためには C++または C#のプロセスと通信することになります。そこで今回は、[Thrift](http://thrift.apache.org "Apache Thrift")という Facebook が開発したフレームワークを使ってプロセス間通信(Inter-process communication)してみました。
 

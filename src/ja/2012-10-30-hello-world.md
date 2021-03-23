@@ -35,12 +35,12 @@ summary_generated: ブログを始める準備をしています。考えたこ�
 
 ### WP-Bootstrap
 
-[主サイト](http://junkato.jp/)のデザインを Bootstrap ベースで書いているので、これに合わせるため、WordPress 用の Bootstrap ベースのデザインのテーマをインストールしました。
+[主サイト](https://junkato.jp/)のデザインを Bootstrap ベースで書いているので、これに合わせるため、WordPress 用の Bootstrap ベースのデザインのテーマをインストールしました。
 
 - [WP-Bootstrap](http://320press.com/wpbs/)のサーバへのダウンロードと./wp-contents/themes/への展開
-- [wordpress-bootstrap/library/css/bootstrap.css](http://junkato.jp/ja/blog/wp-content/themes/wordpress-bootstrap/library/css/bootstrap.css)などの URL で参照されている Bootstrap を主サイトのものに差し換え
+- [wordpress-bootstrap/library/css/bootstrap.css](https://junkato.jp/ja/blog/wp-content/themes/wordpress-bootstrap/library/css/bootstrap.css)などの URL で参照されている Bootstrap を主サイトのものに差し換え
 - functions.php, header.php, style.css, footer.php を編集してデザインのバグを修正
-- [wordpress-bootstrap/library/images/icons/h/apple-touch-icon.png](http://junkato.jp/ja/blog/wp-content/themes/wordpress-bootstrap/library/images/icons/h/apple-touch-icon.png)などの URL で参照されているブログサイトのアイコンを自作のものに差し換え
+- [wordpress-bootstrap/library/images/icons/h/apple-touch-icon.png](https://junkato.jp/ja/blog/wp-content/themes/wordpress-bootstrap/library/images/icons/h/apple-touch-icon.png)などの URL で参照されているブログサイトのアイコンを自作のものに差し換え
 
 ### WP Social Bookmarking Light
 

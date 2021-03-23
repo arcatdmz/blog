@@ -11,7 +11,7 @@ summary_generated: >-
 
 **2018 年 5 月 28 日追記:** ヒューマンインタフェース学会の会誌 Vol.20 No.1 に[ヒューマンインタフェース研究における再現性向上に向けた取り組み](https://junkato.jp/ja/science/)と題した寄稿が掲載されました。本記事と合わせてどうぞ。
 
-昨年 IPSJ-ONE に登壇した際の記事[「情報処理が科学を更新する」](http://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service/)では「Science as a Service」というコンセプトを解説し、プログラミング環境技術を伸ばしていった先に、効率的で再現性の担保された科学研究があるという旨を議論しました。
+昨年 IPSJ-ONE に登壇した際の記事[「情報処理が科学を更新する」](https://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service/)では「Science as a Service」というコンセプトを解説し、プログラミング環境技術を伸ばしていった先に、効率的で再現性の担保された科学研究があるという旨を議論しました。
 
 こうした流れについてはもはや止められるものでなく、実際にいろいろな事例を見聞きするようになってきました。ここでいったん、自分から見えている現状をまとめておこうと思います。他にも事例や研究コミュニティをご存知の方がいらっしゃいましたら、ぜひお知らせください。
 
@@ -37,7 +37,7 @@ summary_generated: >-
 
 そもそも論文という静的な紙面を基本とするフォーマットは、**抽象的な考え方や得られた知見、つまり研究の結論をコンパクトに伝えるのには向いているけれども、結論に至った研究のプロセスのように具体的で雑多な情報を伝えるのが難しい**という問題もあります。
 
-そこで、記事[「情報処理が科学を更新する」](http://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service/)中の[発表資料](https://www.slideshare.net/arcatdmz/a-line-of-code-is-worth-ten-thousand-words)では「結果の共有からプロセスの共有へ」という流れを紹介しました。例えば、数学的証明をプログラムで自動化することで複雑な証明を機械検証可能なソースコードとして書けるようにする証明支援システム[Coq](https://coq.inria.fr/)や、生物学実験のハードウェアとソフトウェアをオープンソース化する[DIYbio](https://diybio.org/)、複雑なデータの可視化を容易にする[Cytoscape](http://www.cytoscape.org/)などを事例として挙げています。
+そこで、記事[「情報処理が科学を更新する」](https://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service/)中の[発表資料](https://www.slideshare.net/arcatdmz/a-line-of-code-is-worth-ten-thousand-words)では「結果の共有からプロセスの共有へ」という流れを紹介しました。例えば、数学的証明をプログラムで自動化することで複雑な証明を機械検証可能なソースコードとして書けるようにする証明支援システム[Coq](https://coq.inria.fr/)や、生物学実験のハードウェアとソフトウェアをオープンソース化する[DIYbio](https://diybio.org/)、複雑なデータの可視化を容易にする[Cytoscape](http://www.cytoscape.org/)などを事例として挙げています。
 
 ここまで幅を広げなくても、**論文フォーマットを改善しようとか、論文に付随するデータやソースコードをもっと重視しようという試み**が近年コンピュータ科学を中心に広まっています。私の研究分野では論文にデモ動画をつけて投稿するのが当たり前になっていますし、Autodesk の研究者は[動画を論文 PDF 中に埋め込んで投稿してしまおう](https://www.autodeskresearch.com/publications/bringing-research-articles-life-animated-figures)と提唱しています。さらに、私から見て分野横断的に一番盛り上がっているのが、これから紹介する「Artifact Evaluation」です。
 

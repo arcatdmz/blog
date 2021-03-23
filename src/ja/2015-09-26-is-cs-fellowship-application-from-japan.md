@@ -11,7 +11,7 @@ summary_generated: >-
   までお知らせください。これを投稿した時点で今年度まだ応募できるのはAdo...
 ---
 
-僕の在学時は[Microsoft Research Asia Fellowship](http://junkato.jp/ja/blog/2014/05/16/microsoft-research-asia-fellowship/)しかなかったですが、だんだん増えてきたようなので知っているものをリストアップしました。他にもあったら [@arcatdmz](https://twitter.com/arcatdmz) までお知らせください。
+僕の在学時は[Microsoft Research Asia Fellowship](https://junkato.jp/ja/blog/2014/05/16/microsoft-research-asia-fellowship/)しかなかったですが、だんだん増えてきたようなので知っているものをリストアップしました。他にもあったら [@arcatdmz](https://twitter.com/arcatdmz) までお知らせください。
 
 これを投稿した時点で今年度まだ応募できるのは[Adobe Research Fellowship](http://adoberesearch.com/fellowship.html)のみと[Facebook Fellowship](https://www.facebook.com/careers/program/Fellowship2015)ですね。それにしても、受賞者のメリットが驚くほど横並びで面白いです。あとから出てきたところが MSRA の例を参考にしてるのかな？**だったのに Facebook がどーんとお金を積んできて**面白いことになってますね！
 
