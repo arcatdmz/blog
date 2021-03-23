@@ -72,6 +72,16 @@ figure > figcaption,
   margin: 0 auto !important;
 }
 
+p.share {
+  text-align: right;
+}
+p.share > div.ui.basic.label {
+  vertical-align: 120%;
+}
+p.share > button {
+  margin-left: 5px;
+}
+
 @media only screen and (max-width: 767.98px) {
   article.list-item > .ui.stackable.grid {
     margin-left: -1rem !important;
