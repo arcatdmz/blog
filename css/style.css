@@ -1,3 +1,5 @@
+/* body */
+
 body {
   background: #1b1c1d !important;
 }
@@ -22,6 +24,8 @@ body {
   padding-bottom: 1.5rem;
 }
 
+/* footer */
+
 .pushable:not(body) > .pusher > footer {
   margin-top: 0;
   padding: 1.5rem 0 5rem 0;
@@ -31,9 +35,11 @@ body {
   line-height: 1.2em !important;
 }
 
-.embed-responsive-item {
-  display: block;
-  margin: 1rem auto;
+/* figures */
+
+article.post-item p > a > img {
+  border: 1px solid #eee;
+  padding: 0.5em;
 }
 
 article.post-item figure {
@@ -84,6 +90,8 @@ article.post-item figure.center img {
   }
 }
 
+/* caption */
+
 article.post-item figure > figcaption,
 .remark-code-title {
   padding: 0.3em 0.5em;
@@ -97,6 +105,8 @@ article.post-item figure > figcaption,
 .remark-code-title + pre {
   margin-top: 0;
 }
+
+/* embedded content */
 
 .remark-oembed-inline {
   padding: 0.5rem;
@@ -120,6 +130,8 @@ article.post-item figure > figcaption,
   margin: 0 auto !important;
 }
 
+/* share buttons */
+
 p.share {
   text-align: right;
 }
@@ -130,12 +142,16 @@ p.share > button {
   margin-left: 5px;
 }
 
+/* list of posts */
+
 @media only screen and (max-width: 767.98px) {
   article.list-item > .ui.stackable.grid {
     margin-left: -1rem !important;
     margin-right: -1rem !important;
   }
 }
+
+/* post */
 
 article.post-item > header {
   margin-bottom: 0.3em;
