@@ -13,7 +13,7 @@ summary_generated: >-
 
 [前編](/ja/posts/2015-06-29-cs-research-internship-abroad/)では海外研究インターンの概要と、インターンに参加する方法・時期について紹介しました。後編は、もう少し具体的にインターン期間がどのように過ぎていくのか、そしてインターン期間後に何が起きるのか紹介します。
 
-<figure className="center">
+<figure>
   <a href="/images/20131029_055924_Android.jpg"><img src="/images/20131029_055924_Android-1024x576.jpg" alt="Adobe Creative Technologies Lab Seattle" /></a>
   <figcaption>Adobe Creative Technologies Lab Seattleオフィスから見た中庭</figcaption>
 </figure>
@@ -28,7 +28,7 @@ summary_generated: >-
 
 何だか辛い話になってきましたが、3 か月研究漬けではかえって能率が上がりません。現地ならではのあれこれを体験しながら日々を過ごすのがおすすめです。
 
-<figure className="center">
+<figure>
   <a href="/images/cs-internship-abroad-8.jpg"><img src="/images/cs-internship-abroad-8-1024x576.jpg" alt="Microsoft Research Asia" /></a>
   <figcaption>Microsoft Research Asia</figcaption>
 </figure>
@@ -37,7 +37,7 @@ Microsoft Research Asia (MSRA)は、一番仲良くなった人たちが多か�
 
 漢字文化圏なので、文字を見れば何となく意味が通じるのがいいですね。お寺などの史跡訪問も大変楽しかったです。北京の人たちは総じて親切でした。観光地では吹っかけてきますが、それはどこでも同じかもしれません。
 
-<figure className="center">
+<figure>
   <a href="/images/cs-internship-abroad-9.jpg"><img src="/images/cs-internship-abroad-9-1024x576.jpg" alt="Microsoft Research Redmond" /></a>
   <figcaption>Microsoft Research Redmond</figcaption>
 </figure>
@@ -46,7 +46,7 @@ Microsoft Research Redmond は、船を貸し切ってクルーズするレベ�
 
 夏のシアトル・レドモンドはカラッと晴れて過ごしやすい気温なので、最高の避暑地です。
 
-<figure className="center">
+<figure>
   <a href="/images/cs-internship-abroad-10.jpg"><img src="/images/cs-internship-abroad-10-1024x576.jpg" alt="Adobe Creative Technologies Lab Seattle" /></a>
   <figcaption>Adobe Creative Technologies Lab Seattle</figcaption>
 </figure>
