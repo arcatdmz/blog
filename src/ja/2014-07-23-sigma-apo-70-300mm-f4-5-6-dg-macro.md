@@ -7,6 +7,9 @@ summary: >-
   そういえばブログの割に日記のような使い方を全然していなかった。近所の公園に行って、念願の望遠レンズ（SIGMA 望遠ズームレンズ APO 70-300mm
   F4-5.6 DG MACRO）を使って試し撮り。こんな緑豊かな公園が近所にあるなんて、筑波はいいところだなぁ！
 altUrl: "https://junkato.jp/ja/blog/2014/07/23/sigma-apo-70-300mm-f4-5-6-dg-macro"
+summary_generated: >-
+  そういえばブログの割に日記のような使い方を全然していなかった。近所の公園に行って、念願の望遠レンズ（SIGMA 望遠ズームレンズ APO 70-300mm
+  F4-5.6 DG MACRO）を使って試し撮り。こんな緑豊かな公園が近所にあるなんて、筑波はいいところだなぁ！ #ス...
 ---
 
 そういえばブログの割に日記のような使い方を全然していなかった。近所の公園に行って、念願の望遠レンズ（[SIGMA 望遠ズームレンズ APO 70-300mm F4-5.6 DG MACRO](http://www.amazon.co.jp/gp/product/B000ALLMI8/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B000ALLMI8&linkCode=as2&tag=dmjp07-22)）を使って試し撮り。こんな緑豊かな公園が近所にあるなんて、筑波はいいところだなぁ！ #ステマ

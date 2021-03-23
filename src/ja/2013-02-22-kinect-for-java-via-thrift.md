@@ -5,9 +5,12 @@ tags:
   - java
   - programming
 coverImage: kinect-thrift-server.jpg
-summary_generated: >-
+summary: >-
   最近、Kinect を使う開発環境Picodeの実装を手直ししています。この開発環境は Java で書かれているのですが、Kinect for
   Windows SDK の API を使う必要があります。Kinect for Windows SDK は C++と C#向けの ...
+summary_generated: >-
+  C#サーバとJavaクライアントがThriftで通信最近、Kinect を使う開発環境Picodeの実装を手直ししています。この開発環境は Java
+  で書かれているのですが、Kinect for Windows SDK の API を使う必要があります。Kinect for...
 altUrl: "https://junkato.jp/ja/blog/2013/02/22/kinect-for-java-via-thrift"
 ---
 

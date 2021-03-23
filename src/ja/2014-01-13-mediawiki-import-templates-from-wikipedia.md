@@ -5,10 +5,13 @@ tags:
   - programming
   - server
 coverImage: infobox.png
-summary_generated: >-
+summary: >-
   前日に引き続きMediaWikiに関する記事です。 素の MediaWiki は、記事を全て Wiki
   記法でべた書きしなくてはなりません。Wikipedia
   の記事では、右の図の情報ボックス(Infobox)のように、記事の種類ごとにテンプレートがあって、同じようなレイア...
+summary_generated: >-
+  Wikipedia Infobox前日に引き続きMediaWikiに関する記事です。素の MediaWiki は、記事を全て Wiki
+  記法でべた書きしなくてはなりません。Wikipedia の記事では、右の図の情報ボックス(Infobox)のように、記事の種類ごとにテンプ...
 altUrl: >-
   https://junkato.jp/ja/blog/2014/01/13/mediawiki-import-templates-from-wikipedia
 ---
