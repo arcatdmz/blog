@@ -60,7 +60,7 @@ const readFiles = async ({ dir }) => {
           url: url2,
           result: code2,
           rename: `${String(next.getFullYear())}-${String(
-            next.getMonth()
+            next.getMonth() + 1
           ).padStart(2, "0")}-${String(next.getDate()).padStart(2, "0")}-${
             parsed[4]
           }.md`
@@ -83,7 +83,7 @@ const readFiles = async ({ dir }) => {
             url: url3,
             result: code3,
             rename: `${String(prev.getFullYear())}-${String(
-              prev.getMonth()
+              prev.getMonth() + 1
             ).padStart(2, "0")}-${String(prev.getDate()).padStart(2, "0")}-${
               parsed[4]
             }.md`
