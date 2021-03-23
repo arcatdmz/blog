@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { FC, useContext } from "react";
 
 import { BlogContext } from "../../lib/BlogContext";
@@ -22,6 +23,16 @@ const TaggedPosts: FC<PostsProps> = ({ posts, tag }) => {
 
   return (
     <BaseLayout>
+      <Head>
+        <link
+          key="rss"
+          rel="alternate"
+          type="application/rss+xml"
+          href={`${
+            blog.language === "default" ? "" : blog.language
+          }/tags/${tag}/index.xml`}
+        />
+      </Head>
       <PageSeo
         title={`${text}"${tag}" | ${blog.title}`}
         description={blog.description}

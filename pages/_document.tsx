@@ -13,7 +13,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="alternate" type="application/rss+xml" href="/index.xml" />
           <link rel="stylesheet" href="/stylesheets/main.css" />
           <script
             type="text/javascript"

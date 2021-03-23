@@ -37,7 +37,7 @@ const generateRss = (
       <title>${websiteJson.languages[language].title}</title>
       <link>${websiteJson.languages[language].siteUrl}</link>
       <description>${websiteJson.languages[language].description}</description>
-      <language>${websiteJson.languages[language]}</language>
+      <language>${websiteJson.languages[language].locale}</language>
       <managingEditor>${websiteJson.languages[language].email} (${
     websiteJson.languages[language].author
   })</managingEditor>

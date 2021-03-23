@@ -1,7 +1,15 @@
-import { FC, MouseEventHandler, useCallback, useState } from "react";
+import Head from "next/head";
+import {
+  FC,
+  MouseEventHandler,
+  useCallback,
+  useContext,
+  useState
+} from "react";
 import { Menu, Sidebar } from "semantic-ui-react";
 
 import { SidebarMenuItems } from "../contents/SidebarMenuItems";
+import { BlogContext } from "../../lib/BlogContext";
 
 import { Footer } from "../Footer";
 import { Header } from "../Header";
@@ -14,6 +22,7 @@ const BaseLayout: FC<BaseLayoutProps> = ({
   showFooterMeta = true,
   children
 }) => {
+  const { language } = useContext(BlogContext);
   const [visible, setVisible] = useState<boolean>(false);
 
   const handleMenuClick = useCallback(() => {
@@ -33,6 +42,14 @@ const BaseLayout: FC<BaseLayoutProps> = ({
 
   return (
     <Sidebar.Pushable>
+      <Head>
+        <link
+          key="rss"
+          rel="alternate"
+          type="application/rss+xml"
+          href={language === "default" ? "/index.xml" : `${language}/index.xml`}
+        />
+      </Head>
       <Sidebar
         as={Menu}
         animation="push"
