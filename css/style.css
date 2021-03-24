@@ -133,6 +133,7 @@ article.post-item figure > figcaption,
 /* embedded content */
 
 article.post-item .embed {
+  background: #f6f6f6;
   border: 1px solid #eee;
   margin: 0 0 1em 0;
   padding: 0.5em;
@@ -141,6 +142,7 @@ article.post-item .embed {
 }
 
 article.post-item .embed > iframe {
+  background: #fff;
   display: block;
   margin: auto;
   max-width: 100%;
@@ -148,6 +150,7 @@ article.post-item .embed > iframe {
 
 .remark-oembed-inline {
   padding: 0.5rem;
+  background: #f6f6f6;
   border: 1px solid #eee;
   margin-bottom: 1em;
 }
