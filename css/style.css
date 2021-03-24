@@ -132,6 +132,20 @@ article.post-item figure > figcaption,
 
 /* embedded content */
 
+article.post-item .embed {
+  border: 1px solid #eee;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  overflow-y: auto;
+  max-height: 120vw;
+}
+
+article.post-item .embed > iframe {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
 .remark-oembed-inline {
   padding: 0.5rem;
   border: 1px solid #eee;
