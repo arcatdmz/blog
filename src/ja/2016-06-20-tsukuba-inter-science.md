@@ -17,7 +17,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/06/20/tsukuba-inter-science"
 
 私の講演は[「分野/職種/国境を超える科学技術のために」](https://docs.com/junkato/1990)という大それたタイトルですが、要は「科学技術に関するコミュニティをどう作るか？」という観点で、これまでやってきたことを紹介するという内容でした。聴講いただいた方、コメントいただいた方ありがとうございました。
 
-<iframe style={{maxWidth: "100%", margin: "0 auto 1em auto", display: "block"}} src="https://docs.com/d/embed/D25193642-3635-0516-3000-001160199803%7eMdb7d35d3-990b-71e2-b99c-f4c1db11db63" width="752px" height="459px" frameBorder="0" scrolling="no" allowFullScreen="allowfullscreen"></iframe>
+<div className="embed"><iframe src="https://docs.com/d/embed/D25193642-3635-0516-3000-001160199803%7eMdb7d35d3-990b-71e2-b99c-f4c1db11db63" width="752px" height="459px" frameBorder="0" scrolling="no" allowFullScreen="allowfullscreen"></iframe></div>
 
 ふだんは研究内容に即した話ばかりしているので、こういうメタな話をする機会は貴重です。かねてより科学技術と社会の関わりに興味があって、学生時代に[東大 立花ゼミ](http://sci.digitalmuseum.jp/site/tsemi.php)に参加したり、藤垣先生の[科学技術社会論](http://webpark1225.sakura.ne.jp/www/)の講義を取ったり、自分なりにいろいろしてきました。それが今、科学者・研究者という立場になって、ちゃんと当時の自分が見て納得できる態度を取れているか？という自己チェックの機会にもなりました。
 

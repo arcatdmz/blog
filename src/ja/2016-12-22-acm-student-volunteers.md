@@ -60,11 +60,7 @@ SV の心構えとは、だいたい以下のようなものです。（今、�
 
 どんな場合でも**まずは親身になって対応し、自分で判断できなくなったら SV Chair に投げる**のが基本動作となります。SV Chair は他の[Organizing Committee](https://uist.acm.org/uist2016/organizers)メンバーとも知り合いで、参加登録やチケット紛失など、他の Chair と連携しないといけない場合にもスムーズに対応できるようどっしり構えています。（実際には Local Chair と一緒に走り回っていることも多いです 😋）
 
-> [There is always creativity within this conference - big thanks for attending from a local SV chair! #uist #uist2016](https://www.instagram.com/p/BLwDZCnAoSM/)
->
-> arc@dmz さん(@arcatdmz)が投稿した写真 - 2016 10 月 19 9:14 午前 PDT
-
-<script async defer="" src="//platform.instagram.com/en_US/embeds.js"></script>
+<div className="embed"><iframe src="https://instagram.com/p/BLwDZCnAoSM/embed/" width="612" height="710" frameBorder="0" scrolling="no"></iframe></div>
 
 こうして会議が無事終了すると、SV だけが参加を許されたパーティが開かれます。会期中は忙しくてなかなか会話できなかった人ともここで親交を深めることができます。さらに、SV Chair によっては他の[Organizing Committee](https://uist.acm.org/uist2016/organizers)メンバーにも声かけしていることがあり、夜が更けてから偉い先生方が SV パーティを冷やかしにきてくれたりします。
 
