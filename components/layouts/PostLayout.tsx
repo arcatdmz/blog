@@ -31,7 +31,7 @@ const PostLayout: FC<PostLayoutProps> = ({
   prev
 }) => {
   const { language, siteUrl, sitePath, author } = useContext(BlogContext);
-  const { slug, date, title, tags, altUrl } = frontMatter;
+  const { slug, date, lastmod, title, tags, altUrl } = frontMatter;
 
   const tagComponents = useMemo(() => {
     if (!tags) {
@@ -107,6 +107,14 @@ const PostLayout: FC<PostLayoutProps> = ({
               <Date value={date} />
             </strong>
           </List.Item>
+          {lastmod && (
+            <List.Item>
+              {language === "ja" ? "更新日: " : "updated on "}
+              <strong>
+                <Date value={lastmod} />
+              </strong>
+            </List.Item>
+          )}
           {tagComponents}
         </List>
         <Segment.Group>
