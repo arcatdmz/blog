@@ -24,7 +24,7 @@ summary_generated: >-
 
 これまでのブログは WordPress ベースで、 2012 年に Bootstrap を使ったテーマを自作していました。これはポートフォリオサイトのデザインに合わせていたのですが、ポートフォリオサイトのほうは 2018 年の初頭に改装を行い、 Bootstrap でなく Semantic UI を使うようになっていました。これにキャッチアップするには、新しく Semantic UI ベースのテーマを作るか、まったく新しいブログを作ってそちらのデザインを Semantic UI ベースで調整するか、の 2 択になります。
 
-もちろん、ブログとポートフォリオサイトは別物と捉えて、まったく別のデザインにしてもいいのですが、 [その昔、はてなダイアリーを使っていた頃](https://web.archive.org/web/20140218233235/http://d.hatena.ne.jp/arc_at_dmz/) ですら、 [当時の主サイト](https://digitalmuseum.jp/) のデザインに合わせて CSS をがんばってカスタマイズしたりしていたので、そこのこだわりは捨てきれませんでした。（と言いつつ 2 択のどちらにするか決心がつかないまま 3 年が経っていたわけですが…。）
+もちろん、ブログとポートフォリオサイトは別物と捉えて、まったく別のデザインにしてもいいのですが、[その昔、はてなダイアリーを使っていた頃](https://web.archive.org/web/20140218233235/http://d.hatena.ne.jp/arc_at_dmz/)ですら、[当時の主サイト](https://digitalmuseum.jp/)のデザインに合わせて CSS をがんばってカスタマイズしたりしていたので、そこのこだわりは捨てきれませんでした。（と言いつつ 2 択のどちらにするか決心がつかないまま 3 年が経っていたわけですが…。）
 
 ### WordPress の新テーマを作る？
 
@@ -56,7 +56,7 @@ WordPress はシステムとしてはさすがによくメンテされていて�
 
 > A script that converts a WordPress export XML file into Markdown files suitable for a static site generator (Gatsby, Hugo, Jekyll, etc.).
 
-と書いてあり、紹介されている [Gatsby](https://www.gatsbyjs.org/) は [ほんの少し触ったことがあった](https://github.com/WISSOrg/web2019) のですが、必要以上に複雑に思えてあまりいい印象がありませんでした。
+と書いてあり、紹介されている [Gatsby](https://www.gatsbyjs.org/) は[ほんの少し触ったことがあった](https://github.com/WISSOrg/web2019)のですが、必要以上に複雑に思えてあまりいい印象がありませんでした。
 
 一方、 Next.js で Web サイトを開発して <abbr title="Static Site Generation">SSG</abbr> で書き出して単純な HTTP サーバでホストするというアプローチ自体は [TextAlive](https://junkato.jp/ja/textalive) の一部のサイトや [Arch Research の Web サイト](https://research.archinc.jp)ですでに使っていました。
 
@@ -200,7 +200,7 @@ const mdxSource = await renderToString(content, {
 
 ### TypeSquare フォントを使う
 
-さくらインターネットのレンタルサーバを使っていると [モリサワの Web フォント 33 書体](https://www.sakura.ne.jp/function/webfont) を無料で使えます。
+さくらインターネットのレンタルサーバを使っていると[モリサワの Web フォント 33 書体](https://www.sakura.ne.jp/function/webfont)を無料で使えます。
 
 [さくらインターネットのヘルプドキュメント](https://help.sakura.ad.jp/360000223501/)で指定されているスクリプトタグ `<script type="text/javascript" src="//webfonts.sakura.ne.jp/js/sakurav3.js"></script>` を挿入することで、ページロード時に読み込みが必要な Web フォントのサブセットが自動的に読み込まれる仕組みになっています。
 
@@ -245,12 +245,12 @@ export function useTypeSquareJS() {
 
 #### 記事の概要がない
 
-[記事の一覧ページ](https://blog.junkato.jp/ja) では、記事の全文ではなく概要を表示するようにしています。ところが、変換した Markdown には概要データがありませんでした。
+[記事の一覧ページ](https://blog.junkato.jp/ja)では、記事の全文ではなく概要を表示するようにしています。ところが、変換した Markdown には概要データがありませんでした。
 
 そこで、Markdown の冒頭からある程度の長さをいい具合に切り出して概要扱いするようにしました。具体的には以下のような流れになっています。
 
 1. [scripts/add-summary.mjs](https://github.com/arcatdmz/blog/blob/main/scripts/add-summary.mjs) で概要を切り出し、 Markdown の Front Matter に `summary_generated` フィールドを作成する
-2. [記事一覧を表示するロジック](https://github.com/arcatdmz/blog/blob/main/components/ListItem.tsx#L21) で `summary` がなければ `summary_generated` を使うようにする
+2. [記事一覧を表示するロジック](https://github.com/arcatdmz/blog/blob/main/components/ListItem.tsx#L21)で `summary` がなければ `summary_generated` を使うようにする
 
 ```typescript:ListItem.tsx
 const body = summary || summary_generated;
