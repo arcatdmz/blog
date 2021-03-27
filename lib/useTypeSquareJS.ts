@@ -13,7 +13,10 @@ export function useTypeSquareJS() {
         ["localhost", "127.0.0.1"].indexOf(location.hostname.toLowerCase()) < 0
       ) {
         const TypeSquareJS = window["TypeSquareJS"];
-        TypeSquareJS.loadFont && TypeSquareJS.loadFont();
+        if (TypeSquareJS.loadFont) {
+          // Wait until the components are mounted?
+          setTimeout(() => TypeSquareJS.loadFont(), 10);
+        }
       }
     };
     Router.events.on("routeChangeComplete", onComplete);
