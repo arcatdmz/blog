@@ -15,7 +15,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/06/20/tsukuba-inter-science"
 
 多人数の登壇者が要点だけさっと話してパネルディスカッションに入るというフォーマットも非常によかったと思います。私の講演で紹介したお茶会も多人数が登壇する点は同じですが、パネルディスカッションの時間をちゃんと取ってみてもいいな、と感じました。[Twitter（Togetter まとめ）](http://togetter.com/li/989093)も、とても盛り上がっていました。
 
-私の講演は[「分野/職種/国境を超える科学技術のために」](https://docs.com/junkato/1990)という大それたタイトルですが、要は「科学技術に関するコミュニティをどう作るか？」という観点で、これまでやってきたことを紹介するという内容でした。聴講いただいた方、コメントいただいた方ありがとうございました。
+私の講演は[「分野/職種/国境を超える科学技術のために」](https://1drv.ms/p/s!An_6x27rFSmjku9_2ESoml2IzUqEag?e=MGJW2p)という大それたタイトルですが、要は「科学技術に関するコミュニティをどう作るか？」という観点で、これまでやってきたことを紹介するという内容でした。聴講いただいた方、コメントいただいた方ありがとうございました。
 
 <div className="embed">
 <iframe src="https://onedrive.live.com/embed?cid=A32915EB6EC7FA7F&amp;resid=A32915EB6EC7FA7F%21309247&amp;authkey=AJ9VTLADQw3Lu4o&amp;em=2&amp;wdAr=1.7777777777777777" width="962px" height="565px" frameBorder="0">これは、<a target="_blank" href="https://office.com/webapps">Office</a> の機能を利用した、<a target="_blank" href="https://office.com">Microsoft Office</a> の埋め込み型のプレゼンテーションです。</iframe>

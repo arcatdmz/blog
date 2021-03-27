@@ -86,7 +86,7 @@ IPSJ-ONE は、これからの科学を人類の幸福のために発展させ�
 
 ## IPSJ-ONE での発表資料など
 
-発表は[ニコニコ動画でいつでも見られる](http://live.nicovideo.jp/watch/lv253878857#7:21:35)ほか、[資料](https://docs.com/junkato/3910)や[当日の反響をまとめた Togetter](http://togetter.com/li/949224)もあります。
+発表は[ニコニコ動画でいつでも見られる](http://live.nicovideo.jp/watch/lv253878857#7:21:35)ほか、[資料](https://1drv.ms/p/s!An_6x27rFSmjkvABmPyD16ynPgBXLA?e=cddJic)や[当日の反響をまとめた Togetter](http://togetter.com/li/949224)もあります。
 
 <div className="embed">
 <iframe src="https://onedrive.live.com/embed?cid=A32915EB6EC7FA7F&amp;resid=A32915EB6EC7FA7F%21309249&amp;authkey=AJbjmNgX0T03CCI&amp;em=2&amp;wdAr=1.7777777777777777" width="962px" height="565px" frameBorder="0">これは、<a target="_blank" href="https://office.com/webapps">Office</a> の機能を利用した、<a target="_blank" href="https://office.com">Microsoft Office</a> の埋め込み型のプレゼンテーションです。</iframe>
