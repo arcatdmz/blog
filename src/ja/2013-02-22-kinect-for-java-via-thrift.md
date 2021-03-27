@@ -25,7 +25,7 @@ Kinect for Windows SDK は C++と C#向けの API しか提供していないた
 
 ソースコードとバイナリは[GitHub](https://github.com/arcatdmz/kinect-thrift-server)にあります。
 
-### Inter-process communication (IPC)
+## Inter-process communication (IPC)
 
 Java VM と外界が Inter-process communication するための方便は JNI、Named pipe、Memory-mapped file……といろいろあるのですが、今回は Kinect サーバを Windows マシンで動かして Picode を別の Mac マシンで動かすようなこともしてみたかったので、ソケット通信を利用することにしました。
 
@@ -33,7 +33,7 @@ Java VM と外界が Inter-process communication するための方便は JNI、
 
 そこで、TCP/IP 越しの[RPC](http://ja.wikipedia.org/wiki/RPC "Remote procedure call")用のフレームワークの中で使いやすそうなものがないか調べました。
 
-### Thrift
+## Thrift
 
 今回は C#がサーバ、Java がクライアントになるので、ライブラリの実装状況から見て候補が[Thrift](http://thrift.apache.org "Apache Thrift")と[MessagePack](http://msgpack.org/ "MessagePack")に絞られました。さらに MessagePack のほうは[C#の RPC の実装](https://github.com/yfakariya/msgpack-rpc-cli "MessagePack for CLI (.NET/Mono) RPC")がドキュメント不足で使いづらそうだったので Thrift を使うことにしました。
 
@@ -61,9 +61,9 @@ KinectService.Client client = new KinectService.Client(protocol);
 
 GitHub に C#の[サーバ](https://github.com/arcatdmz/kinect-thrift-server/blob/master/csharp/ConsoleKinectServer/Program.cs)と、Java の[簡単なクライアントのサンプル](https://github.com/arcatdmz/kinect-thrift-server/blob/master/java/src/jp/digitalmuseum/kinect/app/RawClientTest.java)、[GUI がついてちょっと複雑なクライアントのサンプル](https://github.com/arcatdmz/kinect-thrift-server/blob/master/java/src/jp/digitalmuseum/kinect/app/KinectClientFrame.java)を置いてあります。どちらも Git clone するとバイナリが置いてあってすぐ実行できるようになっています。実行の仕方について詳しくは[README.md](https://github.com/arcatdmz/kinect-thrift-server#readme)をどうぞ。
 
-### はまったところ
+## はまったところ
 
-#### Thrift の型システムとエンディアン
+### Thrift の型システムとエンディアン
 
 上にさらっと書いた内容だけだとすごく簡単そうです（実際、通信部分のコードは全く気にせず済んだので、そこはよかったのです）が、Thrift の型システムにいただけないところがあって苦労しました。まず、int や long などの配列を作れません。 list<i32\> と書くと、配列ではなく List ができます。しかも、Java の場合はプリミティブ型の List が作れないので List<Integer\> になります。[滅びればいいのに](https://twitter.com/arcatdmz/status/303885308754288640)。
 
@@ -101,7 +101,7 @@ if (frame.isSetDepthImage()) {
     depthByteBuffer.order(ByteOrder.LITTLE_ENDIAN);
 ```
 
-#### Kinect のカラー画像の RGB オーダー
+### Kinect のカラー画像の RGB オーダー
 
 ~~Thrift は全く関係ないのですが、Kinect のカラー画像はなぜか BGR(null)の順で byte\[\]として取得できるようになっています……ふつう ARGB か(null)BGR、(null)RGB だと思うんですけど。この~~**Java 側で BGR(null)順になっていた理由は上記と同じ Endian-ness の問題でした。ともかく、こうして受信した**byte\[\]を Java の BufferedImage としてレンダリングしようと思うと、素直な実装では byte\[\]の要素数ループを回して RGB のオーダーを入れ替えなければなりません。それって何だかエレガントじゃない。
 

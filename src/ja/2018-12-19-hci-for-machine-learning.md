@@ -26,7 +26,7 @@ altUrl: "https://junkato.jp/ja/blog/2018/12/19/hci-for-machine-learning"
 
 ---
 
-### Grounding Interactive Machine Learning Tool Design in How Non-Experts Actually Build Models
+## Grounding Interactive Machine Learning Tool Design in How Non-Experts Actually Build Models
 
 Qian Yang, Jina Suh, Nan-Chen Chen, and Gonzalo Ramos. 2018. Grounding Interactive Machine Learning Tool Design in How Non-Experts Actually Build Models. In Proceedings of the 2018 Designing Interactive Systems Conference (DIS '18). ACM, New York, NY, USA, 573-584. DOI: [https://doi.org/10.1145/3196709.3196729](https://doi.org/10.1145/3196709.3196729)
 
@@ -50,7 +50,7 @@ Qian Yang, Jina Suh, Nan-Chen Chen, and Gonzalo Ramos. 2018. Grounding Interacti
 
 ---
 
-### Gestalt: Integrated Support for Implementation and Analysis in Machine Learning
+## Gestalt: Integrated Support for Implementation and Analysis in Machine Learning
 
 Kayur Patel, Naomi Bancroft, Steven M. Drucker, James Fogarty, Andrew J. Ko, and James Landay. 2010. Gestalt: integrated support for implementation and analysis in machine learning. In Proceedings of the 23nd annual ACM symposium on User interface software and technology (UIST '10). ACM, New York, NY, USA, 37-46. DOI: [https://doi.org/10.1145/1866029.1866038](https://doi.org/10.1145/1866029.1866038)
 
@@ -70,7 +70,7 @@ https://www.youtube.com/watch?v=TKO9tLxytGA
 
 ---
 
-### その他の論文紹介
+## その他の論文紹介
 
 勉強会では、他にも以下の論文を紹介しました。
 
