@@ -15,9 +15,9 @@ altUrl: "https://junkato.jp/ja/blog/2019/08/16/roles-of-academic-conf-pc-members
 
 昨年くらいから大事な会議と思っても諸々の事情でお断りせざるを得ないことが増えてきて、何となくバトンを渡すタイミングのような気がしてきたので自分の経験を文章にまとめておきます。
 
-- [委員の仕事の流れ](/ja/posts/2019-08-16-roles-of-academic-conf-pc-members#roles)
-- [プログラム委員会用語集](/ja/posts/2019-08-16-roles-of-academic-conf-pc-members#terminology)
-- [プログラム委員のなりかた？](/ja/posts/2019-08-16-roles-of-academic-conf-pc-members#who)
+- [委員の仕事の流れ](#roles)
+- [プログラム委員会用語集](#terminology)
+- [プログラム委員のなりかた？](#who)
 
 ちなみに、プログラム委員会以外の会議全体の運営の流れについては[お茶の水女子大学伊藤先生の国際会議運営記](https://www.slideshare.net/iTooooooooooooT/ss-95092188/)が大変参考になります。
 
