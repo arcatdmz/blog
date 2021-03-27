@@ -66,7 +66,9 @@ altUrl: "https://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service"
 
 私は、昨年初頭の名状しがたいお茶会というプライベートイベントで**Science as a Service**という言葉を説明しました。言葉自体は[O'Reilly Radar](http://radar.oreilly.com/2013/01/science-as-a-service.html)で 2013 年に使われており、科学研究のプロセスの一部を外注する（API 化する）ことを指しています。たとえば[Benchling](https://benchling.com/)は、画像処理やデータ管理をすべてクラウド上で行うことで研究を加速するサービスです。一方、私は SaaS を、より成果物にフォーカスして見ています。**インタラクティブシステム（プログラム）が論文を代替できる**と考えているためです。
 
-<div className="embed"><iframe src="https://docs.com/d/embed/D25194420-1204-9861-8930-001302040927%7eMdb7d35d3-990b-71e2-b99c-f4c1db11db63" width="752px" height="459px" frameBorder="0" scrolling="no" allowFullScreen="allowfullscreen"></iframe></div>
+<div className="embed">
+<iframe src="https://onedrive.live.com/embed?cid=A32915EB6EC7FA7F&amp;resid=A32915EB6EC7FA7F%21309248&amp;authkey=ADbJegpk6f_62lk&amp;em=2&amp;wdAr=1.7777777777777777" width="962px" height="565px" frameBorder="0">これは、<a target="_blank" href="https://office.com/webapps">Office</a> の機能を利用した、<a target="_blank" href="https://office.com">Microsoft Office</a> の埋め込み型のプレゼンテーションです。</iframe>
+</div>
 
 プログラミング環境技術が十分に進展すれば、**研究者自身が（広義の）プログラミングを行い、研究成果の生データをクラウド上に暗号化して置いて、他の研究者が検証するために必要なデータだけをストリーミングできるようになる**はずです。私は、このときデータにアクセスするためのユーザインタフェースが論文の代わりになると考えています。情報系では、[論文にデモ動画を含めたり](https://www.autodeskresearch.com/publications/animatedfigures)、[論文にシステムを含めたり](http://textalive.jp/paper)できます。[複雑なソースコード（数式）は具体的にパラメタを触れるようにすることで理解しやすくなります](http://worrydream.com/LadderOfAbstraction/)。これを科学の諸分野に広げれば、さまざまな知見がもっと共有されやすくなると思うのは期待しすぎでしょうか。
 
@@ -76,10 +78,14 @@ IPSJ-ONE は、これからの科学を人類の幸福のために発展させ�
 
 ---
 
+<a className="internal-link" id="refs"></a>
+
 ## IPSJ-ONE での発表資料など
 
 発表は[ニコニコ動画でいつでも見られる](http://live.nicovideo.jp/watch/lv253878857#7:21:35)ほか、[資料](https://docs.com/junkato/3910)や[当日の反響をまとめた Togetter](http://togetter.com/li/949224)もあります。
 
-<div className="embed"><iframe src="https://docs.com/d/embed/D25194444-0320-0246-0940-000872616880%7eMdb7d35d3-990b-71e2-b99c-f4c1db11db63" width="752px" height="459px" frameBorder="0" scrolling="no" allowFullScreen="allowfullscreen"></iframe></div>
+<div className="embed">
+<iframe src="https://onedrive.live.com/embed?cid=A32915EB6EC7FA7F&amp;resid=A32915EB6EC7FA7F%21309249&amp;authkey=AJbjmNgX0T03CCI&amp;em=2&amp;wdAr=1.7777777777777777" width="962px" height="565px" frameBorder="0">これは、<a target="_blank" href="https://office.com/webapps">Office</a> の機能を利用した、<a target="_blank" href="https://office.com">Microsoft Office</a> の埋め込み型のプレゼンテーションです。</iframe>
+</div>
 
 発表で紹介した 2 つのプログラミング環境について詳しく知りたい方は[DejaVu](https://junkato.jp/ja/dejavu/)と[f3.js](http://f3js.org/)を、SIGPX について興味を持たれた方は、ぜひ[一つ前のブログ記事](/ja/posts/2016-03-05-sigpx1/)をご覧ください。5 分では紹介しきれなかった未来志向のプログラミングの話、とくにプログラミングできない人までプログラミングに巻き込む話については[昨年「情報科学若手の会」で招待講演した際の発表資料](https://junkato.jp/ja/talks/people-are-programmers/?p=1)をご覧ください。
