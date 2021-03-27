@@ -37,6 +37,13 @@ body {
 
 /* figures */
 
+article.post-item a.internal-link {
+  display: block;
+  position: relative;
+  top: -4.4rem;
+  visibility: hidden;
+}
+
 article.post-item p > a > img,
 article.post-item p > img {
   border: 1px solid #eee;
