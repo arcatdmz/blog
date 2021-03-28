@@ -1,6 +1,6 @@
 ---
 title: PX に関する研究で IPSJ/ACM から共同表彰されました
-date: "2021-03-31"
+date: "2021-03-28"
 tags:
   - sigpx
   - research
