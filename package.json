@@ -5,7 +5,7 @@
   "description": "Source code of https://blog.junkato.jp",
   "main": "index.js",
   "scripts": {
-    "start": "next-remote-watch ./data",
+    "start": "next-remote-watch ./src",
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
