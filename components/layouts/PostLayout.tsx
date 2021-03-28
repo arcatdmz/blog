@@ -6,6 +6,7 @@ import {
   Icon,
   List,
   Menu,
+  Message,
   Segment
 } from "semantic-ui-react";
 
@@ -31,7 +32,7 @@ const PostLayout: FC<PostLayoutProps> = ({
   prev
 }) => {
   const { language, siteUrl, sitePath, author } = useContext(BlogContext);
-  const { slug, date, lastmod, title, tags, altUrl } = frontMatter;
+  const { draft, slug, date, lastmod, title, tags, altUrl } = frontMatter;
 
   const tagComponents = useMemo(() => {
     if (!tags) {
@@ -92,6 +93,17 @@ const PostLayout: FC<PostLayoutProps> = ({
             <ShareButtons url={url} title={title} />
           </Menu.Menu>
         </Menu>
+        {draft && (
+          <Message
+            icon="warning circle"
+            warning
+            content={
+              language === "ja"
+                ? "この記事は下書きです。記事の一覧には表示されません。"
+                : "This is a draft article. This does not show up in the list of articles."
+            }
+          />
+        )}
         <Divider />
         <header>
           <PageTitle>{title}</PageTitle>

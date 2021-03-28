@@ -28,13 +28,9 @@ export const Post: FC<PostProps> = ({ post, prev, next }) => {
   const sourceUrl = `https://github.com/arcatdmz/blog/blob/main/src/${language}/${frontMatter.slug}.md`;
   return (
     <BaseLayout sourceUrl={sourceUrl}>
-      {frontMatter.draft !== true ? (
-        <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
-          {content}
-        </PostLayout>
-      ) : (
-        <NotFoundLayout />
-      )}
+      <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
+        {content}
+      </PostLayout>
     </BaseLayout>
   );
 };
