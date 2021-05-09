@@ -21,7 +21,7 @@ ACM の国際会議には、通常の登壇発表やポスター発表とは別�
 
 学生が発案し、主導的に行っている研究について発表するとてもよい機会であり、僕自身は学部のときと博士課程のとき、あわせて 2 度参加しています。タイミングによって、学部の卒業論文を発表する場([CHI 2009](http://www.chi2009.org/Authors/CallForPapers/StudentResearchCompetition.html "Student Research Competition - CHI 2009"))として、また、異分野に参入するきっかけ([PLDI 2013](http://www.cs.wm.edu/~idillig/pldi13-src/ "PLDI 2013 Student Research Competition"))として活用しました。
 
-今学生の皆さんにはぜひ挑戦してみてほしいと思うので、実例も交えつつ、コンペの概要を紹介します。ちょっと長くなりそうなので、この記事では概要と論文投稿までの流れを説明します。[次の記事](/ja/posts/2014-05-05-encouragement-on-student-research-compeititon-2/ "Student Research Competitionのすすめ (続き)")とセットでどうぞ。
+今学生の皆さんにはぜひ挑戦してみてほしいと思うので、実例も交えつつ、コンペの概要を紹介します。ちょっと長くなりそうなので、この記事では概要と論文投稿までの流れを説明します。[次の記事](/ja/posts/2014-05-05-acm-student-research-competition-2/ "Student Research Competitionのすすめ (続き)")とセットでどうぞ。
 
 ## SRC に挑戦すべき理由
 
@@ -72,4 +72,4 @@ SRC に参加するには、Extended Abstract という**ポスター発表以�
 
 ### 第 2 ラウンド以降
 
-第 2 ラウンドからはいよいよ会議に参加して、ポスター発表や登壇発表を行います。詳しくは[次の記事](/ja/posts/2014-05-05-encouragement-on-student-research-compeititon-2/ "Student Research Competitionのすすめ (続き)")をご覧ください:)
+第 2 ラウンドからはいよいよ会議に参加して、ポスター発表や登壇発表を行います。詳しくは[次の記事](/ja/posts/2014-05-05-acm-student-research-competition-2/ "Student Research Competitionのすすめ (続き)")をご覧ください:)

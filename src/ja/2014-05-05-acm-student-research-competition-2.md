@@ -12,7 +12,7 @@ altUrl: "https://junkato.jp/ja/blog/2014/05/05/acm-student-research-competition-
 
 ## Student Research Competition の流れ
 
-まずは[前の記事](/ja/posts/2014-05-04-encouragement-of-student-research-competition/ "Student Research Competitionのすすめ")の復習です。この記事では、ACM Student Research Competition (SRC) 第 2 ラウンドのポスター発表から順に紹介していきます。
+まずは[前の記事](/ja/posts/2014-05-04-acm-student-research-competition/ "Student Research Competitionのすすめ")の復習です。この記事では、ACM Student Research Competition (SRC) 第 2 ラウンドのポスター発表から順に紹介していきます。
 
 1. Extended Abstract の提出
 2. ポスター発表
