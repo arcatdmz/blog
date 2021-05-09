@@ -5,6 +5,12 @@ tags:
   - research
   - student
   - university
+summary: >-
+  先週末から、トップ国際会議 ACM CHI がオンライン開催されています。この記事では主に CHI 参加中の学生向けに Student Research Competition (SRC) の聴講をおすすめします。（かつて学生だったみなさまは、おすすめされるまでもなく、ぜひ聴講・応援をお願いいたします!!）
+summary_generated: >-
+  先週末から、トップ国際会議 ACM CHI がオンライン開催されています。 COVID-19
+  の長引く影響により、もともとは横浜で開催される予定だったものが全日程オンライン開催となりました。自分は論文の査読を行うプログラム委員会の EIST
+  という分科会（Subcommit...
 ---
 
 先週末から、トップ国際会議 ACM CHI がオンライン開催されています。 COVID-19 の長引く影響により、もともとは横浜で開催される予定だったものが全日程オンライン開催となりました。自分は論文の査読を行うプログラム委員会の <a href="https://chi2021.acm.org/for-authors/presenting/papers/selecting-a-subcommittee#Engineering-Interactive-Systems-and-Technologies"><abbr title="Engineering Interactive Systems and Technologies">EIST</abbr></a> という分科会（Subcommittee）で Associate Chair を務めたほか、学生の研究コンペである Student Research Competition (SRC) で [Nolwenn](https://nolwennmaudet.com) とともに Chair を務めています。
