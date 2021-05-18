@@ -23,6 +23,8 @@ ACM の国際会議には、通常の登壇発表やポスター発表とは別�
 
 今学生の皆さんにはぜひ挑戦してみてほしいと思うので、実例も交えつつ、コンペの概要を紹介します。ちょっと長くなりそうなので、この記事では概要と論文投稿までの流れを説明します。[次の記事](/ja/posts/2014-05-05-acm-student-research-competition-2/ "Student Research Competitionのすすめ (続き)")とセットでどうぞ。
 
+**2021/5/18 追記** COVID-19 の影響でオンライン開催となった [ACM CHI 2021](https://chi2021.acm.org/) の Student Research Competition Co-chair を務めました。ぜひ、聴講をおすすめする紹介「[ACM CHI 2021 Student Research Competition へようこそ！](/ja/posts/2021-05-10-chi2021-student-research-competition/)」をご覧ください。
+
 ## SRC に挑戦すべき理由
 
 SRC の狙いは、[公式サイト](http://src.acm.org/ "SRC Homepage")では次のように説明されています。
