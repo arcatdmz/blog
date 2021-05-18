@@ -13,6 +13,8 @@ summary_generated: >-
   の長引く影響により、もともとは横浜で開催される予定だったものが全日程オンライン開催となりました。自分は論文の査読を行うプ...
 ---
 
+**5 月 19 日追記:** みなさま、ご参加ありがとうございました。また、審査員の方々にもこの場を借りて御礼申し上げます。参加した学生のみなさまも、おつかれさまでした！ 1st Round に出場した方々のプレゼンテーションは [YouTube Playlist](https://www.youtube.com/playlist?list=PLqhXYFYmZ-VcBRf3ufMIWaxvoGG-r1qp1) で閲覧できます。 2nd Round の勝者については [Awards ページの最下部](https://chi2021.acm.org/for-attendees/highlights/awards)に掲示されています。
+
 先週末から、Human-Computer Interaction 分野のトップ国際会議 ACM CHI がオンライン開催されています。 COVID-19 の長引く影響により、もともとは横浜で開催される予定だったものが全日程オンライン開催となりました。自分は論文の査読を行うプログラム委員会の <a href="https://chi2021.acm.org/for-authors/presenting/papers/selecting-a-subcommittee#Engineering-Interactive-Systems-and-Technologies"><abbr title="Engineering Interactive Systems and Technologies">EIST</abbr></a> という分科会（Subcommittee）で Associate Chair を務めたほか、学生の研究コンペである Student Research Competition (SRC) で [Nolwenn](https://nolwennmaudet.com) とともに Chair を務めています。
 
 この記事では主に CHI 参加中の学生向けに SRC の聴講をおすすめします。かつて学生だったみなさまは、おすすめされるまでもなく、ぜひ聴講・応援をお願いいたします!!
