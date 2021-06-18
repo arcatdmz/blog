@@ -9,8 +9,9 @@ summary: >-
   先週末から、Human-Computer Interaction 分野のトップ国際会議 ACM CHI がオンライン開催されています。この記事では主に
   CHI 参加中の学生向けに Student Research Competition (SRC) の聴講をおすすめします。
 summary_generated: >-
-  先週末から、Human-Computer Interaction 分野のトップ国際会議 ACM CHI がオンライン開催されています。 COVID-19
-  の長引く影響により、もともとは横浜で開催される予定だったものが全日程オンライン開催となりました。自分は論文の査読を行うプ...
+  5 月 19 日追記:
+  みなさま、ご参加ありがとうございました。また、審査員の方々にもこの場を借りて御礼申し上げます。参加した学生のみなさまも、おつかれさまでした！ 1st
+  Round に出場した方々のプレゼンテーションは YouTube Playlist で閲覧できます。...
 ---
 
 **5 月 19 日追記:** みなさま、ご参加ありがとうございました。また、審査員の方々にもこの場を借りて御礼申し上げます。参加した学生のみなさまも、おつかれさまでした！ 1st Round に出場した方々のプレゼンテーションは [YouTube Playlist](https://www.youtube.com/playlist?list=PLqhXYFYmZ-VcBRf3ufMIWaxvoGG-r1qp1) で閲覧できます。 2nd Round の勝者については [Awards ページの最下部](https://chi2021.acm.org/for-attendees/highlights/awards)に掲示されています。
