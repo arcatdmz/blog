@@ -43,7 +43,7 @@ const ListLayout: FC<ListLayoutProps> = ({
         .toLowerCase()
         .includes(value)
     );
-  }, [searchValue]);
+  }, [posts, searchValue]);
 
   const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
