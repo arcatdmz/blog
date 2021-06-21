@@ -18,9 +18,6 @@ const TaggedPosts: FC<PostsProps> = ({ posts, tag }) => {
   const text =
     blog.language === "ja" ? "タグ付けされた投稿: " : "Posts tagged with ";
 
-  // Capitalize first letter and convert space to dash
-  const title = tag[0].toUpperCase() + tag.split(" ").join("-").slice(1);
-
   return (
     <BaseLayout>
       <Head>
