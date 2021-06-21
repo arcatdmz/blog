@@ -22,8 +22,8 @@ const ListItem: FC<PostIface> = ({
   const main = (
     <>
       <List.Header as="h2">
-        <Link href={`${sitePath}posts/${slug}`}>
-          <a href={`${sitePath}posts/${slug}`}>{title}</a>
+        <Link href={`${sitePath}posts/${slug}`} passHref>
+          <a>{title}</a>
         </Link>
       </List.Header>
       {body && <p>{body}</p>}
@@ -43,8 +43,15 @@ const ListItem: FC<PostIface> = ({
         <Grid stackable columns={2}>
           <Grid.Column width={11}>{main}</Grid.Column>
           <Grid.Column width={5}>
-            <Link href={`${sitePath}posts/${slug}`}>
-              <Image src={`${imageRoot}${coverImage}`} fluid rounded bordered />
+            <Link href={`${sitePath}posts/${slug}`} passHref>
+              <a>
+                <Image
+                  src={`${imageRoot}${coverImage}`}
+                  fluid
+                  rounded
+                  bordered
+                />
+              </a>
             </Link>
           </Grid.Column>
         </Grid>

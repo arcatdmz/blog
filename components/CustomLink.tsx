@@ -9,8 +9,8 @@ const CustomLink: FC<
 
   if (isInternalLink) {
     return (
-      <Link href={href}>
-        <a href={href} {...rest} />
+      <Link href={href} passHref>
+        <a {...rest} />
       </Link>
     );
   }

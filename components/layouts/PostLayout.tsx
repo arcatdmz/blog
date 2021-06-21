@@ -61,29 +61,26 @@ const PostLayout: FC<PostLayoutProps> = ({
       <BlogSeo url={url} {...frontMatter} />
       <article className="post-item">
         <Menu className="top nav" fluid secondary>
-          <Link href={sitePath}>
+          <Link href={sitePath} passHref>
             <Menu.Item
               as="a"
-              href={sitePath}
               icon={<Icon circular name="home" />}
               title={language === "ja" ? "ブログのトップへ" : "Blog top page"}
             />
           </Link>
           {prev && (
-            <Link href={`${sitePath}posts/${prev.slug}`}>
+            <Link href={`${sitePath}posts/${prev.slug}`} passHref>
               <Menu.Item
                 as="a"
-                href={`${sitePath}posts/${prev.slug}`}
                 icon={<Icon circular name="angle left" />}
                 title={prev.title}
               />
             </Link>
           )}
           {next && (
-            <Link href={`${sitePath}posts/${next.slug}`}>
+            <Link href={`${sitePath}posts/${next.slug}`} passHref>
               <Menu.Item
                 as="a"
-                href={`${sitePath}posts/${next.slug}`}
                 icon={<Icon circular name="angle right" title={next.title} />}
                 title={next.title}
               />
@@ -153,16 +150,16 @@ const PostLayout: FC<PostLayoutProps> = ({
         <footer>
           <Menu stackable>
             {prev && (
-              <Link href={`${sitePath}posts/${prev.slug}`}>
-                <Menu.Item as="a" href={`${sitePath}posts/${prev.slug}`}>
+              <Link href={`${sitePath}posts/${prev.slug}`} passHref>
+                <Menu.Item as="a">
                   <Icon name="angle left" />
                   {prev.title}
                 </Menu.Item>
               </Link>
             )}
             {next && (
-              <Link href={`${sitePath}posts/${next.slug}`}>
-                <Menu.Item as="a" href={`${sitePath}posts/${next.slug}`}>
+              <Link href={`${sitePath}posts/${next.slug}`} passHref>
+                <Menu.Item as="a">
                   <Icon name="angle right" />
                   {next.title}
                 </Menu.Item>
@@ -177,10 +174,9 @@ const PostLayout: FC<PostLayoutProps> = ({
                   language === "ja" ? "ページのトップへ" : "Top of this page"
                 }
               />
-              <Link href={sitePath}>
+              <Link href={sitePath} passHref>
                 <Menu.Item
                   as="a"
-                  href={sitePath}
                   icon="home"
                   title={
                     language === "ja" ? "ブログのトップへ" : "Blog top page"

@@ -69,8 +69,8 @@ const IndexPosts: FC<IndexPostsPageProps> = ({ posts }) => {
         <Divider />
         <footer>
           <Menu stackable>
-            <Link href={`${sitePath}posts`}>
-              <Menu.Item as="a" href={`${sitePath}posts`} position="right">
+            <Link href={`${sitePath}posts`} passHref>
+              <Menu.Item as="a" position="right">
                 <Icon name="angle down" />
                 {language === "ja" ? "すべての投稿を見る" : "See all posts"}
               </Menu.Item>
