@@ -1,9 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
-import renderToString from "next-mdx-remote/render-to-string";
+import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
-
-import { MDXComponents } from "../components/MDXComponents";
 
 import { FrontMatterIface } from "./FrontMatterIface";
 import { PostIface } from "./PostIface";
@@ -35,8 +33,7 @@ export async function getFileBySlug(
     : fs.readFileSync(mdPath, "utf8");
 
   const { data, content } = matter(source);
-  const mdxSource = await renderToString(content, {
-    components: MDXComponents,
+  const mdxSource = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [
         require("remark-slug"),

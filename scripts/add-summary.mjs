@@ -1,10 +1,13 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import renderToString from "next-mdx-remote/render-to-string.js";
+import ReactDOMServer from "react-dom/server.js";
+import { MDXRemote } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize.js";
 import HTML from "html-parse-stringify";
 
 import config from "./config.mjs";
+import { createElement } from "react";
 
 const toString = node => {
   if (node.type === "text") {
@@ -25,7 +28,10 @@ const readFiles = async ({ dir, summaryLength }) => {
       let text,
         updated = false;
       try {
-        const ast = HTML.parse((await renderToString(content)).renderedOutput);
+        const html = ReactDOMServer.renderToString(
+          createElement(MDXRemote, await serialize(content))
+        );
+        const ast = HTML.parse(html);
         const headerIndex = ast.findIndex(
           v => v.type === "tag" && /h[0-9]+/.test(v.name)
         );

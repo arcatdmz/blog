@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { MdxRemote } from "next-mdx-remote/types";
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
 
 import { Post } from "../../components/pages/Post";
 import {
@@ -12,7 +12,7 @@ import { PostIface } from "../../lib/PostIface";
 
 interface PageProps {
   post: {
-    mdxSource: MdxRemote.Source;
+    mdxSource: MDXRemoteSerializeResult;
     frontMatter: PostIface;
   };
   prev?: PostIface;
