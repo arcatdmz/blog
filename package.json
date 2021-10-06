@@ -11,7 +11,7 @@
     "export": "next export",
     "download": "cd public && fetch-github-release arcatdmz arcatdmz.github.io",
     "prettify": "prettier --write ./{components,lib,pages}/**/*.{ts,tsx}",
-    "posts": "npm run posts:summarize && npm run posts:prettify",
+    "posts": "npm run posts:prettify && npm run posts:summarize",
     "posts:prettify": "prettier --write ./src/**/*.{md,mdx}",
     "posts:summarize": "node scripts/add-summary.mjs"
   },
