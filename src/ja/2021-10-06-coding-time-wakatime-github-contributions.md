@@ -5,6 +5,7 @@ tags:
   - research
   - programming
   - life
+coverImage: 2021-10-06-wakatime.png
 summary_generated: >-
   年初に、 Visual Studio Code などのコーディング時間をプロジェクトごとに集計してくれる WakaTime
   というツールを使い始めました。週休 2 日と思うとだいたい 1 日あたり 4 時間は VS Code を使ってるようです。VS Code 外などトラッ...
