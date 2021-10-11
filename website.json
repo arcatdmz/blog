@@ -1,6 +1,7 @@
 {
   "rootPath": "/",
   "imageRoot": "https://blog.junkato.jp/images/",
+  "sourceRoot": "https://github.com/arcatdmz/blog/blob/main/src/",
   "maxPosts": 5,
   "languages": {
     "default": {

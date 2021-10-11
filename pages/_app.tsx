@@ -21,6 +21,7 @@ export default function App({ Component, pageProps }) {
           language: "default",
           rootPath: websiteJson.rootPath,
           imageRoot: websiteJson.imageRoot,
+          sourceRoot: websiteJson.sourceRoot,
           maxPosts: websiteJson.maxPosts,
           ...websiteJson.languages.default
         }}

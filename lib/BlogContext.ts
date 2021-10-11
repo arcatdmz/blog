@@ -3,6 +3,7 @@ import { createContext } from "react";
 const BlogContext = createContext<{
   rootPath: string;
   imageRoot: string;
+  sourceRoot: string;
   maxPosts: number;
   language: string;
   bannerUrl: string;

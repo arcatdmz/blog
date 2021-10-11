@@ -18,9 +18,9 @@ export interface PostProps {
 }
 
 export const Post: FC<PostProps> = ({ post, prev, next }) => {
-  const { language } = useContext(BlogContext);
+  const { language, sourceRoot } = useContext(BlogContext);
   const { mdxSource, frontMatter } = post;
-  const sourceUrl = `https://github.com/arcatdmz/blog/blob/main/src/${language}/${frontMatter.slug}.md`;
+  const sourceUrl = `${sourceRoot}${language}/${frontMatter.slug}.md`;
   return (
     <BaseLayout sourceUrl={sourceUrl}>
       <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
