@@ -4,9 +4,9 @@ import { PostIface } from "./PostIface";
 
 const generateRssItem = (post: PostIface, language: string) => `
   <item>
-    <guid>${websiteJson.languages[language].siteUrl}posts/${post.slug}</guid>
+    <guid>${websiteJson.languages[language].siteUrl}posts/${post.slug}/</guid>
     <title>${post.title}</title>
-    <link>${websiteJson.languages[language].siteUrl}posts/${post.slug}</link>
+    <link>${websiteJson.languages[language].siteUrl}posts/${post.slug}/</link>
     <description>${post.summary || post.summary_generated}</description>
     <pubDate>${new Date(post.date).toUTCString()}</pubDate>
     <author>${websiteJson.languages[language].email} (${

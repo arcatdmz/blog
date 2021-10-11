@@ -54,7 +54,7 @@ const PostLayout: FC<PostLayoutProps> = ({
     );
   }, [tags]);
 
-  const url = `${siteUrl}posts/${slug}`;
+  const url = `${siteUrl}posts/${slug}/`;
 
   return (
     <Container id="main">
@@ -69,7 +69,7 @@ const PostLayout: FC<PostLayoutProps> = ({
             />
           </Link>
           {prev && (
-            <Link href={`${sitePath}posts/${prev.slug}`} passHref>
+            <Link href={`${sitePath}posts/${prev.slug}/`} passHref>
               <Menu.Item
                 as="a"
                 icon={<Icon circular name="angle left" />}
@@ -78,7 +78,7 @@ const PostLayout: FC<PostLayoutProps> = ({
             </Link>
           )}
           {next && (
-            <Link href={`${sitePath}posts/${next.slug}`} passHref>
+            <Link href={`${sitePath}posts/${next.slug}/`} passHref>
               <Menu.Item
                 as="a"
                 icon={<Icon circular name="angle right" title={next.title} />}
@@ -150,7 +150,7 @@ const PostLayout: FC<PostLayoutProps> = ({
         <footer>
           <Menu stackable>
             {prev && (
-              <Link href={`${sitePath}posts/${prev.slug}`} passHref>
+              <Link href={`${sitePath}posts/${prev.slug}/`} passHref>
                 <Menu.Item as="a">
                   <Icon name="angle left" />
                   {prev.title}
@@ -158,7 +158,7 @@ const PostLayout: FC<PostLayoutProps> = ({
               </Link>
             )}
             {next && (
-              <Link href={`${sitePath}posts/${next.slug}`} passHref>
+              <Link href={`${sitePath}posts/${next.slug}/`} passHref>
                 <Menu.Item as="a">
                   <Icon name="angle right" />
                   {next.title}
