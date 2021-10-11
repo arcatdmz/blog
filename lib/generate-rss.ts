@@ -12,7 +12,7 @@ const generateRssItem = (post: PostIface, language: string) => `
     <author>${websiteJson.languages[language].email} (${
   websiteJson.languages[language].author
 })</author>
-    ${post.tags.map(t => `<category>${t}</category>`).join("")}
+    ${post.tags ? post.tags.map(t => `<category>${t}</category>`).join("") : ""}
   </item>
 `;
 

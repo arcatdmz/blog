@@ -31,9 +31,10 @@ const ListItem: FC<PostIface> = ({
         <List.Item>
           <Date value={date} />
         </List.Item>
-        {tags.map(tag => (
-          <List.Item key={tag}>{<Tag text={tag} />}</List.Item>
-        ))}
+        {tags &&
+          tags.map(tag => (
+            <List.Item key={tag}>{<Tag text={tag} />}</List.Item>
+          ))}
       </List>
     </>
   );

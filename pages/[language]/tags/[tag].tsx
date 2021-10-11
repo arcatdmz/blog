@@ -58,7 +58,9 @@ const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   // Filter posts
   const posts = (await getAllFilesFrontMatter(language)).filter(
     post =>
-      post.draft !== true && post.tags.map(t => kebabCase(t)).includes(tag)
+      post.draft !== true &&
+      post.tags &&
+      post.tags.map(t => kebabCase(t)).includes(tag)
   );
 
   // Write RSS file
