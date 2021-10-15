@@ -3,6 +3,7 @@ title: 情報処理が科学を更新する（IPSJ-ONEに登壇しました）
 date: "2016-03-16"
 tags:
   - research
+  - science
   - sigpx
   - student
 coverImage: IMGP7944trim.jpg

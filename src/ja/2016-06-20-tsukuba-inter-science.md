@@ -4,6 +4,7 @@ date: "2016-06-20"
 tags:
   - discussion
   - research
+  - science
 coverImage: 20160618_092611188_iOS.jpg
 summary_generated: >-
   ご縁をいただいて、第 2 回つくば横の会に登壇しました。昨年開催された第 1

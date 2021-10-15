@@ -4,6 +4,7 @@ date: "2018-12-22"
 tags:
   - discussion
   - research
+  - science
 summary_generated: >-
   情報処理学会の学会誌「情報処理」に毎月楽しみにしている「先生、質問です！」というコーナーがあります。学生などの素朴な疑問に研究者複数名が真摯に答える内容で、情報処理に関わる質問はもちろんのこと、研究者のキャリアについての質問などもあり、論文からは見えない研究者像を浮き彫りに...
 altUrl: "https://junkato.jp/ja/blog/2018/12/22/computer-science-in-the-future"
