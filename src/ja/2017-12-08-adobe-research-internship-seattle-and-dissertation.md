@@ -6,6 +6,7 @@ tags:
   - research
   - student
   - university
+  - advent-calendar
 summary_generated: >-
   これまでにも情報科学系 海外研究インターンのすすめ〔前編〕・〔後編〕や北京に 4 ヶ月住んだ話（Microsoft Research
   Asia）などを書いてきましたが、シアトルに 3 ヶ月住んだ話（Adobe Research）は書けていませんでした。なぜなら、端的に言うと...

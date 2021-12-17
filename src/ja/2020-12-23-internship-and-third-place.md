@@ -6,6 +6,7 @@ tags:
   - life
   - research
   - student
+  - advent-calendar
 coverImage: DSC01972-scaled.jpg
 summary_generated: >-
   この記事は Microsoft Research Internship アルムナイ Advent Calendar の 23

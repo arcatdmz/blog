@@ -5,6 +5,7 @@ tags:
   - discussion
   - research
   - sigpx
+  - advent-calendar
 coverImage: mlse1-kato-slides.png
 summary_generated: >-
   この記事は「機械学習工学 / MLSE Advent Calendar 2018」12

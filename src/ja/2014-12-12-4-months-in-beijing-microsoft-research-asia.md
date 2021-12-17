@@ -7,6 +7,7 @@ tags:
   - sigpx
   - travel
   - university
+  - advent-calendar
 summary_generated: >-
   海外で働くエンジニア Advent Calendar 12 日目です！2 年前のことで過去形になって恐縮ですが、北京の Microsoft Research
   Asia に滞在したときの記録を掘り返してみます。山のように写真を撮ったので、興味のある方はWeb アルバムをご覧く...
