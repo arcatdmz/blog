@@ -5,7 +5,6 @@ tags:
   - research
   - development
   - discussion
-draft: true
 summary_generated: >-
   昨年から今年にかけては、リリックビデオの制作支援サービス「TextAlive」の開発において大きな節目でした。2020 年 9
   月にサービスの機能の一部を切り出した API「TextAlive App API」をリリースし、初音ミク「マジカルミライ 2020」および「マジカ...
