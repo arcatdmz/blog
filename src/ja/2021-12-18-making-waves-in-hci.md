@@ -7,8 +7,8 @@ tags:
   - advent-calendar
 summary_generated: |-
   この記事は Human-Computer Interaction (HCI) Advent Calendar 2021
-   の 18 日目です。プログラム委員長として長らく準備をしてきた SIGGRAPH 2021 Real-Time Live! が終わってほっと一息ついた...
-summary: |-
+   の 18 日目です。プログラム委員長として長らく準備をしてきた SIGGRAPH 2021 Real-Time Live! が終わってほっと一息ついたと...
+summary: >-
   HCIは捉えどころがない分野だと思います。この捉えどころのなさを「課題解決としてのHCI研究」という考え方、「HCIの三つの波」という歴史の見方を通して紐解き、最後にちょっとした宣伝をします。
 ---
 
