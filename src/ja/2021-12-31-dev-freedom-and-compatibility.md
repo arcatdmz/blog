@@ -3,7 +3,7 @@ title: 研究開発の自由度と互換性の両立
 date: "2021-12-31"
 tags:
   - research
-  - development
+  - programming
   - discussion
 summary_generated: >-
   昨年から今年にかけては、リリックビデオの制作支援サービス「TextAlive」の開発において大きな節目でした。2020 年 9
