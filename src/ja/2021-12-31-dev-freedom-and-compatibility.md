@@ -39,7 +39,7 @@ TextAlive は 2015 年に [ACM CHI 2015 での論文発表](http://doi.acm.org/1
 
 API ドキュメントに関しては、仕様に追従できなくなると意義が半減するので、ある程度は自動生成させることが必須だと思います。私は [TypeScript](https://www.typescriptlang.org) でライブラリ開発を行い、[Microsoft API Extractor](https://api-extractor.com) でアノテーションを使って公開可能な API のフィルタリングを行い、[Typedoc](https://typedoc.org) を使ってドキュメントを生成しています。実例は [TextAlive App API のドキュメント](https://developer.textalive.jp/packages/textalive-app-api)をご覧ください。
 
-サンプルコードは GitHub 上の [AIST TextAlive Project](https://github.com/TextAliveJp) に集約しているほか、チュートリアル内の[サンプルコード](https://developer.textalive.jp/app/examples)のページやプログラミング・コンテストのアフターレポート（[2020](https://developer.textalive.jp/events/magicalmirai2020)・[2021](https://developer.textalive.jp/events/magicalmirai2021)）冒頭から、サムネイルつきでアクセスしやすいようにしています。チュートリアルは [TextAlive for Developers](https://developer.textalive.jp) という Web サイトを開設しています。
+サンプルコードは GitHub 上の [AIST TextAlive Project](https://github.com/TextAliveJp) に集約しているほか、チュートリアル内の[サンプルコード](https://developer.textalive.jp/app/examples)のページやプログラミング・コンテストのアフターレポート（[2020](https://developer.textalive.jp/events/magicalmirai2020)・[2021](https://developer.textalive.jp/events/magicalmirai2021)）冒頭から、サムネイルつきでアクセスしやすいようにしています。チュートリアルは [TextAlive for Developers](https://developer.textalive.jp) という Web サイトを開設しています。ちなみに、私はチュートリアルから実際のアプリ開発に移るときのギャップを小さくする研究にも取り組んでいたのですが（ [DeployGround](https://junkato.jp/ja/deployground/); [Songle Sync チュートリアル](https://tutorial.songle.jp) に実装済み）、TextAlive に関してはそこまで手が回っていません。
 
 <figure className="right">
   <a href="/images/2021-12-31-mm2020procon-slides-14.png"><img src="/images/2021-12-31-mm2020procon-slides-14.png" /></a>
