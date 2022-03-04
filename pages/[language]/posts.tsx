@@ -36,7 +36,7 @@ const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   const posts = await getAllFilesFrontMatter(language);
 
   // Write RSS file
-  const rss = generateRss(posts, { path: `${language}/index.xml`, language });
+  const rss = generateRss(posts, { language });
   const rssPath = path.join(root, "public", language);
   fs.mkdirSync(rssPath, { recursive: true });
   fs.writeFileSync(path.join(rssPath, "index.xml"), rss);
