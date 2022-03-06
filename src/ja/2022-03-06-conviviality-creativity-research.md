@@ -1,6 +1,6 @@
 ---
 title: コンヴィヴィアリティ・創造・研究（“現実”の自給自足展に寄せて）
-date: "2022-02-17"
+date: "2022-03-06"
 tags:
   - research
   - discussion
