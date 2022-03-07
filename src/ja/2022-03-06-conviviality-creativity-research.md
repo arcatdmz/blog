@@ -3,6 +3,7 @@ title: コンヴィヴィアリティ・創造・研究（“現実”の自給�
 date: "2022-03-06"
 tags:
   - research
+  - science
   - discussion
 coverImage: FLsrWmMaMAEyRyG.jpg
 summary_generated: >-
