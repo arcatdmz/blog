@@ -5,7 +5,7 @@ tags:
   - research
   - science
   - discussion
-coverImage: FLsrWmMaMAEyRyG.jpg
+coverImage: SDIM5189.jpg
 summary_generated: >-
   2 月 16 日（水）、中目黒の N&amp;A Art SITE
   で開催中の島影さんによる「“現実”の自給自足展」に、菅野さんとお呼ばれしました。「情報工学“研究”の民主化」という演目に出ました。
