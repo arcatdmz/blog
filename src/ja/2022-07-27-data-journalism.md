@@ -5,7 +5,6 @@ tags:
   - research
   - science
   - discussion
-draft: true
 summary: >-
   情報処理学会の学会誌「情報処理」5 月号の巻頭コラムは NHK 解説委員 三輪
   誠司氏の「報道の現場を変えたプログラミングスキル」でした。三輪さんの取り組みは、広義ではデータジャーナリズム（data
@@ -20,7 +19,7 @@ summary_generated: >-
 
 三輪さんが「業務改善ツール」として取り組まれているもののうち、データをプログラムで処理してニュースに活用する手法は、広くデータジャーナリズム（data journalism）と呼称されているものだと思います。私の専門である[プログラミング体験（programming experience）](https://sigpx.org/)の研究者のなかには、データジャーナリズムに使えそうな、データ処理に特化したライブラリや開発環境を作っている人たちがいます。かくいう自分も[画像処理パイプラインをインタラクティブに作れる開発環境](https://junkato.jp/ja/visionsketch/)を作りました。
 
-[福地](https://fukuchi.org/index.html.ja)さん、[坂本](https://daisukesakamoto.jp)さんとの雑談のなかで、データジャーナリズムに関する最新情報が日本語であまりまとまって出てこないことに気づきましたので、自分に分かる範囲をこの記事でまとめておこうと思います。
+[福地](https://fukuchi.org/index.html.ja)さん、[坂本](https://daisukesakamoto.jp)さんとの雑談のなかで、データジャーナリズムに関する最新情報が日本語であまりまとまって出てこないことに気づきましたので、素人目線ですが、ちょっと調べて分かったことをこの記事でまとめておこうと思います。（事実誤認や抜け漏れがありましたら[お知らせください！](https://junkato.jp/ja#contact)）
 
 ## 2010 年台
 
@@ -30,8 +29,7 @@ summary_generated: >-
 
 [![](/images/2022-07-27-www.asahi.com_miraimedia_dj.png)](http://www.asahi.com/miraimedia/dj)
 
-データジャーナリズム黎明期から事例研究や普及活動を進めていた赤倉 優蔵さんという方がいらっしゃるのですが、おそらくこの方を中心に運営されていた「[ジャーナリズム・イノベーション・アワード](http://jcej.info/award)」が 2017 年で
-止まってしまっています。
+データジャーナリズム黎明期から事例研究や普及活動を進めていた赤倉 優蔵さんという方がいらっしゃるのですが、おそらくこの方を中心に運営されていた「[ジャーナリズム・イノベーション・アワード](http://jcej.info/award)」が 2017 年で止まっています。
 
 [![](/images/2022-07-27-jcej.info_award.jpg)](http://jcej.info/award)
 
@@ -56,50 +54,39 @@ summary_generated: >-
 荻原さんが 2020 年末に書かれた「[なぜデータジャーナリズムは日本で普及しないのか](https://note.com/kazukio/n/nedb9fb057839)」という記事は、三輪さんの課題感を違う角度から捉えたものに見えて、大変興味深かったです。
 例えば「開発者を書き手として扱おう」というあたりは、私の目指す世界観とも近いもので共感しました。
 
-ちょうど 2021 年末には、朝日新聞で元エンジニアの山崎 啓介さんが記事を作成、執筆した事例の解説「[データジャーナリズムの種明かしするよ（衆院選の争点分析）](https://qiita.com/asakuramken/items/53f4f0d890e0a5549673)」が Qiita に掲載されました。これは、荻原さんの記事への回答にもなっています。
+ちょうど 2021 年末には、朝日新聞で元エンジニアの山崎 啓介さんが記事を作成、執筆した事例の解説「[データジャーナリズムの種明かしするよ（衆院選の争点分析）](https://qiita.com/asakuramken/items/53f4f0d890e0a5549673)」が Qiita に掲載されました。これは、荻原さんの記事への回答にもなっていますね。
 
 ## アカデミアの取り組み
 
-アカデミアでは、データジャーナリズムに関する研究が散発的に行われています。
+アカデミアでは、データジャーナリズムに関する研究が散発的に行われています。（専門にしている研究室は寡聞にして知りません…もしあれば、教えていただけると嬉しいです。）
 
-自然言語処理（Natural Language Processing; NLP）を専門としている岡崎先生が 2016 年に解説記事を書かれています。
+自然言語処理（Natural Language Processing; NLP）を専門としている岡崎 直観さんが 2016 年に解説記事を書かれています。
 
-http://www.chokkan.org/publication/okazaki_ieice2016_datajournalism.pdf
+[![](/images/2022-07-27-okazaki_ieice2016_datajournalism.png)](http://www.chokkan.org/publication/okazaki_ieice2016_datajournalism.pdf)
 
-2019 年には、Ubiquitous Computing (UbiComp) を専門としている東大 越塚研がオープンデータつながりで日経と共同研究を始めたようです。
-
-https://www.koshizuka-lab.org/?p=779
-
-人文科学系での研究事例はさらに数が少ないようですが、法政大 藤代研は NTT 基礎研と共同研究したりしています。
-
-https://www.fujisiro.net/
+2019 年には、Ubiquitous Computing (UbiComp) を専門としている東大 越塚研が[オープンデータつながりで日経と共同研究を始めた](https://www.koshizuka-lab.org/?p=779)ようです。人文科学系での研究事例はさらに数が少ないようですが、[法政大 藤代研](https://www.fujisiro.net)は NTT 基礎研と共同研究したりしています。
 
 ## データジャーナリズムのためのツール
 
-道具鍛冶職人としては、ジャーナリストが実践的に使えるプログラミング環境やソフトウェアツールを作るような研究が見当たらないのがちょっと残念です。
+日本ではあまり見ないのですが、海外に目を向けると、ジャーナリストが実践的に使えるプログラミング環境やソフトウェアツールを作るような研究もあります。Human-Computer Interaction、データ可視化、プログラミング言語などの研究分野で横断的に取り組まれています。
 
-D3.js は University of Washington の Jeff Heer のラボで生まれましたが、
-同ラボはその後も Vega やその応用研究 Idyll [UIST 2018]など論文も出しながら積極的にデータジャーナリズムを支援しています。
-
-https://vega.github.io/vega/about/research/
-
-http://idl.cs.washington.edu/papers/idyll/
+データ可視化ライブラリで有名な [D3.js](https://idl.cs.washington.edu/papers/d3) は University of Washington の Jeff Heer のラボ [Interactive Data Lab](https://idl.cs.washington.edu) で生まれましたが、同ラボはその後も [Vega](https://vega.github.io/vega/about/research) やその応用研究 [Idyll](http://idl.cs.washington.edu/papers/idyll) など、論文も出しながら積極的にデータジャーナリズムを支援しています。
 
 ジャーナリズムとは距離を置いているようですが、Microsoft Research の Bongshin Lee たちが積極的に
-ツール開発をしている data-driven storytelling も関連が深い研究テーマですね。
+ツール開発をしている [Data-driven Storytelling](https://www.microsoft.com/en-us/research/project/data-driven-storytelling/publications) も関連が深い研究テーマですね。
 
-https://www.microsoft.com/en-us/research/project/data-driven-storytelling/publications/
+変わり種では、プログラミング言語系の研究者 [Tomas Petricek](http://tomasp.net) が、
+Alan Turing Institute でポスドクをしていた間に、 [Gamma](https://thegamma.net) というシンプルなデータジャーナリズム用言語を作っていました。
 
-変わり種では、知り合いのプログラミング言語系の研究者 Tomas Petricek が、
-Alan Turing Institute でポスドクをしていた間に、Gamma というシンプルなデータジャーナリズム用言語を作っていました。
+## 最後に
 
-http://tomasp.net/
-
-私はかねてからプログラミング言語やプログラミング環境は汎用的すぎる（開発したいアプリケーションごとに適したユーザインタフェースを備えているべき）と考えて、ある程度用途を特化しながら、インタラクションデザインを工夫した道具（言語や環境）を作ってきました。
+私はかねてから、メインストリームのプログラミング言語やプログラミング環境は汎用的すぎると考え、開発したいアプリケーションごとに適したユーザインタフェースを設計し、ドメイン特化の言語や環境を作ってきました。プログラミング教育については横目で見つつ自分で直接研究したことはないのですが、誰もがプログラミングを学ぶご時世だからこそ、学び方にもバリエーションがあったほうがよいのではないかと感じます。
 
 データジャーナリズムに関しても
 
-- そもそもデータジャーナリズム用のプログラミングツールが貧弱である（あるいはいいものがあるが知られていない？）
+- そもそもデータジャーナリズム用のプログラミングツールが貧弱である（あるいは、いいものがあるが知られていない）
 - 汎用のプログラミング教育はデータジャーナリズムへの最短パスになっていない
 
-という二段階の課題があり、どちらも同じくらい重要だと思います。
+という二段階の課題があるような気がします。
+
+今すぐに研究できる余力があるわけでは（たぶん）ないのですが、今後も業界ウォッチを続けたいと思います。
