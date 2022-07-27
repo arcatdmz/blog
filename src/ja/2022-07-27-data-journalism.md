@@ -38,9 +38,6 @@ summary_generated: >-
 
 [![](/images/2022-07-27-datajournalismjp.github.io_handbook.png)](https://datajournalismjp.github.io/handbook)
 
-- [データジャーナリズム概論　ニュースを変革する新たな報道手法](https://www.jstage.jst.go.jp/article/johokanri/58/3/58_166/_article/-char/ja), 情報管理 58(3), p.166-175
-- [Data Journalism Handbook](https://datajournalismjp.github.io/), [Data Journalism Handbook 日本語翻訳プロジェクト](https://github.com/DataJournalismJP)
-
 ## 2020 年台
 
 2020 年台に入ってからは、2010 年代終盤にかけていったんは静まったデータジャーナリズムのうねりが、また別のところで、散発的ではありますが大きくなってきているように見えます。
@@ -90,3 +87,13 @@ Alan Turing Institute でポスドクをしていた間に、 [Gamma](https://th
 という二段階の課題があるような気がします。
 
 今すぐに研究できる余力があるわけでは（たぶん）ないのですが、今後も業界ウォッチを続けたいと思います。
+
+## 日本語 文献リスト
+
+- 朝日新聞, [デジタルジャーナリズム](http://www.asahi.com/miraimedia/dj), 2014.
+- 赤倉 優蔵, [データジャーナリズム概論　ニュースを変革する新たな報道手法](https://www.jstage.jst.go.jp/article/johokanri/58/3/58_166/_article/-char/ja), 情報管理 58(3), p.166-175, 2015.
+- Data Journalism Handbook 日本語翻訳プロジェクト, [Data Journalism Handbook](https://datajournalismjp.github.io/), [GitHub](https://github.com/DataJournalismJP), 2016.
+- 岡崎 直観, [データジャーナリズムとデータ科学](http://www.chokkan.org/publication/okazaki_ieice2016_datajournalism.pdf), 電子情報通信学会誌 99(4), p.339-346, 2016.
+- 松本 健太郎, [2020年、「データジャーナリズム元年」への期待と懸念](https://business.nikkei.com/atcl/seminar/19/00067/122300019/), 日経ビジネス電子版, 2020.
+- 荻原 和樹, [なぜデータジャーナリズムは日本で普及しないのか](https://note.com/kazukio/n/nedb9fb057839), note, 2020.
+- 山崎 啓介, [データジャーナリズムの種明かしするよ（衆院選の争点分析）](https://qiita.com/asakuramken/items/53f4f0d890e0a5549673), Qiita, 2021.
