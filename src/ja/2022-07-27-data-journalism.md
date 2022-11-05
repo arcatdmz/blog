@@ -65,7 +65,9 @@ summary_generated: >-
 
 ## データジャーナリズムのためのツール
 
-日本ではあまり見ないのですが、海外に目を向けると、ジャーナリストが実践的に使えるプログラミング環境やソフトウェアツールを作るような研究もあります。Human-Computer Interaction、データ可視化、プログラミング言語などの研究分野で横断的に取り組まれています。
+日本ではあまり見ないのですが、海外に目を向けると、ジャーナリスト向けの創造性支援やジャーナリストが実践的に使えるプログラミング環境・ソフトウェアツールを作るような研究もあります。Human-Computer Interaction、データ可視化、プログラミング言語などの研究分野で横断的に取り組まれています。
+
+CHI 2018で発表された [Making the News: Digital Creativity Support for Journalists](https://dl.acm.org/doi/10.1145/3173574.3174049) はその典型例です。
 
 データ可視化ライブラリで有名な [D3.js](https://idl.cs.washington.edu/papers/d3) は University of Washington の Jeff Heer のラボ [Interactive Data Lab](https://idl.cs.washington.edu) で生まれましたが、同ラボはその後も [Vega](https://vega.github.io/vega/about/research) やその応用研究 [Idyll](http://idl.cs.washington.edu/papers/idyll) など、論文も出しながら積極的にデータジャーナリズムを支援しています。
 
