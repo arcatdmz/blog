@@ -34,6 +34,6 @@ jobs:
           switches: -avzr --delete-after --exclude="/.htaccess"
           path: out/
           remote_path: /home/digitalmuseum/www/blog/
-          remote_host: junkato.jp
+          remote_host: ${{ secrets.DEPLOY_HOST }}
           remote_user: digitalmuseum
           remote_key: ${{ secrets.DEPLOY_KEY }}
