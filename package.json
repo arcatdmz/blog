@@ -7,7 +7,9 @@
   "scripts": {
     "start": "next-remote-watch ./src",
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run build:redirections && npm run build:next",
+    "build:next": "next build",
+    "build:redirections": "node scripts/update-redirections.mjs",
     "export": "next export",
     "download": "cd public && fetch-github-release arcatdmz arcatdmz.github.io",
     "prettify": "prettier --write ./{components,lib,pages}/**/*.{ts,tsx}",
