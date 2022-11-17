@@ -1,10 +1,10 @@
 import fs from "fs";
-import path from "path";
 
 const articles = JSON.parse(fs.readFileSync("old-articles.json")).map(
-  ({ file, url }) => {
+  ({ file, rename, url }) => {
+    const current = rename || file;
     return {
-      new: file.substring(0, file.length - ".md".length),
+      new: current.substring(0, current.length - ".md".length),
       old: url.substring(
         "https://junkato.jp/ja/blog/".length,
         url.length - "/".length
