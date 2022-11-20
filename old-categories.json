@@ -1,0 +1,19 @@
+{
+  "anime": true,
+  "design": true,
+  "discussion": true,
+  "java": true,
+  "life": {
+    "lookback": true
+  },
+  "phybots": true,
+  "processing": true,
+  "research": {
+    "sigpx": true
+  },
+  "server": true,
+  "travel": true,
+  "university": {
+    "student": true
+  }
+}

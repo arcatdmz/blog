@@ -13,7 +13,9 @@ const articles = JSON.parse(fs.readFileSync("old-articles.json")).map(
   }
 );
 
+const categories = JSON.parse(fs.readFileSync("old-categories.json"));
+
 fs.writeFileSync(
   "public/redirections.json",
-  JSON.stringify(articles, null, "  ")
+  JSON.stringify({ articles, categories }, null, "  ")
 );
