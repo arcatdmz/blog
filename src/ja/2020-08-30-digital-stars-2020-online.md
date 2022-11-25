@@ -7,7 +7,7 @@ coverImage: ogp.png
 summary_generated: >-
   一昨年、昨年と、初音ミクの誕生日をみなさんから寄せられたメッセージとともにお祝いするイベントを支えてきました。 ACM Multimedia 2018
   で発表した Songle Sync という音楽に合わせてたくさんの端末を同期する技術が使われています。例年はマジカルミライ...
-altUrl: "https://junkato.jp/ja/blog/2020/08/30/digital-stars-2020-online"
+altUrl: "https://junkato.jp/ja/blog/2020/08/30/digital-stars-2020-online/"
 ---
 
 一昨年、昨年と、初音ミクの誕生日をみなさんから寄せられたメッセージとともにお祝いするイベントを支えてきました。 ACM Multimedia 2018 で発表した [Songle Sync](https://junkato.jp/ja/songle-sync/) という音楽に合わせてたくさんの端末を同期する技術が使われています。

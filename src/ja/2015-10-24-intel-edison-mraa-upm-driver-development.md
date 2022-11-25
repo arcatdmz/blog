@@ -8,7 +8,7 @@ summary_generated: >-
   最近 Intel Edison のお世話になっています。JavaScript で（ホスト PC
   なしに）センサ・アクチュエータが動くのって本当に素敵ですね！Intel Edison や Galileo では、GPIO
   などを操作するためにmraaという低レイヤーな通信用ライ...
-altUrl: "https://junkato.jp/ja/blog/2015/10/24/intel-edison-mraa-upm-driver-development"
+altUrl: "https://junkato.jp/ja/blog/2015/10/24/intel-edison-mraa-upm-driver-development/"
 ---
 
 最近 Intel Edison のお世話になっています。JavaScript で（ホスト PC なしに）センサ・アクチュエータが動くのって本当に素敵ですね！

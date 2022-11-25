@@ -11,7 +11,7 @@ summary_generated: >-
   先週までの 2 週間、ベイエリアのさまざまな研究所・企業を訪問し、ACM CHI
   2016に参加していました。一部の旅程で同行した小山君、川松氏ともども、さまざまな方々にお世話になりましたが、個人的にはパーソナルコンピュータの父とも呼ばれる
   Alan Kay の研究所Vie...
-altUrl: "https://junkato.jp/ja/blog/2016/05/17/harc-from-center-to-community"
+altUrl: "https://junkato.jp/ja/blog/2016/05/17/harc-from-center-to-community/"
 ---
 
 先週までの 2 週間、ベイエリアのさまざまな研究所・企業を訪問し、[ACM CHI 2016](http://chi2016.acm.org/)に参加していました。一部の旅程で同行した[小山君](http://koyama.xyz/index-j.html)、[川松氏](http://tenju.jp/)ともども、さまざまな方々にお世話になりましたが、個人的にはパーソナルコンピュータの父とも呼ばれる Alan Kay の研究所[Viewpoints Research Institute (VPRI)](http://vpri.org/)で研究紹介・議論をするのが主目的でした。

@@ -9,7 +9,7 @@ summary: >-
 summary_generated: >-
   https://twitter.com/arcatdmz/status/506652712113422336で、対応してたわけです。https://twitter.com/arcatdmz/status/517025583000473600先行予約開始当日の早朝、午前
   3 ...
-altUrl: "https://junkato.jp/ja/blog/2014/10/11/recent-updates-on-qx1"
+altUrl: "https://junkato.jp/ja/blog/2014/10/11/recent-updates-on-qx1/"
 ---
 
 https://twitter.com/arcatdmz/status/506652712113422336

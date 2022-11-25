@@ -8,7 +8,7 @@ coverImage: techbook8_shoei_02.png
 summary_generated: >-
   アーチで技術顧問の仕事を始めて早 1 年半が過ぎました。表に出ている仕事としては、研究開発チーム Arch Research
   を作り、絵コンテ制作支援ツール「Griffith」を開発しています。2018 年秋からは半年に一度の技術書の祭典「技術書典」をスポンサーしつつ、20...
-altUrl: "https://junkato.jp/ja/blog/2020/03/15/anitech-2020spring-griffith-sketch"
+altUrl: "https://junkato.jp/ja/blog/2020/03/15/anitech-2020spring-griffith-sketch/"
 ---
 
 [アーチで技術顧問の仕事を始めて](/ja/posts/2018-07-09-arch-inc-technical-advisor)早 1 年半が過ぎました。表に出ている仕事としては、研究開発チーム [Arch Research](https://research.archinc.jp/) を作り、絵コンテ制作支援ツール「[Griffith](https://research.archinc.jp/griffith/)」を開発しています。2018 年秋からは半年に一度の技術書の祭典「[技術書典](https://techbookfest.org/)」をスポンサーしつつ、2019 年春からは毎回「[アニメ技術](https://research.archinc.jp/anitech/)」を刊行しています。

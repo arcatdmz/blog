@@ -6,7 +6,7 @@ tags:
 summary_generated: >-
   1 年以上前にOpenCV の非公式な Java ラッパー JavaCV を使う方法について記事を書いたのですが、その後、OpenCV の公式な Java
   ラッパーが公開されたり、JavaCVのバージョンが上がったりして、色々と状況が変わっています。OpenCV の公式な ...
-altUrl: "https://junkato.jp/ja/blog/2014/01/26/use-opencv-from-java-rev2"
+altUrl: "https://junkato.jp/ja/blog/2014/01/26/use-opencv-from-java-rev2/"
 ---
 
 1 年以上前に[OpenCV の非公式な Java ラッパー JavaCV を使う方法](/ja/posts/2012-11-04-use-opencv-from-java/ "OpenCVをJavaから使う")について記事を書いたのですが、その後、[OpenCV の公式な Java ラッパー](http://docs.opencv.org/doc/tutorials/introduction/desktop_java/java_dev_intro.html "Introduction to Java Development - OpenCV documentation")が公開されたり、[JavaCV](https://code.google.com/p/javacv/ "javacv - Java interface to OpenCV and more - Google Project Hosting")のバージョンが上がったりして、色々と状況が変わっています。

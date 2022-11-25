@@ -9,7 +9,7 @@ coverImage: 20160618_092611188_iOS.jpg
 summary_generated: >-
   ご縁をいただいて、第 2 回つくば横の会に登壇しました。昨年開催された第 1
   回も、実は参加だけしていましたが、昨年に増してパワフルな企画になっていましたね。多人数の登壇者が要点だけさっと話してパネルディスカッションに入るというフォーマットも非常によかったと思います。私の講...
-altUrl: "https://junkato.jp/ja/blog/2016/06/20/tsukuba-inter-science"
+altUrl: "https://junkato.jp/ja/blog/2016/06/20/tsukuba-inter-science/"
 ---
 
 ご縁をいただいて、[第 2 回つくば横の会](https://www.facebook.com/events/1061033313969417/)に登壇しました。昨年開催された第 1 回も、実は参加だけしていましたが、昨年に増してパワフルな企画になっていましたね。

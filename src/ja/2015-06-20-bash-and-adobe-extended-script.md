@@ -7,7 +7,7 @@ tags:
 coverImage: DSC00698.jpg
 summary_generated: 最近書いたものをメモがてら。bash で行ごとに処理Git のログを整形して出力フォルダ内のデジタル一眼 RAW を全部現像
 summary: 最近書いたものをメモがてら。 1. bash で行ごとに処理 2. Git のログを整形して出力 3. フォルダ内のデジタル一眼 RAW を全部現像
-altUrl: "https://junkato.jp/ja/blog/2015/06/20/bash-and-adobe-extended-script"
+altUrl: "https://junkato.jp/ja/blog/2015/06/20/bash-and-adobe-extended-script/"
 ---
 
 最近書いたものをメモがてら。

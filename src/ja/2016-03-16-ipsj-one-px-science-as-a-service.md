@@ -11,7 +11,7 @@ summary_generated: >-
   情報処理学会全国大会 大トリのプレゼン大会 IPSJ-ONE
   に招待され、登壇してきました。これは、情報処理に関わるさまざまな分野の研究会から優秀な研究者を選出し、1 人 5
   分ずつ登壇するイベントで、去年から開催されています。TEDをご存知の方なら、その研究者版と考えてい...
-altUrl: "https://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service"
+altUrl: "https://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service/"
 ---
 
 情報処理学会全国大会 大トリのプレゼン大会 IPSJ-ONE に招待され、登壇してきました。これは、情報処理に関わるさまざまな分野の研究会から優秀な研究者を選出し、1 人 5 分ずつ登壇するイベントで、去年から開催されています。[TED](https://www.ted.com/)をご存知の方なら、その研究者版と考えていただいて間違いないです。

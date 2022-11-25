@@ -10,7 +10,7 @@ summary_generated: >-
   は、オープンソースで公開されてしばらく経ちますが、正直なところ忙しくてあまり管理に手が回っておらず、すぐ使える配布ファイルもありませんでした。#五十嵐
   ERATOのポスターセッション...
 coverImage: phybots-marker-detection.jpg
-altUrl: "https://junkato.jp/ja/blog/2012/12/23/phybots-processing-artoolkit"
+altUrl: "https://junkato.jp/ja/blog/2012/12/23/phybots-processing-artoolkit/"
 ---
 
 <figure className="right">

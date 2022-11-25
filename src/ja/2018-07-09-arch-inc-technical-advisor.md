@@ -9,7 +9,7 @@ coverImage: archinc.jpg
 summary_generated: >-
   この度、アニメなどのコンテンツを幅広くプロデュースするアーチ株式会社（ARCH Inc.）の技術顧問になりました。転職ではなく、現職の産業技術総合研究所
   研究員を主務としたまま、技術顧問を非常勤で兼務するかたちです。アーチからプレスリリースが出ています。研究者がアカデミアだ...
-altUrl: "https://junkato.jp/ja/blog/2018/07/09/arch-inc-technical-advisor"
+altUrl: "https://junkato.jp/ja/blog/2018/07/09/arch-inc-technical-advisor/"
 ---
 
 この度、アニメなどのコンテンツを幅広くプロデュースする[アーチ株式会社（ARCH Inc.）](http://archinc.jp/)の技術顧問になりました。転職ではなく、現職の産業技術総合研究所 研究員を主務としたまま、技術顧問を非常勤で兼務するかたちです。アーチから[プレスリリース](https://prtimes.jp/main/html/rd/p/000000003.000034866.html)が出ています。

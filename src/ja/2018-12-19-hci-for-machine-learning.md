@@ -11,7 +11,7 @@ summary_generated: >-
   この記事は「機械学習工学 / MLSE Advent Calendar 2018」12
   日目の記事です。先日開催された、機械学習工学関連の論文を紹介し合う「XX for ML
   論文読み会」初回で発表した資料の内容を抜粋で紹介します。論文読み会に参加できなかった方も、当ブログ...
-altUrl: "https://junkato.jp/ja/blog/2018/12/19/hci-for-machine-learning"
+altUrl: "https://junkato.jp/ja/blog/2018/12/19/hci-for-machine-learning/"
 ---
 
 この記事は[「機械学習工学 / MLSE Advent Calendar 2018」](https://qiita.com/advent-calendar/2018/mlse)12 日目の記事です。先日開催された、機械学習工学関連の論文を紹介し合う[「XX for ML 論文読み会」](https://mlxse.connpass.com/event/102563/)初回で発表した資料の内容を抜粋で紹介します。論文読み会に参加できなかった方も、当ブログ記事を PDF のお供にどうぞ。

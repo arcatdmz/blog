@@ -7,7 +7,7 @@ tags:
 summary_generated: >-
   増井先生が以下のようなことをブログで述べています。ここ何十年かのユーザインタフェース関連学会で論文として発表されたシステムを自分は全く使ってないことに気付いて愕然としてしまった。ユーザインタフェースの研究を行なってる人達が、
   これまでのユーザインタフェース関連の研究結果をほ...
-altUrl: "https://junkato.jp/ja/blog/2014/09/09/re-user-interface-research"
+altUrl: "https://junkato.jp/ja/blog/2014/09/09/re-user-interface-research/"
 ---
 
 増井先生が以下のようなことを[ブログ](http://masui.blog.jp/archives/1008964475.html "ユーザインタフェース研究の意義 : 続・ユビキタスの街角")で述べています。

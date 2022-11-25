@@ -8,7 +8,7 @@ summary_generated: >-
   これまで ACM UIST 2014, 2017, 2018, 2019, ACM CHI 2017, 2020
   などの国際会議で、論文採否を決めてその年の会議のプログラム編成に関わる委員会（Program Committee,
   Sub-committee）のメンバーを務め...
-altUrl: "https://junkato.jp/ja/blog/2019/08/16/roles-of-academic-conf-pc-members"
+altUrl: "https://junkato.jp/ja/blog/2019/08/16/roles-of-academic-conf-pc-members/"
 ---
 
 これまで ACM UIST 2014, 2017, 2018, 2019, ACM CHI 2017, 2020 などの国際会議で、論文採否を決めてその年の会議のプログラム編成に関わる委員会（Program Committee, Sub-committee）のメンバーを務めてきました。一覧は[こちら](https://junkato.jp/ja/activities/)にあります。

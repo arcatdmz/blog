@@ -6,7 +6,7 @@ tags:
 summary_generated: >-
   研究所の近辺にはきのこが生えます。つくばはきのこだらけこういう立派なきのこがたくさんいます。8
   月は暑すぎてひっそりしていましたが、台風一過でまた出てきました。とにかくすごい数、わっと生えてくるただ、今回の主役はきのこじゃなくて、こっちです。ススホコリの変形体（7月12日）...
-altUrl: "https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae"
+altUrl: "https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae/"
 ---
 
 研究所の近辺にはきのこが生えます。

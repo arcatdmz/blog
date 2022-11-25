@@ -7,7 +7,7 @@ tags:
 summary_generated: >-
   キルラキル最新話でいろんなことが説明されて、おぉ！と思ったので相棒 or
   進化という観点からメモ代わりにいろいろと。翠星のガルガンティアとキルラキルのネタバレを盛大に含むので、未視聴で気になる人はそっ閉じしましょう。ちなみに、僕がガルガンティアに関してわりと詳しいのは、五十...
-altUrl: "https://junkato.jp/ja/blog/2014/02/02/gargantia-kill-la-kill-partner"
+altUrl: "https://junkato.jp/ja/blog/2014/02/02/gargantia-kill-la-kill-partner/"
 ---
 
 [キルラキル](http://www.kill-la-kill.jp/)最新話でいろんなことが説明されて、おぉ！と思ったので相棒 or 進化という観点からメモ代わりにいろいろと。[翠星のガルガンティア](http://gargantia.jp/)とキルラキルのネタバレを盛大に含むので、未視聴で気になる人はそっ閉じしましょう。

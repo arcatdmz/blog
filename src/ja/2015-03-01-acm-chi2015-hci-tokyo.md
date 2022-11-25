@@ -7,7 +7,7 @@ coverImage: chi2015-japan-postcard.jpg
 summary_generated: >-
   忙しい人のための要約: 韓国ソウルで開催される ACM CHI 2015 で、情報処理学会と Microsoft Research
   のスポンサードで日本発シンポジウムやります。参加登録〆切は CHI の Early Registration 〆切と同日の3 月 6 日です。...
-altUrl: "https://junkato.jp/ja/blog/2015/03/01/acm-chi2015-hci-tokyo"
+altUrl: "https://junkato.jp/ja/blog/2015/03/01/acm-chi2015-hci-tokyo/"
 ---
 
 > **忙しい人のための要約:** 韓国ソウルで開催される ACM CHI 2015 で、情報処理学会と Microsoft Research のスポンサードで日本発シンポジウムやります。参加登録〆切は CHI の Early Registration 〆切と同日の**3 月 6 日**です。 [http://hci.tokyo/chi2015/register](http://hci.tokyo/chi2015/register) から登録よろしくお願いします！[宣伝用ポストカード](https://junkato.jp/publications/chi2015-japan-postcard.pdf)もあります。

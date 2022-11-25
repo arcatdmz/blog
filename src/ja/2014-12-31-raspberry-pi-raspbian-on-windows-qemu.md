@@ -7,7 +7,7 @@ coverImage: raspbian-on-qemu-windows.png
 summary_generated: >-
   Raspberry Pi Type B 512MBを買ったのが 8 月のこと。Raspbian をインストールして無線 LAN 接続のための USB
   ドングル(BUFFALO 無線 LAN 子機 WLI-UC-GNM)を挿してカメラモジュールをつないで、ちょっと遊んではみた...
-altUrl: "https://junkato.jp/ja/blog/2014/12/31/raspberry-pi-raspbian-on-windows-qemu"
+altUrl: "https://junkato.jp/ja/blog/2014/12/31/raspberry-pi-raspbian-on-windows-qemu/"
 ---
 
 [Raspberry Pi Type B 512MB](https://www.amazon.co.jp/gp/product/B00CBWMXVE/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00CBWMXVE&linkCode=as2&tag=digitalmuseum-22)を買ったのが 8 月のこと。Raspbian をインストールして無線 LAN 接続のための USB ドングル([BUFFALO 無線 LAN 子機 WLI-UC-GNM](https://www.amazon.co.jp/gp/product/B003NSAMW2/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B003NSAMW2&linkCode=as2&tag=digitalmuseum-22))を挿してカメラモジュールをつないで、ちょっと遊んではみたもののそのまま放置していました。もったいない。

@@ -7,7 +7,7 @@ tags:
 summary_generated: >-
   萩谷先生の「Excel でプログラムを書く」という原稿が話題に挙がっていたので、僕の知る範囲で、研究の文脈をちょっとご紹介します。プログラミング環境としての
   Excel という考え方は、文字列ベースの開発環境に慣れた人にはちょっと頓狂に聞こえるかもしれませんが、Micros...
-altUrl: "https://junkato.jp/ja/blog/2013/08/07/excel-as-programming-environment"
+altUrl: "https://junkato.jp/ja/blog/2013/08/07/excel-as-programming-environment/"
 ---
 
 萩谷先生の[「Excel でプログラムを書く」](http://lecture.ecc.u-tokyo.ac.jp/~shagiya/excel.pdf)という原稿が話題に挙がっていたので、僕の知る範囲で、研究の文脈をちょっとご紹介します。
