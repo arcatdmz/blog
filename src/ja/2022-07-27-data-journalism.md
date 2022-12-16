@@ -1,14 +1,12 @@
 ---
 title: データジャーナリズムの現在地
-date: '2022-07-27'
+date: "2022-07-27"
 tags:
   - research
   - science
   - discussion
 summary: >-
-  情報処理学会の学会誌「情報処理」5 月号の巻頭コラムは NHK 解説委員 三輪
-  誠司氏の「報道の現場を変えたプログラミングスキル」でした。三輪さんの取り組みは、広義ではデータジャーナリズム（data
-  journalism）として捉えることができます。その動向を記事にまとめました。
+  情報処理学会の学会誌「情報処理」5 月号の巻頭コラムは NHK 解説委員 三輪 誠司氏の「報道の現場を変えたプログラミングスキル」でした。三輪さんの取り組みは、広義ではデータジャーナリズム（data journalism）として捉えることができます。その動向を記事にまとめました。
 summary_generated: >-
   情報処理学会の学会誌「情報処理」5 月号の巻頭コラムは NHK 解説委員 三輪
   誠司氏の「報道の現場を変えたプログラミングスキル」でした。三輪さんのことはNHK
@@ -67,7 +65,7 @@ summary_generated: >-
 
 日本ではあまり見ないのですが、海外に目を向けると、ジャーナリスト向けの創造性支援やジャーナリストが実践的に使えるプログラミング環境・ソフトウェアツールを作るような研究もあります。Human-Computer Interaction、データ可視化、プログラミング言語などの研究分野で横断的に取り組まれています。
 
-CHI 2018で発表された [Making the News: Digital Creativity Support for Journalists](https://dl.acm.org/doi/10.1145/3173574.3174049) はその典型例です。
+CHI 2018 で発表された [Making the News: Digital Creativity Support for Journalists](https://dl.acm.org/doi/10.1145/3173574.3174049) はその典型例です。
 
 データ可視化ライブラリで有名な [D3.js](https://idl.cs.washington.edu/papers/d3) は University of Washington の Jeff Heer のラボ [Interactive Data Lab](https://idl.cs.washington.edu) で生まれましたが、同ラボはその後も [Vega](https://vega.github.io/vega/about/research) やその応用研究 [Idyll](http://idl.cs.washington.edu/papers/idyll) など、論文も出しながら積極的にデータジャーナリズムを支援しています。
 
@@ -96,6 +94,6 @@ Alan Turing Institute でポスドクをしていた間に、 [Gamma](https://th
 - 赤倉 優蔵, [データジャーナリズム概論　ニュースを変革する新たな報道手法](https://www.jstage.jst.go.jp/article/johokanri/58/3/58_166/_article/-char/ja), 情報管理 58(3), p.166-175, 2015.
 - Data Journalism Handbook 日本語翻訳プロジェクト, [Data Journalism Handbook](https://datajournalismjp.github.io/), [GitHub](https://github.com/DataJournalismJP), 2016.
 - 岡崎 直観, [データジャーナリズムとデータ科学](http://www.chokkan.org/publication/okazaki_ieice2016_datajournalism.pdf), 電子情報通信学会誌 99(4), p.339-346, 2016.
-- 松本 健太郎, [2020年、「データジャーナリズム元年」への期待と懸念](https://business.nikkei.com/atcl/seminar/19/00067/122300019/), 日経ビジネス電子版, 2020.
+- 松本 健太郎, [2020 年、「データジャーナリズム元年」への期待と懸念](https://business.nikkei.com/atcl/seminar/19/00067/122300019/), 日経ビジネス電子版, 2020.
 - 荻原 和樹, [なぜデータジャーナリズムは日本で普及しないのか](https://note.com/kazukio/n/nedb9fb057839), note, 2020.
 - 山崎 啓介, [データジャーナリズムの種明かしするよ（衆院選の争点分析）](https://qiita.com/asakuramken/items/53f4f0d890e0a5549673), Qiita, 2021.
