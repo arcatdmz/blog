@@ -1,5 +1,5 @@
 ---
-title: 1 日のコーディング時間
+title: 1日のコーディング時間
 date: "2021-10-06"
 tags:
   - research

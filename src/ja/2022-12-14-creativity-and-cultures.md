@@ -7,11 +7,12 @@ tags:
   - advent-calendar
 coverImage: 2022-12-14-DSC05781_resized.jpg
 summary: >-
-  先日、AI 活用が当たり前になった社会でも、人々が創造的な活動を続けたいと思えるような Human-Computer Interaction (HCI) の技術を研究開発する課題提案が採択されました。この記事では、HCI 研究における創造性支援の現在地とこれからについて議論するとともに、私が研究題目に「文化」という単語を入れた背景について書いてみようと思います。
+  先日、AI 活用が当たり前になった社会でも、人々が創造的な活動を続けたいと思えるような Human-Computer Interaction (HCI)
+  の技術を研究開発する課題提案が採択されました。この記事では、HCI
+  研究における創造性支援の現在地とこれからについて議論するとともに、私が研究題目に「文化」という単語を入れた背景について書いてみようと思います。
 summary_generated: >-
-  先日、私が提案していた研究課題が、科学技術振興機構の研究推進事業 ACT-X 研究領域「AI
-  活用で挑む学問の革新と創成」に採択されました。これは、以下のとおり、AI 活用が当たり前になった社会でも、人々が創造的な活動を続けたいと思えるような
-  Human-Computer ...
+  この記事は Human-Computer Interaction (HCI) Advent Calendar 2022 14 日目です。昨年は「HCI
+  研究の捉えどころのなさと 3 つの波、次の波」という記事を 18 日目に書きました。先日、私が提案していた研究課題が、科学...
 ---
 
 この記事は [Human-Computer Interaction (HCI) Advent Calendar 2022](https://adventar.org/calendars/7901) 14 日目です。[昨年](https://adventar.org/calendars/6523)は「[HCI 研究の捉えどころのなさと 3 つの波、次の波](https://blog.junkato.jp/ja/posts/2021-12-18-making-waves-in-hci/)」という記事を 18 日目に書きました。
