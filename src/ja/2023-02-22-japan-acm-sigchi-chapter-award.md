@@ -16,7 +16,7 @@ summary_generated: >-
 
 研究分野の国際学会（ACM SIGCHI）日本支部（Japan ACM SIGCHI Chapter）から[優秀若手研究者賞（Distinguished Young Researcher Award）](https://sigchi.jp/award/2023/result.ja.html#JunKato) を受賞し、授賞講演の機会に恵まれました。
 
-質疑込みで 45 分の枠いただいていたのですが、見返すと 25 分で喋り終えて延々質疑していました。質問いただいた皆様、本当にありがとうございました…！
+質疑込みで 45 分の枠をいただいていたのですが、見返すと 25 分で喋り終えて延々質疑していました。質問いただいた皆様、本当にありがとうございました…！
 ハイブリッド形式の授賞式で録画がありましたので、せっかくなので講演部分を YouTube にあげました。
 
 https://www.youtube.com/watch?v=fDwCDlntmRI
