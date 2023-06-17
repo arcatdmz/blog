@@ -1,10 +1,10 @@
-import rehypePrism from "@mapbox/rehype-prism";
 import remarkEmbedder from "@remark-embedder/core";
 import oembedTransformer, { Config } from "@remark-embedder/transformer-oembed";
 import fs from "fs";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
+import rehypePrism from "rehype-prism-plus";
 import remarkAutolinkHeadings from "remark-autolink-headings";
 import remarkCodeTitles from "remark-code-titles";
 import remarkSlug from "remark-slug";
