@@ -1,6 +1,6 @@
 ---
 title: ACM CHI 2021 Student Research Competition へようこそ！
-date: "2021-05-10"
+date: '2021-05-10'
 tags:
   - research
   - student
@@ -9,9 +9,10 @@ summary: >-
   先週末から、Human-Computer Interaction 分野のトップ国際会議 ACM CHI がオンライン開催されています。この記事では主に
   CHI 参加中の学生向けに Student Research Competition (SRC) の聴講をおすすめします。
 summary_generated: >-
+
   5 月 19 日追記:
   みなさま、ご参加ありがとうございました。また、審査員の方々にもこの場を借りて御礼申し上げます。参加した学生のみなさまも、おつかれさまでした！ 1st
-  Round に出場した方々のプレゼンテーションは YouTube Playlist で閲覧できます。...
+  Round に出場した方々のプレゼンテーションは YouTube Playlist で閲覧できます...
 ---
 
 > **5 月 19 日追記:** みなさま、ご参加ありがとうございました。また、審査員の方々にもこの場を借りて御礼申し上げます。参加した学生のみなさまも、おつかれさまでした！ 1st Round に出場した方々のプレゼンテーションは [YouTube Playlist](https://www.youtube.com/playlist?list=PLqhXYFYmZ-VcBRf3ufMIWaxvoGG-r1qp1) で閲覧できます。 2nd Round の勝者については [Awards ページの最下部](https://chi2021.acm.org/for-attendees/highlights/awards)に掲示されています。
@@ -48,10 +49,6 @@ summary_generated: >-
 - [2nd Round (A)](https://acmchi.delegateconnect.co/events/sessions/student-research-competition-2nd-round-a): 日本時間 5/12（水）8:00-10:00
 - [2nd Round (B)](https://acmchi.delegateconnect.co/events/sessions/student-research-competition-2nd-round-b): 日本時間 5/12（水）16:00-18:00
 - [2nd Round (C)](https://acmchi.delegateconnect.co/events/sessions/student-research-competition-2nd-round-c): 日本時間 5/13（木）00:00-02:00
-
-<!-- <div className="embed"> -->
-<!-- <iframe src="https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/5065e0d0-08f2-4846-ad29-e06766e112e0/cid-A32915EB6EC7FA7F/index.html" width="1200px" height="675px" frameBorder="0"></iframe> -->
-<!-- </div> -->
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: OpenCVをJavaから使う
-date: "2012-11-04"
+date: '2012-11-04'
 tags:
   - programming
 summary: >-
@@ -8,10 +8,11 @@ summary: >-
   カメラから画像をとってきて、ARToolKitに渡してマーカー検出したりしていたのですが、画像処理関連の研究を始めたりして、そろそろ限界を感じるようになってきたので、Java
   からOpenCVの各機能が呼べるラッパーJavaCVを使って...
 summary_generated: >-
+
   2014 年 1 月 26 日追記; JavaCV
   のバージョンがあがって、使い方がもっとシンプルになりました。詳しくは新しい記事をご覧ください。これまで、自前のライブラリで Web
-  カメラから画像をとってきて、ARToolKitに渡してマーカー検出したりしていたのですが、...
-altUrl: "https://junkato.jp/ja/blog/2012/11/04/use-opencv-from-java/"
+  カメラから画像をとってきて、ARToolKitに渡してマーカー検出したりしていたのですが...
+altUrl: 'https://junkato.jp/ja/blog/2012/11/04/use-opencv-from-java/'
 ---
 
 > **2014 年 1 月 26 日追記;** JavaCV のバージョンがあがって、使い方がもっとシンプルになりました。詳しくは[新しい記事](/ja/posts/2014-01-26-use-opencv-from-java-rev2/ "OpenCVをJavaから使う (改訂版)")をご覧ください。

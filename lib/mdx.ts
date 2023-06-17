@@ -1,7 +1,13 @@
+import remarkEmbedder, { Transformer } from "@remark-embedder/core";
+import oembedTransformer, { Config } from "@remark-embedder/transformer-oembed";
 import fs from "fs";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
+import rehypePrism from "rehype-prism-plus";
+import remarkAutolinkHeadings from "remark-autolink-headings";
+import remarkCodeTitles from "remark-flexible-code-titles";
+import remarkSlug from "remark-slug";
 
 import { FrontMatterIface } from "./FrontMatterIface";
 import { PostIface } from "./PostIface";
@@ -22,6 +28,32 @@ export function dateSortDesc(a: number | string, b: number | string) {
   return 0;
 }
 
+let lastProvider: string;
+
+const oembedConfig: Config = ({ url, provider }) => {
+  lastProvider = provider.provider_name;
+  if (provider.provider_name === "Twitter") {
+    return {
+      params: {
+        omit_script: true,
+        link_color: "#269eab",
+        dnt: true
+      }
+    };
+  }
+};
+
+const wrappedOembedTransformer: Transformer = {
+  name: "transformer-oembed",
+  shouldTransform: oembedTransformer.shouldTransform,
+  getHTML: async (urlString, getConfig = {}) => {
+    const html = await oembedTransformer.getHTML(urlString, getConfig);
+    return `<div class="remark-oembed-inline remark-oembed-${
+      lastProvider ? lastProvider.toLowerCase() : "unknown-provider"
+    }">${html}</div>`;
+  }
+};
+
 export async function getFileBySlug(
   slug: string,
   language: string = "default"
@@ -36,12 +68,15 @@ export async function getFileBySlug(
   const mdxSource = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [
-        require("remark-slug"),
-        require("remark-autolink-headings"),
-        require("remark-code-titles"),
-        [require("remark-oembed"), { syncWidget: true }]
+        remarkSlug,
+        remarkAutolinkHeadings,
+        remarkCodeTitles,
+        [
+          remarkEmbedder,
+          { transformers: [[wrappedOembedTransformer, oembedConfig]] }
+        ]
       ],
-      rehypePlugins: [require("@mapbox/rehype-prism")]
+      rehypePlugins: [rehypePrism]
     }
   });
 

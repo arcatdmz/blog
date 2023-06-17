@@ -31,9 +31,9 @@ Wikipedia の便利なテンプレートを自分で設置したローカルの 
 
 ## テンプレートのエクスポートとインポート
 
-まず、Wikipedia 閲覧中に、自分の MediaWiki でも使ってみたいよさそうなテンプレート(定型表現)を見かけたとします。Wiki のいいところは、その部分がどんな Wiki 記法で書かれているかすぐに調べられるところです。ページ右上の "Edit" をクリックして、該当箇所が **{{Infobox (中略)}}**  と書かれていることが分かりました。これは、該当箇所が Infobox テンプレートを用いて書かれていることを表しています。[Template:Infobox](http://en.wikipedia.org/wiki/Template:Infobox)にアクセスすると、Infobox テンプレートについての詳しい説明を読むことができます。
+まず、Wikipedia 閲覧中に、自分の MediaWiki でも使ってみたいよさそうなテンプレート(定型表現)を見かけたとします。Wiki のいいところは、その部分がどんな Wiki 記法で書かれているかすぐに調べられるところです。ページ右上の "Edit" をクリックして、該当箇所が `{{Infobox (中略)}}`  と書かれていることが分かりました。これは、該当箇所が Infobox テンプレートを用いて書かれていることを表しています。[Template:Infobox](http://en.wikipedia.org/wiki/Template:Infobox)にアクセスすると、Infobox テンプレートについての詳しい説明を読むことができます。
 
-さて、テンプレートの名前が分かったところで、そのデータを XML ファイルとしてエクスポートしましょう。そのためには、[Special:Export](https://en.wikipedia.org/wiki/Special:Export)にアクセスします。この Export ページは、MediaWiki エンジンで動作しているどの Wiki にも備わっています。大きなテキストエリアに **Template:Infobox** と入力して、 Include only the current revision, not the full history, Include templates,  Save as file 全てにチェックをつけて Export ボタンをクリックすれば、XML ファイルがダウンロードできます。この中には、Infobox テンプレートの他にも依存関係のあるすべてのテンプレートが含まれます。
+さて、テンプレートの名前が分かったところで、そのデータを XML ファイルとしてエクスポートしましょう。そのためには、[Special:Export](https://en.wikipedia.org/wiki/Special:Export)にアクセスします。この Export ページは、MediaWiki エンジンで動作しているどの Wiki にも備わっています。大きなテキストエリアに `Template:Infobox` と入力して、 Include only the current revision, not the full history, Include templates,  Save as file 全てにチェックをつけて Export ボタンをクリックすれば、XML ファイルがダウンロードできます。この中には、Infobox テンプレートの他にも依存関係のあるすべてのテンプレートが含まれます。
 
 ここまできたら自分の MediaWiki の Special:Import ページにアクセスします。そこで、先ほどダウンロードした XML ファイルを選択してアップロードすると、テンプレートがインポートされます。これだけで済めば楽ですが、Infobox の場合は複数の拡張機能に依存しており、インポートした Template:Infobox を表示しようとするとエラーが表示されます。
 
@@ -100,7 +100,7 @@ MediaWiki において、画像など存在しないファイルへのリンク�
 % echo -n Lua-logo-nolabel.svg | md5 6a3ed151b18e5e08776de4449bdf8bbe
 ```
 
-なので、 $MEDIAWIKI**/images/6/6a/Lua-logo-nolabel.svg** に保存されます。MD5 ハッシュの値は Wikipedia でもさくらインターネットのレンタルサーバでも一緒なので、これを使って Wikipedia の URL を推測できます。 Lua-logo-nolabel.svg は Wikimedia Commons にアップロードされたものなら [**http://upload.wikimedia.org/wikipedia/commons/6/6a/Lua-logo-nolabel.svg**](http://upload.wikimedia.org/wikipedia/commons/6/6a/Lua-logo-nolabel.svg) にあるはずです。
+なので、 $MEDIAWIKI**/images/6/6a/Lua-logo-nolabel.svg** に保存されます。MD5 ハッシュの値は Wikipedia でもさくらインターネットのレンタルサーバでも一緒なので、これを使って Wikipedia の URL を推測できます。 Lua-logo-nolabel.svg は Wikimedia Commons にアップロードされたものなら [http://upload.wikimedia.org/wikipedia/commons/6/6a/Lua-logo-nolabel.svg](http://upload.wikimedia.org/wikipedia/commons/6/6a/Lua-logo-nolabel.svg) にあるはずです。
 
 そこで、まずローカルの MediaWiki に対してコマンドラインで SQL クエリを発行して足りないファイルの一覧を取得し、ローカルのファイルを探して、もしなければリモートの Wiki エンジンにおけるファイルの URL を推測してファイルをダウンロードするという方法が取れることになります。
 

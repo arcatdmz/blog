@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FC, Fragment, useContext, useMemo } from "react";
+import { FC, Fragment, ReactNode, useContext, useMemo } from "react";
 import {
   Container,
   Divider,
@@ -20,6 +20,7 @@ import { ShareButtons } from "../ShareButtons";
 import { Tag } from "../Tag";
 
 interface PostLayoutProps {
+  children?: ReactNode;
   frontMatter: PostIface;
   next?: PostIface;
   prev?: PostIface;
@@ -61,7 +62,7 @@ const PostLayout: FC<PostLayoutProps> = ({
       <BlogSeo url={url} {...frontMatter} />
       <article className="post-item">
         <Menu className="top nav" fluid secondary>
-          <Link href={sitePath} passHref>
+          <Link href={sitePath} passHref legacyBehavior>
             <Menu.Item
               as="a"
               icon={<Icon circular name="home" />}
@@ -69,7 +70,11 @@ const PostLayout: FC<PostLayoutProps> = ({
             />
           </Link>
           {prev && (
-            <Link href={`${sitePath}posts/${prev.slug}/`} passHref>
+            <Link
+              href={`${sitePath}posts/${prev.slug}/`}
+              passHref
+              legacyBehavior
+            >
               <Menu.Item
                 as="a"
                 icon={<Icon circular name="angle left" />}
@@ -78,7 +83,11 @@ const PostLayout: FC<PostLayoutProps> = ({
             </Link>
           )}
           {next && (
-            <Link href={`${sitePath}posts/${next.slug}/`} passHref>
+            <Link
+              href={`${sitePath}posts/${next.slug}/`}
+              passHref
+              legacyBehavior
+            >
               <Menu.Item
                 as="a"
                 icon={<Icon circular name="angle right" title={next.title} />}
@@ -150,7 +159,11 @@ const PostLayout: FC<PostLayoutProps> = ({
         <footer>
           <Menu stackable>
             {prev && (
-              <Link href={`${sitePath}posts/${prev.slug}/`} passHref>
+              <Link
+                href={`${sitePath}posts/${prev.slug}/`}
+                passHref
+                legacyBehavior
+              >
                 <Menu.Item as="a">
                   <Icon name="angle left" />
                   {prev.title}
@@ -158,7 +171,11 @@ const PostLayout: FC<PostLayoutProps> = ({
               </Link>
             )}
             {next && (
-              <Link href={`${sitePath}posts/${next.slug}/`} passHref>
+              <Link
+                href={`${sitePath}posts/${next.slug}/`}
+                passHref
+                legacyBehavior
+              >
                 <Menu.Item as="a">
                   <Icon name="angle right" />
                   {next.title}
@@ -174,7 +191,7 @@ const PostLayout: FC<PostLayoutProps> = ({
                   language === "ja" ? "ページのトップへ" : "Top of this page"
                 }
               />
-              <Link href={sitePath} passHref>
+              <Link href={sitePath} passHref legacyBehavior>
                 <Menu.Item
                   as="a"
                   icon="home"

@@ -1,9 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import ReactDOMServer from "react-dom/server.js";
+import ReactDOMServer from "react-dom/server";
 import { MDXRemote } from "next-mdx-remote";
-import { serialize } from "next-mdx-remote/serialize.js";
+import { serialize } from "next-mdx-remote/serialize";
 import HTML from "html-parse-stringify";
 
 import config from "./config.mjs";

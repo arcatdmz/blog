@@ -24,9 +24,8 @@ interface IndexPostsPageProps {
 }
 
 const IndexPosts: FC<IndexPostsPageProps> = ({ posts }) => {
-  const { title, description, siteUrl, sitePath, language } = useContext(
-    BlogContext
-  );
+  const { title, description, siteUrl, sitePath, language } =
+    useContext(BlogContext);
   return (
     <BaseLayout showFooterMeta={false}>
       <PageSeo title={title} description={description} url={siteUrl} />
@@ -69,7 +68,7 @@ const IndexPosts: FC<IndexPostsPageProps> = ({ posts }) => {
         <Divider />
         <footer>
           <Menu stackable>
-            <Link href={`${sitePath}posts`} passHref>
+            <Link href={`${sitePath}posts`} passHref legacyBehavior>
               <Menu.Item as="a" position="right">
                 <Icon name="angle down" />
                 {language === "ja" ? "すべての投稿を見る" : "See all posts"}

@@ -1,6 +1,6 @@
 ---
 title: PX に関する研究で IPSJ/ACM から共同表彰されました
-date: "2021-03-28"
+date: '2021-03-28'
 tags:
   - sigpx
   - research
@@ -9,8 +9,9 @@ summary: >-
   先日、情報処理学会 第 83 回全国大会の表彰式で「IPSJ/ACM Award for Early Career Contributions to
   Global Research」を受賞しました。これは年に一度、情報学全分野から一人を情報処理学会とACMから表彰するという...
 summary_generated: >-
+
   10 月 6 日追記; 情報処理学会の学会誌「情報処理 Vol.62 No.10」に受賞記念記事が掲載されました。先日、情報処理学会 第 83
-  回全国大会の表彰式で「IPSJ/ACM Award for Early Career Contributions to Globa...
+  回全国大会の表彰式で「IPSJ/ACM Award for Early Career Contributions to Glob...
 ---
 
 > **10 月 6 日追記;** 情報処理学会の学会誌「[情報処理 Vol.62 No.10](https://amzn.to/3oC9Fjm)」に[受賞記念記事](http://doi.org/10.20729/00212783)が掲載されました。

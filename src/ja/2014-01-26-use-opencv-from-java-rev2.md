@@ -23,12 +23,12 @@ OpenCV を利用した Java アプリケーションを一般ユーザに配布�
 2. ソースコードをコンパイル、実行するときの Java のクラスパスに以下のファイルを追加する
    - javacv.jar
    - javacpp.jar
-   - javacv-{platform}.jar
-   - opencv-\*-{platform}.jar
+   - javacv-\{platform\}.jar
+   - opencv-\*-\{platform\}.jar
 
 これだけです。[前の記事](/ja/posts/2012-11-04-use-opencv-from-java/ "OpenCVをJavaから使う")に比べて、OpenCV のインストール作業がなくなったので本当にシンプルになりました。
 
-{platform}は、バージョン 0.7 現在で OpenCV と FFmpeg どちらにも次の 5 通りが用意されていて、たいていの環境に対応できるはずです。
+`{platform}` は、バージョン 0.7 現在で OpenCV と FFmpeg どちらにも次の 5 通りが用意されていて、たいていの環境に対応できるはずです。
 
 - 32bit 版 Windows (windows-x86)
 - 64bit 版 Windows (windows-x86_64)

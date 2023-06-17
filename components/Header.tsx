@@ -21,7 +21,7 @@ const Header: FC<HeaderProps> = ({ onMenuClick }) => {
 
   return (
     <Menu fixed="top" id="fixed-menu">
-      <Link href={sitePath} passHref>
+      <Link href={sitePath} passHref legacyBehavior>
         <Menu.Item as="a">
           <span className="mobile hidden">{title}</span>
           <span className="print-hidden mobile only">

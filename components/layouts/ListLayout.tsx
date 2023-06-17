@@ -1,6 +1,7 @@
 import {
   ChangeEvent,
   FC,
+  ReactNode,
   useCallback,
   useContext,
   useMemo,
@@ -14,6 +15,7 @@ import { PostIface } from "../../lib/PostIface";
 import { ListItem } from "../ListItem";
 
 interface ListLayoutProps {
+  children?: ReactNode;
   posts: PostIface[];
   title?: string;
   header?: JSX.Element | JSX.Element[];
@@ -21,11 +23,11 @@ interface ListLayoutProps {
 }
 
 const ListLayout: FC<ListLayoutProps> = ({
+  children,
   posts,
   title,
   header,
-  searchEnabled = true,
-  children
+  searchEnabled = true
 }) => {
   const { language } = useContext(BlogContext);
   const [searchValue, setSearchValue] = useState("");
