@@ -56,9 +56,14 @@ article.post-item figure {
   padding: 0.5em;
 }
 
+article.post-item figure img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
 article.post-item figure.fixed-size img {
   margin: auto;
-  display: inline-block;
 }
 article.post-item figure.small.fixed-size img {
   width: 180px !important;
