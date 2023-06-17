@@ -8,7 +8,7 @@ const __ahtml = `(function(d){var config={kitId:"tor0txx",scriptTimeout:3000,asy
 const __ghtml = `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_TRACKING_ID}',{page_path:window.location.pathname});`;
 
 // Twitter Widgets
-// const __thtml = `window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));`;
+const __thtml = `window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));`;
 
 class MyDocument extends Document {
   render() {
@@ -30,11 +30,11 @@ class MyDocument extends Document {
               __html: __ghtml
             }}
           />
-          {/* <script
+          <script
             dangerouslySetInnerHTML={{
               __html: __thtml
             }}
-          /> */}
+          />
         </Head>
         <Main />
         <NextScript />
