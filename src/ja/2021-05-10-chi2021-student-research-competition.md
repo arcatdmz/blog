@@ -1,6 +1,6 @@
 ---
 title: ACM CHI 2021 Student Research Competition へようこそ！
-date: "2021-05-10"
+date: '2021-05-10'
 tags:
   - research
   - student
@@ -9,9 +9,10 @@ summary: >-
   先週末から、Human-Computer Interaction 分野のトップ国際会議 ACM CHI がオンライン開催されています。この記事では主に
   CHI 参加中の学生向けに Student Research Competition (SRC) の聴講をおすすめします。
 summary_generated: >-
+
   5 月 19 日追記:
   みなさま、ご参加ありがとうございました。また、審査員の方々にもこの場を借りて御礼申し上げます。参加した学生のみなさまも、おつかれさまでした！ 1st
-  Round に出場した方々のプレゼンテーションは YouTube Playlist で閲覧できます。...
+  Round に出場した方々のプレゼンテーションは YouTube Playlist で閲覧できます...
 ---
 
 > **5 月 19 日追記:** みなさま、ご参加ありがとうございました。また、審査員の方々にもこの場を借りて御礼申し上げます。参加した学生のみなさまも、おつかれさまでした！ 1st Round に出場した方々のプレゼンテーションは [YouTube Playlist](https://www.youtube.com/playlist?list=PLqhXYFYmZ-VcBRf3ufMIWaxvoGG-r1qp1) で閲覧できます。 2nd Round の勝者については [Awards ページの最下部](https://chi2021.acm.org/for-attendees/highlights/awards)に掲示されています。
