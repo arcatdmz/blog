@@ -43,13 +43,47 @@ const oembedConfig: Config = ({ url, provider }) => {
   }
 };
 
+const matchUrls = (urls: string[], urlString: string) =>
+  urls.some(scheme =>
+    new RegExp(scheme.replace(/\*/g, "(.*)")).test(urlString)
+  );
+
 const wrappedOembedTransformer: Transformer = {
   name: "transformer-oembed",
   shouldTransform: oembedTransformer.shouldTransform,
-  getHTML: async (urlString, getConfig = {}) => {
-    const html = await oembedTransformer.getHTML(urlString, getConfig);
+  getHTML: async urlString => {
+    const html = await oembedTransformer.getHTML(urlString, oembedConfig);
+    let provider: string;
+
+    if (
+      matchUrls(
+        [
+          "https://twitter.com/*",
+          "https://twitter.com/*/status/*",
+          "https://*.twitter.com/*/status/*"
+        ],
+        urlString
+      )
+    ) {
+      provider = "twitter";
+    } else if (
+      matchUrls(
+        [
+          "https://*.youtube.com/watch*",
+          "https://*.youtube.com/v/*",
+          "https://youtu.be/*",
+          "https://*.youtube.com/playlist?list=*",
+          "https://youtube.com/playlist?list=*",
+          "https://*.youtube.com/shorts*"
+        ],
+        urlString
+      )
+    ) {
+      provider = "youtube";
+    }
     return `<div class="remark-oembed-inline remark-oembed-${
-      lastProvider ? lastProvider.toLowerCase() : "unknown-provider"
+      provider ||
+      (lastProvider ? lastProvider.toLowerCase() : "unknown-provider")
     }">${html}</div>`;
   }
 };
@@ -71,10 +105,7 @@ export async function getFileBySlug(
         remarkSlug,
         remarkAutolinkHeadings,
         remarkCodeTitles,
-        [
-          remarkEmbedder,
-          { transformers: [[wrappedOembedTransformer, oembedConfig]] }
-        ]
+        [remarkEmbedder, { transformers: [wrappedOembedTransformer] }]
       ],
       rehypePlugins: [rehypePrism]
     }
