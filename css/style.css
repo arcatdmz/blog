@@ -172,11 +172,11 @@ article.post-item .embed > iframe {
   border-top: none !important;
 }
 
-.remark-oembed-inline.remark-oembed-you-tube {
+.remark-oembed-inline.remark-oembed-youtube {
   padding: 0.5rem;
 }
 
-.remark-oembed-inline.remark-oembed-you-tube > iframe {
+.remark-oembed-inline.remark-oembed-youtube > iframe {
   width: 100%;
   min-height: min(50vw, 420px);
   display: block;

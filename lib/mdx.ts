@@ -1,4 +1,4 @@
-import remarkEmbedder from "@remark-embedder/core";
+import remarkEmbedder, { Transformer } from "@remark-embedder/core";
 import oembedTransformer, { Config } from "@remark-embedder/transformer-oembed";
 import fs from "fs";
 import matter from "gray-matter";
@@ -28,7 +28,10 @@ export function dateSortDesc(a: number | string, b: number | string) {
   return 0;
 }
 
+let lastProvider: string;
+
 const oembedConfig: Config = ({ url, provider }) => {
+  lastProvider = provider.provider_name;
   if (provider.provider_name === "Twitter") {
     return {
       params: {
@@ -37,6 +40,17 @@ const oembedConfig: Config = ({ url, provider }) => {
         dnt: true
       }
     };
+  }
+};
+
+const wrappedOembedTransformer: Transformer = {
+  name: "transformer-oembed",
+  shouldTransform: oembedTransformer.shouldTransform,
+  getHTML: async (urlString, getConfig = {}) => {
+    const html = await oembedTransformer.getHTML(urlString, getConfig);
+    return `<div class="remark-oembed-inline remark-oembed-${
+      lastProvider ? lastProvider.toLowerCase() : "unknown-provider"
+    }">${html}</div>`;
   }
 };
 
@@ -57,7 +71,10 @@ export async function getFileBySlug(
         remarkSlug,
         remarkAutolinkHeadings,
         remarkCodeTitles,
-        [remarkEmbedder, { transformers: [[oembedTransformer, oembedConfig]] }]
+        [
+          remarkEmbedder,
+          { transformers: [[wrappedOembedTransformer, oembedConfig]] }
+        ]
       ],
       rehypePlugins: [rehypePrism]
     }
