@@ -1,7 +1,13 @@
+import rehypePrism from "@mapbox/rehype-prism";
+import remarkEmbedder from "@remark-embedder/core";
+import oembedTransformer, { Config } from "@remark-embedder/transformer-oembed";
 import fs from "fs";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
+import remarkAutolinkHeadings from "remark-autolink-headings";
+import remarkCodeTitles from "remark-code-titles";
+import remarkSlug from "remark-slug";
 
 import { FrontMatterIface } from "./FrontMatterIface";
 import { PostIface } from "./PostIface";
@@ -22,6 +28,18 @@ export function dateSortDesc(a: number | string, b: number | string) {
   return 0;
 }
 
+const oembedConfig: Config = ({ url, provider }) => {
+  if (provider.provider_name === "Twitter") {
+    return {
+      params: {
+        omit_script: true,
+        link_color: "#269eab",
+        dnt: true
+      }
+    };
+  }
+};
+
 export async function getFileBySlug(
   slug: string,
   language: string = "default"
@@ -36,12 +54,12 @@ export async function getFileBySlug(
   const mdxSource = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [
-        require("remark-slug"),
-        require("remark-autolink-headings"),
-        require("remark-code-titles"),
-        [require("remark-oembed"), { syncWidget: true }]
+        remarkSlug,
+        remarkAutolinkHeadings,
+        remarkCodeTitles,
+        [remarkEmbedder, { transformers: [[oembedTransformer, oembedConfig]] }]
       ],
-      rehypePlugins: [require("@mapbox/rehype-prism")]
+      rehypePlugins: [rehypePrism]
     }
   });
 
