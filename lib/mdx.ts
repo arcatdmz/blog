@@ -6,7 +6,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
 import rehypePrism from "rehype-prism-plus";
 import remarkAutolinkHeadings from "remark-autolink-headings";
-import remarkCodeTitles from "remark-code-titles";
+import remarkCodeTitles from "remark-flexible-code-titles";
 import remarkSlug from "remark-slug";
 
 import { FrontMatterIface } from "./FrontMatterIface";
