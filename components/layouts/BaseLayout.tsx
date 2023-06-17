@@ -2,6 +2,7 @@ import Head from "next/head";
 import {
   FC,
   MouseEventHandler,
+  ReactNode,
   useCallback,
   useContext,
   useState
@@ -15,14 +16,15 @@ import { Footer } from "../Footer";
 import { Header } from "../Header";
 
 interface BaseLayoutProps {
+  children?: ReactNode;
   showFooterMeta?: boolean;
   sourceUrl?: string;
 }
 
 const BaseLayout: FC<BaseLayoutProps> = ({
+  children,
   showFooterMeta = true,
-  sourceUrl,
-  children
+  sourceUrl
 }) => {
   const { sitePath } = useContext(BlogContext);
   const [visible, setVisible] = useState<boolean>(false);

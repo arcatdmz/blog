@@ -9,7 +9,7 @@ const CustomLink: FC<
 
   if (isInternalLink) {
     return (
-      <Link href={href} passHref>
+      <Link href={href} legacyBehavior>
         <a {...rest} />
       </Link>
     );

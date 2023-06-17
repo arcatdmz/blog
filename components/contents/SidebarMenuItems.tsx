@@ -13,7 +13,7 @@ const SidebarMenuItems: FC = () => {
           <Image avatar src="https://junkato.jp/images/junkato.jpg" />
           トップ
         </Menu.Item>
-        <Link href="/ja" passHref>
+        <Link href="/ja" passHref legacyBehavior>
           <Menu.Item active as="a">
             <Icon name="pencil" />
             ブログ
@@ -60,7 +60,7 @@ const SidebarMenuItems: FC = () => {
           <Image avatar src="https://junkato.jp/images/junkato.jpg" />
           Top page
         </Menu.Item>
-        <Link href="/" passHref>
+        <Link href="/" passHref legacyBehavior>
           <Menu.Item active as="a">
             <Icon name="pencil" />
             Blog

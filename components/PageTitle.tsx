@@ -1,6 +1,12 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { Header } from "semantic-ui-react";
 
-const PageTitle: FC = ({ children }) => <Header as="h1">{children}</Header>;
+interface IProps {
+  children?: ReactNode;
+}
+
+const PageTitle: FC<IProps> = ({ children }) => (
+  <Header as="h1">{children}</Header>
+);
 
 export { PageTitle };
