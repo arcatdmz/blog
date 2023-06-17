@@ -21,7 +21,7 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Build pages
         run: |
-          npm ci --no-optional
+          npm ci
           npm run download
           npm run build
           npm run export
