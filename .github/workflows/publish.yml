@@ -9,19 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
       - name: Set up Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
-          registry-url: https://registry.npmjs.org/
-      - name: Cache dependencies
-        uses: actions/cache@v1
+          node-version: 16
+      - name: Restore cache
+        uses: actions/cache@v3
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Build pages
         run: |
           npm ci --no-optional
@@ -29,7 +26,7 @@ jobs:
           npm run build
           npm run export
       - name: Deploy pages
-        uses: burnett01/rsync-deployments@4.1
+        uses: burnett01/rsync-deployments@6.0.0
         with:
           switches: -avzr --delete-after --exclude="/.htaccess"
           path: out/
