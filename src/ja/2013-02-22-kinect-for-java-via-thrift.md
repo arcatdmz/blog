@@ -65,7 +65,7 @@ GitHub に C#の[サーバ](https://github.com/arcatdmz/kinect-thrift-server/blo
 
 ### Thrift の型システムとエンディアン
 
-上にさらっと書いた内容だけだとすごく簡単そうです（実際、通信部分のコードは全く気にせず済んだので、そこはよかったのです）が、Thrift の型システムにいただけないところがあって苦労しました。まず、int や long などの配列を作れません。 list<i32\> と書くと、配列ではなく List ができます。しかも、Java の場合はプリミティブ型の List が作れないので List<Integer\> になります。[滅びればいいのに](https://twitter.com/arcatdmz/status/303885308754288640)。
+上にさらっと書いた内容だけだとすごく簡単そうです（実際、通信部分のコードは全く気にせず済んだので、そこはよかったのです）が、Thrift の型システムにいただけないところがあって苦労しました。まず、int や long などの配列を作れません。 list&lt;i32&gt; と書くと、配列ではなく List ができます。しかも、Java の場合はプリミティブ型の List が作れないので List&lt;Integer&gt; になります。[滅びればいいのに](https://twitter.com/arcatdmz/status/303885308754288640)。
 
 で、binary と書くと単なる byte 型配列ができるので、[short\[\]をクライアントに返すためにいったん byte\[\]に変換するコード(C#)](https://github.com/arcatdmz/kinect-thrift-server/blob/master/csharp/ConsoleKinectServer/KinectServiceHandler.cs#L496)を書いたのですが、[受け取った byte\[\]を short\[\]に戻すコード(Java)](https://github.com/arcatdmz/kinect-thrift-server/blob/master/java/src/jp/digitalmuseum/kinect/KinectServiceWrapper.java#L199)を素直に書いたらデータが壊れました。原因は Endian-ness の不整合でした。
 

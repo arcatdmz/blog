@@ -19,8 +19,6 @@ summary_generated: >-
 
 [![](/images/2021-10-06-wakatime.png)](https://wakatime.com/@cc077b43-5854-4a13-9a3f-480b1d74b2a9)
 
-<!-- <a href="https://wakatime.com/@cc077b43-5854-4a13-9a3f-480b1d74b2a9"><img style={{ display: "inline", width: "auto" }} src="https://wakatime.com/badge/user/cc077b43-5854-4a13-9a3f-480b1d74b2a9.svg" alt="Total time coded since Jan 17 2021" /></a> -->
-
 あと、今年の GitHub contributions を画像化して貼りたくて検索していたら、過去にさかのぼってレンダリングしてくれる [GitHub Contributions Chart Generator](https://github-contributions.vercel.app/) というものを見つけました。
 
 2018 年くらいから開発環境を徐々に GitHub に移行してきたことがよく分かります。

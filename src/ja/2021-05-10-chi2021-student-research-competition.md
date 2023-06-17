@@ -49,10 +49,6 @@ summary_generated: >-
 - [2nd Round (B)](https://acmchi.delegateconnect.co/events/sessions/student-research-competition-2nd-round-b): 日本時間 5/12（水）16:00-18:00
 - [2nd Round (C)](https://acmchi.delegateconnect.co/events/sessions/student-research-competition-2nd-round-c): 日本時間 5/13（木）00:00-02:00
 
-<!-- <div className="embed"> -->
-<!-- <iframe src="https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/5065e0d0-08f2-4846-ad29-e06766e112e0/cid-A32915EB6EC7FA7F/index.html" width="1200px" height="675px" frameBorder="0"></iframe> -->
-<!-- </div> -->
-
 ---
 
 ## なぜ SRC を聴講すべきなのか？

@@ -21,10 +21,11 @@ altUrl: "https://junkato.jp/ja/blog/2020/08/30/digital-stars-2020-online/"
 
 マジカルミライは延期になったのですが、これまで海外で 7 都市で開催されてきた Digital Stars というクラブイベントのオンライン版[「Digital Stars 2020 Online」](https://piapro.net/digitalstars2020/)が今、まさに開催されています。そちらでは ACM CHI 2015 で発表した [TextAlive](https://junkato.jp/ja/textalive/) というリリックビデオ制作支援サービスを活用した動画が VJ で使われています。
 
-この[BIGHEAD さん](https://twitter.com/bighead11111/status/1300037724875952128)のステージでは、リリックビデオが仮想的なライブ会場の世界観に溶け込み、全体としてウィズ・コロナ時代ならではの音楽イベントが表現されています。ツールを使い倒してもらえて、とても嬉しく思っています。
+この[BIGHEAD さん](https://web.archive.org/web/20200830114929/https://twitter.com/bighead11111/status/1300037724875952128)のステージでは、リリックビデオが仮想的なライブ会場の世界観に溶け込み、全体としてウィズ・コロナ時代ならではの音楽イベントが表現されています。ツールを使い倒してもらえて、とても嬉しく思っています。
 
-https://twitter.com/bighead11111/status/1295650676391854080
+https://www.youtube.com/watch?v=rE4ITWSkEWM
 
-https://twitter.com/bighead11111/status/1299996602950508546
+- [https://twitter.com/bighead11111/status/1295650676391854080](https://web.archive.org/web/20200818091703/https://twitter.com/bighead11111/status/1295650676391854080)
+- [https://web.archive.org/web/20200830090536/https://twitter.com/bighead11111/status/1299996602950508546](https://twitter.com/bighead11111/status/1299996602950508546)
 
 産総研に入ってもう 6 年が経ちましたが、ゆっくり着実に社会で使われる技術を育てている実感があります。今年はこのあと、さらに楽しいイベントが予定されており、そちらも精いっぱいやっていこうと思います。
