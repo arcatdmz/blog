@@ -1,6 +1,6 @@
 ---
 title: ACM CHI 2021 Student Research Competition へようこそ！
-date: '2021-05-10'
+date: "2021-05-10"
 tags:
   - research
   - student

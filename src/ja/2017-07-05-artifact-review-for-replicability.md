@@ -1,6 +1,6 @@
 ---
 title: 科学研究の再現性について
-date: '2017-07-05'
+date: "2017-07-05"
 tags:
   - discussion
   - science
@@ -12,7 +12,7 @@ summary_generated: >-
   2018 年 5 月 28 日追記: ヒューマンインタフェース学会の会誌 Vol.20 No.1
   にヒューマンインタフェース研究における再現性向上に向けた取り組みと題した寄稿が掲載されました。本記事と合わせてどうぞ。昨年 IPSJ-ONE
   に登壇した際の記事「情報処理が科...
-altUrl: 'https://junkato.jp/ja/blog/2017/07/05/artifact-review-for-replicability/'
+altUrl: "https://junkato.jp/ja/blog/2017/07/05/artifact-review-for-replicability/"
 ---
 
 > **2018 年 5 月 28 日追記:** ヒューマンインタフェース学会の会誌 Vol.20 No.1 に[ヒューマンインタフェース研究における再現性向上に向けた取り組み](https://junkato.jp/ja/science/)と題した寄稿が掲載されました。本記事と合わせてどうぞ。
