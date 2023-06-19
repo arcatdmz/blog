@@ -38,7 +38,7 @@ const ListLayout: FC<ListLayoutProps> = ({
       [
         frontMatter.title,
         frontMatter.summary || frontMatter.summary_generated,
-        frontMatter.tags.join(" "),
+        frontMatter.tags ? frontMatter.tags.join(" ") : "",
         frontMatter.slug.split("-").join(" ")
       ]
         .join(" ")
