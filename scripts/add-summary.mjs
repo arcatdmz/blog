@@ -19,7 +19,7 @@ const toString = node => {
   return node.children.map(toString).join("");
 };
 
-const readFiles = async ({ dir, summaryLength }) => {
+const readFiles = async ({ language, dir, summaryLength }) => {
   const files = fs.readdirSync(dir);
   return Promise.all(
     files.map(async file => {
@@ -36,7 +36,7 @@ const readFiles = async ({ dir, summaryLength }) => {
           v => v.type === "tag" && /h[0-9]+/.test(v.name)
         );
         const intro = headerIndex > 0 ? ast.slice(0, headerIndex) : ast;
-        text = intro.map(toString).join("");
+        text = intro.map(toString).join(language === "ja" ? "" : " ");
         const summary_generated =
           text.length > summaryLength
             ? text.substr(0, summaryLength - 3) + "..."

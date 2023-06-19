@@ -11,7 +11,7 @@ const config = [
   {
     language: "default",
     dir: path.join(root, "src", "default"),
-    summaryLength: 70
+    summaryLength: 200
   }
 ];
 
