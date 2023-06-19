@@ -62,6 +62,15 @@ article.post-item figure img {
   display: inline-block;
 }
 
+article.post-item figure > .columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+article.post-item figure > .three.columns > a,
+article.post-item figure > .three.columns > img {
+  width: 33.3%;
+}
+
 article.post-item figure.fixed-size img {
   margin: auto;
 }
@@ -103,6 +112,11 @@ article.post-item figure.center img {
 }
 
 @media only screen and (max-width: 767.98px) {
+  article.post-item figure > .columns > a,
+  article.post-item figure > .columns > img {
+    width: 100% !important;
+  }
+
   article.post-item figure.small.fixed-size img,
   article.post-item figure.fixed-size img {
     width: 100% !important;
