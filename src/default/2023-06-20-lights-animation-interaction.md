@@ -6,6 +6,7 @@ date: "2023-06-20"
 tags:
   - research
   - anime
+coverImage: 2023-06-20-sas34-kato-lights-animation-interaction-28.jpg
 summary: >-
   I've attended and given talks at the Society for Animation Studies annual
   conference three years in a row! This year, I discussed how the "animating

@@ -4,6 +4,9 @@ date: "2023-06-20"
 tags:
   - research
   - anime
+coverImage: 2023-06-20-sas34-kato-lights-animation-interaction-28.jpg
+summary: >-
+  国際アニメーション学会（Society for Animation Studies）で、3 年連続登壇発表しました。産総研の研究の一環で音楽ライブのステージ演出をお手伝いしたり、クリエータの作る演出を間近で見てきたりした経験をもとに、「アニメーションする光」のステージにおける役割に焦点を当てて講演しました。
 summary_generated: >-
   国際アニメーション学会（Society for Animation Studies）で、3 年連続登壇発表しました。前の 2 年間は、Arch
   Research での研究成果をもとに、アニメの作り方の日米比較や各社研究開発体制のケーススタディを報告してきました。当時のスライ...
