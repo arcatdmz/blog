@@ -5,6 +5,7 @@ tags:
   - research
   - science
   - discussion
+  - creativity
 coverImage: 2023-03-02-aist-creative-hci-seminar.jpg
 summary: >-
   来週 3 月 7 日（火）デンマークと香港から研究者を東京大学本郷キャンパスに招聘し、 Human-Computer Interaction に関する無料のセミナー 第一回 AIST Creative HCI Seminar を開催します。この記事では、セミナーの概要を紹介しつつ、 HCI が専門の人にも、そうでない人にも、参加をおすすめしてみたいと思います。

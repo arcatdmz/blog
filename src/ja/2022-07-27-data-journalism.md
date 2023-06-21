@@ -5,6 +5,7 @@ tags:
   - research
   - science
   - discussion
+  - creativity
 summary: >-
   情報処理学会の学会誌「情報処理」5 月号の巻頭コラムは NHK 解説委員 三輪 誠司氏の「報道の現場を変えたプログラミングスキル」でした。三輪さんの取り組みは、広義ではデータジャーナリズム（data journalism）として捉えることができます。その動向を記事にまとめました。
 summary_generated: >-

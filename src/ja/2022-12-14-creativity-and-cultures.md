@@ -5,6 +5,7 @@ tags:
   - research
   - discussion
   - advent-calendar
+  - creativity
 coverImage: 2022-12-14-DSC05781_resized.jpg
 summary: >-
   先日、AI 活用が当たり前になった社会でも、人々が創造的な活動を続けたいと思えるような Human-Computer Interaction (HCI)

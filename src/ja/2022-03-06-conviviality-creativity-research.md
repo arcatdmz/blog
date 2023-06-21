@@ -5,6 +5,7 @@ tags:
   - research
   - science
   - discussion
+  - creativity
 coverImage: SDIM5189.jpg
 summary_generated: >-
   2 月 16 日（水）、中目黒の N&amp;A Art SITE

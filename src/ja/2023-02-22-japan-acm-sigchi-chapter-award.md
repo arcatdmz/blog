@@ -4,6 +4,7 @@ date: "2023-02-22"
 tags:
   - research
   - science
+  - creativity
 coverImage: 2023-02-22-japan-acm-sigchi-chapter-award.png
 summary: >-
   研究分野の国際学会（ACM SIGCHI）日本支部（Japan ACM SIGCHI Chapter）から秀若手研究者賞（Distinguished
