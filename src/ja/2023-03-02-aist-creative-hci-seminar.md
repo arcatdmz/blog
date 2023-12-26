@@ -14,12 +14,12 @@ summary_generated: >-
   Seminar を東京大学本郷キャンパスで開催します。この記事では、これがどのようなセミナーなのか、また、セミナーを開催する狙...
 ---
 
-来週 3 月 7 日（火）Human-Computer Interaction に関する無料のセミナー [第一回 AIST Creative HCI Seminar](https://chci.pages.dev/aist-seminar) を東京大学本郷キャンパスで開催します。
+来週 3 月 7 日（火）Human-Computer Interaction に関する無料のセミナー [第一回 AIST Creative HCI Seminar](https://chci.pages.dev/aist-seminar/1) を東京大学本郷キャンパスで開催します。
 
-この記事では、これがどのようなセミナーなのか、また、セミナーを開催する狙いは何か、簡単にご紹介しつつ、HCI が専門の人にも、そうでない人にも、参加をおすすめしてみたいと思います。 YouTube Live でも配信予定ですが、デンマークと香港から物理的に招聘している研究者に会える機会ですので、[参加登録](https://chci.pages.dev/aist-seminar#first-registration)のうえ現地に来場いただけると嬉しいです。
+この記事では、これがどのようなセミナーなのか、また、セミナーを開催する狙いは何か、簡単にご紹介しつつ、HCI が専門の人にも、そうでない人にも、参加をおすすめしてみたいと思います。 YouTube Live でも配信予定ですが、デンマークと香港から物理的に招聘している研究者に会える機会ですので、[参加登録](https://chci.pages.dev/aist-seminar/1)のうえ現地に来場いただけると嬉しいです。
 
 <figure>
-  <a href="https://chci.pages.dev/aist-seminar#first-registration"><img src="/images/2023-03-02-aist-creative-hci-seminar.jpg" alt="Jonas, Jun, and Zhicong" /></a>
+  <a href="https://chci.pages.dev/aist-seminar/1"><img src="/images/2023-03-02-aist-creative-hci-seminar.jpg" alt="Jonas, Jun, and Zhicong" /></a>
   <figcaption>登壇者一同楽しみにしています！（渡航前最後のオンラインミーティングより）</figcaption>
 </figure>
 
