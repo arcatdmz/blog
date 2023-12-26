@@ -1,4 +1,8 @@
-module.exports = {
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
+  output: "export",
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
   trailingSlash: true,
   webpack: (config, { dev, isServer }) => {
@@ -27,3 +31,5 @@ module.exports = {
     return config;
   }
 };
+
+module.exports = nextConfig;
