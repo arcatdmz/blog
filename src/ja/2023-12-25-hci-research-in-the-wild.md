@@ -1,5 +1,5 @@
 ---
-title: "In the wild" なHCI研究
+title: '"In the wild" なHCI研究'
 date: "2023-12-25"
 tags:
   - research
