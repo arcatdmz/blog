@@ -66,6 +66,10 @@ article.post-item figure > .columns {
   display: flex;
   flex-wrap: wrap;
 }
+article.post-item figure > .two.columns > a,
+article.post-item figure > .two.columns > img {
+  width: 49.9%;
+}
 article.post-item figure > .three.columns > a,
 article.post-item figure > .three.columns > img {
   width: 33.3%;
@@ -104,6 +108,11 @@ article.post-item figure.left {
 article.post-item figure.right {
   float: right;
   margin: 0 0 1em 1em;
+}
+
+article.post-item figure.center > .columns > a,
+article.post-item figure.center > .columns > img {
+  margin: auto;
 }
 
 article.post-item figure.center img {
