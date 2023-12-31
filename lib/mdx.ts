@@ -30,7 +30,7 @@ export function dateSortDesc(a: number | string, b: number | string) {
 
 let lastProvider: string;
 
-const oembedConfig: Config = ({ url, provider }) => {
+const oembedConfig: Config = ({ url: _url, provider }) => {
   lastProvider = provider.provider_name;
   if (provider.provider_name === "Twitter") {
     return {
@@ -38,6 +38,13 @@ const oembedConfig: Config = ({ url, provider }) => {
         omit_script: true,
         link_color: "#269eab",
         dnt: true
+      }
+    };
+  }
+  if (provider.provider_name === "Instagram") {
+    return {
+      params: {
+        access_token: "488785607828009|36d64ad2f361914097c65dd71ccefee7"
       }
     };
   }
@@ -84,7 +91,7 @@ const wrappedOembedTransformer: Transformer = {
     return `<div class="remark-oembed-inline remark-oembed-${
       provider ||
       (lastProvider ? lastProvider.toLowerCase() : "unknown-provider")
-    }">${html}</div>`;
+    }">${html || `<a href="${urlString}">${urlString}</a>`}</div>`;
   }
 };
 
