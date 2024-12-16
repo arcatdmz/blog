@@ -1,6 +1,6 @@
 ---
 title: GUI と HCI の理論研究（フランス在外研究に至った経緯）
-date: '2024-12-14'
+date: "2024-12-14"
 tags:
   - research
   - discussion
@@ -101,11 +101,11 @@ Michel は、2000 年にダイレクトマニピュレーションを拡張す�
 次のスライドは、先月のラボセミナーで使ったものです。
 
 <figure className="center">
-  <a href="https://bit.ly/sas34kato" className="three columns">
-    <img src="/images/2024-11-26-exsitu-seminar-28.png" alt="" />
-    <img src="/images/2024-11-26-exsitu-seminar-29.png" alt="" />
-    <img src="/images/2024-11-26-exsitu-seminar-30.png" alt="" />
-  </a>
+  <div className="three columns">
+    <a href="/images/2024-11-26-exsitu-seminar-28.png"><img src="/images/2024-11-26-exsitu-seminar-28.png" alt="" /></a>
+    <a href="/images/2024-11-26-exsitu-seminar-29.png"><img src="/images/2024-11-26-exsitu-seminar-29.png" alt="" /></a>
+    <a href="/images/2024-11-26-exsitu-seminar-30.png"><img src="/images/2024-11-26-exsitu-seminar-30.png" alt="" /></a>
+  </div>
   <figcaption>2024/11/26 セミナースライド（CST research from present to the past）</figcaption>
 </figure>
 
