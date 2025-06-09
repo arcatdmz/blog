@@ -18,7 +18,7 @@ interface ListLayoutProps {
   children?: ReactNode;
   posts: PostIface[];
   title?: string;
-  header?: JSX.Element | JSX.Element[];
+  header?: ReactNode;
   searchEnabled?: boolean;
 }
 

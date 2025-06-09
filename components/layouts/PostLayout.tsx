@@ -39,7 +39,7 @@ const PostLayout: FC<PostLayoutProps> = ({
     if (!tags) {
       return null;
     }
-    const elems: JSX.Element[] = [];
+    const elems: ReactNode[] = [];
     tags.forEach((tag: string, i: number) => {
       elems.push(
         <Tag key={tag} text={tag} />,
