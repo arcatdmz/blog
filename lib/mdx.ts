@@ -111,10 +111,10 @@ export async function getFileBySlug(
       remarkPlugins: [
         remarkSlug,
         remarkAutolinkHeadings,
-        remarkCodeTitles,
+        remarkCodeTitles as any,
         [remarkEmbedder, { transformers: [wrappedOembedTransformer] }]
       ],
-      rehypePlugins: [rehypePrism]
+      rehypePlugins: [rehypePrism as any]
     }
   });
 

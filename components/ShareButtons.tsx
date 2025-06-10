@@ -31,7 +31,6 @@ const ShareButtons: FC<ShareButtonsProps> = ({
       <Menu.Item>
         <FacebookShareButton
           url={url}
-          quote={description || undefined}
           hashtag={hashtag ? `#${hashtag}` : undefined}
         >
           <FacebookIcon size={30} round />
