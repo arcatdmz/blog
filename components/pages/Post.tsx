@@ -1,3 +1,4 @@
+"use client"
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { FC, useContext } from "react";
 
