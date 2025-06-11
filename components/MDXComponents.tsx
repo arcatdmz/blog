@@ -1,3 +1,4 @@
+"use client"
 import { DetailedHTMLProps, FC, ImgHTMLAttributes } from "react";
 import { Divider, Image } from "semantic-ui-react";
 // import { Components } from "@mdx-js/react/lib";

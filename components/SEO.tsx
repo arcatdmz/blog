@@ -1,3 +1,4 @@
+"use client"
 import { NextSeo, ArticleJsonLd } from "next-seo";
 import { FC, useContext } from "react";
 
