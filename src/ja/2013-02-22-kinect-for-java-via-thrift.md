@@ -14,7 +14,7 @@ summary_generated: >-
 altUrl: "https://junkato.jp/ja/blog/2013/02/22/kinect-for-java-via-thrift/"
 ---
 
-<figure className="right">
+<figure class="right">
   <a href="/images/kinect-thrift-server.jpg"><img src="/images/kinect-thrift-server-300x225.jpg" alt="" /></a>
   <figcaption>C#サーバとJavaクライアントがThriftで通信</figcaption>
 </figure>

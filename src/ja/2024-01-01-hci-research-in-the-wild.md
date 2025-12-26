@@ -72,8 +72,8 @@ SPLASH はプログラミング言語（PL）系の会議なので、どこが H
 
 さて、学術会議において、ワークショップという形式が本当に「ワークショップ」だったことはどれくらいあるでしょうか？自分の経験では、プレゼンテーションと質疑応答が続いて、聴衆が受動的な立場に終始することが大方です。三点目に関して、私の発案で LIVE 2022 から、全参加者の自己紹介タイムを入れていたのですが、 LIVE 2023 はさらに、セッションの括りを入念に検討し、質疑応答部分をパネルセッションのようにできないかなど、Peter と私とで事前にいろいろ議論しました。ちなみに、参加者が少人数の場合は [Writer's Workshop](https://www.dreamsongs.com/Files/WritersWorkshopPL.pdf) という形式が、私が知るもののなかでいちばん「ワークショップ」的ですが、LIVE はもっと参加人数が多いので、そこまで形式に手を加えることはしませんでした。
 
-<figure className="center">
-  <a href="https://lightroom.adobe.com/shares/da6dae34a02449cbb9add70df8fbf417" className="three columns">
+<figure class="center">
+  <a href="https://lightroom.adobe.com/shares/da6dae34a02449cbb9add70df8fbf417" class="three columns">
     <img src="/images/2023-12-31-DSC02962.jpg" alt="" />
     <img src="/images/2023-12-31-L1009841.jpg" alt="" />
     <img src="/images/2023-12-31-L1009944.jpg" alt="" />
@@ -116,8 +116,8 @@ Advent Calendar 初日の荒川さんの[WISS 参加記](https://note.com/hciphd
 
 10 年後も有効であろう研究上の論点がいろいろ出てきたと思うので、ぜひお正月に講演とパネルディスカッションを見ていただけると嬉しいです。
 
-<figure className="center">
-  <div className="two columns">
+<figure class="center">
+  <div class="two columns">
     <a href="https://chci.pages.dev/aist-seminar/speakers"><img src="/images/2024-01-01-chci.pages.dev_aist-seminar_speakers.jpg" alt="講演者の紹介" /></a>
     <a href="https://chci.pages.dev/aist-seminar/panel-topics"><img src="/images/2024-01-01-chci.pages.dev_aist-seminar_panel-topics.jpg" alt="パネルトピック" /></a>
   </div>

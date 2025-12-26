@@ -12,7 +12,7 @@ summary_generated: >-
 altUrl: "https://junkato.jp/ja/blog/2014/05/04/acm-student-research-competition/"
 ---
 
-<figure className="right">
+<figure class="right">
   <a href="/images/DSC03539.jpg"><img src="/images/DSC03539-150x150.jpg" alt="CHI 2009 Closing Plenary - 参加者全員に向けてSRC勝者がアナウンスされた" /></a>
   <figcaption>CHI 2009 Closing Plenary - 参加者全員に向けてSRC勝者がアナウンスされた</figcaption>
 </figure>
@@ -61,7 +61,7 @@ SRC は**学部生部門**と**大学院生部門**があり、それぞれ別�
 
 以降、この順番に内容を説明していきます。
 
-<figure className="right">
+<figure class="right">
   <a href="/images/DSC03237.jpg"><img src="/images/DSC03237-150x150.jpg" alt="CHI 2009 SRC第2ラウンドの様子" /></a>
   <figcaption>CHI 2009 SRC第2ラウンドの様子</figcaption>
 </figure>

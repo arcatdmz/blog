@@ -13,7 +13,7 @@ coverImage: phybots-marker-detection.jpg
 altUrl: "https://junkato.jp/ja/blog/2012/12/23/phybots-processing-artoolkit/"
 ---
 
-<figure className="right">
+<figure class="right">
   <a href="/images/phybots-overview.jpg"><img src="/images/phybots-overview-300x211.jpg" alt="Phybotsのハードウェアセットアップ" /></a>
 </figure>
 

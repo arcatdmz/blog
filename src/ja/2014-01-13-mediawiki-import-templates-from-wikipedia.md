@@ -16,7 +16,7 @@ altUrl: >-
   https://junkato.jp/ja/blog/2014/01/13/mediawiki-import-templates-from-wikipedia
 ---
 
-<figure className="right">
+<figure class="right">
   <a href="/images/infobox.png"><img src="/images/infobox-300x180.png" alt="" /></a>
   <figcaption>Wikipedia Infobox</figcaption>
 </figure>

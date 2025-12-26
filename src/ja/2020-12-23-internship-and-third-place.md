@@ -57,7 +57,7 @@ altUrl: "https://junkato.jp/ja/blog/2020/12/23/internship-and-third-place/"
 
 https://www.youtube.com/watch?v=Yz4Ucrw95bQ
 
-<p className="caption">初音ミク「マジカルミライ 2020」企画展ステージの模様</p>
+<p class="caption">初音ミク「マジカルミライ 2020」企画展ステージの模様</p>
 
 ### Arch Research
 

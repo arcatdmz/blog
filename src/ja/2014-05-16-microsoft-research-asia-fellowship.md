@@ -10,7 +10,7 @@ summary_generated: >-
 altUrl: "https://junkato.jp/ja/blog/2014/05/16/microsoft-research-asia-fellowship/"
 ---
 
-<figure className="right">
+<figure class="right">
   <a href="/images/msra-fellowship-2012.jpg"><img src="/images/msra-fellowship-2012-300x136.jpg" alt="MSRA Fellowship 2012 award ceremony" /></a>
   <figcaption>MSRA Fellowship 2012 授賞式</figcaption>
 </figure>
@@ -23,7 +23,7 @@ altUrl: "https://junkato.jp/ja/blog/2014/05/16/microsoft-research-asia-fellowshi
 
 ちなみに現在、[公式ブログ記事](http://msraurjp.wordpress.com/2014/05/02/microsoft-research-asia-fellowship%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e3%81%ae%e3%81%94%e6%a1%88%e5%86%85/ "Microsoft Research Asia Fellowshipプログラムのご案内")によれば今年度の Fellowship への応募を受け付けているようです。[公式サイト](http://research.microsoft.com/en-us/collaboration/global/asia-pacific/talent/fellowship.aspx "Fellowships at Microsoft Research Asia - Microsoft Research")には[過去の受賞者一覧](http://research.microsoft.com/en-us/collaboration/global/asia-pacific/talent/fellows.aspx)が掲載されています。このあとを読むまでもなく応募したいという人は、まずリンク先に目を通してみましょう。
 
-<figure className="right">
+<figure class="right">
   <a href="/images/DSC00143.jpg"><img src="/images/DSC00143-300x199.jpg" alt="Microsoft Research Asia, Beijing" /></a>
   <figcaption>MSRA所内の様子</figcaption>
 </figure>
@@ -56,7 +56,7 @@ altUrl: "https://junkato.jp/ja/blog/2014/05/16/microsoft-research-asia-fellowshi
 
 また、選考プロセスのなかに北京の Microsoft Research Asia を訪問してプレゼンするフェーズがあります。遠隔参加でプレゼンしている人もいたので必ずしも訪問することを強いられるわけではないですが、僕としては一度くらい訪問することを強く薦めます。オブラートに包まずに言うなら、大気汚染でインターンを思いとどまっている人も、一日滞在するくらいならいいのではないでしょうか:-) **日本人研究者も増えてきていますし、非常に恵まれた研究環境**なので、実際に見てみたら考えが変わるかもしれません。
 
-<figure className="right">
+<figure class="right">
   <a href="http://junkato.jp/ja/blog/wp-content/uploads/2014/05/Tools-for-Programming-in-the-Real-World.pptx"><img src="/images/Tools-for-Programming-in-the-Real-World-300x225.jpg" alt="Tools for Programming in the Real World" /></a>
   <figcaption>Tools for Programming in the Real World (第一ステップで用いたPowerPointファイル)</figcaption>
 </figure>
@@ -93,7 +93,7 @@ altUrl: "https://junkato.jp/ja/blog/2014/05/16/microsoft-research-asia-fellowshi
 
 長々書いてきましたが、**応募にかかる労力は最初のナレーション入り PowerPoint スライド作りがピーク**で、あとは大したことありません。これで$10,000 とその他いろいろな特典が手に入ると考えれば**コストパフォーマンスは決して悪くない**と思うので、みなさんもぜひ挑戦してみてください！
 
-<figure className="center">
+<figure class="center">
   <a href="/images/DSC06767.jpg"><img src="/images/DSC06767-300x199.jpg" alt="天津の有名なレストラン、狗不里でのFellowship受賞者ディナー" /></a>
   <figcaption>天津の有名なレストラン、狗不里でのFellowship受賞者ディナー</figcaption>
 </figure>

@@ -39,7 +39,7 @@ javascript: (function () {
 3. Enter キーを押すと入力ダイアログが出ます。集計したい年を半角数字で入れるか、全部集計したい場合は all と入力して「OK」をクリックしましょう。
 4. 結果が出るまでしばし待ちましょう。すごくぷるぷるにゃん…
 
-<figure className="center">
+<figure class="center">
   <a href="/images/amazon-result.png"><img src="/images/amazon-result.png" alt="うわぁ" /></a>
   <figcaption>うわぁ</figcaption>
 </figure>

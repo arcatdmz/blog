@@ -31,7 +31,7 @@ altUrl: "https://junkato.jp/ja/blog/2019/08/16/roles-of-academic-conf-pc-members
 
 ---
 
-<a className="internal-link" id="roles"></a>
+<a class="internal-link" id="roles"></a>
 
 ## 委員の仕事の流れ
 
@@ -133,7 +133,7 @@ conflict にせよ desk reject にせよ、判断が難しい場合はすぐに�
 
 ---
 
-<a className="internal-link" id="terminology"></a>
+<a class="internal-link" id="terminology"></a>
 
 ## プログラム委員会用語集
 
@@ -154,7 +154,7 @@ conflict にせよ desk reject にせよ、判断が難しい場合はすぐに�
 
 ---
 
-<a className="internal-link" id="who"></a>
+<a class="internal-link" id="who"></a>
 
 ## プログラム委員のなりかた？
 

@@ -23,7 +23,7 @@ altUrl: "https://junkato.jp/ja/blog/2014/07/19/japanese-ist-society-phd/"
   <figcaption>Microsoft Research Redmond (Building 99)</figcaption>
 </figure>
 
-<a className="internal-link" id="jisp-comment"></a>
+<a class="internal-link" id="jisp-comment"></a>
 
 ## 記事を読んだ感想
 
@@ -37,7 +37,7 @@ altUrl: "https://junkato.jp/ja/blog/2014/07/19/japanese-ist-society-phd/"
 
 このように、産業界についてはマクロな視点から、アカデミアについては個々人のミクロな視点を中心に「どうしたらいいの？」を書きます。
 
-<a className="internal-link" id="jisp-industry"></a>
+<a class="internal-link" id="jisp-industry"></a>
 
 ## IT 業界はどうしたらいいの？
 
@@ -57,7 +57,7 @@ altUrl: "https://junkato.jp/ja/blog/2014/07/19/japanese-ist-society-phd/"
 
 昔から、ゲーム制作会社には神みたいなプログラマがいて、他のプログラマやデザイナーの業務をものすごく効率化していると聞きます。こういうタイトな協業を、まずは親和性が高く日本がリード可能な業界から始めて、いずれは社会全体に広げていけたら理想的だろうなと思います。
 
-<a className="internal-link" id="jisp-academia"></a>
+<a class="internal-link" id="jisp-academia"></a>
 
 ## アカデミアはどうしたらいいの？
 
