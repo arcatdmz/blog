@@ -59,39 +59,45 @@ const wrappedOembedTransformer: Transformer = {
   name: "transformer-oembed",
   shouldTransform: oembedTransformer.shouldTransform,
   getHTML: async urlString => {
-    const html = await oembedTransformer.getHTML(urlString, oembedConfig);
-    let provider: string;
+    try {
+      const html = await oembedTransformer.getHTML(urlString, oembedConfig);
+      let provider: string;
 
-    if (
-      matchUrls(
-        [
-          "https://twitter.com/*",
-          "https://twitter.com/*/status/*",
-          "https://*.twitter.com/*/status/*"
-        ],
-        urlString
-      )
-    ) {
-      provider = "twitter";
-    } else if (
-      matchUrls(
-        [
-          "https://*.youtube.com/watch*",
-          "https://*.youtube.com/v/*",
-          "https://youtu.be/*",
-          "https://*.youtube.com/playlist?list=*",
-          "https://youtube.com/playlist?list=*",
-          "https://*.youtube.com/shorts*"
-        ],
-        urlString
-      )
-    ) {
-      provider = "youtube";
+      if (
+        matchUrls(
+          [
+            "https://twitter.com/*",
+            "https://twitter.com/*/status/*",
+            "https://*.twitter.com/*/status/*"
+          ],
+          urlString
+        )
+      ) {
+        provider = "twitter";
+      } else if (
+        matchUrls(
+          [
+            "https://*.youtube.com/watch*",
+            "https://*.youtube.com/v/*",
+            "https://youtu.be/*",
+            "https://*.youtube.com/playlist?list=*",
+            "https://youtube.com/playlist?list=*",
+            "https://*.youtube.com/shorts*"
+          ],
+          urlString
+        )
+      ) {
+        provider = "youtube";
+      }
+      return `<div class="remark-oembed-inline remark-oembed-${
+        provider ||
+        (lastProvider ? lastProvider.toLowerCase() : "unknown-provider")
+      }">${html || `<a href="${urlString}">${urlString}</a>`}</div>`;
+    } catch (error) {
+      // Fallback to a simple link if oEmbed fetch fails (e.g., during static generation)
+      console.warn(`Failed to fetch oEmbed for ${urlString}:`, error);
+      return `<a href="${urlString}">${urlString}</a>`;
     }
-    return `<div class="remark-oembed-inline remark-oembed-${
-      provider ||
-      (lastProvider ? lastProvider.toLowerCase() : "unknown-provider")
-    }">${html || `<a href="${urlString}">${urlString}</a>`}</div>`;
   }
 };
 
@@ -106,13 +112,18 @@ export async function getFileBySlug(
     : fs.readFileSync(mdPath, "utf8");
 
   const { data, content } = matter(source);
+  
+  // Serialize with MDX plugins, disabling embedder in production builds
   const mdxSource = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [
         remarkSlug,
         remarkAutolinkHeadings,
         remarkCodeTitles as any,
-        [remarkEmbedder, { transformers: [wrappedOembedTransformer] }]
+        // Only use embedder in development mode
+        ...(process.env.NODE_ENV === 'development' 
+          ? [[remarkEmbedder, { transformers: [wrappedOembedTransformer] }]]
+          : [])
       ],
       rehypePlugins: [rehypePrism as any]
     }
