@@ -1,14 +1,9 @@
-import remarkEmbedder, { Transformer } from "@remark-embedder/core";
-import oembedTransformer, { Config } from "@remark-embedder/transformer-oembed";
 import fs from "fs";
 import matter from "gray-matter";
-import { compile, run } from "@mdx-js/mdx";
 import path from "path";
-import rehypePrism from "rehype-prism-plus";
-import remarkAutolinkHeadings from "remark-autolink-headings";
-import remarkCodeTitles from "remark-flexible-code-titles";
-import remarkSlug from "remark-slug";
-import * as runtime from "react/jsx-runtime";
+import { remark } from "remark";
+import html from "remark-html";
+import remarkGfm from "remark-gfm";
 
 import { FrontMatterIface } from "./FrontMatterIface";
 import { PostIface } from "./PostIface";
@@ -29,79 +24,6 @@ export function dateSortDesc(a: number | string, b: number | string) {
   return 0;
 }
 
-let lastProvider: string;
-
-const oembedConfig: Config = ({ url: _url, provider }) => {
-  lastProvider = provider.provider_name;
-  if (provider.provider_name === "Twitter") {
-    return {
-      params: {
-        omit_script: true,
-        link_color: "#269eab",
-        dnt: true
-      }
-    };
-  }
-  if (provider.provider_name === "Instagram") {
-    return {
-      params: {
-        access_token: "488785607828009|36d64ad2f361914097c65dd71ccefee7"
-      }
-    };
-  }
-};
-
-const matchUrls = (urls: string[], urlString: string) =>
-  urls.some(scheme =>
-    new RegExp(scheme.replace(/\*/g, "(.*)")).test(urlString)
-  );
-
-const wrappedOembedTransformer: Transformer = {
-  name: "transformer-oembed",
-  shouldTransform: oembedTransformer.shouldTransform,
-  getHTML: async urlString => {
-    try {
-      const html = await oembedTransformer.getHTML(urlString, oembedConfig);
-      let provider: string;
-
-      if (
-        matchUrls(
-          [
-            "https://twitter.com/*",
-            "https://twitter.com/*/status/*",
-            "https://*.twitter.com/*/status/*"
-          ],
-          urlString
-        )
-      ) {
-        provider = "twitter";
-      } else if (
-        matchUrls(
-          [
-            "https://*.youtube.com/watch*",
-            "https://*.youtube.com/v/*",
-            "https://youtu.be/*",
-            "https://*.youtube.com/playlist?list=*",
-            "https://youtube.com/playlist?list=*",
-            "https://*.youtube.com/shorts*"
-          ],
-          urlString
-        )
-      ) {
-        provider = "youtube";
-      }
-      return `<div class="remark-oembed-inline remark-oembed-${
-        provider ||
-        (lastProvider ? lastProvider.toLowerCase() : "unknown-provider")
-      }">${html || `<a href="${urlString}">${urlString}</a>`}</div>`;
-    } catch (error) {
-      // Fallback to a simple link if oEmbed fetch fails (e.g., during static generation)
-      console.warn(`Failed to fetch oEmbed for ${urlString}:`, error);
-      return `<a href="${urlString}">${urlString}</a>`;
-    }
-  }
-};
-
 export async function getFileBySlug(
   slug: string,
   language: string = "default"
@@ -113,24 +35,16 @@ export async function getFileBySlug(
 
   const { data, content } = matter(source);
   
-  // Compile MDX to JavaScript module code
-  const compiled = await compile(content, {
-    outputFormat: 'program',
-    development: process.env.NODE_ENV === 'development',
-    remarkPlugins: [
-      remarkSlug,
-      remarkAutolinkHeadings,
-      remarkCodeTitles as any,
-      // Only use embedder in development mode
-      ...(process.env.NODE_ENV === 'development' 
-        ? [[remarkEmbedder, { transformers: [wrappedOembedTransformer] }]]
-        : [])
-    ],
-    rehypePlugins: [rehypePrism as any]
-  });
+  // Convert Markdown to HTML using remark
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(html, { sanitize: false })
+    .process(content);
+  
+  const contentHtml = processedContent.toString();
   
   return {
-    mdxSource: String(compiled),
+    contentHtml,
     frontMatter: {
       wordCount: content.split(/\s+/gu).length,
       slug: slug || null,
