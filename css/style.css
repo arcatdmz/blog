@@ -55,6 +55,16 @@ body {
   line-height: 1.2em !important;
 }
 
+/* horizontal divider */
+article.post-item hr {
+  margin: 1rem 0;
+  height: 0;
+  background: transparent;
+  border: none;
+  border-top: 1px solid rgba(34, 36, 38, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* images under post-item but not under figure */
 article.post-item p img:not(figure img) {
   width: 100%;
