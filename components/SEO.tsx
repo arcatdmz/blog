@@ -1,5 +1,4 @@
 "use client"
-import { NextSeo, ArticleJsonLd } from "next-seo";
 import { FC, useContext } from "react";
 
 import websiteJson from "../website.json";
@@ -46,19 +45,9 @@ export const DefaultSEOProps = {
   ]
 };
 
-export const PageSeo = ({ title, description, url }) => {
-  return (
-    <NextSeo
-      title={title}
-      description={description}
-      canonical={url}
-      openGraph={{
-        url,
-        title,
-        description
-      }}
-    />
-  );
+// No-op components for App Router - metadata is handled at page level
+export const PageSeo = ({ title, description, url }: { title: string; description: string; url: string }) => {
+  return null;
 };
 
 interface BlogSeoProps extends PostIface {
@@ -66,87 +55,6 @@ interface BlogSeoProps extends PostIface {
   images?: string | string[];
 }
 
-export const BlogSeo: FC<BlogSeoProps> = ({
-  title,
-  summary,
-  summary_generated,
-  date,
-  lastmod,
-  url,
-  tags,
-  images = [],
-  coverImage
-}) => {
-  const {
-    imageRoot,
-    bannerUrl,
-    siteUrl,
-    title: siteTitle,
-    author,
-    authorUrl
-  } = useContext(BlogContext);
-
-  const publishedAt = new Date(date).toISOString();
-  const modifiedAt = new Date(lastmod || date).toISOString();
-  let imagesArr =
-    images.length === 0
-      ? [bannerUrl]
-      : typeof images === "string"
-      ? [images]
-      : images;
-
-  const featuredImages = imagesArr.map(img => {
-    return {
-      url: `${siteUrl}${img}`,
-      alt: title
-    };
-  });
-  if (coverImage) {
-    featuredImages.unshift({
-      url: `${imageRoot}${coverImage}`,
-      alt: title
-    });
-  }
-
-  return (
-    <>
-      <NextSeo
-        title={`${title} | ${siteTitle}`}
-        description={summary || summary_generated}
-        canonical={url}
-        openGraph={{
-          type: "article",
-          article: {
-            publishedTime: publishedAt,
-            modifiedTime: modifiedAt,
-            authors: [authorUrl],
-            tags
-          },
-          url,
-          title,
-          description: summary || summary_generated,
-          images: featuredImages
-        }}
-        additionalMetaTags={[
-          {
-            name: "twitter:image",
-            content: featuredImages[0].url
-          }
-        ]}
-      />
-      <ArticleJsonLd
-        authorName={author}
-        dateModified={publishedAt}
-        datePublished={modifiedAt}
-        description={summary || summary_generated}
-        images={
-          (featuredImages && featuredImages.map(image => image.url)) || null
-        }
-        publisherName={author}
-        publisherLogo={null}
-        title={title}
-        url={url}
-      />
-    </>
-  );
+export const BlogSeo: FC<BlogSeoProps> = () => {
+  return null;
 };

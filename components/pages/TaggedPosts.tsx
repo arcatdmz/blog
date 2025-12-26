@@ -20,14 +20,6 @@ const TaggedPosts: FC<PostsProps> = ({ posts, tag }) => {
 
   return (
     <BaseLayout>
-      <head>
-        <link
-          key="rss"
-          rel="alternate"
-          type="application/rss+xml"
-          href={`${blog.sitePath}tags/${tag}/index.xml`}
-        />
-      </head>
       <PageSeo
         title={`${text}"${tag}" | ${blog.title}`}
         description={blog.description}
