@@ -1,15 +1,7 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { FC, useContext } from "react";
-import {
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  List,
-  Menu,
-  Segment
-} from "semantic-ui-react";
+import { Divider, Grid, Header, Icon, Menu, Segment } from "semantic-ui-react";
 
 import { BlogContext } from "../../lib/BlogContext";
 import { PostIface } from "../../lib/PostIface";
@@ -18,18 +10,15 @@ import { PostsForStudents } from "../contents/PostsForStudents";
 
 import { BaseLayout } from "../layouts/BaseLayout";
 import { ListLayout } from "../layouts/ListLayout";
-import { PageSeo } from "../SEO";
 
 interface IndexPostsPageProps {
   posts: PostIface[];
 }
 
 const IndexPosts: FC<IndexPostsPageProps> = ({ posts }) => {
-  const { title, description, siteUrl, sitePath, language } =
-    useContext(BlogContext);
+  const { title, sitePath, language } = useContext(BlogContext);
   return (
     <BaseLayout showFooterMeta={false}>
-      <PageSeo title={title} description={description} url={siteUrl} />
       <ListLayout
         posts={posts}
         header={

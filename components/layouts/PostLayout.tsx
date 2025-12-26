@@ -15,7 +15,6 @@ import { PostIface } from "../../lib/PostIface";
 
 import { Date } from "../Date";
 import { PageTitle } from "../PageTitle";
-import { BlogSeo } from "../SEO";
 import { ShareButtons } from "../ShareButtons";
 import { Tag } from "../Tag";
 
@@ -59,7 +58,6 @@ const PostLayout: FC<PostLayoutProps> = ({
 
   return (
     <Container id="main">
-      <BlogSeo url={url} {...frontMatter} />
       <article className="post-item">
         <Menu className="top nav" fluid secondary>
           <Link href={sitePath} passHref legacyBehavior>
