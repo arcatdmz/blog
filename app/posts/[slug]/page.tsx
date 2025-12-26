@@ -49,7 +49,13 @@ export default async function PostPage({ params }: { params: { slug: string } })
   const post = await getFileBySlug(params.slug)
   return (
     <BlogContextProvider language="default">
-      <Post post={post} prev={prev} next={next} />
+      <Post 
+        post={post} 
+        prev={prev} 
+        next={next} 
+        language="default"
+        sourceRoot={websiteJson.sourceRoot}
+      />
     </BlogContextProvider>
   )
 }

@@ -2,7 +2,7 @@ import remarkEmbedder, { Transformer } from "@remark-embedder/core";
 import oembedTransformer, { Config } from "@remark-embedder/transformer-oembed";
 import fs from "fs";
 import matter from "gray-matter";
-import { serialize } from "next-mdx-remote/serialize";
+import { bundleMDX } from "mdx-bundler";
 import path from "path";
 import rehypePrism from "rehype-prism-plus";
 import remarkAutolinkHeadings from "remark-autolink-headings";
@@ -107,15 +107,17 @@ export async function getFileBySlug(
 ) {
   const mdxPath = path.join(root, "src", language, `${slug}.mdx`);
   const mdPath = path.join(root, "src", language, `${slug}.md`);
-  const source = fs.existsSync(mdxPath)
-    ? fs.readFileSync(mdxPath, "utf8")
-    : fs.readFileSync(mdPath, "utf8");
+  const filePath = fs.existsSync(mdxPath) ? mdxPath : mdPath;
+  const source = fs.readFileSync(filePath, "utf8");
 
   const { data, content } = matter(source);
-  // Serialize with MDX plugins, disabling embedder in production builds
-  const mdxSource = await serialize(content, {
-    mdxOptions: {
-      remarkPlugins: [
+  
+  // Bundle MDX with mdx-bundler
+  const { code } = await bundleMDX({
+    source: content,
+    mdxOptions(options) {
+      options.remarkPlugins = [
+        ...(options.remarkPlugins ?? []),
         remarkSlug,
         remarkAutolinkHeadings,
         remarkCodeTitles as any,
@@ -123,13 +125,17 @@ export async function getFileBySlug(
         ...(process.env.NODE_ENV === 'development' 
           ? [[remarkEmbedder, { transformers: [wrappedOembedTransformer] }]]
           : [])
-      ],
-      rehypePlugins: [rehypePrism as any]
+      ];
+      options.rehypePlugins = [
+        ...(options.rehypePlugins ?? []),
+        rehypePrism as any
+      ];
+      return options;
     }
   });
-
+  
   return {
-    mdxSource,
+    mdxSource: code,
     frontMatter: {
       wordCount: content.split(/\s+/gu).length,
       slug: slug || null,

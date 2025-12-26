@@ -59,7 +59,13 @@ export default async function PostPage({ params }: { params: { language: string;
   const post = await getFileBySlug(params.slug, params.language)
   return (
     <BlogContextProvider language={params.language}>
-      <Post post={post} prev={prev} next={next} />
+      <Post 
+        post={post} 
+        prev={prev} 
+        next={next} 
+        language={params.language}
+        sourceRoot={websiteJson.sourceRoot}
+      />
     </BlogContextProvider>
   )
 }
