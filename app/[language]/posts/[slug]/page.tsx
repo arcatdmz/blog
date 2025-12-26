@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { Post } from '../../../../components/pages/Post'
 import { BlogContextProvider } from '../../../../components/BlogContextProvider'
 import websiteJson from '../../../../website.json'
@@ -15,6 +16,39 @@ export async function generateStaticParams() {
     })
   )
   return paths
+}
+
+export async function generateMetadata({ params }: { params: { language: string; slug: string } }): Promise<Metadata> {
+  const post = await getFileBySlug(params.slug, params.language)
+  const { title, summary, date, tags } = post.frontMatter
+  const langConfig = websiteJson.languages[params.language] || websiteJson.languages.default
+  const { siteUrl, locale, author, bannerUrl } = langConfig
+  const url = `${siteUrl}posts/${params.slug}/`
+  
+  return {
+    title,
+    description: summary || langConfig.description,
+    authors: [{ name: author }],
+    openGraph: {
+      type: 'article',
+      locale,
+      url,
+      title,
+      description: summary || langConfig.description,
+      publishedTime: date,
+      tags: tags || [],
+      ...(bannerUrl && {
+        images: [
+          {
+            url: bannerUrl,
+            alt: title,
+            width: 1200,
+            height: 600
+          }
+        ]
+      })
+    }
+  }
 }
 
 export default async function PostPage({ params }: { params: { language: string; slug: string } }) {

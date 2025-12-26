@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import fs from 'fs'
 import path from 'path'
 import { TaggedPosts } from '../../../../components/pages/TaggedPosts'
@@ -20,6 +21,38 @@ export async function generateStaticParams() {
     })
   )
   return paths
+}
+
+export async function generateMetadata({ params }: { params: { language: string; tag: string } }): Promise<Metadata> {
+  const langConfig = websiteJson.languages[params.language] || websiteJson.languages.default
+  const { siteUrl, locale, author, title, description, bannerUrl } = langConfig
+  const url = `${siteUrl}tags/${params.tag}/`
+  const tagTitle = params.language === 'ja' 
+    ? `タグ "${params.tag}" の投稿`
+    : `Posts tagged with "${params.tag}"`
+  
+  return {
+    title: tagTitle,
+    description,
+    authors: [{ name: author }],
+    openGraph: {
+      type: 'website',
+      locale,
+      url,
+      title: tagTitle,
+      description,
+      ...(bannerUrl && {
+        images: [
+          {
+            url: bannerUrl,
+            alt: title,
+            width: 1200,
+            height: 600
+          }
+        ]
+      })
+    }
+  }
 }
 
 export default async function Tag({ params }: { params: { language: string; tag: string } }) {
