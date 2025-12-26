@@ -1,11 +1,11 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import { remark } from "remark";
-import html from "remark-html";
-import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
+import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
+import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 
 import { FrontMatterIface } from "./FrontMatterIface";
@@ -37,17 +37,18 @@ export async function getFileBySlug(
   const source = fs.readFileSync(filePath, "utf8");
 
   const { data, content } = matter(source);
-  
+
   // Convert Markdown to HTML using remark and rehype
   const processedContent = await remark()
     .use(remarkGfm)
-    .use(remarkRehype)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
     .use(rehypeHighlight)
-    .use(rehypeStringify)
+    .use(rehypeStringify, { allowDangerousHtml: true })
     .process(content);
-  
+
   const contentHtml = processedContent.toString();
-  
+
   return {
     contentHtml,
     frontMatter: {
