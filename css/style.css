@@ -55,6 +55,11 @@ body {
   line-height: 1.2em !important;
 }
 
+/* images under post-item but not under figure */
+article.post-item p img:not(figure img) {
+  width: 100%;
+}
+
 /* figures */
 
 article.post-item a.internal-link {
