@@ -3,15 +3,15 @@ import oembedTransformer, { Config } from "@remark-embedder/transformer-oembed";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import rehypeRaw from "rehype-raw";
+import rehypeSlug from "rehype-slug";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
-import remarkAutolinkHeadings from "remark-autolink-headings";
 import remarkCodeTitles from "remark-flexible-code-titles";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
-import remarkSlug from "remark-slug";
 
 import { FrontMatterIface } from "./FrontMatterIface";
 import { PostIface } from "./PostIface";
@@ -116,14 +116,14 @@ export async function getFileBySlug(
 
   const { data, content } = matter(source);
 
-  // Convert Markdown to HTML using remark and rehype with all plugins
+  // Convert Markdown to HTML using remark and rehype with modern plugins
   const processedContent = await remark()
-    .use(remarkSlug as any)
-    .use(remarkAutolinkHeadings as any)
     .use(remarkCodeTitles as any)
     .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
+    .use(rehypeSlug) // Modern replacement for remark-slug
+    .use(rehypeAutolinkHeadings) // Modern replacement for remark-autolink-headings
     .use(rehypeHighlight)
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(content);
