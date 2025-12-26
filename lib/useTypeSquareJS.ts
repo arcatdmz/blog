@@ -1,9 +1,8 @@
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 export function useTypeSquareJS() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -20,5 +19,5 @@ export function useTypeSquareJS() {
         setTimeout(() => TypeSquareJS.loadFont(), 10);
       }
     }
-  }, [pathname, searchParams]);
+  }, [pathname]);
 }
