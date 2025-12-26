@@ -112,7 +112,6 @@ export async function getFileBySlug(
     : fs.readFileSync(mdPath, "utf8");
 
   const { data, content } = matter(source);
-  
   // Serialize with MDX plugins, disabling embedder in production builds
   const mdxSource = await serialize(content, {
     mdxOptions: {
