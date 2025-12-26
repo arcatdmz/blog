@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import fs from 'fs'
 import path from 'path'
 import { Posts } from '../../components/pages/Posts'
+import { BlogContextProvider } from '../../components/BlogContextProvider'
 import { getAllFilesFrontMatter } from '../../lib/mdx'
 import { generateRss } from '../../lib/generate-rss'
 import websiteJson from '../../website.json'
@@ -26,5 +27,9 @@ export default async function PostsPage() {
   const rssPath = path.join(root, 'public', 'index.xml')
   const rss = generateRss(posts)
   fs.writeFileSync(rssPath, rss)
-  return <Posts posts={posts} />
+  return (
+    <BlogContextProvider language="default">
+      <Posts posts={posts} />
+    </BlogContextProvider>
+  )
 }

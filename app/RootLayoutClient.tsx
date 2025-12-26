@@ -38,18 +38,7 @@ export function RootLayoutClient({ children }: { children: ReactNode }) {
         }}
       />
       <MDXProvider components={MDXComponents}>
-        <BlogContext.Provider
-          value={{
-            language: "default",
-            rootPath: websiteJson.rootPath,
-            imageRoot: websiteJson.imageRoot,
-            sourceRoot: websiteJson.sourceRoot,
-            maxPosts: websiteJson.maxPosts,
-            ...websiteJson.languages.default
-          }}
-        >
-          {children}
-        </BlogContext.Provider>
+        {children}
       </MDXProvider>
     </>
   );
