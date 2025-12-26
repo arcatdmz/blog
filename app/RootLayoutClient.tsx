@@ -1,7 +1,7 @@
 "use client";
 
 import { MDXProvider } from "@mdx-js/react";
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import Script from "next/script";
 import { MDXComponents } from "../components/MDXComponents";
 import { BlogContext } from "../lib/BlogContext";

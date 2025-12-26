@@ -28,14 +28,16 @@ export const metadata: Metadata = {
     url: siteUrl,
     title,
     description,
-    images: [
-      {
-        url: bannerUrl,
-        alt: title,
-        width: 1200,
-        height: 600
-      }
-    ]
+    ...(bannerUrl && {
+      images: [
+        {
+          url: bannerUrl,
+          alt: title,
+          width: 1200,
+          height: 600
+        }
+      ]
+    })
   }
 };
 
