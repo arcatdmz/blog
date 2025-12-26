@@ -1,6 +1,6 @@
 import { Post } from '../../../../components/pages/Post'
+import { BlogContextProvider } from '../../../../components/BlogContextProvider'
 import websiteJson from '../../../../website.json'
-import { BlogContext } from '../../../../lib/BlogContext'
 import { getFiles, getFileBySlug, getAllFilesFrontMatter, formatSlug } from '../../../../lib/mdx'
 
 export async function generateStaticParams() {
@@ -24,17 +24,8 @@ export default async function PostPage({ params }: { params: { language: string;
   const next = allPosts[postIndex - 1] || null
   const post = await getFileBySlug(params.slug, params.language)
   return (
-    <BlogContext.Provider
-      value={{
-        language: params.language,
-        rootPath: websiteJson.rootPath,
-        imageRoot: websiteJson.imageRoot,
-        sourceRoot: websiteJson.sourceRoot,
-        maxPosts: websiteJson.maxPosts,
-        ...websiteJson.languages[params.language]
-      }}
-    >
+    <BlogContextProvider language={params.language}>
       <Post post={post} prev={prev} next={next} />
-    </BlogContext.Provider>
+    </BlogContextProvider>
   )
 }

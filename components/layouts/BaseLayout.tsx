@@ -46,14 +46,6 @@ const BaseLayout: FC<BaseLayoutProps> = ({
 
   return (
     <Sidebar.Pushable>
-      <head>
-        <link
-          key="rss"
-          rel="alternate"
-          type="application/rss+xml"
-          href={`${sitePath}index.xml`}
-        />
-      </head>
       <Sidebar
         as={Menu}
         animation="push"
