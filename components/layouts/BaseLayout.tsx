@@ -1,5 +1,4 @@
-"use client"
-import Head from "next/head";
+"use client";
 import {
   FC,
   MouseEventHandler,
@@ -10,8 +9,8 @@ import {
 } from "react";
 import { Menu, Sidebar } from "semantic-ui-react";
 
-import { SidebarMenuItems } from "../contents/SidebarMenuItems";
 import { BlogContext } from "../../lib/BlogContext";
+import { SidebarMenuItems } from "../contents/SidebarMenuItems";
 
 import { Footer } from "../Footer";
 import { Header } from "../Header";
@@ -47,14 +46,14 @@ const BaseLayout: FC<BaseLayoutProps> = ({
 
   return (
     <Sidebar.Pushable>
-      <Head>
+      <head>
         <link
           key="rss"
           rel="alternate"
           type="application/rss+xml"
           href={`${sitePath}index.xml`}
         />
-      </Head>
+      </head>
       <Sidebar
         as={Menu}
         animation="push"
