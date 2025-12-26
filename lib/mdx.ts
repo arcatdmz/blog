@@ -4,6 +4,9 @@ import path from "path";
 import { remark } from "remark";
 import html from "remark-html";
 import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
+import rehypeStringify from "rehype-stringify";
+import remarkRehype from "remark-rehype";
 
 import { FrontMatterIface } from "./FrontMatterIface";
 import { PostIface } from "./PostIface";
@@ -35,10 +38,12 @@ export async function getFileBySlug(
 
   const { data, content } = matter(source);
   
-  // Convert Markdown to HTML using remark
+  // Convert Markdown to HTML using remark and rehype
   const processedContent = await remark()
     .use(remarkGfm)
-    .use(html, { sanitize: false })
+    .use(remarkRehype)
+    .use(rehypeHighlight)
+    .use(rehypeStringify)
     .process(content);
   
   const contentHtml = processedContent.toString();
