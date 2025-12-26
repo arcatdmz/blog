@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import fs from 'fs'
 import path from 'path'
 import { TaggedPosts } from '../../../components/pages/TaggedPosts'
+import { BlogContextProvider } from '../../../components/BlogContextProvider'
 import { generateRss } from '../../../lib/generate-rss'
 import { getAllFilesFrontMatter } from '../../../lib/mdx'
 import { getAllTags } from '../../../lib/tags'
@@ -56,5 +57,9 @@ export default async function Tag({ params }: { params: { tag: string } }) {
   const rssPath = path.join(root, 'public', 'tags', tag)
   fs.mkdirSync(rssPath, { recursive: true })
   fs.writeFileSync(path.join(rssPath, 'index.xml'), rss)
-  return <TaggedPosts posts={posts} tag={tag} />
+  return (
+    <BlogContextProvider language="default">
+      <TaggedPosts posts={posts} tag={tag} />
+    </BlogContextProvider>
+  )
 }

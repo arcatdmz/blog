@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { Post } from '../../../components/pages/Post'
+import { BlogContextProvider } from '../../../components/BlogContextProvider'
 import { getFiles, getFileBySlug, getAllFilesFrontMatter, formatSlug } from '../../../lib/mdx'
 import websiteJson from '../../../website.json'
 
@@ -46,5 +47,9 @@ export default async function PostPage({ params }: { params: { slug: string } })
   const prev = allPosts[postIndex + 1] || null
   const next = allPosts[postIndex - 1] || null
   const post = await getFileBySlug(params.slug)
-  return <Post post={post} prev={prev} next={next} />
+  return (
+    <BlogContextProvider language="default">
+      <Post post={post} prev={prev} next={next} />
+    </BlogContextProvider>
+  )
 }
