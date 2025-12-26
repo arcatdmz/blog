@@ -1,8 +1,7 @@
 "use client"
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { FC, useContext } from "react";
+import { getMDXComponent } from "mdx-bundler/client";
+import { useMemo } from "react";
 
-import { BlogContext } from "../../lib/BlogContext";
 import { PostIface } from "../../lib/PostIface";
 
 import { MDXComponents } from "../MDXComponents";
@@ -11,21 +10,24 @@ import { PostLayout } from "../layouts/PostLayout";
 
 export interface PostProps {
   post: {
-    mdxSource: MDXRemoteSerializeResult;
+    mdxSource: string;
     frontMatter: PostIface;
   };
   prev?: PostIface;
   next?: PostIface;
+  language: string;
+  sourceRoot: string;
 }
 
-export const Post: FC<PostProps> = ({ post, prev, next }) => {
-  const { language, sourceRoot } = useContext(BlogContext);
+export const Post = ({ post, prev, next, language, sourceRoot }: PostProps) => {
   const { mdxSource, frontMatter } = post;
+  const MDXContent = useMemo(() => getMDXComponent(mdxSource), [mdxSource]);
   const sourceUrl = `${sourceRoot}${language}/${frontMatter.slug}.md`;
+  
   return (
     <BaseLayout sourceUrl={sourceUrl}>
       <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
-        <MDXRemote {...mdxSource} components={MDXComponents} />
+        <MDXContent components={MDXComponents} />
       </PostLayout>
     </BaseLayout>
   );
