@@ -1,6 +1,7 @@
 "use client"
-import { getMDXComponent } from "mdx-bundler/client";
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
+import { run } from "@mdx-js/mdx";
+import * as runtime from 'react/jsx-runtime';
 
 import { PostIface } from "../../lib/PostIface";
 
@@ -21,13 +22,20 @@ export interface PostProps {
 
 export const Post = ({ post, prev, next, language, sourceRoot }: PostProps) => {
   const { mdxSource, frontMatter } = post;
-  const MDXContent = useMemo(() => getMDXComponent(mdxSource), [mdxSource]);
+  const [MDXContent, setMDXContent] = useState<React.ComponentType<any> | null>(null);
   const sourceUrl = `${sourceRoot}${language}/${frontMatter.slug}.md`;
+  
+  useEffect(() => {
+    // Run the compiled MDX on the client side
+    run(mdxSource, runtime as any).then((mdxModule: any) => {
+      setMDXContent(() => mdxModule.default);
+    });
+  }, [mdxSource]);
   
   return (
     <BaseLayout sourceUrl={sourceUrl}>
       <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
-        <MDXContent components={MDXComponents} />
+        {MDXContent && <MDXContent components={MDXComponents} />}
       </PostLayout>
     </BaseLayout>
   );

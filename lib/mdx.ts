@@ -2,12 +2,13 @@ import remarkEmbedder, { Transformer } from "@remark-embedder/core";
 import oembedTransformer, { Config } from "@remark-embedder/transformer-oembed";
 import fs from "fs";
 import matter from "gray-matter";
-import { bundleMDX } from "mdx-bundler";
+import { compile, run } from "@mdx-js/mdx";
 import path from "path";
 import rehypePrism from "rehype-prism-plus";
 import remarkAutolinkHeadings from "remark-autolink-headings";
 import remarkCodeTitles from "remark-flexible-code-titles";
 import remarkSlug from "remark-slug";
+import * as runtime from "react/jsx-runtime";
 
 import { FrontMatterIface } from "./FrontMatterIface";
 import { PostIface } from "./PostIface";
@@ -112,30 +113,24 @@ export async function getFileBySlug(
 
   const { data, content } = matter(source);
   
-  // Bundle MDX with mdx-bundler
-  const { code } = await bundleMDX({
-    source: content,
-    mdxOptions(options) {
-      options.remarkPlugins = [
-        ...(options.remarkPlugins ?? []),
-        remarkSlug,
-        remarkAutolinkHeadings,
-        remarkCodeTitles as any,
-        // Only use embedder in development mode
-        ...(process.env.NODE_ENV === 'development' 
-          ? [[remarkEmbedder, { transformers: [wrappedOembedTransformer] }]]
-          : [])
-      ];
-      options.rehypePlugins = [
-        ...(options.rehypePlugins ?? []),
-        rehypePrism as any
-      ];
-      return options;
-    }
+  // Compile MDX to JavaScript module code
+  const compiled = await compile(content, {
+    outputFormat: 'program',
+    development: process.env.NODE_ENV === 'development',
+    remarkPlugins: [
+      remarkSlug,
+      remarkAutolinkHeadings,
+      remarkCodeTitles as any,
+      // Only use embedder in development mode
+      ...(process.env.NODE_ENV === 'development' 
+        ? [[remarkEmbedder, { transformers: [wrappedOembedTransformer] }]]
+        : [])
+    ],
+    rehypePlugins: [rehypePrism as any]
   });
   
   return {
-    mdxSource: code,
+    mdxSource: String(compiled),
     frontMatter: {
       wordCount: content.split(/\s+/gu).length,
       slug: slug || null,
