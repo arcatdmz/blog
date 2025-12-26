@@ -11,7 +11,8 @@ export function useGoogleAnalytics() {
     if (typeof window === "undefined") {
       return;
     }
-    const url = pathname + searchParams.toString();
+    const search = searchParams.toString();
+    const url = pathname + (search ? `?${search}` : '');
     // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
     window["gtag"]("config", GA_TRACKING_ID, {
       page_path: url

@@ -5,11 +5,9 @@ import { ReactNode, useEffect } from "react";
 import Script from "next/script";
 import { MDXComponents } from "../components/MDXComponents";
 import { BlogContext } from "../lib/BlogContext";
-import { useGoogleAnalytics } from "../lib/useGoogleAnalytics";
+import { useGoogleAnalytics, GA_TRACKING_ID } from "../lib/useGoogleAnalytics";
 import { useTypeSquareJS } from "../lib/useTypeSquareJS";
 import websiteJson from "../website.json";
-
-const GA_TRACKING_ID = require("../lib/useGoogleAnalytics").GA_TRACKING_ID;
 
 export function RootLayoutClient({ children }: { children: ReactNode }) {
   useTypeSquareJS();
