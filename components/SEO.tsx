@@ -46,7 +46,7 @@ export const DefaultSEOProps = {
 };
 
 // No-op components for App Router - metadata is handled at page level
-export const PageSeo = ({ title, description, url }) => {
+export const PageSeo = ({ title, description, url }: { title: string; description: string; url: string }) => {
   return null;
 };
 
