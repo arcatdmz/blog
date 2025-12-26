@@ -58,8 +58,11 @@ const BaseLayout: FC<BaseLayoutProps> = ({
       </Sidebar>
       <Header onMenuClick={handleMenuClick} />
       <Sidebar.Pusher id="pusher" dimmed={visible} onClick={handlePusherClick}>
-        <main id="body">{children}</main>
-        <Footer showMeta={showFooterMeta} sourceUrl={sourceUrl} />
+        <div className="content">
+          <div className={`dimmer${visible ? " active" : ""}`}></div>
+          <main id="body">{children}</main>
+          <Footer showMeta={showFooterMeta} sourceUrl={sourceUrl} />
+        </div>
       </Sidebar.Pusher>
     </Sidebar.Pushable>
   );
