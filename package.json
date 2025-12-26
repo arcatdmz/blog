@@ -48,6 +48,7 @@
     "react-share": "^5.2.2",
     "rehype-highlight": "^7.0.2",
     "rehype-prism-plus": "^1.5.1",
+    "rehype-raw": "^7.0.0",
     "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
     "remark-autolink-headings": "^7.0.1",
