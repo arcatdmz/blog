@@ -1,25 +1,24 @@
-'use client'
+"use client";
 
-import { MDXProvider } from '@mdx-js/react'
-import { DefaultSeo } from 'next-seo'
-import Head from 'next/head'
-import '../css/style.css'
-import 'prism-themes/themes/prism-vsc-dark-plus.css'
+import { MDXProvider } from "@mdx-js/react";
+import { DefaultSeo } from "next-seo";
+import "prism-themes/themes/prism-vsc-dark-plus.css";
+import "../css/style.css";
 
-import websiteJson from '../website.json'
-import { MDXComponents } from '../components/MDXComponents'
-import { DefaultSEOProps } from '../components/SEO'
-import { BlogContext } from '../lib/BlogContext'
-import { useGoogleAnalytics } from '../lib/useGoogleAnalytics'
-import { useTypeSquareJS } from '../lib/useTypeSquareJS'
-import { ReactNode } from 'react'
+import { ReactNode } from "react";
+import { MDXComponents } from "../components/MDXComponents";
+import { DefaultSEOProps } from "../components/SEO";
+import { BlogContext } from "../lib/BlogContext";
+import { useGoogleAnalytics } from "../lib/useGoogleAnalytics";
+import { useTypeSquareJS } from "../lib/useTypeSquareJS";
+import websiteJson from "../website.json";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  useTypeSquareJS()
-  useGoogleAnalytics()
+  useTypeSquareJS();
+  useGoogleAnalytics();
   return (
     <html lang="en">
-      <Head>
+      <head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="stylesheet" href="/stylesheets/main.css" />
         <script
@@ -41,12 +40,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             __html: `window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));`
           }}
         />
-      </Head>
+      </head>
       <body>
         <MDXProvider components={MDXComponents}>
           <BlogContext.Provider
             value={{
-              language: 'default',
+              language: "default",
               rootPath: websiteJson.rootPath,
               imageRoot: websiteJson.imageRoot,
               sourceRoot: websiteJson.sourceRoot,
@@ -60,7 +59,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </MDXProvider>
       </body>
     </html>
-  )
+  );
 }
 
-const GA_TRACKING_ID = require('../lib/useGoogleAnalytics').GA_TRACKING_ID
+const GA_TRACKING_ID = require("../lib/useGoogleAnalytics").GA_TRACKING_ID;

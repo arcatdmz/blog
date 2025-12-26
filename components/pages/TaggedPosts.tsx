@@ -1,5 +1,4 @@
-"use client"
-import Head from "next/head";
+"use client";
 import { FC, useContext } from "react";
 
 import { BlogContext } from "../../lib/BlogContext";
@@ -21,14 +20,14 @@ const TaggedPosts: FC<PostsProps> = ({ posts, tag }) => {
 
   return (
     <BaseLayout>
-      <Head>
+      <head>
         <link
           key="rss"
           rel="alternate"
           type="application/rss+xml"
           href={`${blog.sitePath}tags/${tag}/index.xml`}
         />
-      </Head>
+      </head>
       <PageSeo
         title={`${text}"${tag}" | ${blog.title}`}
         description={blog.description}
