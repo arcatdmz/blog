@@ -16,7 +16,7 @@ IT が生活のいろんな部分に入り込んでくるにつれ、プログ�
 
 ただ、僕はこの研究分野はすごく重要だし、今後どんどん成長すると思っています。現に、ここ一年で Web ベースの開発環境[Cloud9](https://c9.io/)や教育目的の[KhanAcademy](http://www.khanacademy.org/cs)に組み込まれたインタプリタ、ライブコーディングが可能な開発環境[LightTable](http://www.chris-granger.com/2012/04/12/light-table---a-new-ide-concept/)など、プログラミング体験を全く別のものにする試みがたくさん走り始めています。これらはプロダクトの例ですが、研究としては 2 つの分野の学際領域にあるので、まずは隣接分野との比較を通して輪郭をなぞってみます。さらに、これからの開発環境のあるべき姿（研究が進む方向）について考えてみます。
 
-<figure className="right">
+<figure class="right">
   <img src="/images/hci-pl-devenv-300x206.png" alt="Human-Computer Interaction / 開発環境の研究 / Programming Language" />
 </figure>
 

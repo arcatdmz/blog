@@ -26,7 +26,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service/
 
 ## コンピュータを変幻自在の道具にするためのプログラミング環境技術
 
-<figure className="small fixed-size right">
+<figure class="small fixed-size right">
   <a href="/ja/posts/2016-03-16-ipsj-one-px-science-as-a-service/#refs"><img src="/images/160312-ipsjone-kato-pet-slides-150x150.jpg" alt="IPSJ-ONE スライド" /></a>
 </figure>
 
@@ -43,7 +43,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service/
 
 ---
 
-<a className="internal-link" id="science"></a>
+<a class="internal-link" id="science"></a>
 
 ## 情報科学は: 社会の隅々に入り込んでいるから純粋研究になりえない
 
@@ -61,7 +61,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service/
 
 ---
 
-<a className="internal-link" id="as_a_service"></a>
+<a class="internal-link" id="as_a_service"></a>
 
 ## 情報科学は: 研究のための道具を作れるから科学を更新できる (Science as a Service)
 
@@ -71,7 +71,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service/
 
 私は、昨年初頭の名状しがたいお茶会というプライベートイベントで**Science as a Service**という言葉を説明しました。言葉自体は[O'Reilly Radar](http://radar.oreilly.com/2013/01/science-as-a-service.html)で 2013 年に使われており、科学研究のプロセスの一部を外注する（API 化する）ことを指しています。たとえば[Benchling](https://benchling.com/)は、画像処理やデータ管理をすべてクラウド上で行うことで研究を加速するサービスです。一方、私は SaaS を、より成果物にフォーカスして見ています。**インタラクティブシステム（プログラム）が論文を代替できる**と考えているためです。
 
-<div className="embed">
+<div class="embed">
 <iframe src="https://onedrive.live.com/embed?cid=A32915EB6EC7FA7F&amp;resid=A32915EB6EC7FA7F%21309248&amp;authkey=ADbJegpk6f_62lk&amp;em=2&amp;wdAr=1.7777777777777777" width="962px" height="565px" frameBorder="0">これは、<a target="_blank" href="https://office.com/webapps">Office</a> の機能を利用した、<a target="_blank" href="https://office.com">Microsoft Office</a> の埋め込み型のプレゼンテーションです。</iframe>
 </div>
 
@@ -83,13 +83,13 @@ IPSJ-ONE は、これからの科学を人類の幸福のために発展させ�
 
 ---
 
-<a className="internal-link" id="refs"></a>
+<a class="internal-link" id="refs"></a>
 
 ## IPSJ-ONE での発表資料など
 
 発表は[ニコニコ動画でいつでも見られる](http://live.nicovideo.jp/watch/lv253878857#7:21:35)ほか、[資料](https://1drv.ms/p/s!An_6x27rFSmjkvABmPyD16ynPgBXLA?e=cddJic)や[当日の反響をまとめた Togetter](http://togetter.com/li/949224)もあります。
 
-<div className="embed">
+<div class="embed">
 <iframe src="https://onedrive.live.com/embed?cid=A32915EB6EC7FA7F&amp;resid=A32915EB6EC7FA7F%21309249&amp;authkey=AJbjmNgX0T03CCI&amp;em=2&amp;wdAr=1.7777777777777777" width="962px" height="565px" frameBorder="0">これは、<a target="_blank" href="https://office.com/webapps">Office</a> の機能を利用した、<a target="_blank" href="https://office.com">Microsoft Office</a> の埋め込み型のプレゼンテーションです。</iframe>
 </div>
 

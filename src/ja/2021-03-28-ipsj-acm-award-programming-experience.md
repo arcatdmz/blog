@@ -17,7 +17,7 @@ summary_generated: >-
 
 > **10 月 6 日追記;** 情報処理学会の学会誌「[情報処理 Vol.62 No.10](https://amzn.to/3oC9Fjm)」に[受賞記念記事](http://doi.org/10.20729/00212783)が掲載されました。
 
-<figure className="right">
+<figure class="right">
   <img src="/images/ipsj_acm_joint_award_2021.jpg" alt="" />
 </figure>
 
@@ -35,7 +35,7 @@ summary_generated: >-
 
 ---
 
-<a className="internal-link" id="award"></a>
+<a class="internal-link" id="award"></a>
 
 ## 賞について
 
@@ -47,7 +47,7 @@ summary_generated: >-
 
 ---
 
-<a className="internal-link" id="px"></a>
+<a class="internal-link" id="px"></a>
 
 ## PX について
 
@@ -74,7 +74,7 @@ PX について説明するとき「UX (User Experience) のプログラミン�
 
 プログラムを記述することをプログラミングと呼ぶのであれば、そこで使われる表現はすべて（文字ベースの言語でなくとも）広義「プログラミング言語」であり、じっさい、プログラミング言語の研究コミュニティはプログラミングという行為の大部分を発明し、規定してきました。
 
-<figure className="right">
+<figure class="right">
   <img src="/images/sigpx8-kato-intro-environment.png" alt="Programming Environment" />
   <figcaption><a href="https://sigpx.org/8">第 8 回 SIGPX 勉強会</a>冒頭のスライドより</figcaption>
 </figure>
@@ -97,7 +97,7 @@ HCI 分野のプログラミング支援研究は、かつてはプログラミ�
 
 ---
 
-<a className="internal-link" id="creativity-support"></a>
+<a class="internal-link" id="creativity-support"></a>
 
 ## PX の未来 創作文化の未来
 

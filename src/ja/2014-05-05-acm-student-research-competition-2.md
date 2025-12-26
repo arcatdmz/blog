@@ -36,7 +36,7 @@ altUrl: "https://junkato.jp/ja/blog/2014/05/05/acm-student-research-competition-
 
 SRC 参加者の全ポスター発表を回り終えると、ちょっと離れた場所ですぐに審査が始まります。CHI、PLDI とも声が聞こえそうで聞こえないくらいの距離にあるテーブルで議論をしていたように記憶しています。発表した側としては気が気ではありませんが、一般の会議参加者がまだポスターを見にくるので、近くに行くわけにもいかず…もどかしい時間を過ごすことになります。CHI はしばらくしたら結論を伝えにきてくれましたが、PLDI の場合は議論が紛糾したようで、翌日の昼にようやく第 3 ラウンドへ進んだ人が発表されました。
 
-<figure className="right">
+<figure class="right">
   <a href="/images/DSC08307.jpg"><img src="/images/DSC08307-150x150.jpg" alt="PLDI SRC Finalistの賞状" /></a>
   <figcaption>PLDI SRC Finalistの賞状</figcaption>
 </figure>

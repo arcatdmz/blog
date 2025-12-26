@@ -27,8 +27,8 @@ summary_generated: >-
 
 当日使った発表資料は、すでに [https://bit.ly/sas34kato](https://bit.ly/sas34kato) に掲載済みです。
 
-<figure className="center">
-  <a href="https://bit.ly/sas34kato" className="three columns">
+<figure class="center">
+  <a href="https://bit.ly/sas34kato" class="three columns">
     <img src="/images/2023-06-20-sas34-kato-lights-animation-interaction-17.jpg" alt="" />
     <img src="/images/2023-06-20-sas34-kato-lights-animation-interaction-22.jpg" alt="" />
     <img src="/images/2023-06-20-sas34-kato-lights-animation-interaction-28.jpg" alt="" />
@@ -39,7 +39,7 @@ summary_generated: >-
 
 ふだんはコンピュータ科学系の学会を中心に参加していますが、こういう不慣れなコミュニティに出向くと新鮮でいいですね。
 
-<figure className="center">
+<figure class="center">
   <a href="/images/2023-06-20-DSC06364.jpg"><img src="/images/2023-06-20-DSC06364.jpg" alt="" /></a>
   <figcaption>これからも学問の境界を気にせず楽しみたいです</figcaption>
 </figure>

@@ -27,6 +27,6 @@ summary_generated: >-
 
 そろそろ、来年くらいには再度ギアを切り替えて、研究（論文執筆）にかける時間を増やしていきたい感じがしています。
 
-<figure className="center">
+<figure class="center">
   <img src="/images/2021-10-06-github-contributions.png" />
 </figure>

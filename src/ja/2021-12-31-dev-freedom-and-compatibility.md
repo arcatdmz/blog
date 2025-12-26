@@ -41,7 +41,7 @@ API ドキュメントに関しては、仕様に追従できなくなると意�
 
 サンプルコードは GitHub 上の [AIST TextAlive Project](https://github.com/TextAliveJp) に集約しているほか、チュートリアル内の[サンプルコード](https://developer.textalive.jp/app/examples)のページやプログラミング・コンテストのアフターレポート（[2020](https://developer.textalive.jp/events/magicalmirai2020)・[2021](https://developer.textalive.jp/events/magicalmirai2021)）冒頭から、サムネイルつきでアクセスしやすいようにしています。チュートリアルは [TextAlive for Developers](https://developer.textalive.jp) という Web サイトを開設しています。ちなみに、私はチュートリアルから実際のアプリ開発に移るときのギャップを小さくする研究にも取り組んでいたのですが（ [DeployGround](https://junkato.jp/ja/deployground/); [Songle Sync チュートリアル](https://tutorial.songle.jp) に実装済み）、TextAlive に関してはそこまで手が回っていません。
 
-<figure className="right">
+<figure class="right">
   <a href="/images/2021-12-31-mm2020procon-slides-14.png"><img src="/images/2021-12-31-mm2020procon-slides-14.png" /></a>
   <figcaption><a href="https://www.youtube.com/watch?v=FbeZ3s0M63I">リリックアプリ開発ことはじめ</a>使用スライド「リリックアプリとは？」</figcaption>
 </figure>

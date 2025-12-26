@@ -29,7 +29,7 @@ altUrl: "https://junkato.jp/ja/blog/2014/12/31/raspberry-pi-raspbian-on-windows-
 - 256MB しかメモリを割り当てられない QEMU の制限に対し、スワップ領域を用意することで対処し、わりと多めのメモリを必要とする処理が可能になる
 - ExpanDrive を使うことで、QEMU 上の Raspbian OS とホストマシンである Windows 間で簡単にファイルのやり取りができるようになる
 
-<figure className="center">
+<figure class="center">
   <a href="/images/raspbian-on-qemu-windows.png"><img src="/images/raspbian-on-qemu-windows.png" alt="raspbian-on-qemu-windows" /></a>
   <figcaption>WindowsでRaspbianが動いてる！</figcaption>
 </figure>

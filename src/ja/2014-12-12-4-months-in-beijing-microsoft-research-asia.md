@@ -19,7 +19,7 @@ altUrl: >-
 
 2 年前のことで過去形になって恐縮ですが、北京の Microsoft Research Asia に滞在したときの記録を掘り返してみます。山のように写真を撮ったので、興味のある方は[Web アルバム](https://plus.google.com/photos/+JunKato/albums/5695905596193280753)をご覧ください。なお、僕と同じ立場（インターン）で北京に行った人の記録が Microsoft の中の人の[ブログ](http://msraurjp.wordpress.com/)にたくさん掲載されています。そちらもあわせてどうぞ。
 
-<figure className="right">
+<figure class="right">
   <a href="https://picasaweb.google.com/lh/photo/EE4f45APabIuo2sngoU2U9MTjNZETYmyPJy0liipFm0?feat=directlink"><img src="/images/DSC01010.JPG" alt="" /></a>
   <figcaption>氷漬けの都</figcaption>
 </figure>
@@ -32,7 +32,7 @@ altUrl: >-
 
 とはいえ、日本の綺麗な空気になれていると気になるのが大気汚染。空気が悪い日は空気に色がついており、また、まぶしいはずの太陽がぼんやりとしか見えず容易に直視できたのが印象的でした。空気が最も悪かったのは大気汚染と黄砂が重なった日で、マスクをしないと息がしづらく、マスクをしても自転車で帰宅すると服に砂塵が積もって白くなっていました。
 
-<figure className="right">
+<figure class="right">
   <a href="https://picasaweb.google.com/lh/photo/mikJm0jWL563xgw2qlXffdMTjNZETYmyPJy0liipFm0?feat=directlink"><img src="/images/DSC02542.JPG" alt="" /></a>
   <figcaption>本当に美味しかった</figcaption>
 </figure>
@@ -51,7 +51,7 @@ Microsoft 社内は英語が公用語ですが、中国人同士では中国語�
 
 実は、日本人であれば、どうしても通じないときには漢字を書き下してみる手が使えます。渡航してすぐの頃、生活必需品を買い揃える際には、メモ帳と鉛筆を手に店員に話しかけ、何とかやり取りをしたのをよく覚えています。
 
-<figure className="right">
+<figure class="right">
   <a href="https://picasaweb.google.com/lh/photo/XA3xQVgY1GwMW_akoK9SRtMTjNZETYmyPJy0liipFm0?feat=directlink"><img src="/images/DSC00267.JPG" alt="" /></a>
   <figcaption>北京の旧正月</figcaption>
 </figure>

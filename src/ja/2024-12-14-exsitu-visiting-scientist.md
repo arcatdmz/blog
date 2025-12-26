@@ -21,7 +21,7 @@ summary_generated: >-
 
 在外研究に至った経緯について、[研究者漫画（産総研マガジン）](https://www.aist.go.jp/aist_j/magazine/20240415.html)で巧みにまとめていただいていますが、この記事では HCI 研究に興味がある方向けに HCI における理論研究という観点で内容にもう少し踏み込んでみます。在外研究には、他にも「アニメ制作支援研究の国際連携基盤をつくる」「HCI in the Wild 研究を進める」という二つの目的がありますが、この記事ではあまり触れない予定です。
 
-<figure className="center">
+<figure class="center">
   <a href="/images/2024-12-14-DSC03075.jpg"><img src="/images/2024-12-14-DSC03075.jpg" alt="" /></a>
   <figcaption>街は11月中旬くらいから徐々にクリスマスムードに。近所の交差点にも巨大なツリーが出現しました。</figcaption>
 </figure>
@@ -74,7 +74,7 @@ Michel は、2000 年にダイレクトマニピュレーションを拡張す�
 
 図 1 があると、多少イメージがつきやすいかもしれません。
 
-<figure className="center">
+<figure class="center">
   <a href="/images/2024-01-15-generative-theories.png"><img src="/images/2024-01-15-generative-theories.png" alt="" /></a>
   <figcaption>Generative Theories of Interaction（Figure 1, 加藤により改変）</figcaption>
 </figure>
@@ -108,8 +108,8 @@ Michel は、2000 年にダイレクトマニピュレーションを拡張す�
 
 次のスライドは、先月のラボセミナーで使ったものです。
 
-<figure className="center">
-  <div className="three columns">
+<figure class="center">
+  <div class="three columns">
     <a href="/images/2024-11-26-exsitu-seminar-28.png"><img src="/images/2024-11-26-exsitu-seminar-28.png" alt="" /></a>
     <a href="/images/2024-11-26-exsitu-seminar-29.png"><img src="/images/2024-11-26-exsitu-seminar-29.png" alt="" /></a>
     <a href="/images/2024-11-26-exsitu-seminar-30.png"><img src="/images/2024-11-26-exsitu-seminar-30.png" alt="" /></a>
