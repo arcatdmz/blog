@@ -6,13 +6,12 @@ tags:
   - science
   - discussion
 coverImage: 2025-09-04-IMG_6902.jpg
-summary_generated: >-
-  日本ソフトウェア科学会 第 42
-  回大会で「現場に根差したツール研究　プログラミング、IoT、音楽動画からアニメまで」と題して基調講演しました。これまでに私が取り組んできた研究のなかでも「よい研究」と思っている自信作を紹介し、自分が思う「よさ」の源として、二種類の一般性（g...
+summary_generated: "日本ソフトウェア科学会 第 42 回大会で「現場に根差したツール研究　プログラミング、IoT、音楽動画からアニメまで」と題して基調講演しました。イベント情報:\n\U0001F4E2 日本ソフトウェア科学会 第 42 回大会 基調講演「現場に根差したツール研究　プログラミング、IoT、音楽動..."
 summary: >-
   日本ソフトウェア科学会 第 42
   回大会で「現場に根差したツール研究　プログラミング、IoT、音楽動画からアニメまで」と題して基調講演しました。これまでに私が取り組んできた研究のなかでも「よい研究」と思っている自信作を紹介し、自分が思う「よさ」の源として、二種類の一般性について議論しました。
-altUrl: "https://www.facebook.com/jun.kato/posts/pfbid0QB5o8xDbzY39MtQAVvTbJbtSF2L2FavYsb2b8LnZCPCVcKMmPFDx81ZizVZ4d5Bql"
+altUrl: >-
+  https://www.facebook.com/jun.kato/posts/pfbid0QB5o8xDbzY39MtQAVvTbJbtSF2L2FavYsb2b8LnZCPCVcKMmPFDx81ZizVZ4d5Bql
 ---
 
 日本ソフトウェア科学会 第 42 回大会で「現場に根差したツール研究　プログラミング、IoT、音楽動画からアニメまで」と題して基調講演しました。

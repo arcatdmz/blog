@@ -3,10 +3,17 @@ title: TextAlive 10周年
 date: "2025-09-08"
 tags:
   - research
-  - science
-  - discussion
+  - creativity
+  - life
+  - lookback
 coverImage: 2025-09-08-textalive-main-visual_D.jpg
-altUrl: "https://www.facebook.com/jun.kato/posts/pfbid0tyZV5j1CVfeBjdVLYUuZqifMVewAnFJiQgWsWB9FGTrxtB1ranHuNvpWhaf5WcSLl"
+summary_generated: >-
+  今日は、研究開発してきた Web サービス「TextAlive（テキストアライブ）」の一般公開を始めてから 10 周年でした。論文としては ACM CHI
+  '15 でフルペーパーを刊行して Honorable Mention Award をもらい、「終わった」研究でしたが、...
+summary: >-
+  Webサービス「TextAlive（テキストアライブ）」が一般公開から10周年を迎えた記念に、クリエータの方々からメッセージをいただき、10年を振り返りました。研究発の技術をひろく公開し続けた結果、数多くのイベントでの実証実験や、後続研究、プログラミング・コンテストなど、想像を超える実践へと広がってきました。
+altUrl: >-
+  https://www.facebook.com/jun.kato/posts/pfbid0tyZV5j1CVfeBjdVLYUuZqifMVewAnFJiQgWsWB9FGTrxtB1ranHuNvpWhaf5WcSLl
 ---
 
 今日は、研究開発してきた Web サービス「[TextAlive（テキストアライブ）](https://textalive.jp)」の一般公開を始めてから 10 周年でした。
