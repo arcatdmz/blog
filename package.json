@@ -5,7 +5,7 @@
   "description": "Source code of https://blog.junkato.jp",
   "main": "index.js",
   "scripts": {
-    "start": "next-remote-watch ./src",
+    "start": "nodemon --watch src --ext md,mdx --exec \"next dev --turbopack\"",
     "clean": "del-cli -f .next out",
     "dev": "next dev --turbopack",
     "build": "npm run build:redirections && npm run build:next",
@@ -60,6 +60,7 @@
     "cross-env": "^7.0.3",
     "del-cli": "^7.0.0",
     "html-parse-stringify": "^2.0.3",
+    "nodemon": "^3.1.11",
     "prettier": "^2.8.8",
     "typescript": "^5.1.3"
   },
