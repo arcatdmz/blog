@@ -105,11 +105,15 @@ article.post-item figure > .columns {
 }
 article.post-item figure > .two.columns > a,
 article.post-item figure > .two.columns > img {
-  width: 49.9%;
+  width: 50%;
 }
 article.post-item figure > .three.columns > a,
 article.post-item figure > .three.columns > img {
   width: 33.3%;
+}
+article.post-item figure > .four.columns > a,
+article.post-item figure > .four.columns > img {
+  width: 25%;
 }
 
 article.post-item figure.fixed-size img {
