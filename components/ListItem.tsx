@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { FC, useContext } from "react";
 import { Grid, Image, List, Segment } from "semantic-ui-react";
@@ -44,7 +44,11 @@ const ListItem: FC<PostIface> = ({
           <Grid.Column width={11}>{main}</Grid.Column>
           <Grid.Column width={5}>
             <Link href={`${sitePath}posts/${slug}`}>
-              <Image src={`${imageRoot}${coverImage}`} fluid rounded bordered />
+              <img
+                src={`${imageRoot}${coverImage}`}
+                className="ui fluid rounded bordered image"
+                alt={title}
+              />
             </Link>
           </Grid.Column>
         </Grid>
