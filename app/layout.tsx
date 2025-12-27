@@ -1,19 +1,13 @@
 import { Metadata } from "next";
-import "prism-themes/themes/prism-vsc-dark-plus.css";
+import "highlight.js/styles/github-dark-dimmed.css";
 import "../css/style.css";
 
 import { ReactNode } from "react";
 import { RootLayoutClient } from "./RootLayoutClient";
 import websiteJson from "../website.json";
 
-const {
-  locale,
-  title,
-  description,
-  siteUrl,
-  bannerUrl,
-  author
-} = websiteJson.languages.default;
+const { locale, title, description, siteUrl, bannerUrl, author } =
+  websiteJson.languages.default;
 
 export const metadata: Metadata = {
   title: {
