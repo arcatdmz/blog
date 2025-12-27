@@ -116,11 +116,15 @@ article.post-item figure > .four.columns > img {
   width: 25%;
 }
 
+article.post-item figure.fixed-size {
+  width: 180px;
+}
+
 article.post-item figure.fixed-size img {
   margin: auto;
 }
 article.post-item figure.small.fixed-size img {
-  width: 180px !important;
+  width: 100% !important;
 }
 
 article.post-item figure:last-child {
