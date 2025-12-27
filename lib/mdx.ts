@@ -99,7 +99,7 @@ const wrappedOembedTransformer: Transformer = {
       }">${html || `<a href="${urlString}">${urlString}</a>`}</div>`;
     } catch (error) {
       // Fallback to a simple link if oEmbed fetch fails (e.g., during static generation)
-      console.warn(`Failed to fetch oEmbed for ${urlString}:`, error);
+      // console.warn(`Failed to fetch oEmbed for ${urlString}:`, error);
       return `<a href="${urlString}">${urlString}</a>`;
     }
   }

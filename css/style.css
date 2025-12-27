@@ -290,7 +290,7 @@ article.post-item .bottom.nav .share-buttons .item:last-child {
 article.post-item .bottom.nav .links {
   clear: both;
 }
-article.post-item .bottom.nav .links a {
+article.post-item a {
   line-break: anywhere;
 }
 article.post-item > .meta > .item {
