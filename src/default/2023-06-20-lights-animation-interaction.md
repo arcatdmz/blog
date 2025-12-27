@@ -2,7 +2,7 @@
 title: >-
   Lights, Animation, Interaction! (Society for Animation Studies 34th Annual
   Conference)
-date: '2023-06-20'
+date: "2023-06-20"
 tags:
   - research
   - anime

@@ -1,6 +1,6 @@
 ---
 title: 情報科学系 海外研究インターンのすすめ〔後編〕
-date: '2015-06-30'
+date: "2015-06-30"
 tags:
   - research
   - student
@@ -9,7 +9,7 @@ coverImage: 20131029_055924_Android.jpg
 summary_generated: >-
   前編では海外研究インターンの概要と、インターンに参加する方法・時期について紹介しました。後編は、もう少し具体的にインターン期間がどのように過ぎていくのか、そしてインターン期間後に何が起きるのか紹介します。
     Adobe Creative Technologies Lab ...
-altUrl: 'https://junkato.jp/ja/blog/2015/06/30/cs-research-internship-abroad-2/'
+altUrl: "https://junkato.jp/ja/blog/2015/06/30/cs-research-internship-abroad-2/"
 ---
 
 [前編](/ja/posts/2015-06-29-cs-research-internship-abroad/)では海外研究インターンの概要と、インターンに参加する方法・時期について紹介しました。後編は、もう少し具体的にインターン期間がどのように過ぎていくのか、そしてインターン期間後に何が起きるのか紹介します。

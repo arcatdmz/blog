@@ -1,6 +1,6 @@
 ---
 title: Realmoteで家のリモコンを一つにまとめる
-date: '2012-12-24'
+date: "2012-12-24"
 tags:
   - phybots
   - programming
@@ -8,7 +8,7 @@ coverImage: realmote.jpg
 summary: >-
   最近、スマートフォンが赤外線リモコンの代わりになる製品をよく見るようになりました。この記事ではその私家版、 Web
   インタフェースから家電製品やルンバが遠隔操作できちゃうリモコンアプリ Realmote を紹介します。
-altUrl: 'https://junkato.jp/ja/blog/2012/12/24/realmote-remote-control/'
+altUrl: "https://junkato.jp/ja/blog/2012/12/24/realmote-remote-control/"
 summary_generated: |2-
 
     Realmote最近、Pluto ステーションとかiRemocon(アイリモコン) IRM-01Lといった、スマートフォンが赤外線リモコンの代わりになる製品をよく見るようになりました。確かにスマートフォンしか持ってない人には便利かもしれません。が、プログラマなら常時起...

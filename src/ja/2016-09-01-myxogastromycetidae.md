@@ -1,6 +1,6 @@
 ---
 title: 粘菌の培養に失敗しました
-date: '2016-09-01'
+date: "2016-09-01"
 tags:
   - life
 summary_generated: |-
@@ -8,7 +8,7 @@ summary_generated: |-
     つくばはきのこだらけこういう立派なきのこがたくさんいます。8 月は暑すぎてひっそりしていましたが、台風一過でまた出てきました。
     とにかくすごい数、わっと生えてくるただ、今回の主役はきのこじゃなくて、こっちです。
     ススホコリの変...
-altUrl: 'https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae/'
+altUrl: "https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae/"
 ---
 
 研究所の近辺にはきのこが生えます。

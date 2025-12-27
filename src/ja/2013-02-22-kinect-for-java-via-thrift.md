@@ -1,6 +1,6 @@
 ---
 title: ThriftでJavaからC#サーバのKinectを使う
-date: '2013-02-22'
+date: "2013-02-22"
 tags:
   - java
   - programming
@@ -11,7 +11,7 @@ summary: >-
 summary_generated: |2-
 
     C#サーバとJavaクライアントがThriftで通信最近、Kinect を使う開発環境Picodeの実装を手直ししています。この開発環境は Java で書かれているのですが、Kinect for Windows SDK の API を使う必要があります。Kinect ...
-altUrl: 'https://junkato.jp/ja/blog/2013/02/22/kinect-for-java-via-thrift/'
+altUrl: "https://junkato.jp/ja/blog/2013/02/22/kinect-for-java-via-thrift/"
 ---
 
 <figure class="right">

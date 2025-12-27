@@ -1,6 +1,6 @@
 ---
 title: ACM Doctoral Symposium (Consortium) 参加のすすめ
-date: '2014-07-27'
+date: "2014-07-27"
 tags:
   - research
   - student
@@ -8,7 +8,7 @@ tags:
 summary_generated: |2-
 
     UIST 2013 Doctoral Symposium - 小部屋に一日缶詰博士号の価値がいろいろ取り沙汰されているので、どう博士号を取ったか個人的な記録を書こうと思った…のですが、ACM UIST 2013の Doctoral Symposium に参加した話が先...
-altUrl: 'https://junkato.jp/ja/blog/2014/07/27/acm-doctoral-symposium-consortium/'
+altUrl: "https://junkato.jp/ja/blog/2014/07/27/acm-doctoral-symposium-consortium/"
 ---
 
 <figure class="right">
