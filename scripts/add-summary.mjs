@@ -1,13 +1,11 @@
 import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
-import ReactDOMServer from "react-dom/server";
-import { MDXRemote } from "next-mdx-remote";
-import { serialize } from "next-mdx-remote/serialize";
 import HTML from "html-parse-stringify";
+import { micromark } from "micromark";
+import { gfm, gfmHtml } from "micromark-extension-gfm";
+import path from "path";
 
 import config from "./config.mjs";
-import { createElement } from "react";
 
 const toString = node => {
   if (node.type === "text") {
@@ -28,9 +26,11 @@ const readFiles = async ({ language, dir, summaryLength }) => {
       let text,
         updated = false;
       try {
-        const html = ReactDOMServer.renderToString(
-          createElement(MDXRemote, await serialize(content))
-        );
+        const html = micromark(content, {
+          allowDangerousHtml: true,
+          extensions: [gfm()],
+          htmlExtensions: [gfmHtml()]
+        });
         const ast = HTML.parse(html);
         const headerIndex = ast.findIndex(
           v => v.type === "tag" && /h[0-9]+/.test(v.name)
