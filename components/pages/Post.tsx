@@ -1,30 +1,28 @@
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { FC, useContext } from "react";
+"use client";
 
-import { BlogContext } from "../../lib/BlogContext";
 import { PostIface } from "../../lib/PostIface";
-
-import { MDXComponents } from "../MDXComponents";
 import { BaseLayout } from "../layouts/BaseLayout";
 import { PostLayout } from "../layouts/PostLayout";
 
 export interface PostProps {
   post: {
-    mdxSource: MDXRemoteSerializeResult;
+    contentHtml: string;
     frontMatter: PostIface;
   };
   prev?: PostIface;
   next?: PostIface;
+  language: string;
+  sourceRoot: string;
 }
 
-export const Post: FC<PostProps> = ({ post, prev, next }) => {
-  const { language, sourceRoot } = useContext(BlogContext);
-  const { mdxSource, frontMatter } = post;
+export const Post = ({ post, prev, next, language, sourceRoot }: PostProps) => {
+  const { contentHtml, frontMatter } = post;
   const sourceUrl = `${sourceRoot}${language}/${frontMatter.slug}.md`;
+
   return (
     <BaseLayout sourceUrl={sourceUrl}>
       <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
-        <MDXRemote {...mdxSource} components={MDXComponents} />
+        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </PostLayout>
     </BaseLayout>
   );

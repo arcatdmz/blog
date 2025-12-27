@@ -16,7 +16,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/06/11/from-programming-to-education/"
 
 これに呼応するように、プログラミング支援に関する研究を引っ張ってきたアメリカの大学教授たちが、研究トピックを教育方面にシフトしてきています。政策とアカデミアの研究開発とがタイムリーに連携していて大変興味深く、日本でも参考にできるところがあるように思います。
 
-<figure className="center">
+<figure class="center">
   <a href="/images/IMG_9046.jpg"><img src="/images/IMG_9046-1024x683.jpg" alt="日本科学未来館でのPicode Workshopの様子" /></a>
   <figcaption>日本科学未来館での<a href="http://blog.miraikan.jst.go.jp/event/20130517post-347.html">Picode Workshop</a>の様子</figcaption>
 </figure>

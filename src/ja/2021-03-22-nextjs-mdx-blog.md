@@ -45,7 +45,7 @@ WordPress はシステムとしてはさすがによくメンテされていて�
 3. 動作が軽い（できれば各記事が単なる HTML/CSS/JS の静的ページになっていてほしい）
 4. 見た目などのカスタマイズが容易にでき、コントロールしやすい
 
-<figure className="right">
+<figure class="right">
   <a href="https://github.com/lonekorean/wordpress-export-to-markdown"><img src="https://user-images.githubusercontent.com/1245573/72686026-3aa04280-3abe-11ea-92c1-d756a24657dd.gif" alt="" /></a>
   <figcaption>wordpress-export-to-markdown</figcaption>
 </figure>
@@ -85,7 +85,7 @@ https://www.google.com/search?q=nextjs+mdx+%E3%83%96%E3%83%AD%E3%82%B0
 
 ### 実装の概要
 
-<figure className="right">
+<figure class="right">
   <a href="https://github.com/timlrx/tailwind-nextjs-starter-blog"><img src="https://github.com/timlrx/tailwind-nextjs-starter-blog/raw/master/public/static/images/twitter-card.png" alt="" /></a>
   <figcaption>timlrx/tailwind-nextjs-starter-blog</figcaption>
 </figure>

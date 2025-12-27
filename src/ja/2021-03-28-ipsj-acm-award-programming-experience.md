@@ -1,6 +1,6 @@
 ---
 title: PX に関する研究で IPSJ/ACM から共同表彰されました
-date: "2021-03-28"
+date: '2021-03-28'
 tags:
   - sigpx
   - research
@@ -9,15 +9,15 @@ coverImage: ipsj_acm_joint_award_2021.jpg
 summary: >-
   先日、情報処理学会 第 83 回全国大会の表彰式で「IPSJ/ACM Award for Early Career Contributions to
   Global Research」を受賞しました。これは年に一度、情報学全分野から一人を情報処理学会とACMから表彰するという...
-summary_generated: >-
+summary_generated: |-
 
-  10 月 6 日追記; 情報処理学会の学会誌「情報処理 Vol.62 No.10」に受賞記念記事が掲載されました。先日、情報処理学会 第 83
-  回全国大会の表彰式で「IPSJ/ACM Award for Early Career Contributions to Glob...
+  10 月 6 日追記; 情報処理学会の学会誌「情報処理 Vol.62 No.10」に受賞記念記事が掲載されました。
+    先日、情報処理学会 第 83 回全国大会の表彰式で「IPSJ/ACM Award for Early Career Contributions to G...
 ---
 
 > **10 月 6 日追記;** 情報処理学会の学会誌「[情報処理 Vol.62 No.10](https://amzn.to/3oC9Fjm)」に[受賞記念記事](http://doi.org/10.20729/00212783)が掲載されました。
 
-<figure className="right">
+<figure class="right">
   <img src="/images/ipsj_acm_joint_award_2021.jpg" alt="" />
 </figure>
 
@@ -35,19 +35,19 @@ summary_generated: >-
 
 ---
 
-<a className="internal-link" id="award"></a>
+<a class="internal-link" id="award"></a>
 
 ## 賞について
 
 表彰の対象となった研究成果は「Pioneering Work in Programming Experience Research for Creativity Support of Both Programmers and Non-Programmers」ということで、 **Programming Experience** (PX; プログラミング体験) についての研究が認められてのことだそうです。
 
-これまで ACM CHI, UIST, Multimedia, PLDI, IEEE VL/HCC など情報学のいろいろな分野の国際会議で PX に関連する論文を発表してきました。また、国内では 2016 年から <a href="https://sigpx.org"><abbr title="Special Interest Group on Programming Experience">SIGPX</abbr></a> という勉強会を開いており、国際的には <a href="https://liveprog.org/">Workshop on Live Programming</a> の Steering Committee や <a href="http://programming-experience.org">Programming Experience Workshop</a> のプログラム委員を務めてきました。 ACM CHI や UIST などでもプログラム委員（Associate Chair）を務め、最近だと CHI 2020 で [Programming Experience](https://pgl.jp/conferences/chi2020/sessions/5ec42956dcced0002938d8f1) という名前のセッションができたりしています。基礎的な研究を進めるだけでなく、成果を応用した一般公開サービスである [TextAlive](https://junkato.jp/ja/textalive) や [f3.js](https://junkato.jp/ja/f3js) などの開発と運営を行ってきました。また、一見こうしたガチガチのプログラミング研究とは遠いところにありそうな、兼業先のアニメ制作会社[アーチ](https://archinc.jp/ja)における [Arch Research](https://research.archinc.jp) での活動も、私にとっては研究成果の社会展開の一環です。
+これまで ACM CHI, UIST, Multimedia, PLDI, IEEE VL/HCC など情報学のいろいろな分野の国際会議で PX に関連する論文を発表してきました。また、国内では 2016 年から <a href="https://sigpx.org"><abbr title="Special Interest Group on Programming Experience">SIGPX</abbr></a> という勉強会を開いており、国際的には <a href="https://liveprog.org/">Workshop on Live Programming</a> の Steering Committee や <a href="http://programming-experience.org">Programming Experience Workshop</a> のプログラム委員を務めてきました。 ACM CHI や UIST などでもプログラム委員（Associate Chair）を務め、最近だと CHI 2020 で [Programming Experience](https://pgl.jp/conferences/chi2020/sessions/5ec42956dcced0002938d8f1) という名前のセッションができたりしています。基礎的な研究を進めるだけでなく、成果を応用した一般公開サービスである [TextAlive](https://junkato.jp/ja/textalive) や [f3.js](https://junkato.jp/ja/f3js) などの開発と運営を行ってきました。また、一見こうしたガチガチのプログラミング研究とは遠いところにありそうな、兼業先のアニメ会社[アーチ](https://archinc.jp/ja)における [Arch Research](https://research.archinc.jp) での活動も、私にとっては研究成果の社会展開の一環です。
 
 こうしてがんばってきた一連の成果をまとめて表彰していただけるのは大変ありがたいことで、推薦してくださった方、選考してくださった方々にこの場を借りて御礼申し上げたいと思います。また、これは上記のとおり PX 研究の国内外での盛り上がりをふまえての賞だと思っているので、分野を一緒に盛り上げてきてくださっている方々にも感謝しています。これからもよろしくお願いします。
 
 ---
 
-<a className="internal-link" id="px"></a>
+<a class="internal-link" id="px"></a>
 
 ## PX について
 
@@ -74,7 +74,7 @@ PX について説明するとき「UX (User Experience) のプログラミン�
 
 プログラムを記述することをプログラミングと呼ぶのであれば、そこで使われる表現はすべて（文字ベースの言語でなくとも）広義「プログラミング言語」であり、じっさい、プログラミング言語の研究コミュニティはプログラミングという行為の大部分を発明し、規定してきました。
 
-<figure className="right">
+<figure class="right">
   <img src="/images/sigpx8-kato-intro-environment.png" alt="Programming Environment" />
   <figcaption><a href="https://sigpx.org/8">第 8 回 SIGPX 勉強会</a>冒頭のスライドより</figcaption>
 </figure>
@@ -97,11 +97,11 @@ HCI 分野のプログラミング支援研究は、かつてはプログラミ�
 
 ---
 
-<a className="internal-link" id="creativity-support"></a>
+<a class="internal-link" id="creativity-support"></a>
 
 ## PX の未来 創作文化の未来
 
-ソフトウェアが世界を飲み込んでいる昨今、プログラミングと無関係な創造的活動はもはや存在しません。アルゴリズミックアートのような創作が目新しいものとしてもてはやされた黎明期はもはや過ぎ去りつつあり、プログラミング的メリットをいかに既存の創作支援ツールに織り込んでいくかがメインストリームの研究課題になってきています。私はアニメ制作会社で兼業をしており、ここまで触れてきたようなガチガチのプログラミング研究者としての私を知る人からは不思議に思われることも多いのですが、それはアニメ作りと PX の間にも並々ならぬ関係があるからに他なりません。
+ソフトウェアが世界を飲み込んでいる昨今、プログラミングと無関係な創造的活動はもはや存在しません。アルゴリズミックアートのような創作が目新しいものとしてもてはやされた黎明期はもはや過ぎ去りつつあり、プログラミング的メリットをいかに既存の創作支援ツールに織り込んでいくかがメインストリームの研究課題になってきています。私はアニメ会社で兼業をしており、ここまで触れてきたようなガチガチのプログラミング研究者としての私を知る人からは不思議に思われることも多いのですが、それはアニメ作りと PX の間にも並々ならぬ関係があるからに他なりません。
 
 Unity や Unreal Engine といったゲームエンジンを映像コンテンツ制作に活かす試みは [Machinima](https://en.wikipedia.org/wiki/Machinima) と呼ばれ、数十年の歴史を持っていますが、こうした統合環境が国内のアニメ制作現場でも使われるようになりました。そこで、数百人が関与する複雑なアニメ制作ワークフローと PX 的な世界観をうまく接続する環境設計が必要とされています。このあたりは[技術顧問就任時のブログ記事](/ja/posts/2018-07-09-arch-inc-technical-advisor/)で触れた他、 <a href="https://news.mynavi.jp/article/20190216-770325/"><abbr title="アニメーション・クリエイティブ・テクノロジー・フォーラム">ACTF</abbr> というイベントで登壇したとき</a>に少しお話ししました。 [Arch Research で刊行している冊子「アニメ技術」](https://research.archinc.jp/anitech/)シリーズの [2019 春](https://research.archinc.jp/anitech/2019spring) 「Griffith 鼎談」（アニメ監督 + 加藤 + 社長）でも語りました。
 

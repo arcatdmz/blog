@@ -1,5 +1,6 @@
 import { FC, useContext } from "react";
-import { Header, Image } from "semantic-ui-react";
+import { Header } from "semantic-ui-react";
+
 import { BlogContext } from "../../lib/BlogContext";
 
 interface AboutProps {
@@ -29,7 +30,7 @@ const About: FC<AboutProps> = ({ inverted = false }) => {
             <abbr title="国立研究開発法人 産業技術総合研究所">産総研</abbr>
           </a>
           という研究所と<a href="https://archinc.jp/">アーチ</a>
-          というアニメ制作会社に所属しており、研究だけでなく、一般公開サービスの開発や運営も行っています。日々のこと、趣味のこと、いろいろ書きます。
+          というアニメ会社に所属しており、研究だけでなく、一般公開サービスの開発や運営も行っています。日々のこと、趣味のこと、いろいろ書きます。
         </p>
       ) : (
         <p>
@@ -51,7 +52,11 @@ const About: FC<AboutProps> = ({ inverted = false }) => {
         </p>
       )}
       <Header as="h5" inverted={inverted}>
-        <Image src="https://junkato.jp/images/junkato.jpg" avatar alt="" />
+        <img
+          src="https://junkato.jp/images/junkato.jpg"
+          className="ui avatar image"
+          alt=""
+        />
         {author}
       </Header>
       {language === "ja" ? (

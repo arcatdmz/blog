@@ -70,7 +70,7 @@ UIST は 10 月頭から一週間なので、そこから 3 か月だと、博�
 
 9 月になってくると Adobe インターンのほうは方針が固まってきました。興味があり、なおかつ勉強したいと思っていた分野のテーマになり、とてもいい滑り出しでした。一方で、博論ページ数の伸び悩みに苦しむようになります。博論の章立てなど骨組みは決まっていたので、進捗を可視化するために以下のようなグラフを半自動で生成できるようにしていました。
 
-<figure className="right">
+<figure class="right">
   <a href="/images/chart.png"><img src="/images/chart.png" alt="" /></a>
   <figcaption>博士論文ページ数の推移</figcaption>
 </figure>

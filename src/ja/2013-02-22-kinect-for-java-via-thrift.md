@@ -1,6 +1,6 @@
 ---
 title: ThriftでJavaからC#サーバのKinectを使う
-date: "2013-02-22"
+date: '2013-02-22'
 tags:
   - java
   - programming
@@ -8,13 +8,13 @@ coverImage: kinect-thrift-server.jpg
 summary: >-
   最近、Kinect を使う開発環境Picodeの実装を手直ししています。この開発環境は Java で書かれているのですが、Kinect for
   Windows SDK の API を使う必要があります。Kinect for Windows SDK は C++と C#向けの ...
-summary_generated: >-
-  C#サーバとJavaクライアントがThriftで通信最近、Kinect を使う開発環境Picodeの実装を手直ししています。この開発環境は Java
-  で書かれているのですが、Kinect for Windows SDK の API を使う必要があります。Kinect for...
-altUrl: "https://junkato.jp/ja/blog/2013/02/22/kinect-for-java-via-thrift/"
+summary_generated: |2-
+
+    C#サーバとJavaクライアントがThriftで通信最近、Kinect を使う開発環境Picodeの実装を手直ししています。この開発環境は Java で書かれているのですが、Kinect for Windows SDK の API を使う必要があります。Kinect ...
+altUrl: 'https://junkato.jp/ja/blog/2013/02/22/kinect-for-java-via-thrift/'
 ---
 
-<figure className="right">
+<figure class="right">
   <a href="/images/kinect-thrift-server.jpg"><img src="/images/kinect-thrift-server-300x225.jpg" alt="" /></a>
   <figcaption>C#サーバとJavaクライアントがThriftで通信</figcaption>
 </figure>

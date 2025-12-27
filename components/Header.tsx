@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { FC, MouseEventHandler, useCallback, useContext } from "react";
 import { Icon, Menu } from "semantic-ui-react";
@@ -21,13 +23,11 @@ const Header: FC<HeaderProps> = ({ onMenuClick }) => {
 
   return (
     <Menu fixed="top" id="fixed-menu">
-      <Link href={sitePath} passHref legacyBehavior>
-        <Menu.Item as="a">
-          <span className="mobile hidden">{title}</span>
-          <span className="print-hidden mobile only">
-            <Icon name="pencil" />
-          </span>
-        </Menu.Item>
+      <Link href={sitePath} className="item">
+        <span className="mobile hidden">{title}</span>
+        <span className="print-hidden mobile only">
+          <Icon name="pencil" />
+        </span>
       </Link>
       <Menu.Menu position="right">
         <Menu.Item as="a" href={authorUrl}>

@@ -1,9 +1,9 @@
 ---
 title: CloudflareとLet's EncryptでWebサイトをHTTPS化した
-date: "2017-07-17"
+date: '2017-07-17'
 tags:
   - server
-summary_generated: "これまで HTTP でホストしていた研究会サイト sigpx.org\_ と個人サイト junkato.jp を HTTPS 化しました。前者は Cloudflare、後者は Let&#x27;s Encrypt を使いました。どちらも無料でした。できれば Cloudflar..."
+summary_generated: "これまで HTTP でホストしていた研究会サイト sigpx.org\_ と個人サイト junkato.jp を HTTPS 化しました。前者は Cloudflare、後者は Let's Encrypt を使いました。どちらも無料でした。できれば Cloudflare で統一..."
 altUrl: >-
   https://junkato.jp/ja/blog/2017/07/17/http-to-https-by-lets-encrypt-and-cloudflare
 ---
@@ -22,7 +22,7 @@ Cloudflare を使った具体的な SSL 化の方法については[すでに日
 
 そして、以下のように、Cloudflare がリバースプロキシとなってブラウザと GitHub Pages サーバ間の接続を仲介することで、もともとの GitHub Pages と同じコンテンツへのアクセスが可能となっています。
 
-<figure className="center">
+<figure class="center">
   <a href="/images/cfssl_full.png"><img src="/images/cfssl_full.png" alt="" /></a>
   <figcaption><a href="https://support.cloudflare.com/hc/en-us/articles/200170416">What do the SSL options mean? - Cloudflare Support</a></figcaption>
 </figure>

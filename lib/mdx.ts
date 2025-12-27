@@ -2,12 +2,16 @@ import remarkEmbedder, { Transformer } from "@remark-embedder/core";
 import oembedTransformer, { Config } from "@remark-embedder/transformer-oembed";
 import fs from "fs";
 import matter from "gray-matter";
-import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
-import rehypePrism from "rehype-prism-plus";
-import remarkAutolinkHeadings from "remark-autolink-headings";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeHighlight from "rehype-highlight";
+import rehypeRaw from "rehype-raw";
+import rehypeSlug from "rehype-slug";
+import rehypeStringify from "rehype-stringify";
+import { remark } from "remark";
 import remarkCodeTitles from "remark-flexible-code-titles";
-import remarkSlug from "remark-slug";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
 
 import { FrontMatterIface } from "./FrontMatterIface";
 import { PostIface } from "./PostIface";
@@ -59,39 +63,45 @@ const wrappedOembedTransformer: Transformer = {
   name: "transformer-oembed",
   shouldTransform: oembedTransformer.shouldTransform,
   getHTML: async urlString => {
-    const html = await oembedTransformer.getHTML(urlString, oembedConfig);
-    let provider: string;
+    try {
+      const html = await oembedTransformer.getHTML(urlString, oembedConfig);
+      let provider: string;
 
-    if (
-      matchUrls(
-        [
-          "https://twitter.com/*",
-          "https://twitter.com/*/status/*",
-          "https://*.twitter.com/*/status/*"
-        ],
-        urlString
-      )
-    ) {
-      provider = "twitter";
-    } else if (
-      matchUrls(
-        [
-          "https://*.youtube.com/watch*",
-          "https://*.youtube.com/v/*",
-          "https://youtu.be/*",
-          "https://*.youtube.com/playlist?list=*",
-          "https://youtube.com/playlist?list=*",
-          "https://*.youtube.com/shorts*"
-        ],
-        urlString
-      )
-    ) {
-      provider = "youtube";
+      if (
+        matchUrls(
+          [
+            "https://twitter.com/*",
+            "https://twitter.com/*/status/*",
+            "https://*.twitter.com/*/status/*"
+          ],
+          urlString
+        )
+      ) {
+        provider = "twitter";
+      } else if (
+        matchUrls(
+          [
+            "https://*.youtube.com/watch*",
+            "https://*.youtube.com/v/*",
+            "https://youtu.be/*",
+            "https://*.youtube.com/playlist?list=*",
+            "https://youtube.com/playlist?list=*",
+            "https://*.youtube.com/shorts*"
+          ],
+          urlString
+        )
+      ) {
+        provider = "youtube";
+      }
+      return `<div class="remark-oembed-inline remark-oembed-${
+        provider ||
+        (lastProvider ? lastProvider.toLowerCase() : "unknown-provider")
+      }">${html || `<a href="${urlString}">${urlString}</a>`}</div>`;
+    } catch (error) {
+      // Fallback to a simple link if oEmbed fetch fails (e.g., during static generation)
+      console.warn(`Failed to fetch oEmbed for ${urlString}:`, error);
+      return `<a href="${urlString}">${urlString}</a>`;
     }
-    return `<div class="remark-oembed-inline remark-oembed-${
-      provider ||
-      (lastProvider ? lastProvider.toLowerCase() : "unknown-provider")
-    }">${html || `<a href="${urlString}">${urlString}</a>`}</div>`;
   }
 };
 
@@ -101,25 +111,31 @@ export async function getFileBySlug(
 ) {
   const mdxPath = path.join(root, "src", language, `${slug}.mdx`);
   const mdPath = path.join(root, "src", language, `${slug}.md`);
-  const source = fs.existsSync(mdxPath)
-    ? fs.readFileSync(mdxPath, "utf8")
-    : fs.readFileSync(mdPath, "utf8");
+  const filePath = fs.existsSync(mdxPath) ? mdxPath : mdPath;
+  if (!fs.existsSync(filePath)) {
+    return null;
+  }
+  const source = fs.readFileSync(filePath, "utf8");
 
   const { data, content } = matter(source);
-  const mdxSource = await serialize(content, {
-    mdxOptions: {
-      remarkPlugins: [
-        remarkSlug,
-        remarkAutolinkHeadings,
-        remarkCodeTitles as any,
-        [remarkEmbedder, { transformers: [wrappedOembedTransformer] }]
-      ],
-      rehypePlugins: [rehypePrism as any]
-    }
-  });
+
+  // Convert Markdown to HTML using remark and rehype with modern plugins
+  const processedContent = await remark()
+    .use(remarkEmbedder, { transformers: [wrappedOembedTransformer] })
+    .use(remarkCodeTitles as any)
+    .use(remarkGfm)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeSlug) // Modern replacement for remark-slug
+    .use(rehypeAutolinkHeadings) // Modern replacement for remark-autolink-headings
+    .use(rehypeHighlight)
+    .use(rehypeStringify, { allowDangerousHtml: true })
+    .process(content);
+
+  const contentHtml = processedContent.toString();
 
   return {
-    mdxSource,
+    contentHtml,
     frontMatter: {
       wordCount: content.split(/\s+/gu).length,
       slug: slug || null,

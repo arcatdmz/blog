@@ -1,6 +1,6 @@
 ---
 title: Wikipediaのテンプレートを自前のMediaWikiに追加した
-date: "2014-01-13"
+date: '2014-01-13'
 tags:
   - programming
   - server
@@ -9,14 +9,14 @@ summary: >-
   前日に引き続きMediaWikiに関する記事です。 素の MediaWiki は、記事を全て Wiki
   記法でべた書きしなくてはなりません。Wikipedia
   の記事では、右の図の情報ボックス(Infobox)のように、記事の種類ごとにテンプレートがあって、同じようなレイア...
-summary_generated: >-
-  Wikipedia Infobox前日に引き続きMediaWikiに関する記事です。素の MediaWiki は、記事を全て Wiki
-  記法でべた書きしなくてはなりません。Wikipedia の記事では、右の図の情報ボックス(Infobox)のように、記事の種類ごとにテンプ...
+summary_generated: |2-
+
+    Wikipedia Infobox前日に引き続きMediaWikiに関する記事です。素の MediaWiki は、記事を全て Wiki 記法でべた書きしなくてはなりません。Wikipedia の記事では、右の図の情報ボックス(Infobox)のように、記事の種類ごとに...
 altUrl: >-
   https://junkato.jp/ja/blog/2014/01/13/mediawiki-import-templates-from-wikipedia
 ---
 
-<figure className="right">
+<figure class="right">
   <a href="/images/infobox.png"><img src="/images/infobox-300x180.png" alt="" /></a>
   <figcaption>Wikipedia Infobox</figcaption>
 </figure>

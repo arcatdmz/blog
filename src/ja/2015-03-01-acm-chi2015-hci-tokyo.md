@@ -31,7 +31,7 @@ ACM CHI の主なコンテンツは、複数の登壇発表が並列で進行す
 
 単に話を聴くだけでなく、実際に動いているシステムに触れるデモのセッション([Interactivity](http://chi2015.acm.org/program/interactivity/))もあります。また、僕は参加したことがありませんが、HCI のいろいろなテーマに関する講義([Courses](http://chi2015.acm.org/program/courses/))も開講されるようです。開催日が近づいてきて、ヒュンダイやサムスンなどインタラクションデザインに力を入れている企業のツアー([Industry tour](https://chi2015seoul.wordpress.com/2015/02/28/industry-tour-courses-and-link-to-register/))もアナウンスされました。
 
-<figure className="right">
+<figure class="right">
   <a href="http://hci.tokyo/"><img src="/images/chi2015-japan-postcard-300x202.jpg" alt="" /></a>
   <figcaption>ACM CHI 2015 Symposium on Emerging Japanese HCI Research Collection</figcaption>
 </figure>

@@ -1,6 +1,6 @@
 ---
 title: Realmoteで家のリモコンを一つにまとめる
-date: "2012-12-24"
+date: '2012-12-24'
 tags:
   - phybots
   - programming
@@ -8,13 +8,13 @@ coverImage: realmote.jpg
 summary: >-
   最近、スマートフォンが赤外線リモコンの代わりになる製品をよく見るようになりました。この記事ではその私家版、 Web
   インタフェースから家電製品やルンバが遠隔操作できちゃうリモコンアプリ Realmote を紹介します。
-altUrl: "https://junkato.jp/ja/blog/2012/12/24/realmote-remote-control/"
-summary_generated: >-
-  Realmote最近、Pluto ステーションとかiRemocon(アイリモコン)
-  IRM-01Lといった、スマートフォンが赤外線リモコンの代わりになる製品をよく見るようになりました。確かにスマートフォンしか持ってない人には便利かもしれません。が、プログラマなら常時起動して...
+altUrl: 'https://junkato.jp/ja/blog/2012/12/24/realmote-remote-control/'
+summary_generated: |2-
+
+    Realmote最近、Pluto ステーションとかiRemocon(アイリモコン) IRM-01Lといった、スマートフォンが赤外線リモコンの代わりになる製品をよく見るようになりました。確かにスマートフォンしか持ってない人には便利かもしれません。が、プログラマなら常時起...
 ---
 
-<figure className="right">
+<figure class="right">
   <a href="/images/realmote.jpg"><img src="/images/realmote-138x300.jpg" alt="" /></a>
   <figcaption>Realmote</figcaption>
 </figure>
@@ -35,7 +35,7 @@ Realmote を使うのに必要なハードウェアは、次のとおりです�
 - 赤外線リモコン機能を使うなら: [Remote Station](http://www.amazon.co.jp/gp/product/B000I0RDJI/ref=as_li_ss_tl?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B000I0RDJI)
 - ルンバのリモコン機能を使うなら: ルンバ本体と[RooTooth](https://www.sparkfun.com/products/684)
 
-<figure className="right">
+<figure class="right">
   <a href="http://www.amazon.co.jp/gp/product/B000I0RDJI/ref=as_li_ss_il?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B000I0RDJI"><img src="/images/41D58M0CK9L._SL110_.jpg" alt="" /></a>
   <figcaption>RemoteStation</figcaption>
 </figure>

@@ -1,4 +1,4 @@
-import Head from "next/head";
+"use client";
 import {
   FC,
   MouseEventHandler,
@@ -9,9 +9,8 @@ import {
 } from "react";
 import { Menu, Sidebar } from "semantic-ui-react";
 
-import { SidebarMenuItems } from "../contents/SidebarMenuItems";
 import { BlogContext } from "../../lib/BlogContext";
-
+import { SidebarMenuItems } from "../contents/SidebarMenuItems";
 import { Footer } from "../Footer";
 import { Header } from "../Header";
 
@@ -46,14 +45,6 @@ const BaseLayout: FC<BaseLayoutProps> = ({
 
   return (
     <Sidebar.Pushable>
-      <Head>
-        <link
-          key="rss"
-          rel="alternate"
-          type="application/rss+xml"
-          href={`${sitePath}index.xml`}
-        />
-      </Head>
       <Sidebar
         as={Menu}
         animation="push"
@@ -66,8 +57,11 @@ const BaseLayout: FC<BaseLayoutProps> = ({
       </Sidebar>
       <Header onMenuClick={handleMenuClick} />
       <Sidebar.Pusher id="pusher" dimmed={visible} onClick={handlePusherClick}>
-        <main id="body">{children}</main>
-        <Footer showMeta={showFooterMeta} sourceUrl={sourceUrl} />
+        <div className="content">
+          <div className={`dimmer${visible ? " active" : ""}`}></div>
+          <main id="body">{children}</main>
+          <Footer showMeta={showFooterMeta} sourceUrl={sourceUrl} />
+        </div>
       </Sidebar.Pusher>
     </Sidebar.Pushable>
   );

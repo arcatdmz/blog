@@ -1,3 +1,5 @@
+"use client";
+
 import { FC, useContext } from "react";
 import { Container, Divider, List, Segment } from "semantic-ui-react";
 

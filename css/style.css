@@ -4,35 +4,70 @@ body {
   background: #1b1c1d !important;
 }
 
-.pushable:not(body) {
-  transform: none;
-}
-
-.pushable:not(body) > .ui.sidebar,
-.pushable:not(body) > .fixed,
-.pushable:not(body) > .pusher:after {
-  position: fixed;
-}
-
-.pushable:not(body),
 .pushable:not(body) > .pusher {
+  height: 100%;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.pushable:not(body) > .pusher::after {
+  /* disable default dimmer */
+  background: transparent !important;
+}
+
+.pushable:not(body) > .pusher > .content {
+  position: relative;
+  background: #1b1c1d;
   min-height: 100vh;
 }
 
-.pushable:not(body) > .pusher > main {
+.pushable:not(body) > .pusher > .content > .dimmer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s;
+  will-change: opacity;
+  pointer-events: none;
+}
+
+.pushable:not(body) > .pusher > .content > .dimmer.active {
+  opacity: 1;
+}
+
+.pushable:not(body) > .pusher > .content > main {
   background: #fff;
   padding-bottom: 1.5rem;
 }
 
 /* footer */
 
-.pushable:not(body) > .pusher > footer {
+.pushable:not(body) > .pusher > .content > footer {
   margin-top: 0;
   padding: 1.5rem 0 5rem 0;
 }
 
-.pushable:not(body) > .pusher > footer .ui.horizontal.list > .item {
+.pushable:not(body) > .pusher > .content > footer .ui.horizontal.list > .item {
   line-height: 1.2em !important;
+}
+
+/* horizontal divider */
+article.post-item hr {
+  margin: 1rem 0;
+  height: 0;
+  background: transparent;
+  border: none;
+  border-top: 1px solid rgba(34, 36, 38, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* images under post-item but not under figure */
+article.post-item p img:not(figure img) {
+  width: 100%;
 }
 
 /* figures */
@@ -60,6 +95,8 @@ article.post-item figure img {
   width: 100%;
   height: auto;
   display: inline-block;
+  line-height: 0;
+  vertical-align: bottom;
 }
 
 article.post-item figure > .columns {
@@ -117,6 +154,7 @@ article.post-item figure.center > .columns > img {
 
 article.post-item figure.center img {
   max-width: max-content !important;
+  display: block;
   margin: auto;
 }
 

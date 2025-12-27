@@ -61,7 +61,7 @@ Student Research Competition がどのようなものか、なぜ挑戦すべき
 
 今回は、来場者・発表者・審査員向けに作成した資料をもとに、聴講をおすすめする理由を簡単にまとめます。
 
-<div className="embed">
+<div class="embed">
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSARACcEXWPZfOlM8BuQvkZPaKICzNV873DldWMupG1-RwgFGjbACPh3O4-pMM7BdyfYn3BxXMH4rvw/embed?start=false&loop=false&delayms=3000" width="1200px" height="675px" frameBorder="0"></iframe>
 </div>
 

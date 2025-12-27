@@ -1,20 +1,17 @@
-import { createContext } from "react";
+"use client";
 
-const BlogContext = createContext<{
-  rootPath: string;
-  imageRoot: string;
-  sourceRoot: string;
-  maxPosts: number;
-  language: string;
-  bannerUrl: string;
-  siteUrl: string;
-  sitePath: string;
-  locale: string;
-  title: string;
-  author: string;
-  authorUrl: string;
-  email: string;
-  description: string;
-}>(null);
+import { createContext } from "react";
+import websiteJson from "../website.json";
+
+const defaultContextValue = {
+  rootPath: websiteJson.rootPath,
+  imageRoot: websiteJson.imageRoot,
+  sourceRoot: websiteJson.sourceRoot,
+  maxPosts: websiteJson.maxPosts,
+  language: "default",
+  ...websiteJson.languages.default
+};
+
+const BlogContext = createContext(defaultContextValue);
 
 export { BlogContext };

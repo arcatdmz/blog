@@ -1,12 +1,14 @@
 ---
 title: 粘菌の培養に失敗しました
-date: "2016-09-01"
+date: '2016-09-01'
 tags:
   - life
-summary_generated: >-
-  研究所の近辺にはきのこが生えます。つくばはきのこだらけこういう立派なきのこがたくさんいます。8
-  月は暑すぎてひっそりしていましたが、台風一過でまた出てきました。とにかくすごい数、わっと生えてくるただ、今回の主役はきのこじゃなくて、こっちです。ススホコリの変形体（7月12日）...
-altUrl: "https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae/"
+summary_generated: |-
+  研究所の近辺にはきのこが生えます。
+    つくばはきのこだらけこういう立派なきのこがたくさんいます。8 月は暑すぎてひっそりしていましたが、台風一過でまた出てきました。
+    とにかくすごい数、わっと生えてくるただ、今回の主役はきのこじゃなくて、こっちです。
+    ススホコリの変...
+altUrl: 'https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae/'
 ---
 
 研究所の近辺にはきのこが生えます。
@@ -32,7 +34,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae/"
 
 最近この真性粘菌であるところの**真正粘菌亜綱モジホコリ目モジホコリ科キフシススホコリ**を育てようとして失敗したので記録を残しておきます。
 
-<figure className="right">
+<figure class="right">
   <a href="/images/20160629_065345149_iOS.jpg"><img src="/images/20160629_065345149_iOS-150x150.jpg" alt="最初の邂逅（6月29日）" /></a>
   <figcaption>ススホコリの変形体と最初の邂逅。（6月29日）</figcaption>
 </figure>
@@ -52,7 +54,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae/"
 
 一方の真性粘菌は、真核生物のうち菌界でも植物界でも動物界でもないもの（つまりその他大勢）が寄せ集められた**原生生物界**に属しています。
 
-<figure className="left">
+<figure class="left">
   <a href="/images/20160706_051951381_iOS.jpg"><img src="/images/20160706_051951381_iOS-150x150.jpg" alt="ススホコリの子実体。指で触ったところは黄色い表面が剥がれて茶色の胞子が見えている。（7月6日）" /></a>
   <figcaption>ススホコリの子実体。（7月6日）</figcaption>
 </figure>
@@ -61,7 +63,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae/"
 
 ちなみに、細胞性粘菌のサブカテゴリであるアクラシス目とタマホコリカビ目は遺伝的にかなり離れていることが後から分かったらしく、細胞性粘菌というグルーピングそのものが無意味ということで解体されつつあるそうです。（モデル生物として有名なキイロタマホコリカビを含むタマホコリカビ目は、真性粘菌に近いほうで原生生物界にカテゴライズされるらしい。）
 
-<figure className="right">
+<figure class="right">
   <a href="/images/20160709_134023479_iOS-1.jpg"><img src="/images/20160709_134023479_iOS-1-150x150.jpg" /></a>
   <figcaption>ススホコリの子実体。指で触ったところは黄色い表面が剥がれて茶色の胞子が見えている。（7月6日）</figcaption>
 </figure>
@@ -78,19 +80,19 @@ altUrl: "https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae/"
 
 採取して運んでいるうちに黄色だったものがどんどん赤くなってきて、子実体になりそうな色になってきたので冷や冷やしましたが、しばらく静置したところ黄色に戻り、餌を探しにいく様子が観察できました。
 
-<hr className="clearing hidden" />
+<hr class="clearing hidden" />
 
-<figure className="small fixed-size left">
+<figure class="small fixed-size left">
   <a href="/images/20160712_090742389_iOS-1.jpg"><img src="/images/20160712_090742389_iOS-1-150x150.jpg" width="150" alt="" /></a>
   <figcaption>捕獲。（7 月 12 日）</figcaption>
 </figure>
 
-<figure className="small fixed-size left">
+<figure class="small fixed-size left">
   <a href="/images/20160712_173829256_iOS-1.jpg"><img src="/images/20160712_173829256_iOS-1-150x150.jpg" width="150" alt="" /></a>
   <figcaption>餌を探す変形体。</figcaption>
 </figure>
 
-<figure className="small fixed-size left">
+<figure class="small fixed-size left">
   <a href="/images/20160713_060303579_iOS-1.jpg"><img src="/images/20160713_060303579_iOS-1-150x150.jpg" width="150" alt="" /></a>
   <figcaption>すぐ子実体に。（13 日）</figcaption>
 </figure>
@@ -101,9 +103,9 @@ altUrl: "https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae/"
 
 それで、**モジホコリの育成にはオートミール**というにわか知識でオートミールを置いてみていたのですが、**全くダメ**。即死でした。（死ではなく子実体になっただけですが…）
 
-<hr className="clearing hidden" />
+<hr class="clearing hidden" />
 
-<figure className="small right">
+<figure class="small right">
   <a href="/images/20160824_061506468_iOS-1.jpg"><img src="/images/20160824_061506468_iOS-1-e1472660963675-150x150.jpg" alt="" /></a>
   <figcaption>息を吹き返したススホコリ。（8 月 24 日）</figcaption>
 </figure>
@@ -116,7 +118,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae/"
 
 どなたか詳しい人の解説が欲しいところですが、**ススホコリの餌はカビ**などであるということで、カビが生えたことでむしろ栄養源ができ、カビと戦って勝ったということのように見えます。**タッパーウェアの中の世界にドラマ**を見出して興奮したものです。
 
-<figure className="small right">
+<figure class="small right">
   <a href="/images/20160825_121013160_iOS-1.jpg"><img src="/images/20160825_121013160_iOS-1-e1472660994638-150x150.jpg" alt="" /></a>
   <figcaption>バナナは食べなかった。</figcaption>
 </figure>
@@ -131,7 +133,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae/"
 
 そうこうするうち一週間が経ち、保湿のために入れていたティッシュに変形体がたくさん取りついたので、新しい培地に移すことにしました。
 
-<figure className="small right">
+<figure class="small right">
   <a href="/images/20160828_141257390_iOS.jpg"><img src="/images/20160828_141257390_iOS-150x150.jpg" alt="20160828_141257390_iOS" /></a>
   <figcaption>新しい培地。（8月28日）</figcaption>
 </figure>
@@ -146,17 +148,17 @@ altUrl: "https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae/"
 
 けっきょくカフェポッドを追加で入れても何にもならず、子実体が形成され、静かな時が訪れたのでした。
 
-<figure className="small fixed-size left">
+<figure class="small fixed-size left">
   <a href="/images/20160830_131444090_iOS.jpg"><img src="/images/20160830_131444090_iOS-150x150.jpg" alt="ティッシュ上に集合、変色。（30日）" /></a>
   <figcaption>集合、変色。（8月30日）</figcaption>
 </figure>
 
-<figure className="small fixed-size left">
+<figure class="small fixed-size left">
   <a href="/images/20160831_051705688_iOS.jpg"><img src="/images/20160831_051705688_iOS-150x150.jpg" alt="真っ黒に。" /></a>
   <figcaption>真っ黒に。（8月31日）</figcaption>
 </figure>
 
-<figure className="small fixed-size left">
+<figure class="small fixed-size left">
   <a href="/images/20160901_234155410_iOS.jpg"><img src="/images/20160901_234155410_iOS-150x150.jpg" alt="動いてる？" /></a>
   <figcaption>動いてる？（9月2日）</figcaption>
 </figure>
@@ -165,6 +167,6 @@ altUrl: "https://junkato.jp/ja/blog/2016/09/01/myxogastromycetidae/"
 
 といっても、またしばらく放置するつもりなので、いきなり変形体が現れるかもしれません。野生の粘菌を探しながら、その時を待ちます。
 
-<hr className="clearing" />
+<hr class="clearing" />
 
 **9 月 2 日追記;** 黄色くないし、変形体には見えないのですが、何か黒いものが動いています。

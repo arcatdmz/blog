@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FC, useContext } from "react";
-import { Icon, Image, Menu } from "semantic-ui-react";
+import { Icon, Menu } from "semantic-ui-react";
 
 import { BlogContext } from "../../lib/BlogContext";
 
@@ -10,14 +10,16 @@ const SidebarMenuItems: FC = () => {
     return (
       <>
         <Menu.Item as="a" href="https://junkato.jp/ja/">
-          <Image avatar src="https://junkato.jp/images/junkato.jpg" />
+          <img
+            src="https://junkato.jp/images/junkato.jpg"
+            className="ui avatar image"
+            alt=""
+          />
           トップ
         </Menu.Item>
-        <Link href="/ja" passHref legacyBehavior>
-          <Menu.Item active as="a">
-            <Icon name="pencil" />
-            ブログ
-          </Menu.Item>
+        <Link href="/ja" className="item active">
+          <Icon name="pencil" />
+          ブログ
         </Link>
         <Menu.Item as="a" href="https://junkato.jp/ja/#contact">
           <Icon name="address card" />
@@ -57,14 +59,16 @@ const SidebarMenuItems: FC = () => {
     return (
       <>
         <Menu.Item as="a" href="https://junkato.jp/">
-          <Image avatar src="https://junkato.jp/images/junkato.jpg" />
+          <img
+            src="https://junkato.jp/images/junkato.jpg"
+            className="ui avatar image"
+            alt=""
+          />
           Top page
         </Menu.Item>
-        <Link href="/" passHref legacyBehavior>
-          <Menu.Item active as="a">
-            <Icon name="pencil" />
-            Blog
-          </Menu.Item>
+        <Link href="/" className="item active">
+          <Icon name="pencil" />
+          Blog
         </Link>
         <Menu.Item as="a" href="https://junkato.jp/#contact">
           <Icon name="address card" />

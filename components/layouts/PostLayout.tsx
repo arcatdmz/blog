@@ -12,10 +12,8 @@ import {
 
 import { BlogContext } from "../../lib/BlogContext";
 import { PostIface } from "../../lib/PostIface";
-
 import { Date } from "../Date";
 import { PageTitle } from "../PageTitle";
-import { BlogSeo } from "../SEO";
 import { ShareButtons } from "../ShareButtons";
 import { Tag } from "../Tag";
 
@@ -59,40 +57,31 @@ const PostLayout: FC<PostLayoutProps> = ({
 
   return (
     <Container id="main">
-      <BlogSeo url={url} {...frontMatter} />
       <article className="post-item">
         <Menu className="top nav" fluid secondary>
-          <Link href={sitePath} passHref legacyBehavior>
-            <Menu.Item
-              as="a"
-              icon={<Icon circular name="home" />}
-              title={language === "ja" ? "ブログのトップへ" : "Blog top page"}
-            />
+          <Link
+            href={sitePath}
+            className="item"
+            title={language === "ja" ? "ブログのトップへ" : "Blog top page"}
+          >
+            <Icon circular name="home" />
           </Link>
           {prev && (
             <Link
               href={`${sitePath}posts/${prev.slug}/`}
-              passHref
-              legacyBehavior
+              className="item"
+              title={prev.title}
             >
-              <Menu.Item
-                as="a"
-                icon={<Icon circular name="angle left" />}
-                title={prev.title}
-              />
+              <Icon circular name="angle left" />
             </Link>
           )}
           {next && (
             <Link
               href={`${sitePath}posts/${next.slug}/`}
-              passHref
-              legacyBehavior
+              className="item"
+              title={next.title}
             >
-              <Menu.Item
-                as="a"
-                icon={<Icon circular name="angle right" title={next.title} />}
-                title={next.title}
-              />
+              <Icon circular name="angle right" title={next.title} />
             </Link>
           )}
           <Menu.Menu position="right" className="share-buttons">
@@ -161,25 +150,21 @@ const PostLayout: FC<PostLayoutProps> = ({
             {prev && (
               <Link
                 href={`${sitePath}posts/${prev.slug}/`}
-                passHref
-                legacyBehavior
+                className="item"
+                title={prev.title}
               >
-                <Menu.Item as="a">
-                  <Icon name="angle left" />
-                  {prev.title}
-                </Menu.Item>
+                <Icon name="angle left" />
+                {prev.title}
               </Link>
             )}
             {next && (
               <Link
                 href={`${sitePath}posts/${next.slug}/`}
-                passHref
-                legacyBehavior
+                className="item"
+                title={next.title}
               >
-                <Menu.Item as="a">
-                  <Icon name="angle right" />
-                  {next.title}
-                </Menu.Item>
+                <Icon name="angle right" />
+                {next.title}
               </Link>
             )}
             <Menu.Menu position="right">
@@ -191,14 +176,12 @@ const PostLayout: FC<PostLayoutProps> = ({
                   language === "ja" ? "ページのトップへ" : "Top of this page"
                 }
               />
-              <Link href={sitePath} passHref legacyBehavior>
-                <Menu.Item
-                  as="a"
-                  icon="home"
-                  title={
-                    language === "ja" ? "ブログのトップへ" : "Blog top page"
-                  }
-                />
+              <Link
+                href={sitePath}
+                className="icon item"
+                title={language === "ja" ? "ブログのトップへ" : "Blog top page"}
+              >
+                <Icon name="home" />
               </Link>
             </Menu.Menu>
           </Menu>

@@ -1,19 +1,18 @@
 ---
 title: ProcessingとPhybotsでARToolKitマーカーを検出する
-date: "2012-12-23"
+date: '2012-12-23'
 tags:
   - phybots
   - programming
   - research
-summary_generated: >-
-  Java/Processing で小型ロボットを簡単に動かせるツールキット Phybots
-  は、オープンソースで公開されてしばらく経ちますが、正直なところ忙しくてあまり管理に手が回っておらず、すぐ使える配布ファイルもありませんでした。#五十嵐
-  ERATOのポスターセッション...
+summary_generated: |2-
+
+    Java/Processing で小型ロボットを簡単に動かせるツールキット Phybots は、オープンソースで公開されてしばらく経ちますが、正直なところ忙しくてあまり管理に手が回っておらず、すぐ使える配布ファイルもありませんでした。#五十嵐 ERATOのポスターセッ...
 coverImage: phybots-marker-detection.jpg
-altUrl: "https://junkato.jp/ja/blog/2012/12/23/phybots-processing-artoolkit/"
+altUrl: 'https://junkato.jp/ja/blog/2012/12/23/phybots-processing-artoolkit/'
 ---
 
-<figure className="right">
+<figure class="right">
   <a href="/images/phybots-overview.jpg"><img src="/images/phybots-overview-300x211.jpg" alt="Phybotsのハードウェアセットアップ" /></a>
 </figure>
 
