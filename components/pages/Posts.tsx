@@ -1,11 +1,11 @@
 "use client";
+
 import Link from "next/link";
 import { FC, useContext } from "react";
+import { Header } from "semantic-ui-react";
 
 import { BlogContext } from "../../lib/BlogContext";
 import { PostIface } from "../../lib/PostIface";
-
-import { Header } from "semantic-ui-react";
 import { BaseLayout } from "../layouts/BaseLayout";
 import { ListLayout } from "../layouts/ListLayout";
 

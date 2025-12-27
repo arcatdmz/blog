@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FC, useContext } from "react";
-import { Icon, Image, Menu } from "semantic-ui-react";
+import { Icon, Menu } from "semantic-ui-react";
 
 import { BlogContext } from "../../lib/BlogContext";
 

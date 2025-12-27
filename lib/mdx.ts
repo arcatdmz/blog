@@ -112,6 +112,9 @@ export async function getFileBySlug(
   const mdxPath = path.join(root, "src", language, `${slug}.mdx`);
   const mdPath = path.join(root, "src", language, `${slug}.md`);
   const filePath = fs.existsSync(mdxPath) ? mdxPath : mdPath;
+  if (!fs.existsSync(filePath)) {
+    return null;
+  }
   const source = fs.readFileSync(filePath, "utf8");
 
   const { data, content } = matter(source);

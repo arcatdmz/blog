@@ -1,11 +1,11 @@
 "use client";
+
 import Link from "next/link";
 import { FC, useContext } from "react";
-import { Grid, Image, List, Segment } from "semantic-ui-react";
+import { Grid, List, Segment } from "semantic-ui-react";
 
 import { BlogContext } from "../lib/BlogContext";
 import { PostIface } from "../lib/PostIface";
-
 import { Date } from "./Date";
 import { Tag } from "./Tag";
 

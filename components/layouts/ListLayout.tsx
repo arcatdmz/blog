@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import {
   ChangeEvent,
   FC,
@@ -12,7 +13,6 @@ import { Container, Form, Header, Segment } from "semantic-ui-react";
 
 import { BlogContext } from "../../lib/BlogContext";
 import { PostIface } from "../../lib/PostIface";
-
 import { ListItem } from "../ListItem";
 
 interface ListLayoutProps {

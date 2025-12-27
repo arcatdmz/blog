@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
+
 import { BlogContext } from "../lib/BlogContext";
 import websiteJson from "../website.json";
 
@@ -9,7 +10,10 @@ interface BlogContextProviderProps {
   language: string;
 }
 
-export function BlogContextProvider({ children, language }: BlogContextProviderProps) {
+export function BlogContextProvider({
+  children,
+  language
+}: BlogContextProviderProps) {
   return (
     <BlogContext.Provider
       value={{

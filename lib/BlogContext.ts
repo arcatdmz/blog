@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import { createContext } from "react";
 import websiteJson from "../website.json";
 

@@ -11,7 +11,6 @@ import { Menu, Sidebar } from "semantic-ui-react";
 
 import { BlogContext } from "../../lib/BlogContext";
 import { SidebarMenuItems } from "../contents/SidebarMenuItems";
-
 import { Footer } from "../Footer";
 import { Header } from "../Header";
 

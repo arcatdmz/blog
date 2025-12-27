@@ -1,10 +1,11 @@
-import { FC, useContext } from "react";
+import { FC } from "react";
 import { Container, Header, Segment } from "semantic-ui-react";
 
-import { BlogContext } from "../../lib/BlogContext";
+interface NotFoundLayoutProps {
+  language?: string;
+}
 
-const NotFoundLayout: FC = () => {
-  const { language } = useContext(BlogContext);
+export const NotFoundLayout: FC<NotFoundLayoutProps> = ({ language }) => {
   return (
     <Container id="main">
       <Header as="h1">404 Not Found</Header>
@@ -18,5 +19,3 @@ const NotFoundLayout: FC = () => {
     </Container>
   );
 };
-
-export { NotFoundLayout };

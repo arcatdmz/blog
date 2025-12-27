@@ -1,9 +1,9 @@
 "use client";
+
 import { FC, useContext } from "react";
 
 import { BlogContext } from "../../lib/BlogContext";
 import { PostIface } from "../../lib/PostIface";
-
 import { BaseLayout } from "../layouts/BaseLayout";
 import { ListLayout } from "../layouts/ListLayout";
 

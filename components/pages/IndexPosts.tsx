@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { FC, useContext } from "react";
 import { Divider, Grid, Header, Icon, Menu, Segment } from "semantic-ui-react";
@@ -7,7 +8,6 @@ import { BlogContext } from "../../lib/BlogContext";
 import { PostIface } from "../../lib/PostIface";
 import { About } from "../contents/About";
 import { PostsForStudents } from "../contents/PostsForStudents";
-
 import { BaseLayout } from "../layouts/BaseLayout";
 import { ListLayout } from "../layouts/ListLayout";
 

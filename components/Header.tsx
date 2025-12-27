@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import Link from "next/link";
 import { FC, MouseEventHandler, useCallback, useContext } from "react";
 import { Icon, Menu } from "semantic-ui-react";

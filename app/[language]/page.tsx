@@ -1,24 +1,33 @@
-import { Metadata } from 'next'
-import { IndexPosts } from '../../components/pages/IndexPosts'
-import { BlogContextProvider } from '../../components/BlogContextProvider'
-import { getAllFilesFrontMatter } from '../../lib/mdx'
-import websiteJson from '../../website.json'
+import { Metadata } from "next";
+
+import { BlogContextProvider } from "../../components/BlogContextProvider";
+import { NotFoundLayout } from "../../components/layouts/NotFoundLayout";
+import { IndexPosts } from "../../components/pages/IndexPosts";
+import { getAllFilesFrontMatter } from "../../lib/mdx";
+import { PostIface } from "../../lib/PostIface";
+import websiteJson from "../../website.json";
 
 export async function generateStaticParams() {
-  const languages = Object.keys(websiteJson.languages).filter(l => l !== 'default')
-  return languages.map(language => ({ language }))
+  const languages = Object.keys(websiteJson.languages).filter(
+    l => l !== "default"
+  );
+  return languages.map(language => ({ language }));
 }
 
-export async function generateMetadata({ params }: { params: { language: string } }): Promise<Metadata> {
-  const langConfig = websiteJson.languages[params.language] || websiteJson.languages.default
-  const { siteUrl, locale, author, title, description, bannerUrl } = langConfig
-  
+export async function generateMetadata(props: {
+  params: Promise<{ language: string }>;
+}): Promise<Metadata> {
+  const params = await props.params;
+  const langConfig =
+    websiteJson.languages[params.language] || websiteJson.languages.default;
+  const { siteUrl, locale, author, title, description, bannerUrl } = langConfig;
+
   return {
     title,
     description,
     authors: [{ name: author }],
     openGraph: {
-      type: 'website',
+      type: "website",
       locale,
       url: siteUrl,
       title,
@@ -34,15 +43,27 @@ export async function generateMetadata({ params }: { params: { language: string 
         ]
       })
     }
-  }
+  };
 }
 
-export default async function LangHome({ params }: { params: { language: string } }) {
-  const posts = await getAllFilesFrontMatter(params.language)
-  const filteredPosts = posts && posts.slice(0, websiteJson.maxPosts)
+export default async function LangHome(props: {
+  params: Promise<{ language: string }>;
+}) {
+  const params = await props.params;
+  let filteredPosts: PostIface[];
+  if (params.language !== "ja") {
+    filteredPosts = null;
+  } else {
+    const posts = await getAllFilesFrontMatter(params.language);
+    filteredPosts = posts && posts.slice(0, websiteJson.maxPosts);
+  }
   return (
     <BlogContextProvider language={params.language}>
-      <IndexPosts posts={filteredPosts} />
+      {filteredPosts ? (
+        <IndexPosts posts={filteredPosts} />
+      ) : (
+        <NotFoundLayout language={params.language} />
+      )}
     </BlogContextProvider>
-  )
+  );
 }

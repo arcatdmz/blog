@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import { FC, ReactNode } from "react";
 import { Header } from "semantic-ui-react";
 

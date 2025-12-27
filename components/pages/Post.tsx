@@ -1,7 +1,6 @@
-"use client"
+"use client";
 
 import { PostIface } from "../../lib/PostIface";
-
 import { BaseLayout } from "../layouts/BaseLayout";
 import { PostLayout } from "../layouts/PostLayout";
 
@@ -19,7 +18,7 @@ export interface PostProps {
 export const Post = ({ post, prev, next, language, sourceRoot }: PostProps) => {
   const { contentHtml, frontMatter } = post;
   const sourceUrl = `${sourceRoot}${language}/${frontMatter.slug}.md`;
-  
+
   return (
     <BaseLayout sourceUrl={sourceUrl}>
       <PostLayout frontMatter={frontMatter} prev={prev} next={next}>

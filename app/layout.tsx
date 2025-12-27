@@ -1,10 +1,10 @@
-import { Metadata } from "next";
 import "highlight.js/styles/github-dark-dimmed.css";
-import "../css/style.css";
-
+import { Metadata } from "next";
 import { ReactNode } from "react";
-import { RootLayoutClient } from "./RootLayoutClient";
+
+import "../css/style.css";
 import websiteJson from "../website.json";
+import { RootLayoutClient } from "./RootLayoutClient";
 
 const { locale, title, description, siteUrl, bannerUrl, author } =
   websiteJson.languages.default;

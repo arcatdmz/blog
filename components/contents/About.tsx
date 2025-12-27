@@ -1,5 +1,6 @@
 import { FC, useContext } from "react";
-import { Header, Image } from "semantic-ui-react";
+import { Header } from "semantic-ui-react";
+
 import { BlogContext } from "../../lib/BlogContext";
 
 interface AboutProps {
