@@ -118,6 +118,7 @@ export async function getFileBySlug(
 
   // Convert Markdown to HTML using remark and rehype with modern plugins
   const processedContent = await remark()
+    .use(remarkEmbedder, { transformers: [wrappedOembedTransformer] })
     .use(remarkCodeTitles as any)
     .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true })
