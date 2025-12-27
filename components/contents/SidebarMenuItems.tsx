@@ -17,11 +17,9 @@ const SidebarMenuItems: FC = () => {
           />
           トップ
         </Menu.Item>
-        <Link href="/ja" passHref legacyBehavior>
-          <Menu.Item active as="a">
-            <Icon name="pencil" />
-            ブログ
-          </Menu.Item>
+        <Link href="/ja" className="item active">
+          <Icon name="pencil" />
+          ブログ
         </Link>
         <Menu.Item as="a" href="https://junkato.jp/ja/#contact">
           <Icon name="address card" />
@@ -68,11 +66,9 @@ const SidebarMenuItems: FC = () => {
           />
           Top page
         </Menu.Item>
-        <Link href="/" passHref legacyBehavior>
-          <Menu.Item active as="a">
-            <Icon name="pencil" />
-            Blog
-          </Menu.Item>
+        <Link href="/" className="item active">
+          <Icon name="pencil" />
+          Blog
         </Link>
         <Menu.Item as="a" href="https://junkato.jp/#contact">
           <Icon name="address card" />

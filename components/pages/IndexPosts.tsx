@@ -58,11 +58,13 @@ const IndexPosts: FC<IndexPostsPageProps> = ({ posts }) => {
         <Divider />
         <footer>
           <Menu stackable>
-            <Link href={`${sitePath}posts`} passHref legacyBehavior>
-              <Menu.Item as="a" position="right">
-                <Icon name="angle down" />
-                {language === "ja" ? "すべての投稿を見る" : "See all posts"}
-              </Menu.Item>
+            <Link
+              href={`${sitePath}posts`}
+              className="right item"
+              title={language === "ja" ? "すべての投稿を見る" : "See all posts"}
+            >
+              <Icon name="angle down" />
+              {language === "ja" ? "すべての投稿を見る" : "See all posts"}
             </Link>
           </Menu>
         </footer>

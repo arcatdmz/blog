@@ -10,11 +10,7 @@ const CustomLink: FC<
   const isAnchorLink = href && href.startsWith("#");
 
   if (isInternalLink) {
-    return (
-      <Link href={href} legacyBehavior>
-        <a {...rest} />
-      </Link>
-    );
+    return <Link href={href} {...rest} />;
   }
 
   if (isAnchorLink) {
