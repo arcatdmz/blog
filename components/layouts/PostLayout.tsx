@@ -24,7 +24,7 @@ interface PostLayoutProps {
   prev?: PostIface;
 }
 
-const PostLayout: FC<PostLayoutProps> = ({
+export const PostLayout: FC<PostLayoutProps> = ({
   children,
   frontMatter,
   next,
@@ -137,8 +137,14 @@ const PostLayout: FC<PostLayoutProps> = ({
               </List.Item>
               {altUrl && (
                 <List.Item className="altlink">
-                  {language === "ja" ? "旧ブログページ: " : "Old page: "}
-                  <a href={altUrl}>{altUrl}</a>
+                  {/https?:\/\/junkato\.jp\//.test(altUrl)
+                    ? language === "ja"
+                      ? "旧ブログページ: "
+                      : "Old page: "
+                    : language === "ja"
+                    ? "こちらでも読めます: "
+                    : "Also available at: "}
+                  <a href={altUrl}>{getAltUrlLabel(altUrl)}</a>
                 </List.Item>
               )}
             </List>
@@ -191,4 +197,13 @@ const PostLayout: FC<PostLayoutProps> = ({
   );
 };
 
-export { PostLayout };
+function getAltUrlLabel(altUrl: string): string {
+  if (/https?:\/\/junkato\.jp\//.test(altUrl)) {
+    return "junkato.jp";
+  } else if (/https?:\/\/www\.facebook\.com\//.test(altUrl)) {
+    return "Facebook";
+  } else if (/https?:\/\/twitter\.com\//.test(altUrl)) {
+    return "Twitter";
+  }
+  return altUrl;
+}
