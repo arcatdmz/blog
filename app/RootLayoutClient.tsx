@@ -4,10 +4,8 @@ import Script from "next/script";
 import { ReactNode } from "react";
 
 import { GA_TRACKING_ID, useGoogleAnalytics } from "../lib/useGoogleAnalytics";
-import { useTypeSquareJS } from "../lib/useTypeSquareJS";
 
 export function RootLayoutClient({ children }: { children: ReactNode }) {
-  useTypeSquareJS();
   useGoogleAnalytics();
 
   return (
