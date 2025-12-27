@@ -95,6 +95,8 @@ article.post-item figure img {
   width: 100%;
   height: auto;
   display: inline-block;
+  line-height: 0;
+  vertical-align: bottom;
 }
 
 article.post-item figure > .columns {
