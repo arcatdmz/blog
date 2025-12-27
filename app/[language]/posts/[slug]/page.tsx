@@ -30,11 +30,13 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const params = await props.params;
   const post = await getFileBySlug(params.slug, params.language);
-  const { title, summary, date, tags } = post.frontMatter;
+  const { title, date, tags, coverImage, summary } = post.frontMatter;
   const langConfig =
     websiteJson.languages[params.language] || websiteJson.languages.default;
   const { siteUrl, locale, author, bannerUrl } = langConfig;
   const url = `${siteUrl}posts/${params.slug}/`;
+  const imageUrl =
+    (coverImage && `${websiteJson.imageRoot}${coverImage}`) || bannerUrl;
 
   return {
     title,
@@ -48,13 +50,11 @@ export async function generateMetadata(props: {
       description: summary || langConfig.description,
       publishedTime: date,
       tags: tags || [],
-      ...(bannerUrl && {
+      ...(imageUrl && {
         images: [
           {
-            url: bannerUrl,
-            alt: title,
-            width: 1200,
-            height: 600
+            url: imageUrl,
+            alt: title
           }
         ]
       })
