@@ -5,7 +5,7 @@ const nextConfig = {
   output: "export",
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
   trailingSlash: true,
-  webpack: (config, { dev, isServer }) => {
+  webpack: config => {
     config.module.rules.push({
       test: /\.(png|jpe?g|gif|mp4)$/i,
       use: [
@@ -18,16 +18,6 @@ const nextConfig = {
         }
       ]
     });
-
-    if (!dev && !isServer) {
-      // Replace React with Preact only in client production build
-      Object.assign(config.resolve.alias, {
-        react: "preact/compat",
-        "react-dom/test-utils": "preact/test-utils",
-        "react-dom": "preact/compat"
-      });
-    }
-
     return config;
   }
 };
