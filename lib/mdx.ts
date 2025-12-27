@@ -72,7 +72,8 @@ const wrappedOembedTransformer: Transformer = {
           [
             "https://twitter.com/*",
             "https://twitter.com/*/status/*",
-            "https://*.twitter.com/*/status/*"
+            "https://*.twitter.com/*/status/*",
+            "https://x.com/*/status/*"
           ],
           urlString
         )
