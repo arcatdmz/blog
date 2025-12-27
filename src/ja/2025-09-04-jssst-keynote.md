@@ -3,6 +3,7 @@ title: 現場に根差したツール研究（日本ソフトウェア科学会�
 date: "2025-09-04"
 tags:
   - research
+  - science
   - discussion
 coverImage: 2025-09-04-IMG_6902.jpg
 summary_generated: >-
@@ -11,6 +12,7 @@ summary_generated: >-
 summary: >-
   日本ソフトウェア科学会 第 42
   回大会で「現場に根差したツール研究　プログラミング、IoT、音楽動画からアニメまで」と題して基調講演しました。これまでに私が取り組んできた研究のなかでも「よい研究」と思っている自信作を紹介し、自分が思う「よさ」の源として、二種類の一般性について議論しました。
+altUrl: "https://www.facebook.com/jun.kato/posts/pfbid0QB5o8xDbzY39MtQAVvTbJbtSF2L2FavYsb2b8LnZCPCVcKMmPFDx81ZizVZ4d5Bql"
 ---
 
 日本ソフトウェア科学会 第 42 回大会で「現場に根差したツール研究　プログラミング、IoT、音楽動画からアニメまで」と題して基調講演しました。
@@ -27,6 +29,11 @@ summary: >-
 
 ---
 
+<figure class="right">
+  <a href="/images/2025-09-04-hci-criticism.png"><img src="/images/2025-09-04-hci-criticism.jpg" alt="" /></a>
+  <figcaption>HCI研究は場当たり的？</figcaption>
+</figure>
+
 ## 二種類の一般性
 
 これまでに私が取り組んできた研究のなかでも「よい研究」と思っている自信作を紹介し、自分が思う「よさ」の源として、二種類の一般性（generalizability, generality）について議論しました。Human-Computer Interaction 研究はしばしば、場当たり的で generalizability（一般化可能性）が欠けているとして批判されます。本講演はそれへのアンサーでもあります。
@@ -35,12 +42,22 @@ summary: >-
 
 ここで、もう一種類の一般性、generality は仮に学問的普遍性と訳しています。半分、昨年度の研究パートナー Michel Beaudouin-Lafon の受け売りですが、コンピュータ科学は、現象を理論立てて理解可能にする研究をもっと重視したほうがいいように感じています。
 
+<figure class="right">
+  <a href="/images/2025-09-04-generalizability-generality.png"><img src="/images/2025-09-04-generalizability-generality.jpg" alt="" /></a>
+  <figcaption>二種類の一般性を行き来する日々</figcaption>
+</figure>
+
 ## 二種類の一般性は両立できる
 
 コンピュータ科学において学問的普遍性が軽視されてきたことの一つの表れが WEIRD（研究の西洋バイアス）問題です。
 ボーカロイド音楽みたいに、コンピュータ科学の範疇ではマイノリティの文化や、ドメイン固有のインタラクション設計を扱うような研究は、generalizability こそ低いかもしれませんが、前提条件を明確にしている点で generality にはしっかり貢献しています。WEIRDness は暗黙の前提を語らないからこそ問題なのです。
 
 そしてこれは、generalizability は無意味、generality が大事、という一面的な話でもなく、generalizability と generality の両方への貢献を自覚的に書けたとき、最も「よい」、面白い論文になったなあと感じます。それが、[ACM CHI '24 で刊行したアニメの絵コンテ制作ツール論文](https://junkato.jp/ja/griffith)でした。
+
+<figure class="right">
+  <a href="/images/2025-09-04-science-of-software-tools.png"><img src="/images/2025-09-04-science-of-software-tools.jpg" alt="" /></a>
+  <figcaption>ソフトウェアの「ツールの科学」へ</figcaption>
+</figure>
 
 ## ゆっくり進むコンピュータ科学者
 
