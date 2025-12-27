@@ -152,6 +152,7 @@ article.post-item figure.center > .columns > img {
 
 article.post-item figure.center img {
   max-width: max-content !important;
+  display: block;
   margin: auto;
 }
 
