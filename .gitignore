@@ -6,3 +6,4 @@ public/fonts/
 public/semantic/
 public/stylesheets/
 public/**/index.xml
+next-env.d.ts
