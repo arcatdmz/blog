@@ -29,7 +29,7 @@ jobs:
           npm run download
           npm run build
       - name: Deploy pages
-        uses: burnett01/rsync-deployments@7.0.2
+        uses: burnett01/rsync-deployments@v8
         with:
           switches: -avzr --delete-after --exclude="/.htaccess"
           path: out/
