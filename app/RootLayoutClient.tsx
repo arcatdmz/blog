@@ -1,13 +1,10 @@
 "use client";
 
-import { MDXProvider } from "@mdx-js/react";
-import { ReactNode } from "react";
 import Script from "next/script";
-import { MDXComponents } from "../components/MDXComponents";
-import { BlogContext } from "../lib/BlogContext";
-import { useGoogleAnalytics, GA_TRACKING_ID } from "../lib/useGoogleAnalytics";
+import { ReactNode } from "react";
+
+import { GA_TRACKING_ID, useGoogleAnalytics } from "../lib/useGoogleAnalytics";
 import { useTypeSquareJS } from "../lib/useTypeSquareJS";
-import websiteJson from "../website.json";
 
 export function RootLayoutClient({ children }: { children: ReactNode }) {
   useTypeSquareJS();
@@ -37,9 +34,7 @@ export function RootLayoutClient({ children }: { children: ReactNode }) {
           __html: `window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));`
         }}
       />
-      <MDXProvider components={MDXComponents}>
-        {children}
-      </MDXProvider>
+      {children}
     </>
   );
 }
