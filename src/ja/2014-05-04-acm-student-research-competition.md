@@ -1,15 +1,14 @@
 ---
 title: ACM Student Research Competition参加のすすめ
-date: "2014-05-04"
+date: '2014-05-04'
 tags:
   - research
   - student
   - university
-summary_generated: >-
-  CHI 2009 Closing Plenary - 参加者全員に向けてSRC勝者がアナウンスされたACM
-  の国際会議には、通常の登壇発表やポスター発表とは別に、Student Research Competition
-  (SRC)という学生対象の研究コンペが用意されているこ...
-altUrl: "https://junkato.jp/ja/blog/2014/05/04/acm-student-research-competition/"
+summary_generated: |2-
+
+    CHI 2009 Closing Plenary - 参加者全員に向けてSRC勝者がアナウンスされたACM の国際会議には、通常の登壇発表やポスター発表とは別に、Student Research Competition (SRC)という学生対象の研究コンペが用意されて...
+altUrl: 'https://junkato.jp/ja/blog/2014/05/04/acm-student-research-competition/'
 ---
 
 <figure class="right">

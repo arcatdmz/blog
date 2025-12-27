@@ -2,7 +2,7 @@
 title: >-
   Lights, Animation, Interaction! (Society for Animation Studies 34th Annual
   Conference)
-date: "2023-06-20"
+date: '2023-06-20'
 tags:
   - research
   - anime
@@ -12,9 +12,9 @@ summary: >-
   conference three years in a row! This year, I discussed how the "animating
   lights" contribute to the stage performances.
 summary_generated: >-
-  I&#x27;ve attended and given talks at the Society for Animation Studies annual
+  I've attended and given talks at the Society for Animation Studies annual
   conference three years in a row! For the past two years, I discussed how
-  &quot;anime&quot; is made and how we (compute...
+  &quot;anime&quot; is made and how we (computer sci...
 ---
 
 I've attended and given talks at [the Society for Animation Studies annual conference](https://www.sas34.org) three years in a row!

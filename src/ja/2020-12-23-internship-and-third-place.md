@@ -1,6 +1,6 @@
 ---
 title: インターンは居場所作り
-date: "2020-12-23"
+date: '2020-12-23'
 tags:
   - discussion
   - life
@@ -10,11 +10,11 @@ tags:
 coverImage: DSC01972-scaled.jpg
 summary_generated: >-
   この記事は Microsoft Research Internship アルムナイ Advent Calendar の 23
-  日目です。自分は今、産業技術総合研究所に主任研究員として勤める傍ら、アニメ制作会社アーチの技術顧問を兼業しています。どちらもやっていることの根っこは...
-altUrl: "https://junkato.jp/ja/blog/2020/12/23/internship-and-third-place/"
+  日目です。自分は今、産業技術総合研究所に主任研究員として勤める傍ら、アニメ会社アーチの技術顧問を兼業しています。どちらもやっていることの根っこは同じ...
+altUrl: 'https://junkato.jp/ja/blog/2020/12/23/internship-and-third-place/'
 ---
 
-この記事は [Microsoft Research Internship アルムナイ Advent Calendar](https://adventar.org/calendars/5107) の 23 日目です。自分は今、産業技術総合研究所に主任研究員として勤める傍ら、アニメ制作会社アーチの技術顧問を兼業しています。どちらもやっていることの根っこは同じで、 Human-Computer Interaction (HCI) とくに [Programming Experience (PX)](https://sigpx.org/) の向上を通じて人々の創造的な活動を支援する Creativity Support の研究を専門にしています。
+この記事は [Microsoft Research Internship アルムナイ Advent Calendar](https://adventar.org/calendars/5107) の 23 日目です。自分は今、産業技術総合研究所に主任研究員として勤める傍ら、アニメ会社アーチの技術顧問を兼業しています。どちらもやっていることの根っこは同じで、 Human-Computer Interaction (HCI) とくに [Programming Experience (PX)](https://sigpx.org/) の向上を通じて人々の創造的な活動を支援する Creativity Support の研究を専門にしています。
 
 今回はフリーテーマということで、つらつらと書いてみたところ、居場所を探す、見つける、新しく作るといったような内容になりました。ご笑覧ください。
 
@@ -61,7 +61,7 @@ https://www.youtube.com/watch?v=Yz4Ucrw95bQ
 
 ### Arch Research
 
-そして、[Arch Research](https://research.archinc.jp/)。アニメ制作会社アーチの技術顧問として研究開発をリードしています。具体的には、絵コンテを描ける Web ベースのツール「[Griffith](https://research.archinc.jp/griffith/)」を作ったり、絵コンテの制作プロセスなどアニメ作りの技術を紹介する小冊子「[アニメ技術](https://research.archinc.jp/anitech/)」を発刊したりしています。[Arch Research のメンバー](https://research.archinc.jp/members/)は極めて少ないのですが、じつはその外縁にアニメの監督さんやアニメ作りに興味を持つ情報技術系の人たちなどを加えた「アーチ技術部」というコミュニティがあり、アニメ技術は[放課後 R&D](https://research.archinc.jp/anitech/2019spring/research-club/)を楽しんでいる技術部メンバーの刊行物という位置付けになっています。
+そして、[Arch Research](https://research.archinc.jp/)。アニメ会社アーチの技術顧問として研究開発をリードしています。具体的には、絵コンテを描ける Web ベースのツール「[Griffith](https://research.archinc.jp/griffith/)」を作ったり、絵コンテの制作プロセスなどアニメ作りの技術を紹介する小冊子「[アニメ技術](https://research.archinc.jp/anitech/)」を発刊したりしています。[Arch Research のメンバー](https://research.archinc.jp/members/)は極めて少ないのですが、じつはその外縁にアニメの監督さんやアニメ作りに興味を持つ情報技術系の人たちなどを加えた「アーチ技術部」というコミュニティがあり、アニメ技術は[放課後 R&D](https://research.archinc.jp/anitech/2019spring/research-club/)を楽しんでいる技術部メンバーの刊行物という位置付けになっています。
 
 <figure>
   <a href="https://arch-research.booth.pm/"><img src="/images/arch-research-twitter-hero-1024x341.jpg" alt="" /></a>
