@@ -59,12 +59,23 @@ const matchUrls = (urls: string[], urlString: string) =>
     new RegExp(scheme.replace(/\*/g, "(.*)")).test(urlString)
   );
 
+const handleHtml = (html: string) => {
+  return !html
+    ? html
+    : html.replaceAll(
+        /[\x3C<]script async src="https?:\/\/platform\.twitter\.com\/widgets\.js" charset="utf-8">[\x3C<]\/script>\s+/g,
+        ""
+      );
+};
+
 const wrappedOembedTransformer: Transformer = {
   name: "transformer-oembed",
   shouldTransform: oembedTransformer.shouldTransform,
   getHTML: async urlString => {
     try {
-      const html = await oembedTransformer.getHTML(urlString, oembedConfig);
+      const html = handleHtml(
+        await oembedTransformer.getHTML(urlString, oembedConfig)
+      );
       let provider: string;
 
       if (
