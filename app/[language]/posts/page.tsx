@@ -57,7 +57,7 @@ export default async function PostsPage(props: {
 }) {
   const params = await props.params;
   const posts = await getAllFilesFrontMatter(params.language);
-  const rss = generateRss(posts, { path: `/${params.language}/index.xml` });
+  const rss = generateRss(posts, { path: `/${params.language}/index.xml`, language: params.language });
   const rssPath = path.join(root, "public", params.language);
   fs.mkdirSync(rssPath, { recursive: true });
   fs.writeFileSync(path.join(rssPath, "index.xml"), rss);
