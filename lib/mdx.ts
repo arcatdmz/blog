@@ -70,7 +70,13 @@ const handleHtml = (html: string) => {
 
 const wrappedOembedTransformer: Transformer = {
   name: "transformer-oembed",
-  shouldTransform: oembedTransformer.shouldTransform,
+  shouldTransform: async urlString => {
+    try {
+      return await oembedTransformer.shouldTransform(urlString);
+    } catch (_error) {
+      return false;
+    }
+  },
   getHTML: async urlString => {
     try {
       const html = handleHtml(

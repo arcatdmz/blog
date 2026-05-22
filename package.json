@@ -5,7 +5,7 @@
   "description": "Source code of https://blog.junkato.jp",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch src --ext md,mdx --exec \"next dev --turbopack\"",
+    "start": "next start",
     "clean": "del-cli -f .next out",
     "dev": "next dev --turbopack",
     "build": "npm run build:redirections && npm run build:next",
@@ -13,7 +13,7 @@
     "build:redirections": "node scripts/update-redirections.mjs",
     "export": "npm run build",
     "download": "cd public && fetch-github-release arcatdmz arcatdmz.github.io",
-    "prettify": "prettier --write ./{components,lib,pages}/**/*.{ts,tsx}",
+    "prettify": "prettier --write ./{app,components,lib,scripts}/**/*.{js,mjs,ts,tsx}",
     "posts": "npm run posts:prettify && npm run posts:summarize",
     "posts:prettify": "prettier --write ./src/**/*.{md,mdx}",
     "posts:summarize": "node scripts/add-summary.mjs"
@@ -39,8 +39,8 @@
     "micromark": "^4.0.2",
     "micromark-extension-gfm": "^3.0.0",
     "next": "16.1.1",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-share": "^5.2.2",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-highlight": "^7.0.2",
@@ -56,15 +56,14 @@
   "devDependencies": {
     "@terascope/fetch-github-release": "^0.7.6",
     "@types/node": "^22.15.30",
-    "@types/react": "19.2.7",
-    "cross-env": "^7.0.3",
+    "@types/react": "^18.3.29",
+    "@types/react-dom": "^18.3.7",
     "del-cli": "^7.0.0",
     "html-parse-stringify": "^2.0.3",
-    "nodemon": "^3.1.11",
-    "prettier": "^2.8.8",
+    "prettier": "^3.6.2",
     "typescript": "^5.1.3"
   },
   "overrides": {
-    "@types/react": "19.2.7"
+    "@types/react": "^18.3.29"
   }
 }
