@@ -13,7 +13,7 @@
 ## Production build
 
 ```sh
-$ npm ci --no-optional
+$ npm ci --omit=optional
 $ npm run download
 $ npm run build
 $ npm run export
