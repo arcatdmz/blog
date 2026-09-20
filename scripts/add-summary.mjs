@@ -7,6 +7,10 @@ import path from "path";
 
 import config from "./config.mjs";
 
+// Preserve the old parser's omission of whitespace-only text after sibling tags.
+const keepSummaryNode = (node, index) =>
+  index === 0 || node.type !== "text" || node.content.trim() !== "";
+
 const toString = node => {
   if (node.type === "text") {
     return node.content;
@@ -14,7 +18,7 @@ const toString = node => {
   if (!Array.isArray(node.children)) {
     return "";
   }
-  return node.children.map(toString).join("");
+  return node.children.filter(keepSummaryNode).map(toString).join("");
 };
 
 const readFiles = async ({ language, dir, summaryLength }) => {
@@ -31,7 +35,7 @@ const readFiles = async ({ language, dir, summaryLength }) => {
           extensions: [gfm()],
           htmlExtensions: [gfmHtml()]
         });
-        const ast = HTML.parse(html);
+        const ast = HTML.parse(html).filter(keepSummaryNode);
         const headerIndex = ast.findIndex(
           v => v.type === "tag" && /h[0-9]+/.test(v.name)
         );

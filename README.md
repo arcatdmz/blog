@@ -12,13 +12,18 @@
 
 ## Production build
 
+Use Node.js 24 or later (CI uses Node.js 24).
+
 ```sh
-$ npm ci --omit=optional
+$ npm ci
 $ npm run download
 $ npm run build
 $ npm run export
 $ npx http-server out
 ```
+
+React and its types stay on version 18 because Semantic UI React does not yet
+support React 19. Node types track the Node.js 24 runtime used in CI.
 
 ## Debug build
 
