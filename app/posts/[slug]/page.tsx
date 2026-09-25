@@ -10,6 +10,7 @@ import {
   getFiles
 } from "../../../lib/mdx";
 import websiteJson from "../../../website.json";
+import { resolveImageUrl } from "../../../lib/resolveImageUrl";
 
 export async function generateStaticParams() {
   const posts = await getFiles();
@@ -21,9 +22,12 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const params = await props.params;
   const post = await getFileBySlug(params.slug);
-  const { title, summary, date, tags } = post.frontMatter;
+  const { title, summary, date, tags, coverImage } = post.frontMatter;
   const { siteUrl, locale, author, bannerUrl } = websiteJson.languages.default;
   const url = `${siteUrl}posts/${params.slug}/`;
+  const imageUrl =
+    (coverImage && resolveImageUrl(coverImage, websiteJson.imageRoot)) ||
+    bannerUrl;
 
   return {
     title,
@@ -37,10 +41,10 @@ export async function generateMetadata(props: {
       description: summary || websiteJson.languages.default.description,
       publishedTime: date,
       tags: tags || [],
-      ...(bannerUrl && {
+      ...(imageUrl && {
         images: [
           {
-            url: bannerUrl,
+            url: imageUrl,
             alt: title,
             width: 1200,
             height: 600

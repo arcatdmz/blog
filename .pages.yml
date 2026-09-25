@@ -1,0 +1,132 @@
+media:
+  input: public/images
+  output: /images
+  categories: [image]
+  rename: safe
+
+settings:
+  content:
+    merge: true
+
+content:
+  - name: english_posts
+    label: English posts
+    type: collection
+    path: src/default
+    format: yaml-frontmatter
+    filename:
+      template: "{date}-{primary}.md"
+      field: create
+    view:
+      fields: [title, date, draft]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: lastmod
+        label: Last updated
+        type: date
+        default: ""
+        options:
+          format: yyyy-MM-dd
+      - name: tags
+        type: string
+        list: true
+      - name: coverImage
+        label: Cover image
+        type: image
+      - name: summary
+        type: text
+      - name: altUrl
+        label: Alternate URL
+        type: string
+      - name: draft
+        type: boolean
+        default: true
+      - name: body
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
+
+  - name: japanese_posts
+    label: Japanese posts
+    type: collection
+    path: src/ja
+    format: yaml-frontmatter
+    filename:
+      template: "{date}-{primary}.md"
+      field: create
+    view:
+      fields: [title, date, draft]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: lastmod
+        label: Last updated
+        type: date
+        default: ""
+        options:
+          format: yyyy-MM-dd
+      - name: tags
+        type: string
+        list: true
+      - name: coverImage
+        label: Cover image
+        type: image
+      - name: summary
+        type: text
+      - name: altUrl
+        label: Alternate URL
+        type: string
+      - name: draft
+        type: boolean
+        default: true
+      - name: body
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
+
+  # These collections edit the entire file as source. Use them for posts with
+  # hand-written HTML or embeds, which a rich-text editor may rewrite.
+  - name: english_posts_source
+    label: English posts (source)
+    type: collection
+    path: src/default
+    format: raw
+    operations:
+      create: false
+      rename: false
+      delete: false
+
+  - name: japanese_posts_source
+    label: Japanese posts (source)
+    type: collection
+    path: src/ja
+    format: raw
+    operations:
+      create: false
+      rename: false
+      delete: false

@@ -10,6 +10,7 @@ import {
   getFiles
 } from "../../../../lib/mdx";
 import websiteJson from "../../../../website.json";
+import { resolveImageUrl } from "../../../../lib/resolveImageUrl";
 
 export async function generateStaticParams() {
   const languages = Object.keys(websiteJson.languages).filter(
@@ -36,7 +37,8 @@ export async function generateMetadata(props: {
   const { siteUrl, locale, author, bannerUrl } = langConfig;
   const url = `${siteUrl}posts/${params.slug}/`;
   const imageUrl =
-    (coverImage && `${websiteJson.imageRoot}${coverImage}`) || bannerUrl;
+    (coverImage && resolveImageUrl(coverImage, websiteJson.imageRoot)) ||
+    bannerUrl;
 
   return {
     title,

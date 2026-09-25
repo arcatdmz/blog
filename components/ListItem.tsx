@@ -6,6 +6,7 @@ import { Grid, List, Segment } from "semantic-ui-react";
 
 import { BlogContext } from "../lib/BlogContext";
 import { PostIface } from "../lib/PostIface";
+import { resolveImageUrl } from "../lib/resolveImageUrl";
 import { Date } from "./Date";
 import { Tag } from "./Tag";
 
@@ -45,7 +46,7 @@ const ListItem: FC<PostIface> = ({
           <Grid.Column width={5}>
             <Link href={`${sitePath}posts/${slug}`}>
               <img
-                src={`${imageRoot}${coverImage}`}
+                src={resolveImageUrl(coverImage, imageRoot)}
                 className="ui fluid rounded bordered image"
                 alt={title}
               />
