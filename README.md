@@ -26,8 +26,8 @@ GitHub App for **only** `arcatdmz/blog`. The editor reads the configuration in
    summary or cover image as needed.
 3. Upload images in the body editor or Media library. They are committed under
    `public/images` and inserted in Markdown as `/images/filename`. The cover
-   image picker also accepts these images. Existing cover-image filenames are
-   still supported.
+   image picker also accepts these images. Store `coverImage` as
+   `/images/filename`; Pages CMS maps that path back to `public/images/filename`.
 4. New posts start with **Draft** enabled. Saving commits them to GitHub and
    triggers the existing build. Drafts are absent from article lists but their
    URLs work, and the [public repository](https://github.com/arcatdmz/blog)

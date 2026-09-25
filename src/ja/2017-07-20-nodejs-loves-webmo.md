@@ -3,7 +3,7 @@ title: WebmoをNode.jsから使う
 date: "2017-07-20"
 tags:
   - programming
-coverImage: webmo.jpg
+coverImage: /images/webmo.jpg
 summary_generated: >-
   昨日の記事でも紹介したWebmoは JavaScript
   で簡単に操作できることがウリですが、現状用意されているライブラリはブラウザ上で動作することを前提に設計されており、Node.js

@@ -3,7 +3,7 @@ title: ACM CHI 2015 参加のすすめ
 date: "2015-03-01"
 tags:
   - research
-coverImage: chi2015-japan-postcard.jpg
+coverImage: /images/chi2015-japan-postcard.jpg
 summary_generated: >-
 
   忙しい人のための要約: 韓国ソウルで開催される ACM CHI 2015 で、情報処理学会と Microsoft Research

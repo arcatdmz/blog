@@ -7,7 +7,7 @@ tags:
   - research
   - student
   - advent-calendar
-coverImage: DSC01972-scaled.jpg
+coverImage: /images/DSC01972-scaled.jpg
 summary_generated: >-
   この記事は Microsoft Research Internship アルムナイ Advent Calendar の 23
   日目です。自分は今、産業技術総合研究所に主任研究員として勤める傍ら、アニメ会社アーチの技術顧問を兼業しています。どちらもやっていることの根っこは同じ...

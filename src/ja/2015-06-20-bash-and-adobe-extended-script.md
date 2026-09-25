@@ -4,7 +4,7 @@ date: "2015-06-20"
 tags:
   - life
   - programming
-coverImage: DSC00698.jpg
+coverImage: /images/DSC00698.jpg
 summary_generated: |-
   最近書いたものをメモがてら。
   bash で行ごとに処理Git のログを整形して出力フォルダ内のデジタル一眼 RAW を全部現像

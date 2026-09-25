@@ -6,7 +6,7 @@ tags:
   - research
   - server
   - science
-coverImage: tachibana-rip.png
+coverImage: /images/tachibana-rip.png
 summary: >-
   今年 4 月 30
   日、立花隆氏が亡くなりました。立花氏ははやくからインターネットの可能性に注目していました。氏の公式サイトは、かつて私がメンテナンスをお手伝いしていたのですが、ドメインの失効とともに閉鎖になっていたのです。訃報を受け、サイトを一から作り直して

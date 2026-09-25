@@ -4,7 +4,7 @@ date: "2020-03-15"
 tags:
   - anime
   - research
-coverImage: techbook8_shoei_02.png
+coverImage: /images/techbook8_shoei_02.png
 summary_generated: >-
   アーチで技術顧問の仕事を始めて早 1 年半が過ぎました。表に出ている仕事としては、研究開発チーム Arch Research
   を作り、絵コンテ制作支援ツール「Griffith」を開発しています。2018 年秋からは半年に一度の技術書の祭典「技術書典」をスポンサーしつつ、20...

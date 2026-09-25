@@ -5,7 +5,7 @@ tags:
   - life
   - lookback
   - travel
-coverImage: DSC00049_developed.jpg
+coverImage: /images/DSC00049_developed.jpg
 summary_generated: >-
   博士課程を修了し、就職してから早一年半が経ちました。前回、半年を振り返ってからの一年を振り返ってみようと思います。最近は研究者として何ができるか、何をしたいか考えて行動できるようになってきた気がします。時系列は下に載せましたが、研究トピックとしては主に次の
   4 つに取り組み...

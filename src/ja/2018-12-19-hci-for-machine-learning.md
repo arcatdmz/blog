@@ -6,7 +6,7 @@ tags:
   - research
   - sigpx
   - advent-calendar
-coverImage: mlse1-kato-slides.png
+coverImage: /images/mlse1-kato-slides.png
 summary_generated: >-
   この記事は「機械学習工学 / MLSE Advent Calendar 2018」12
   日目の記事です。先日開催された、機械学習工学関連の論文を紹介し合う「XX for ML

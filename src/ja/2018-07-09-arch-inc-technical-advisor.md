@@ -5,7 +5,7 @@ tags:
   - anime
   - life
   - research
-coverImage: archinc.jpg
+coverImage: /images/archinc.jpg
 summary_generated: >-
   この度、アニメなどのコンテンツを幅広くプロデュースするアーチ株式会社（ARCH Inc.）の技術顧問になりました。転職ではなく、現職の産業技術総合研究所
   研究員を主務としたまま、技術顧問を非常勤で兼務するかたちです。アーチからプレスリリースが出ています。研究者がアカデミアだ...

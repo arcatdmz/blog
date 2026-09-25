@@ -6,7 +6,7 @@ tags:
   - discussion
   - advent-calendar
   - creativity
-coverImage: 2022-12-14-DSC05781_resized.jpg
+coverImage: /images/2022-12-14-DSC05781_resized.jpg
 summary: >-
   先日、AI 活用が当たり前になった社会でも、人々が創造的な活動を続けたいと思えるような Human-Computer Interaction (HCI)
   の技術を研究開発する課題提案が採択されました。この記事では、HCI

@@ -5,7 +5,7 @@ tags:
   - research
   - science
   - discussion
-coverImage: 2025-12-28-nistep-talk-slide.jpg
+coverImage: /images/2025-12-28-nistep-talk-slide.jpg
 summary_generated: >-
   昨年 2024 年、科学技術・学術政策研究所 (NISTEP) から「科学技術への顕著な貢献
   2024（ナイスステップな研究者）」に選定いただきました。プレス発表、所属組織でのニュース掲載に続き、今年 1

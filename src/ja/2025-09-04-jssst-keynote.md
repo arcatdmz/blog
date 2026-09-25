@@ -5,7 +5,7 @@ tags:
   - research
   - science
   - discussion
-coverImage: 2025-09-04-IMG_6902.jpg
+coverImage: /images/2025-09-04-IMG_6902.jpg
 summary_generated: "日本ソフトウェア科学会 第 42 回大会で「現場に根差したツール研究　プログラミング、IoT、音楽動画からアニメまで」と題して基調講演しました。イベント情報:\n\U0001F4E2 日本ソフトウェア科学会 第 42 回大会 基調講演「現場に根差したツール研究　プログラミング、IoT、音楽動..."
 summary: >-
   日本ソフトウェア科学会 第 42

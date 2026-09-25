@@ -6,7 +6,7 @@ tags:
   - creativity
   - life
   - lookback
-coverImage: 2025-09-08-textalive-main-visual_D.jpg
+coverImage: /images/2025-09-08-textalive-main-visual_D.jpg
 summary_generated: >-
   今日は、研究開発してきた Web サービス「TextAlive（テキストアライブ）」の一般公開を始めてから 10 周年でした。論文としては ACM CHI
   '15 でフルペーパーを刊行して Honorable Mention Award をもらい、「終わった」研究でしたが、...

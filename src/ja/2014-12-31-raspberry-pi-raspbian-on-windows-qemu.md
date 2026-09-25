@@ -3,7 +3,7 @@ title: Windows+QEMUでRaspberry Piをエミュレートする
 date: "2014-12-31"
 tags:
   - programming
-coverImage: raspbian-on-qemu-windows.png
+coverImage: /images/raspbian-on-qemu-windows.png
 summary_generated: >-
   Raspberry Pi Type B 512MBを買ったのが 8 月のこと。Raspbian をインストールして無線 LAN 接続のための USB
   ドングル(BUFFALO 無線 LAN 子機 WLI-UC-GNM)を挿してカメラモジュールをつないで、ちょっと遊んではみた...

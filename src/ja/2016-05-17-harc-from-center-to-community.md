@@ -6,7 +6,7 @@ tags:
   - research
   - sigpx
   - travel
-coverImage: DSC00614.jpg
+coverImage: /images/DSC00614.jpg
 summary_generated: >-
   先週までの 2 週間、ベイエリアのさまざまな研究所・企業を訪問し、ACM CHI
   2016に参加していました。一部の旅程で同行した小山君、川松氏ともども、さまざまな方々にお世話になりましたが、個人的にはパーソナルコンピュータの父とも呼ばれる

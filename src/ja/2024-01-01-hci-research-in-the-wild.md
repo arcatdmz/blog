@@ -7,7 +7,7 @@ tags:
   - creativity
   - lookback
   - advent-calendar
-coverImage: 2023-12-25-DSC06049-2.jpg
+coverImage: /images/2023-12-25-DSC06049-2.jpg
 summary: >-
   気付けば元旦になっていましたが、主に国際連携・メタ研究の観点で、2023年を振り返りました。 HCI Advent Calendar 2023 にすでにあがっている記事を読みながら考えたことも併せて書いています。 HCI 研究は、例外なく何らかの文化的文脈に置かれ、特定のドメインを扱っていますが、そうした当事者性に無自覚でいることの弊害が目立つようになってきています。裏を返せば HCI は、人類の未来にとってもっと重要な学問になるポテンシャルを持っていると思います。
 summary_generated: >-

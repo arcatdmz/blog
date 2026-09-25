@@ -4,7 +4,7 @@ date: "2012-11-21"
 tags:
   - research
   - sigpx
-coverImage: uist2012-kato-dejavu.png
+coverImage: /images/uist2012-kato-dejavu.png
 summary_generated: >-
   IT が生活のいろんな部分に入り込んでくるにつれ、プログラミングの重要性がどんどん増しています。しかし、Visual
   StudioやEclipseに代表されるような開発環境の使い勝手を向上させる研究は、意外といっていいほど見当たりません。その中でも著名な研究は、Last

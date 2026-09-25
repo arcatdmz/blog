@@ -4,7 +4,7 @@ date: "2023-06-22"
 tags:
   - research
   - creativity
-coverImage: 2023-06-22-acm-xrds-computation-for-creativity.png
+coverImage: /images/2023-06-22-acm-xrds-computation-for-creativity.png
 summary: >-
   The Summer 2023 issue of ACM XRDS (Crossroads), The ACM Magazine for Students,
   is dedicated to "Exploring the Horizon of Computation for Creativity."

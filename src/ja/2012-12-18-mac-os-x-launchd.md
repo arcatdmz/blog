@@ -4,7 +4,7 @@ date: "2012-12-18"
 tags:
   - programming
   - server
-coverImage: fungus-camera.jpg
+coverImage: /images/fungus-camera.jpg
 summary_generated: >-
   最近、照明を ON/OFF する機能を備えた Arduino
   ベースのネットワークカメラを開発したのですが、そこから定期的に画像を取ってきて保存したくなりました。自宅サーバとして Mac mini Mid 2010

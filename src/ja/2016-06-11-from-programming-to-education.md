@@ -5,7 +5,7 @@ tags:
   - discussion
   - research
   - sigpx
-coverImage: IMG_9046.jpg
+coverImage: /images/IMG_9046.jpg
 summary_generated: >-
   最近プログラミング教育に関する世間一般の興味が高まってきています。オバマ大統領がイニシアチブを取り、コンピュータ科学に関する教育を全ての学生に課すため、関連する産業や研究開発に多額の政策投資を行おうというアメリカのCS
   for Allや、日本の政府成長戦略のなかで挙げられて...

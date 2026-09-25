@@ -4,7 +4,7 @@ date: "2023-06-22"
 tags:
   - research
   - creativity
-coverImage: 2023-06-22-acm-xrds-computation-for-creativity.png
+coverImage: /images/2023-06-22-acm-xrds-computation-for-creativity.png
 summary: >-
   ACM 発行の学生向け季刊雑誌 XRDS で特集 "Exploring the Horizon of Computation for Creativity" が組まれ、創造性支援研究に関して寄稿しました。人々の創造的活動に寄り添い研究開発してきた経験をもとに書いたもので、この豊穣な世界が伝わるといいなと思います。
 summary_generated: >-

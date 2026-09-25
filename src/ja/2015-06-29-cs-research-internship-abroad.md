@@ -5,7 +5,7 @@ tags:
   - research
   - student
   - university
-coverImage: DSC04693.jpg
+coverImage: /images/DSC04693.jpg
 summary_generated: >-
   ACM CHI 2015 全論文の概要を一日で把握するCHI 勉強会
   2015へのご参加ありがとうございました。幹事団の一人として御礼申し上げます。東京会場では、メインプログラムのあと懇親会までの準備時間に企業紹介と海外インターン経験談紹介のセッションを開催しました。インタ...

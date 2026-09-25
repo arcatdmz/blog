@@ -3,7 +3,7 @@ title: Windows 10 Mobile端末(NuAns NEO)を買った
 date: "2016-02-11"
 tags:
   - life
-coverImage: DSC_0789.jpg
+coverImage: /images/DSC_0789.jpg
 summary_generated: >-
   誘惑に負けて Xperia Z1 から乗り換えました。一週間ほど使ってみて、Windows 10 Mobile (NuAns
   NEO)のいいところ、悪いところなど見えてきたのでまとめておきます。

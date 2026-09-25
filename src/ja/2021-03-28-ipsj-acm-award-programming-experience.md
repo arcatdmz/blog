@@ -5,7 +5,7 @@ tags:
   - sigpx
   - research
   - creativity
-coverImage: ipsj_acm_joint_award_2021.jpg
+coverImage: /images/ipsj_acm_joint_award_2021.jpg
 summary: >-
   先日、情報処理学会 第 83 回全国大会の表彰式で「IPSJ/ACM Award for Early Career Contributions to
   Global Research」を受賞しました。これは年に一度、情報学全分野から一人を情報処理学会とACMから表彰するという...

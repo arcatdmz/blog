@@ -3,7 +3,7 @@ title: Raspberry PiでJavaCV (Java + OpenCV)
 date: "2015-01-01"
 tags:
   - programming
-coverImage: javacv-raspberry-pi.png
+coverImage: /images/javacv-raspberry-pi.png
 summary_generated: "日本のみなさん、あけましておめでとうございます！PDT(太平洋標準時)ということにして、先の記事でセットアップした QEMU上で \_#大晦日ハッカソン を続けておりました。けっきょくビルド時間などがネックになって実機での動作は間に合いませんでしたが、JavaCVを Rasp..."
 altUrl: "https://junkato.jp/ja/blog/2015/01/01/javacv-java-opencv-on-raspberry-pi/"
 ---

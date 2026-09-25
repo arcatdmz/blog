@@ -5,7 +5,7 @@ tags:
   - research
   - student
   - university
-coverImage: uist-svs.jpg
+coverImage: /images/uist-svs.jpg
 summary_generated: >-
   学生向けおすすめ記事は、基本的に自分が学生の頃の体験をもとに書いています。博士課程を一昨年修了したので、新しい記事を書くことはもうないだろうなぁと思っていました。ところが、今年の国際会議ACM
   UIST 2016で Student Volunteer Chair を拝命した...

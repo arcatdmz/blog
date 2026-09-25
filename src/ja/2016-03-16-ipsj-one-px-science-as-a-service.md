@@ -6,7 +6,7 @@ tags:
   - science
   - sigpx
   - student
-coverImage: IMGP7944trim.jpg
+coverImage: /images/IMGP7944trim.jpg
 summary_generated: >-
   情報処理学会全国大会 大トリのプレゼン大会 IPSJ-ONE
   に招待され、登壇してきました。これは、情報処理に関わるさまざまな分野の研究会から優秀な研究者を選出し、1 人 5

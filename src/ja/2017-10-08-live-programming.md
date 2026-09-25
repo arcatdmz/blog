@@ -4,7 +4,7 @@ date: "2017-10-08"
 tags:
   - research
   - sigpx
-coverImage: inventing-on-principle.png
+coverImage: /images/inventing-on-principle.png
 summary: >-
   Live Programming に関する国際ワークショップ LIVE 2017 で基調講演を任されることになり、いろいろ考えた末「User
   Interfaces for Live Programming」という題で話すことにしました。講演内容は講演後に掲載することにして、Live

@@ -3,7 +3,7 @@ title: Adobe Illustratorのaiファイルに埋め込まれた画像を抽出す
 date: "2014-08-19"
 tags:
   - design
-coverImage: adobe-illustrator-link-panel.png
+coverImage: /images/adobe-illustrator-link-panel.png
 summary_generated: |2-
 
     Adobe Illustratorに埋め込まれた画像ai ファイルに貼り付けた画像がいつの間にか移動していて、ai ファイルがちゃんと開けなくなっている…そんな悲劇を避けるために、画像を「埋め込む」ことがあります。さらに、一度埋め込んだファイルを PowerPoint...

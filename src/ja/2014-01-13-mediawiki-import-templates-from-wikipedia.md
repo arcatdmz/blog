@@ -4,7 +4,7 @@ date: "2014-01-13"
 tags:
   - programming
   - server
-coverImage: infobox.png
+coverImage: /images/infobox.png
 summary: >-
   前日に引き続きMediaWikiに関する記事です。 素の MediaWiki は、記事を全て Wiki
   記法でべた書きしなくてはなりません。Wikipedia

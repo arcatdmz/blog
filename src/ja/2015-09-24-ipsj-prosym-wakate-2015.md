@@ -5,7 +5,7 @@ tags:
   - life
   - research
   - travel
-coverImage: DSC_0270.jpg
+coverImage: /images/DSC_0270.jpg
 summary_generated: >-
   情報処理学会プログラミングシンポジウム委員会主催で第 48 回という、とても歴史のある会に参加して講演してきました。講演そのものはWeb
   記事「ぼくらのプログラミングから、みんなのプログラミングへ (From &quot;programmers are people, to...
