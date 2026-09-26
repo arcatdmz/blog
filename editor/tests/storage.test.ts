@@ -34,6 +34,7 @@ it("stores text, binary uploads, deletion revisions and pending operation IDs to
   expect(restored.post.content).toBe(recovery.post.content);
   expect(restored.deletions).toEqual(recovery.deletions);
   expect(restored.saveId).toBe("save-id");
+  expect(restored.images[0].blob.type).toBe("image/jpeg");
   expect([
     ...new Uint8Array(await restored.images[0].blob.arrayBuffer())
   ]).toEqual([255, 216, 255, 1]);
@@ -41,6 +42,23 @@ it("stores text, binary uploads, deletion revisions and pending operation IDs to
   expect(
     (await listRecovery()).find(r => r.post.path === recovery.post.path)
   ).toBeUndefined();
+});
+it("does not resurrect recovery when deleted during asynchronous image serialization", async () => {
+  let finish!: (value: ArrayBuffer) => void;
+  const blob = new Blob(["image"], { type: "image/png" });
+  blob.arrayBuffer = () => new Promise(resolve => { finish = resolve; });
+  const recovery: Recovery = {
+    version: 1,
+    post: { path: "src/ja/queued.md", sha: null, content: "pending" },
+    original: "", baseHead: "head", updatedAt: 1,
+    images: [{ path: "public/images/queued.png", blob }], deletions: []
+  };
+  const write = putRecovery(recovery);
+  await Promise.resolve();
+  const remove = deleteRecovery(recovery.post.path);
+  finish(new ArrayBuffer(5));
+  await Promise.all([write, remove]);
+  expect((await listRecovery()).some(r => r.post.path === recovery.post.path)).toBe(false);
 });
 it("keys cached post bodies by Git revision", async () => {
   await cachePost({ path: "src/ja/test.md", sha: "one", content: "first" });
