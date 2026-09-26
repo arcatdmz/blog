@@ -4,6 +4,7 @@ on:
     paths:
       [
         "editor/**",
+        "shared/**",
         "css/**",
         "website.json",
         "src/**",
@@ -14,6 +15,7 @@ on:
     paths:
       [
         "editor/**",
+        "shared/**",
         "css/**",
         "website.json",
         "src/**",

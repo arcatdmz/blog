@@ -11,23 +11,37 @@ import { useI18n } from "./i18n";
 
 export default function ThemeSelect() {
   const { t } = useI18n();
-  const [preference, setPreference] = useState(readTheme);
+  const [preference, setPreference] = useState(() => readTheme());
+  useEffect(() => {
+    const sync = () => setPreference(current => readTheme(current));
+    const onStorage = (event: StorageEvent) => {
+      if (event.key === THEME_KEY || event.key === null) sync();
+    };
+    const onVisible = () => {
+      if (document.visibilityState === "visible") sync();
+    };
+    window.addEventListener("storage", onStorage);
+    window.addEventListener("pageshow", sync);
+    window.addEventListener("focus", sync);
+    document.addEventListener("visibilitychange", onVisible);
+    // A second tab can write between the initial render and this subscription.
+    // Subscribe first, then read again so that change cannot be lost.
+    sync();
+    return () => {
+      window.removeEventListener("storage", onStorage);
+      window.removeEventListener("pageshow", sync);
+      window.removeEventListener("focus", sync);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
+  }, []);
   useEffect(() => {
     applyTheme(preference);
     const query = window.matchMedia(THEME_QUERY);
     const onChange = () => {
       if (preference === "system") applyTheme(preference);
     };
-    const onStorage = (event: StorageEvent) => {
-      if (event.key === THEME_KEY || event.key === null)
-        setPreference(readTheme());
-    };
     query.addEventListener("change", onChange);
-    window.addEventListener("storage", onStorage);
-    return () => {
-      query.removeEventListener("change", onChange);
-      window.removeEventListener("storage", onStorage);
-    };
+    return () => query.removeEventListener("change", onChange);
   }, [preference]);
   return (
     <select

@@ -2,12 +2,15 @@
 export type ThemePreference = "system" | "light" | "dark";
 export const THEME_KEY = "theme";
 export const THEME_QUERY = "(prefers-color-scheme: dark)";
-export function readTheme(): ThemePreference {
+export function readTheme(
+  fallback: ThemePreference = "system"
+): ThemePreference {
   try {
     const value = localStorage.getItem(THEME_KEY);
     if (value === "light" || value === "dark") return value;
   } catch {
-    /* Storage may be disabled; OS remains the default. */
+    // Keep this page's selection when storage is disabled.
+    return fallback;
   }
   return "system";
 }
