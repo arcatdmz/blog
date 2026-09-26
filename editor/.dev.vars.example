@@ -1,0 +1,5 @@
+# Copy to .dev.vars for a local, read-only fixture repository.
+# This mode never sends requests to GitHub and is rejected on deployed hosts.
+LOCAL_DEMO=true
+# For local development against the real repository, remove LOCAL_DEMO and
+# configure Access through a protected hostname. Never put a token in VITE_*.

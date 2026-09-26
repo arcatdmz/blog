@@ -12,6 +12,11 @@
 
 ## Write in a browser
 
+The [custom writing room](editor/README.md) is a separate Cloudflare editor with
+Markdown/preview tabs, image-layout controls, and local recovery, designed for
+iPad use. Its setup guide includes a credential-free local demo and deployment
+instructions. Pages CMS remains available during evaluation.
+
 [Pages CMS](https://app.pagescms.org/) edits Markdown and images in this GitHub
 repository. A repository owner must sign in with GitHub and install the Pages CMS
 GitHub App for **only** `arcatdmz/blog`. The editor reads the configuration in

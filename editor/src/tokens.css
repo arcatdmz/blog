@@ -1,0 +1,9 @@
+:root {
+  --paper: #f4f2ee;
+  --ink: #293b31;
+  --muted: #6d776c;
+  --line: #d8ddd2;
+  --green: #355e45;
+  --tint: #edf0e8;
+  color-scheme: light;
+}

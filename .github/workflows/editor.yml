@@ -1,0 +1,30 @@
+name: Check blog editor
+on:
+  pull_request:
+    paths:
+      ["editor/**", "css/style.css", "src/**", ".github/workflows/editor.yml"]
+  push:
+    branches: [main]
+    paths:
+      ["editor/**", "css/style.css", "src/**", ".github/workflows/editor.yml"]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: editor
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: editor/package-lock.json
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium webkit
+      - run: cp .dev.vars.example .dev.vars
+      - run: npm run test:browser

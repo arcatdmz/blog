@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "junkato-blog-editor",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-09-26",
+  "assets": {
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": true
+  },
+  "preview_urls": false,
+  "vars": {
+    "ACCESS_TEAM_DOMAIN": "https://junkato.cloudflareaccess.com",
+    "ACCESS_AUD": "c0aa2ac5902f815fc7705c509bce8c9559dacd31af60e3d6948f76c269954394",
+    "ALLOWED_EMAIL": "i@junkato.jp"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
