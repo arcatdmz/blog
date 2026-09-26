@@ -8,5 +8,20 @@
   --accent: var(--blog-accent-hover);
   --tint: var(--blog-tint);
   --surface: #f8f9fa;
-  color-scheme: light;
+  --primary-ink: white;
+  --primary-hover: #12545b;
+  --warning-ink: #806020;
+  --warning-paper: #fff8e7;
+  --error-ink: #8b3028;
+  --error-paper: #f8eae5;
+}
+
+:root[data-theme="dark"] {
+  --surface: #24292e;
+  --primary-ink: #152a2e;
+  --primary-hover: #b5edf2;
+  --warning-ink: #e3c17b;
+  --warning-paper: #3a3325;
+  --error-ink: #ffb4a8;
+  --error-paper: #422c2a;
 }

@@ -30,7 +30,7 @@ td {
 }
 .embed-placeholder {
   padding: 1rem;
-  background: #f6f6f6;
+  background: var(--surface);
   color: var(--blog-muted);
 }
 article.post-item figure > figcaption {
@@ -62,4 +62,33 @@ article.post-item figure > figcaption {
 .figure-edit:focus-visible {
   outline: 2px solid var(--blog-accent);
   outline-offset: 2px;
+}
+
+/* The published article CSS still has some fixed light surfaces. */
+article.post-item blockquote {
+  color: var(--blog-muted);
+}
+article.post-item
+  :is(
+    pre,
+    .remark-code-title,
+    figure > figcaption,
+    .caption,
+    .embed,
+    .remark-oembed-inline
+  ) {
+  background: var(--surface);
+}
+article.post-item :is(code, pre) {
+  color: var(--blog-ink);
+}
+article.post-item .hljs {
+  background: #22272e;
+  color: #adbac7;
+}
+article.post-item figure {
+  background: transparent;
+}
+article.post-item table tr:nth-child(2n) {
+  background: var(--surface);
 }

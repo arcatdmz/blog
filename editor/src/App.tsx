@@ -48,6 +48,13 @@ import Modal from "./Modal";
 import FeatureBoundary from "./FeatureBoundary";
 import type { Figure, FigureRange } from "./figures";
 import { useI18n } from "./i18n";
+import {
+  checkpointText,
+  restoreText,
+  clearTextCheckpoint
+} from "./textCheckpoint";
+import ThemeSelect from "./ThemeSelect";
+import { useEditorRoute } from "./routing";
 import website from "../../website.json";
 
 const Preview = lazy(() => import("./Preview"));
@@ -124,8 +131,20 @@ export default function App() {
   const site = website.languages[locale === "ja" ? "ja" : "default"];
   const [index, setIndex] = useState<Index>(emptyIndex);
   const [titles, setTitles] = useState<Record<string, string>>({});
-  const [search, setSearch] = useState("");
-  const [language, setLanguage] = useState("ja");
+  const [route, navigate] = useEditorRoute();
+  const { search, language, view: tab, zen: zenMode } = route;
+  const newPost = route.dialog === "new";
+  const mediaOpen = route.dialog === "images";
+  const setSearch = (search: string) => navigate({ search }, true);
+  const setLanguage = (language: string) => navigate({ language });
+  const setTab = useCallback(
+    (view: "write" | "preview") => navigate({ view }),
+    [navigate]
+  );
+  const setZenMode = (zen: boolean) => navigate({ zen });
+  const setNewPost = (open: boolean) => navigate({ dialog: open ? "new" : "" });
+  const setMediaOpen = (open: boolean) =>
+    navigate({ dialog: open ? "images" : "" });
   const [active, setActive] = useState("");
   const [postsOpen, setPostsOpen] = useState(true);
   const [mobilePosts, setMobilePosts] = useState(
@@ -143,11 +162,8 @@ export default function App() {
   const [error, setError] = useState<Notice>("");
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [tab, setTab] = useState<"write" | "preview">("write");
-  const [zenMode, setZenMode] = useState(false);
+  const [openAttempt, setOpenAttempt] = useState(0);
   const [previewBody, setPreviewBody] = useState("");
-  const [newPost, setNewPost] = useState(false);
-  const [mediaOpen, setMediaOpen] = useState(false);
   const [figure, setFigure] = useState<{
     initial: Figure;
     range: FigureRange | null;
@@ -171,7 +187,7 @@ export default function App() {
 
   const toggleZen = () => {
     if (!zenMode) normalScroll.current = window.scrollY;
-    setZenMode(value => !value);
+    setZenMode(!zenMode);
   };
 
   useEffect(() => {
@@ -211,10 +227,12 @@ export default function App() {
       (current.post.sha !== null || current.post.path === MEDIA)
     ) {
       await deleteRecovery(current.post.path);
+      clearTextCheckpoint(current);
       await refreshRecovery();
       return;
     }
-    await putRecovery({ ...current, updatedAt: Date.now() });
+    await putRecovery(current);
+    clearTextCheckpoint(current);
     setLocalStatus([
       "Recovery saved on this device",
       "この端末に作業内容を保存しました"
@@ -247,6 +265,7 @@ export default function App() {
         saveId: undefined,
         updatedAt: Date.now()
       };
+      checkpointText(work.current);
       setModified(true);
       setLocalStatus([
         "Waiting to save recovery…",
@@ -295,7 +314,7 @@ export default function App() {
         !!value.deletions.length ||
         (value.post.path !== MEDIA && value.post.sha === null)
     );
-    setTab("write");
+    setPreviewBody(parsed?.body.replace(/\r\n/g, "\n") || "");
     setError("");
     setStatus("");
     setRemote(null);
@@ -359,10 +378,12 @@ export default function App() {
     };
   }, [refresh, refreshRecovery]);
   useEffect(() => {
-    const onHide = () => {
-      if (document.visibilityState === "hidden") void persist().catch(() => {});
+    const onHide = (event: Event) => {
+      if (event.type === "pagehide" || document.visibilityState === "hidden")
+        void persist().catch(() => {});
     };
     const onUnload = (event: BeforeUnloadEvent) => {
+      void persist().catch(() => {});
       const current = work.current;
       if (
         current &&
@@ -392,37 +413,69 @@ export default function App() {
     };
   }, [persist]);
 
-  const openPost = async (path: string) => {
+  const openPost = (path: string) =>
+    navigate({ post: path, view: "write", dialog: "" });
+  // The URL selects the workspace. IndexedDB supplies unsaved content and images.
+  // Cancellation prevents a slow response from opening an older history entry.
+  useEffect(() => {
+    if (!index.head || saving || route.post === work.current?.post.path) return;
+    let cancelled = false;
     setLoading(true);
     setError("");
-    try {
+    void (async () => {
       await persist();
-      const recovery = (await listRecovery()).find(r => r.post.path === path);
-      if (recovery) {
-        activate(recovery);
+      if (cancelled) return;
+      work.current = null;
+      setActive("");
+      setFigure(null);
+      setRemote(null);
+      setRawFrontmatter(null);
+      pickImage.current = null;
+      if (!route.post) return;
+      const recovery = restoreText(
+        route.post,
+        (await listRecovery()).find(r => r.post.path === route.post)
+      );
+      let next = recovery;
+      if (!next) {
+        const post =
+          route.post === MEDIA
+            ? { path: MEDIA, sha: null, content: "" }
+            : await getPost(route.post, index.head);
+        next = {
+          version: 1,
+          post,
+          original: post.content,
+          baseHead: index.head,
+          images: [],
+          deletions: [],
+          updatedAt: Date.now()
+        };
+      }
+      if (cancelled) return;
+      activate(next);
+      if (recovery)
         setLocalStatus([
           "Restored work from this device",
           "この端末の作業内容を復元しました"
         ]);
-        return;
-      }
-      const next = await refresh();
-      const post = await getPost(path, next.head);
-      activate({
-        version: 1,
-        post,
-        original: post.content,
-        baseHead: next.head,
-        images: [],
-        deletions: [],
-        updatedAt: Date.now()
+    })()
+      .catch(error => {
+        if (!cancelled) setError(message(error));
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
       });
-    } catch (error) {
-      setError(message(error));
-    } finally {
-      setLoading(false);
-    }
-  };
+    return () => {
+      cancelled = true;
+    };
+  }, [route.post, index.head, saving, persist, activate, openAttempt]);
+  useEffect(() => {
+    if (tab === "preview" && work.current && active !== MEDIA)
+      setPreviewBody(
+        splitDocument(work.current.post.content).body.replace(/\r\n/g, "\n")
+      );
+  }, [tab, active, editorVersion]);
   const metadataChange = (patch: Record<string, unknown>) => {
     if (!work.current) return;
     try {
@@ -476,22 +529,25 @@ export default function App() {
     rememberSelection();
     insert(`${before}${selection.current.text}${after}`);
   };
-  const editFigure = useCallback(async (range: FigureRange) => {
-    const { parseFigure } = await import("./figures");
-    const initial = parseFigure(range.source);
-    if (!initial) {
-      setTab("write");
-      setStatus([
-        "This figure uses custom HTML. Its original source is selected for editing.",
-        "この画像レイアウトは独自の HTML を使用しています。編集できるよう元のソースを選択しました。"
-      ]);
-      requestAnimationFrame(() =>
-        writing.current?.focus(range.start, range.end)
-      );
-      return;
-    }
-    setFigure({ initial, range, cursor: range.start });
-  }, []);
+  const editFigure = useCallback(
+    async (range: FigureRange) => {
+      const { parseFigure } = await import("./figures");
+      const initial = parseFigure(range.source);
+      if (!initial) {
+        setTab("write");
+        setStatus([
+          "This figure uses custom HTML. Its original source is selected for editing.",
+          "この画像レイアウトは独自の HTML を使用しています。編集できるよう元のソースを選択しました。"
+        ]);
+        requestAnimationFrame(() =>
+          writing.current?.focus(range.start, range.end)
+        );
+        return;
+      }
+      setFigure({ initial, range, cursor: range.start });
+    },
+    [setTab]
+  );
   const openFigure = async () => {
     rememberSelection();
     const { findFigures, emptyFigure } = await import("./figures");
@@ -512,22 +568,8 @@ export default function App() {
   };
   const openMedia = async () => {
     rememberSelection();
-    if (!work.current) {
-      const recovered = (await listRecovery()).find(r => r.post.path === MEDIA);
-      activate(
-        recovered || {
-          version: 1,
-          post: { path: MEDIA, sha: null, content: "" },
-          original: "",
-          baseHead: index.head,
-          images: [],
-          deletions: [],
-          updatedAt: Date.now()
-        }
-      );
-    }
     pickImage.current = null;
-    setMediaOpen(true);
+    navigate({ post: work.current?.post.path || MEDIA, dialog: "images" });
   };
   const stageImage = async (image: PendingImage) => {
     if (!work.current) return;
@@ -746,6 +788,7 @@ export default function App() {
           </span>
         </a>
         <div className="button-row">
+          <ThemeSelect />
           <div
             className="language-switch"
             role="group"
@@ -864,21 +907,7 @@ export default function App() {
                     <button
                       key={recovery.post.path}
                       disabled={saving || loading}
-                      onClick={async () => {
-                        try {
-                          await persist();
-                          const latest = (await listRecovery()).find(
-                            r => r.post.path === recovery.post.path
-                          );
-                          if (latest) activate(latest);
-                          setLocalStatus([
-                            "Restored work from this device",
-                            "この端末の作業内容を復元しました"
-                          ]);
-                        } catch (error) {
-                          setError(message(error));
-                        }
-                      }}
+                      onClick={() => openPost(recovery.post.path)}
                     >
                       {recovery.post.path === MEDIA
                         ? t("Pending media changes", "未保存の画像の変更")
@@ -930,9 +959,17 @@ export default function App() {
                 <a href="/" target="_blank" rel="noopener">
                   {t("Sign in again", "再度ログイン")}
                 </a>
+                {route.post && !active && (
+                  <button
+                    disabled={loading || saving}
+                    onClick={() => setOpenAttempt(n => n + 1)}
+                  >
+                    {t("Retry opening", "記事を再読み込み")}
+                  </button>
+                )}
                 {isPost && (
                   <button
-                    disabled={saving}
+                    disabled={saving || loading}
                     onClick={async () => {
                       try {
                         setRemote(await getPost(active));
@@ -1060,7 +1097,7 @@ export default function App() {
                           : t("Published in lists", "記事一覧に表示")}
                       </span>
                     </summary>
-                    <fieldset disabled={saving}>
+                    <fieldset disabled={saving || loading}>
                       <label>
                         {t("Title", "タイトル")}
                         <input
@@ -1218,7 +1255,7 @@ export default function App() {
                       aria-label={t("Formatting tools", "書式設定")}
                     >
                       <button
-                        disabled={saving}
+                        disabled={saving || loading}
                         onPointerDown={event => event.preventDefault()}
                         onClick={() => wrap("**", "**")}
                         aria-label={t("Bold", "太字")}
@@ -1226,7 +1263,7 @@ export default function App() {
                         <strong>B</strong>
                       </button>
                       <button
-                        disabled={saving}
+                        disabled={saving || loading}
                         onPointerDown={event => event.preventDefault()}
                         onClick={() => wrap("*", "*")}
                         aria-label={t("Italic", "斜体")}
@@ -1234,7 +1271,7 @@ export default function App() {
                         <em>I</em>
                       </button>
                       <button
-                        disabled={saving}
+                        disabled={saving || loading}
                         onPointerDown={event => event.preventDefault()}
                         onClick={() => wrap("## ")}
                         aria-label={t("Heading", "見出し")}
@@ -1242,21 +1279,21 @@ export default function App() {
                         H2
                       </button>
                       <button
-                        disabled={saving}
+                        disabled={saving || loading}
                         onPointerDown={event => event.preventDefault()}
                         onClick={() => wrap("[", "](https://)")}
                       >
                         {t("Link", "リンク")}
                       </button>
                       <button
-                        disabled={saving}
+                        disabled={saving || loading}
                         onPointerDown={event => event.preventDefault()}
                         onClick={openFigure}
                       >
                         {t("Image layout", "画像レイアウト")}
                       </button>
                       <button
-                        disabled={saving}
+                        disabled={saving || loading}
                         onClick={() => writing.current?.undo()}
                       >
                         {t("Undo", "元に戻す")}
@@ -1268,7 +1305,7 @@ export default function App() {
                       key={`${active}-${editorVersion}`}
                       ref={writing}
                       initial={initialBody}
-                      disabled={saving}
+                      disabled={saving || loading}
                       onInput={fastBodyInput}
                       onComposition={value => {
                         composing.current = value;
@@ -1307,7 +1344,7 @@ export default function App() {
                       {t("Export Markdown", "Markdown をエクスポート")}
                     </button>
                     <button
-                      disabled={saving}
+                      disabled={saving || loading}
                       onClick={async () => {
                         try {
                           await persist();
@@ -1331,7 +1368,7 @@ export default function App() {
           )}
         </main>
       </div>
-      {newPost && (
+      {newPost && !!index.head && (
         <NewPost
           language={language}
           onClose={() => setNewPost(false)}
@@ -1357,7 +1394,7 @@ export default function App() {
               updatedAt: Date.now()
             });
             await persist();
-            setNewPost(false);
+            navigate({ post: path, view: "write", dialog: "" });
           }}
         />
       )}
@@ -1412,7 +1449,7 @@ export default function App() {
           </Suspense>
         </FeatureBoundary>
       )}
-      {mediaOpen && (
+      {mediaOpen && active === route.post && !!active && !loading && (
         <FeatureBoundary>
           <Suspense
             fallback={
@@ -1612,10 +1649,38 @@ function NewPost({
   onCreate: (path: string, content: string) => Promise<void>;
 }) {
   const { t } = useI18n();
-  const [title, setTitle] = useState("");
-  const [date, setDate] = useState(today());
-  const [slug, setSlug] = useState("");
-  const [lang, setLang] = useState(language);
+  const [draft, setDraft] = useState(() => {
+    try {
+      const saved = JSON.parse(
+        sessionStorage.getItem("new-post-form") || "null"
+      );
+      if (
+        saved &&
+        [saved.title, saved.date, saved.slug, saved.lang].every(
+          v => typeof v === "string"
+        )
+      )
+        return saved as {
+          title: string;
+          date: string;
+          slug: string;
+          lang: string;
+        };
+    } catch {
+      /* A fresh form remains usable without session storage. */
+    }
+    return { title: "", date: today(), slug: "", lang: language };
+  });
+  const { title, date, slug, lang } = draft;
+  const updateDraft = (patch: Partial<typeof draft>) => {
+    const next = { ...draft, ...patch };
+    try {
+      sessionStorage.setItem("new-post-form", JSON.stringify(next));
+    } catch {
+      /* Optional form recovery. */
+    }
+    setDraft(next);
+  };
   const [error, setError] = useState<Notice>("");
   const [busy, setBusy] = useState(false);
   return (
@@ -1628,6 +1693,11 @@ function NewPost({
             const content = newDocument(title, date);
             validateDocument(content);
             await onCreate(`src/${lang}/${date}-${slug}.md`, content);
+            try {
+              sessionStorage.removeItem("new-post-form");
+            } catch {
+              /* Optional storage. */
+            }
           } catch (error) {
             setError(message(error));
           } finally {
@@ -1638,7 +1708,10 @@ function NewPost({
         <fieldset disabled={busy}>
           <label>
             {t("Language", "記事の言語")}
-            <select value={lang} onChange={e => setLang(e.target.value)}>
+            <select
+              value={lang}
+              onChange={e => updateDraft({ lang: e.target.value })}
+            >
               <option value="ja">{t("Japanese", "日本語")}</option>
               <option value="default">{t("English", "英語")}</option>
             </select>
@@ -1648,7 +1721,7 @@ function NewPost({
             <input
               required
               value={title}
-              onChange={e => setTitle(e.target.value)}
+              onChange={e => updateDraft({ title: e.target.value })}
               autoFocus
             />
           </label>
@@ -1659,7 +1732,7 @@ function NewPost({
                 type="date"
                 required
                 value={date}
-                onChange={e => setDate(e.target.value)}
+                onChange={e => updateDraft({ date: e.target.value })}
               />
             </label>
             <label>
@@ -1669,7 +1742,7 @@ function NewPost({
                 pattern="[a-z0-9]+(-[a-z0-9]+)*"
                 placeholder="my-new-post"
                 value={slug}
-                onChange={e => setSlug(e.target.value)}
+                onChange={e => updateDraft({ slug: e.target.value })}
               />
             </label>
           </div>

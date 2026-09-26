@@ -1,6 +1,5 @@
 /* Shared by the published blog and its writing room. */
-:root,
-:host {
+:root {
   --blog-font:
     a-otf-ud-shin-go-pr6n, "Hiragino Kaku Gothic Pro", Meiryo, Helvetica, Arial,
     sans-serif;
@@ -13,6 +12,18 @@
   --blog-accent: #269eab;
   --blog-accent-hover: #18646c;
   --blog-tint: #eef8f9;
+}
+
+/* Opt-in only: public sites can adopt the same data-theme contract later.
+   Shadow previews inherit these tokens from the document rather than resetting them. */
+:root[data-theme="dark"] {
+  --blog-paper: #1b1e21;
+  --blog-ink: #e5e7e9;
+  --blog-muted: #abb2b8;
+  --blog-line: rgba(229, 231, 233, 0.2);
+  --blog-accent: #6ccbd5;
+  --blog-accent-hover: #95e0e7;
+  --blog-tint: #243b40;
 }
 
 /* Article typography also applies inside the editor's isolated preview. */

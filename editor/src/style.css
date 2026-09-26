@@ -33,7 +33,7 @@ button {
   padding: 0.55rem 0.9rem;
   border: 1px solid var(--line);
   border-radius: 4px;
-  background: #fff;
+  background: var(--paper);
   color: var(--ink);
   cursor: pointer;
   font-size: 0.9rem;
@@ -48,11 +48,11 @@ button:disabled {
 }
 button.primary {
   background: var(--accent);
-  color: white;
+  color: var(--primary-ink);
   border-color: var(--accent);
 }
 button.primary:hover:not(:disabled) {
-  background: #12545b;
+  background: var(--primary-hover);
 }
 a {
   color: var(--accent);
@@ -70,7 +70,7 @@ textarea {
   font-size: max(1rem, 16px);
   font-weight: 400;
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--paper);
   color: var(--ink);
   border-radius: 4px;
   padding: 0.65rem 0.75rem;
@@ -178,6 +178,10 @@ h3 {
   font-weight: 400;
   color: var(--muted);
   letter-spacing: 0.025em;
+}
+.theme-select {
+  width: auto;
+  font-size: 0.9rem;
 }
 .language-switch {
   display: flex;
@@ -291,7 +295,7 @@ summary > span,
 .sidebar nav button.selected {
   background: var(--tint);
   color: var(--accent);
-  border-color: #cbe4e7;
+  border-color: var(--line);
   box-shadow: inset 3px 0 var(--blog-accent);
 }
 .sidebar small {
@@ -307,7 +311,7 @@ summary > span,
 }
 .recovery-list h3 {
   font-size: 0.75rem;
-  color: #886525;
+  color: var(--warning-ink);
   margin: 0.5rem 0.8rem 0;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -376,8 +380,8 @@ main {
   padding: 0.4rem 0.7rem;
 }
 .save-badge.pending {
-  background: #fff8e7;
-  color: #806020;
+  background: var(--warning-paper);
+  color: var(--warning-ink);
 }
 .recovery-status {
   color: var(--muted);
@@ -426,7 +430,7 @@ main {
   min-width: 75px;
 }
 .tabs button[aria-selected="true"] {
-  background: #fff;
+  background: var(--paper);
   color: var(--accent);
   font-weight: 700;
   box-shadow: 0 1px 4px #22242618;
@@ -478,7 +482,7 @@ main {
 }
 .notice {
   background: var(--tint);
-  border: 1px solid #cbe4e7;
+  border: 1px solid var(--line);
   border-radius: 4px;
   padding: 1rem;
   font-size: 0.9rem;
@@ -489,8 +493,8 @@ main {
   margin-bottom: 0;
 }
 .error {
-  color: #8b3028;
-  background: #f8eae5;
+  color: var(--error-ink);
+  background: var(--error-paper);
   border-radius: 4px;
   padding: 0.8rem;
 }
@@ -545,7 +549,7 @@ dialog::backdrop {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  background: #fff;
+  background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 4px;
   padding: 0.8rem;
@@ -580,7 +584,7 @@ dialog::backdrop {
 .upload-panel {
   padding: 1.2rem;
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--paper);
   border-radius: 4px;
   margin-top: 1rem;
 }

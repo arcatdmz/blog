@@ -212,3 +212,31 @@ Before adoption, check on the **actual iPad Pro**:
 
 Desktop/WebKit automation cannot establish actual iPad typing fluency. Live
 Access, GitHub writes, and publication require your deployment and credentials.
+
+## Theme and URL navigation
+
+The header offers **System theme / Light / Dark** (OS is the default). It uses the
+same `theme` localStorage key and `html[data-theme]` contract as anime-aist.vercel.app,
+tracks OS changes in System mode, and synchronizes same-origin tabs. Article
+previews and dialogs follow the selection. The framework-independent implementation
+and the blog/portfolio adoption research are in [theme compatibility](../docs/theme-compatibility.md).
+
+Screen state uses the History API and query parameters on the editor root:
+
+- `/?dialog=new`: new-post form. Unsubmitted title/date/slug/language are recovered
+  from sessionStorage in the same tab.
+- `/?post=src%2Fja%2F2024-01-01-example.md`: edit an existing or locally created post.
+- Add `&view=preview` for preview; omit it for Write.
+- Add `&dialog=images` for the current post's image library, or open
+  `/?post=%40media&dialog=images` for the standalone image workspace.
+- `language=default`, `q=…`, `media-q=…`, and `zen=1` preserve the collection,
+  post/image searches, and Zen mode. Search edits replace the current history entry.
+
+Reload and Back/Forward restore the selected workspace automatically, preferring
+local IndexedDB recovery to GitHub content. A synchronous sessionStorage text
+checkpoint also covers reload before the idle recovery write. Write/Preview history
+navigation retains the same textarea and native undo. New local drafts and pending
+image bytes remain device-local; sharing their URL does not transfer their content.
+API endpoints and Access protection are unchanged. Query routing does not require
+new server rewrites. Transient figure/frontmatter dialogs and files not yet staged
+are not serialized in URLs; apply/stage those changes to include them in recovery.

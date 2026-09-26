@@ -1,3 +1,4 @@
+import { useEditorRoute } from "./routing";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   MAX_IMAGE_BYTES,
@@ -99,7 +100,9 @@ export default function MediaLibrary({
   onPick?: (url: string) => void;
 }) {
   const { t } = useI18n();
-  const [search, setSearch] = useState("");
+  const [route, navigate] = useEditorRoute();
+  const search = route.mediaSearch;
+  const setSearch = (mediaSearch: string) => navigate({ mediaSearch }, true);
   const [file, setFile] = useState<File | null>(null);
   const [candidate, setCandidate] = useState<Blob | null>(null);
   const [name, setName] = useState("");

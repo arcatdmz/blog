@@ -631,3 +631,206 @@ test("a failed preview download does not discard the active editor", async ({
     page.getByText("Recovery saved on this device", { exact: true })
   ).toBeVisible();
 });
+
+test("theme follows OS, remembers overrides, and returns to OS with dark preview", async ({
+  page
+}) => {
+  await mockRepository(page);
+  await page.emulateMedia({ colorScheme: "dark" });
+  await openEnglish(page);
+  const theme = page.getByLabel("Color theme");
+  await expect(theme).toHaveValue("system");
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  await page.getByRole("tab", { name: "Preview", exact: true }).click();
+  const article = page.locator(".preview article");
+  await expect(article).toHaveCSS("color", "rgb(229, 231, 233)");
+  await expect(page.locator(".preview figcaption").first()).toHaveCSS(
+    "background-color",
+    "rgb(36, 41, 46)"
+  );
+  await page.screenshot({
+    path: test.info().outputPath("dark-preview.png"),
+    fullPage: true
+  });
+  await theme.selectOption("light");
+  await expect(article).toHaveCSS("color", "rgb(34, 36, 38)");
+  await page.reload();
+  await expect(theme).toHaveValue("light");
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  await theme.selectOption("system");
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  expect(await page.evaluate(() => localStorage.getItem("theme"))).toBeNull();
+  await page.emulateMedia({ colorScheme: "light" });
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+});
+
+test("URL restores post, preview, images and search; history preserves textarea", async ({
+  page
+}) => {
+  await mockRepository(page);
+  await openEnglish(page);
+  const body = page.getByRole("textbox", { name: "Markdown body" });
+  await body.fill("\nURL recovery 日本語\n");
+  const editor = await body.elementHandle();
+  await page.getByRole("tab", { name: "Preview", exact: true }).click();
+  await expect(page).toHaveURL(/view=preview/);
+  await page.goBack();
+  await expect(body).toBeVisible();
+  expect(await editor!.evaluate(element => element.isConnected)).toBe(true);
+  await page.goForward();
+  await expect(page.locator(".preview article")).toContainText(
+    "URL recovery 日本語"
+  );
+  await page.getByRole("button", { name: "Images", exact: true }).click();
+  const search = page.getByRole("searchbox", { name: "Search images" });
+  await search.fill("unused");
+  await page.reload();
+  await expect(
+    page.getByRole("dialog", { name: "Image library", exact: true })
+  ).toBeVisible();
+  await expect(search).toHaveValue("unused");
+  await page.getByRole("button", { name: "Close dialog", exact: true }).click();
+  await expect(page.locator(".preview article")).toContainText(
+    "URL recovery 日本語"
+  );
+  await page.getByRole("tab", { name: "Write", exact: true }).click();
+  await expect(body).toHaveValue("\nURL recovery 日本語\n");
+});
+
+test("new post form and locally created draft survive reload via URL", async ({
+  page
+}) => {
+  const repository = await mockRepository(page);
+  await page.goto("/?dialog=new");
+  const dialog = page.getByRole("dialog", { name: "New post", exact: true });
+  await dialog.getByLabel("Title", { exact: true }).fill("Draft to keep");
+  await dialog.getByLabel("ASCII slug", { exact: true }).fill("draft-to-keep");
+  await page.reload();
+  await expect(dialog.getByLabel("Title", { exact: true })).toHaveValue(
+    "Draft to keep"
+  );
+  await expect(dialog.getByLabel("ASCII slug", { exact: true })).toHaveValue(
+    "draft-to-keep"
+  );
+  await dialog.getByRole("button", { name: "Create local draft" }).click();
+  await expect(page).toHaveURL(/post=src%2Fja%2F.*draft-to-keep.md/);
+  const body = page.getByRole("textbox", { name: "Markdown body" });
+  await body.fill("\nNew draft body\n");
+  await expect(
+    page.getByText("Recovery saved on this device", { exact: true })
+  ).toBeVisible();
+  await page.reload();
+  await expect(body).toHaveValue("\nNew draft body\n");
+  expect(repository.saves).toHaveLength(0);
+});
+
+test("image workspace opens directly and restores pending image bytes", async ({
+  page
+}) => {
+  await mockRepository(page);
+  await page.goto("/?post=%40media&dialog=images");
+  await expect(
+    page.getByRole("dialog", { name: "Image library", exact: true })
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Close dialog", exact: true }).click();
+  await stageImage(page);
+  await page.reload();
+  const card = page.locator(".media-card").filter({ hasText: "new-image.png" });
+  await expect(card).toContainText("Pending upload");
+  await expect
+    .poll(() =>
+      card
+        .locator("img")
+        .evaluate((image: HTMLImageElement) => image.naturalWidth)
+    )
+    .toBe(1);
+});
+
+test("reload immediately after typing recovers without a manual recovery click", async ({
+  page
+}) => {
+  await mockRepository(page);
+  await openEnglish(page);
+  const body = page.getByRole("textbox", { name: "Markdown body" });
+  await body.fill("\nLast keystroke before reload\n");
+  await page.reload();
+  await expect(body).toHaveValue("\nLast keystroke before reload\n");
+});
+
+test("OS changes respect overrides and theme changes synchronize between tabs", async ({
+  page,
+  context
+}) => {
+  await mockRepository(page);
+  await openEnglish(page);
+  const other = await context.newPage();
+  await mockRepository(other);
+  await other.goto("/");
+  await page.getByLabel("Color theme").selectOption("dark");
+  await page.emulateMedia({ colorScheme: "light" });
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  await expect(other.getByLabel("Color theme")).toHaveValue("dark");
+  await expect(other.locator("html")).toHaveAttribute("data-theme", "dark");
+  await page.getByLabel("Color theme").selectOption("system");
+  await expect(other.getByLabel("Color theme")).toHaveValue("system");
+  await other.close();
+});
+
+test("back during a slow post request keeps the destination and local text", async ({
+  page
+}) => {
+  await mockRepository(page);
+  await openEnglish(page);
+  const body = page.getByRole("textbox", { name: "Markdown body" });
+  await body.fill("\nKeep the original workspace\n");
+  let release!: () => void;
+  const waiting = new Promise<void>(resolve => {
+    release = resolve;
+  });
+  let started = false;
+  await page.route("**/api/post?**", async route => {
+    if (
+      new URL(route.request().url()).searchParams.get("path") !==
+      "src/ja/slow.md"
+    )
+      return route.fallback();
+    started = true;
+    await waiting;
+    await route.fulfill({
+      json: { path: "src/ja/slow.md", content: english, sha: "slow" }
+    });
+  });
+  await page.evaluate(() => {
+    history.pushState(null, "", "/?post=src%2Fja%2Fslow.md");
+    dispatchEvent(new PopStateEvent("popstate"));
+  });
+  await expect.poll(() => started).toBe(true);
+  await page.goBack();
+  await expect(body).toHaveValue("\nKeep the original workspace\n");
+  release();
+  await expect(page.locator(".document-heading .filename")).toHaveText(
+    englishPath
+  );
+  await expect(body).toHaveValue("\nKeep the original workspace\n");
+});
+
+test("failed deep link stays retryable without changing its URL", async ({
+  page
+}) => {
+  await mockRepository(page);
+  let fail = true;
+  await page.route("**/api/post?**", route =>
+    fail
+      ? route.fulfill({ status: 503, json: { error: "Temporary failure" } })
+      : route.fallback()
+  );
+  await page.goto(`/?post=${encodeURIComponent(englishPath)}&view=preview`);
+  await expect(page.getByRole("alert")).toContainText("Temporary failure");
+  fail = false;
+  await page.getByRole("button", { name: "Retry opening" }).click();
+  await expect(page.locator(".preview article")).toBeVisible();
+  await expect(page).toHaveURL(/view=preview/);
+  await expect(page.locator(".document-heading .filename")).toHaveText(
+    englishPath
+  );
+});
