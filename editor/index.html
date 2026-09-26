@@ -7,21 +7,7 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <meta name="theme-color" content="#f4f2ee" />
-    <script>
-      // Resolve before first paint; keep the persisted contract in shared/theme.ts.
-      (function () {
-        var theme;
-        try {
-          theme = localStorage.getItem("theme");
-        } catch (_) {}
-        if (theme !== "light" && theme !== "dark")
-          theme = matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
-        document.documentElement.dataset.theme = theme;
-        document.documentElement.style.colorScheme = theme;
-      })();
-    </script>
+    <script src="/theme-init.js"></script>
     <title>Blog editor · People are Programmers</title>
   </head>
   <body>

@@ -11,7 +11,8 @@
   同一 origin の別タブ変更は storage イベントで反映する。
 - ストレージ禁止時もページ内の選択は機能する。次回は OS を使う。
 - `shared/theme.ts` は React 非依存。UI/イベントの接続例は
-  `editor/src/ThemeSelect.tsx`、初期化例は `editor/index.html`。
+  `editor/src/ThemeSelect.tsx`、初期化例は `editor/public/theme-init.js`。
+  `editor/index.html` から同期読み込みし、本番の `script-src 'self'` に対応する。
 - 配色は `css/theme.css` の `--blog-*`。暗色パレットは
   `:root[data-theme="dark"]` でのみ有効。編集室固有の状態色は
   `editor/src/tokens.css`。Shadow DOM のプレビューは変数を継承する。

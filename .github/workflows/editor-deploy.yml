@@ -34,6 +34,7 @@ jobs:
       - run: npx playwright install --with-deps chromium webkit
       - run: cp .dev.vars.example .dev.vars
       - run: npm run test:browser
+      - run: npm run test:production
       - name: Deploy tagged revision to Cloudflare
         run: npx wrangler deploy
         env:

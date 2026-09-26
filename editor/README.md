@@ -184,11 +184,14 @@ npm run build
 npx playwright install --with-deps chromium webkit
 # .dev.vars must contain LOCAL_DEMO=true for the local Worker smoke test.
 npm run test:browser
+npm run test:production
 ```
 
 The browser suite includes desktop Chromium, a tablet-sized Chromium viewport,
 and WebKit. Tests use a read-only Worker fixture or intercept repository APIs;
-they never commit to the real repository. CI runs these checks separately from
+they never commit to the real repository. The production suite serves the built
+client with the Worker's production CSP and checks theme initialization before
+React loads, plus theme persistence and preview deep links. CI runs these checks separately from
 the blog build. Use `BROWSER_EXECUTABLE=/path/to/chromium` when supplying a local
 Chromium binary. Test source and image fixtures come from this repository.
 
