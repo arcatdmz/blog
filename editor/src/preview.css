@@ -1,0 +1,65 @@
+:host {
+  display: block;
+  color: var(--blog-ink);
+  font-family: var(--blog-font);
+  font-size: var(--blog-font-size);
+  line-height: var(--blog-line-height);
+}
+* {
+  box-sizing: border-box;
+}
+article {
+  display: flow-root;
+}
+img {
+  max-width: 100%;
+}
+pre {
+  overflow: auto;
+}
+table {
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid var(--blog-line);
+  padding: 0.5em 0.75em;
+}
+.embed-placeholder {
+  padding: 1rem;
+  background: #f6f6f6;
+  color: var(--blog-muted);
+}
+article.post-item figure > figcaption {
+  margin-bottom: 0;
+}
+.figure-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5em 0 0;
+  clear: both;
+}
+.figure-edit {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.65rem 1rem;
+  min-height: 44px;
+  border: 1px solid var(--blog-line);
+  border-radius: 4px;
+  background: var(--blog-paper);
+  color: var(--blog-accent-hover);
+  cursor: pointer;
+  display: block;
+  margin: 0;
+}
+.figure-edit:hover {
+  background: var(--blog-tint);
+  border-color: var(--blog-accent);
+}
+.figure-edit:focus-visible {
+  outline: 2px solid var(--blog-accent);
+  outline-offset: 2px;
+}

@@ -1,9 +1,12 @@
+@import url("../../css/theme.css");
+
 :root {
-  --paper: #f4f2ee;
-  --ink: #293b31;
-  --muted: #6d776c;
-  --line: #d8ddd2;
-  --green: #355e45;
-  --tint: #edf0e8;
+  --paper: var(--blog-paper);
+  --ink: var(--blog-ink);
+  --muted: var(--blog-muted);
+  --line: var(--blog-line);
+  --accent: var(--blog-accent-hover);
+  --tint: var(--blog-tint);
+  --surface: #f8f9fa;
   color-scheme: light;
 }

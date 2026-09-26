@@ -10,6 +10,21 @@ import {
   type Deletion
 } from "../shared/model";
 import Modal from "./Modal";
+import { useI18n } from "./i18n";
+
+const mediaErrors: Record<string, string> = {
+  "Image conversion failed.": "画像を変換できませんでした。",
+  "Choose an edge between 100–12000 and quality between 10–100.":
+    "最大辺は100〜12000ピクセル、画質は10〜100で指定してください。",
+  "This browser cannot decode this file. Export it as JPEG or PNG, then choose that file.":
+    "このブラウザーでは画像を読み込めません。JPEG または PNG で書き出してから、もう一度選択してください。",
+  "Use letters, numbers, dashes, or underscores in the filename.":
+    "ファイル名には半角英数字、ハイフン、アンダースコアを使用してください。",
+  "This image exceeds 10 MiB. Optimize it before adding.":
+    "画像が10 MiBを超えています。最適化してから追加してください。",
+  "Choose JPEG, PNG, WebP, or GIF, or use Convert first. The filename extension must match the image.":
+    "JPEG、PNG、WebP、GIF の画像を選ぶか、先に変換してください。拡張子は画像形式と一致させてください。"
+};
 
 const bytesLabel = (bytes: number) =>
   bytes < 1024 * 1024
@@ -83,6 +98,7 @@ export default function MediaLibrary({
   onCover?: (url: string) => void;
   onPick?: (url: string) => void;
 }) {
+  const { t } = useI18n();
   const [search, setSearch] = useState("");
   const [file, setFile] = useState<File | null>(null);
   const [candidate, setCandidate] = useState<Blob | null>(null);
@@ -130,21 +146,27 @@ export default function MediaLibrary({
   };
   return (
     <Modal
-      title={onPick ? "Choose an image" : "Image library"}
+      title={
+        onPick
+          ? t("Choose an image", "画像を選択")
+          : t("Image library", "画像ライブラリ")
+      }
       onClose={() => {
         if (!busy) onClose();
       }}
     >
       <p className="hint">
-        Uploads and deletions stay on this device until Save changes commits
-        them to GitHub.
+        {t(
+          "Uploads and deletions stay on this device until Save changes commits them to GitHub.",
+          "画像の追加や削除はこの端末に保存されます。「変更を保存」で GitHub に反映されます。"
+        )}
       </p>
       <fieldset disabled={busy}>
-        <div className="button-row">
+        <div className="button-row media-toolbar">
           <input
-            aria-label="Search images"
+            aria-label={t("Search images", "画像を検索")}
             type="search"
-            placeholder="Search filenames…"
+            placeholder={t("Search filenames…", "ファイル名で検索…")}
             value={search}
             onChange={e => {
               setSearch(e.target.value);
@@ -152,7 +174,7 @@ export default function MediaLibrary({
             }}
           />
           <button onClick={() => fileInput.current?.click()}>
-            Upload image
+            {t("Upload image", "画像をアップロード")}
           </button>
         </div>
         <input
@@ -173,24 +195,26 @@ export default function MediaLibrary({
         />
         {file && candidate && (
           <section className="upload-panel">
-            <h3>Prepare upload</h3>
+            <h3>{t("Prepare upload", "アップロードの準備")}</h3>
             <img
               className="upload-preview"
               src={preview}
-              alt="Upload preview"
+              alt={t("Upload preview", "アップロードする画像のプレビュー")}
             />
             <label>
-              Filename
+              {t("Filename", "ファイル名")}
               <input value={name} onChange={e => setName(e.target.value)} />
             </label>
             <p>
-              {candidate === file ? "Original" : "Converted"}:{" "}
-              {bytesLabel(candidate.size)} · Original: {bytesLabel(file.size)} ·
-              Limit: 10 MiB
+              {candidate === file
+                ? t("Original", "元の画像")
+                : t("Converted", "変換後")}
+              : {bytesLabel(candidate.size)} · {t("Original", "元の画像")}:{" "}
+              {bytesLabel(file.size)} · {t("Limit", "上限")}: 10 MiB
             </p>
             <div className="form-grid">
               <label>
-                Maximum edge (pixels)
+                {t("Maximum edge (pixels)", "最大辺（ピクセル）")}
                 <input
                   type="number"
                   min="100"
@@ -200,7 +224,7 @@ export default function MediaLibrary({
                 />
               </label>
               <label>
-                JPEG quality (%)
+                {t("JPEG quality (%)", "JPEG の画質（%）")}
                 <input
                   type="number"
                   min="10"
@@ -211,9 +235,10 @@ export default function MediaLibrary({
               </label>
             </div>
             <p className="hint">
-              Optimization keeps PNG transparency. Other formats become JPEG;
-              animated images become a still image. To preserve animation, keep
-              the original.
+              {t(
+                "Optimization keeps PNG transparency. Other formats become JPEG; animated images become a still image. To preserve animation, keep the original.",
+                "PNG の透明部分は維持されます。他の形式は JPEG に、アニメーションは静止画に変換されます。動きを残す場合は元の画像を使用してください。"
+              )}
             </p>
             <div className="button-row">
               <button
@@ -254,7 +279,10 @@ export default function MediaLibrary({
                   })
                 }
               >
-                Preview optimization / convert
+                {t(
+                  "Preview optimization / convert",
+                  "最適化・変換をプレビュー"
+                )}
               </button>
               <button
                 onClick={() => {
@@ -262,7 +290,7 @@ export default function MediaLibrary({
                   setName(safeImageName(file.name));
                 }}
               >
-                Keep original
+                {t("Keep original", "元の画像を使用")}
               </button>
               <button
                 className="primary"
@@ -290,7 +318,7 @@ export default function MediaLibrary({
                   })
                 }
               >
-                Add to pending uploads
+                {t("Add to pending uploads", "アップロード待ちに追加")}
               </button>
               <button
                 onClick={() => {
@@ -298,17 +326,17 @@ export default function MediaLibrary({
                   setCandidate(null);
                 }}
               >
-                Cancel upload
+                {t("Cancel upload", "アップロードを取り消す")}
               </button>
             </div>
           </section>
         )}
         {error && (
           <p className="error" role="alert">
-            {error}
+            {t(error, mediaErrors[error] ?? error)}
           </p>
         )}
-        {busy && <p role="status">Checking…</p>}
+        {busy && <p role="status">{t("Checking…", "確認中…")}</p>}
         <div className="media-grid">
           {all.slice(0, limit).map(entry => {
             const deleting = deletions.some(d => d.path === entry.path);
@@ -322,13 +350,15 @@ export default function MediaLibrary({
                   {entry.path.slice("public/images/".length)}
                 </p>
                 <small>
-                  {entry.pending ? "Pending upload" : "On GitHub"}
+                  {entry.pending
+                    ? t("Pending upload", "アップロード待ち")
+                    : t("On GitHub", "GitHub に保存済み")}
                   {entry.size ? ` · ${bytesLabel(entry.size)}` : ""}
                 </small>
                 <div className="button-row">
                   {deleting ? (
                     <button onClick={() => onUndoDelete(entry.path)}>
-                      Undo deletion
+                      {t("Undo deletion", "削除を取り消す")}
                     </button>
                   ) : (
                     <>
@@ -337,21 +367,23 @@ export default function MediaLibrary({
                           className="primary"
                           onClick={() => onPick(imageUrl(entry.path))}
                         >
-                          Choose
+                          {t("Choose", "選択")}
                         </button>
                       )}
                       {onInsert && (
                         <button onClick={() => onInsert(imageUrl(entry.path))}>
-                          Insert
+                          {t("Insert", "挿入")}
                         </button>
                       )}
                       {onCover && (
                         <button onClick={() => onCover(imageUrl(entry.path))}>
-                          Use as cover
+                          {t("Use as cover", "カバーに設定")}
                         </button>
                       )}
                       <button onClick={() => run(() => onDelete(entry.path))}>
-                        {entry.pending ? "Remove upload" : "Delete"}
+                        {entry.pending
+                          ? t("Remove upload", "アップロードを削除")
+                          : t("Delete", "削除")}
                       </button>
                     </>
                   )}
@@ -362,10 +394,20 @@ export default function MediaLibrary({
         </div>
         {all.length > limit && (
           <button onClick={() => setLimit(n => n + 40)}>
-            Show more images ({all.length - limit} remaining)
+            {t(
+              `Show more images (${all.length - limit} remaining)`,
+              `さらに表示（残り${all.length - limit}枚）`
+            )}
           </button>
         )}
-        {!all.length && <p className="empty">No images match this search.</p>}
+        {!all.length && (
+          <p className="empty">
+            {t(
+              "No images match this search.",
+              "条件に一致する画像はありません。"
+            )}
+          </p>
+        )}
       </fieldset>
     </Modal>
   );

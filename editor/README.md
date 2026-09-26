@@ -22,8 +22,9 @@ only by `LOCAL_DEMO=true` **in a development build on localhost**; production bu
 cannot enable it. Keep the development server bound to loopback.
 
 The editor has its own lockfile and dependencies. The parent blog excludes it from
-TypeScript compilation. Article preview imports the blog's existing stylesheet;
-no Markdown or image migration is needed.
+TypeScript compilation. The editor and blog share typography and colors in
+`../css/theme.css`. Article preview imports the blog's stylesheet and code
+highlighting; no Markdown or image migration is needed.
 
 ## Deploy to Cloudflare
 
@@ -95,12 +96,19 @@ its automatic branch builds so that deployments happen only through release tags
 
 ## Daily use
 
+- **English / 日本語** in the header switches the interface, including dialogs and
+  preview controls. This preference stays in this browser; it does not change the
+  post collection, article content, or undo history.
 - Select English/Japanese, search by title or filename, then open a post. New
   posts require a title, date, and ASCII slug. Existing filenames cannot be renamed.
 - Write uses a native textarea. Formatting actions insert source at the selection
   and use native undo where supported. Preview is rendered only when opened,
   with blog figure styles; executable embeds become placeholders and links are
   inactive. Switching tabs preserves the textarea and its editing history.
+- **Zen mode** beside the article title hides navigation and post details, leaving
+  the title, editing controls, and writing area. Save and preview remain available.
+  Choose **Exit Zen mode** or press Escape to return; text and undo history are
+  preserved. Escape closes an open dialog first and does not exit during IME input.
 - Choose **Image layout** at the cursor, or **Edit image layout** in Preview.
   Supported figures include captions with Markdown links/emphasis, linked images,
   shared links, image ordering, floats, size presets, and 2/3/4 columns. Unsupported

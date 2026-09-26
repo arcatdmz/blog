@@ -1,0 +1,75 @@
+/* Shared by the published blog and its writing room. */
+:root,
+:host {
+  --blog-font:
+    a-otf-ud-shin-go-pr6n, "Hiragino Kaku Gothic Pro", Meiryo, Helvetica, Arial,
+    sans-serif;
+  --blog-font-size: 15px;
+  --blog-line-height: 1.7;
+  --blog-paper: #fff;
+  --blog-ink: #222426;
+  --blog-muted: #686b6e;
+  --blog-line: rgba(34, 36, 38, 0.15);
+  --blog-accent: #269eab;
+  --blog-accent-hover: #18646c;
+  --blog-tint: #eef8f9;
+}
+
+/* Article typography also applies inside the editor's isolated preview. */
+article.post-item {
+  font-family: var(--blog-font);
+  font-size: var(--blog-font-size);
+  line-height: var(--blog-line-height);
+  color: var(--blog-ink);
+  overflow-wrap: break-word;
+}
+
+article.post-item :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--blog-font);
+  line-height: 1.28571429;
+  margin: calc(2rem - 0.1428571429em) 0 1rem;
+  font-weight: 700;
+}
+
+article.post-item h1 {
+  font-size: 2rem;
+}
+article.post-item h2 {
+  font-size: 1.71428571rem;
+}
+article.post-item h3 {
+  font-size: 1.28571429rem;
+}
+article.post-item h4 {
+  font-size: 1.07142857rem;
+}
+article.post-item :is(h5, h6) {
+  font-size: 1rem;
+}
+article.post-item :is(h1, h2, h3, h4, h5, h6):first-child {
+  margin-top: 0;
+}
+
+article.post-item p {
+  margin: 0 0 1em;
+  line-height: var(--blog-line-height);
+}
+
+article.post-item :is(p, h1, h2, h3, h4, h5, h6):last-child {
+  margin-bottom: 0;
+}
+
+article.post-item a {
+  color: var(--blog-accent);
+  text-decoration: underline;
+}
+article.post-item a:hover {
+  color: var(--blog-accent-hover);
+}
+article.post-item blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1.5em;
+  border-left: 1em solid var(--blog-line);
+  color: #555;
+}

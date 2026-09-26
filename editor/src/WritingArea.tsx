@@ -1,4 +1,5 @@
 import { forwardRef, useImperativeHandle, useRef } from "react";
+import { useI18n } from "./i18n";
 
 export interface WritingHandle {
   selection(): { start: number; end: number; text: string };
@@ -20,6 +21,7 @@ const WritingArea = forwardRef<
   { initial, disabled, onInput, onComposition },
   forwardedRef
 ) {
+  const { t } = useI18n();
   const ref = useRef<HTMLTextAreaElement>(null);
   const fallbackUndo = useRef<
     { before: string; after: string; start: number }[]
@@ -76,7 +78,7 @@ const WritingArea = forwardRef<
     <textarea
       ref={ref}
       className="writing-area"
-      aria-label="Markdown body"
+      aria-label={t("Markdown body", "Markdown 本文")}
       defaultValue={initial}
       disabled={disabled}
       autoCapitalize="sentences"

@@ -2,6 +2,15 @@ import { useState } from "react";
 import type { Figure } from "./figures";
 import { serializeFigure } from "./figures";
 import Modal from "./Modal";
+import { useI18n } from "./i18n";
+
+const figureErrors: Record<string, string> = {
+  "Add at least one image.": "画像を1枚以上追加してください。",
+  "Use an https://, http://, /path, or #anchor link.":
+    "https://、http://、/path、#anchor のいずれかで始まるリンクを入力してください。",
+  "Each image needs a valid URL.": "各画像に有効な URL を入力してください。",
+  "Invalid shared link.": "共通のリンクが正しくありません。"
+};
 
 export default function FigureDialog({
   initial,
@@ -16,6 +25,7 @@ export default function FigureDialog({
   onPick: (add: (src: string) => void) => void;
   resolveImage: (src: string) => string;
 }) {
+  const { t } = useI18n();
   const [figure, setFigure] = useState(initial);
   const [error, setError] = useState("");
   const update = (patch: Partial<Figure>) =>
@@ -29,28 +39,30 @@ export default function FigureDialog({
     update({ images });
   };
   return (
-    <Modal title="Image layout" onClose={onClose}>
+    <Modal title={t("Image layout", "画像のレイアウト")} onClose={onClose}>
       <p className="hint">
-        Arrange images here. The post keeps its ordinary Markdown and figure
-        HTML.
+        {t(
+          "Arrange images here. The post keeps its ordinary Markdown and figure HTML.",
+          "画像の配置を調整できます。記事は通常の Markdown と figure タグで保存されます。"
+        )}
       </p>
       <div className="form-grid">
         <label>
-          Placement
+          {t("Placement", "配置")}
           <select
             value={figure.placement}
             onChange={e =>
               update({ placement: e.target.value as Figure["placement"] })
             }
           >
-            <option value="">Full width</option>
-            <option value="center">Centered</option>
-            <option value="left">Float left</option>
-            <option value="right">Float right</option>
+            <option value="">{t("Full width", "全幅")}</option>
+            <option value="center">{t("Centered", "中央")}</option>
+            <option value="left">{t("Float left", "左に寄せる")}</option>
+            <option value="right">{t("Float right", "右に寄せる")}</option>
           </select>
         </label>
         <label>
-          Columns
+          {t("Columns", "列数")}
           <select
             value={figure.columns}
             onChange={e =>
@@ -70,7 +82,7 @@ export default function FigureDialog({
             checked={figure.small}
             onChange={e => update({ small: e.target.checked })}
           />
-          Small
+          {t("Small", "小さく表示")}
         </label>
         <label className="check">
           <input
@@ -78,11 +90,11 @@ export default function FigureDialog({
             checked={figure.fixed}
             onChange={e => update({ fixed: e.target.checked })}
           />
-          Fixed size
+          {t("Fixed size", "サイズを固定")}
         </label>
       </div>
       <label>
-        Shared link (optional)
+        {t("Shared link (optional)", "共通のリンク（任意）")}
         <input
           value={figure.sharedLink}
           placeholder="https://…"
@@ -95,7 +107,7 @@ export default function FigureDialog({
             <img src={resolveImage(image.src)} alt="" />
             <div>
               <label>
-                Image URL
+                {t("Image URL", "画像 URL")}
                 <input
                   value={image.src}
                   onChange={e =>
@@ -108,7 +120,7 @@ export default function FigureDialog({
                 />
               </label>
               <label>
-                Alt text
+                {t("Alt text", "代替テキスト")}
                 <input
                   value={image.alt}
                   onChange={e =>
@@ -122,7 +134,7 @@ export default function FigureDialog({
               </label>
               {!figure.sharedLink && (
                 <label>
-                  Image link (optional)
+                  {t("Image link (optional)", "画像のリンク（任意）")}
                   <input
                     value={image.link}
                     onChange={e =>
@@ -137,13 +149,13 @@ export default function FigureDialog({
               )}
               <div className="button-row">
                 <button disabled={index === 0} onClick={() => move(index, -1)}>
-                  Move up
+                  {t("Move up", "上へ")}
                 </button>
                 <button
                   disabled={index === figure.images.length - 1}
                   onClick={() => move(index, 1)}
                 >
-                  Move down
+                  {t("Move down", "下へ")}
                 </button>
                 <button
                   onClick={() =>
@@ -152,7 +164,7 @@ export default function FigureDialog({
                     })
                   }
                 >
-                  Remove
+                  {t("Remove", "削除")}
                 </button>
               </div>
             </div>
@@ -170,7 +182,7 @@ export default function FigureDialog({
             )
           }
         >
-          Add from library
+          {t("Add from library", "ライブラリから追加")}
         </button>
         <button
           onClick={() =>
@@ -179,12 +191,17 @@ export default function FigureDialog({
             })
           }
         >
-          Add image URL
+          {t("Add image URL", "画像 URL を追加")}
         </button>
       </div>
       <label>
-        Caption{" "}
-        <span className="hint">Supports Markdown links and emphasis</span>
+        {t("Caption", "キャプション")}{" "}
+        <span className="hint">
+          {t(
+            "Supports Markdown links and emphasis",
+            "Markdown のリンクや強調が使えます"
+          )}
+        </span>
         <textarea
           rows={3}
           value={figure.caption}
@@ -193,7 +210,7 @@ export default function FigureDialog({
       </label>
       {error && (
         <p role="alert" className="error">
-          {error}
+          {t(error, figureErrors[error] ?? error)}
         </p>
       )}
       <footer className="button-row">
@@ -208,9 +225,9 @@ export default function FigureDialog({
             }
           }}
         >
-          Apply layout
+          {t("Apply layout", "レイアウトを適用")}
         </button>
-        <button onClick={onClose}>Cancel</button>
+        <button onClick={onClose}>{t("Cancel", "キャンセル")}</button>
       </footer>
     </Modal>
   );

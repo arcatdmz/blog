@@ -47,6 +47,8 @@ import WritingArea, { type WritingHandle } from "./WritingArea";
 import Modal from "./Modal";
 import FeatureBoundary from "./FeatureBoundary";
 import type { Figure, FigureRange } from "./figures";
+import { useI18n } from "./i18n";
+import website from "../../website.json";
 
 const Preview = lazy(() => import("./Preview"));
 const FigureDialog = lazy(() => import("./FigureDialog"));
@@ -57,15 +59,78 @@ const today = () => {
   const date = new Date();
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
 };
-const message = (error: unknown) =>
-  error instanceof Error ? error.message : "Something went wrong.";
+type Notice = string | readonly [en: string, ja: string];
+const errorMessages: Record<string, string> = {
+  "The post needs YAML frontmatter between --- lines.":
+    "記事には --- で囲んだ YAML フロントマターが必要です。",
+  "Posts must be smaller than 512 KiB.":
+    "記事のサイズは 512 KiB 未満にしてください。",
+  "A title is required.": "タイトルを入力してください。",
+  "Date must be a valid YYYY-MM-DD date.":
+    "日付は YYYY-MM-DD 形式の有効な日付にしてください。",
+  "Last updated must be empty or a valid YYYY-MM-DD date.":
+    "最終更新日は空欄にするか、YYYY-MM-DD 形式の有効な日付にしてください。",
+  "Tags must be a list of strings.": "タグは文字列のリストにしてください。",
+  "Draft must be true or false.": "draft は true または false にしてください。",
+  "Local storage failed.": "この端末への保存に失敗しました。",
+  "Request failed": "リクエストに失敗しました。",
+  "Connection or sign-in failed. Your work is kept locally. Open Sign in again in a new tab, then retry.":
+    "接続またはログインに失敗しました。作業内容は端末に保持されています。別のタブで再度ログインし、もう一度お試しください。",
+  "Sign in again through Cloudflare Access, then retry. Your local work is safe.":
+    "Cloudflare Access から再度ログインし、もう一度お試しください。端末内の作業内容は保持されています。",
+  "Sign in through Cloudflare Access, then retry. Local edits have been kept.":
+    "Cloudflare Access からログインし、もう一度お試しください。端末内の編集内容は保持されています。",
+  "This post changed on GitHub. Your local version has been kept. Load the remote version to compare before saving.":
+    "GitHub 側でこの記事が変更されました。手元の内容は保持されています。保存前に GitHub の内容を読み込み、比較してください。",
+  "GitHub changed during this operation. Your local work is safe; reload the remote version to compare.":
+    "処理中に GitHub 側の内容が変更されました。端末内の作業内容は保持されています。GitHub の内容を再読み込みして比較してください。",
+  "The requested file or repository was not found.":
+    "指定されたファイルまたはリポジトリが見つかりませんでした。",
+  "GitHub access was refused or rate limited. Check the repository token or try again later.":
+    "GitHub へのアクセスが拒否されたか、利用上限に達しました。リポジトリのトークンを確認するか、しばらくしてからお試しください。",
+  "GitHub could not complete the request. Your local work is safe.":
+    "GitHub で処理を完了できませんでした。端末内の作業内容は保持されています。",
+  "An upload expired or is invalid. Save again to re-upload the original local file.":
+    "アップロードの有効期限が切れたか、無効になっています。もう一度保存すると、端末内の元のファイルを再アップロードします。",
+  "New filenames must use YYYY-MM-DD-ascii-slug.md and match the post date.":
+    "新しいファイル名は YYYY-MM-DD-ascii-slug.md の形式で、記事の日付と一致させてください。",
+  "Some images are still referenced by posts. Remove those references before deleting them.":
+    "記事で使用されている画像があります。画像を削除する前に、記事内の参照を削除してください。",
+  "Local demo is read-only. Your work remains on this device; configure Cloudflare Access and GitHub to save online.":
+    "ローカルデモではオンライン保存できません。作業内容はこの端末に保持されます。オンライン保存には Cloudflare Access と GitHub の設定が必要です。"
+};
+const message = (error: unknown): Notice => {
+  if (!(error instanceof Error))
+    return ["Something went wrong.", "エラーが発生しました。"];
+  const original = error.message;
+  if (errorMessages[original]) return [original, errorMessages[original]];
+  if (original.startsWith("Invalid frontmatter: "))
+    return [
+      original,
+      `フロントマターが正しくありません: ${original.slice("Invalid frontmatter: ".length)}`
+    ];
+  const field =
+    /^(summary|summary_generated|coverImage|altUrl) must be text\.$/.exec(
+      original
+    )?.[1];
+  if (field) return [original, `${field} は文字列にしてください。`];
+  return original;
+};
 
 export default function App() {
+  const { locale, setLocale, t } = useI18n();
+  const displayNotice = (notice: Notice) =>
+    typeof notice === "string" ? notice : t(...notice);
+  const site = website.languages[locale === "ja" ? "ja" : "default"];
   const [index, setIndex] = useState<Index>(emptyIndex);
   const [titles, setTitles] = useState<Record<string, string>>({});
   const [search, setSearch] = useState("");
   const [language, setLanguage] = useState("ja");
   const [active, setActive] = useState("");
+  const [postsOpen, setPostsOpen] = useState(true);
+  const [mobilePosts, setMobilePosts] = useState(
+    () => window.matchMedia("(max-width: 700px)").matches
+  );
   const [initialBody, setInitialBody] = useState("");
   const [editorVersion, setEditorVersion] = useState(0);
   const [metadata, setMetadata] = useState<Record<string, unknown>>({});
@@ -73,12 +138,13 @@ export default function App() {
   const [deletions, setDeletions] = useState<Recovery["deletions"]>([]);
   const [recoveries, setRecoveries] = useState<Recovery[]>([]);
   const [modified, setModified] = useState(false);
-  const [localStatus, setLocalStatus] = useState("");
-  const [status, setStatus] = useState("");
-  const [error, setError] = useState("");
+  const [localStatus, setLocalStatus] = useState<Notice>("");
+  const [status, setStatus] = useState<Notice>("");
+  const [error, setError] = useState<Notice>("");
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(false);
   const [tab, setTab] = useState<"write" | "preview">("write");
+  const [zenMode, setZenMode] = useState(false);
   const [previewBody, setPreviewBody] = useState("");
   const [newPost, setNewPost] = useState(false);
   const [mediaOpen, setMediaOpen] = useState(false);
@@ -100,6 +166,32 @@ export default function App() {
   const generation = useRef(0);
   const selection = useRef({ start: 0, end: 0, text: "" });
   const saveAction = useRef<() => void>(() => {});
+  const zenToggle = useRef<HTMLButtonElement>(null);
+  const normalScroll = useRef(0);
+
+  const toggleZen = () => {
+    if (!zenMode) normalScroll.current = window.scrollY;
+    setZenMode(value => !value);
+  };
+
+  useEffect(() => {
+    window.scrollTo({ top: zenMode ? 0 : normalScroll.current });
+    if (!zenMode) return;
+    const onEscape = (event: KeyboardEvent) => {
+      if (
+        event.key !== "Escape" ||
+        event.isComposing ||
+        composing.current ||
+        document.querySelector("dialog[open]")
+      )
+        return;
+      event.preventDefault();
+      setZenMode(false);
+      zenToggle.current?.focus({ preventScroll: true });
+    };
+    window.addEventListener("keydown", onEscape);
+    return () => window.removeEventListener("keydown", onEscape);
+  }, [zenMode]);
 
   const refreshRecovery = useCallback(
     async () =>
@@ -123,7 +215,10 @@ export default function App() {
       return;
     }
     await putRecovery({ ...current, updatedAt: Date.now() });
-    setLocalStatus("Recovery saved on this device");
+    setLocalStatus([
+      "Recovery saved on this device",
+      "この端末に作業内容を保存しました"
+    ]);
     await refreshRecovery();
   }, [refreshRecovery]);
   const queueRecovery = useCallback(() => {
@@ -134,7 +229,10 @@ export default function App() {
         return;
       }
       void persist().catch(error => {
-        setLocalStatus("Local recovery failed — export your work");
+        setLocalStatus([
+          "Local recovery failed — export your work",
+          "端末への保存に失敗しました。作業内容をエクスポートしてください"
+        ]);
         setError(message(error));
       });
     }, 800);
@@ -150,7 +248,10 @@ export default function App() {
         updatedAt: Date.now()
       };
       setModified(true);
-      setLocalStatus("Waiting to save recovery…");
+      setLocalStatus([
+        "Waiting to save recovery…",
+        "この端末に保存しています…"
+      ]);
       setLastSave(null);
       queueRecovery();
     },
@@ -232,14 +333,26 @@ export default function App() {
     return next;
   }, [hydrate]);
   useEffect(() => {
+    const mobile = window.matchMedia("(max-width: 700px)");
+    const updatePostsMenu = () => {
+      setMobilePosts(mobile.matches);
+      setPostsOpen(!mobile.matches || !active);
+    };
+    updatePostsMenu();
+    mobile.addEventListener("change", updatePostsMenu);
+    return () => mobile.removeEventListener("change", updatePostsMenu);
+    // Reopening the same post also makes room for its editor on a phone.
+  }, [active, editorVersion]);
+  useEffect(() => {
     setLoading(true);
     void refresh()
       .catch(error => setError(message(error)))
       .finally(() => setLoading(false));
     void refreshRecovery().catch(() =>
-      setError(
-        "Local recovery storage is unavailable. Enable browser storage before editing."
-      )
+      setError([
+        "Local recovery storage is unavailable. Enable browser storage before editing.",
+        "作業内容を端末に保存できません。編集する前にブラウザーのストレージを有効にしてください。"
+      ])
     );
     return () => {
       generation.current++;
@@ -287,7 +400,10 @@ export default function App() {
       const recovery = (await listRecovery()).find(r => r.post.path === path);
       if (recovery) {
         activate(recovery);
-        setLocalStatus("Restored work from this device");
+        setLocalStatus([
+          "Restored work from this device",
+          "この端末の作業内容を復元しました"
+        ]);
         return;
       }
       const next = await refresh();
@@ -365,9 +481,10 @@ export default function App() {
     const initial = parseFigure(range.source);
     if (!initial) {
       setTab("write");
-      setStatus(
-        "This figure uses custom HTML. Its original source is selected for editing."
-      );
+      setStatus([
+        "This figure uses custom HTML. Its original source is selected for editing.",
+        "この画像レイアウトは独自の HTML を使用しています。編集できるよう元のソースを選択しました。"
+      ]);
       requestAnimationFrame(() =>
         writing.current?.focus(range.start, range.end)
       );
@@ -419,14 +536,20 @@ export default function App() {
       work.current.images.some(e => e.path === image.path)
     )
       throw new Error(
-        "That filename already exists. Choose a new name; images are never overwritten."
+        t(
+          "That filename already exists. Choose a new name; images are never overwritten.",
+          "同じファイル名がすでに存在します。画像は上書きできないため、別の名前を指定してください。"
+        )
       );
     if (
       work.current.images.length + work.current.deletions.length >=
       MAX_CHANGES
     )
       throw new Error(
-        `Save the current ${MAX_CHANGES} image changes before adding more.`
+        t(
+          `Save the current ${MAX_CHANGES} image changes before adding more.`,
+          `画像を追加する前に、現在の ${MAX_CHANGES} 件の変更を保存してください。`
+        )
       );
     const next = [...work.current.images, image];
     setImages(next);
@@ -460,11 +583,17 @@ export default function App() {
     const blockers = [...new Set([...(refs[path] || []), ...localReferences])];
     if (blockers.length)
       throw new Error(
-        `Still used by: ${blockers.join(", ")}. Remove those references first.`
+        t(
+          `Still used by: ${blockers.join(", ")}. Remove those references first.`,
+          `次の記事で使用されています: ${blockers.join(", ")}。先に記事内の参照を削除してください。`
+        )
       );
     if (
       !window.confirm(
-        `Stage deletion of ${path.split("/").pop()}? This takes effect only when you Save changes.`
+        t(
+          `Stage deletion of ${path.split("/").pop()}? This takes effect only when you Save changes.`,
+          `${path.split("/").pop()} を削除予定にしますか？「変更を保存」を押すと削除されます。`
+        )
       )
     )
       return;
@@ -475,7 +604,12 @@ export default function App() {
     } else {
       const entry = index.media.find(e => e.path === path)!;
       if (current.images.length + current.deletions.length >= MAX_CHANGES)
-        throw new Error(`Save the current ${MAX_CHANGES} changes first.`);
+        throw new Error(
+          t(
+            `Save the current ${MAX_CHANGES} changes first.`,
+            `先に現在の ${MAX_CHANGES} 件の変更を保存してください。`
+          )
+        );
       const next = [...current.deletions, { path, expectedSha: entry.sha }];
       setDeletions(next);
       changed({ deletions: next });
@@ -500,7 +634,7 @@ export default function App() {
     if (!work.current || saving || composing.current) return;
     setSaving(true);
     setError("");
-    setStatus("Preparing save…");
+    setStatus(["Preparing save…", "保存を準備しています…"]);
     try {
       const current = work.current;
       if (current.post.path !== MEDIA) validateDocument(current.post.content);
@@ -512,10 +646,13 @@ export default function App() {
       if (!result) {
         const uploads = [];
         for (const [i, image] of current.images.entries()) {
-          setStatus(`Uploading image ${i + 1} of ${current.images.length}…`);
+          setStatus([
+            `Uploading image ${i + 1} of ${current.images.length}…`,
+            `画像をアップロードしています（${i + 1} / ${current.images.length}）…`
+          ]);
           uploads.push(await uploadImage(image.path, image.blob));
         }
-        setStatus("Committing to GitHub…");
+        setStatus(["Committing to GitHub…", "GitHub に保存しています…"]);
         result = await commitChanges({
           id,
           baseHead: current.baseHead,
@@ -541,16 +678,20 @@ export default function App() {
       setLocalStatus("");
       setStatus(
         result.unchanged
-          ? "No changes to commit."
-          : "Committed to GitHub. Publication is handled by the blog build."
+          ? ["No changes to commit.", "保存する変更はありません。"]
+          : [
+              "Committed to GitHub. Publication is handled by the blog build.",
+              "GitHub に保存しました。ブログのビルドが完了すると公開されます。"
+            ]
       );
       await refreshRecovery();
       try {
         await refresh();
       } catch {
-        setError(
-          "The commit succeeded, but refreshing the library failed. Retry Refresh when the connection returns."
-        );
+        setError([
+          "The commit succeeded, but refreshing the library failed. Retry Refresh when the connection returns.",
+          "保存は完了しましたが、一覧の更新に失敗しました。接続が回復したら再度更新してください。"
+        ]);
       }
     } catch (error) {
       setStatus("");
@@ -560,9 +701,17 @@ export default function App() {
               .map(([path, refs]) => `${path}: ${refs.join(", ")}`)
               .join("; ")}`
           : "";
-      setError(message(error) + details);
+      const errorMessage = message(error);
+      setError(
+        typeof errorMessage === "string"
+          ? errorMessage + details
+          : [errorMessage[0] + details, errorMessage[1] + details]
+      );
       await persist().catch(() =>
-        setLocalStatus("Local recovery failed — export your work")
+        setLocalStatus([
+          "Local recovery failed — export your work",
+          "端末への保存に失敗しました。作業内容をエクスポートしてください"
+        ])
       );
     } finally {
       setSaving(false);
@@ -583,20 +732,45 @@ export default function App() {
     .sort((a, b) => b.path.localeCompare(a.path));
   const isPost = active && active !== MEDIA;
   return (
-    <div className="app-shell">
+    <div className={`app-shell${zenMode && isPost ? " zen-mode" : ""}`}>
       <header className="app-header">
-        <a href="/" className="brand" onClick={event => event.preventDefault()}>
-          <span className="brand-mark">P</span>
+        <a
+          href={site.siteUrl}
+          className="brand"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span>
-            People are Programmers<small>Writing room</small>
+            {site.title}
+            <small>{t("Writing room", "編集室")}</small>
           </span>
         </a>
         <div className="button-row">
+          <div
+            className="language-switch"
+            role="group"
+            aria-label={t("Interface language", "表示言語")}
+          >
+            <button
+              lang="en"
+              aria-pressed={locale === "en"}
+              onClick={() => setLocale("en")}
+            >
+              English
+            </button>
+            <button
+              lang="ja"
+              aria-pressed={locale === "ja"}
+              onClick={() => setLocale("ja")}
+            >
+              日本語
+            </button>
+          </div>
           <button
             disabled={!index.head || saving || loading}
             onClick={() => setNewPost(true)}
           >
-            New post
+            {t("New post", "新規記事")}
           </button>
           <button
             disabled={!index.head || saving || loading}
@@ -604,7 +778,7 @@ export default function App() {
               void openMedia().catch(error => setError(message(error)))
             }
           >
-            Images
+            {t("Images", "画像")}
           </button>
           {active && (
             <button
@@ -612,38 +786,62 @@ export default function App() {
               disabled={saving || loading || !modified}
               onClick={() => void save()}
             >
-              {saving ? "Saving…" : "Save changes"}
+              {saving
+                ? t("Saving…", "保存中…")
+                : t("Save changes", "変更を保存")}
             </button>
           )}
         </div>
       </header>
       {index.demo && (
         <div className="demo-banner">
-          Local demo · real posts, sample image previews, no GitHub writes.
+          {t(
+            "Local demo · real posts, sample image previews, no GitHub writes.",
+            "ローカルデモ · 実際の記事とサンプル画像を表示しています。GitHub への保存は行いません。"
+          )}
         </div>
       )}
       <div className="workspace">
         <aside className="sidebar">
-          <details open>
-            <summary>
-              Posts <span>{index.posts.length}</span>
-            </summary>
-            <div className="sidebar-content">
+          <section className="posts-panel">
+            <h2 className="posts-heading">
+              {mobilePosts ? (
+                <button
+                  aria-expanded={postsOpen}
+                  aria-controls="posts-list-panel"
+                  onClick={() => setPostsOpen(open => !open)}
+                >
+                  <span className="posts-disclosure" aria-hidden="true" />
+                  {t("Posts", "記事")}
+                  <span className="posts-count">{index.posts.length}</span>
+                </button>
+              ) : (
+                <>
+                  {t("Posts", "記事")}
+                  <span className="posts-count">{index.posts.length}</span>
+                </>
+              )}
+            </h2>
+            <div
+              id="posts-list-panel"
+              className="sidebar-content"
+              hidden={mobilePosts && !postsOpen}
+            >
               <label className="sr-only" htmlFor="language">
-                Post language
+                {t("Post language", "記事の言語")}
               </label>
               <select
                 id="language"
                 value={language}
                 onChange={e => setLanguage(e.target.value)}
               >
-                <option value="ja">Japanese</option>
-                <option value="default">English</option>
+                <option value="ja">{t("Japanese", "日本語")}</option>
+                <option value="default">{t("English", "英語")}</option>
               </select>
               <input
                 type="search"
-                aria-label="Search posts"
-                placeholder="Search posts…"
+                aria-label={t("Search posts", "記事を検索")}
+                placeholder={t("Search posts…", "記事を検索…")}
                 value={search}
                 onChange={e => setSearch(e.target.value)}
               />
@@ -657,11 +855,11 @@ export default function App() {
                     .finally(() => setLoading(false));
                 }}
               >
-                Refresh from GitHub
+                {t("Refresh from GitHub", "GitHub から更新")}
               </button>
               {recoveries.length > 0 && (
                 <section className="recovery-list">
-                  <h3>On this device</h3>
+                  <h3>{t("On this device", "この端末の作業内容")}</h3>
                   {recoveries.map(recovery => (
                     <button
                       key={recovery.post.path}
@@ -673,27 +871,33 @@ export default function App() {
                             r => r.post.path === recovery.post.path
                           );
                           if (latest) activate(latest);
-                          setLocalStatus("Restored work from this device");
+                          setLocalStatus([
+                            "Restored work from this device",
+                            "この端末の作業内容を復元しました"
+                          ]);
                         } catch (error) {
                           setError(message(error));
                         }
                       }}
                     >
                       {recovery.post.path === MEDIA
-                        ? "Pending media changes"
+                        ? t("Pending media changes", "未保存の画像の変更")
                         : recovery.post.path.split("/").pop()}
                       <small>
-                        Recovery ·{" "}
-                        {new Date(recovery.updatedAt).toLocaleString()}
+                        {t("Recovery", "復元用データ")} ·{" "}
+                        {new Date(recovery.updatedAt).toLocaleString(
+                          locale === "ja" ? "ja-JP" : "en-US"
+                        )}
                       </small>
                     </button>
                   ))}
                 </section>
               )}
-              <nav aria-label="Posts">
+              <nav aria-label={t("Posts", "記事")}>
                 {posts.map(entry => (
                   <button
                     className={entry.path === active ? "selected" : ""}
+                    aria-current={entry.path === active ? "page" : undefined}
                     key={entry.path}
                     disabled={saving || loading}
                     onClick={() => void openPost(entry.path)}
@@ -707,20 +911,24 @@ export default function App() {
               </nav>
               {!posts.length && (
                 <p className="hint">
-                  {loading ? "Loading posts…" : "No matching posts."}
+                  {loading
+                    ? t("Loading posts…", "記事を読み込んでいます…")
+                    : t("No matching posts.", "該当する記事はありません。")}
                 </p>
               )}
             </div>
-          </details>
+          </section>
         </aside>
         <main>
           {error && (
             <div className="notice error" role="alert">
-              <p>{error}</p>
+              <p>{displayNotice(error)}</p>
               <div className="button-row">
-                <button onClick={() => setError("")}>Dismiss</button>
+                <button onClick={() => setError("")}>
+                  {t("Dismiss", "閉じる")}
+                </button>
                 <a href="/" target="_blank" rel="noopener">
-                  Sign in again
+                  {t("Sign in again", "再度ログイン")}
                 </a>
                 {isPost && (
                   <button
@@ -733,7 +941,7 @@ export default function App() {
                       }
                     }}
                   >
-                    Compare remote version
+                    {t("Compare remote version", "GitHub の内容と比較")}
                   </button>
                 )}
               </div>
@@ -741,7 +949,7 @@ export default function App() {
           )}
           {status && (
             <p className="notice" role="status">
-              {status}
+              {displayNotice(status)}
             </p>
           )}
           {lastSave && (
@@ -751,33 +959,23 @@ export default function App() {
                 target="_blank"
                 rel="noopener"
               >
-                Commit {lastSave.commit.slice(0, 7)}
+                {t("Commit", "コミット")} {lastSave.commit.slice(0, 7)}
               </a>{" "}
               ·{" "}
               <a href={WORKFLOW_URL} target="_blank" rel="noopener">
-                Check publication
+                {t("Check publication", "公開状況を確認")}
               </a>
             </p>
           )}
           {!active && (
             <section className="welcome">
-              <p className="eyebrow">A little room to write</p>
-              <h1>
-                Make space for
-                <br />
-                your next idea.
-              </h1>
-              <p>
-                Choose a post, or start something new.
-                <br />
-                Your Markdown stays yours.
-              </p>
+              <h1>{t("Writing room", "編集室")}</h1>
               <button
                 className="primary"
                 disabled={!index.head}
                 onClick={() => setNewPost(true)}
               >
-                Start a post
+                {t("Create a post", "記事を作成")}
               </button>
             </section>
           )}
@@ -787,46 +985,84 @@ export default function App() {
                 <div>
                   <p className="eyebrow">
                     {active === MEDIA
-                      ? "Image library"
+                      ? t("Image library", "画像ライブラリ")
                       : active.startsWith("src/ja/")
-                        ? "Japanese post"
-                        : "English post"}
+                        ? t("Japanese post", "日本語の記事")
+                        : t("English post", "英語の記事")}
                   </p>
                   <h1>
                     {active === MEDIA
-                      ? "Pending media changes"
-                      : String(metadata.title || "Untitled")}
+                      ? t("Pending media changes", "未保存の画像の変更")
+                      : String(metadata.title || t("Untitled", "無題"))}
                   </h1>
                   <p className="filename">
                     {active === MEDIA ? "public/images" : active}
                   </p>
                 </div>
-                <span className={`save-badge ${modified ? "pending" : ""}`}>
-                  {modified ? "Not committed" : "On GitHub"}
-                </span>
+                <div className="document-actions">
+                  <span className={`save-badge ${modified ? "pending" : ""}`}>
+                    {modified
+                      ? t("Not committed", "未保存")
+                      : t("On GitHub", "GitHub に保存済み")}
+                  </span>
+                  {isPost && (
+                    <button
+                      ref={zenToggle}
+                      className="zen-toggle"
+                      aria-pressed={zenMode}
+                      title={
+                        zenMode
+                          ? t("Exit Zen mode (Esc)", "Zenモードを終了（Esc）")
+                          : undefined
+                      }
+                      onClick={toggleZen}
+                    >
+                      {zenMode
+                        ? t("Exit Zen mode", "Zenモードを終了")
+                        : t("Zen mode", "Zenモード")}
+                    </button>
+                  )}
+                  {zenMode && isPost && (
+                    <button
+                      className="primary"
+                      disabled={saving || loading || !modified}
+                      onClick={() => void save()}
+                    >
+                      {saving
+                        ? t("Saving…", "保存中…")
+                        : t("Save changes", "変更を保存")}
+                    </button>
+                  )}
+                </div>
               </div>
               <div className="recovery-status" aria-live="polite">
-                {localStatus ||
+                {displayNotice(localStatus) ||
                   (modified
-                    ? "Changes have not been committed to GitHub."
-                    : "No pending changes.")}
+                    ? t(
+                        "Changes have not been committed to GitHub.",
+                        "変更はまだ GitHub に保存されていません。"
+                      )
+                    : t("No pending changes.", "未保存の変更はありません。"))}
                 {images.length + deletions.length > 0 &&
-                  ` · ${images.length} upload(s), ${deletions.length} deletion(s)`}
+                  t(
+                    ` · ${images.length} upload(s), ${deletions.length} deletion(s)`,
+                    ` · アップロード ${images.length} 件、削除 ${deletions.length} 件`
+                  )}
               </div>
               {isPost && (
                 <>
                   <details className="metadata">
                     <summary>
-                      Post details{" "}
+                      {t("Post details", "記事の詳細")}{" "}
                       <span>
                         {metadata.draft === true
-                          ? "Draft"
-                          : "Published in lists"}
+                          ? t("Draft", "下書き")
+                          : t("Published in lists", "記事一覧に表示")}
                       </span>
                     </summary>
                     <fieldset disabled={saving}>
                       <label>
-                        Title
+                        {t("Title", "タイトル")}
                         <input
                           value={String(metadata.title || "")}
                           onChange={e =>
@@ -836,7 +1072,7 @@ export default function App() {
                       </label>
                       <div className="form-grid">
                         <label>
-                          Date
+                          {t("Date", "日付")}
                           <input
                             type="date"
                             value={String(metadata.date || "")}
@@ -846,7 +1082,7 @@ export default function App() {
                           />
                         </label>
                         <label>
-                          Last updated
+                          {t("Last updated", "最終更新日")}
                           <input
                             type="date"
                             value={String(metadata.lastmod || "")}
@@ -859,7 +1095,7 @@ export default function App() {
                         </label>
                       </div>
                       <label>
-                        Tags (comma-separated)
+                        {t("Tags (comma-separated)", "タグ（カンマ区切り）")}
                         <input
                           key={`${active}-${editorVersion}`}
                           defaultValue={
@@ -878,7 +1114,7 @@ export default function App() {
                         />
                       </label>
                       <label>
-                        Summary
+                        {t("Summary", "概要")}
                         <textarea
                           rows={3}
                           value={String(metadata.summary || "")}
@@ -888,7 +1124,7 @@ export default function App() {
                         />
                       </label>
                       <label>
-                        Cover image
+                        {t("Cover image", "カバー画像")}
                         <div className="button-row">
                           <input
                             value={String(metadata.coverImage || "")}
@@ -905,12 +1141,12 @@ export default function App() {
                               setMediaOpen(true);
                             }}
                           >
-                            Choose
+                            {t("Choose", "選択")}
                           </button>
                         </div>
                       </label>
                       <label>
-                        Alternate URL
+                        {t("Alternate URL", "別言語版の URL")}
                         <input
                           value={String(metadata.altUrl || "")}
                           onChange={e =>
@@ -928,11 +1164,16 @@ export default function App() {
                             metadataChange({ draft: e.target.checked })
                           }
                         />
-                        Draft — hide from article lists
+                        {t(
+                          "Draft — hide from article lists",
+                          "下書き — 記事一覧に表示しない"
+                        )}
                       </label>
                       <p className="hint">
-                        Saved drafts are public in GitHub and their article URLs
-                        remain accessible.
+                        {t(
+                          "Saved drafts are public in GitHub and their article URLs remain accessible.",
+                          "保存した下書きは GitHub 上に公開され、記事の URL からも閲覧できます。"
+                        )}
                       </p>
                       <button
                         onClick={() => {
@@ -940,7 +1181,7 @@ export default function App() {
                           setRawFrontmatter(header.current);
                         }}
                       >
-                        Edit frontmatter source
+                        {t("Edit frontmatter source", "フロントマターを編集")}
                       </button>
                     </fieldset>
                   </details>
@@ -948,14 +1189,14 @@ export default function App() {
                     <div
                       className="tabs"
                       role="tablist"
-                      aria-label="Editor view"
+                      aria-label={t("Editor view", "エディターの表示")}
                     >
                       <button
                         role="tab"
                         aria-selected={tab === "write"}
                         onClick={() => setTab("write")}
                       >
-                        Write
+                        {t("Write", "本文")}
                       </button>
                       <button
                         role="tab"
@@ -969,18 +1210,18 @@ export default function App() {
                           setTab("preview");
                         }}
                       >
-                        Preview
+                        {t("Preview", "プレビュー")}
                       </button>
                     </div>
                     <div
                       className="button-row formatting"
-                      aria-label="Formatting tools"
+                      aria-label={t("Formatting tools", "書式設定")}
                     >
                       <button
                         disabled={saving}
                         onPointerDown={event => event.preventDefault()}
                         onClick={() => wrap("**", "**")}
-                        aria-label="Bold"
+                        aria-label={t("Bold", "太字")}
                       >
                         <strong>B</strong>
                       </button>
@@ -988,7 +1229,7 @@ export default function App() {
                         disabled={saving}
                         onPointerDown={event => event.preventDefault()}
                         onClick={() => wrap("*", "*")}
-                        aria-label="Italic"
+                        aria-label={t("Italic", "斜体")}
                       >
                         <em>I</em>
                       </button>
@@ -996,7 +1237,7 @@ export default function App() {
                         disabled={saving}
                         onPointerDown={event => event.preventDefault()}
                         onClick={() => wrap("## ")}
-                        aria-label="Heading"
+                        aria-label={t("Heading", "見出し")}
                       >
                         H2
                       </button>
@@ -1005,24 +1246,24 @@ export default function App() {
                         onPointerDown={event => event.preventDefault()}
                         onClick={() => wrap("[", "](https://)")}
                       >
-                        Link
+                        {t("Link", "リンク")}
                       </button>
                       <button
                         disabled={saving}
                         onPointerDown={event => event.preventDefault()}
                         onClick={openFigure}
                       >
-                        Image layout
+                        {t("Image layout", "画像レイアウト")}
                       </button>
                       <button
                         disabled={saving}
                         onClick={() => writing.current?.undo()}
                       >
-                        Undo
+                        {t("Undo", "元に戻す")}
                       </button>
                     </div>
                   </div>
-                  <div hidden={tab !== "write"}>
+                  <div className="writing-panel" hidden={tab !== "write"}>
                     <WritingArea
                       key={`${active}-${editorVersion}`}
                       ref={writing}
@@ -1037,7 +1278,16 @@ export default function App() {
                   </div>
                   {tab === "preview" && (
                     <FeatureBoundary>
-                      <Suspense fallback={<p>Preparing preview…</p>}>
+                      <Suspense
+                        fallback={
+                          <p>
+                            {t(
+                              "Preparing preview…",
+                              "プレビューを準備しています…"
+                            )}
+                          </p>
+                        }
+                      >
                         <Preview
                           body={previewBody}
                           resolveImage={resolveImage}
@@ -1049,9 +1299,13 @@ export default function App() {
                   <footer className="document-footer">
                     <span>
                       Markdown ·{" "}
-                      {modified ? "Uncommitted changes" : "Saved revision"}
+                      {modified
+                        ? t("Uncommitted changes", "未保存の変更")
+                        : t("Saved revision", "保存済み")}
                     </span>
-                    <button onClick={exportPost}>Export Markdown</button>
+                    <button onClick={exportPost}>
+                      {t("Export Markdown", "Markdown をエクスポート")}
+                    </button>
                     <button
                       disabled={saving}
                       onClick={async () => {
@@ -1063,14 +1317,14 @@ export default function App() {
                         }
                       }}
                     >
-                      Compare remote
+                      {t("Compare remote", "GitHub と比較")}
                     </button>
                   </footer>
                 </>
               )}
               {active === MEDIA && (
                 <button onClick={() => void openMedia()}>
-                  Open image library
+                  {t("Open image library", "画像ライブラリを開く")}
                 </button>
               )}
             </>
@@ -1087,7 +1341,10 @@ export default function App() {
               recoveries.some(r => r.post.path === path)
             )
               throw new Error(
-                "That filename already exists. Choose another slug."
+                t(
+                  "That filename already exists. Choose another slug.",
+                  "同じファイル名がすでに存在します。別のスラッグを指定してください。"
+                )
               );
             await persist();
             activate({
@@ -1106,7 +1363,13 @@ export default function App() {
       )}
       {figure && (
         <FeatureBoundary>
-          <Suspense fallback={<p>Opening image layout…</p>}>
+          <Suspense
+            fallback={
+              <p>
+                {t("Opening image layout…", "画像レイアウトを開いています…")}
+              </p>
+            }
+          >
             <FigureDialog
               initial={figure.initial}
               resolveImage={resolveFigureImage}
@@ -1125,9 +1388,10 @@ export default function App() {
                   body.slice(figure.range.start, figure.range.end) !==
                     figure.range.source
                 ) {
-                  setError(
-                    "The selected figure changed. Open the layout dialog again."
-                  );
+                  setError([
+                    "The selected figure changed. Open the layout dialog again.",
+                    "選択した画像レイアウトが変更されました。もう一度レイアウトの編集画面を開いてください。"
+                  ]);
                   setFigure(null);
                   return;
                 }
@@ -1150,7 +1414,13 @@ export default function App() {
       )}
       {mediaOpen && (
         <FeatureBoundary>
-          <Suspense fallback={<p>Opening image library…</p>}>
+          <Suspense
+            fallback={
+              <p>
+                {t("Opening image library…", "画像ライブラリを開いています…")}
+              </p>
+            }
+          >
             <MediaLibrary
               entries={index.media}
               pending={images}
@@ -1199,18 +1469,23 @@ export default function App() {
         </FeatureBoundary>
       )}
       {remote && (
-        <Modal title="Compare with GitHub" onClose={() => setRemote(null)}>
+        <Modal
+          title={t("Compare with GitHub", "GitHub の内容と比較")}
+          onClose={() => setRemote(null)}
+        >
           <p>
-            Your local work stays intact. Copy any remote changes you want into
-            your version, then acknowledge this revision before saving.
+            {t(
+              "Your local work stays intact. Copy any remote changes you want into your version, then acknowledge this revision before saving.",
+              "端末内の作業内容は保持されます。GitHub 側の必要な変更を手元の原稿にコピーし、保存前にこのリビジョンを確認済みにしてください。"
+            )}
           </p>
           <div className="compare-grid">
             <label>
-              Local source
+              {t("Local source", "端末内のソース")}
               <textarea rows={18} readOnly value={work.current!.post.content} />
             </label>
             <label>
-              GitHub source
+              {t("GitHub source", "GitHub のソース")}
               <textarea rows={18} readOnly value={remote.content} />
             </label>
           </div>
@@ -1222,18 +1497,25 @@ export default function App() {
                   original: remote.content
                 });
                 setRemote(null);
-                setStatus(
-                  "Remote revision acknowledged. Review your local content before saving."
-                );
+                setStatus([
+                  "Remote revision acknowledged. Review your local content before saving.",
+                  "GitHub のリビジョンを確認済みにしました。保存する前に手元の内容を確認してください。"
+                ]);
               }}
             >
-              Keep local text; acknowledge remote revision
+              {t(
+                "Keep local text; acknowledge remote revision",
+                "手元の内容を保持し、GitHub のリビジョンを確認済みにする"
+              )}
             </button>
             <button
               onClick={async () => {
                 if (
                   !window.confirm(
-                    "Replace local Markdown with the GitHub version? Export your local text first if you need it."
+                    t(
+                      "Replace local Markdown with the GitHub version? Export your local text first if you need it.",
+                      "手元の Markdown を GitHub の内容に置き換えますか？必要であれば、先に手元の原稿をエクスポートしてください。"
+                    )
                   )
                 )
                   return;
@@ -1248,22 +1530,27 @@ export default function App() {
                 setRemote(null);
               }}
             >
-              Use GitHub text
+              {t("Use GitHub text", "GitHub の内容を使用")}
             </button>
-            <button onClick={exportPost}>Export local text</button>
+            <button onClick={exportPost}>
+              {t("Export local text", "手元の原稿をエクスポート")}
+            </button>
           </div>
         </Modal>
       )}
       {rawFrontmatter !== null && (
         <Modal
-          title="Frontmatter source"
+          title={t("Frontmatter source", "フロントマターのソース")}
           onClose={() => setRawFrontmatter(null)}
         >
           <p className="hint">
-            Unknown fields are preserved. Include both --- delimiter lines.
+            {t(
+              "Unknown fields are preserved. Include both --- delimiter lines.",
+              "独自の項目も保持されます。前後の区切り行（---）を含めてください。"
+            )}
           </p>
           <textarea
-            aria-label="Frontmatter source"
+            aria-label={t("Frontmatter source", "フロントマターのソース")}
             className="source-input"
             rows={16}
             value={rawFrontmatter}
@@ -1271,7 +1558,7 @@ export default function App() {
           />
           {error && (
             <p className="error" role="alert">
-              {error}
+              {displayNotice(error)}
             </p>
           )}
           <button
@@ -1291,7 +1578,10 @@ export default function App() {
                 const parsed = splitDocument(content);
                 if (parsed.body !== body)
                   throw new Error(
-                    "Edit only the frontmatter here; use Write for the post body."
+                    t(
+                      "Edit only the frontmatter here; use Write for the post body.",
+                      "ここではフロントマターだけを編集してください。記事本文は「本文」タブで編集できます。"
+                    )
                   );
                 header.current = parsed.header;
                 newline.current = parsed.newline;
@@ -1304,7 +1594,7 @@ export default function App() {
               }
             }}
           >
-            Apply frontmatter
+            {t("Apply frontmatter", "フロントマターを適用")}
           </button>
         </Modal>
       )}
@@ -1321,14 +1611,15 @@ function NewPost({
   onClose: () => void;
   onCreate: (path: string, content: string) => Promise<void>;
 }) {
+  const { t } = useI18n();
   const [title, setTitle] = useState("");
   const [date, setDate] = useState(today());
   const [slug, setSlug] = useState("");
   const [lang, setLang] = useState(language);
-  const [error, setError] = useState("");
+  const [error, setError] = useState<Notice>("");
   const [busy, setBusy] = useState(false);
   return (
-    <Modal title="New post" onClose={onClose}>
+    <Modal title={t("New post", "新規記事")} onClose={onClose}>
       <form
         onSubmit={async event => {
           event.preventDefault();
@@ -1346,14 +1637,14 @@ function NewPost({
       >
         <fieldset disabled={busy}>
           <label>
-            Language
+            {t("Language", "記事の言語")}
             <select value={lang} onChange={e => setLang(e.target.value)}>
-              <option value="ja">Japanese</option>
-              <option value="default">English</option>
+              <option value="ja">{t("Japanese", "日本語")}</option>
+              <option value="default">{t("English", "英語")}</option>
             </select>
           </label>
           <label>
-            Title
+            {t("Title", "タイトル")}
             <input
               required
               value={title}
@@ -1363,7 +1654,7 @@ function NewPost({
           </label>
           <div className="form-grid">
             <label>
-              Date
+              {t("Date", "日付")}
               <input
                 type="date"
                 required
@@ -1372,7 +1663,7 @@ function NewPost({
               />
             </label>
             <label>
-              ASCII slug
+              {t("ASCII slug", "スラッグ（半角英数字）")}
               <input
                 required
                 pattern="[a-z0-9]+(-[a-z0-9]+)*"
@@ -1386,15 +1677,18 @@ function NewPost({
             src/{lang}/{date}-{slug || "my-new-post"}.md
           </p>
           <p className="hint">
-            Starts as a draft. The filename determines the public URL.
+            {t(
+              "Starts as a draft. The filename determines the public URL.",
+              "下書きとして作成します。ファイル名が公開時の URL になります。"
+            )}
           </p>
           {error && (
             <p className="error" role="alert">
-              {error}
+              {typeof error === "string" ? error : t(...error)}
             </p>
           )}
           <button className="primary" type="submit">
-            Create local draft
+            {t("Create local draft", "この端末に下書きを作成")}
           </button>
         </fieldset>
       </form>

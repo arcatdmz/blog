@@ -10,8 +10,11 @@ import rehypeHighlight from "rehype-highlight";
 import rehypeStringify from "rehype-stringify";
 import DOMPurify from "dompurify";
 import articleStyles from "../../css/style.css?inline";
+import highlightStyles from "highlight.js/styles/github-dark-dimmed.css?inline";
+import previewStyles from "./preview.css?inline";
 import { findFigures, parseFigure, type FigureRange } from "./figures";
 import { mediaPath } from "../shared/model";
+import { useI18n } from "./i18n";
 
 const processor = remark()
   .use(remarkCodeTitles)
@@ -25,7 +28,8 @@ const processor = remark()
 
 export async function previewHtml(
   body: string,
-  resolveImage: (path: string) => string
+  resolveImage: (path: string) => string,
+  embedLabel = "Embedded content — available on the published blog"
 ) {
   const html = String(await processor.process(body));
   // Parse in a detached document, replace active embeds BEFORE sanitizing.
@@ -34,8 +38,7 @@ export async function previewHtml(
     "iframe,script,object,embed,video,audio"
   )) {
     const placeholder = document.createElement("p");
-    placeholder.textContent =
-      "Embedded content — available on the published blog";
+    placeholder.textContent = embedLabel;
     placeholder.className = "embed-placeholder";
     embed.replaceWith(placeholder);
   }
@@ -92,6 +95,7 @@ export default function Preview({
   resolveImage: (path: string) => string;
   onFigure: (range: FigureRange) => void;
 }) {
+  const { t } = useI18n();
   const host = useRef<HTMLDivElement>(null);
   const [error, setError] = useState("");
   useEffect(() => {
@@ -99,11 +103,19 @@ export default function Preview({
     const root =
       host.current!.shadowRoot || host.current!.attachShadow({ mode: "open" });
     root.replaceChildren();
-    previewHtml(body, resolveImage)
+    setError("");
+    previewHtml(
+      body,
+      resolveImage,
+      t(
+        "Embedded content — available on the published blog",
+        "埋め込みコンテンツ — 公開ブログで表示されます"
+      )
+    )
       .then(({ html, figures }) => {
         if (cancelled) return;
         const style = document.createElement("style");
-        style.textContent = `${articleStyles}\n:host {display:block;color:#26362f;font:17px/1.75 system-ui,sans-serif} article{display:flow-root} img{max-width:100%} pre{overflow:auto;background:#f2f3f0;padding:1rem} .embed-placeholder{padding:1rem;background:#f1f0ec;color:#647269} article.post-item figure > figcaption{margin-bottom:0} .figure-actions{display:flex;justify-content:flex-end;padding:.5em 0 0;clear:both} .figure-edit{font:600 14px system-ui;padding:.65rem 1rem;min-height:44px;border:1px solid #a3b5a9;border-radius:6px;background:#fff;color:#244e3a;cursor:pointer;display:block;margin:0} a{color:#35684d}`;
+        style.textContent = `${articleStyles}\n${highlightStyles}\n${previewStyles}`;
         const article = document.createElement("article");
         article.className = "post-item";
         article.innerHTML = html;
@@ -114,8 +126,8 @@ export default function Preview({
           button.type = "button";
           button.className = "figure-edit";
           button.textContent = parseFigure(range.source)
-            ? "Edit image layout"
-            : "Edit figure in source";
+            ? t("Edit image layout", "画像レイアウトを編集")
+            : t("Edit figure in source", "ソースで図を編集");
           button.addEventListener("click", () => onFigure(range));
           const actions = document.createElement("div");
           actions.className = "figure-actions";
@@ -131,12 +143,14 @@ export default function Preview({
     return () => {
       cancelled = true;
     };
-  }, [body, resolveImage, onFigure]);
+  }, [body, resolveImage, onFigure, t]);
   return (
     <section className="preview">
       <p className="hint">
-        Article preview · links are inactive; embeds load only on the published
-        blog.
+        {t(
+          "Article preview · links are inactive; embeds load only on the published blog.",
+          "記事プレビュー · リンクは無効です。埋め込みコンテンツは公開ブログで表示されます。"
+        )}
       </p>
       {error && <p role="alert">{error}</p>}
       <div ref={host} />
