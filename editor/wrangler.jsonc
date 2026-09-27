@@ -12,7 +12,8 @@
   "vars": {
     "ACCESS_TEAM_DOMAIN": "https://junkato.cloudflareaccess.com",
     "ACCESS_AUD": "c0aa2ac5902f815fc7705c509bce8c9559dacd31af60e3d6948f76c269954394",
-    "ALLOWED_EMAIL": "i@junkato.jp"
+    "ALLOWED_EMAIL": "i@junkato.jp",
+    "OPENAI_SUMMARY_MODEL": "gpt-5.4-mini"
   },
   "observability": {
     "enabled": true

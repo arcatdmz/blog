@@ -6,6 +6,19 @@ import type {
   Upload,
   PostChange
 } from "../shared/model";
+import type {
+  SummaryConfig,
+  SummaryInput,
+  SummaryResult
+} from "../shared/aiSummary";
+export const getSummaryConfig = () => request<SummaryConfig>("summary/config");
+export const generateSummary = (input: SummaryInput, signal?: AbortSignal) =>
+  request<SummaryResult>("summary", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(input),
+    signal
+  });
 
 export class ApiError extends Error {
   constructor(

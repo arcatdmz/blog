@@ -142,6 +142,113 @@ test("post details align controls, edit searchable tags and link to the publishe
   }
 });
 
+test("summary prompt and candidate are reviewed before applying to the unsaved article", async ({
+  page
+}) => {
+  await mockRepository(page);
+  const requests: any[] = [];
+  await page.route("**/api/summary**", async route => {
+    const url = new URL(route.request().url());
+    if (url.pathname === "/api/summary/config")
+      return route.fulfill({ json: { configured: true, model: "test-model" } });
+    requests.push(route.request().postDataJSON());
+    if (requests.length === 1)
+      return route.fulfill({ status: 429, json: { error: "Retry later" } });
+    return route.fulfill({
+      json: { summary: "Generated candidate", model: "test-model" }
+    });
+  });
+  await openEnglish(page);
+  await page
+    .getByRole("textbox", { name: "Markdown body" })
+    .fill("Latest unsaved article.");
+  await page.locator(".metadata summary").click();
+  const summary = page.getByLabel("Summary", { exact: true });
+  await summary.fill("Existing summary");
+  await page
+    .getByRole("button", { name: "Generate summary", exact: true })
+    .click();
+  const dialog = page.getByRole("dialog", {
+    name: "Generate summary",
+    exact: true
+  });
+  await expect(dialog.getByText("Model: test-model")).toBeVisible();
+  await page.setViewportSize({ width: 800, height: 400 });
+  const footer = dialog.locator(".modal-actions");
+  await expect(footer).toBeInViewport({ ratio: 1 });
+  const beforeScroll = await footer.boundingBox();
+  await dialog.locator(".modal-body").evaluate(element => {
+    element.scrollTop = element.scrollHeight;
+  });
+  expect((await footer.boundingBox())!.y).toBe(beforeScroll!.y);
+  await expect(
+    dialog.getByRole("button", { name: "Cancel", exact: true })
+  ).toBeInViewport({ ratio: 1 });
+  expect(requests).toHaveLength(0);
+  await dialog
+    .getByLabel("Prompt", { exact: true })
+    .fill("Summarize with my custom instructions.");
+  await dialog
+    .getByRole("button", { name: "Generate candidate", exact: true })
+    .click();
+  await expect(dialog.getByRole("alert")).toHaveText("Retry later");
+  await expect(summary).toHaveValue("Existing summary");
+  await dialog
+    .getByRole("button", { name: "Generate candidate", exact: true })
+    .click();
+  await expect(dialog.getByLabel("Summary candidate")).toHaveValue(
+    "Generated candidate"
+  );
+  expect(requests[1]).toMatchObject({
+    body: expect.stringContaining("Latest unsaved article."),
+    prompt: "Summarize with my custom instructions."
+  });
+  await expect(summary).toHaveValue("Existing summary");
+  await dialog.getByLabel("Summary candidate").fill("Reviewed candidate");
+  await dialog.getByRole("button", { name: "Apply to Summary" }).click();
+  await expect(summary).toHaveValue("Reviewed candidate");
+  await page
+    .getByRole("button", { name: "Edit frontmatter source", exact: true })
+    .click();
+  const frontmatter = page.getByRole("dialog", {
+    name: "Frontmatter source",
+    exact: true
+  });
+  await expect(frontmatter.locator(".modal-actions")).toBeInViewport({
+    ratio: 1
+  });
+  await expect(
+    frontmatter.getByRole("button", { name: "Apply frontmatter", exact: true })
+  ).toBeInViewport({ ratio: 1 });
+  const source = frontmatter.getByRole("textbox", {
+    name: "Frontmatter source",
+    exact: true
+  });
+  const original = await source.inputValue();
+  await source.fill("This edit should be discarded");
+  await frontmatter
+    .getByRole("button", { name: "Cancel", exact: true })
+    .click();
+  await page
+    .getByRole("button", { name: "Edit frontmatter source", exact: true })
+    .click();
+  await expect(source).toHaveValue(original);
+  await frontmatter
+    .getByRole("button", { name: "Cancel", exact: true })
+    .click();
+  await page
+    .getByRole("button", { name: "Generate summary", exact: true })
+    .click();
+  await dialog
+    .getByRole("button", { name: "Generate candidate", exact: true })
+    .click();
+  await expect(dialog.getByLabel("Summary candidate")).toHaveValue(
+    "Generated candidate"
+  );
+  await dialog.getByRole("button", { name: "Cancel", exact: true }).click();
+  await expect(summary).toHaveValue("Reviewed candidate");
+});
+
 test("formatting updates generated summary and save processes the current text", async ({
   page
 }) => {

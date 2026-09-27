@@ -1,6 +1,6 @@
 {
   "name": "blog-editor",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -11,6 +11,7 @@
     "build": "tsc --noEmit && vite build",
     "check": "tsc --noEmit && vitest run",
     "test": "vitest run",
+    "secrets:summary": "node scripts/configure-summary.mjs",
     "test:browser": "playwright test",
     "deploy": "npm run build && wrangler deploy",
     "test:production": "playwright test --config=playwright.production.config.ts"

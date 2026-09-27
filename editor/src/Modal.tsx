@@ -4,11 +4,13 @@ import { useI18n } from "./i18n";
 export default function Modal({
   title,
   onClose,
-  children
+  children,
+  actions
 }: {
   title: string;
   onClose: () => void;
   children: ReactNode;
+  actions?: ReactNode;
 }) {
   const { t } = useI18n();
   const ref = useRef<HTMLDialogElement>(null);
@@ -23,6 +25,7 @@ export default function Modal({
         onClose();
       }}
       aria-label={title}
+      className={actions ? "modal-with-actions" : undefined}
     >
       <header className="modal-heading">
         <h2>{title}</h2>
@@ -34,7 +37,14 @@ export default function Modal({
           {t("Close", "閉じる")}
         </button>
       </header>
-      {children}
+      {actions ? (
+        <>
+          <div className="modal-body">{children}</div>
+          <footer className="modal-actions">{actions}</footer>
+        </>
+      ) : (
+        children
+      )}
     </dialog>
   );
 }

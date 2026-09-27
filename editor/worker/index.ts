@@ -1,4 +1,5 @@
 import { createRemoteJWKSet, jwtVerify } from "jose";
+import { generateSummary, summaryModel, type SummaryEnv } from "./summary";
 import {
   isPostPath,
   isMediaPath,
@@ -16,7 +17,7 @@ import {
   validateSave
 } from "./save";
 
-export interface Env {
+export interface Env extends SummaryEnv {
   ASSETS: { fetch(request: Request): Promise<Response> };
   ACCESS_TEAM_DOMAIN: string;
   ACCESS_AUD: string;
@@ -117,6 +118,13 @@ async function readJson(request: Request): Promise<any> {
 
 export async function api(request: Request, env: Env): Promise<Response> {
   const url = new URL(request.url);
+  if (request.method === "GET" && url.pathname === "/api/summary/config")
+    return Response.json({
+      model: summaryModel(env),
+      configured: !!env.OPENAI_API_KEY?.trim()
+    });
+  if (request.method === "POST" && url.pathname === "/api/summary")
+    return Response.json(await generateSummary(await readJson(request), env));
   if (!env.GITHUB_TOKEN)
     throw new HttpError(
       503,
@@ -235,7 +243,11 @@ export default {
       )
         throw new HttpError(403, "Cross-origin changes are not allowed.");
       if (url.pathname.startsWith("/api/")) {
-        if (local) response = await (await import("./demo")).demo(request);
+        if (
+          local &&
+          !["/api/summary", "/api/summary/config"].includes(url.pathname)
+        )
+          response = await (await import("./demo")).demo(request);
         else response = await api(request, env);
       } else if (!["GET", "HEAD"].includes(request.method))
         throw new HttpError(405, "Method not allowed.");

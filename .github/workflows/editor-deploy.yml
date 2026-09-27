@@ -36,7 +36,17 @@ jobs:
       - run: npm run test:browser
       - run: npm run test:production
       - name: Deploy tagged revision to Cloudflare
-        run: npx wrangler deploy
+        run: |
+          node --input-type=module -e 'import { writeFileSync } from "node:fs"; if (!process.env.OPENAI_API_KEY) throw new Error("OPENAI_API_KEY repository secret is required"); writeFileSync(process.env.SUMMARY_SECRETS_FILE, JSON.stringify({ OPENAI_API_KEY: process.env.OPENAI_API_KEY }), { mode: 0o600 });'
+          npx wrangler deploy --secrets-file "$SUMMARY_SECRETS_FILE" --var "OPENAI_SUMMARY_MODEL:$OPENAI_SUMMARY_MODEL"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5.4-mini' }}
+          SUMMARY_SECRETS_FILE: ${{ runner.temp }}/editor-summary-secrets.json
+      - name: Remove temporary secrets file
+        if: always()
+        run: rm -f "$SUMMARY_SECRETS_FILE"
+        env:
+          SUMMARY_SECRETS_FILE: ${{ runner.temp }}/editor-summary-secrets.json

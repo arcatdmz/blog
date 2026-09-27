@@ -466,7 +466,8 @@ main {
   font-size: 0.75rem;
   color: var(--muted);
 }
-.document-footer button {
+.document-footer button,
+.summary-field button {
   font-size: 0.75rem;
 }
 .preview {
@@ -515,6 +516,32 @@ dialog {
 dialog::backdrop {
   background: #1b1c1d80;
 }
+dialog.modal-with-actions {
+  padding: 0;
+  overflow: hidden;
+}
+dialog.modal-with-actions[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+.modal-with-actions > .modal-heading {
+  margin: 0;
+  padding: 1.5rem 2rem 1rem;
+}
+.modal-body {
+  min-height: 0;
+  overflow: auto;
+  padding: 1rem 2rem;
+}
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem 1.5rem;
+  border-top: 1px solid var(--line);
+}
 .modal-heading {
   display: flex;
   justify-content: space-between;
@@ -532,6 +559,16 @@ dialog::backdrop {
 }
 .tag-field {
   margin: 0.85rem 0;
+}
+.summary-field {
+  margin: 0.85rem 0;
+}
+.summary-field > .button-row {
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+.summary-field label {
+  margin: 0;
 }
 .tag-field > label {
   margin: 0 0 0.3rem;

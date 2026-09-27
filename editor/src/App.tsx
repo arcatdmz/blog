@@ -57,6 +57,7 @@ import ThemeSelect from "./ThemeSelect";
 import { useEditorRoute } from "./routing";
 import website from "../../website.json";
 import TagDialog from "./TagDialog";
+import SummaryDialog from "./SummaryDialog";
 import { datedImageName, renameMediaReferences } from "../shared/mediaNames";
 
 const Preview = lazy(() => import("./Preview"));
@@ -140,6 +141,7 @@ export default function App() {
   const [titles, setTitles] = useState<Record<string, string>>({});
   const [knownTags, setKnownTags] = useState<Record<string, string[]>>({});
   const [tagsOpen, setTagsOpen] = useState(false);
+  const [summarySource, setSummarySource] = useState<Post | null>(null);
   const [tagInputVersion, setTagInputVersion] = useState(0);
   const [processing, setProcessing] = useState(false);
   const [route, navigate] = useEditorRoute();
@@ -450,6 +452,7 @@ export default function App() {
       setRemote(null);
       setRawFrontmatter(null);
       setTagsOpen(false);
+      setSummarySource(null);
       pickImage.current = null;
       if (!route.post) return;
       const recovery = restoreText(
@@ -1168,8 +1171,8 @@ export default function App() {
                     {active === MEDIA
                       ? t("Image library", "画像ライブラリ")
                       : active.startsWith("src/ja/")
-                      ? t("Japanese post", "日本語の記事")
-                      : t("English post", "英語の記事")}
+                        ? t("Japanese post", "日本語の記事")
+                        : t("English post", "英語の記事")}
                   </p>
                   <h1>
                     {active === MEDIA
@@ -1307,16 +1310,31 @@ export default function App() {
                           </button>
                         </div>
                       </div>
-                      <label>
-                        {t("Summary", "概要")}
+                      <div className="summary-field">
+                        <div className="button-row">
+                          <label htmlFor="post-summary">
+                            {t("Summary", "概要")}
+                          </label>
+                          <button
+                            disabled={saving || loading || processing}
+                            onClick={() =>
+                              setSummarySource(
+                                work.current ? { ...work.current.post } : null
+                              )
+                            }
+                          >
+                            {t("Generate summary", "自動生成")}
+                          </button>
+                        </div>
                         <textarea
+                          id="post-summary"
                           rows={3}
                           value={String(metadata.summary || "")}
                           onChange={e =>
                             metadataChange({ summary: e.target.value })
                           }
                         />
-                      </label>
+                      </div>
                       <label>
                         {t("Cover image", "カバー画像")}
                         <div className="button-row media-toolbar">
@@ -1699,6 +1717,21 @@ export default function App() {
           }}
         />
       )}
+      {summarySource && summarySource.path === active && (
+        <SummaryDialog
+          title={String(splitDocument(summarySource.content).data.title || "")}
+          body={splitDocument(summarySource.content).body}
+          language={summarySource.path.startsWith("src/ja/") ? "ja" : "default"}
+          onClose={() => setSummarySource(null)}
+          onApply={summary => {
+            if (
+              work.current?.post.path === summarySource.path &&
+              metadataChange({ summary })
+            )
+              setSummarySource(null);
+          }}
+        />
+      )}
       {remote && (
         <Modal
           title={t("Compare with GitHub", "GitHub の内容と比較")}
@@ -1775,6 +1808,45 @@ export default function App() {
         <Modal
           title={t("Frontmatter source", "フロントマターのソース")}
           onClose={() => setRawFrontmatter(null)}
+          actions={
+            <>
+              <button
+                className="primary"
+                onClick={() => {
+                  try {
+                    if (rawFrontmatter === header.current) {
+                      setRawFrontmatter(null);
+                      return;
+                    }
+                    const current = work.current!;
+                    const body = splitDocument(current.post.content).body;
+                    const content =
+                      rawFrontmatter
+                        .replace(/\r?\n/g, newline.current)
+                        .replace(/\s*$/, newline.current) + body;
+                    const parsed = splitDocument(content);
+                    if (parsed.body !== body)
+                      throw new Error(
+                        t(
+                          "Edit only the frontmatter here; use Write for the post body.",
+                          "ここではフロントマターだけを編集してください。記事本文は「本文」タブで編集できます。"
+                        )
+                      );
+                    if (!metadataChange({}, content)) return;
+                    setError("");
+                    setRawFrontmatter(null);
+                  } catch (error) {
+                    setError(message(error));
+                  }
+                }}
+              >
+                {t("Apply frontmatter", "フロントマターを適用")}
+              </button>
+              <button onClick={() => setRawFrontmatter(null)}>
+                {t("Cancel", "キャンセル")}
+              </button>
+            </>
+          }
         >
           <p className="hint">
             {t(
@@ -1794,38 +1866,6 @@ export default function App() {
               {displayNotice(error)}
             </p>
           )}
-          <button
-            className="primary"
-            onClick={() => {
-              try {
-                if (rawFrontmatter === header.current) {
-                  setRawFrontmatter(null);
-                  return;
-                }
-                const current = work.current!;
-                const body = splitDocument(current.post.content).body;
-                const content =
-                  rawFrontmatter
-                    .replace(/\r?\n/g, newline.current)
-                    .replace(/\s*$/, newline.current) + body;
-                const parsed = splitDocument(content);
-                if (parsed.body !== body)
-                  throw new Error(
-                    t(
-                      "Edit only the frontmatter here; use Write for the post body.",
-                      "ここではフロントマターだけを編集してください。記事本文は「本文」タブで編集できます。"
-                    )
-                  );
-                if (!metadataChange({}, content)) return;
-                setError("");
-                setRawFrontmatter(null);
-              } catch (error) {
-                setError(message(error));
-              }
-            }}
-          >
-            {t("Apply frontmatter", "フロントマターを適用")}
-          </button>
         </Modal>
       )}
     </div>

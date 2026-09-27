@@ -94,6 +94,46 @@ Use a new tag for each release and follow **Actions → Deploy blog editor** for
 the result. If you previously enabled Cloudflare Builds for this Worker, disable
 its automatic branch builds so that deployments happen only through release tags.
 
+## OpenAI summary candidates
+
+In Post details, choose **Generate summary** beside Summary. The modal shows an
+editable prompt; **Generate candidate** sends the current unsaved title and body to
+OpenAI. Edit the returned candidate and choose **Apply to Summary** to update the
+frontmatter `summary`. Closing the modal leaves the existing summary unchanged.
+This is separate from formatting's deterministic `summary_generated`, and is never
+run automatically during saves. The default prompt follows the article language.
+
+Set `OPENAI_API_KEY` in the ignored `editor/.dev.vars` for local use. Set
+`OPENAI_SUMMARY_MODEL` there to override the default `gpt-5.4-mini`. Even in the
+read-only repository demo, explicit generation uses the real OpenAI API if a key
+is configured. Keys remain in the Worker; no `VITE_*` variable is used. Requests
+use the [Responses API](https://developers.openai.com/api/docs/guides/text) with
+`store: false`.
+
+From `editor/`, upload the local key without displaying it or including it in
+command arguments:
+
+```sh
+npm run secrets:summary -- github
+# Or configure the deployed Worker directly (Wrangler authentication required):
+npm run secrets:summary -- cloudflare
+```
+
+The GitHub command sets the repository secret `OPENAI_API_KEY` and repository
+variable `OPENAI_SUMMARY_MODEL` from `.dev.vars` (or the default model). They can
+also be set interactively with `gh secret set OPENAI_API_KEY --repo arcatdmz/blog`
+and `gh variable set OPENAI_SUMMARY_MODEL --repo arcatdmz/blog --body MODEL`.
+Wrangler's interactive equivalent is `npx wrangler secret put OPENAI_API_KEY`.
+Tagged releases upload the GitHub secret together with the Worker code using
+[Wrangler's secrets file](https://developers.cloudflare.com/workers/configuration/secrets/#upload-secrets-alongside-code),
+preserving the existing GitHub token. The model variable overrides `wrangler.jsonc`;
+when deploying directly, edit `OPENAI_SUMMARY_MODEL` in that configuration instead.
+
+| Operation | Endpoint | Purpose |
+| --- | --- | --- |
+| GET | `/api/summary/config` | Configured model and key availability, without the key |
+| POST | `/api/summary` | Generate a candidate from the supplied title, body, and prompt |
+
 ## Daily use
 
 - **English / 日本語** in the header switches the interface, including dialogs and

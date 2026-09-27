@@ -1,5 +1,8 @@
 # Copy to .dev.vars for a local, read-only fixture repository.
 # This mode never sends requests to GitHub and is rejected on deployed hosts.
 LOCAL_DEMO=true
+# Only explicit summary generation sends the current article to OpenAI.
+OPENAI_API_KEY=
+OPENAI_SUMMARY_MODEL=gpt-5.4-mini
 # For local development against the real repository, remove LOCAL_DEMO and
 # configure Access through a protected hostname. Never put a token in VITE_*.
