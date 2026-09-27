@@ -3,7 +3,12 @@ title: Markdownベースのブログを編集しやすくした
 date: "2026-09-28"
 tags:
   - programming
-draft: true
+  - discussion
+  - life
+  - server
+  - creativity
+  - ai
+draft: false
 coverImage: /images/2026-09-28-junkato-blog-editor.png
 summary_generated: ソフトウェア開発の自己否定ともとれる講演が話題になる一方で、クリエータが自身の絵筆を作ることが当たり前になり、昨年採択されたアニメの研究課題で目指すと言っていた世界の一部が実現されつつある今日この頃です。しなやかなツール群みたいなコンセプトの説明が簡単になるのはたいへんあり...
 ---
