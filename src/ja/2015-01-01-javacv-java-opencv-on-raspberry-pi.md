@@ -3,7 +3,7 @@ title: Raspberry PiでJavaCV (Java + OpenCV)
 date: "2015-01-01"
 tags:
   - programming
-coverImage: /images/javacv-raspberry-pi.png
+coverImage: /images/2015-01-01-javacv-raspberry-pi.png
 summary_generated: "日本のみなさん、あけましておめでとうございます！PDT(太平洋標準時)ということにして、先の記事でセットアップした QEMU上で \_#大晦日ハッカソン を続けておりました。けっきょくビルド時間などがネックになって実機での動作は間に合いませんでしたが、JavaCVを Rasp..."
 altUrl: "https://junkato.jp/ja/blog/2015/01/01/javacv-java-opencv-on-raspberry-pi/"
 ---
@@ -15,7 +15,7 @@ altUrl: "https://junkato.jp/ja/blog/2015/01/01/javacv-java-opencv-on-raspberry-p
 これまでは Windows, Mac OS X, Android, x86 と x64 の Linux でしか動いていなかった OpenCV の Java ラッパーが、ARM Linux でちゃんと動いたということです。
 
 <figure class="center">
-  <a href="/images/javacv-raspberry-pi.png"><img src="/images/javacv-raspberry-pi.png" alt="javacv-raspberry-pi" /></a>
+  <a href="/images/2015-01-01-javacv-raspberry-pi.png"><img src="/images/2015-01-01-javacv-raspberry-pi.png" alt="javacv-raspberry-pi" /></a>
   <figcaption>RaspbianでJavaCVのサンプルが動いた！</figcaption>
 </figure>
 

@@ -7,7 +7,7 @@ tags:
   - research
   - student
   - advent-calendar
-coverImage: /images/DSC01972-scaled.jpg
+coverImage: /images/2020-12-23-DSC01972-scaled.jpg
 summary_generated: >-
   この記事は Microsoft Research Internship アルムナイ Advent Calendar の 23
   日目です。自分は今、産業技術総合研究所に主任研究員として勤める傍ら、アニメ会社アーチの技術顧問を兼業しています。どちらもやっていることの根っこは同じ...
@@ -25,7 +25,7 @@ altUrl: "https://junkato.jp/ja/blog/2020/12/23/internship-and-third-place/"
 今年は Microsoft Research Asia Fellowship 20 周年にあたるそうで、[20 周年記念の記事](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/articles/a-story-that-has-lasted-twenty-years-a-fellowship-that-has-changed-a-group-of-people-2/)に載せていただいています。幸せそうですね…。ここに写っている [Jessica](https://apps4cloud.bgu.ac.il/cauchard/) とは、今年の ACM CHI 2021 プログラム委員会 [Engineering Interactive Systems and Technologies (EIST)](https://chi2021.acm.org/for-authors/presenting/papers/selecting-a-subcommittee#Engineering-Interactive-Systems-and-Technologies) でご一緒しています。インターンのとき無邪気に遊んでいた同期と今こうして一緒に仕事できるのは、なかなか感慨深いものがあります。
 
 <figure>
-  <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/articles/a-story-that-has-lasted-twenty-years-a-fellowship-that-has-changed-a-group-of-people-2/"><img src="/images/DSC01972-1024x680.jpg" alt="" /></a>
+  <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/articles/a-story-that-has-lasted-twenty-years-a-fellowship-that-has-changed-a-group-of-people-2/"><img src="/images/2020-12-23-DSC01972-1024x680.jpg" alt="" /></a>
   <figcaption>Microsoft Research Asia インターン中に誕生日を迎えた</figcaption>
 </figure>
 
@@ -45,7 +45,7 @@ altUrl: "https://junkato.jp/ja/blog/2020/12/23/internship-and-third-place/"
 
 まず、[ACM CHI 2021 Student Research Competition](https://chi2021.acm.org/for-authors/students/student-research-competition)。来年 1 月投稿〆切です。Chair を務めさせていただいています。**HCI 分野の学生のみなさま、ぜひ投稿をご検討ください。**
 
-[![](/images/uxtalk-kato-chi2021src-1024x576.png)](https://chi2021.acm.org/for-authors/students/student-research-competition)
+[![](/images/2020-12-23-uxtalk-kato-chi2021src-1024x576.png)](https://chi2021.acm.org/for-authors/students/student-research-competition)
 
 インドネシアの学生に頼まれて Competition を紹介したときのスライド（日本でも同様のトークの機会をいただける場合はご連絡ください）
 
@@ -64,7 +64,7 @@ https://www.youtube.com/watch?v=Yz4Ucrw95bQ
 そして、[Arch Research](https://research.archinc.jp/)。アニメ会社アーチの技術顧問として研究開発をリードしています。具体的には、絵コンテを描ける Web ベースのツール「[Griffith](https://research.archinc.jp/griffith/)」を作ったり、絵コンテの制作プロセスなどアニメ作りの技術を紹介する小冊子「[アニメ技術](https://research.archinc.jp/anitech/)」を発刊したりしています。[Arch Research のメンバー](https://research.archinc.jp/members/)は極めて少ないのですが、じつはその外縁にアニメの監督さんやアニメ作りに興味を持つ情報技術系の人たちなどを加えた「アーチ技術部」というコミュニティがあり、アニメ技術は[放課後 R&D](https://research.archinc.jp/anitech/2019spring/research-club/)を楽しんでいる技術部メンバーの刊行物という位置付けになっています。
 
 <figure>
-  <a href="https://arch-research.booth.pm/"><img src="/images/arch-research-twitter-hero-1024x341.jpg" alt="" /></a>
+  <a href="https://arch-research.booth.pm/"><img src="/images/2020-12-23-arch-research-twitter-hero-1024x341.jpg" alt="" /></a>
   <figcaption>「<a href="https://research.archinc.jp/anitech/">アニメ技術</a>」表紙は近未来のアニメ作りをイメージして設定を作り、<a href="https://tenju.jp/">典樹</a>さんに描いてもらっている</figcaption>
 </figure>
 

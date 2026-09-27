@@ -3,7 +3,7 @@ title: Intel Edisonで新しいセンサ・アクチュエータを使うため�
 date: "2015-10-24"
 tags:
   - programming
-coverImage: /images/DSC09957.jpg
+coverImage: /images/2015-10-24-DSC09957.jpg
 summary_generated: >-
   最近 Intel Edison のお世話になっています。JavaScript で（ホスト PC
   なしに）センサ・アクチュエータが動くのって本当に素敵ですね！Intel Edison や Galileo では、GPIO
@@ -19,7 +19,7 @@ Intel Edison や Galileo では、GPIO などを操作するために[mraa](http
 
 mraa を使って upm を拡張するための手順は一応すべて GitHub にあがっていますが、もう少し詳しく、日本語で解説してみます。なお、ホスト PC で Intel Edison 用にドライバをクロスコンパイルすることもできるかもしれませんが、とりあえず手軽に実機での開発方法を紹介します。今のところ、実機でも現実的な時間でコンパイルが終わってすぐ動作確認できるので、とくに問題を感じていません。
 
-[![Intel Edisonを使ったマイコンアプリケーション開発](/images/DSC09957-1024x512.jpg)](/images/DSC09957.jpg)
+[![Intel Edisonを使ったマイコンアプリケーション開発](/images/2015-10-24-DSC09957-1024x512.jpg)](/images/2015-10-24-DSC09957.jpg)
 
 ## opkg で Git をインストール
 

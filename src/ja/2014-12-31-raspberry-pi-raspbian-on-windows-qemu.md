@@ -3,7 +3,7 @@ title: Windows+QEMUでRaspberry Piをエミュレートする
 date: "2014-12-31"
 tags:
   - programming
-coverImage: /images/raspbian-on-qemu-windows.png
+coverImage: /images/2014-12-31-raspbian-on-qemu-windows.png
 summary_generated: >-
   Raspberry Pi Type B 512MBを買ったのが 8 月のこと。Raspbian をインストールして無線 LAN 接続のための USB
   ドングル(BUFFALO 無線 LAN 子機 WLI-UC-GNM)を挿してカメラモジュールをつないで、ちょっと遊んではみた...
@@ -30,7 +30,7 @@ altUrl: "https://junkato.jp/ja/blog/2014/12/31/raspberry-pi-raspbian-on-windows-
 - ExpanDrive を使うことで、QEMU 上の Raspbian OS とホストマシンである Windows 間で簡単にファイルのやり取りができるようになる
 
 <figure class="center">
-  <a href="/images/raspbian-on-qemu-windows.png"><img src="/images/raspbian-on-qemu-windows.png" alt="raspbian-on-qemu-windows" /></a>
+  <a href="/images/2014-12-31-raspbian-on-qemu-windows.png"><img src="/images/2014-12-31-raspbian-on-qemu-windows.png" alt="raspbian-on-qemu-windows" /></a>
   <figcaption>WindowsでRaspbianが動いてる！</figcaption>
 </figure>
 

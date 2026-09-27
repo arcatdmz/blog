@@ -5,7 +5,7 @@ tags:
   - research
   - student
   - university
-coverImage: /images/uist-svs.jpg
+coverImage: /images/2016-12-22-uist-svs.jpg
 summary_generated: >-
   学生向けおすすめ記事は、基本的に自分が学生の頃の体験をもとに書いています。博士課程を一昨年修了したので、新しい記事を書くことはもうないだろうなぁと思っていました。ところが、今年の国際会議ACM
   UIST 2016で Student Volunteer Chair を拝命した...
@@ -16,7 +16,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/12/22/acm-student-volunteers/"
 
 この記事では、Student Volunteer (SV)の概要、SV になる方法と、なった場合のスケジュールなどについて紹介します。なお、ACM（コンピュータ科学系の国際学会）主催の国際会議を前提に話しているので、別の分野や別の学会ではちょっと勝手が違うかもしれません。
 
-<figure><a href="/images/uist-svs.jpg"><img src="/images/uist-svs-1024x512.jpg" alt="" /></a><figcaption>ACM UIST 2016 Student Volunteer と SV Chair の集合写真</figcaption></figure>
+<figure><a href="/images/2016-12-22-uist-svs.jpg"><img src="/images/2016-12-22-uist-svs-1024x512.jpg" alt="" /></a><figcaption>ACM UIST 2016 Student Volunteer と SV Chair の集合写真</figcaption></figure>
 
 ## Student Volunteer (SV)とは
 

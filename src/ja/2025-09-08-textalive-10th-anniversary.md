@@ -41,10 +41,10 @@ https://x.com/TextAliveJp/status/1964977010872291590
 
 <figure class="center">
   <div class="four columns">
-    <a href="https://x.com/TextAliveJp/status/1964977013116326216/photo/1"><img src="/images/textalive10th-message-bighead-p1_medium.jpg" alt="" /></a>
-    <a href="https://x.com/TextAliveJp/status/1964977013116326216/photo/2"><img src="/images/textalive10th-message-bighead-p2_medium.jpg" alt="" /></a>
-    <a href="https://x.com/TextAliveJp/status/1964977017893609498"><img src="/images/textalive10th-message-daniwell_medium.jpg" alt="" /></a>
-    <a href="https://x.com/TextAliveJp/status/1964977022033347063"><img src="/images/textalive10th-message-lupo_medium.jpg" alt="" /></a>
+    <a href="https://x.com/TextAliveJp/status/1964977013116326216/photo/1"><img src="/images/2025-09-08-textalive10th-message-bighead-p1_medium.jpg" alt="" /></a>
+    <a href="https://x.com/TextAliveJp/status/1964977013116326216/photo/2"><img src="/images/2025-09-08-textalive10th-message-bighead-p2_medium.jpg" alt="" /></a>
+    <a href="https://x.com/TextAliveJp/status/1964977017893609498"><img src="/images/2025-09-08-textalive10th-message-daniwell_medium.jpg" alt="" /></a>
+    <a href="https://x.com/TextAliveJp/status/1964977022033347063"><img src="/images/2025-09-08-textalive10th-message-lupo_medium.jpg" alt="" /></a>
   </div>
   <figcaption>クリエータの方々からいただいたメッセージ、宝物です！</figcaption>
 </figure>

@@ -4,7 +4,7 @@ date: "2019-08-16"
 tags:
   - research
   - advent-calendar
-coverImage: /images/IMG_20190620_084432_1.jpg
+coverImage: /images/2019-08-16-IMG_20190620_084432_1.jpg
 summary_generated: >-
   これまで ACM UIST 2014, 2017, 2018, 2019, ACM CHI 2017, 2020
   などの国際会議で、論文採否を決めてその年の会議のプログラム編成に関わる委員会（Program Committee,
@@ -25,7 +25,7 @@ altUrl: "https://junkato.jp/ja/blog/2019/08/16/roles-of-academic-conf-pc-members
 この記事は [学会運営 Advent Calendar](https://adventar.org/calendars/4504) の 22 日目です。
 
 <figure>
-  <img src="/images/IMG_20190620_084432_1-1024x576.jpg" alt="" />
+  <img src="/images/2019-08-16-IMG_20190620_084432_1-1024x576.jpg" alt="" />
   <figcaption>ACM UIST 2019 Program Committee meeting</figcaption>
 </figure>
 

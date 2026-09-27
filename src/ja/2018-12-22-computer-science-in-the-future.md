@@ -41,7 +41,7 @@ VR, Augmented Reality (AR)については回答に書いたとおり「 セン�
 面白いのは、五感が各々かなり異なった性質を持っていることです。例えば匂いのデータを手元で再現するのは難しいかもしれません。そこには、技術的な問題だけでなく、知覚されるまでの**レイテンシ**の問題、個々人の匂いに対する感度の違いといった**個人差**の問題や、**コスト**の問題などが山積しています。そうしたときに、複数のモーダルを掛け合わせて仮想的に情報を再現できるかもしれない[クロスモーダル](http://crossmodal-design.tumblr.com/)のアプローチはかなり有効だと思います。
 
 <figure>
-  <img src="/images/pwe-fig1.jpg" alt="" />
+  <img src="/images/2018-12-22-pwe-fig1.jpg" alt="" />
   <figcaption>例示を伴うプログラミング（Programming with Examples）</figcaption>
 </figure>
 

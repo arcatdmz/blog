@@ -4,7 +4,7 @@ date: "2020-03-15"
 tags:
   - anime
   - research
-coverImage: /images/techbook8_shoei_02.png
+coverImage: /images/2020-03-15-techbook8_shoei_02.png
 summary_generated: >-
   アーチで技術顧問の仕事を始めて早 1 年半が過ぎました。表に出ている仕事としては、研究開発チーム Arch Research
   を作り、絵コンテ制作支援ツール「Griffith」を開発しています。2018 年秋からは半年に一度の技術書の祭典「技術書典」をスポンサーしつつ、20...
@@ -18,7 +18,7 @@ altUrl: "https://junkato.jp/ja/blog/2020/03/15/anitech-2020spring-griffith-sketc
 この記事ではその内容と、同時リリースしたアイデアスケッチのための無償アプリ（Web サービス）「[Griffith Sketch](https://research.archinc.jp/griffith/sketch/)」について紹介します。
 
 <figure>
-  <a href="https://techbookfest.org/product/5748798303240192"><img src="/images/techbook8_shoei_02-1024x1024.png" alt="" /></a>
+  <a href="https://techbookfest.org/product/5748798303240192"><img src="/images/2020-03-15-techbook8_shoei_02-1024x1024.png" alt="" /></a>
   <figcaption>アニメ技術 2020 春 脚本特集</figcaption>
 </figure>
 
@@ -41,7 +41,7 @@ altUrl: "https://junkato.jp/ja/blog/2020/03/15/anitech-2020spring-griffith-sketc
 力作の記事揃いですので、ぜひ[技術書典 応援祭の Web サイト](https://techbookfest.org/product/5748798303240192)から入手してください。
 
 <figure>
-  <a href="https://techbookfest.org/product/5748798303240192"><img src="/images/techbook8_shoei_04-1024x1024.png" alt="" /></a>
+  <a href="https://techbookfest.org/product/5748798303240192"><img src="/images/2020-03-15-techbook8_shoei_04-1024x1024.png" alt="" /></a>
   <figcaption>アイデアスケッチのための Web アプリ「Griffith Sketch」のご紹介</figcaption>
 </figure>
 
@@ -56,7 +56,7 @@ https://twitter.com/arcatdmz/status/1233697311345135617
 どんな狙いがあってこのアプリをリリースしたかについては[アニメ技術 2020 春](https://techbookfest.org/product/5748798303240192)の記事をご覧ください。また、機能の概要については[Arch Research の紹介ページ](https://research.archinc.jp/griffith/sketch/)をご覧ください。
 
 <figure>
-  <img src="/images/griffith-sketch-fig1-1024x576.png" alt="" />
+  <img src="/images/2020-03-15-griffith-sketch-fig1-1024x576.png" alt="" />
   <figcaption>Griffith Sketch v1.0.0 スクリーンショット</figcaption>
 </figure>
 

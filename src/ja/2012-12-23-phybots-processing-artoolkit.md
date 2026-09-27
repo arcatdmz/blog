@@ -8,12 +8,12 @@ tags:
 summary_generated: |2-
 
     Java/Processing で小型ロボットを簡単に動かせるツールキット Phybots は、オープンソースで公開されてしばらく経ちますが、正直なところ忙しくてあまり管理に手が回っておらず、すぐ使える配布ファイルもありませんでした。#五十嵐 ERATOのポスターセッ...
-coverImage: /images/phybots-marker-detection.jpg
+coverImage: /images/2012-12-23-phybots-marker-detection.jpg
 altUrl: "https://junkato.jp/ja/blog/2012/12/23/phybots-processing-artoolkit/"
 ---
 
 <figure class="right">
-  <a href="/images/phybots-overview.jpg"><img src="/images/phybots-overview-300x211.jpg" alt="Phybotsのハードウェアセットアップ" /></a>
+  <a href="/images/2012-12-23-phybots-overview.jpg"><img src="/images/2012-12-23-phybots-overview-300x211.jpg" alt="Phybotsのハードウェアセットアップ" /></a>
 </figure>
 
 Java/Processing で小型ロボットを簡単に動かせるツールキット Phybots は、オープンソースで公開されてしばらく経ちますが、正直なところ忙しくてあまり管理に手が回っておらず、すぐ使える配布ファイルもありませんでした。
@@ -28,7 +28,7 @@ Phybots は、右上の写真のようなセットアップで使われること
 
 この記事では、Processing+Phybots の組み合わせで、カメラ画像からマーカーを検出して、その位置にテキストを表示するコードを紹介します。
 
-![](/images/phybots-marker-detection.jpg "マーカー検出時の様子")
+![](/images/2012-12-23-phybots-marker-detection.jpg "マーカー検出時の様子")
 
 ## Phybots のインストール
 

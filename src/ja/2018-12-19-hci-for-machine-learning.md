@@ -6,7 +6,7 @@ tags:
   - research
   - sigpx
   - advent-calendar
-coverImage: /images/mlse1-kato-slides.png
+coverImage: /images/2018-12-19-mlse1-kato-slides.png
 summary_generated: >-
   この記事は「機械学習工学 / MLSE Advent Calendar 2018」12
   日目の記事です。先日開催された、機械学習工学関連の論文を紹介し合う「XX for ML
@@ -17,7 +17,7 @@ altUrl: "https://junkato.jp/ja/blog/2018/12/19/hci-for-machine-learning/"
 この記事は[「機械学習工学 / MLSE Advent Calendar 2018」](https://qiita.com/advent-calendar/2018/mlse)12 日目の記事です。先日開催された、機械学習工学関連の論文を紹介し合う[「XX for ML 論文読み会」](https://mlxse.connpass.com/event/102563/)初回で発表した資料の内容を抜粋で紹介します。論文読み会に参加できなかった方も、当ブログ記事を PDF のお供にどうぞ。
 
 <figure>
-  <a href="https://junkato.jp/publications/mlse1-kato-hci-slides.pdf"><img src="/images/mlse1-kato-slides-1024x576.png" alt="" /></a>
+  <a href="https://junkato.jp/publications/mlse1-kato-hci-slides.pdf"><img src="/images/2018-12-19-mlse1-kato-slides-1024x576.png" alt="" /></a>
   <figcaption><a href="https://junkato.jp/publications/mlse1-kato-hci-slides.pdf">発表資料 PDF</a></figcaption>
 </figure>
 
@@ -33,19 +33,19 @@ Qian Yang, Jina Suh, Nan-Chen Chen, and Gonzalo Ramos. 2018. Grounding Interacti
 
 論文読み会では最後に紹介したのですが、一番盛り上がっていたのでこの記事では最初に持ってきました。ACM DIS という、インタラクティブなシステムのデザイン手法を取り扱う（要は Human-Computer Interaction 全般に関する）学会で発表されたもので、インタラクティブな機械学習のためのツール設計において気にすべきポイントをまとめた調査研究です。
 
-![](/images/mlse-sigpx-dis2018-table1-1024x395.png)
+![](/images/2018-12-19-mlse-sigpx-dis2018-table1-1024x395.png)
 
 対面での調査対象は上記のとおり素人 14 名（Non-Experts; データサイエンスや統計などの学位を持たず必要に応じて機械学習を利用した問題解決を行っている人）と、雇われてその人たちを助けているプロ 10 名（Supporting Experts）です。さらに、オンラインで素人 98 名のデータを集めています。ここで気をつけたいのは、**素人といってもプログラミングができないわけではない**というところです。ふつうにコードは書けるけど、機械学習の専門的教育は受けていない人たちですね。
 
 論文では、例えば次のように、素人とプロの考え方の違いをいろいろと比較検討しています。
 
-![](/images/mlse-sigpx-dis2018-fig2.png)
+![](/images/2018-12-19-mlse-sigpx-dis2018-fig2.png)
 
 面白かったのは「素人向けツールは GUI のものを用意すればいいとナイーブに思っているのは大間違いだ」というメッセージが明確に書かれていたところでした。**素人はコピペが大好き**なので、意外とテキストベースのコーディングをするそうです。確かに、今は Jupyter Notebook なんかもあるし、Visual Programming と違ってテキストコードのコピペは必ずできますよね。
 
 いろいろ書いてあるのでぜひ[発表資料](https://junkato.jp/publications/mlse1-kato-hci-slides.pdf)を見ていただき、できれば論文原著を読んでいただきたいのですが、最後の結論としては、Test-Driven Machine Teaching というフローを支援するツールを作りましょう、ということでした。
 
-![](/images/mlse-sigpx-dis2018-fig4.png)
+![](/images/2018-12-19-mlse-sigpx-dis2018-fig4.png)
 
 個々のツール（例えばデバッガやコードエディタ）開発に専念するのでなく、ワークフローをよく観察してその全体を支援できるツールの組み合わせを整備することが重要なのだ、というのは近年のプログラミング支援研究のトレンドと言えると思います。
 
@@ -63,7 +63,7 @@ https://www.youtube.com/watch?v=TKO9tLxytGA
 
 基本的なアイデアは、機械学習アルゴリズムの開発では実装と分析を行ったり来たりするので、その各ステップに適したユーザインタフェースのセットを定義し、それが全部入った統合開発環境があればいいでしょう、というものです。
 
-![](/images/mlse-sigpx-gestalt-fig-1024x268.png)
+![](/images/2018-12-19-mlse-sigpx-gestalt-fig-1024x268.png)
 
 筆頭著者の Kayur Patel はこの論文を含む一連の研究で University of Washington の博士号を取得し、Google で Colaboratory プロジェクトを率いました。Colaboratory は、Google Drive 上に Jupyter Notebook を保存でき、かつ Google の計算資源や指定した Jupyter Kernel を使って実行もできるというもので、遊んでみた方も多いのではないでしょうか。
 

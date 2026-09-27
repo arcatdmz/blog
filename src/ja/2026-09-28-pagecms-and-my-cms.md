@@ -4,7 +4,7 @@ date: '2026-09-28'
 tags:
   - programming
 draft: true
-coverImage: /images/junkato-blog-editor.png
+coverImage: /images/2026-09-28-junkato-blog-editor.png
 ---
 [ソフトウェア開発の自己否定ともとれる講演が話題](https://news.ycombinator.com/item?id=49817680)になる一方で、[クリエータが自身の絵筆を作ることが当たり前](https://github.com/gesoikuo/color-converter-gui)になり、[昨年採択されたアニメの研究課題](https://blog.junkato.jp/ja/posts/2025-09-19-animare/)で目指すと言っていた世界の一部が実現されつつある今日この頃です。
 

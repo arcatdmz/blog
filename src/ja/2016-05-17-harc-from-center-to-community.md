@@ -6,7 +6,7 @@ tags:
   - research
   - sigpx
   - travel
-coverImage: /images/DSC00614.jpg
+coverImage: /images/2016-05-17-DSC00614.jpg
 summary_generated: >-
   先週までの 2 週間、ベイエリアのさまざまな研究所・企業を訪問し、ACM CHI
   2016に参加していました。一部の旅程で同行した小山君、川松氏ともども、さまざまな方々にお世話になりましたが、個人的にはパーソナルコンピュータの父とも呼ばれる
@@ -19,7 +19,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/05/17/harc-from-center-to-community/"
 ご招待くださった[大島さん](http://d.hatena.ne.jp/squeaker/)には大変感謝しています。Alan 氏は不在でしたが、みんな忙しいなか、主要メンバーほぼ全員とみっちり議論する時間をいただくことができました。
 
 <figure>
-  <a href="/images/20160429_154234115_iOS.jpg"><img src="/images/20160429_154234115_iOS-1024x577.jpg" alt="Communication Design Group, Los Angelesオフィスのエントランス" /></a>
+  <a href="/images/2016-05-17-20160429_154234115_iOS.jpg"><img src="/images/2016-05-17-20160429_154234115_iOS-1024x577.jpg" alt="Communication Design Group, Los Angelesオフィスのエントランス" /></a>
   <figcaption>Communication Design Group, Los Angelesオフィスのエントランス</figcaption>
 </figure>
 
@@ -44,6 +44,6 @@ HARC は、PARC が一文字変わっただけのように見えますが、実�
 **追伸;** 僕も混ぜてくださいね！ ;)
 
 <figure>
-  <a href="/images/DSC00614.jpg"><img src="/images/DSC00614-1024x576.jpg" alt="Communication Design Group, Los Angelesオフィス (HARC移籍に伴いobsoleteに…)" /></a>
+  <a href="/images/2016-05-17-DSC00614.jpg"><img src="/images/2016-05-17-DSC00614-1024x576.jpg" alt="Communication Design Group, Los Angelesオフィス (HARC移籍に伴いobsoleteに…)" /></a>
   <figcaption>Communication Design Group, Los Angelesオフィス (HARC移籍に伴いobsoleteに…)</figcaption>
 </figure>

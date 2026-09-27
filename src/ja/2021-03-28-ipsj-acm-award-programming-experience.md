@@ -5,7 +5,7 @@ tags:
   - sigpx
   - research
   - creativity
-coverImage: /images/ipsj_acm_joint_award_2021.jpg
+coverImage: /images/2021-03-28-ipsj_acm_joint_award_2021.jpg
 summary: >-
   先日、情報処理学会 第 83 回全国大会の表彰式で「IPSJ/ACM Award for Early Career Contributions to
   Global Research」を受賞しました。これは年に一度、情報学全分野から一人を情報処理学会とACMから表彰するという...
@@ -18,7 +18,7 @@ summary_generated: |-
 > **10 月 6 日追記;** 情報処理学会の学会誌「[情報処理 Vol.62 No.10](https://amzn.to/3oC9Fjm)」に[受賞記念記事](http://doi.org/10.20729/00212783)が掲載されました。
 
 <figure class="right">
-  <img src="/images/ipsj_acm_joint_award_2021.jpg" alt="" />
+  <img src="/images/2021-03-28-ipsj_acm_joint_award_2021.jpg" alt="" />
 </figure>
 
 先日、[情報処理学会 第 83 回全国大会](https://www.ipsj.or.jp/event/taikai/83/)の表彰式で「IPSJ/ACM Award for Early Career Contributions to Global Research」を受賞しました。これは年に一度、情報学全分野から一人を情報処理学会と<abbr title="Association for Computing Machinery">ACM</abbr>から表彰するというものです。
@@ -58,7 +58,7 @@ summary_generated: |-
 とはいえ、どこかのタイミングで PX についての個人的な課題感を言葉にしておいたほうがよい気もしていました。成果がまとめて評価され、SIGPX をはじめてから 5 年が経った今は、ちょうどよい頃合いなのかもしれません。そこで、先日の[第 8 回 SIGPX 勉強会](https://sigpx.org/8)のイントロダクションに 1 枚だけ私論のスライドを入れました。以降はこの内容を簡単に説明します。最後は、 PX と創作文化の関係についても少しだけ触れたいと思います。
 
 <figure>
-  <img src="/images/sigpx8-kato-intro.png" alt="What is PX?" />
+  <img src="/images/2021-03-28-sigpx8-kato-intro.png" alt="What is PX?" />
   <figcaption><a href="https://sigpx.org/8">第 8 回 SIGPX 勉強会</a>冒頭のスライドより</figcaption>
 </figure>
 
@@ -75,7 +75,7 @@ PX について説明するとき「UX (User Experience) のプログラミン�
 プログラムを記述することをプログラミングと呼ぶのであれば、そこで使われる表現はすべて（文字ベースの言語でなくとも）広義「プログラミング言語」であり、じっさい、プログラミング言語の研究コミュニティはプログラミングという行為の大部分を発明し、規定してきました。
 
 <figure class="right">
-  <img src="/images/sigpx8-kato-intro-environment.png" alt="Programming Environment" />
+  <img src="/images/2021-03-28-sigpx8-kato-intro-environment.png" alt="Programming Environment" />
   <figcaption><a href="https://sigpx.org/8">第 8 回 SIGPX 勉強会</a>冒頭のスライドより</figcaption>
 </figure>
 

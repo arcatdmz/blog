@@ -4,7 +4,7 @@ date: "2012-11-21"
 tags:
   - research
   - sigpx
-coverImage: /images/uist2012-kato-dejavu.png
+coverImage: /images/2012-11-21-uist2012-kato-dejavu.png
 summary_generated: >-
   IT が生活のいろんな部分に入り込んでくるにつれ、プログラミングの重要性がどんどん増しています。しかし、Visual
   StudioやEclipseに代表されるような開発環境の使い勝手を向上させる研究は、意外といっていいほど見当たりません。その中でも著名な研究は、Last
@@ -17,7 +17,7 @@ IT が生活のいろんな部分に入り込んでくるにつれ、プログ�
 ただ、僕はこの研究分野はすごく重要だし、今後どんどん成長すると思っています。現に、ここ一年で Web ベースの開発環境[Cloud9](https://c9.io/)や教育目的の[KhanAcademy](http://www.khanacademy.org/cs)に組み込まれたインタプリタ、ライブコーディングが可能な開発環境[LightTable](http://www.chris-granger.com/2012/04/12/light-table---a-new-ide-concept/)など、プログラミング体験を全く別のものにする試みがたくさん走り始めています。これらはプロダクトの例ですが、研究としては 2 つの分野の学際領域にあるので、まずは隣接分野との比較を通して輪郭をなぞってみます。さらに、これからの開発環境のあるべき姿（研究が進む方向）について考えてみます。
 
 <figure class="right">
-  <img src="/images/hci-pl-devenv-300x206.png" alt="Human-Computer Interaction / 開発環境の研究 / Programming Language" />
+  <img src="/images/2012-11-21-hci-pl-devenv-300x206.png" alt="Human-Computer Interaction / 開発環境の研究 / Programming Language" />
 </figure>
 
 ちょっと長くなりそうなので、このページでは最初の 3 分の 1 だけ書くことにしますね。プロダクトでも研究でも、もし紹介から漏れている興味深いプロジェクトがあったらぜひ教えてください。
@@ -43,7 +43,7 @@ IT が生活のいろんな部分に入り込んでくるにつれ、プログ�
 
 ツールキットと開発環境比較の具体例として、インタラクティブな画像処理のプログラムをプロトタイピングするためのツール[Eyepatch](http://hci.stanford.edu/research/eyepatch/ "Eyepatch: Prototyping Camera-based Interaction through Examples") [[Monzy](http://www.monzy.org/) et al., 2007]と、同様のプログラミング全般を支援する開発環境[DejaVu](https://junkato.jp/ja/dejavu/ "DejaVu: Integrated Support for Developing Interactive Camera-Based Programs") [Kato et al., 2012]を簡単に紹介します。
 
-![](/images/uist2007-monzy-eyepatch.png "Eyepatch")
+![](/images/2012-11-21-uist2007-monzy-eyepatch.png "Eyepatch")
 
 こちらが Eyepatch です。GUI の画面上で画像処理のサンプルをたくさん記録して、機械学習などのアルゴリズムを使って物体認識などをさせることができます。認識結果はネットワーク経由で送出されるので、他のプログラムから自由に利用できます。要は、画像認識を使ったインタラクティブなアプリケーションを作りたいときに、その部分のコードを書く手間を省いてくれるのです。ただし、アプリケーションを書くには別に立ち上げた開発環境と Eyepatch の間を往復しなくてはなりません。
 

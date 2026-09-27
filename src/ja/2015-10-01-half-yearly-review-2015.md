@@ -5,7 +5,7 @@ tags:
   - life
   - lookback
   - travel
-coverImage: /images/DSC00049_developed.jpg
+coverImage: /images/2015-10-01-DSC00049_developed.jpg
 summary_generated: >-
   博士課程を修了し、就職してから早一年半が経ちました。前回、半年を振り返ってからの一年を振り返ってみようと思います。最近は研究者として何ができるか、何をしたいか考えて行動できるようになってきた気がします。時系列は下に載せましたが、研究トピックとしては主に次の
   4 つに取り組み...
@@ -24,7 +24,7 @@ altUrl: "https://junkato.jp/ja/blog/2015/10/01/half-yearly-review-2015/"
 このうち、Sharedo は入所直後にがんばったものなので、一年間での進展はほぼありません。CrossSong は共著論文で、パズル自動生成の部分には全く関与しておらず（Jordan, Graham, 深山さん、後藤さんの貢献部分です）、HCI 研究者らしくパズルのインタラクション設計やデモ動画制作などを担当しました。f3.js はとても面白いトピックだと思っているのですが、準備に時間がかかったのと（理由は 11 月の UIST デモ発表の頃にはお分かりいただけると思います）、とにかく TextAlive に時間を割いたので、まだちゃんとしたかたちにはなっていません。
 
 <figure>
-  <a href="https://goo.gl/photos/Ho2gWe12RmdZPhdE7"><img src="/images/DSC00049_developed-1024x681.jpg" alt="" /></a>
+  <a href="https://goo.gl/photos/Ho2gWe12RmdZPhdE7"><img src="/images/2015-10-01-DSC00049_developed-1024x681.jpg" alt="" /></a>
   <figcaption>7 月、イギリス各所を訪問</figcaption>
 </figure>
 
@@ -79,7 +79,7 @@ altUrl: "https://junkato.jp/ja/blog/2015/10/01/half-yearly-review-2015/"
 - UIST 2015 査読
 
 <figure>
-  <a href="http://hci.tokyo/"><img src="/images/DSC00573-1024x682.jpg" alt="ACM CHI Symposium on Emerging Japanese HCI Research Collection参加者一同" /></a>
+  <a href="http://hci.tokyo/"><img src="/images/2015-05-03-DSC00573-1024x682.jpg" alt="ACM CHI Symposium on Emerging Japanese HCI Research Collection参加者一同" /></a>
   <figcaption>ACM CHI Symposium on Emerging Japanese HCI Research Collection</figcaption>
 </figure>
 
@@ -89,7 +89,7 @@ altUrl: "https://junkato.jp/ja/blog/2015/10/01/half-yearly-review-2015/"
 - 免許合宿
 
 <figure>
-  <a href="https://goo.gl/photos/RBzDVXF7g6YT2YNY8"><img src="/images/DSC00698-1024x682.jpg" alt="日々" /></a>
+  <a href="https://goo.gl/photos/RBzDVXF7g6YT2YNY8"><img src="/images/2015-06-20-DSC00698-1024x682.jpg" alt="日々" /></a>
   <figcaption>長野県で免許合宿に参加</figcaption>
 </figure>
 
@@ -117,7 +117,7 @@ altUrl: "https://junkato.jp/ja/blog/2015/10/01/half-yearly-review-2015/"
 - WISS 2015 査読
 
 <figure>
-  <a href="https://junkato.jp/ja/talks/people-are-programmers/?p=1"><img src="/images/SDIM9353-1024x683.jpg" alt="" /></a>
+  <a href="https://junkato.jp/ja/talks/people-are-programmers/?p=1"><img src="/images/2015-10-01-SDIM9353-1024x683.jpg" alt="" /></a>
   <figcaption>情報科学若手の会で楽しく招待講演</figcaption>
 </figure>
 

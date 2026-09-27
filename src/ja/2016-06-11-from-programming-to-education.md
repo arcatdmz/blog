@@ -5,7 +5,7 @@ tags:
   - discussion
   - research
   - sigpx
-coverImage: /images/IMG_9046.jpg
+coverImage: /images/2016-06-11-IMG_9046.jpg
 summary_generated: >-
   最近プログラミング教育に関する世間一般の興味が高まってきています。オバマ大統領がイニシアチブを取り、コンピュータ科学に関する教育を全ての学生に課すため、関連する産業や研究開発に多額の政策投資を行おうというアメリカのCS
   for Allや、日本の政府成長戦略のなかで挙げられて...
@@ -17,7 +17,7 @@ altUrl: "https://junkato.jp/ja/blog/2016/06/11/from-programming-to-education/"
 これに呼応するように、プログラミング支援に関する研究を引っ張ってきたアメリカの大学教授たちが、研究トピックを教育方面にシフトしてきています。政策とアカデミアの研究開発とがタイムリーに連携していて大変興味深く、日本でも参考にできるところがあるように思います。
 
 <figure class="center">
-  <a href="/images/IMG_9046.jpg"><img src="/images/IMG_9046-1024x683.jpg" alt="日本科学未来館でのPicode Workshopの様子" /></a>
+  <a href="/images/2016-06-11-IMG_9046.jpg"><img src="/images/2016-06-11-IMG_9046-1024x683.jpg" alt="日本科学未来館でのPicode Workshopの様子" /></a>
   <figcaption>日本科学未来館での<a href="http://blog.miraikan.jst.go.jp/event/20130517post-347.html">Picode Workshop</a>の様子</figcaption>
 </figure>
 

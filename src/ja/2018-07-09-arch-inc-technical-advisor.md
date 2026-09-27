@@ -5,7 +5,7 @@ tags:
   - anime
   - life
   - research
-coverImage: /images/archinc.jpg
+coverImage: /images/2018-07-09-archinc.jpg
 summary_generated: >-
   この度、アニメなどのコンテンツを幅広くプロデュースするアーチ株式会社（ARCH Inc.）の技術顧問になりました。転職ではなく、現職の産業技術総合研究所
   研究員を主務としたまま、技術顧問を非常勤で兼務するかたちです。アーチからプレスリリースが出ています。研究者がアカデミアだ...
@@ -16,7 +16,7 @@ altUrl: "https://junkato.jp/ja/blog/2018/07/09/arch-inc-technical-advisor/"
 
 研究者がアカデミアだけでなく産業界でも必要としてもらえる実例として、研究者、企業人双方の参考になるといいなと思って、技術顧問の狙いや役割、経緯などを書いてみることにしました。あとは、自分の考えの整理も兼ねています。研究者仲間には驚かれるかもしれないので（転職と勘違いされたり…）その予防措置的な意味合いもあります:)
 
-[![](/images/archinc-1024x512.jpg)](http://archinc.jp/member/)
+[![](/images/2018-07-09-archinc-1024x512.jpg)](http://archinc.jp/member/)
 
 ## アニメとプログラミングの未来
 

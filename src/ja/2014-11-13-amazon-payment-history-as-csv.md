@@ -4,7 +4,7 @@ date: "2014-11-13"
 tags:
   - life
   - programming
-coverImage: /images/amazon-result.png
+coverImage: /images/2014-11-13-amazon-result.png
 summary_generated: "12/25 更新; \_Amazon の実装が変わって Chrome 最新版との組み合わせで動かなくなっていたものを修正しました。技術解説は最後に。そろそろ今年はいくら使ったか集計してみましょう^^もともともろやさんの書いたコードをちょっといじって使っていたんですが、Gist..."
 altUrl: "https://junkato.jp/ja/blog/2014/11/13/amazon-payment-history-as-csv/"
 ---
@@ -13,7 +13,7 @@ altUrl: "https://junkato.jp/ja/blog/2014/11/13/amazon-payment-history-as-csv/"
 
 そろそろ今年はいくら使ったか集計してみましょう^^
 
-[![amazon](/images/amazon-1024x437.png)](https://www.amazon.co.jp/gp/css/order-history/)
+[![amazon](/images/2014-11-13-amazon-1024x437.png)](https://www.amazon.co.jp/gp/css/order-history/)
 
 もともと[もろや](http://moroya.hatenablog.jp/entry/2013/06/03/225935)さんの書いたコードをちょっといじって使っていたんですが、Gist が MIME タイプを正しく返さなくなったり Amazon の注文履歴ページのレイアウトが変わったりで、うまく動かなくなっていたのを直しました。
 
@@ -40,7 +40,7 @@ javascript: (function () {
 4. 結果が出るまでしばし待ちましょう。すごくぷるぷるにゃん…
 
 <figure class="center">
-  <a href="/images/amazon-result.png"><img src="/images/amazon-result.png" alt="うわぁ" /></a>
+  <a href="/images/2014-11-13-amazon-result.png"><img src="/images/2014-11-13-amazon-result.png" alt="うわぁ" /></a>
   <figcaption>うわぁ</figcaption>
 </figure>
 

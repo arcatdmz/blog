@@ -4,7 +4,7 @@ date: "2012-12-24"
 tags:
   - phybots
   - programming
-coverImage: /images/realmote.jpg
+coverImage: /images/2012-12-24-realmote.jpg
 summary: >-
   最近、スマートフォンが赤外線リモコンの代わりになる製品をよく見るようになりました。この記事ではその私家版、 Web
   インタフェースから家電製品やルンバが遠隔操作できちゃうリモコンアプリ Realmote を紹介します。
@@ -15,7 +15,7 @@ summary_generated: |2-
 ---
 
 <figure class="right">
-  <a href="/images/realmote.jpg"><img src="/images/realmote-138x300.jpg" alt="" /></a>
+  <a href="/images/2012-12-24-realmote.jpg"><img src="/images/2012-12-24-realmote-138x300.jpg" alt="" /></a>
   <figcaption>Realmote</figcaption>
 </figure>
 
@@ -36,7 +36,7 @@ Realmote を使うのに必要なハードウェアは、次のとおりです�
 - ルンバのリモコン機能を使うなら: ルンバ本体と[RooTooth](https://www.sparkfun.com/products/684)
 
 <figure class="right">
-  <a href="http://www.amazon.co.jp/gp/product/B000I0RDJI/ref=as_li_ss_il?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B000I0RDJI"><img src="/images/41D58M0CK9L._SL110_.jpg" alt="" /></a>
+  <a href="http://www.amazon.co.jp/gp/product/B000I0RDJI/ref=as_li_ss_il?ie=UTF8&tag=dmjp07-22&linkCode=as2&camp=247&creative=7399&creativeASIN=B000I0RDJI"><img src="/images/2012-12-24-41D58M0CK9L._SL110_.jpg" alt="" /></a>
   <figcaption>RemoteStation</figcaption>
 </figure>
 

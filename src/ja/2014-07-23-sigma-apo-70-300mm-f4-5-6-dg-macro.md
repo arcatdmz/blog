@@ -17,16 +17,16 @@ summary_generated: >-
 ズームレンズを普通に使うとすごいブレちゃって、扱いが難しい。でも、こんな写真、これまで持っていたレンズでは到底撮れなかった！というわけでとても満足して撮影技術の上達を誓うのでした。
 
 <figure>
-  <a href="/images/DSC09952.jpg"><img src="/images/DSC09952-1024x680.jpg" alt="DSC09952" /></a>
+  <a href="/images/2014-07-23-DSC09952.jpg"><img src="/images/2014-07-23-DSC09952-1024x680.jpg" alt="DSC09952" /></a>
   <figcaption>ダイサギ</figcaption>
 </figure>
 
 <figure>
-  <a href="/images/DSC09933.jpg"><img src="/images/DSC09933-1024x680.jpg" alt="DSC09933" /></a>
+  <a href="/images/2014-07-23-DSC09933.jpg"><img src="/images/2014-07-23-DSC09933-1024x680.jpg" alt="DSC09933" /></a>
   <figcaption>カルガモ</figcaption>
 </figure>
 
 <figure>
-  <a href="/images/DSC09944.jpg"><img src="/images/DSC09944-1024x680.jpg" alt="DSC09944" /></a>
+  <a href="/images/2014-07-23-DSC09944.jpg"><img src="/images/2014-07-23-DSC09944-1024x680.jpg" alt="DSC09944" /></a>
   <figcaption>バリケン（名前分からなかったけど <a href="https://twitter.com/htomine">@htomine</a> が教えてくれた、ありがとう！）</figcaption>
 </figure>

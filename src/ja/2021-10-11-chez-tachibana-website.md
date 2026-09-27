@@ -6,7 +6,7 @@ tags:
   - research
   - server
   - science
-coverImage: /images/tachibana-rip.png
+coverImage: /images/2021-10-11-tachibana-rip.png
 summary: >-
   今年 4 月 30
   日、立花隆氏が亡くなりました。立花氏ははやくからインターネットの可能性に注目していました。氏の公式サイトは、かつて私がメンテナンスをお手伝いしていたのですが、ドメインの失効とともに閉鎖になっていたのです。訃報を受け、サイトを一から作り直して
@@ -31,7 +31,7 @@ https://twitter.com/arcatdmz/status/1224859951568285696
 
 前置きが長くなりましたが、かつて私は、そんな氏の公式サイトのメンテナンスをしていました。ただ、公式サイトはドメインの失効とともに閉鎖になっていたのです。訃報を受けて、立花ゼミの友人とともに一から作り直して 6 月に https://tachibana.rip で公開しました。
 
-[![](/images/tachibana-rip.png)](https://tachibana.rip)
+[![](/images/2021-10-11-tachibana-rip.png)](https://tachibana.rip)
 
 さらに、このたび、そのソースコードを公開しました。
 

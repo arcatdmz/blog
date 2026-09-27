@@ -4,7 +4,7 @@ date: "2012-12-18"
 tags:
   - programming
   - server
-coverImage: /images/fungus-camera.jpg
+coverImage: /images/2012-12-18-fungus-camera.jpg
 summary_generated: >-
   最近、照明を ON/OFF する機能を備えた Arduino
   ベースのネットワークカメラを開発したのですが、そこから定期的に画像を取ってきて保存したくなりました。自宅サーバとして Mac mini Mid 2010
@@ -12,7 +12,7 @@ summary_generated: >-
 altUrl: "https://junkato.jp/ja/blog/2012/12/18/mac-os-x-launchd/"
 ---
 
-![](/images/fungus-camera.jpg "なめこカメラ")
+![](/images/2012-12-18-fungus-camera.jpg "なめこカメラ")
 
 最近、照明を ON/OFF する機能を備えた Arduino ベースのネットワークカメラを開発したのですが、そこから定期的に画像を取ってきて保存したくなりました。自宅サーバとして Mac mini Mid 2010 (Mac OS X Snow Leopard)を使っているので、Mac mini で定期的に wget を走らせることができればよいはずです。言ってしまえば簡単なことですが、意外と設定に手間取ったので手順を書いておきます。
 

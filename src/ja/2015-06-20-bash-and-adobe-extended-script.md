@@ -4,7 +4,7 @@ date: "2015-06-20"
 tags:
   - life
   - programming
-coverImage: /images/DSC00698.jpg
+coverImage: /images/2015-06-20-DSC00698.jpg
 summary_generated: |-
   最近書いたものをメモがてら。
   bash で行ごとに処理Git のログを整形して出力フォルダ内のデジタル一眼 RAW を全部現像
@@ -18,7 +18,7 @@ altUrl: "https://junkato.jp/ja/blog/2015/06/20/bash-and-adobe-extended-script/"
 - Git のログを整形して出力
 - フォルダ内のデジタル一眼 RAW を全部現像
 
-[![日々](/images/DSC00698-1024x682.jpg)](/images/DSC00698.jpg)
+[![日々](/images/2015-06-20-DSC00698-1024x682.jpg)](/images/2015-06-20-DSC00698.jpg)
 
 ## bash で行ごとに処理
 

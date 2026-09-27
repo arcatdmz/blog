@@ -6,7 +6,7 @@ tags:
   - science
   - sigpx
   - student
-coverImage: /images/IMGP7944trim.jpg
+coverImage: /images/2016-03-16-IMGP7944trim.jpg
 summary_generated: >-
   情報処理学会全国大会 大トリのプレゼン大会 IPSJ-ONE
   に招待され、登壇してきました。これは、情報処理に関わるさまざまな分野の研究会から優秀な研究者を選出し、1 人 5
@@ -20,14 +20,14 @@ altUrl: "https://junkato.jp/ja/blog/2016/03/16/ipsj-one-px-science-as-a-service/
 
 この記事では、発表をざっと振り返ってから、さらに進んで**[情報処理の産業とアカデミアが今後科学全般に対して果たす役割](#science)（本題）**について考えてみます。これは常々感じてきたことですが、人文科学（後藤さん）、物理（楽さん）、生物情報科学（清水さん）のようにさまざまな分野と関わって研究を進めている登壇者と議論したり、[企業に所属しながら研究している松本さんのブログ記事](http://hb.matsumoto-r.jp/entry/2016/03/15/163320)を読むなかで確信を深めました。
 
-[![IPSJ-ONE「コンピュータを変幻自在の道具にするためのプログラミング環境技術」](/images/IMGP7944trim-1024x576.jpg)](/images/IMGP7944trim.jpg)
+[![IPSJ-ONE「コンピュータを変幻自在の道具にするためのプログラミング環境技術」](/images/2016-03-16-IMGP7944trim-1024x576.jpg)](/images/2016-03-16-IMGP7944trim.jpg)
 
 ---
 
 ## コンピュータを変幻自在の道具にするためのプログラミング環境技術
 
 <figure class="small fixed-size right">
-  <a href="/ja/posts/2016-03-16-ipsj-one-px-science-as-a-service/#refs"><img src="/images/160312-ipsjone-kato-pet-slides-150x150.jpg" alt="IPSJ-ONE スライド" /></a>
+  <a href="/ja/posts/2016-03-16-ipsj-one-px-science-as-a-service/#refs"><img src="/images/2016-03-16-160312-ipsjone-kato-pet-slides-150x150.jpg" alt="IPSJ-ONE スライド" /></a>
 </figure>
 
 私の発表は「**今やどこにでもある変幻自在の道具 ── コンピュータを駆動しているプログラムを作るためには、さまざまな工夫が凝らされたプログラミング環境が必要だ**」というメッセージを主軸に、以下 3 点を副次的なメッセージとして含めました。

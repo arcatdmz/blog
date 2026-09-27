@@ -4,7 +4,7 @@ date: "2014-01-13"
 tags:
   - programming
   - server
-coverImage: /images/infobox.png
+coverImage: /images/2014-01-13-infobox.png
 summary: >-
   前日に引き続きMediaWikiに関する記事です。 素の MediaWiki は、記事を全て Wiki
   記法でべた書きしなくてはなりません。Wikipedia
@@ -17,7 +17,7 @@ altUrl: >-
 ---
 
 <figure class="right">
-  <a href="/images/infobox.png"><img src="/images/infobox-300x180.png" alt="" /></a>
+  <a href="/images/2014-01-13-infobox.png"><img src="/images/2014-01-13-infobox-300x180.png" alt="" /></a>
   <figcaption>Wikipedia Infobox</figcaption>
 </figure>
 
