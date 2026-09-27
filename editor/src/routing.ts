@@ -22,8 +22,8 @@ export function readRoute(search = window.location.search): EditorRoute {
       params.get("dialog") === "new"
         ? "new"
         : params.get("dialog") === "images"
-          ? "images"
-          : "",
+        ? "images"
+        : "",
     language: params.get("language") === "default" ? "default" : "ja",
     search: params.get("q") || "",
     mediaSearch: params.get("media-q") || "",
@@ -56,6 +56,9 @@ export function useEditorRoute() {
     (patch: Partial<EditorRoute>, replace = false) => {
       const next = { ...readRoute(), ...patch };
       const search = routeSearch(next);
+      // A user can interact before the effect installs the event listener.
+      // Update the initiating hook directly as well as notifying other surfaces.
+      setRoute(next);
       if (search !== window.location.search) {
         window.history[replace ? "replaceState" : "pushState"](
           null,

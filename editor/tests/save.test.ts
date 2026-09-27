@@ -1,11 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { newDocument } from "../shared/document";
+import { newDocument, updateMetadata } from "../shared/document";
+import { processPost } from "../shared/processing";
 import { type SaveRequest } from "../shared/model";
 import { references, save, uploadReceipt, validateSave } from "../worker/save";
 import { blobHash, RepositoryFixture } from "./github-fixture";
 
 const postPath = "src/ja/2024-01-01-test.md";
-const original = newDocument("Test", "2024-01-01");
+const original = await processPost(newDocument("Test", "2024-01-01"), postPath);
 function fixture() {
   return new RepositoryFixture({
     [postPath]: original,
@@ -46,7 +47,9 @@ describe("atomic GitHub saves", () => {
     ];
     const result = await save(repository.github(), "test-token", data);
     expect(result.commit).not.toBe(before);
-    expect(repository.files()[postPath]).toBe(blobHash(data.post!.content));
+    expect(repository.files()[postPath]).toBe(
+      blobHash(await processPost(data.post!.content, postPath))
+    );
     expect(repository.files()["public/images/new.jpg"]).toBe(sha);
     expect(repository.files()["public/images/old.jpg"]).toBeUndefined();
     expect(repository.files()["README.md"]).toBe(blobHash("untouched"));
@@ -190,5 +193,46 @@ describe("atomic GitHub saves", () => {
     expect(() => validateSave(data)).toThrow(/match/);
     data.post!.path = "src/ja/2024-01-01-new.md";
     expect(() => validateSave(data)).not.toThrow();
+  });
+  it("renames dated images and updates shared references atomically when the post date changes", async () => {
+    const image = "public/images/2024-01-01-photo.jpg";
+    const other = "src/default/2024-01-01-other.md";
+    const content = original + "![](/images/2024-01-01-photo.jpg)\n";
+    const repository = new RepositoryFixture({
+      [postPath]: content,
+      [other]: content,
+      [image]: "image"
+    });
+    const data = request(repository);
+    data.post!.expectedSha = blobHash(content);
+    data.post!.content = updateMetadata(content, { date: "2024-02-02" });
+    await save(repository.github(), "test-token", data);
+    expect(repository.files()[image]).toBeUndefined();
+    expect(repository.files()["public/images/2024-02-02-photo.jpg"]).toBe(
+      blobHash("image")
+    );
+    for (const path of [postPath, other])
+      expect(repository.blobs.get(repository.files()[path])).toContain(
+        "/images/2024-02-02-photo.jpg"
+      );
+    expect(repository.requests.filter(r => r.method === "PATCH")).toHaveLength(
+      1
+    );
+  });
+  it("rejects image rename collisions without publishing any change", async () => {
+    const content = original + "![](/images/2024-01-01-photo.jpg)\n";
+    const repository = new RepositoryFixture({
+      [postPath]: content,
+      "public/images/2024-01-01-photo.jpg": "image",
+      "public/images/2024-02-02-photo.jpg": "other"
+    });
+    const before = repository.head;
+    const data = request(repository);
+    data.post!.expectedSha = blobHash(content);
+    data.post!.content = updateMetadata(content, { date: "2024-02-02" });
+    await expect(
+      save(repository.github(), "test-token", data)
+    ).rejects.toMatchObject({ status: 409 });
+    expect(repository.head).toBe(before);
   });
 });

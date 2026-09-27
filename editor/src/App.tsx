@@ -56,6 +56,8 @@ import {
 import ThemeSelect from "./ThemeSelect";
 import { useEditorRoute } from "./routing";
 import website from "../../website.json";
+import TagDialog from "./TagDialog";
+import { datedImageName, renameMediaReferences } from "../shared/mediaNames";
 
 const Preview = lazy(() => import("./Preview"));
 const FigureDialog = lazy(() => import("./FigureDialog"));
@@ -64,7 +66,10 @@ const MEDIA = "@media";
 const emptyIndex: Index = { head: "", posts: [], media: [] };
 const today = () => {
   const date = new Date();
-  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(
+    2,
+    "0"
+  )}-${String(date.getDate()).padStart(2, "0")}`;
 };
 type Notice = string | readonly [en: string, ja: string];
 const errorMessages: Record<string, string> = {
@@ -114,7 +119,9 @@ const message = (error: unknown): Notice => {
   if (original.startsWith("Invalid frontmatter: "))
     return [
       original,
-      `フロントマターが正しくありません: ${original.slice("Invalid frontmatter: ".length)}`
+      `フロントマターが正しくありません: ${original.slice(
+        "Invalid frontmatter: ".length
+      )}`
     ];
   const field =
     /^(summary|summary_generated|coverImage|altUrl) must be text\.$/.exec(
@@ -131,6 +138,10 @@ export default function App() {
   const site = website.languages[locale === "ja" ? "ja" : "default"];
   const [index, setIndex] = useState<Index>(emptyIndex);
   const [titles, setTitles] = useState<Record<string, string>>({});
+  const [knownTags, setKnownTags] = useState<Record<string, string[]>>({});
+  const [tagsOpen, setTagsOpen] = useState(false);
+  const [tagInputVersion, setTagInputVersion] = useState(0);
+  const [processing, setProcessing] = useState(false);
   const [route, navigate] = useEditorRoute();
   const { search, language, view: tab, zen: zenMode } = route;
   const newPost = route.dialog === "new";
@@ -336,8 +347,16 @@ export default function App() {
             const title = String(
               splitDocument(post.content).data.title || entry.path
             );
-            if (run === generation.current)
+            if (run === generation.current) {
               setTitles(t => ({ ...t, [entry.path]: title }));
+              const tags = splitDocument(post.content).data.tags;
+              setKnownTags(t => ({
+                ...t,
+                [entry.path]: Array.isArray(tags)
+                  ? tags.filter((v): v is string => typeof v === "string")
+                  : []
+              }));
+            }
           } catch {
             /* A post still remains visible/searchable by its filename. */
           }
@@ -430,6 +449,7 @@ export default function App() {
       setFigure(null);
       setRemote(null);
       setRawFrontmatter(null);
+      setTagsOpen(false);
       pickImage.current = null;
       if (!route.post) return;
       const recovery = restoreText(
@@ -476,15 +496,85 @@ export default function App() {
         splitDocument(work.current.post.content).body.replace(/\r\n/g, "\n")
       );
   }, [tab, active, editorVersion]);
-  const metadataChange = (patch: Record<string, unknown>) => {
+  const metadataChange = (patch: Record<string, unknown>, source?: string) => {
     if (!work.current) return;
     try {
-      const content = updateMetadata(work.current.post.content, patch);
+      const current = work.current;
+      let content = updateMetadata(source ?? current.post.content, patch);
+      if (source && splitDocument(source).data.date !== metadata.date)
+        patch = { ...patch, date: splitDocument(source).data.date };
+      let nextImages = work.current.images;
+      if (
+        typeof patch.date === "string" &&
+        /^\d{4}-\d{2}-\d{2}$/.test(patch.date)
+      ) {
+        const renames = new Map(
+          nextImages.map(image => [
+            image.path,
+            `public/images/${datedImageName(
+              image.path.split("/").pop()!,
+              patch.date as string
+            )}`
+          ])
+        );
+        if (
+          new Set(renames.values()).size !== renames.size ||
+          [...renames.values()].some(path =>
+            index.media.some(e => e.path === path)
+          )
+        )
+          throw new Error(
+            t(
+              "That image filename already exists.",
+              "変更後の画像ファイル名がすでに存在します。"
+            )
+          );
+        content = renameMediaReferences(content, renames);
+        nextImages = nextImages.map(image => ({
+          ...image,
+          path: renames.get(image.path)!
+        }));
+      }
       const parsed = splitDocument(content);
+      const nextPath =
+        current.post.sha === null &&
+        typeof patch.date === "string" &&
+        /^\d{4}-\d{2}-\d{2}$/.test(patch.date)
+          ? current.post.path.replace(/\/\d{4}-\d{2}-\d{2}-/, `/${patch.date}-`)
+          : current.post.path;
+      if (
+        nextPath !== current.post.path &&
+        (index.posts.some(p => p.path === nextPath) ||
+          recoveries.some(r => r.post.path === nextPath))
+      )
+        throw new Error(
+          t(
+            "That filename already exists. Choose another slug.",
+            "同じファイル名がすでに存在します。別のスラッグを指定してください。"
+          )
+        );
+      setImages(nextImages);
+      if (parsed.body !== splitDocument(current.post.content).body) {
+        setInitialBody(parsed.body);
+        setPreviewBody(parsed.body.replace(/\r\n/g, "\n"));
+        setEditorVersion(n => n + 1);
+      }
       header.current = parsed.header;
       setMetadata(parsed.data);
       newline.current = parsed.newline;
-      changed({ post: { ...work.current.post, content } });
+      changed({
+        post: { ...current.post, path: nextPath, content },
+        images: nextImages
+      });
+      if (nextPath !== current.post.path) {
+        setInitialBody(parsed.body);
+        setEditorVersion(n => n + 1);
+        clearTextCheckpoint(current);
+        void deleteRecovery(current.post.path);
+        setActive(nextPath);
+        navigate({ post: nextPath }, true);
+      }
+      return true;
     } catch (error) {
       setError(message(error));
     }
@@ -573,6 +663,13 @@ export default function App() {
   };
   const stageImage = async (image: PendingImage) => {
     if (!work.current) return;
+    image = {
+      ...image,
+      path: `public/images/${datedImageName(
+        image.path.split("/").pop()!,
+        String(metadata.date || today())
+      )}`
+    };
     if (
       index.media.some(e => e.path === image.path) ||
       work.current.images.some(e => e.path === image.path)
@@ -626,15 +723,23 @@ export default function App() {
     if (blockers.length)
       throw new Error(
         t(
-          `Still used by: ${blockers.join(", ")}. Remove those references first.`,
-          `次の記事で使用されています: ${blockers.join(", ")}。先に記事内の参照を削除してください。`
+          `Still used by: ${blockers.join(
+            ", "
+          )}. Remove those references first.`,
+          `次の記事で使用されています: ${blockers.join(
+            ", "
+          )}。先に記事内の参照を削除してください。`
         )
       );
     if (
       !window.confirm(
         t(
-          `Stage deletion of ${path.split("/").pop()}? This takes effect only when you Save changes.`,
-          `${path.split("/").pop()} を削除予定にしますか？「変更を保存」を押すと削除されます。`
+          `Stage deletion of ${path
+            .split("/")
+            .pop()}? This takes effect only when you Save changes.`,
+          `${path
+            .split("/")
+            .pop()} を削除予定にしますか？「変更を保存」を押すと削除されます。`
         )
       )
     )
@@ -672,13 +777,38 @@ export default function App() {
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
+  const processCurrentPost = async () => {
+    if (!work.current || work.current.post.path === MEDIA) return;
+    const current = work.current;
+    const { processPost } = await import("../shared/processing");
+    const content = await processPost(current.post.content, current.post.path);
+    if (work.current !== current)
+      throw new Error(
+        t(
+          "The post changed during processing. Try again.",
+          "処理中に記事が変更されました。もう一度実行してください。"
+        )
+      );
+    if (content === current.post.content) return;
+    const parsed = splitDocument(content);
+    header.current = parsed.header;
+    newline.current = parsed.newline;
+    setMetadata(parsed.data);
+    setInitialBody(parsed.body);
+    setPreviewBody(parsed.body.replace(/\r\n/g, "\n"));
+    setEditorVersion(n => n + 1);
+    changed({ post: { ...current.post, content } });
+    await persist();
+  };
+
   const save = async () => {
-    if (!work.current || saving || composing.current) return;
+    if (!work.current || saving || processing || composing.current) return;
     setSaving(true);
     setError("");
     setStatus(["Preparing save…", "保存を準備しています…"]);
     try {
-      const current = work.current;
+      if (!work.current.saveId) await processCurrentPost();
+      const current = work.current!;
       if (current.post.path !== MEDIA) validateDocument(current.post.content);
       const previousId = current.saveId;
       const id = previousId || crypto.randomUUID();
@@ -690,7 +820,9 @@ export default function App() {
         for (const [i, image] of current.images.entries()) {
           setStatus([
             `Uploading image ${i + 1} of ${current.images.length}…`,
-            `画像をアップロードしています（${i + 1} / ${current.images.length}）…`
+            `画像をアップロードしています（${i + 1} / ${
+              current.images.length
+            }）…`
           ]);
           uploads.push(await uploadImage(image.path, image.blob));
         }
@@ -773,6 +905,18 @@ export default function App() {
     )
     .sort((a, b) => b.path.localeCompare(a.path));
   const isPost = active && active !== MEDIA;
+  const postSite =
+    website.languages[active.split("/")[1] === "ja" ? "ja" : "default"];
+  const publishedUrl =
+    postSite.siteUrl +
+    "posts/" +
+    encodeURIComponent(
+      active
+        .split("/")
+        .pop()
+        ?.replace(/\.(md|mdx)$/, "") || ""
+    ) +
+    "/";
   return (
     <div className={`app-shell${zenMode && isPost ? " zen-mode" : ""}`}>
       <header className="app-header">
@@ -810,13 +954,13 @@ export default function App() {
             </button>
           </div>
           <button
-            disabled={!index.head || saving || loading}
+            disabled={!index.head || saving || loading || processing}
             onClick={() => setNewPost(true)}
           >
             {t("New post", "新規記事")}
           </button>
           <button
-            disabled={!index.head || saving || loading}
+            disabled={!index.head || saving || loading || processing}
             onClick={() =>
               void openMedia().catch(error => setError(message(error)))
             }
@@ -826,7 +970,7 @@ export default function App() {
           {active && (
             <button
               className="primary"
-              disabled={saving || loading || !modified}
+              disabled={saving || loading || processing || !modified}
               onClick={() => void save()}
             >
               {saving
@@ -906,7 +1050,7 @@ export default function App() {
                   {recoveries.map(recovery => (
                     <button
                       key={recovery.post.path}
-                      disabled={saving || loading}
+                      disabled={saving || loading || processing}
                       onClick={() => openPost(recovery.post.path)}
                     >
                       {recovery.post.path === MEDIA
@@ -928,7 +1072,7 @@ export default function App() {
                     className={entry.path === active ? "selected" : ""}
                     aria-current={entry.path === active ? "page" : undefined}
                     key={entry.path}
-                    disabled={saving || loading}
+                    disabled={saving || loading || processing}
                     onClick={() => void openPost(entry.path)}
                   >
                     <span>
@@ -969,7 +1113,7 @@ export default function App() {
                 )}
                 {isPost && (
                   <button
-                    disabled={saving || loading}
+                    disabled={saving || loading || processing}
                     onClick={async () => {
                       try {
                         setRemote(await getPost(active));
@@ -1024,8 +1168,8 @@ export default function App() {
                     {active === MEDIA
                       ? t("Image library", "画像ライブラリ")
                       : active.startsWith("src/ja/")
-                        ? t("Japanese post", "日本語の記事")
-                        : t("English post", "英語の記事")}
+                      ? t("Japanese post", "日本語の記事")
+                      : t("English post", "英語の記事")}
                   </p>
                   <h1>
                     {active === MEDIA
@@ -1037,11 +1181,16 @@ export default function App() {
                   </p>
                 </div>
                 <div className="document-actions">
-                  <span className={`save-badge ${modified ? "pending" : ""}`}>
+                  <a
+                    className={`save-badge ${modified ? "pending" : ""}`}
+                    href={isPost && !modified ? publishedUrl : undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {modified
                       ? t("Not committed", "未保存")
                       : t("On GitHub", "GitHub に保存済み")}
-                  </span>
+                  </a>
                   {isPost && (
                     <button
                       ref={zenToggle}
@@ -1062,7 +1211,7 @@ export default function App() {
                   {zenMode && isPost && (
                     <button
                       className="primary"
-                      disabled={saving || loading || !modified}
+                      disabled={saving || loading || processing || !modified}
                       onClick={() => void save()}
                     >
                       {saving
@@ -1097,7 +1246,7 @@ export default function App() {
                           : t("Published in lists", "記事一覧に表示")}
                       </span>
                     </summary>
-                    <fieldset disabled={saving || loading}>
+                    <fieldset disabled={saving || loading || processing}>
                       <label>
                         {t("Title", "タイトル")}
                         <input
@@ -1131,25 +1280,33 @@ export default function App() {
                           />
                         </label>
                       </div>
-                      <label>
-                        {t("Tags (comma-separated)", "タグ（カンマ区切り）")}
-                        <input
-                          key={`${active}-${editorVersion}`}
-                          defaultValue={
-                            Array.isArray(metadata.tags)
-                              ? metadata.tags.join(", ")
-                              : ""
-                          }
-                          onChange={e =>
-                            metadataChange({
-                              tags: e.target.value
-                                .split(",")
-                                .map(t => t.trim())
-                                .filter(Boolean)
-                            })
-                          }
-                        />
-                      </label>
+                      <div className="tag-field">
+                        <label htmlFor="post-tags">
+                          {t("Tags (comma-separated)", "タグ（カンマ区切り）")}
+                        </label>
+                        <div className="button-row media-toolbar">
+                          <input
+                            id="post-tags"
+                            key={`${active}-${editorVersion}-${tagInputVersion}`}
+                            defaultValue={
+                              Array.isArray(metadata.tags)
+                                ? metadata.tags.join(", ")
+                                : ""
+                            }
+                            onChange={e =>
+                              metadataChange({
+                                tags: e.target.value
+                                  .split(",")
+                                  .map(t => t.trim())
+                                  .filter(Boolean)
+                              })
+                            }
+                          />
+                          <button onClick={() => setTagsOpen(true)}>
+                            {t("Edit", "編集")}
+                          </button>
+                        </div>
+                      </div>
                       <label>
                         {t("Summary", "概要")}
                         <textarea
@@ -1162,8 +1319,9 @@ export default function App() {
                       </label>
                       <label>
                         {t("Cover image", "カバー画像")}
-                        <div className="button-row">
+                        <div className="button-row media-toolbar">
                           <input
+                            aria-label={t("Cover image", "カバー画像")}
                             value={String(metadata.coverImage || "")}
                             onChange={e =>
                               metadataChange({
@@ -1255,7 +1413,7 @@ export default function App() {
                       aria-label={t("Formatting tools", "書式設定")}
                     >
                       <button
-                        disabled={saving || loading}
+                        disabled={saving || loading || processing}
                         onPointerDown={event => event.preventDefault()}
                         onClick={() => wrap("**", "**")}
                         aria-label={t("Bold", "太字")}
@@ -1263,7 +1421,7 @@ export default function App() {
                         <strong>B</strong>
                       </button>
                       <button
-                        disabled={saving || loading}
+                        disabled={saving || loading || processing}
                         onPointerDown={event => event.preventDefault()}
                         onClick={() => wrap("*", "*")}
                         aria-label={t("Italic", "斜体")}
@@ -1271,7 +1429,7 @@ export default function App() {
                         <em>I</em>
                       </button>
                       <button
-                        disabled={saving || loading}
+                        disabled={saving || loading || processing}
                         onPointerDown={event => event.preventDefault()}
                         onClick={() => wrap("## ")}
                         aria-label={t("Heading", "見出し")}
@@ -1279,21 +1437,21 @@ export default function App() {
                         H2
                       </button>
                       <button
-                        disabled={saving || loading}
+                        disabled={saving || loading || processing}
                         onPointerDown={event => event.preventDefault()}
                         onClick={() => wrap("[", "](https://)")}
                       >
                         {t("Link", "リンク")}
                       </button>
                       <button
-                        disabled={saving || loading}
+                        disabled={saving || loading || processing}
                         onPointerDown={event => event.preventDefault()}
                         onClick={openFigure}
                       >
                         {t("Image layout", "画像レイアウト")}
                       </button>
                       <button
-                        disabled={saving || loading}
+                        disabled={saving || loading || processing}
                         onClick={() => writing.current?.undo()}
                       >
                         {t("Undo", "元に戻す")}
@@ -1305,7 +1463,7 @@ export default function App() {
                       key={`${active}-${editorVersion}`}
                       ref={writing}
                       initial={initialBody}
-                      disabled={saving || loading}
+                      disabled={saving || loading || processing}
                       onInput={fastBodyInput}
                       onComposition={value => {
                         composing.current = value;
@@ -1344,17 +1502,40 @@ export default function App() {
                       {t("Export Markdown", "Markdown をエクスポート")}
                     </button>
                     <button
-                      disabled={saving || loading}
+                      disabled={saving || loading || processing}
                       onClick={async () => {
                         try {
                           await persist();
-                          setRemote(await getPost(active));
+                          const next = await refresh();
+                          setRemote(await getPost(active, next.head));
                         } catch (error) {
                           setError(message(error));
                         }
                       }}
                     >
                       {t("Compare remote", "GitHub と比較")}
+                    </button>
+                    <button
+                      disabled={saving || loading || processing}
+                      onClick={async () => {
+                        setProcessing(true);
+                        setError("");
+                        try {
+                          await processCurrentPost();
+                          setStatus([
+                            "Formatted Markdown and updated the generated summary.",
+                            "Markdown を整形し、自動生成の概要を更新しました。"
+                          ]);
+                        } catch (error) {
+                          setError(message(error));
+                        } finally {
+                          setProcessing(false);
+                        }
+                      }}
+                    >
+                      {processing
+                        ? t("Processing…", "処理中…")
+                        : t("Format & update summary", "整形・概要を更新")}
                     </button>
                   </footer>
                 </>
@@ -1459,6 +1640,7 @@ export default function App() {
             }
           >
             <MediaLibrary
+              date={String(metadata.date || today())}
               entries={index.media}
               pending={images}
               deletions={deletions}
@@ -1505,6 +1687,18 @@ export default function App() {
           </Suspense>
         </FeatureBoundary>
       )}
+      {tagsOpen && (
+        <TagDialog
+          tags={Object.values(knownTags).flat()}
+          selected={Array.isArray(metadata.tags) ? metadata.tags : []}
+          onClose={() => setTagsOpen(false)}
+          onApply={tags => {
+            metadataChange({ tags });
+            setTagInputVersion(n => n + 1);
+            setTagsOpen(false);
+          }}
+        />
+      )}
       {remote && (
         <Modal
           title={t("Compare with GitHub", "GitHub の内容と比較")}
@@ -1531,7 +1725,8 @@ export default function App() {
               onClick={() => {
                 changed({
                   post: { ...work.current!.post, sha: remote.sha },
-                  original: remote.content
+                  original: remote.content,
+                  baseHead: index.head
                 });
                 setRemote(null);
                 setStatus([
@@ -1561,6 +1756,7 @@ export default function App() {
                   ...current,
                   post: remote,
                   original: remote.content,
+                  baseHead: index.head,
                   saveId: undefined
                 });
                 await persist();
@@ -1620,10 +1816,7 @@ export default function App() {
                       "ここではフロントマターだけを編集してください。記事本文は「本文」タブで編集できます。"
                     )
                   );
-                header.current = parsed.header;
-                newline.current = parsed.newline;
-                setMetadata(parsed.data);
-                changed({ post: { ...current.post, content } });
+                if (!metadataChange({}, content)) return;
                 setError("");
                 setRawFrontmatter(null);
               } catch (error) {

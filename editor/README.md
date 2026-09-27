@@ -243,3 +243,13 @@ image bytes remain device-local; sharing their URL does not transfer their conte
 API endpoints and Access protection are unchanged. Query routing does not require
 new server rewrites. Transient figure/frontmatter dialogs and files not yet staged
 are not serialized in URLs; apply/stage those changes to include them in recovery.
+
+## Editing tools
+
+Post details keep the comma-separated tag input and offer an Edit dialog to search existing tags and toggle selections. The saved badge links to the article URL for the post's language, as configured in `website.json`.
+
+**Format & update summary** runs Prettier and the same summary generator used by `scripts/add-summary.mjs`. It preserves the handwritten `summary`, updates `summary_generated` (140 characters in Japanese, 200 in English), and also runs before saving. The Worker applies the same processing when committing a post.
+
+Uploads receive the post's `YYYY-MM-DD-` prefix (today's date in the standalone image library). Changing a date updates pending filenames and references immediately. On save, existing images owned by the old date are renamed atomically, including references in other posts. Reused images carrying a different date retain their names. Filename collisions and concurrent repository changes stop the save without partial publication.
+
+The one-time migration is available as `node scripts/rename-images.mjs` from the repository root; inspect its preview before passing `--write`. Shared images use the earliest referring post date. Unreferenced resized variants inherit their family's date; remaining unreferenced files use their first Git commit date. Images already carrying a date prefix are preserved. Run it with `--check` to verify dated filenames and all local image references.

@@ -1,6 +1,7 @@
 import { expect, test, type Page } from "@playwright/test";
 import fs from "node:fs";
 import path from "node:path";
+import { splitDocument } from "../../shared/document";
 
 const englishPath = "src/default/2023-06-20-lights-animation-interaction.md";
 const english = fs.readFileSync(
@@ -104,6 +105,118 @@ async function stageImage(page: Page, name = "new-image.png") {
     page.locator(".media-card").filter({ hasText: name })
   ).toBeVisible();
 }
+
+test("post details align controls, edit searchable tags and link to the published article", async ({
+  page
+}) => {
+  await mockRepository(page);
+  await openEnglish(page);
+  await expect(page.locator("a.save-badge")).toHaveAttribute(
+    "href",
+    "https://blog.junkato.jp/posts/2023-06-20-lights-animation-interaction/"
+  );
+  await page.locator(".metadata summary").click();
+  const cover = page.getByLabel("Cover image", { exact: true });
+  const choose = page.getByRole("button", { name: "Choose", exact: true });
+  const inputBox = await cover.boundingBox();
+  const buttonBox = await choose.boundingBox();
+  expect(inputBox!.height).toBe(buttonBox!.height);
+  const tags = page.getByLabel("Tags (comma-separated)");
+  await tags.fill("custom-tag, another-tag");
+  await page.getByRole("button", { name: "Edit", exact: true }).click();
+  const dialog = page.getByRole("dialog", { name: "Edit tags" });
+  await dialog.getByLabel("Search tags").fill("custom");
+  await expect(
+    dialog.getByRole("checkbox", { name: "custom-tag", exact: true })
+  ).toBeChecked();
+  await dialog
+    .getByRole("checkbox", { name: "custom-tag", exact: true })
+    .uncheck();
+  await dialog.getByRole("button", { name: "Apply", exact: true }).click();
+  await expect(tags).toHaveValue("another-tag");
+  await page.evaluate(() => window.scrollTo(0, 300));
+  if (await page.evaluate(() => window.innerWidth > 700)) {
+    const sidebar = await page.locator(".sidebar").boundingBox();
+    expect(sidebar!.y).toBe(0);
+    expect(sidebar!.height).toBe(await page.evaluate(() => window.innerHeight));
+  }
+});
+
+test("formatting updates generated summary and save processes the current text", async ({
+  page
+}) => {
+  const repository = await mockRepository(page);
+  await openEnglish(page);
+  const body = page.getByRole("textbox", { name: "Markdown body" });
+  await body.fill("Intro **bold**.\n\n## Heading\n\n-   One\n-   Two\n");
+  await page.getByRole("button", { name: "Format & update summary" }).click();
+  await expect(body).toHaveValue(
+    "\nIntro **bold**.\n\n## Heading\n\n- One\n- Two\n"
+  );
+  await body.fill("Fresh summary\n\n-   Item\n");
+  await page.getByRole("button", { name: "Save changes", exact: true }).click();
+  await expect(
+    page.getByText("Committed to GitHub.", { exact: false })
+  ).toBeVisible();
+  expect(
+    String(
+      splitDocument(repository.saves[0].post.content).data.summary_generated
+    )
+      .replace(/\s+/g, " ")
+      .trim()
+  ).toBe("Fresh summary Item");
+  expect(repository.saves[0].post.content).toContain("- Item");
+});
+
+test("changing the date updates pending image names and their inserted references", async ({
+  page
+}) => {
+  await mockRepository(page);
+  await openEnglish(page);
+  await stageImage(page);
+  await page
+    .locator(".media-card")
+    .filter({ hasText: "new-image.png" })
+    .getByRole("button", { name: "Insert", exact: true })
+    .click();
+  await page.locator(".metadata summary").click();
+  await page.getByLabel("Date", { exact: true }).fill("2023-07-01");
+  await expect(
+    page.getByRole("textbox", { name: "Markdown body" })
+  ).toContainText("/images/2023-07-01-new-image.png");
+  await page.getByRole("button", { name: "Images", exact: true }).click();
+  await expect(
+    page.locator(".media-card").filter({ hasText: "2023-07-01-new-image.png" })
+  ).toBeVisible();
+});
+
+test("changing a new draft date keeps its filename and recovered URL in sync", async ({
+  page
+}) => {
+  await mockRepository(page);
+  await page.goto("/");
+  await page.getByRole("button", { name: "New post", exact: true }).click();
+  const dialog = page.getByRole("dialog", { name: "New post" });
+  await dialog
+    .getByRole("combobox", { name: "Language", exact: true })
+    .selectOption("default");
+  await dialog.getByLabel("Title", { exact: true }).fill("Date change");
+  await dialog.getByLabel("Date", { exact: true }).fill("2024-01-01");
+  await dialog.getByLabel("ASCII slug").fill("date-change");
+  await dialog.getByRole("button", { name: "Create local draft" }).click();
+  await page.locator(".metadata summary").click();
+  await page.getByLabel("Date", { exact: true }).fill("2024-02-02");
+  await expect(page.locator(".document-heading .filename")).toHaveText(
+    "src/default/2024-02-02-date-change.md"
+  );
+  await expect(page).toHaveURL(
+    /post=src%2Fdefault%2F2024-02-02-date-change.md/
+  );
+  await page.reload();
+  await expect(page.locator(".document-heading .filename")).toHaveText(
+    "src/default/2024-02-02-date-change.md"
+  );
+});
 
 test("local Worker demo opens the longest Japanese post and preserves text across preview", async ({
   page
@@ -509,7 +622,7 @@ test("pending image bytes survive interrupted upload and reload", async ({
   await page.locator(".recovery-list button").first().click();
   await expect(
     page.getByRole("textbox", { name: "Markdown body" })
-  ).toContainText("![](/images/new-image.png)");
+  ).toContainText("![](/images/2023-06-20-new-image.png)");
   await page.getByRole("button", { name: "Images", exact: true }).click();
   const card = page.locator(".media-card").filter({ hasText: "new-image.png" });
   await expect(card).toContainText("Pending upload");
@@ -582,7 +695,9 @@ test("one save includes Markdown, upload and deletion and clears recovery", asyn
   await page.getByRole("button", { name: "Save changes" }).click();
   await expect(page.getByRole("status")).toContainText("Committed to GitHub");
   expect(repository.saves).toHaveLength(1);
-  expect(repository.saves[0].post.content).toContain("/images/new-image.png");
+  expect(repository.saves[0].post.content).toContain(
+    "/images/2023-06-20-new-image.png"
+  );
   expect(repository.saves[0].uploads).toHaveLength(1);
   expect(repository.saves[0].deletions).toHaveLength(1);
   await expect(page.locator(".recovery-list")).toHaveCount(0);

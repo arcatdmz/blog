@@ -1,25 +1,9 @@
 import fs from "fs";
 import matter from "gray-matter";
-import HTML from "html-parse-stringify";
-import { micromark } from "micromark";
-import { gfm, gfmHtml } from "micromark-extension-gfm";
 import path from "path";
 
 import config from "./config.mjs";
-
-// Preserve the old parser's omission of whitespace-only text after sibling tags.
-const keepSummaryNode = (node, index) =>
-  index === 0 || node.type !== "text" || node.content.trim() !== "";
-
-const toString = node => {
-  if (node.type === "text") {
-    return node.content;
-  }
-  if (!Array.isArray(node.children)) {
-    return "";
-  }
-  return node.children.filter(keepSummaryNode).map(toString).join("");
-};
+import { generateSummary } from "../editor/shared/summary.mjs";
 
 const readFiles = async ({ language, dir, summaryLength }) => {
   const files = fs.readdirSync(dir);
@@ -27,24 +11,13 @@ const readFiles = async ({ language, dir, summaryLength }) => {
     files.map(async file => {
       const source = fs.readFileSync(path.join(dir, file), "utf8");
       const { data, content } = matter(source);
-      let text,
-        updated = false;
+      let updated = false;
       try {
-        const html = micromark(content, {
-          allowDangerousHtml: true,
-          extensions: [gfm()],
-          htmlExtensions: [gfmHtml()]
-        });
-        const ast = HTML.parse(html).filter(keepSummaryNode);
-        const headerIndex = ast.findIndex(
-          v => v.type === "tag" && /h[0-9]+/.test(v.name)
+        const summary_generated = generateSummary(
+          content,
+          language,
+          summaryLength
         );
-        const intro = headerIndex > 0 ? ast.slice(0, headerIndex) : ast;
-        text = intro.map(toString).join(language === "ja" ? "" : " ");
-        const summary_generated =
-          text.length > summaryLength
-            ? text.substr(0, summaryLength - 3) + "..."
-            : text;
         if (data.summary_generated !== summary_generated) {
           data.summary_generated = summary_generated;
           const output = matter.stringify(content, data);

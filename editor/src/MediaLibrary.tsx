@@ -11,6 +11,7 @@ import {
   type Deletion
 } from "../shared/model";
 import Modal from "./Modal";
+import { datedImageName } from "../shared/mediaNames";
 import { useI18n } from "./i18n";
 
 const mediaErrors: Record<string, string> = {
@@ -75,6 +76,7 @@ async function optimize(
 }
 
 export default function MediaLibrary({
+  date,
   entries,
   pending,
   deletions,
@@ -87,6 +89,7 @@ export default function MediaLibrary({
   onCover,
   onPick
 }: {
+  date: string;
   entries: Entry[];
   pending: PendingImage[];
   deletions: Deletion[];
@@ -190,7 +193,7 @@ export default function MediaLibrary({
             if (selected) {
               setFile(selected);
               setCandidate(selected);
-              setName(safeImageName(selected.name));
+              setName(datedImageName(safeImageName(selected.name), date));
               setError("");
             }
             event.target.value = "";
@@ -274,9 +277,12 @@ export default function MediaLibrary({
                     }
                     setCandidate(result);
                     setName(
-                      safeImageName(
-                        file.name.replace(/\.[^.]*$/, "") +
-                          (result.type === "image/png" ? ".png" : ".jpg")
+                      datedImageName(
+                        safeImageName(
+                          file.name.replace(/\.[^.]*$/, "") +
+                            (result.type === "image/png" ? ".png" : ".jpg")
+                        ),
+                        date
                       )
                     );
                   })
@@ -290,7 +296,7 @@ export default function MediaLibrary({
               <button
                 onClick={() => {
                   setCandidate(file);
-                  setName(safeImageName(file.name));
+                  setName(datedImageName(safeImageName(file.name), date));
                 }}
               >
                 {t("Keep original", "元の画像を使用")}
@@ -299,8 +305,9 @@ export default function MediaLibrary({
                 className="primary"
                 onClick={() =>
                   run(async () => {
-                    const path = `public/images/${name}`;
-                    if (name !== safeImageName(name))
+                    const path = `public/images/${datedImageName(name, date)}`;
+                    const baseName = name.replace(/^\d{4}-\d{2}-\d{2}-/, "");
+                    if (baseName !== safeImageName(baseName))
                       throw new Error(
                         "Use letters, numbers, dashes, or underscores in the filename."
                       );

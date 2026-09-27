@@ -1,6 +1,8 @@
 import { SignJWT, jwtVerify } from "jose";
 import { splitDocument, validateDocument } from "../shared/document";
 import { referencedMedia } from "../shared/references";
+import { processPost } from "../shared/processing";
+import { datedImageName, renameMediaReferences } from "../shared/mediaNames";
 import {
   BRANCH,
   REPOSITORY,
@@ -156,6 +158,15 @@ export async function save(
   // A lost HTTP response must not create a duplicate commit on retry.
   const alreadySaved = await savedOperation(github, data.id);
   if (alreadySaved) return alreadySaved;
+  data = { ...data, post: data.post ? { ...data.post } : undefined };
+  if (data.post) {
+    try {
+      data.post.content = await processPost(data.post.content, data.post.path);
+      validateDocument(data.post.content);
+    } catch (error) {
+      throw new HttpError(422, (error as Error).message);
+    }
+  }
   for (const upload of data.uploads) await verifyUpload(token, upload);
   const snapshot = await github.snapshot();
   const byPath = new Map(snapshot.entries.map(e => [e.path, e]));
@@ -204,6 +215,79 @@ export async function save(
     type: "blob",
     sha: u.sha
   }));
+  const relatedPosts = new Map<string, string>();
+  if (data.post && data.post.expectedSha) {
+    const original = (await github.texts([byPath.get(data.post.path)!])).get(
+      data.post.path
+    )!;
+    const oldDate = String(splitDocument(original).data.date);
+    const date = String(splitDocument(data.post.content).data.date);
+    if (oldDate !== date) {
+      if (snapshot.head !== data.baseHead)
+        throw new HttpError(
+          409,
+          "GitHub changed during this operation. Your local work is safe; reload the remote version to compare."
+        );
+      const renames = new Map<string, string>();
+      for (const path of referencedMedia(data.post.content)) {
+        const name = path.split("/").pop()!;
+        // A reused image owned by another date keeps its existing name.
+        if (/^\d{4}-\d{2}-\d{2}-/.test(name) && !name.startsWith(oldDate + "-"))
+          continue;
+        const entry = byPath.get(path);
+        if (!entry || data.deletions.some(d => d.path === path)) continue;
+        const target = `public/images/${datedImageName(name, date)}`;
+        if (target === path) continue;
+        if (
+          byPath.has(target) ||
+          data.uploads.some(u => u.path === target) ||
+          [...renames.values()].includes(target)
+        )
+          throw new HttpError(
+            409,
+            `${target} already exists. Choose a new image filename.`
+          );
+        renames.set(path, target);
+        tree.push(
+          { path: target, mode: "100644", type: "blob", sha: entry.sha },
+          { path, mode: "100644", type: "blob", sha: null }
+        );
+      }
+      if (renames.size) {
+        data.post.content = renameMediaReferences(data.post.content, renames);
+        const texts = await github.texts(
+          snapshot.entries.filter(
+            e => isReferencePostPath(e.path) && e.path !== data.post!.path
+          )
+        );
+        for (const [path, content] of texts) {
+          if (![...referencedMedia(content)].some(ref => renames.has(ref)))
+            continue;
+          const updated = renameMediaReferences(content, renames);
+          if ([...referencedMedia(updated)].some(ref => renames.has(ref)))
+            throw new HttpError(
+              422,
+              `Cannot update image references in ${path}.`
+            );
+          relatedPosts.set(path, updated);
+        }
+        if (
+          [...referencedMedia(data.post.content)].some(ref => renames.has(ref))
+        )
+          throw new HttpError(
+            422,
+            "Cannot update all image references in this post."
+          );
+      }
+    }
+  }
+  for (const [path, content] of relatedPosts) {
+    const blob = await github.request("/git/blobs", "POST", {
+      content,
+      encoding: "utf-8"
+    });
+    tree.push({ path, mode: "100644", type: "blob", sha: blob.sha });
+  }
   let postSha: string | undefined;
   if (data.post) {
     const blob = await github.request("/git/blobs", "POST", {
@@ -239,7 +323,9 @@ export async function save(
     tree
   });
   const commit = await github.request("/git/commits", "POST", {
-    message: `Update blog content${data.post ? `: ${data.post.path.split("/").pop()}` : ""}\n\nBlog-Editor-Save: ${data.id}`,
+    message: `Update blog content${
+      data.post ? `: ${data.post.path.split("/").pop()}` : ""
+    }\n\nBlog-Editor-Save: ${data.id}`,
     tree: newTree.sha,
     parents: [snapshot.head]
   });
