@@ -1,7 +1,7 @@
 import remarkEmbedder, { Transformer } from "@remark-embedder/core";
 import oembedTransformer, { Config } from "@remark-embedder/transformer-oembed";
 import fs from "fs";
-import matter from "gray-matter";
+import matter from "./frontmatter.mjs";
 import path from "path";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";

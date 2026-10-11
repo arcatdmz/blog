@@ -1,5 +1,5 @@
 import fs from "fs";
-import matter from "gray-matter";
+import matter from "../lib/frontmatter.mjs";
 import path from "path";
 
 import config from "./config.mjs";

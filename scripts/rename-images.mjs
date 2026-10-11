@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
-import matter from "gray-matter";
+import matter from "../lib/frontmatter.mjs";
 import HTML from "html-parse-stringify";
 import { micromark } from "micromark";
 import { gfm, gfmHtml } from "micromark-extension-gfm";

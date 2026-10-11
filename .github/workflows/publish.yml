@@ -26,6 +26,7 @@ jobs:
       - name: Build pages
         run: |
           npm ci
+          npm test
           npm run download
           npm run build
       - name: Deploy pages
